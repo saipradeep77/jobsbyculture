@@ -1041,6 +1041,33 @@ function renderJobs() {
 
 // ═══ INIT ═══
 buildFilters();
+
+// Read URL params (?values=async,flat&company=anthropic&value=ethical-ai)
+(function parseURL() {
+    const params = new URLSearchParams(window.location.search);
+    // Support ?values=a,b,c (from homepage "Show Matching Jobs")
+    const vals = params.get('values');
+    if (vals) {
+        vals.split(',').forEach(v => { if (VALUES[v]) activeValues.add(v); });
+    }
+    // Support ?value=ethical-ai (from homepage "Explore" cards)
+    const single = params.get('value');
+    if (single && VALUES[single]) {
+        activeValues.add(single);
+    }
+    // Support ?company=anthropic (from homepage company cards)
+    const company = params.get('company');
+    if (company && COMPANIES[company]) {
+        document.getElementById('searchInput').value = COMPANIES[company].name;
+        searchQuery = COMPANIES[company].name.toLowerCase();
+    }
+    // Sync sidebar filter UI with activeValues
+    if (activeValues.size > 0) {
+        document.querySelectorAll('.vf').forEach(el => el.classList.toggle('on', activeValues.has(el.dataset.v)));
+        document.getElementById('clearFilters').classList.toggle('show', true);
+    }
+})();
+
 renderJobs();
 </script>
 
