@@ -1,16 +1,16 @@
 {
-    "rewrites": [
-          { "source": "/jobs", "destination": "/jobs.html" },
-          { "source": "/", "destination": "/index.html" }
-    ],
-    "headers": [
-          {
-                  "source": "/(.*)",
-                  "headers": [
-                            { "key": "X-Frame-Options", "value": "DENY" },
-                            { "key": "X-Content-Type-Options", "value": "nosniff" },
-                            { "key": "Referrer-Policy", "value": "strict-origin-when-cross-origin" }
-                  ]
-          }
-    ]
+  "routes": [
+    { "src": "/jobs", "dest": "/jobs.html" },
+    { "src": "/sitemap.xml", "dest": "/sitemap.xml" },
+    { "src": "/robots.txt", "dest": "/robots.txt" }
+  ],
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        { "key": "X-Content-Type-Options", "value": "nosniff" },
+        { "key": "X-Frame-Options", "value": "DENY" }
+      ]
+    }
+  ]
 }
