@@ -1,0 +1,919 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HireByCulture — Find Jobs That Match Your Values, Not Just Your Skills</title>
+    <meta name="description" content="The culture-first job board. Filter AI, tech & startup roles by values like async-first, ethical AI, work-life balance, low-meetings, and more. Stop guessing about company culture.">
+    <meta name="keywords" content="jobs by company culture, AI jobs async culture, ethical AI careers, culture fit job board, remote AI jobs, hire by culture, company values job search">
+    <meta name="author" content="HireByCulture">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="HireByCulture — Jobs That Match Your Values">
+    <meta property="og:description" content="The culture-first job board. Filter AI & tech roles by what actually matters: how teams work, not just what they build.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://hirebyculture.com">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="HireByCulture — Culture-First Job Board">
+    <meta name="twitter:site" content="@hirebyculture">
+    <link rel="canonical" href="https://hirebyculture.com">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎯</text></svg>">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Satoshi:wght@400;500;600;700;900&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "HireByCulture",
+        "description": "Culture-first job board matching professionals with companies based on shared values",
+        "applicationCategory": "BusinessApplication",
+        "operatingSystem": "Web",
+        "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+    }
+    </script>
+    <style>
+        :root {
+            --bg: #fafaf8;
+            --bg-raised: #ffffff;
+            --bg-card: #ffffff;
+            --bg-hover: #f4f3ef;
+            --text: #1a1a1f;
+            --text-2: #52525b;
+            --text-3: #9ca3af;
+            --accent: #e8590c;
+            --accent-hover: #c2410c;
+            --accent-bg: rgba(232,89,12,0.06);
+            --accent-border: rgba(232,89,12,0.2);
+            --teal: #0d9488;
+            --teal-bg: rgba(13,148,136,0.06);
+            --teal-border: rgba(13,148,136,0.2);
+            --violet: #7c3aed;
+            --violet-bg: rgba(124,58,237,0.06);
+            --violet-border: rgba(124,58,237,0.2);
+            --rose: #e11d48;
+            --rose-bg: rgba(225,29,72,0.06);
+            --rose-border: rgba(225,29,72,0.2);
+            --sky: #0284c7;
+            --sky-bg: rgba(2,132,199,0.06);
+            --sky-border: rgba(2,132,199,0.2);
+            --lime: #4d7c0f;
+            --lime-bg: rgba(77,124,15,0.06);
+            --lime-border: rgba(77,124,15,0.2);
+            --border: rgba(0,0,0,0.07);
+            --border-2: rgba(0,0,0,0.12);
+            --border-3: rgba(0,0,0,0.18);
+            --radius: 12px;
+            --radius-sm: 8px;
+            --radius-lg: 20px;
+            --radius-full: 100px;
+            --font-display: 'Instrument Serif', Georgia, serif;
+            --font-body: 'Satoshi', -apple-system, sans-serif;
+            --font-mono: 'IBM Plex Mono', monospace;
+            --shadow: 0 4px 24px rgba(0,0,0,0.06), 0 1px 3px rgba(0,0,0,0.04);
+            --shadow-lg: 0 12px 48px rgba(0,0,0,0.08);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body {
+            font-family: var(--font-body);
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+            overflow-x: hidden;
+        }
+        .container { max-width: 1140px; margin: 0 auto; padding: 0 24px; }
+
+        /* ═══ NAV ═══ */
+        nav {
+            position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+            background: rgba(250,250,248,0.85);
+            backdrop-filter: blur(24px) saturate(1.4);
+            border-bottom: 1px solid var(--border);
+        }
+        .nav-inner {
+            max-width: 1140px; margin: 0 auto; padding: 14px 24px;
+            display: flex; align-items: center; justify-content: space-between;
+        }
+        .nav-logo { display: flex; align-items: center; gap: 10px; text-decoration: none; color: var(--text); }
+        .nav-mark {
+            width: 30px; height: 30px; border-radius: 8px;
+            background: linear-gradient(135deg, var(--accent), #ea580c);
+            display: grid; place-items: center;
+            font-weight: 900; font-size: 13px; color: #fff; letter-spacing: -0.04em;
+        }
+        .nav-wordmark { font-weight: 700; font-size: 16px; letter-spacing: -0.03em; }
+        .nav-wordmark span { color: var(--accent); }
+        .nav-links { display: flex; align-items: center; gap: 28px; }
+        .nav-links a { color: var(--text-2); text-decoration: none; font-size: 14px; font-weight: 500; transition: color 0.15s; }
+        .nav-links a:hover { color: var(--text); }
+        .btn-sm {
+            display: inline-flex; align-items: center; gap: 6px;
+            background: var(--accent); color: #fff; padding: 7px 16px;
+            border-radius: var(--radius-sm); font-size: 13px; font-weight: 600;
+            text-decoration: none; transition: all 0.2s; border: none; cursor: pointer;
+        }
+        .btn-sm:hover { background: var(--accent-hover); transform: translateY(-1px); }
+
+        /* ═══ HERO ═══ */
+        .hero { padding: 150px 0 90px; position: relative; }
+        .hero::before {
+            content: ''; position: absolute; top: -100px; left: 50%; transform: translateX(-50%);
+            width: 900px; height: 600px;
+            background: radial-gradient(ellipse, rgba(232,89,12,0.06) 0%, transparent 70%);
+            pointer-events: none;
+        }
+        .hero-pill {
+            display: inline-flex; align-items: center; gap: 8px;
+            background: var(--accent-bg); border: 1px solid var(--accent-border);
+            padding: 5px 14px 5px 8px; border-radius: var(--radius-full);
+            font-size: 13px; font-weight: 500; color: var(--accent);
+            margin-bottom: 32px;
+            animation: fadeUp 0.5s ease both;
+        }
+        .hero-pill-dot { width: 7px; height: 7px; border-radius: 50%; background: var(--accent); animation: blink 2s infinite; }
+        .hero h1 {
+            font-family: var(--font-display); font-weight: 400;
+            font-size: clamp(44px, 5.5vw, 76px);
+            line-height: 1.06; letter-spacing: -0.025em;
+            max-width: 780px; margin-bottom: 24px;
+            animation: fadeUp 0.5s ease 0.08s both;
+        }
+        .hero h1 em { font-style: italic; color: var(--accent); }
+        .hero-sub {
+            font-size: 18px; color: var(--text-2); max-width: 520px;
+            line-height: 1.7; margin-bottom: 44px;
+            animation: fadeUp 0.5s ease 0.16s both;
+        }
+        .hero-actions {
+            display: flex; align-items: center; gap: 16px; margin-bottom: 56px;
+            animation: fadeUp 0.5s ease 0.22s both;
+        }
+        .btn-primary {
+            background: var(--accent); color: #fff; padding: 13px 28px;
+            border-radius: var(--radius); font-size: 15px; font-weight: 700;
+            text-decoration: none; transition: all 0.25s; border: none; cursor: pointer;
+            font-family: var(--font-body);
+        }
+        .btn-primary:hover { background: var(--accent-hover); transform: translateY(-2px); box-shadow: 0 6px 24px rgba(232,89,12,0.2); }
+        .btn-ghost {
+            background: transparent; color: var(--text-2); padding: 13px 24px;
+            border-radius: var(--radius); font-size: 15px; font-weight: 500;
+            text-decoration: none; border: 1px solid var(--border-2);
+            transition: all 0.2s; cursor: pointer; font-family: var(--font-body);
+        }
+        .btn-ghost:hover { border-color: var(--border-3); color: var(--text); }
+
+        .hero-metrics {
+            display: flex; gap: 48px;
+            animation: fadeUp 0.5s ease 0.3s both;
+        }
+        .metric-val { font-family: var(--font-mono); font-size: 26px; font-weight: 500; letter-spacing: -0.02em; }
+        .metric-label { font-size: 13px; color: var(--text-3); margin-top: 2px; }
+
+        /* ═══ VALUE PICKER ═══ */
+        .picker { padding: 80px 0 100px; }
+        .s-label {
+            font-family: var(--font-mono); font-size: 11px; text-transform: uppercase;
+            letter-spacing: 0.14em; color: var(--accent); display: block; margin-bottom: 14px;
+        }
+        .s-title {
+            font-family: var(--font-display); font-size: clamp(30px, 3.2vw, 46px);
+            line-height: 1.15; font-weight: 400; margin-bottom: 14px;
+        }
+        .s-title em { font-style: italic; color: var(--accent); }
+        .s-desc { font-size: 16px; color: var(--text-2); max-width: 500px; line-height: 1.7; margin-bottom: 48px; }
+        .s-center { text-align: center; }
+        .s-center .s-desc { margin: 0 auto 48px; }
+
+        .tags {
+            display: flex; flex-wrap: wrap; gap: 10px; justify-content: center;
+            max-width: 860px; margin: 0 auto;
+        }
+        .tag {
+            padding: 12px 20px; border-radius: var(--radius-full);
+            background: var(--bg-raised); border: 2px solid var(--border);
+            color: var(--text-2); font-size: 15px; font-weight: 500;
+            cursor: pointer; transition: all 0.25s; user-select: none;
+            font-family: var(--font-body);
+        }
+        .tag:hover { border-color: var(--border-3); color: var(--text); transform: translateY(-2px); box-shadow: 0 4px 12px rgba(0,0,0,0.06); }
+        .tag .ico { margin-right: 6px; font-size: 17px; }
+        .tag.on { transform: translateY(-2px); font-weight: 600; }
+        .tag.on::after { content: ' ✓'; font-size: 13px; font-weight: 700; margin-left: 2px; }
+        .tag[data-c="orange"].on { background: var(--accent); border-color: var(--accent); color: #fff; box-shadow: 0 4px 16px rgba(232,89,12,0.25); }
+        .tag[data-c="teal"].on { background: var(--teal); border-color: var(--teal); color: #fff; box-shadow: 0 4px 16px rgba(13,148,136,0.25); }
+        .tag[data-c="violet"].on { background: var(--violet); border-color: var(--violet); color: #fff; box-shadow: 0 4px 16px rgba(124,58,237,0.25); }
+        .tag[data-c="rose"].on { background: var(--rose); border-color: var(--rose); color: #fff; box-shadow: 0 4px 16px rgba(225,29,72,0.25); }
+        .tag[data-c="sky"].on { background: var(--sky); border-color: var(--sky); color: #fff; box-shadow: 0 4px 16px rgba(2,132,199,0.25); }
+        .tag[data-c="lime"].on { background: #4d7c0f; border-color: #4d7c0f; color: #fff; box-shadow: 0 4px 16px rgba(77,124,15,0.25); }
+
+        .picker-status {
+            text-align: center; margin-top: 28px; font-size: 14px; color: var(--text-3);
+        }
+        .picker-status b { color: var(--accent); }
+        .picker-cta {
+            text-align: center; margin-top: 20px;
+        }
+        .btn-match {
+            background: linear-gradient(135deg, var(--accent), #c2410c);
+            color: #fff; border: none; padding: 14px 36px;
+            border-radius: var(--radius); font-size: 16px; font-weight: 700;
+            cursor: pointer; font-family: var(--font-body); transition: all 0.3s;
+            opacity: 0.35; pointer-events: none;
+        }
+        .btn-match.ready { opacity: 1; pointer-events: all; }
+        .btn-match.ready:hover { transform: translateY(-2px); box-shadow: 0 8px 32px rgba(232,89,12,0.25); }
+
+        /* ═══ COMPANIES ═══ */
+        .companies { padding: 80px 0 100px; background: var(--bg-raised); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+        .co-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(340px, 1fr)); gap: 16px; margin-top: 48px; }
+        .co-card {
+            background: var(--bg-card); border: 1px solid var(--border);
+            border-radius: var(--radius-lg); padding: 26px; transition: all 0.25s;
+            cursor: pointer; position: relative; overflow: hidden;
+        }
+        .co-card::after {
+            content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px;
+            background: linear-gradient(90deg, var(--accent), var(--teal));
+            opacity: 0; transition: opacity 0.25s;
+        }
+        .co-card:hover { border-color: var(--border-2); transform: translateY(-3px); box-shadow: var(--shadow-lg); }
+        .co-card:hover::after { opacity: 1; }
+        .co-top { display: flex; align-items: center; gap: 12px; margin-bottom: 16px; }
+        .co-avatar {
+            width: 44px; height: 44px; border-radius: var(--radius-sm);
+            background: var(--bg); border: 1px solid var(--border);
+            display: grid; place-items: center;
+            font-size: 18px; font-weight: 800; color: var(--accent); flex-shrink: 0;
+        }
+        .co-name { font-size: 16px; font-weight: 600; }
+        .co-meta { font-size: 12.5px; color: var(--text-3); }
+        .co-tags { display: flex; flex-wrap: wrap; gap: 5px; margin-bottom: 16px; }
+        .co-tag {
+            padding: 3px 9px; border-radius: var(--radius-full);
+            font-size: 11.5px; font-weight: 500;
+            background: var(--bg); border: 1px solid var(--border);
+            color: var(--text-3);
+        }
+        .co-tag.match { background: var(--accent); border-color: var(--accent); color: #fff; font-weight: 600; }
+        .co-quote {
+            padding: 12px 14px; border-radius: var(--radius-sm);
+            background: var(--bg); border-left: 2px solid var(--accent);
+            font-size: 13px; color: var(--text-2); line-height: 1.6; font-style: italic;
+        }
+        .co-foot {
+            display: flex; align-items: center; justify-content: space-between;
+            margin-top: 16px; padding-top: 14px; border-top: 1px solid var(--border);
+        }
+        .co-salary { font-family: var(--font-mono); font-size: 13px; color: var(--teal); }
+        .co-loc { font-size: 12px; color: var(--text-3); }
+        .co-link { font-size: 13px; color: var(--accent); text-decoration: none; font-weight: 600; }
+        .co-link:hover { text-decoration: underline; }
+
+        /* ═══ QUIZ ═══ */
+        .quiz { padding: 100px 0; position: relative; }
+        .quiz::before {
+            content: ''; position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%);
+            width: 600px; height: 400px;
+            background: radial-gradient(ellipse, rgba(13,148,136,0.04) 0%, transparent 70%);
+            pointer-events: none;
+        }
+        .quiz-card {
+            background: var(--bg-card); border: 1px solid var(--border);
+            border-radius: var(--radius-lg); max-width: 640px; margin: 0 auto;
+            overflow: hidden;
+        }
+        .quiz-head { padding: 28px 32px 20px; }
+        .quiz-head h3 { font-family: var(--font-display); font-size: 26px; font-weight: 400; margin-bottom: 6px; }
+        .quiz-head p { font-size: 14px; color: var(--text-2); }
+        .quiz-bar { height: 2px; background: var(--bg-hover); }
+        .quiz-bar-fill { height: 100%; width: 0%; background: linear-gradient(90deg, var(--teal), var(--accent)); transition: width 0.35s ease; }
+        .quiz-body { padding: 32px; }
+        .quiz-q { font-size: 17px; font-weight: 600; margin-bottom: 20px; line-height: 1.5; }
+        .quiz-opts { display: flex; flex-direction: column; gap: 8px; }
+        .quiz-opt {
+            padding: 14px 18px; border-radius: var(--radius);
+            background: var(--bg-raised); border: 1px solid var(--border);
+            cursor: pointer; font-size: 14px; color: var(--text-2);
+            transition: all 0.2s; font-family: var(--font-body);
+        }
+        .quiz-opt:hover { border-color: var(--border-2); color: var(--text); }
+        .quiz-opt.picked { border-color: var(--teal); color: var(--teal); background: var(--teal-bg); }
+        .quiz-nav { display: flex; justify-content: space-between; padding: 16px 32px 24px; }
+        .qbtn {
+            padding: 9px 22px; border-radius: var(--radius-sm);
+            font-size: 14px; font-weight: 600; cursor: pointer; transition: all 0.2s;
+            border: none; font-family: var(--font-body);
+        }
+        .qbtn-back { background: var(--bg-hover); color: var(--text-2); border: 1px solid var(--border); }
+        .qbtn-next { background: var(--teal); color: #fff; }
+        .qbtn-next:hover { transform: translateY(-1px); box-shadow: 0 4px 12px rgba(13,148,136,0.25); }
+        .qbtn:disabled { opacity: 0.3; pointer-events: none; }
+        .quiz-result { display: none; text-align: center; padding: 40px 32px; }
+        .quiz-result h3 { font-family: var(--font-display); font-size: 30px; margin-bottom: 10px; }
+        .quiz-result-type { font-size: 18px; color: var(--teal); font-weight: 700; margin-bottom: 14px; }
+        .quiz-result p { color: var(--text-2); margin-bottom: 24px; line-height: 1.7; max-width: 440px; margin-left: auto; margin-right: auto; }
+        .quiz-result-tags { display: flex; flex-wrap: wrap; gap: 6px; justify-content: center; margin-bottom: 28px; }
+        .qr-tag { padding: 5px 12px; border-radius: var(--radius-full); font-size: 12px; font-weight: 500; background: var(--accent-bg); border: 1px solid var(--accent-border); color: var(--accent); }
+
+        /* ═══ EXPLORE (SEO PAGES) ═══ */
+        .explore { padding: 80px 0 100px; }
+        .ex-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 12px; margin-top: 48px; }
+        .ex-card {
+            display: block; text-decoration: none; color: var(--text);
+            padding: 22px; border-radius: var(--radius);
+            background: var(--bg-raised); border: 1px solid var(--border);
+            transition: all 0.2s;
+        }
+        .ex-card:hover { border-color: var(--border-2); transform: translateY(-2px); box-shadow: var(--shadow); }
+        .ex-ico { font-size: 26px; margin-bottom: 12px; display: block; }
+        .ex-card h3 { font-size: 15px; font-weight: 600; margin-bottom: 4px; }
+        .ex-card p { font-size: 12.5px; color: var(--text-3); line-height: 1.5; }
+        .ex-count { font-family: var(--font-mono); font-size: 11px; color: var(--accent); margin-top: 10px; display: block; }
+
+        /* ═══ MEETING TAX CROSS-PROMO ═══ */
+        .xpromo {
+            padding: 48px 0; background: var(--bg-raised);
+            border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);
+        }
+        .xpromo-inner {
+            display: flex; align-items: center; gap: 32px;
+            max-width: 720px; margin: 0 auto; padding: 0 24px;
+        }
+        .xpromo-ico { font-size: 40px; flex-shrink: 0; }
+        .xpromo h3 { font-size: 17px; font-weight: 600; margin-bottom: 4px; }
+        .xpromo p { font-size: 13px; color: var(--text-2); margin-bottom: 8px; }
+        .xpromo a { font-size: 13px; color: var(--accent); text-decoration: none; font-weight: 600; }
+        .xpromo a:hover { text-decoration: underline; }
+
+        /* ═══ NEWSLETTER ═══ */
+        .newsletter { padding: 100px 0; text-align: center; }
+        .nl-card { max-width: 480px; margin: 0 auto; }
+        .nl-card h2 { font-family: var(--font-display); font-size: 34px; margin-bottom: 10px; }
+        .nl-card p { font-size: 15px; color: var(--text-2); margin-bottom: 28px; }
+        .nl-form { display: flex; gap: 8px; }
+        .nl-input {
+            flex: 1; padding: 13px 16px; border-radius: var(--radius-sm);
+            background: var(--bg-raised); border: 1px solid var(--border);
+            color: var(--text); font-size: 15px; font-family: var(--font-body);
+            outline: none; transition: border-color 0.2s;
+        }
+        .nl-input:focus { border-color: var(--accent); }
+        .nl-input::placeholder { color: var(--text-3); }
+        .nl-submit {
+            padding: 13px 24px; border-radius: var(--radius-sm);
+            background: var(--accent); color: #fff; border: none;
+            font-size: 15px; font-weight: 600; cursor: pointer;
+            font-family: var(--font-body); transition: all 0.2s; white-space: nowrap;
+        }
+        .nl-submit:hover { background: var(--accent-hover); transform: translateY(-1px); }
+
+        /* ═══ FOOTER ═══ */
+        footer { padding: 56px 0 36px; border-top: 1px solid var(--border); }
+        .ft-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 40px; margin-bottom: 40px; }
+        .ft-about p { font-size: 13px; color: var(--text-3); margin-top: 10px; line-height: 1.7; max-width: 260px; }
+        .ft-col h4 { font-size: 12px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em; color: var(--text-2); margin-bottom: 14px; }
+        .ft-col a { display: block; font-size: 13px; color: var(--text-3); text-decoration: none; padding: 3px 0; transition: color 0.15s; }
+        .ft-col a:hover { color: var(--text); }
+        .ft-bar { border-top: 1px solid var(--border); padding-top: 20px; display: flex; justify-content: space-between; align-items: center; }
+        .ft-bar p { font-size: 12px; color: var(--text-3); }
+
+        /* ═══ ANIMATIONS ═══ */
+        @keyframes fadeUp { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }
+        @keyframes blink { 0%,100% { opacity: 1; } 50% { opacity: 0.3; } }
+
+        /* ═══ RESPONSIVE ═══ */
+        @media (max-width: 768px) {
+            .nav-links { display: none; }
+            .hero { padding: 120px 0 60px; }
+            .hero-metrics { gap: 28px; flex-wrap: wrap; }
+            .hero-actions { flex-direction: column; align-items: flex-start; }
+            .co-grid { grid-template-columns: 1fr; }
+            .ex-grid { grid-template-columns: 1fr 1fr; }
+            .ft-grid { grid-template-columns: 1fr 1fr; gap: 28px; }
+            .nl-form { flex-direction: column; }
+            .xpromo-inner { flex-direction: column; text-align: center; gap: 16px; }
+        }
+        @media (max-width: 480px) {
+            .ex-grid { grid-template-columns: 1fr; }
+            .ft-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+<!-- ═══ NAV ═══ -->
+<nav>
+    <div class="nav-inner">
+        <a href="/" class="nav-logo">
+            <div class="nav-mark">HC</div>
+            <div class="nav-wordmark">Hire<span>By</span>Culture</div>
+        </a>
+        <div class="nav-links">
+            <a href="#values">Values</a>
+            <a href="#companies">Companies</a>
+            <a href="#quiz">Culture Quiz</a>
+            <a href="#explore">Explore</a>
+            <a href="#newsletter" class="btn-sm">Get Alerts →</a>
+        </div>
+    </div>
+</nav>
+
+<!-- ═══ HERO ═══ -->
+<section class="hero" id="top">
+    <div class="container">
+        <div class="hero-pill">
+            <span class="hero-pill-dot"></span>
+            Launching with AI & tech roles — more categories coming
+        </div>
+        <h1>Stop guessing.<br>Find jobs that match your <em>culture.</em></h1>
+        <p class="hero-sub">The first job board that filters by how teams actually work — async or sync, fast or careful, flat or structured. Pick your values, find your people.</p>
+        <div class="hero-actions">
+            <a href="#values" class="btn-primary">Pick Your Values →</a>
+            <a href="#quiz" class="btn-ghost">Take the Culture Quiz</a>
+        </div>
+        <div class="hero-metrics">
+            <div><div class="metric-val">200+</div><div class="metric-label">AI & tech roles</div></div>
+            <div><div class="metric-val">18</div><div class="metric-label">culture values</div></div>
+            <div><div class="metric-val">75+</div><div class="metric-label">companies profiled</div></div>
+            <div><div class="metric-val">12</div><div class="metric-label">countries</div></div>
+        </div>
+    </div>
+</section>
+
+<!-- ═══ VALUE PICKER ═══ -->
+<section class="picker" id="values">
+    <div class="container">
+        <div class="s-center">
+            <span class="s-label">01 — Pick Your Values</span>
+            <h2 class="s-title">What kind of team <em>fits you?</em></h2>
+            <p class="s-desc">Select up to 5 values that matter most. We'll match you with companies that actually live them.</p>
+        </div>
+
+        <div class="tags" id="tagsWrap">
+            <!-- How You Work (Glassdoor: Work/Life Balance + Randstad: 85% top priority) -->
+            <div class="tag" data-v="wlb" data-c="teal"><span class="ico">⚖️</span>Work-Life Balance</div>
+            <div class="tag" data-v="remote" data-c="teal"><span class="ico">🌍</span>Remote-Friendly</div>
+            <div class="tag" data-v="flex-hours" data-c="teal"><span class="ico">⏰</span>Flexible Hours</div>
+            <div class="tag" data-v="async" data-c="teal"><span class="ico">💬</span>Async-First</div>
+            <div class="tag" data-v="deep-work" data-c="teal"><span class="ico">🧠</span>Deep Work / Low Meetings</div>
+            <!-- How The Team Operates (Glassdoor: Culture & Values + Senior Management) -->
+            <div class="tag" data-v="transparent" data-c="violet"><span class="ico">🔓</span>Transparent Culture</div>
+            <div class="tag" data-v="flat" data-c="violet"><span class="ico">🤝</span>Flat Hierarchy</div>
+            <div class="tag" data-v="diverse" data-c="violet"><span class="ico">🌈</span>Diverse & Inclusive</div>
+            <div class="tag" data-v="psych-safety" data-c="violet"><span class="ico">🛟</span>Safe to Fail</div>
+            <!-- How You Build (KeyValues top eng values + job posting signals) -->
+            <div class="tag" data-v="eng-driven" data-c="sky"><span class="ico">🔧</span>Engineering-Driven</div>
+            <div class="tag" data-v="ship-fast" data-c="sky"><span class="ico">🚀</span>Ship Fast & Iterate</div>
+            <div class="tag" data-v="open-source" data-c="sky"><span class="ico">📖</span>Open Source Culture</div>
+            <!-- How You Grow (Glassdoor: Career Opportunities — top for millennials) -->
+            <div class="tag" data-v="learning" data-c="orange"><span class="ico">📚</span>Learning & Growth</div>
+            <div class="tag" data-v="equity" data-c="orange"><span class="ico">💰</span>Strong Comp & Equity</div>
+            <div class="tag" data-v="product-impact" data-c="orange"><span class="ico">📊</span>Direct Product Impact</div>
+            <div class="tag" data-v="many-hats" data-c="orange"><span class="ico">🎩</span>Wears Many Hats</div>
+            <!-- What They Stand For (Glassdoor: Mission alignment — 79% consider before applying) -->
+            <div class="tag" data-v="ethical-ai" data-c="rose"><span class="ico">🛡️</span>Ethical AI / Safety</div>
+            <div class="tag" data-v="social-impact" data-c="rose"><span class="ico">❤️</span>Mission-Driven</div>
+        </div>
+
+        <div class="picker-status" id="pickerStatus">Select at least <b>3</b> values to find matches</div>
+        <div class="picker-cta">
+            <button class="btn-match" id="matchBtn" onclick="scrollToCompanies()">Show Matching Companies →</button>
+        </div>
+    </div>
+</section>
+
+<!-- ═══ COMPANIES ═══ -->
+<section class="companies" id="companies">
+    <div class="container">
+        <div class="s-center">
+            <span class="s-label">02 — Company Profiles</span>
+            <h2 class="s-title">Teams that <em>live</em> their values</h2>
+            <p class="s-desc">Real culture profiles, not marketing fluff. See how each team actually works day-to-day.</p>
+        </div>
+        <div class="co-grid" id="coGrid">
+            <!-- Company 1 -->
+            <div class="co-card" data-values="async,remote,ethical-ai,deep-work,flat,learning">
+                <div class="co-top">
+                    <div class="co-avatar">A</div>
+                    <div><div class="co-name">Anthropic</div><div class="co-meta">AI Safety · San Francisco / Remote</div></div>
+                </div>
+                <div class="co-tags">
+                    <span class="co-tag" data-v="ethical-ai">🛡️ Ethical AI</span>
+                    <span class="co-tag" data-v="deep-work">🧠 Deep Work</span>
+                    <span class="co-tag" data-v="flat">🤝 Flat Hierarchy</span>
+                    <span class="co-tag" data-v="learning">📚 Learning & Growth</span>
+                    <span class="co-tag" data-v="equity">💰 Strong Comp</span>
+                </div>
+                <div class="co-quote">"We prioritize thoughtful, deep research over shipping speed. Engineers own their projects end-to-end with minimal process overhead."</div>
+                <div class="co-foot">
+                    <span class="co-salary">$230k – $490k</span>
+                    <span class="co-loc">🇺🇸 SF / Remote</span>
+                    <a href="#" class="co-link">View Profile →</a>
+                </div>
+            </div>
+            <!-- Company 2 -->
+            <div class="co-card" data-values="async,deep-work,remote,flex-hours,wlb,transparent">
+                <div class="co-top">
+                    <div class="co-avatar" style="color:var(--teal)">B</div>
+                    <div><div class="co-name">Buffer</div><div class="co-meta">Social Media AI · Fully Remote</div></div>
+                </div>
+                <div class="co-tags">
+                    <span class="co-tag" data-v="async">💬 Async-First</span>
+                    <span class="co-tag" data-v="deep-work">🧠 Low Meetings</span>
+                    <span class="co-tag" data-v="remote">🌍 Remote</span>
+                    <span class="co-tag" data-v="transparent">🔓 Transparent</span>
+                    <span class="co-tag" data-v="wlb">⚖️ Work-Life Balance</span>
+                </div>
+                <div class="co-quote">"We're fully async, no mandatory meetings. Everyone's calendar is theirs. We've published our salaries publicly since 2013."</div>
+                <div class="co-foot">
+                    <span class="co-salary">$120k – $180k</span>
+                    <span class="co-loc">🌍 Fully Remote</span>
+                    <a href="#" class="co-link">View Profile →</a>
+                </div>
+            </div>
+            <!-- Company 3 -->
+            <div class="co-card" data-values="ship-fast,eng-driven,equity,product-impact,learning">
+                <div class="co-top">
+                    <div class="co-avatar" style="color:var(--sky)">O</div>
+                    <div><div class="co-name">OpenAI</div><div class="co-meta">AI Research · San Francisco</div></div>
+                </div>
+                <div class="co-tags">
+                    <span class="co-tag" data-v="ship-fast">🚀 Ship Fast</span>
+                    <span class="co-tag" data-v="eng-driven">🔧 Eng-Driven</span>
+                    <span class="co-tag" data-v="product-impact">📊 Product Impact</span>
+                    <span class="co-tag" data-v="equity">💰 Strong Comp</span>
+                    <span class="co-tag" data-v="learning">📚 Learning</span>
+                </div>
+                <div class="co-quote">"Move fast, build the future. Engineers work on problems that didn't exist last year. High autonomy, high expectations."</div>
+                <div class="co-foot">
+                    <span class="co-salary">$260k – $490k</span>
+                    <span class="co-loc">🇺🇸 San Francisco</span>
+                    <a href="#" class="co-link">View Profile →</a>
+                </div>
+            </div>
+            <!-- Company 4 -->
+            <div class="co-card" data-values="diverse,learning,social-impact,wlb,transparent,flex-hours">
+                <div class="co-top">
+                    <div class="co-avatar" style="color:var(--violet)">H</div>
+                    <div><div class="co-name">HubSpot</div><div class="co-meta">AI-Powered CRM · Dublin / Remote</div></div>
+                </div>
+                <div class="co-tags">
+                    <span class="co-tag" data-v="diverse">🌈 Diverse & Inclusive</span>
+                    <span class="co-tag" data-v="learning">📚 Learning & Growth</span>
+                    <span class="co-tag" data-v="wlb">⚖️ Work-Life Balance</span>
+                    <span class="co-tag" data-v="transparent">🔓 Transparent</span>
+                    <span class="co-tag" data-v="flex-hours">⏰ Flexible Hours</span>
+                </div>
+                <div class="co-quote">"Culture Code is our operating system — published publicly. ML teams have dedicated learning days and cross-team mobility."</div>
+                <div class="co-foot">
+                    <span class="co-salary">€80k – €140k</span>
+                    <span class="co-loc">🇮🇪 Dublin / Hybrid</span>
+                    <a href="#" class="co-link">View Profile →</a>
+                </div>
+            </div>
+            <!-- Company 5 -->
+            <div class="co-card" data-values="remote,async,ethical-ai,wlb,social-impact">
+                <div class="co-top">
+                    <div class="co-avatar" style="color:var(--lime)">P</div>
+                    <div><div class="co-name">Proton</div><div class="co-meta">Privacy AI · Geneva / Remote</div></div>
+                </div>
+                <div class="co-tags">
+                    <span class="co-tag" data-v="ethical-ai">🛡️ Ethical / Privacy</span>
+                    <span class="co-tag" data-v="remote">🌍 Remote</span>
+                    <span class="co-tag" data-v="wlb">⚖️ Work-Life Balance</span>
+                    <span class="co-tag" data-v="social-impact">❤️ Mission-Driven</span>
+                    <span class="co-tag" data-v="flat">🤝 Flat Hierarchy</span>
+                </div>
+                <div class="co-quote">"Privacy isn't a feature, it's our foundation. Small autonomous teams, quarterly goals, strong ownership culture."</div>
+                <div class="co-foot">
+                    <span class="co-salary">CHF 110k – 170k</span>
+                    <span class="co-loc">🇨🇭 Geneva / Remote EU</span>
+                    <a href="#" class="co-link">View Profile →</a>
+                </div>
+            </div>
+            <!-- Company 6 -->
+            <div class="co-card" data-values="ship-fast,diverse,learning,eng-driven,product-impact">
+                <div class="co-top">
+                    <div class="co-avatar" style="color:var(--rose)">G</div>
+                    <div><div class="co-name">Google DeepMind</div><div class="co-meta">AI Research · London / Bangalore</div></div>
+                </div>
+                <div class="co-tags">
+                    <span class="co-tag" data-v="eng-driven">🔧 Eng-Driven</span>
+                    <span class="co-tag" data-v="learning">📚 Learning Culture</span>
+                    <span class="co-tag" data-v="diverse">🌈 Diverse Teams</span>
+                    <span class="co-tag" data-v="equity">💰 Strong Comp</span>
+                    <span class="co-tag" data-v="product-impact">📊 Product Impact</span>
+                </div>
+                <div class="co-quote">"Publish or perish meets ship and iterate. Research teams set their own agendas. 20% time is genuinely encouraged."</div>
+                <div class="co-foot">
+                    <span class="co-salary">$200k – $400k / ₹30-60L</span>
+                    <span class="co-loc">🇬🇧 London / 🇮🇳 Bangalore</span>
+                    <a href="#" class="co-link">View Profile →</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ═══ CULTURE QUIZ ═══ -->
+<section class="quiz" id="quiz">
+    <div class="container">
+        <div class="s-center">
+            <span class="s-label">03 — Culture Quiz</span>
+            <h2 class="s-title">Discover your work <em>personality</em></h2>
+            <p class="s-desc">Answer 5 quick questions and we'll tell you what culture type fits you best.</p>
+        </div>
+        <div class="quiz-card">
+            <div class="quiz-head">
+                <h3>Culture Match Quiz</h3>
+                <p>5 questions · 2 minutes · Personalized results</p>
+            </div>
+            <div class="quiz-bar"><div class="quiz-bar-fill" id="qBar"></div></div>
+            <div class="quiz-body" id="qBody">
+                <div class="quiz-q" id="qText"></div>
+                <div class="quiz-opts" id="qOpts"></div>
+            </div>
+            <div class="quiz-result" id="qResult">
+                <h3>Your Culture Type</h3>
+                <div class="quiz-result-type" id="qType"></div>
+                <p id="qDesc"></p>
+                <div class="quiz-result-tags" id="qTags"></div>
+                <a href="#values" class="btn-primary" onclick="resetQuiz()">Find Matching Jobs →</a>
+            </div>
+            <div class="quiz-nav" id="qNav">
+                <button class="qbtn qbtn-back" id="qBack" onclick="prevQ()" disabled>← Back</button>
+                <button class="qbtn qbtn-next" id="qNext" onclick="nextQ()" disabled>Next →</button>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ═══ EXPLORE (SEO PAGES) ═══ -->
+<section class="explore" id="explore">
+    <div class="container">
+        <div class="s-center">
+            <span class="s-label">04 — Explore</span>
+            <h2 class="s-title">Browse by <em>value</em></h2>
+            <p class="s-desc">Deep-dive into companies that champion specific culture values.</p>
+        </div>
+        <div class="ex-grid">
+            <a href="/values/async-first" class="ex-card"><span class="ex-ico">💬</span><h3>Async-First Companies</h3><p>Teams that default to written communication over meetings</p><span class="ex-count">→ 34 companies</span></a>
+            <a href="/values/low-meetings" class="ex-card"><span class="ex-ico">🔇</span><h3>Low-Meeting Culture</h3><p>Where your calendar isn't the enemy of deep work</p><span class="ex-count">→ 28 companies</span></a>
+            <a href="/values/ethical-ai" class="ex-card"><span class="ex-ico">🛡️</span><h3>Ethical AI Jobs</h3><p>Companies with mandatory bias audits and safety-first AI</p><span class="ex-count">→ 22 companies</span></a>
+            <a href="/values/remote-native" class="ex-card"><span class="ex-ico">🌍</span><h3>Remote-Native Teams</h3><p>Built for distributed work from day one, not retrofitted</p><span class="ex-count">→ 45 companies</span></a>
+            <a href="/values/work-life-balance" class="ex-card"><span class="ex-ico">⚖️</span><h3>Work-Life Balance</h3><p>Sustainable pace, no hustle culture, real boundaries</p><span class="ex-count">→ 38 companies</span></a>
+            <a href="/values/open-source" class="ex-card"><span class="ex-ico">📖</span><h3>Open Source Contributors</h3><p>Teams that build in public and contribute back</p><span class="ex-count">→ 19 companies</span></a>
+            <a href="/values/ai-safety" class="ex-card"><span class="ex-ico">🤖</span><h3>AI Safety Focused</h3><p>Alignment research, red-teaming, responsible deployment</p><span class="ex-count">→ 15 companies</span></a>
+            <a href="/values/flat-hierarchy" class="ex-card"><span class="ex-ico">🤝</span><h3>Flat Hierarchy</h3><p>Minimal management layers, engineers talk to leadership</p><span class="ex-count">→ 26 companies</span></a>
+            <a href="/ai" class="ex-card" style="border-color:var(--accent-border);background:var(--accent-bg)"><span class="ex-ico">⚡</span><h3>All AI & ML Jobs</h3><p>Every AI role filtered by culture — our launch category</p><span class="ex-count">→ 200+ roles</span></a>
+        </div>
+    </div>
+</section>
+
+<!-- ═══ MEETING TAX CROSS-PROMO ═══ -->
+<section class="xpromo">
+    <div class="xpromo-inner">
+        <div class="xpromo-ico">⏱️</div>
+        <div>
+            <h3>How much do meetings cost your team?</h3>
+            <p>Before you apply, check if a company's meeting culture aligns with your preferences. Calculate the real cost of meetings.</p>
+            <a href="https://meetingtax.com" target="_blank" rel="noopener">Try Meeting Tax Calculator →</a>
+        </div>
+    </div>
+</section>
+
+<!-- ═══ NEWSLETTER ═══ -->
+<section class="newsletter" id="newsletter">
+    <div class="container">
+        <div class="nl-card">
+            <h2>Get culture-matched jobs <em style="font-family:var(--font-display);color:var(--accent)">weekly</em></h2>
+            <p>New roles from companies that actually care about how teams work. No spam, no recruiter BS.</p>
+            <form class="nl-form" onsubmit="event.preventDefault();this.innerHTML='<p style=color:var(--teal);font-weight:600>🎉 You\'re in! Check your inbox.</p>'">
+                <input type="email" class="nl-input" placeholder="you@email.com" required>
+                <button type="submit" class="nl-submit">Subscribe →</button>
+            </form>
+        </div>
+    </div>
+</section>
+
+<!-- ═══ FOOTER ═══ -->
+<footer>
+    <div class="container">
+        <div class="ft-grid">
+            <div class="ft-about">
+                <a href="/" class="nav-logo" style="margin-bottom:0">
+                    <div class="nav-mark">HC</div>
+                    <div class="nav-wordmark">Hire<span>By</span>Culture</div>
+                </a>
+                <p>The culture-first job board. Inspired by KeyValues, built for the AI era. Find teams that work the way you do.</p>
+            </div>
+            <div class="ft-col">
+                <h4>Values</h4>
+                <a href="/values/async-first">Async-First</a>
+                <a href="/values/low-meetings">Low-Meeting</a>
+                <a href="/values/ethical-ai">Ethical AI</a>
+                <a href="/values/remote-native">Remote-Native</a>
+                <a href="/values/work-life-balance">Work-Life Balance</a>
+            </div>
+            <div class="ft-col">
+                <h4>Categories</h4>
+                <a href="/ai">AI & ML Jobs</a>
+                <a href="/startups">Startup Jobs</a>
+                <a href="/remote">Remote Jobs</a>
+                <a href="/india">Jobs in India</a>
+                <a href="/europe">Jobs in Europe</a>
+            </div>
+            <div class="ft-col">
+                <h4>Company</h4>
+                <a href="/about">About</a>
+                <a href="/for-companies">List Your Company</a>
+                <a href="https://meetingtax.com" target="_blank">Meeting Tax</a>
+                <a href="https://paytaxfa.st" target="_blank">PayTaxFast</a>
+                <a href="https://x.com/hirebyculture" target="_blank">@hirebyculture</a>
+            </div>
+        </div>
+        <div class="ft-bar">
+            <p>© 2026 HireByCulture. Inspired by <a href="#" style="color:var(--text-2);text-decoration:underline">KeyValues</a>. Built with ❤️ for the indie hacker community.</p>
+            <p>Made by <a href="https://x.com/itspradz" target="_blank" style="color:var(--accent);text-decoration:none">@itspradz</a></p>
+        </div>
+    </div>
+</footer>
+
+<script>
+// ═══════════════════════════════════════
+// VALUE PICKER
+// ═══════════════════════════════════════
+const tags = document.querySelectorAll('.tag');
+const matchBtn = document.getElementById('matchBtn');
+const pickerStatus = document.getElementById('pickerStatus');
+let selected = new Set();
+
+tags.forEach(tag => {
+    tag.addEventListener('click', () => {
+        const v = tag.dataset.v;
+        if (selected.has(v)) {
+            selected.delete(v);
+            tag.classList.remove('on');
+        } else if (selected.size < 5) {
+            selected.add(v);
+            tag.classList.add('on');
+        }
+        updatePicker();
+    });
+});
+
+function updatePicker() {
+    const n = selected.size;
+    if (n === 0) {
+        pickerStatus.innerHTML = 'Select at least <b>3</b> values to find matches';
+        matchBtn.classList.remove('ready');
+    } else if (n < 3) {
+        pickerStatus.innerHTML = `<b>${n}</b>/5 selected — pick at least <b>${3 - n} more</b>`;
+        matchBtn.classList.remove('ready');
+    } else {
+        pickerStatus.innerHTML = `<b>${n}</b>/5 selected — ready to match!`;
+        matchBtn.classList.add('ready');
+    }
+    highlightCompanies();
+}
+
+function highlightCompanies() {
+    document.querySelectorAll('.co-card').forEach(card => {
+        const vals = card.dataset.values.split(',');
+        let matches = 0;
+        card.querySelectorAll('.co-tag').forEach(ct => {
+            const v = ct.dataset.v;
+            if (selected.has(v)) { ct.classList.add('match'); matches++; }
+            else { ct.classList.remove('match'); }
+        });
+    });
+}
+
+function scrollToCompanies() {
+    document.getElementById('companies').scrollIntoView({ behavior: 'smooth' });
+}
+
+// ═══════════════════════════════════════
+// CULTURE QUIZ
+// ═══════════════════════════════════════
+const questions = [
+    {
+        q: "It's Monday morning. Your ideal start looks like:",
+        opts: [
+            { text: "Check async updates in Slack/Notion, plan my own day", tags: ['async', 'deep-work'] },
+            { text: "Quick standup with the team, then heads-down coding", tags: ['ship-fast', 'small-team'] },
+            { text: "Browse research papers with coffee, no rush", tags: ['quality', 'learning'] },
+            { text: "Review the sprint board, pair-program with a teammate", tags: ['mentorship', 'eng-driven'] }
+        ]
+    },
+    {
+        q: "A major product decision needs to be made. You want:",
+        opts: [
+            { text: "Engineers have a strong voice at the table", tags: ['eng-driven', 'flat'] },
+            { text: "Data and metrics drive the call, not politics", tags: ['quality', 'transparent'] },
+            { text: "Fast decision, iterate later — don't overthink it", tags: ['ship-fast', 'hackathons'] },
+            { text: "Thorough ethical review before any deployment", tags: ['ethical-ai', 'safe-ai'] }
+        ]
+    },
+    {
+        q: "Your ideal meeting schedule is:",
+        opts: [
+            { text: "Zero recurring meetings. Everything async.", tags: ['async', 'low-meetings'] },
+            { text: "1-2 a week max, rest is deep work", tags: ['deep-work', 'wlb'] },
+            { text: "Daily standups are fine if they're short", tags: ['ship-fast', 'small-team'] },
+            { text: "I like collaborative sessions — pairing, brainstorms", tags: ['mentorship', 'diverse'] }
+        ]
+    },
+    {
+        q: "What matters most about the tech you work on?",
+        opts: [
+            { text: "It's on the absolute cutting edge", tags: ['cutting-edge', 'hackathons'] },
+            { text: "It's open source and benefits the community", tags: ['open-source', 'social-impact'] },
+            { text: "It's built responsibly with safety in mind", tags: ['ethical-ai', 'data-privacy'] },
+            { text: "It ships to real users and makes real impact", tags: ['product-impact', 'ship-fast'] }
+        ]
+    },
+    {
+        q: "Outside of work, you most value:",
+        opts: [
+            { text: "Time for hobbies, family, and rest", tags: ['wlb', 'flex-hours'] },
+            { text: "Contributing to open-source or side projects", tags: ['open-source', 'cutting-edge'] },
+            { text: "Speaking at conferences or writing blog posts", tags: ['conf-speakers', 'learning'] },
+            { text: "Knowing my work makes the world better", tags: ['social-impact', 'green'] }
+        ]
+    }
+];
+
+const types = {
+    'Deep Thinker': { match: ['async', 'deep-work', 'quality', 'low-meetings', 'wlb'], desc: "You thrive in calm, focused environments. Async communication and deep work blocks are your superpower. You'd love teams like Buffer, Basecamp, or Proton.", tags: ['Async-First', 'Deep Work', 'Low-Meetings', 'Quality Focus'] },
+    'Builder-Shipper': { match: ['ship-fast', 'hackathons', 'cutting-edge', 'product-impact', 'eng-driven'], desc: "You live to build and iterate. Hackathons, fast deploys, and direct product impact energize you. OpenAI, Vercel, or fast-moving startups are your vibe.", tags: ['Ship Fast', 'Cutting-Edge', 'Hackathons', 'Product Impact'] },
+    'Ethical Pioneer': { match: ['ethical-ai', 'safe-ai', 'social-impact', 'data-privacy', 'green'], desc: "You believe technology should make the world better. AI safety, bias audits, and privacy-first design are non-negotiable. Anthropic or Proton would fit.", tags: ['Ethical AI', 'AI Safety', 'Privacy-First', 'Social Impact'] },
+    'Growth Seeker': { match: ['learning', 'mentorship', 'conf-speakers', 'diverse', 'internal-mobility'], desc: "You're always growing. Learning budgets, strong mentorship, and conference speaking matter. HubSpot, Google, or companies with rich L&D culture suit you.", tags: ['Learning Culture', 'Mentorship', 'Diverse Teams', 'Conferences'] }
+};
+
+let qi = 0, answers = [];
+
+function renderQ() {
+    const q = questions[qi];
+    document.getElementById('qText').textContent = q.q;
+    const optsEl = document.getElementById('qOpts');
+    optsEl.innerHTML = '';
+    q.opts.forEach((o, i) => {
+        const div = document.createElement('div');
+        div.className = 'quiz-opt';
+        if (answers[qi] === i) div.classList.add('picked');
+        div.textContent = o.text;
+        div.onclick = () => {
+            answers[qi] = i;
+            optsEl.querySelectorAll('.quiz-opt').forEach(el => el.classList.remove('picked'));
+            div.classList.add('picked');
+            document.getElementById('qNext').disabled = false;
+        };
+        optsEl.appendChild(div);
+    });
+    document.getElementById('qBar').style.width = ((qi + 1) / questions.length * 100) + '%';
+    document.getElementById('qBack').disabled = qi === 0;
+    document.getElementById('qNext').disabled = answers[qi] === undefined;
+    document.getElementById('qNext').textContent = qi === questions.length - 1 ? 'See Results →' : 'Next →';
+}
+
+function nextQ() {
+    if (qi < questions.length - 1) { qi++; renderQ(); }
+    else { showResult(); }
+}
+function prevQ() { if (qi > 0) { qi--; renderQ(); } }
+
+function showResult() {
+    const tagCounts = {};
+    answers.forEach((a, i) => {
+        questions[i].opts[a].tags.forEach(t => { tagCounts[t] = (tagCounts[t] || 0) + 1; });
+    });
+    let best = '', bestScore = 0;
+    for (const [name, type] of Object.entries(types)) {
+        const score = type.match.reduce((s, t) => s + (tagCounts[t] || 0), 0);
+        if (score > bestScore) { bestScore = score; best = name; }
+    }
+    const r = types[best];
+    document.getElementById('qType').textContent = '🎯 ' + best;
+    document.getElementById('qDesc').textContent = r.desc;
+    document.getElementById('qTags').innerHTML = r.tags.map(t => `<span class="qr-tag">${t}</span>`).join('');
+    document.getElementById('qBody').style.display = 'none';
+    document.getElementById('qNav').style.display = 'none';
+    document.getElementById('qResult').style.display = 'block';
+}
+
+function resetQuiz() {
+    qi = 0; answers = [];
+    document.getElementById('qBody').style.display = '';
+    document.getElementById('qNav').style.display = '';
+    document.getElementById('qResult').style.display = 'none';
+    renderQ();
+}
+
+renderQ();
+</script>
+</body>
+</html>
