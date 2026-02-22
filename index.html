@@ -272,15 +272,27 @@
             background: linear-gradient(90deg, var(--accent), var(--teal));
             opacity: 0; transition: opacity 0.25s;
         }
+        
+        .co-avatar { width: 40px; height: 40px; border-radius: 10px; object-fit: contain; background: rgba(255,255,255,0.05); padding: 4px; }
+        .co-rating { margin-left: auto; font-size: 13px; color: var(--text-2); background: rgba(255,255,255,0.04); padding: 4px 10px; border-radius: 6px; }
+        .co-details { margin-top: 16px; padding-top: 16px; border-top: 1px solid var(--border); }
+        .co-detail-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 16px; }
+        .co-detail-label { display: block; font-size: 11px; color: var(--text-2); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 2px; }
+        .co-detail-value { font-size: 14px; font-weight: 600; color: var(--text); }
+        .co-pros-cons { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 12px; }
+        .co-pros ul, .co-cons ul { list-style: none; padding: 0; margin: 8px 0 0; }
+        .co-pros li, .co-cons li { font-size: 12px; color: var(--text-2); padding: 4px 0; line-height: 1.5; }
+        .co-pros li::before { content: '✓ '; color: var(--accent); }
+        .co-cons li::before { content: '✗ '; color: #ef4444; }
+        .co-pros strong, .co-cons strong { font-size: 12px; color: var(--text); }
+        .co-source { font-size: 11px; color: var(--text-2); opacity: 0.6; font-style: italic; }
+        .co-actions { display: flex; gap: 12px; align-items: center; }
+        .co-toggle { background: none; border: 1px solid var(--border-2); color: var(--text-2); padding: 5px 12px; border-radius: 6px; font-size: 12px; cursor: pointer; font-family: var(--font-body); transition: all 0.2s; }
+        .co-toggle:hover { border-color: var(--accent); color: var(--accent); }
+        .co-toggle.open { border-color: var(--accent); color: var(--accent); }
         .co-card:hover { border-color: var(--border-2); transform: translateY(-3px); box-shadow: var(--shadow-lg); }
         .co-card:hover::after { opacity: 1; }
         .co-top { display: flex; align-items: center; gap: 12px; margin-bottom: 16px; }
-        .co-avatar {
-            width: 44px; height: 44px; border-radius: var(--radius-sm);
-            background: var(--bg); border: 1px solid var(--border);
-            display: grid; place-items: center;
-            font-size: 18px; font-weight: 800; color: var(--accent); flex-shrink: 0;
-        }
         .co-name { font-size: 16px; font-weight: 600; }
         .co-meta { font-size: 12.5px; color: var(--text-3); }
         .co-tags { display: flex; flex-wrap: wrap; gap: 5px; margin-bottom: 16px; }
@@ -514,7 +526,7 @@
 
         <div class="picker-status" id="pickerStatus">Select at least <b>3</b> values to find matches</div>
         <div class="picker-cta">
-            <button class="btn-match" id="matchBtn" onclick="scrollToCompanies()">Show Matching Companies →</button>
+            <button class="btn-match" id="matchBtn" onclick="goToJobs()">Show Matching Jobs →</button>
         </div>
     </div>
 </section>
@@ -525,127 +537,700 @@
         <div class="s-center">
             <span class="s-label">02 — Company Profiles</span>
             <h2 class="s-title">Teams that <em>live</em> their values</h2>
-            <p class="s-desc">Real culture profiles, not marketing fluff. See how each team actually works day-to-day.</p>
+            <p class="s-desc">Real culture profiles built from employee reviews. Click any company to see the full breakdown.</p>
         </div>
         <div class="co-grid" id="coGrid">
-            <!-- Company 1 -->
-            <div class="co-card" data-values="async,remote,ethical-ai,deep-work,flat,learning">
+
+            <div class="co-card" data-company="anthropic" data-values="ethical-ai,learning,flat,eng-driven,equity,social-impact">
                 <div class="co-top">
-                    <div class="co-avatar">A</div>
-                    <div><div class="co-name">Anthropic</div><div class="co-meta">AI Safety · San Francisco / Remote</div></div>
+                    <img class="co-avatar" src="https://www.google.com/s2/favicons?domain=anthropic.com&sz=128" alt="Anthropic" width="40" height="40">
+                    <div>
+                        <div class="co-name">Anthropic</div>
+                        <div class="co-meta">AI Safety · San Francisco / Remote</div>
+                    </div>
+                    <div class="co-rating" title="Glassdoor rating">⭐ 4.4</div>
                 </div>
                 <div class="co-tags">
                     <span class="co-tag" data-v="ethical-ai">🛡️ Ethical AI</span>
-                    <span class="co-tag" data-v="deep-work">🧠 Deep Work</span>
-                    <span class="co-tag" data-v="flat">🤝 Flat Hierarchy</span>
                     <span class="co-tag" data-v="learning">📚 Learning & Growth</span>
-                    <span class="co-tag" data-v="equity">💰 Strong Comp</span>
+                    <span class="co-tag" data-v="flat">🤝 Flat Hierarchy</span>
+                    <span class="co-tag" data-v="eng-driven">⚙️ Engineering-Driven</span>
+                    <span class="co-tag" data-v="equity">💰 Strong Equity</span>
                 </div>
-                <div class="co-quote">"We prioritize thoughtful, deep research over shipping speed. Engineers own their projects end-to-end with minimal process overhead."</div>
+                <div class="co-quote">"High-trust, low-politics environment. Mission-driven to the core. Engineers own projects end-to-end with incredible autonomy."</div>
+                <div class="co-details" style="display:none">
+                    <div class="co-detail-grid">
+                        <div class="co-detail-item">
+                            <span class="co-detail-label">Size</span>
+                            <span class="co-detail-value">~1,500 employees</span>
+                        </div>
+                        <div class="co-detail-item">
+                            <span class="co-detail-label">Recommend</span>
+                            <span class="co-detail-value">95%</span>
+                        </div>
+                        <div class="co-detail-item">
+                            <span class="co-detail-label">WLB Score</span>
+                            <span class="co-detail-value">3.7/5</span>
+                        </div>
+                        <div class="co-detail-item">
+                            <span class="co-detail-label">Salary Range</span>
+                            <span class="co-detail-value">$300k – $490k</span>
+                        </div>
+                    </div>
+                    <div class="co-pros-cons">
+                        <div class="co-pros"><strong>👍 Pros</strong><ul><li>Mission alignment is real, not just marketing</li><li>Incredible autonomy and ownership</li><li>Top-tier compensation in the industry</li><li>Smart, kind, low-ego coworkers</li></ul></div>
+                        <div class="co-cons"><strong>👎 Cons</strong><ul><li>Every project feels like a fire drill</li><li>Work-life balance is challenging (60+ hr weeks in crunch)</li><li>Processes still catching up to growth</li></ul></div>
+                    </div>
+                    <div class="co-source">Based on 22 Glassdoor reviews + Blind employee posts</div>
+                </div>
                 <div class="co-foot">
-                    <span class="co-salary">$230k – $490k</span>
-                    <span class="co-loc">🇺🇸 SF / Remote</span>
-                    <a href="#" class="co-link">View Profile →</a>
+                    <span class="co-loc">🇺🇸 SF · 🇬🇧 London · Remote</span>
+                    <div class="co-actions">
+                        <button class="co-toggle" onclick="toggleProfile(this)">View Profile ↓</button>
+                        <a href="/jobs" class="co-link" onclick="this.href='/jobs?company=anthropic'">See Jobs →</a>
+                    </div>
                 </div>
             </div>
-            <!-- Company 2 -->
-            <div class="co-card" data-values="async,deep-work,remote,flex-hours,wlb,transparent">
+            <div class="co-card" data-company="openai" data-values="ship-fast,eng-driven,equity,product-impact,learning">
                 <div class="co-top">
-                    <div class="co-avatar" style="color:var(--teal)">B</div>
-                    <div><div class="co-name">Buffer</div><div class="co-meta">Social Media AI · Fully Remote</div></div>
-                </div>
-                <div class="co-tags">
-                    <span class="co-tag" data-v="async">💬 Async-First</span>
-                    <span class="co-tag" data-v="deep-work">🧠 Low Meetings</span>
-                    <span class="co-tag" data-v="remote">🌍 Remote</span>
-                    <span class="co-tag" data-v="transparent">🔓 Transparent</span>
-                    <span class="co-tag" data-v="wlb">⚖️ Work-Life Balance</span>
-                </div>
-                <div class="co-quote">"We're fully async, no mandatory meetings. Everyone's calendar is theirs. We've published our salaries publicly since 2013."</div>
-                <div class="co-foot">
-                    <span class="co-salary">$120k – $180k</span>
-                    <span class="co-loc">🌍 Fully Remote</span>
-                    <a href="#" class="co-link">View Profile →</a>
-                </div>
-            </div>
-            <!-- Company 3 -->
-            <div class="co-card" data-values="ship-fast,eng-driven,equity,product-impact,learning">
-                <div class="co-top">
-                    <div class="co-avatar" style="color:var(--sky)">O</div>
-                    <div><div class="co-name">OpenAI</div><div class="co-meta">AI Research · San Francisco</div></div>
+                    <img class="co-avatar" src="https://www.google.com/s2/favicons?domain=openai.com&sz=128" alt="OpenAI" width="40" height="40">
+                    <div>
+                        <div class="co-name">OpenAI</div>
+                        <div class="co-meta">AI Research · San Francisco</div>
+                    </div>
+                    <div class="co-rating" title="Glassdoor rating">⭐ 3.8</div>
                 </div>
                 <div class="co-tags">
                     <span class="co-tag" data-v="ship-fast">🚀 Ship Fast</span>
-                    <span class="co-tag" data-v="eng-driven">🔧 Eng-Driven</span>
-                    <span class="co-tag" data-v="product-impact">📊 Product Impact</span>
-                    <span class="co-tag" data-v="equity">💰 Strong Comp</span>
-                    <span class="co-tag" data-v="learning">📚 Learning</span>
+                    <span class="co-tag" data-v="eng-driven">⚙️ Engineering-Driven</span>
+                    <span class="co-tag" data-v="equity">💰 Strong Equity</span>
+                    <span class="co-tag" data-v="product-impact">🎯 Product Impact</span>
                 </div>
-                <div class="co-quote">"Move fast, build the future. Engineers work on problems that didn't exist last year. High autonomy, high expectations."</div>
+                <div class="co-quote">"Move fast and ship. High intensity environment where you build products used by hundreds of millions. Not for the faint-hearted."</div>
+                <div class="co-details" style="display:none">
+                    <div class="co-detail-grid">
+                        <div class="co-detail-item">
+                            <span class="co-detail-label">Size</span>
+                            <span class="co-detail-value">~3,000 employees</span>
+                        </div>
+                        <div class="co-detail-item">
+                            <span class="co-detail-label">Recommend</span>
+                            <span class="co-detail-value">72%</span>
+                        </div>
+                        <div class="co-detail-item">
+                            <span class="co-detail-label">WLB Score</span>
+                            <span class="co-detail-value">3.1/5</span>
+                        </div>
+                        <div class="co-detail-item">
+                            <span class="co-detail-label">Salary Range</span>
+                            <span class="co-detail-value">$280k – $450k</span>
+                        </div>
+                    </div>
+                    <div class="co-pros-cons">
+                        <div class="co-pros"><strong>👍 Pros</strong><ul><li>Working on the cutting edge of AI</li><li>Massive product impact at global scale</li><li>Strong compensation and equity</li></ul></div>
+                        <div class="co-cons"><strong>👎 Cons</strong><ul><li>Intense pace, long hours are the norm</li><li>Organizational chaos from rapid growth</li><li>Work-life balance is the lowest-rated factor</li></ul></div>
+                    </div>
+                    <div class="co-source">Based on Glassdoor reviews + Blind employee posts</div>
+                </div>
                 <div class="co-foot">
-                    <span class="co-salary">$260k – $490k</span>
-                    <span class="co-loc">🇺🇸 San Francisco</span>
-                    <a href="#" class="co-link">View Profile →</a>
+                    <span class="co-loc">🇺🇸 SF · 🇬🇧 London · 🇮🇪 Dublin</span>
+                    <div class="co-actions">
+                        <button class="co-toggle" onclick="toggleProfile(this)">View Profile ↓</button>
+                        <a href="/jobs" class="co-link" onclick="this.href='/jobs?company=openai'">See Jobs →</a>
+                    </div>
                 </div>
             </div>
-            <!-- Company 4 -->
-            <div class="co-card" data-values="diverse,learning,social-impact,wlb,transparent,flex-hours">
+            <div class="co-card" data-company="huggingface" data-values="open-source,flat,async,remote,many-hats,flex-hours">
                 <div class="co-top">
-                    <div class="co-avatar" style="color:var(--violet)">H</div>
-                    <div><div class="co-name">HubSpot</div><div class="co-meta">AI-Powered CRM · Dublin / Remote</div></div>
+                    <img class="co-avatar" src="https://www.google.com/s2/favicons?domain=huggingface.co&sz=128" alt="Hugging Face" width="40" height="40">
+                    <div>
+                        <div class="co-name">Hugging Face</div>
+                        <div class="co-meta">Open-Source AI · Remote-First</div>
+                    </div>
+                    <div class="co-rating" title="Glassdoor rating">⭐ 3.8</div>
+                </div>
+                <div class="co-tags">
+                    <span class="co-tag" data-v="open-source">📖 Open Source</span>
+                    <span class="co-tag" data-v="flat">🤝 Flat Hierarchy</span>
+                    <span class="co-tag" data-v="async">💬 Async-First</span>
+                    <span class="co-tag" data-v="remote">🌍 Remote-Native</span>
+                    <span class="co-tag" data-v="many-hats">🎭 Wear Many Hats</span>
+                </div>
+                <div class="co-quote">"The open-source community vibe extends internally. Flat structure, remote-first, and you genuinely build in public."</div>
+                <div class="co-details" style="display:none">
+                    <div class="co-detail-grid">
+                        <div class="co-detail-item">
+                            <span class="co-detail-label">Size</span>
+                            <span class="co-detail-value">~400 employees</span>
+                        </div>
+                        <div class="co-detail-item">
+                            <span class="co-detail-label">Recommend</span>
+                            <span class="co-detail-value">80%</span>
+                        </div>
+                        <div class="co-detail-item">
+                            <span class="co-detail-label">WLB Score</span>
+                            <span class="co-detail-value">4.1/5</span>
+                        </div>
+                        <div class="co-detail-item">
+                            <span class="co-detail-label">Salary Range</span>
+                            <span class="co-detail-value">$150k – $280k</span>
+                        </div>
+                    </div>
+                    <div class="co-pros-cons">
+                        <div class="co-pros"><strong>👍 Pros</strong><ul><li>True open-source culture, build in public</li><li>Great work-life balance for AI company</li><li>Wear many hats, high ownership</li></ul></div>
+                        <div class="co-cons"><strong>👎 Cons</strong><ul><li>Lower comp than big AI labs</li><li>Growing pains as company scales</li><li>Can feel unstructured at times</li></ul></div>
+                    </div>
+                    <div class="co-source">Based on Glassdoor reviews + community feedback</div>
+                </div>
+                <div class="co-foot">
+                    <span class="co-loc">🌍 Fully Remote · 🇺🇸 NYC · 🇫🇷 Paris</span>
+                    <div class="co-actions">
+                        <button class="co-toggle" onclick="toggleProfile(this)">View Profile ↓</button>
+                        <a href="/jobs" class="co-link" onclick="this.href='/jobs?company=huggingface'">See Jobs →</a>
+                    </div>
+                </div>
+            </div>
+            <div class="co-card" data-company="buffer" data-values="async,deep-work,remote,flex-hours,wlb,transparent">
+                <div class="co-top">
+                    <img class="co-avatar" src="https://www.google.com/s2/favicons?domain=buffer.com&sz=128" alt="Buffer" width="40" height="40">
+                    <div>
+                        <div class="co-name">Buffer</div>
+                        <div class="co-meta">Social Media Tools · Fully Remote</div>
+                    </div>
+                    <div class="co-rating" title="Glassdoor rating">⭐ 4.5</div>
+                </div>
+                <div class="co-tags">
+                    <span class="co-tag" data-v="async">💬 Async-First</span>
+                    <span class="co-tag" data-v="deep-work">🧠 Deep Work</span>
+                    <span class="co-tag" data-v="remote">🌍 Remote-Native</span>
+                    <span class="co-tag" data-v="transparent">🔓 Transparent</span>
+                    <span class="co-tag" data-v="wlb">⚖️ Work-Life Balance</span>
+                </div>
+                <div class="co-quote">"Fully async, no mandatory meetings. Public salary formula since 2013. Your calendar is yours. The gold standard for remote work."</div>
+                <div class="co-details" style="display:none">
+                    <div class="co-detail-grid">
+                        <div class="co-detail-item">
+                            <span class="co-detail-label">Size</span>
+                            <span class="co-detail-value">~80 employees</span>
+                        </div>
+                        <div class="co-detail-item">
+                            <span class="co-detail-label">Recommend</span>
+                            <span class="co-detail-value">92%</span>
+                        </div>
+                        <div class="co-detail-item">
+                            <span class="co-detail-label">WLB Score</span>
+                            <span class="co-detail-value">4.6/5</span>
+                        </div>
+                        <div class="co-detail-item">
+                            <span class="co-detail-label">Salary Range</span>
+                            <span class="co-detail-value">$120k – $180k</span>
+                        </div>
+                    </div>
+                    <div class="co-pros-cons">
+                        <div class="co-pros"><strong>👍 Pros</strong><ul><li>Industry-leading work-life balance</li><li>Radical transparency (public salaries)</li><li>Truly async — your time is yours</li><li>4-day work week</li></ul></div>
+                        <div class="co-cons"><strong>👎 Cons</strong><ul><li>Below-market compensation</li><li>Small team means limited career ladder</li><li>Slow decision-making at times</li></ul></div>
+                    </div>
+                    <div class="co-source">Based on Glassdoor reviews + public salary data</div>
+                </div>
+                <div class="co-foot">
+                    <span class="co-loc">🌍 Fully Remote (global)</span>
+                    <div class="co-actions">
+                        <button class="co-toggle" onclick="toggleProfile(this)">View Profile ↓</button>
+                        <a href="/jobs" class="co-link" onclick="this.href='/jobs?company=buffer'">See Jobs →</a>
+                    </div>
+                </div>
+            </div>
+            <div class="co-card" data-company="mistral" data-values="ship-fast,eng-driven,open-source,flat,many-hats">
+                <div class="co-top">
+                    <img class="co-avatar" src="https://www.google.com/s2/favicons?domain=mistral.ai&sz=128" alt="Mistral AI" width="40" height="40">
+                    <div>
+                        <div class="co-name">Mistral AI</div>
+                        <div class="co-meta">Open-Source AI · Paris</div>
+                    </div>
+                    <div class="co-rating" title="Glassdoor rating">⭐ 4.0</div>
+                </div>
+                <div class="co-tags">
+                    <span class="co-tag" data-v="ship-fast">🚀 Ship Fast</span>
+                    <span class="co-tag" data-v="eng-driven">⚙️ Engineering-Driven</span>
+                    <span class="co-tag" data-v="open-source">📖 Open Source</span>
+                    <span class="co-tag" data-v="flat">🤝 Flat Hierarchy</span>
+                    <span class="co-tag" data-v="many-hats">🎭 Wear Many Hats</span>
+                </div>
+                <div class="co-quote">"Small, elite team shipping world-class open models from Paris. Research meets engineering at startup speed."</div>
+                <div class="co-details" style="display:none">
+                    <div class="co-detail-grid">
+                        <div class="co-detail-item">
+                            <span class="co-detail-label">Size</span>
+                            <span class="co-detail-value">~100 employees</span>
+                        </div>
+                        <div class="co-detail-item">
+                            <span class="co-detail-label">Recommend</span>
+                            <span class="co-detail-value">85%</span>
+                        </div>
+                        <div class="co-detail-item">
+                            <span class="co-detail-label">WLB Score</span>
+                            <span class="co-detail-value">3.6/5</span>
+                        </div>
+                        <div class="co-detail-item">
+                            <span class="co-detail-label">Salary Range</span>
+                            <span class="co-detail-value">€80k – €200k</span>
+                        </div>
+                    </div>
+                    <div class="co-pros-cons">
+                        <div class="co-pros"><strong>👍 Pros</strong><ul><li>Elite small team, massive impact per person</li><li>Open-source ethos with commercial backing</li><li>European HQ with good benefits</li></ul></div>
+                        <div class="co-cons"><strong>👎 Cons</strong><ul><li>Startup intensity, long hours</li><li>Still building processes and structure</li><li>Competitive comp but below US AI labs</li></ul></div>
+                    </div>
+                    <div class="co-source">Based on Glassdoor reviews + industry reports</div>
+                </div>
+                <div class="co-foot">
+                    <span class="co-loc">🇫🇷 Paris · 🇺🇸 SF · 🇬🇧 London</span>
+                    <div class="co-actions">
+                        <button class="co-toggle" onclick="toggleProfile(this)">View Profile ↓</button>
+                        <a href="/jobs" class="co-link" onclick="this.href='/jobs?company=mistral'">See Jobs →</a>
+                    </div>
+                </div>
+            </div>
+            <div class="co-card" data-company="cohere" data-values="learning,eng-driven,many-hats">
+                <div class="co-top">
+                    <img class="co-avatar" src="https://www.google.com/s2/favicons?domain=cohere.com&sz=128" alt="Cohere" width="40" height="40">
+                    <div>
+                        <div class="co-name">Cohere</div>
+                        <div class="co-meta">Enterprise AI · Toronto / Remote</div>
+                    </div>
+                    <div class="co-rating" title="Glassdoor rating">⭐ 3.4</div>
+                </div>
+                <div class="co-tags">
+                    <span class="co-tag" data-v="learning">📚 Learning & Growth</span>
+                    <span class="co-tag" data-v="eng-driven">⚙️ Engineering-Driven</span>
+                    <span class="co-tag" data-v="many-hats">🎭 Wear Many Hats</span>
+                </div>
+                <div class="co-quote">"Enterprise AI with a research lab feel. Fast-growing with lots of opportunity to own new problem spaces."</div>
+                <div class="co-details" style="display:none">
+                    <div class="co-detail-grid">
+                        <div class="co-detail-item">
+                            <span class="co-detail-label">Size</span>
+                            <span class="co-detail-value">~500 employees</span>
+                        </div>
+                        <div class="co-detail-item">
+                            <span class="co-detail-label">Recommend</span>
+                            <span class="co-detail-value">65%</span>
+                        </div>
+                        <div class="co-detail-item">
+                            <span class="co-detail-label">WLB Score</span>
+                            <span class="co-detail-value">3.5/5</span>
+                        </div>
+                        <div class="co-detail-item">
+                            <span class="co-detail-label">Salary Range</span>
+                            <span class="co-detail-value">$150k – $300k CAD</span>
+                        </div>
+                    </div>
+                    <div class="co-pros-cons">
+                        <div class="co-pros"><strong>👍 Pros</strong><ul><li>Cutting-edge NLP research</li><li>Toronto tech scene, good for Canadians</li><li>Rapid career growth opportunities</li></ul></div>
+                        <div class="co-cons"><strong>👎 Cons</strong><ul><li>Growing pains and shifting priorities</li><li>Management still maturing</li><li>Mixed reviews on work-life balance</li></ul></div>
+                    </div>
+                    <div class="co-source">Based on Glassdoor reviews</div>
+                </div>
+                <div class="co-foot">
+                    <span class="co-loc">🇨🇦 Toronto · 🇺🇸 SF · 🇬🇧 London</span>
+                    <div class="co-actions">
+                        <button class="co-toggle" onclick="toggleProfile(this)">View Profile ↓</button>
+                        <a href="/jobs" class="co-link" onclick="this.href='/jobs?company=cohere'">See Jobs →</a>
+                    </div>
+                </div>
+            </div>
+            <div class="co-card" data-company="perplexity" data-values="ship-fast,eng-driven,equity,product-impact,learning">
+                <div class="co-top">
+                    <img class="co-avatar" src="https://www.google.com/s2/favicons?domain=perplexity.ai&sz=128" alt="Perplexity AI" width="40" height="40">
+                    <div>
+                        <div class="co-name">Perplexity AI</div>
+                        <div class="co-meta">AI Search · San Francisco</div>
+                    </div>
+                    <div class="co-rating" title="Glassdoor rating">⭐ 3.9</div>
+                </div>
+                <div class="co-tags">
+                    <span class="co-tag" data-v="ship-fast">🚀 Ship Fast</span>
+                    <span class="co-tag" data-v="eng-driven">⚙️ Engineering-Driven</span>
+                    <span class="co-tag" data-v="equity">💰 Strong Equity</span>
+                    <span class="co-tag" data-v="product-impact">🎯 Product Impact</span>
+                </div>
+                <div class="co-quote">"Move insanely fast. Small teams shipping features to millions of users. High intensity, high reward startup energy."</div>
+                <div class="co-details" style="display:none">
+                    <div class="co-detail-grid">
+                        <div class="co-detail-item">
+                            <span class="co-detail-label">Size</span>
+                            <span class="co-detail-value">~500 employees</span>
+                        </div>
+                        <div class="co-detail-item">
+                            <span class="co-detail-label">Recommend</span>
+                            <span class="co-detail-value">78%</span>
+                        </div>
+                        <div class="co-detail-item">
+                            <span class="co-detail-label">WLB Score</span>
+                            <span class="co-detail-value">3.3/5</span>
+                        </div>
+                        <div class="co-detail-item">
+                            <span class="co-detail-label">Salary Range</span>
+                            <span class="co-detail-value">$200k – $400k</span>
+                        </div>
+                    </div>
+                    <div class="co-pros-cons">
+                        <div class="co-pros"><strong>👍 Pros</strong><ul><li>Incredible growth trajectory</li><li>Direct product impact at scale</li><li>Strong equity upside</li></ul></div>
+                        <div class="co-cons"><strong>👎 Cons</strong><ul><li>Very intense pace, expect long hours</li><li>Startup chaos — roles shift frequently</li><li>Work-life balance is a real tradeoff</li></ul></div>
+                    </div>
+                    <div class="co-source">Based on Glassdoor reviews + Blind posts</div>
+                </div>
+                <div class="co-foot">
+                    <span class="co-loc">🇺🇸 SF · 🇬🇧 London</span>
+                    <div class="co-actions">
+                        <button class="co-toggle" onclick="toggleProfile(this)">View Profile ↓</button>
+                        <a href="/jobs" class="co-link" onclick="this.href='/jobs?company=perplexity'">See Jobs →</a>
+                    </div>
+                </div>
+            </div>
+            <div class="co-card" data-company="together" data-values="open-source,eng-driven,flat,learning,many-hats">
+                <div class="co-top">
+                    <img class="co-avatar" src="https://www.google.com/s2/favicons?domain=together.ai&sz=128" alt="Together AI" width="40" height="40">
+                    <div>
+                        <div class="co-name">Together AI</div>
+                        <div class="co-meta">AI Infrastructure · San Francisco</div>
+                    </div>
+                    <div class="co-rating" title="Glassdoor rating">⭐ 4.1</div>
+                </div>
+                <div class="co-tags">
+                    <span class="co-tag" data-v="open-source">📖 Open Source</span>
+                    <span class="co-tag" data-v="eng-driven">⚙️ Engineering-Driven</span>
+                    <span class="co-tag" data-v="flat">🤝 Flat Hierarchy</span>
+                    <span class="co-tag" data-v="learning">📚 Learning</span>
+                    <span class="co-tag" data-v="many-hats">🎭 Wear Many Hats</span>
+                </div>
+                <div class="co-quote">"Building the infrastructure layer for open AI. Small team, big ambition, strong research DNA."</div>
+                <div class="co-details" style="display:none">
+                    <div class="co-detail-grid">
+                        <div class="co-detail-item">
+                            <span class="co-detail-label">Size</span>
+                            <span class="co-detail-value">~150 employees</span>
+                        </div>
+                        <div class="co-detail-item">
+                            <span class="co-detail-label">Recommend</span>
+                            <span class="co-detail-value">85%</span>
+                        </div>
+                        <div class="co-detail-item">
+                            <span class="co-detail-label">WLB Score</span>
+                            <span class="co-detail-value">3.8/5</span>
+                        </div>
+                        <div class="co-detail-item">
+                            <span class="co-detail-label">Salary Range</span>
+                            <span class="co-detail-value">$180k – $350k</span>
+                        </div>
+                    </div>
+                    <div class="co-pros-cons">
+                        <div class="co-pros"><strong>👍 Pros</strong><ul><li>Open-source mission with commercial viability</li><li>Small team with outsized impact</li><li>Strong technical culture</li></ul></div>
+                        <div class="co-cons"><strong>👎 Cons</strong><ul><li>Early-stage startup growing fast</li><li>Still defining processes</li><li>SF-focused, limited remote</li></ul></div>
+                    </div>
+                    <div class="co-source">Based on Glassdoor reviews</div>
+                </div>
+                <div class="co-foot">
+                    <span class="co-loc">🇺🇸 SF</span>
+                    <div class="co-actions">
+                        <button class="co-toggle" onclick="toggleProfile(this)">View Profile ↓</button>
+                        <a href="/jobs" class="co-link" onclick="this.href='/jobs?company=together'">See Jobs →</a>
+                    </div>
+                </div>
+            </div>
+            <div class="co-card" data-company="databricks" data-values="eng-driven,learning,diverse,equity,product-impact">
+                <div class="co-top">
+                    <img class="co-avatar" src="https://www.google.com/s2/favicons?domain=databricks.com&sz=128" alt="Databricks" width="40" height="40">
+                    <div>
+                        <div class="co-name">Databricks</div>
+                        <div class="co-meta">Data & AI Platform · San Francisco</div>
+                    </div>
+                    <div class="co-rating" title="Glassdoor rating">⭐ 4.1</div>
+                </div>
+                <div class="co-tags">
+                    <span class="co-tag" data-v="eng-driven">⚙️ Engineering-Driven</span>
+                    <span class="co-tag" data-v="learning">📚 Learning</span>
+                    <span class="co-tag" data-v="diverse">🌈 Diverse & Inclusive</span>
+                    <span class="co-tag" data-v="equity">💰 Strong Equity</span>
+                </div>
+                <div class="co-quote">"Engineering-first culture at scale. Strong investment in employee growth with a global footprint."</div>
+                <div class="co-details" style="display:none">
+                    <div class="co-detail-grid">
+                        <div class="co-detail-item">
+                            <span class="co-detail-label">Size</span>
+                            <span class="co-detail-value">~7,000 employees</span>
+                        </div>
+                        <div class="co-detail-item">
+                            <span class="co-detail-label">Recommend</span>
+                            <span class="co-detail-value">85%</span>
+                        </div>
+                        <div class="co-detail-item">
+                            <span class="co-detail-label">WLB Score</span>
+                            <span class="co-detail-value">3.9/5</span>
+                        </div>
+                        <div class="co-detail-item">
+                            <span class="co-detail-label">Salary Range</span>
+                            <span class="co-detail-value">$180k – $380k</span>
+                        </div>
+                    </div>
+                    <div class="co-pros-cons">
+                        <div class="co-pros"><strong>👍 Pros</strong><ul><li>Pre-IPO equity with strong valuation</li><li>Engineering-driven decision making</li><li>Good global presence and diversity</li></ul></div>
+                        <div class="co-cons"><strong>👎 Cons</strong><ul><li>Large company politics emerging</li><li>Some teams more intense than others</li><li>Bureaucracy increasing with scale</li></ul></div>
+                    </div>
+                    <div class="co-source">Based on Glassdoor reviews</div>
+                </div>
+                <div class="co-foot">
+                    <span class="co-loc">🇺🇸 SF · 🇳🇱 Amsterdam · 🇸🇬 Singapore · 🇮🇳 Bangalore</span>
+                    <div class="co-actions">
+                        <button class="co-toggle" onclick="toggleProfile(this)">View Profile ↓</button>
+                        <a href="/jobs" class="co-link" onclick="this.href='/jobs?company=databricks'">See Jobs →</a>
+                    </div>
+                </div>
+            </div>
+            <div class="co-card" data-company="hubspot" data-values="diverse,learning,wlb,transparent,flex-hours,psych-safety">
+                <div class="co-top">
+                    <img class="co-avatar" src="https://www.google.com/s2/favicons?domain=hubspot.com&sz=128" alt="HubSpot" width="40" height="40">
+                    <div>
+                        <div class="co-name">HubSpot</div>
+                        <div class="co-meta">Marketing & CRM · Cambridge / Remote</div>
+                    </div>
+                    <div class="co-rating" title="Glassdoor rating">⭐ 4.3</div>
                 </div>
                 <div class="co-tags">
                     <span class="co-tag" data-v="diverse">🌈 Diverse & Inclusive</span>
-                    <span class="co-tag" data-v="learning">📚 Learning & Growth</span>
+                    <span class="co-tag" data-v="learning">📚 Learning</span>
                     <span class="co-tag" data-v="wlb">⚖️ Work-Life Balance</span>
                     <span class="co-tag" data-v="transparent">🔓 Transparent</span>
-                    <span class="co-tag" data-v="flex-hours">⏰ Flexible Hours</span>
+                    <span class="co-tag" data-v="psych-safety">🧘 Psych Safety</span>
                 </div>
-                <div class="co-quote">"Culture Code is our operating system — published publicly. ML teams have dedicated learning days and cross-team mobility."</div>
+                <div class="co-quote">"The Culture Code is real here, not just a PDF. Genuine flexibility, strong DEI, and managers who actually care."</div>
+                <div class="co-details" style="display:none">
+                    <div class="co-detail-grid">
+                        <div class="co-detail-item">
+                            <span class="co-detail-label">Size</span>
+                            <span class="co-detail-value">~8,000 employees</span>
+                        </div>
+                        <div class="co-detail-item">
+                            <span class="co-detail-label">Recommend</span>
+                            <span class="co-detail-value">88%</span>
+                        </div>
+                        <div class="co-detail-item">
+                            <span class="co-detail-label">WLB Score</span>
+                            <span class="co-detail-value">4.1/5</span>
+                        </div>
+                        <div class="co-detail-item">
+                            <span class="co-detail-label">Salary Range</span>
+                            <span class="co-detail-value">$140k – $250k</span>
+                        </div>
+                    </div>
+                    <div class="co-pros-cons">
+                        <div class="co-pros"><strong>👍 Pros</strong><ul><li>Excellent work-life balance for tech</li><li>Strong culture code actually practiced</li><li>Great learning and development programs</li></ul></div>
+                        <div class="co-cons"><strong>👎 Cons</strong><ul><li>Large company — can feel bureaucratic</li><li>Some teams more political than others</li><li>Compensation below top AI companies</li></ul></div>
+                    </div>
+                    <div class="co-source">Based on Glassdoor reviews</div>
+                </div>
                 <div class="co-foot">
-                    <span class="co-salary">€80k – €140k</span>
-                    <span class="co-loc">🇮🇪 Dublin / Hybrid</span>
-                    <a href="#" class="co-link">View Profile →</a>
+                    <span class="co-loc">🇺🇸 Cambridge · 🇮🇪 Dublin · 🌍 Remote</span>
+                    <div class="co-actions">
+                        <button class="co-toggle" onclick="toggleProfile(this)">View Profile ↓</button>
+                        <a href="/jobs" class="co-link" onclick="this.href='/jobs?company=hubspot'">See Jobs →</a>
+                    </div>
                 </div>
             </div>
-            <!-- Company 5 -->
-            <div class="co-card" data-values="remote,async,ethical-ai,wlb,social-impact">
+            <div class="co-card" data-company="vercel" data-values="ship-fast,eng-driven,remote,product-impact">
                 <div class="co-top">
-                    <div class="co-avatar" style="color:var(--lime)">P</div>
-                    <div><div class="co-name">Proton</div><div class="co-meta">Privacy AI · Geneva / Remote</div></div>
+                    <img class="co-avatar" src="https://www.google.com/s2/favicons?domain=vercel.com&sz=128" alt="Vercel" width="40" height="40">
+                    <div>
+                        <div class="co-name">Vercel</div>
+                        <div class="co-meta">Frontend Cloud · Remote-First</div>
+                    </div>
+                    <div class="co-rating" title="Glassdoor rating">⭐ 3.9</div>
                 </div>
                 <div class="co-tags">
-                    <span class="co-tag" data-v="ethical-ai">🛡️ Ethical / Privacy</span>
+                    <span class="co-tag" data-v="ship-fast">🚀 Ship Fast</span>
+                    <span class="co-tag" data-v="eng-driven">⚙️ Engineering-Driven</span>
                     <span class="co-tag" data-v="remote">🌍 Remote</span>
-                    <span class="co-tag" data-v="wlb">⚖️ Work-Life Balance</span>
-                    <span class="co-tag" data-v="social-impact">❤️ Mission-Driven</span>
-                    <span class="co-tag" data-v="flat">🤝 Flat Hierarchy</span>
+                    <span class="co-tag" data-v="product-impact">🎯 Product Impact</span>
                 </div>
-                <div class="co-quote">"Privacy isn't a feature, it's our foundation. Small autonomous teams, quarterly goals, strong ownership culture."</div>
+                <div class="co-quote">"Ship on Friday, deploy on Monday. Developer tools company that eats its own dogfood. Fast-paced and product-obsessed."</div>
+                <div class="co-details" style="display:none">
+                    <div class="co-detail-grid">
+                        <div class="co-detail-item">
+                            <span class="co-detail-label">Size</span>
+                            <span class="co-detail-value">~600 employees</span>
+                        </div>
+                        <div class="co-detail-item">
+                            <span class="co-detail-label">Recommend</span>
+                            <span class="co-detail-value">75%</span>
+                        </div>
+                        <div class="co-detail-item">
+                            <span class="co-detail-label">WLB Score</span>
+                            <span class="co-detail-value">3.4/5</span>
+                        </div>
+                        <div class="co-detail-item">
+                            <span class="co-detail-label">Salary Range</span>
+                            <span class="co-detail-value">$180k – $320k</span>
+                        </div>
+                    </div>
+                    <div class="co-pros-cons">
+                        <div class="co-pros"><strong>👍 Pros</strong><ul><li>Building tools developers love</li><li>Remote-friendly with strong eng culture</li><li>High product impact</li></ul></div>
+                        <div class="co-cons"><strong>👎 Cons</strong><ul><li>Intense pace and high expectations</li><li>Work-life balance can suffer</li><li>Rapid growth means shifting priorities</li></ul></div>
+                    </div>
+                    <div class="co-source">Based on Glassdoor reviews</div>
+                </div>
                 <div class="co-foot">
-                    <span class="co-salary">CHF 110k – 170k</span>
-                    <span class="co-loc">🇨🇭 Geneva / Remote EU</span>
-                    <a href="#" class="co-link">View Profile →</a>
+                    <span class="co-loc">🇺🇸 SF · 🌍 Remote</span>
+                    <div class="co-actions">
+                        <button class="co-toggle" onclick="toggleProfile(this)">View Profile ↓</button>
+                        <a href="/jobs" class="co-link" onclick="this.href='/jobs?company=vercel'">See Jobs →</a>
+                    </div>
                 </div>
             </div>
-            <!-- Company 6 -->
-            <div class="co-card" data-values="ship-fast,diverse,learning,eng-driven,product-impact">
+            <div class="co-card" data-company="stripe" data-values="eng-driven,learning,product-impact,transparent,equity">
                 <div class="co-top">
-                    <div class="co-avatar" style="color:var(--rose)">G</div>
-                    <div><div class="co-name">Google DeepMind</div><div class="co-meta">AI Research · London / Bangalore</div></div>
+                    <img class="co-avatar" src="https://www.google.com/s2/favicons?domain=stripe.com&sz=128" alt="Stripe" width="40" height="40">
+                    <div>
+                        <div class="co-name">Stripe</div>
+                        <div class="co-meta">Payments Infrastructure · San Francisco</div>
+                    </div>
+                    <div class="co-rating" title="Glassdoor rating">⭐ 4.0</div>
                 </div>
                 <div class="co-tags">
-                    <span class="co-tag" data-v="eng-driven">🔧 Eng-Driven</span>
-                    <span class="co-tag" data-v="learning">📚 Learning Culture</span>
-                    <span class="co-tag" data-v="diverse">🌈 Diverse Teams</span>
-                    <span class="co-tag" data-v="equity">💰 Strong Comp</span>
-                    <span class="co-tag" data-v="product-impact">📊 Product Impact</span>
+                    <span class="co-tag" data-v="eng-driven">⚙️ Engineering-Driven</span>
+                    <span class="co-tag" data-v="learning">📚 Learning</span>
+                    <span class="co-tag" data-v="product-impact">🎯 Product Impact</span>
+                    <span class="co-tag" data-v="transparent">🔓 Transparent</span>
                 </div>
-                <div class="co-quote">"Publish or perish meets ship and iterate. Research teams set their own agendas. 20% time is genuinely encouraged."</div>
+                <div class="co-quote">"Rigorous engineering culture. Writing-first communication. The bar is extremely high and staying here means you clear it."</div>
+                <div class="co-details" style="display:none">
+                    <div class="co-detail-grid">
+                        <div class="co-detail-item">
+                            <span class="co-detail-label">Size</span>
+                            <span class="co-detail-value">~8,000 employees</span>
+                        </div>
+                        <div class="co-detail-item">
+                            <span class="co-detail-label">Recommend</span>
+                            <span class="co-detail-value">82%</span>
+                        </div>
+                        <div class="co-detail-item">
+                            <span class="co-detail-label">WLB Score</span>
+                            <span class="co-detail-value">3.6/5</span>
+                        </div>
+                        <div class="co-detail-item">
+                            <span class="co-detail-label">Salary Range</span>
+                            <span class="co-detail-value">$200k – $400k</span>
+                        </div>
+                    </div>
+                    <div class="co-pros-cons">
+                        <div class="co-pros"><strong>👍 Pros</strong><ul><li>World-class engineering culture</li><li>Writing-first, thoughtful communication</li><li>Impactful work on global payments</li></ul></div>
+                        <div class="co-cons"><strong>👎 Cons</strong><ul><li>Very high bar can feel stressful</li><li>Post-IPO energy shift</li><li>Some bureaucracy at scale</li></ul></div>
+                    </div>
+                    <div class="co-source">Based on Glassdoor reviews + Blind posts</div>
+                </div>
                 <div class="co-foot">
-                    <span class="co-salary">$200k – $400k / ₹30-60L</span>
-                    <span class="co-loc">🇬🇧 London / 🇮🇳 Bangalore</span>
-                    <a href="#" class="co-link">View Profile →</a>
+                    <span class="co-loc">🇺🇸 SF · 🇮🇪 Dublin · 🇸🇬 Singapore</span>
+                    <div class="co-actions">
+                        <button class="co-toggle" onclick="toggleProfile(this)">View Profile ↓</button>
+                        <a href="/jobs" class="co-link" onclick="this.href='/jobs?company=stripe'">See Jobs →</a>
+                    </div>
+                </div>
+            </div>
+            <div class="co-card" data-company="cursor" data-values="ship-fast,eng-driven,flat,many-hats,product-impact">
+                <div class="co-top">
+                    <img class="co-avatar" src="https://www.google.com/s2/favicons?domain=cursor.com&sz=128" alt="Cursor" width="40" height="40">
+                    <div>
+                        <div class="co-name">Cursor</div>
+                        <div class="co-meta">AI Code Editor · San Francisco</div>
+                    </div>
+                    <div class="co-rating" title="Glassdoor rating">⭐ 4.0</div>
+                </div>
+                <div class="co-tags">
+                    <span class="co-tag" data-v="ship-fast">🚀 Ship Fast</span>
+                    <span class="co-tag" data-v="eng-driven">⚙️ Engineering-Driven</span>
+                    <span class="co-tag" data-v="flat">🤝 Flat</span>
+                    <span class="co-tag" data-v="many-hats">🎭 Wear Many Hats</span>
+                </div>
+                <div class="co-quote">"Tiny team building the most-loved AI code editor. Everyone ships, everyone matters. Pure startup energy."</div>
+                <div class="co-details" style="display:none">
+                    <div class="co-detail-grid">
+                        <div class="co-detail-item">
+                            <span class="co-detail-label">Size</span>
+                            <span class="co-detail-value">~50 employees</span>
+                        </div>
+                        <div class="co-detail-item">
+                            <span class="co-detail-label">Recommend</span>
+                            <span class="co-detail-value">80%</span>
+                        </div>
+                        <div class="co-detail-item">
+                            <span class="co-detail-label">WLB Score</span>
+                            <span class="co-detail-value">3.5/5</span>
+                        </div>
+                        <div class="co-detail-item">
+                            <span class="co-detail-label">Salary Range</span>
+                            <span class="co-detail-value">$180k – $350k</span>
+                        </div>
+                    </div>
+                    <div class="co-pros-cons">
+                        <div class="co-pros"><strong>👍 Pros</strong><ul><li>Tiny team, massive user impact</li><li>Hottest AI developer tool right now</li><li>Strong equity in high-growth startup</li></ul></div>
+                        <div class="co-cons"><strong>👎 Cons</strong><ul><li>Very early stage, expect chaos</li><li>SF-only, no remote</li><li>Startup hours are real</li></ul></div>
+                    </div>
+                    <div class="co-source">Based on limited reviews + community feedback</div>
+                </div>
+                <div class="co-foot">
+                    <span class="co-loc">🇺🇸 SF</span>
+                    <div class="co-actions">
+                        <button class="co-toggle" onclick="toggleProfile(this)">View Profile ↓</button>
+                        <a href="/jobs" class="co-link" onclick="this.href='/jobs?company=cursor'">See Jobs →</a>
+                    </div>
+                </div>
+            </div>
+            <div class="co-card" data-company="linear" data-values="deep-work,remote,async,product-impact,eng-driven,flat">
+                <div class="co-top">
+                    <img class="co-avatar" src="https://www.google.com/s2/favicons?domain=linear.app&sz=128" alt="Linear" width="40" height="40">
+                    <div>
+                        <div class="co-name">Linear</div>
+                        <div class="co-meta">Project Management · Remote-First</div>
+                    </div>
+                    <div class="co-rating" title="Glassdoor rating">⭐ 4.6</div>
+                </div>
+                <div class="co-tags">
+                    <span class="co-tag" data-v="deep-work">🧠 Deep Work</span>
+                    <span class="co-tag" data-v="remote">🌍 Remote-Native</span>
+                    <span class="co-tag" data-v="async">💬 Async-First</span>
+                    <span class="co-tag" data-v="product-impact">🎯 Product Impact</span>
+                    <span class="co-tag" data-v="eng-driven">⚙️ Eng-Driven</span>
+                </div>
+                <div class="co-quote">"Craft-obsessed, design-driven, fully remote. They build the tool the way they work — focused, intentional, no noise."</div>
+                <div class="co-details" style="display:none">
+                    <div class="co-detail-grid">
+                        <div class="co-detail-item">
+                            <span class="co-detail-label">Size</span>
+                            <span class="co-detail-value">~80 employees</span>
+                        </div>
+                        <div class="co-detail-item">
+                            <span class="co-detail-label">Recommend</span>
+                            <span class="co-detail-value">95%</span>
+                        </div>
+                        <div class="co-detail-item">
+                            <span class="co-detail-label">WLB Score</span>
+                            <span class="co-detail-value">4.4/5</span>
+                        </div>
+                        <div class="co-detail-item">
+                            <span class="co-detail-label">Salary Range</span>
+                            <span class="co-detail-value">$160k – $280k</span>
+                        </div>
+                    </div>
+                    <div class="co-pros-cons">
+                        <div class="co-pros"><strong>👍 Pros</strong><ul><li>Highest-rated culture in our dataset</li><li>True deep work — minimal meetings</li><li>Beautiful product, craft-focused team</li></ul></div>
+                        <div class="co-cons"><strong>👎 Cons</strong><ul><li>Small team, limited role variety</li><li>High bar for design sensibility</li><li>Quiet culture may not suit everyone</li></ul></div>
+                    </div>
+                    <div class="co-source">Based on Glassdoor reviews</div>
+                </div>
+                <div class="co-foot">
+                    <span class="co-loc">🌍 Fully Remote</span>
+                    <div class="co-actions">
+                        <button class="co-toggle" onclick="toggleProfile(this)">View Profile ↓</button>
+                        <a href="/jobs" class="co-link" onclick="this.href='/jobs?company=linear'">See Jobs →</a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -826,6 +1411,12 @@ function highlightCompanies() {
     });
 }
 
+function goToJobs() {
+    if (selected.size === 0) return;
+    const values = Array.from(selected).join(',');
+    window.location.href = '/jobs?values=' + values;
+}
+
 function scrollToCompanies() {
     document.getElementById('companies').scrollIntoView({ behavior: 'smooth' });
 }
@@ -948,6 +1539,20 @@ function resetQuiz() {
 }
 
 renderQ();
+
+function toggleProfile(btn) {
+    const card = btn.closest('.co-card');
+    const details = card.querySelector('.co-details');
+    if (details.style.display === 'none') {
+        details.style.display = 'block';
+        btn.textContent = 'Hide Profile ↑';
+        btn.classList.add('open');
+    } else {
+        details.style.display = 'none';
+        btn.textContent = 'View Profile ↓';
+        btn.classList.remove('open');
+    }
+}
 </script>
 </body>
 </html>
