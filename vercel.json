@@ -1,9 +1,5 @@
 {
-  "routes": [
-    { "src": "/jobs", "dest": "/jobs.html" },
-    { "src": "/sitemap.xml", "dest": "/sitemap.xml" },
-    { "src": "/robots.txt", "dest": "/robots.txt" }
-  ],
+  "cleanUrls": true,
   "headers": [
     {
       "source": "/(.*)",
