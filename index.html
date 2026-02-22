@@ -242,6 +242,18 @@
         .tag[data-c="sky"].on { background: var(--sky); border-color: var(--sky); color: #fff; box-shadow: 0 4px 16px rgba(2,132,199,0.25); }
         .tag[data-c="lime"].on { background: #4d7c0f; border-color: #4d7c0f; color: #fff; box-shadow: 0 4px 16px rgba(77,124,15,0.25); }
 
+        .tag-group-label {
+            width: 100%; text-align: center;
+            font-family: var(--font-mono); font-size: 11px; text-transform: uppercase;
+            letter-spacing: 0.14em; margin-top: 12px; margin-bottom: -2px;
+        }
+        .tag-group-label:first-child { margin-top: 0; }
+        .teal-label { color: var(--teal); }
+        .violet-label { color: var(--violet); }
+        .sky-label { color: var(--sky); }
+        .orange-label { color: var(--accent); }
+        .rose-label { color: var(--rose); }
+
         .picker-status {
             text-align: center; margin-top: 28px; font-size: 14px; color: var(--text-3);
         }
@@ -522,20 +534,20 @@
         </div>
         <div class="fj-grid">
 
-                <a href="https://openai.com/careers/search?ref=jobsbyculture.com" target="_blank" class="fj-card">
+                <a href="https://job-boards.greenhouse.io/anthropic/jobs/5113224008?ref=jobsbyculture.com" target="_blank" class="fj-card">
                     <div class="fj-top">
-                        <img src="https://www.google.com/s2/favicons?domain=openai.com&sz=128" alt="OpenAI" class="fj-logo">
+                        <img src="https://www.google.com/s2/favicons?domain=anthropic.com&sz=128" alt="Anthropic" class="fj-logo">
                         <div>
-                            <div class="fj-title">Research Engineer — Safety</div>
-                            <div class="fj-company">OpenAI</div>
+                            <div class="fj-title">Staff + Senior Software Engineer, AI Reliability</div>
+                            <div class="fj-company">Anthropic</div>
                         </div>
                     </div>
                     <div class="fj-meta">
-                        <span class="fj-loc">San Francisco</span>
-                        <span class="fj-salary">$300k – $480k</span>
+                        <span class="fj-loc">SF / NYC / Seattle</span>
+                        <span class="fj-salary"></span>
                     </div>
                     <div class="fj-bottom">
-                        <span class="fj-posted">4d ago</span>
+                        <span class="fj-posted">2w ago</span>
                         <span class="fj-apply">Apply →</span>
                     </div>
                 </a>
@@ -556,20 +568,20 @@
                         <span class="fj-apply">Apply →</span>
                     </div>
                 </a>
-                <a href="https://www.databricks.com/company/careers/open-positions?ref=jobsbyculture.com" target="_blank" class="fj-card">
+                <a href="https://databricks.com/company/careers/open-positions/job?gh_jid=8422483002&ref=jobsbyculture.com" target="_blank" class="fj-card">
                     <div class="fj-top">
                         <img src="https://www.google.com/s2/favicons?domain=databricks.com&sz=128" alt="Databricks" class="fj-logo">
                         <div>
-                            <div class="fj-title">Staff Engineer — Lakehouse Platform</div>
+                            <div class="fj-title">Senior Staff Software Engineer — Unity Catalog</div>
                             <div class="fj-company">Databricks</div>
                         </div>
                     </div>
                     <div class="fj-meta">
-                        <span class="fj-loc">San Francisco / Remote US</span>
-                        <span class="fj-salary">$220k – $340k</span>
+                        <span class="fj-loc">Zürich, Switzerland</span>
+                        <span class="fj-salary"></span>
                     </div>
                     <div class="fj-bottom">
-                        <span class="fj-posted">2d ago</span>
+                        <span class="fj-posted">3d ago</span>
                         <span class="fj-apply">Apply →</span>
                     </div>
                 </a>
@@ -607,20 +619,20 @@
                         <span class="fj-apply">Apply →</span>
                     </div>
                 </a>
-                <a href="https://stripe.com/jobs/search?ref=jobsbyculture.com" target="_blank" class="fj-card">
+                <a href="https://stripe.com/jobs/search?gh_jid=6163230&ref=jobsbyculture.com" target="_blank" class="fj-card">
                     <div class="fj-top">
                         <img src="https://www.google.com/s2/favicons?domain=stripe.com&sz=128" alt="Stripe" class="fj-logo">
                         <div>
-                            <div class="fj-title">Senior Engineer — Payments Platform</div>
+                            <div class="fj-title">Backend Engineer, Payments and Risk</div>
                             <div class="fj-company">Stripe</div>
                         </div>
                     </div>
                     <div class="fj-meta">
-                        <span class="fj-loc">San Francisco / Seattle / NYC</span>
-                        <span class="fj-salary">$230k – $350k</span>
+                        <span class="fj-loc">US</span>
+                        <span class="fj-salary"></span>
                     </div>
                     <div class="fj-bottom">
-                        <span class="fj-posted">1d ago</span>
+                        <span class="fj-posted">2d ago</span>
                         <span class="fj-apply">Apply →</span>
                     </div>
                 </a>
@@ -677,29 +689,29 @@
         </div>
 
         <div class="tags" id="tagsWrap">
-            <!-- How You Work (Glassdoor: Work/Life Balance + Randstad: 85% top priority) -->
+            <div class="tag-group-label teal-label">How You Work</div>
             <div class="tag" data-v="wlb" data-c="teal"><span class="ico">⚖️</span>Work-Life Balance</div>
-            <div class="tag" data-v="remote" data-c="teal"><span class="ico">🌍</span>Remote-Friendly</div>
-            <div class="tag" data-v="flex-hours" data-c="teal"><span class="ico">⏰</span>Flexible Hours</div>
-            <div class="tag" data-v="async" data-c="teal"><span class="ico">💬</span>Async-First</div>
-            <div class="tag" data-v="deep-work" data-c="teal"><span class="ico">🧠</span>Deep Work / Low Meetings</div>
-            <!-- How The Team Operates (Glassdoor: Culture & Values + Senior Management) -->
-            <div class="tag" data-v="transparent" data-c="violet"><span class="ico">🔓</span>Transparent Culture</div>
+            <div class="tag" data-v="remote" data-c="teal"><span class="ico">🌐</span>Remote-Friendly</div>
+            <div class="tag" data-v="flex-hours" data-c="teal"><span class="ico">🕐</span>Flexible Hours</div>
+            <div class="tag" data-v="async" data-c="teal"><span class="ico">📡</span>Async-First</div>
+            <div class="tag" data-v="deep-work" data-c="teal"><span class="ico">🎧</span>Deep Work / Low Meetings</div>
+            <div class="tag-group-label violet-label">How The Team Operates</div>
+            <div class="tag" data-v="transparent" data-c="violet"><span class="ico">🪟</span>Transparent Culture</div>
             <div class="tag" data-v="flat" data-c="violet"><span class="ico">🤝</span>Flat Hierarchy</div>
             <div class="tag" data-v="diverse" data-c="violet"><span class="ico">🌈</span>Diverse & Inclusive</div>
-            <div class="tag" data-v="psych-safety" data-c="violet"><span class="ico">🛟</span>Safe to Fail</div>
-            <!-- How You Build (top eng values + job posting signals) -->
-            <div class="tag" data-v="eng-driven" data-c="sky"><span class="ico">🔧</span>Engineering-Driven</div>
+            <div class="tag" data-v="psych-safety" data-c="violet"><span class="ico">🛡️</span>Safe to Fail</div>
+            <div class="tag-group-label sky-label">How You Build</div>
+            <div class="tag" data-v="eng-driven" data-c="sky"><span class="ico">⚙️</span>Engineering-Driven</div>
             <div class="tag" data-v="ship-fast" data-c="sky"><span class="ico">🚀</span>Ship Fast & Iterate</div>
-            <div class="tag" data-v="open-source" data-c="sky"><span class="ico">📖</span>Open Source Culture</div>
-            <!-- How You Grow (Glassdoor: Career Opportunities — top for millennials) -->
-            <div class="tag" data-v="learning" data-c="orange"><span class="ico">📚</span>Learning & Growth</div>
-            <div class="tag" data-v="equity" data-c="orange"><span class="ico">💰</span>Strong Comp & Equity</div>
-            <div class="tag" data-v="product-impact" data-c="orange"><span class="ico">📊</span>Direct Product Impact</div>
-            <div class="tag" data-v="many-hats" data-c="orange"><span class="ico">🎩</span>Wears Many Hats</div>
-            <!-- What They Stand For (Glassdoor: Mission alignment — 79% consider before applying) -->
-            <div class="tag" data-v="ethical-ai" data-c="rose"><span class="ico">🛡️</span>Ethical AI / Safety</div>
-            <div class="tag" data-v="social-impact" data-c="rose"><span class="ico">❤️</span>Mission-Driven</div>
+            <div class="tag" data-v="open-source" data-c="sky"><span class="ico">🔓</span>Open Source Culture</div>
+            <div class="tag-group-label orange-label">How You Grow</div>
+            <div class="tag" data-v="learning" data-c="orange"><span class="ico">🌱</span>Learning & Growth</div>
+            <div class="tag" data-v="equity" data-c="orange"><span class="ico">💎</span>Strong Comp & Equity</div>
+            <div class="tag" data-v="product-impact" data-c="orange"><span class="ico">🎯</span>Direct Product Impact</div>
+            <div class="tag" data-v="many-hats" data-c="orange"><span class="ico">🧩</span>Wears Many Hats</div>
+            <div class="tag-group-label rose-label">What They Stand For</div>
+            <div class="tag" data-v="ethical-ai" data-c="rose"><span class="ico">🤖</span>Ethical AI / Safety</div>
+            <div class="tag" data-v="social-impact" data-c="rose"><span class="ico">💜</span>Mission-Driven</div>
         </div>
 
         <div class="picker-status" id="pickerStatus">Select at least <b>3</b> values to find matches</div>

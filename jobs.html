@@ -130,7 +130,8 @@
             border-radius: var(--radius-lg); padding: 20px 22px;
             transition: all 0.2s; position: relative;
         }
-        .job:hover { border-color: var(--border-2); box-shadow: var(--shadow); transform: translateY(-1px); }
+        .job:hover { border-color: var(--border-2); box-shadow: var(--shadow); transform: translateY(-1px); cursor: pointer; }
+        a.job { text-decoration: none; color: inherit; display: block; }
         .job-top { display: flex; align-items: flex-start; gap: 14px; margin-bottom: 12px; }
         .job-avatar {
             width: 42px; height: 42px; border-radius: var(--radius-sm);
@@ -268,23 +269,23 @@
 // ═══ VALUE DEFINITIONS ═══
 const VALUES = {
     'wlb':          { ico: '⚖️', name: 'Work-Life Balance', color: 'teal' },
-    'remote':       { ico: '🌍', name: 'Remote-Friendly', color: 'teal' },
-    'flex-hours':   { ico: '⏰', name: 'Flexible Hours', color: 'teal' },
-    'async':        { ico: '💬', name: 'Async-First', color: 'teal' },
-    'deep-work':    { ico: '🧠', name: 'Deep Work / Low Meetings', color: 'teal' },
-    'transparent':  { ico: '🔓', name: 'Transparent Culture', color: 'violet' },
+    'remote':       { ico: '🌐', name: 'Remote-Friendly', color: 'teal' },
+    'flex-hours':   { ico: '🕐', name: 'Flexible Hours', color: 'teal' },
+    'async':        { ico: '📡', name: 'Async-First', color: 'teal' },
+    'deep-work':    { ico: '🎧', name: 'Deep Work / Low Meetings', color: 'teal' },
+    'transparent':  { ico: '🪟', name: 'Transparent Culture', color: 'violet' },
     'flat':         { ico: '🤝', name: 'Flat Hierarchy', color: 'violet' },
     'diverse':      { ico: '🌈', name: 'Diverse & Inclusive', color: 'violet' },
-    'psych-safety': { ico: '🛟', name: 'Safe to Fail', color: 'violet' },
-    'eng-driven':   { ico: '🔧', name: 'Engineering-Driven', color: 'sky' },
+    'psych-safety': { ico: '🛡️', name: 'Safe to Fail', color: 'violet' },
+    'eng-driven':   { ico: '⚙️', name: 'Engineering-Driven', color: 'sky' },
     'ship-fast':    { ico: '🚀', name: 'Ship Fast & Iterate', color: 'sky' },
-    'open-source':  { ico: '📖', name: 'Open Source Culture', color: 'sky' },
-    'learning':     { ico: '📚', name: 'Learning & Growth', color: 'orange' },
-    'equity':       { ico: '💰', name: 'Strong Comp & Equity', color: 'orange' },
-    'product-impact': { ico: '📊', name: 'Direct Product Impact', color: 'orange' },
-    'many-hats':    { ico: '🎩', name: 'Wears Many Hats', color: 'orange' },
-    'ethical-ai':   { ico: '🛡️', name: 'Ethical AI / Safety', color: 'rose' },
-    'social-impact':{ ico: '❤️', name: 'Mission-Driven', color: 'rose' },
+    'open-source':  { ico: '🔓', name: 'Open Source Culture', color: 'sky' },
+    'learning':     { ico: '🌱', name: 'Learning & Growth', color: 'orange' },
+    'equity':       { ico: '💎', name: 'Strong Comp & Equity', color: 'orange' },
+    'product-impact': { ico: '🎯', name: 'Direct Product Impact', color: 'orange' },
+    'many-hats':    { ico: '🧩', name: 'Wears Many Hats', color: 'orange' },
+    'ethical-ai':   { ico: '🤖', name: 'Ethical AI / Safety', color: 'rose' },
+    'social-impact':{ ico: '💜', name: 'Mission-Driven', color: 'rose' },
 };
 
 // ═══ COMPANY DATA (from Glassdoor analysis) ═══
@@ -397,7 +398,7 @@ const JOBS = [
     { id: 18, title: 'Data Center Energy Lead', company: 'anthropic', location: 'Remote-Friendly (Travel Required) | San Francisco, CA', type: 'Full-time', posted: '2w ago', source: 'API', url: 'https://job-boards.greenhouse.io/anthropic/jobs/5109452008?ref=jobsbyculture.com' },
     { id: 19, title: 'Technical Program Manager, AI Delivery for Public Sector & Defence , East Coast', company: 'cohere', location: 'Toronto', type: 'Full-time', posted: '3w+ ago', source: 'API', url: 'https://jobs.ashbyhq.com/cohere/683407cf-f648-4391-84b4-d0c26d9a1327?ref=jobsbyculture.com' },
     { id: 20, title: 'Technical Program Manager, Safeguards – Infrastructure & Evals', company: 'anthropic', location: 'San Francisco, CA | New York City, NY | Seattle, WA', type: 'Full-time', posted: '2w ago', source: 'API', url: 'https://job-boards.greenhouse.io/anthropic/jobs/5108695008?ref=jobsbyculture.com' },
-    { id: 21, title: 'Senior Engineer — Social Analytics', company: 'buffer', location: 'Remote (Global)', type: 'Full-time', salary: '$140k – $175k', posted: '4d ago', source: 'Manual', url: 'https://buffer.com/journey?ref=jobsbyculture.com' },
+
     { id: 22, title: 'Solutions Architect', company: 'cohere', location: 'Toronto', type: 'Full-time', posted: '3w+ ago', source: 'API', url: 'https://jobs.ashbyhq.com/cohere/ab11983e-2657-45b4-8f4b-318415e3d0c6?ref=jobsbyculture.com' },
     { id: 23, title: 'Software Engineer, Safeguards', company: 'anthropic', location: 'San Francisco, CA | New York City, NY', type: 'Full-time', posted: '3w+ ago', source: 'API', url: 'https://job-boards.greenhouse.io/anthropic/jobs/4951844008?ref=jobsbyculture.com' },
     { id: 24, title: 'Audio Inference Engineer, Model Efficiency', company: 'cohere', location: 'New York', type: 'Full-time', posted: '3w+ ago', source: 'API', url: 'https://jobs.ashbyhq.com/cohere/e912d84c-8399-422d-8a7d-918422a3e4b1?ref=jobsbyculture.com' },
@@ -536,7 +537,7 @@ const JOBS = [
     { id: 157, title: 'Senior Software Engineer - Together Cloud Infrastructure', company: 'together', location: 'San Francisco', type: 'Full-time', posted: '3w+ ago', source: 'API', url: 'https://job-boards.greenhouse.io/togetherai/jobs/4749787007?ref=jobsbyculture.com' },
     { id: 158, title: 'M&A Tech Engineer', company: 'mistral', location: 'Paris', type: 'Full-time', posted: '1w ago', source: 'API', url: 'https://jobs.lever.co/mistral/aef81704-b44b-4a42-bdb0-a895cf709df6?ref=jobsbyculture.com' },
     { id: 159, title: 'Data Center Facility Operations Lead', company: 'anthropic', location: 'San Francisco, CA | New York City, NY', type: 'Full-time', posted: '3w+ ago', source: 'API', url: 'https://job-boards.greenhouse.io/anthropic/jobs/5023727008?ref=jobsbyculture.com' },
-    { id: 160, title: 'Senior ML Engineer — Mosaic', company: 'databricks', location: 'San Francisco / NYC', type: 'Full-time', salary: '$200k – $310k', posted: '5d ago', source: 'Manual', url: 'https://www.databricks.com/company/careers/open-positions?ref=jobsbyculture.com' },
+
     { id: 161, title: 'Strategic Partner Development, Product Partnerships', company: 'anthropic', location: 'San Francisco, CA | New York City, NY', type: 'Full-time', posted: '3w+ ago', source: 'API', url: 'https://job-boards.greenhouse.io/anthropic/jobs/5042144008?ref=jobsbyculture.com' },
     { id: 162, title: 'Data Scientist/Engineer – Online Metrics', company: 'perplexity', location: 'London', type: 'Full-time', posted: '1w ago', source: 'API', url: 'https://jobs.ashbyhq.com/perplexity/768efd34-3854-4c9b-9686-2a128ab35405?ref=jobsbyculture.com' },
     { id: 163, title: 'Software Engineer, Compute Efficiency', company: 'anthropic', location: 'San Francisco, CA | New York City, NY', type: 'Full-time', posted: '2w ago', source: 'API', url: 'https://job-boards.greenhouse.io/anthropic/jobs/5108982008?ref=jobsbyculture.com' },
@@ -549,7 +550,7 @@ const JOBS = [
     { id: 170, title: 'Staff Research Engineer, Discovery Team', company: 'anthropic', location: 'San Francisco, CA', type: 'Full-time', posted: '3w+ ago', source: 'API', url: 'https://job-boards.greenhouse.io/anthropic/jobs/4593216008?ref=jobsbyculture.com' },
     { id: 171, title: 'iOS Growth Engineer', company: 'perplexity', location: 'San Francisco', type: 'Full-time', posted: '3w+ ago', source: 'API', url: 'https://jobs.ashbyhq.com/perplexity/2d9c046e-a10e-465d-ad3e-8e56719645d5?ref=jobsbyculture.com' },
     { id: 172, title: 'Safeguards Analyst, Account Abuse', company: 'anthropic', location: 'San Francisco, CA | New York City, NY', type: 'Full-time', posted: '2w ago', source: 'API', url: 'https://job-boards.greenhouse.io/anthropic/jobs/5108841008?ref=jobsbyculture.com' },
-    { id: 173, title: 'Staff Engineer — Lakehouse Platform', company: 'databricks', location: 'San Francisco / Remote US', type: 'Full-time', salary: '$220k – $340k', posted: '2d ago', source: 'Manual', url: 'https://www.databricks.com/company/careers/open-positions?ref=jobsbyculture.com' },
+
     { id: 174, title: 'Infrastructure Engineer, Sandboxing', company: 'anthropic', location: 'San Francisco, CA | New York City, NY | Seattle, WA', type: 'Full-time', posted: '3w+ ago', source: 'API', url: 'https://job-boards.greenhouse.io/anthropic/jobs/5030680008?ref=jobsbyculture.com' },
     { id: 175, title: 'Applied Scientist / Research Engineer - Singapore', company: 'mistral', location: 'Singapore', type: 'Full-time', posted: '1w ago', source: 'API', url: 'https://jobs.lever.co/mistral/c41d9d9e-f0ea-4621-a4a9-3f10dfa9ae84?ref=jobsbyculture.com' },
     { id: 176, title: 'Senior Member of Technical Staff, Multimodal AI', company: 'cohere', location: 'San Francisco', type: 'Full-time', posted: '3w+ ago', source: 'API', url: 'https://jobs.ashbyhq.com/cohere/443368a3-6276-4b90-9671-27fed40fd6d2?ref=jobsbyculture.com' },
@@ -579,7 +580,7 @@ const JOBS = [
     { id: 200, title: 'Senior/Staff Backend Engineer', company: 'cohere', location: 'Toronto', type: 'Full-time', posted: '3w+ ago', source: 'API', url: 'https://jobs.ashbyhq.com/cohere/ea5662f4-c27e-475e-a502-4ad8015a2906?ref=jobsbyculture.com' },
     { id: 201, title: 'Staff Quality Engineer', company: 'perplexity', location: 'San Francisco', type: 'Full-time', posted: '1w ago', source: 'API', url: 'https://jobs.ashbyhq.com/perplexity/f37f222e-5011-445a-bf9c-be59cd55fc83?ref=jobsbyculture.com' },
     { id: 202, title: 'Software Engineer, Growth', company: 'anthropic', location: 'San Francisco, CA | New York City, NY | Seattle, WA', type: 'Full-time', posted: '3w+ ago', source: 'API', url: 'https://job-boards.greenhouse.io/anthropic/jobs/5042025008?ref=jobsbyculture.com' },
-    { id: 203, title: 'Staff ML Engineer — Foundation Models', company: 'databricks', location: 'San Francisco', type: 'Full-time', salary: '$260k – $380k', posted: '1d ago', source: 'Manual', url: 'https://www.databricks.com/company/careers/open-positions?ref=jobsbyculture.com' },
+
     { id: 204, title: 'Research Compute Operations', company: 'anthropic', location: 'San Francisco, CA | New York City, NY', type: 'Full-time', posted: '4d ago', source: 'API', url: 'https://job-boards.greenhouse.io/anthropic/jobs/5120985008?ref=jobsbyculture.com' },
     { id: 205, title: 'Solutions Architect', company: 'cohere', location: 'Japan', type: 'Full-time', posted: '1w ago', source: 'API', url: 'https://jobs.ashbyhq.com/cohere/ca446389-c793-459b-b07a-a3544defea04?ref=jobsbyculture.com' },
     { id: 206, title: 'Staff+ Software Security Engineer', company: 'anthropic', location: 'San Francisco, CA | New York City, NY | Seattle, WA', type: 'Full-time', posted: '1w ago', source: 'API', url: 'https://job-boards.greenhouse.io/anthropic/jobs/5120512008?ref=jobsbyculture.com' },
@@ -667,7 +668,7 @@ const JOBS = [
     { id: 288, title: 'Developer Education Lead', company: 'anthropic', location: 'San Francisco, CA | New York City, NY', type: 'Full-time', posted: '1d ago', source: 'API', url: 'https://job-boards.greenhouse.io/anthropic/jobs/5126762008?ref=jobsbyculture.com' },
     { id: 289, title: 'Member of Technical Staff, MLE [Singapore]', company: 'cohere', location: 'Singapore', type: 'Full-time', posted: '3w+ ago', source: 'API', url: 'https://jobs.ashbyhq.com/cohere/a29a310d-074e-46f2-bdad-308d458d4011?ref=jobsbyculture.com' },
     { id: 290, title: 'Product Manager, Claude Code Growth', company: 'anthropic', location: 'San Francisco, CA | New York City, NY | Seattle, WA', type: 'Full-time', posted: '3w+ ago', source: 'API', url: 'https://job-boards.greenhouse.io/anthropic/jobs/5024981008?ref=jobsbyculture.com' },
-    { id: 291, title: 'Research Engineer — Safety', company: 'openai', location: 'San Francisco', type: 'Full-time', salary: '$300k – $480k', posted: '4d ago', source: 'Manual', url: 'https://openai.com/careers/search?ref=jobsbyculture.com' },
+
     { id: 292, title: 'ML Infrastructure Engineer, Safeguards', company: 'anthropic', location: 'San Francisco, CA', type: 'Full-time', posted: '3w+ ago', source: 'API', url: 'https://job-boards.greenhouse.io/anthropic/jobs/4778843008?ref=jobsbyculture.com' },
     { id: 293, title: 'Software Engineer, Knowledge and Search', company: 'mistral', location: 'Paris', type: 'Full-time', posted: '1w ago', source: 'API', url: 'https://jobs.lever.co/mistral/70d5293a-9183-40d9-874a-cc08a14d5de6?ref=jobsbyculture.com' },
     { id: 294, title: 'Cloud ML Engineer — US Remote', company: 'huggingface', location: 'Remote (US)', type: 'Full-time', salary: '$150k – $220k', posted: '3d ago', source: 'Manual', url: 'https://apply.workable.com/huggingface/j/A3879724CD/?ref=jobsbyculture.com' },
@@ -683,7 +684,7 @@ const JOBS = [
     { id: 304, title: 'Security Engineer, Offensive Security', company: 'anthropic', location: 'Remote-Friendly (Travel-Required) | San Francisco, CA | Seattle, WA', type: 'Full-time', posted: '2w ago', source: 'API', url: 'https://job-boards.greenhouse.io/anthropic/jobs/5105509008?ref=jobsbyculture.com' },
     { id: 305, title: 'Partner Solution Architect - ASEAN', company: 'mistral', location: 'Singapore', type: 'Full-time', posted: '1w ago', source: 'API', url: 'https://jobs.lever.co/mistral/fe3542b5-4f99-4d62-af6a-fbdfd13bf0e4?ref=jobsbyculture.com' },
     { id: 306, title: 'Staff + Senior Software Engineer, Inference', company: 'anthropic', location: 'San Francisco, CA | New York City, NY | Seattle, WA', type: 'Full-time', posted: '3w+ ago', source: 'API', url: 'https://job-boards.greenhouse.io/anthropic/jobs/4951696008?ref=jobsbyculture.com' },
-    { id: 307, title: 'ML Engineer — Fraud Detection', company: 'stripe', location: 'San Francisco / Remote US', type: 'Full-time', salary: '$220k – $330k', posted: '4d ago', source: 'Manual', url: 'https://stripe.com/jobs/search?ref=jobsbyculture.com' },
+
     { id: 308, title: 'Software Engineer, UI Platform', company: 'anthropic', location: 'San Francisco, CA | New York City, NY', type: 'Full-time', posted: '3w+ ago', source: 'API', url: 'https://job-boards.greenhouse.io/anthropic/jobs/4673416008?ref=jobsbyculture.com' },
     { id: 309, title: 'Product Manager, AI Studio', company: 'mistral', location: 'Paris', type: 'Full-time', posted: '1w ago', source: 'API', url: 'https://jobs.lever.co/mistral/6201f9a0-233f-4de3-a8cc-65b75e99370f?ref=jobsbyculture.com' },
     { id: 310, title: 'Engineering Manager, Inference', company: 'anthropic', location: 'San Francisco, CA | New York City, NY | Seattle, WA', type: 'Full-time', posted: '3w+ ago', source: 'API', url: 'https://job-boards.greenhouse.io/anthropic/jobs/4741102008?ref=jobsbyculture.com' },
@@ -749,9 +750,9 @@ const JOBS = [
     { id: 370, title: 'Software Engineer, Backend (Paris)', company: 'mistral', location: 'Paris', type: 'Full-time', posted: '1w ago', source: 'API', url: 'https://jobs.lever.co/mistral/e76d2957-2bf6-4d8f-90a2-29bf9a927823?ref=jobsbyculture.com' },
     { id: 371, title: 'Engineering Site Lead', company: 'perplexity', location: 'London', type: 'Full-time', posted: '3w+ ago', source: 'API', url: 'https://jobs.ashbyhq.com/perplexity/638e6823-be7f-46c6-9675-7b1197fc9b8c?ref=jobsbyculture.com' },
     { id: 372, title: '[Expression of Interest] Research Scientist/Engineer, Honesty', company: 'anthropic', location: 'New York City, NY; San Francisco, CA', type: 'Full-time', posted: '3w+ ago', source: 'API', url: 'https://job-boards.greenhouse.io/anthropic/jobs/4532887008?ref=jobsbyculture.com' },
-    { id: 373, title: 'Senior Engineer — Payments Platform', company: 'stripe', location: 'San Francisco / Seattle / NYC', type: 'Full-time', salary: '$230k – $350k', posted: '1d ago', source: 'Manual', url: 'https://stripe.com/jobs/search?ref=jobsbyculture.com' },
+
     { id: 374, title: 'Staff+ Software Engineer, Databases', company: 'anthropic', location: 'San Francisco, CA | New York City, NY', type: 'Full-time', posted: '1w ago', source: 'API', url: 'https://job-boards.greenhouse.io/anthropic/jobs/5120228008?ref=jobsbyculture.com' },
-    { id: 375, title: 'Software Engineer — ChatGPT', company: 'openai', location: 'San Francisco', type: 'Full-time', salary: '$280k – $450k', posted: '1w ago', source: 'Manual', url: 'https://openai.com/careers/search?ref=jobsbyculture.com' },
+
     { id: 376, title: 'Research Engineer,  Frontier Red Team (Autonomy)', company: 'anthropic', location: 'San Francisco, CA', type: 'Full-time', posted: '3w+ ago', source: 'API', url: 'https://job-boards.greenhouse.io/anthropic/jobs/5067100008?ref=jobsbyculture.com' },
     { id: 377, title: 'Senior Software Engineer, Secure Agents', company: 'cohere', location: 'Toronto', type: 'Full-time', posted: '3w+ ago', source: 'API', url: 'https://jobs.ashbyhq.com/cohere/a5bbd015-65a9-48a1-aab1-b266bdbc9905?ref=jobsbyculture.com' },
     { id: 378, title: 'Data Scientist', company: 'perplexity', location: 'San Francisco', type: 'Full-time', posted: '1d ago', source: 'API', url: 'https://jobs.ashbyhq.com/perplexity/d680e788-14d3-43f6-8ce8-5df486ca32d0?ref=jobsbyculture.com' },
@@ -799,7 +800,7 @@ const JOBS = [
     { id: 420, title: 'Senior Backend Software Engineer, Agents', company: 'cohere', location: 'Europe', type: 'Full-time', posted: '3w+ ago', source: 'API', url: 'https://jobs.ashbyhq.com/cohere/db824585-f1aa-4728-843d-962326d64f4a?ref=jobsbyculture.com' },
     { id: 421, title: 'Forward Deployed Engineer, Agentic Platform', company: 'cohere', location: 'Japan', type: 'Full-time', posted: '3w+ ago', source: 'API', url: 'https://jobs.ashbyhq.com/cohere/b0bcef37-1d20-414f-aade-c54942d63df9?ref=jobsbyculture.com' },
     { id: 422, title: 'Campus Security Manager', company: 'anthropic', location: 'New York City, NY', type: 'Full-time', posted: '2w ago', source: 'API', url: 'https://job-boards.greenhouse.io/anthropic/jobs/5099202008?ref=jobsbyculture.com' },
-    { id: 423, title: 'ML Engineer — Pre-Training', company: 'openai', location: 'San Francisco', type: 'Full-time', salary: '$320k – $500k', posted: '3d ago', source: 'Manual', url: 'https://openai.com/careers/search?ref=jobsbyculture.com' },
+
     { id: 424, title: 'Research Product Manager, Labs', company: 'anthropic', location: 'San Francisco, CA | New York City, NY', type: 'Full-time', posted: '3w+ ago', source: 'API', url: 'https://job-boards.greenhouse.io/anthropic/jobs/5096878008?ref=jobsbyculture.com' },
     { id: 425, title: 'Research Engineer, Frontier Speculative Decoding', company: 'together', location: 'San Francisco, New York City', type: 'Full-time', posted: '3w+ ago', source: 'API', url: 'https://job-boards.greenhouse.io/togetherai/jobs/4987660007?ref=jobsbyculture.com' },
     { id: 426, title: 'Software Engineer, ML Networking', company: 'anthropic', location: 'San Francisco, CA | New York City, NY | Seattle, WA', type: 'Full-time', posted: '3w+ ago', source: 'API', url: 'https://job-boards.greenhouse.io/anthropic/jobs/4926242008?ref=jobsbyculture.com' },
@@ -834,7 +835,59 @@ const JOBS = [
     { id: 455, title: 'Senior Security Engineer', company: 'cohere', location: 'Toronto', type: 'Full-time', posted: '3w+ ago', source: 'API', url: 'https://jobs.ashbyhq.com/cohere/cb981ecd-a161-482c-8d8e-5f19bb6e7fdd?ref=jobsbyculture.com' },
     { id: 456, title: 'Engineering Manager, Multicloud and Auth & Identity', company: 'anthropic', location: 'New York City, NY; San Francisco, CA; Seattle, WA', type: 'Full-time', posted: '3w+ ago', source: 'API', url: 'https://job-boards.greenhouse.io/anthropic/jobs/4889396008?ref=jobsbyculture.com' },
     { id: 457, title: 'Senior/Staff Full-Stack Engineer', company: 'cohere', location: 'Toronto', type: 'Full-time', posted: '3w+ ago', source: 'API', url: 'https://jobs.ashbyhq.com/cohere/4b000aff-7c0f-45a0-b67d-cf0cb2ea16a6?ref=jobsbyculture.com' },
-    { id: 458, title: 'Staff + Senior Software Engineer, AI Reliability', company: 'anthropic', location: 'San Francisco, CA | New York City, NY | Seattle, WA', type: 'Full-time', posted: '2w ago', source: 'API', url: 'https://job-boards.greenhouse.io/anthropic/jobs/5113224008?ref=jobsbyculture.com' }
+    { id: 458, title: 'Staff + Senior Software Engineer, AI Reliability', company: 'anthropic', location: 'San Francisco, CA | New York City, NY | Seattle, WA', type: 'Full-time', posted: '2w ago', source: 'API', url: 'https://job-boards.greenhouse.io/anthropic/jobs/5113224008?ref=jobsbyculture.com' },
+    // ═══ STRIPE ATS JOBS (Greenhouse) ═══
+    { id: 7206505, title: 'Software Engineer, New Grad', company: 'stripe', location: 'Toronto', type: 'Full-time', posted: '1d ago', source: 'ATS', url: 'https://stripe.com/jobs/search?gh_jid=7206505&ref=jobsbyculture.com' },
+    { id: 7637683, title: 'Staff Software Engineer, Stream Infrastructure', company: 'stripe', location: 'Toronto', type: 'Full-time', posted: '1d ago', source: 'ATS', url: 'https://stripe.com/jobs/search?gh_jid=7637683&ref=jobsbyculture.com' },
+    { id: 5846766, title: 'Staff Software Engineer, Billing and Subscriptions', company: 'stripe', location: 'Toronto, Canada, Canada Remote', type: 'Full-time', posted: '1d ago', source: 'ATS', url: 'https://stripe.com/jobs/search?gh_jid=5846766&ref=jobsbyculture.com' },
+    { id: 7457268, title: 'Integration Reliability Engineer, Technical Operations', company: 'stripe', location: 'Singapore', type: 'Full-time', posted: '1d ago', source: 'ATS', url: 'https://stripe.com/jobs/search?gh_jid=7457268&ref=jobsbyculture.com' },
+    { id: 7217048, title: 'Backend Engineer, Billing / Tax', company: 'stripe', location: 'Remote', type: 'Full-time', posted: '2d ago', source: 'ATS', url: 'https://stripe.com/jobs/search?gh_jid=7217048&ref=jobsbyculture.com' },
+    { id: 7531155, title: 'Frontend Engineer, Expansion', company: 'stripe', location: 'Barcelona, Madrid', type: 'Full-time', posted: '2d ago', source: 'ATS', url: 'https://stripe.com/jobs/search?gh_jid=7531155&ref=jobsbyculture.com' },
+    { id: 6163230, title: 'Backend Engineer, Payments and Risk', company: 'stripe', location: 'US', type: 'Full-time', posted: '2d ago', source: 'ATS', url: 'https://stripe.com/jobs/search?gh_jid=6163230&ref=jobsbyculture.com' },
+    { id: 7232592, title: 'Backend Engineer, Payments and Risk', company: 'stripe', location: 'US', type: 'Full-time', posted: '2d ago', source: 'ATS', url: 'https://stripe.com/jobs/search?gh_jid=7232592&ref=jobsbyculture.com' },
+    { id: 7326482, title: 'Backend / API Engineer, Revenue Foundations', company: 'stripe', location: 'Remote', type: 'Full-time', posted: '2d ago', source: 'ATS', url: 'https://stripe.com/jobs/search?gh_jid=7326482&ref=jobsbyculture.com' },
+    { id: 7528260, title: 'Software Engineer, Machine Learning Infrastructure', company: 'stripe', location: 'Seattle, SF', type: 'Full-time', posted: '2d ago', source: 'ATS', url: 'https://stripe.com/jobs/search?gh_jid=7528260&ref=jobsbyculture.com' },
+    { id: 6786210, title: 'Frontend Engineer, Payments and Risk', company: 'stripe', location: 'Remote', type: 'Full-time', posted: '2d ago', source: 'ATS', url: 'https://stripe.com/jobs/search?gh_jid=6786210&ref=jobsbyculture.com' },
+    { id: 6865161, title: 'Backend Engineer, Data', company: 'stripe', location: 'Canada', type: 'Full-time', posted: '2d ago', source: 'ATS', url: 'https://stripe.com/jobs/search?gh_jid=6865161&ref=jobsbyculture.com' },
+    { id: 7531158, title: 'Full Stack Engineer, Expansion', company: 'stripe', location: 'United Kingdom', type: 'Full-time', posted: '2d ago', source: 'ATS', url: 'https://stripe.com/jobs/search?gh_jid=7531158&ref=jobsbyculture.com' },
+    { id: 7629052, title: 'Machine Learning Engineer, Stripe Assistant', company: 'stripe', location: 'Seattle / San Francisco / NYC / Remote', type: 'Full-time', posted: '3d ago', source: 'ATS', url: 'https://stripe.com/jobs/search?gh_jid=7629052&ref=jobsbyculture.com' },
+    { id: 7543868, title: 'Software Engineer, Internal Systems', company: 'stripe', location: 'Bengaluru, India', type: 'Full-time', posted: '3d ago', source: 'ATS', url: 'https://stripe.com/jobs/search?gh_jid=7543868&ref=jobsbyculture.com' },
+    { id: 7602941, title: 'Staff Software Engineer, Analytics and Reporting Components', company: 'stripe', location: 'Dublin', type: 'Full-time', posted: '4d ago', source: 'ATS', url: 'https://stripe.com/jobs/search?gh_jid=7602941&ref=jobsbyculture.com' },
+    { id: 7600792, title: 'Software Engineer, Experimental Projects', company: 'stripe', location: 'Remote', type: 'Full-time', posted: '4d ago', source: 'ATS', url: 'https://stripe.com/jobs/search?gh_jid=7600792&ref=jobsbyculture.com' },
+    { id: 7579264, title: 'Backend / API Engineer, Privacy Products', company: 'stripe', location: 'San Francisco, Seattle', type: 'Full-time', posted: '4d ago', source: 'ATS', url: 'https://stripe.com/jobs/search?gh_jid=7579264&ref=jobsbyculture.com' },
+    { id: 7572912, title: 'Engineering Manager, Collaboration Tools', company: 'stripe', location: 'Dublin', type: 'Full-time', posted: '4d ago', source: 'ATS', url: 'https://stripe.com/jobs/search?gh_jid=7572912&ref=jobsbyculture.com' },
+    { id: 7576761, title: 'Engineering Manager of Managers, Document Databases', company: 'stripe', location: 'Remote', type: 'Full-time', posted: '4d ago', source: 'ATS', url: 'https://stripe.com/jobs/search?gh_jid=7576761&ref=jobsbyculture.com' },
+    { id: 7573236, title: 'Security Engineer, Bridge', company: 'stripe', location: 'SF / New York / Seattle', type: 'Full-time', posted: '4d ago', source: 'ATS', url: 'https://stripe.com/jobs/search?gh_jid=7573236&ref=jobsbyculture.com' },
+    { id: 7568328, title: 'Staff Data Scientist', company: 'stripe', location: 'Remote', type: 'Full-time', posted: '4d ago', source: 'ATS', url: 'https://stripe.com/jobs/search?gh_jid=7568328&ref=jobsbyculture.com' },
+    { id: 7567506, title: 'Engineering Manager, Payments', company: 'stripe', location: 'Singapore', type: 'Full-time', posted: '4d ago', source: 'ATS', url: 'https://stripe.com/jobs/search?gh_jid=7567506&ref=jobsbyculture.com' },
+    { id: 7555997, title: 'Engineering Manager, Money Management Expansion', company: 'stripe', location: 'Singapore', type: 'Full-time', posted: '4d ago', source: 'ATS', url: 'https://stripe.com/jobs/search?gh_jid=7555997&ref=jobsbyculture.com' },
+    { id: 7555999, title: 'Software Engineer, Money as a Service', company: 'stripe', location: 'Singapore', type: 'Full-time', posted: '4d ago', source: 'ATS', url: 'https://stripe.com/jobs/search?gh_jid=7555999&ref=jobsbyculture.com' },
+    // ═══ DATABRICKS ATS JOBS (Greenhouse) ═══
+    { id: 7439442002, title: 'Engineering Manager — Backend', company: 'databricks', location: 'Bengaluru, India', type: 'Full-time', posted: '0d ago', source: 'ATS', url: 'https://databricks.com/company/careers/open-positions/job?gh_jid=7439442002&ref=jobsbyculture.com' },
+    { id: 7651353002, title: 'Engineering Manager — Networking', company: 'databricks', location: 'Bengaluru, India', type: 'Full-time', posted: '0d ago', source: 'ATS', url: 'https://databricks.com/company/careers/open-positions/job?gh_jid=7651353002&ref=jobsbyculture.com' },
+    { id: 7006089002, title: 'Sr Engineering Manager — Service Foundations', company: 'databricks', location: 'Bengaluru, India', type: 'Full-time', posted: '0d ago', source: 'ATS', url: 'https://databricks.com/company/careers/open-positions/job?gh_jid=7006089002&ref=jobsbyculture.com' },
+    { id: 7495457002, title: 'Senior Engineering Manager — Backend', company: 'databricks', location: 'Bengaluru, India', type: 'Full-time', posted: '0d ago', source: 'ATS', url: 'https://databricks.com/company/careers/open-positions/job?gh_jid=7495457002&ref=jobsbyculture.com' },
+    { id: 8357216002, title: 'Engineering Manager (Ingestion)', company: 'databricks', location: 'Bengaluru, India', type: 'Full-time', posted: '0d ago', source: 'ATS', url: 'https://databricks.com/company/careers/open-positions/job?gh_jid=8357216002&ref=jobsbyculture.com' },
+    { id: 8391865002, title: 'Scale Solutions Engineer', company: 'databricks', location: 'Sao Paulo, Brazil', type: 'Full-time', posted: '2d ago', source: 'ATS', url: 'https://databricks.com/company/careers/open-positions/job?gh_jid=8391865002&ref=jobsbyculture.com' },
+    { id: 8425303002, title: 'Data and AI Solution Architect (Professional Services)', company: 'databricks', location: 'Munich, Germany', type: 'Full-time', posted: '2d ago', source: 'ATS', url: 'https://databricks.com/company/careers/open-positions/job?gh_jid=8425303002&ref=jobsbyculture.com' },
+    { id: 7630152002, title: 'Sr Staff Software Engineer (Backend)', company: 'databricks', location: 'Bengaluru, India', type: 'Full-time', posted: '2d ago', source: 'ATS', url: 'https://databricks.com/company/careers/open-positions/job?gh_jid=7630152002&ref=jobsbyculture.com' },
+    { id: 7651326002, title: 'Senior Staff Software Engineer (Backend)', company: 'databricks', location: 'Bengaluru, India', type: 'Full-time', posted: '2d ago', source: 'ATS', url: 'https://databricks.com/company/careers/open-positions/job?gh_jid=7651326002&ref=jobsbyculture.com' },
+    { id: 8187465002, title: 'Data & AI Solutions Architect (Professional Services)', company: 'databricks', location: 'London, United Kingdom', type: 'Full-time', posted: '2d ago', source: 'ATS', url: 'https://databricks.com/company/careers/open-positions/job?gh_jid=8187465002&ref=jobsbyculture.com' },
+    { id: 8428818002, title: 'Sr. Developer Advocate — Neon', company: 'databricks', location: 'San Francisco, California', type: 'Full-time', posted: '3d ago', source: 'ATS', url: 'https://databricks.com/company/careers/open-positions/job?gh_jid=8428818002&ref=jobsbyculture.com' },
+    { id: 8424184002, title: 'Data & AI Platform Architect (Professional Services)', company: 'databricks', location: 'Denmark / Remote', type: 'Full-time', posted: '3d ago', source: 'ATS', url: 'https://databricks.com/company/careers/open-positions/job?gh_jid=8424184002&ref=jobsbyculture.com' },
+    { id: 8420841002, title: 'Solutions Architect', company: 'databricks', location: 'United States', type: 'Full-time', posted: '3d ago', source: 'ATS', url: 'https://databricks.com/company/careers/open-positions/job?gh_jid=8420841002&ref=jobsbyculture.com' },
+    { id: 8419901002, title: 'Resident Solutions Architect', company: 'databricks', location: 'Tokyo, Japan', type: 'Full-time', posted: '3d ago', source: 'ATS', url: 'https://databricks.com/company/careers/open-positions/job?gh_jid=8419901002&ref=jobsbyculture.com' },
+    { id: 8419885002, title: 'AI Engineer — Forward Deployed Engineer', company: 'databricks', location: 'Canada', type: 'Full-time', posted: '3d ago', source: 'ATS', url: 'https://databricks.com/company/careers/open-positions/job?gh_jid=8419885002&ref=jobsbyculture.com' },
+    { id: 8417699002, title: 'Sr. Manager, Field Engineering', company: 'databricks', location: 'Central US', type: 'Full-time', posted: '3d ago', source: 'ATS', url: 'https://databricks.com/company/careers/open-positions/job?gh_jid=8417699002&ref=jobsbyculture.com' },
+    { id: 8417656002, title: 'Sr. Solutions Architect', company: 'databricks', location: 'Remote — Texas', type: 'Full-time', posted: '3d ago', source: 'ATS', url: 'https://databricks.com/company/careers/open-positions/job?gh_jid=8417656002&ref=jobsbyculture.com' },
+    { id: 8415076002, title: 'Sr. Manager, Engineering — Storage Platform', company: 'databricks', location: 'San Francisco, California', type: 'Full-time', posted: '3d ago', source: 'ATS', url: 'https://databricks.com/company/careers/open-positions/job?gh_jid=8415076002&ref=jobsbyculture.com' },
+    { id: 8409447002, title: 'Director, Support Engineering (Data & AI)', company: 'databricks', location: 'Bengaluru, India', type: 'Full-time', posted: '3d ago', source: 'ATS', url: 'https://databricks.com/company/careers/open-positions/job?gh_jid=8409447002&ref=jobsbyculture.com' },
+    { id: 8409019002, title: 'Specialist Solutions Architect — AI Tooling & Platform Management', company: 'databricks', location: 'Northeast US', type: 'Full-time', posted: '3d ago', source: 'ATS', url: 'https://databricks.com/company/careers/open-positions/job?gh_jid=8409019002&ref=jobsbyculture.com' },
+    { id: 8408817002, title: 'Scale Solution Engineer', company: 'databricks', location: 'Costa Rica', type: 'Full-time', posted: '3d ago', source: 'ATS', url: 'https://databricks.com/company/careers/open-positions/job?gh_jid=8408817002&ref=jobsbyculture.com' },
+    { id: 8413308002, title: 'Partner Solutions Architect, CEMEA', company: 'databricks', location: 'Switzerland', type: 'Full-time', posted: '3d ago', source: 'ATS', url: 'https://databricks.com/company/careers/open-positions/job?gh_jid=8413308002&ref=jobsbyculture.com' },
+    { id: 8407925002, title: 'Partner Solutions Architect, CEMEA', company: 'databricks', location: 'Berlin / Munich, Germany', type: 'Full-time', posted: '3d ago', source: 'ATS', url: 'https://databricks.com/company/careers/open-positions/job?gh_jid=8407925002&ref=jobsbyculture.com' },
+    { id: 8407895002, title: 'Manager — Technical Solutions (Big Data / AI)', company: 'databricks', location: 'Bengaluru, India', type: 'Full-time', posted: '3d ago', source: 'ATS', url: 'https://databricks.com/company/careers/open-positions/job?gh_jid=8407895002&ref=jobsbyculture.com' },
+    { id: 8422483002, title: 'Senior Staff Software Engineer — Unity Catalog Runtime Enforcement', company: 'databricks', location: 'Zürich, Switzerland', type: 'Full-time', posted: '3d ago', source: 'ATS', url: 'https://databricks.com/company/careers/open-positions/job?gh_jid=8422483002&ref=jobsbyculture.com' }
 ];
 // ═══ STATE ═══
 let activeValues = new Set();
@@ -1013,7 +1066,7 @@ function renderJobs() {
             return `<span class="jt ${isMatch ? `match-${val.color}` : `jt-${val.color}`}">${val.ico} ${val.name}</span>`;
         }).join('');
 
-        return `<div class="job">
+        return `<a href="${j.url}" target="_blank" rel="noopener" class="job">
             <div class="job-top">
                 <div class="job-avatar"><img src="${c.logo}" alt="${c.name}" onerror="this.style.display='none';this.parentElement.textContent='${c.name[0]}'"></div>
                 <div class="job-info">
@@ -1033,9 +1086,9 @@ function renderJobs() {
                     ${j.salary ? `<div class="job-salary">${j.salary}</div>` : ''}
                     <div class="job-source">via ${j.source}</div>
                 </div>
-                <a href="${j.url}" target="_blank" rel="noopener" class="job-apply">Apply</a>
+                <span class="job-apply">Apply →</span>
             </div>
-        </div>`;
+        </a>`;
     }).join('');
 }
 
