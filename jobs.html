@@ -4,9 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AI & Tech Jobs Filtered by Culture | JobsByCulture</title>
-    <meta name="description" content="Browse 499 AI and tech jobs filtered by culture values like async-first, work-life balance, remote-friendly, ethical AI, and more. Every job links to the original source.">
+    <meta name="description" content="Browse 499 AI & tech jobs filtered by culture values like async-first, work-life balance, remote-friendly, and ethical AI.">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="JobsByCulture">
+    <meta property="og:title" content="AI & Tech Jobs Filtered by Culture | JobsByCulture">
+    <meta property="og:description" content="Browse 499 AI & tech jobs filtered by culture values. Every job links directly to the original posting.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://jobsbyculture.com/jobs">
     <meta property="og:image" content="https://jobsbyculture.com/og-image.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
     <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="499 AI & Tech Jobs Filtered by Culture | JobsByCulture">
+    <meta name="twitter:description" content="Browse AI & tech jobs filtered by culture values like async-first, work-life balance, and ethical AI.">
+    <meta name="twitter:site" content="@jobsbyculture">
+    <meta name="twitter:image" content="https://jobsbyculture.com/og-image.png">
     <link rel="canonical" href="https://jobsbyculture.com/jobs">
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='8' fill='%230a0a0b'/%3E%3Ccircle cx='20' cy='20' r='16' stroke='%2322c55e' stroke-width='1.5' fill='none' opacity='0.2'/%3E%3Ccircle cx='20' cy='20' r='10' stroke='%2322c55e' stroke-width='1.5' fill='none' opacity='0.4'/%3E%3Ccircle cx='20' cy='20' r='4.5' fill='%2322c55e'/%3E%3C/svg%3E">
     <link rel="preconnect" href="https://fonts.googleapis.com?ref=jobsbyculture.com">
@@ -1113,37 +1125,72 @@ renderJobs();
 </script>
 
 <script>
-// Generate JobPosting schema for Google Jobs
-document.addEventListener('DOMContentLoaded', function() {
+// Generate JobPosting schema for Google Jobs (injected synchronously for crawler visibility)
+(function() {
     const schemaJobs = JOBS.slice(0, 50).map(j => {
         const comp = COMPANIES[j.company] || {};
+        const posted = j.posted || '3w+ ago';
+        let daysAgo = 21;
+        if (posted.includes('d')) daysAgo = parseInt(posted) || 1;
+        else if (posted.includes('w')) daysAgo = (parseInt(posted) || 1) * 7;
+        else if (posted.includes('mo')) daysAgo = (parseInt(posted) || 1) * 30;
+        const datePosted = new Date(Date.now() - daysAgo * 86400000).toISOString().split('T')[0];
+        const validThrough = new Date(Date.now() + 30 * 86400000).toISOString().split('T')[0];
+
+        // Parse location into structured address
+        const loc = j.location || '';
+        const locParts = loc.split(/[|,·]/).map(s => s.trim()).filter(Boolean);
+        const primaryLoc = locParts[0] || loc;
+
         const schema = {
             "@context": "https://schema.org",
             "@type": "JobPosting",
             "title": j.title,
-            "description": j.title + " at " + (comp.name || j.company),
-            "datePosted": new Date(Date.now() - (j.posted.includes('d') ? parseInt(j.posted)*86400000 : j.posted.includes('w') ? parseInt(j.posted)*604800000 : 2592000000)).toISOString().split('T')[0],
+            "description": j.title + " — " + (comp.name || j.company) + ". " + (j.type || "Full-time") + " role based in " + loc + ". Apply directly via " + (comp.name || j.company) + " careers.",
+            "datePosted": datePosted,
+            "validThrough": validThrough,
             "hiringOrganization": {
                 "@type": "Organization",
                 "name": comp.name || j.company,
-                "sameAs": comp.careers || ""
+                "sameAs": comp.careers || "",
+                "logo": comp.logo || ""
             },
             "jobLocation": {
                 "@type": "Place",
-                "address": j.location
+                "address": {
+                    "@type": "PostalAddress",
+                    "addressLocality": primaryLoc
+                }
             },
             "employmentType": "FULL_TIME",
             "directApply": false,
             "url": j.url
         };
-        if (j.salary) schema.baseSalary = { "@type": "MonetaryAmount", "currency": "USD", "value": { "@type": "QuantitativeValue", "value": j.salary } };
+        if (j.salary) {
+            const nums = j.salary.match(/[\d,]+/g);
+            if (nums && nums.length >= 2) {
+                schema.baseSalary = {
+                    "@type": "MonetaryAmount",
+                    "currency": "USD",
+                    "value": {
+                        "@type": "QuantitativeValue",
+                        "minValue": parseInt(nums[0].replace(/,/g,'')),
+                        "maxValue": parseInt(nums[1].replace(/,/g,'')),
+                        "unitText": "YEAR"
+                    }
+                };
+            }
+        }
+        if (loc.toLowerCase().includes('remote')) {
+            schema.jobLocationType = "TELECOMMUTE";
+        }
         return schema;
     });
     const script = document.createElement('script');
     script.type = 'application/ld+json';
     script.textContent = JSON.stringify(schemaJobs);
     document.head.appendChild(script);
-});
+})();
 </script>
 </body>
 </html>
