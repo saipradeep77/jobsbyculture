@@ -3,19 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HireByCulture — Find Jobs That Match Your Values, Not Just Your Skills</title>
+    <title>JobsByCulture — Find Jobs That Match Your Values, Not Just Your Skills</title>
     <meta name="description" content="The culture-first job board. Filter AI, tech & startup roles by values like async-first, ethical AI, work-life balance, low-meetings, and more. Stop guessing about company culture.">
     <meta name="keywords" content="jobs by company culture, AI jobs async culture, ethical AI careers, culture fit job board, remote AI jobs, hire by culture, company values job search">
-    <meta name="author" content="HireByCulture">
+    <meta name="author" content="JobsByCulture">
     <meta name="robots" content="index, follow">
-    <meta property="og:title" content="HireByCulture — Jobs That Match Your Values">
+    <meta property="og:title" content="JobsByCulture — Jobs That Match Your Values">
     <meta property="og:description" content="The culture-first job board. Filter AI & tech roles by what actually matters: how teams work, not just what they build.">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://hirebyculture.com">
+    <meta property="og:url" content="https://jobsbyculture.com">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="HireByCulture — Culture-First Job Board">
-    <meta name="twitter:site" content="@hirebyculture">
-    <link rel="canonical" href="https://hirebyculture.com">
+    <meta name="twitter:title" content="JobsByCulture — Culture-First Job Board">
+    <meta name="twitter:site" content="@jobsbyculture">
+    <link rel="canonical" href="https://jobsbyculture.com">
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎯</text></svg>">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -24,7 +24,7 @@
     {
         "@context": "https://schema.org",
         "@type": "WebApplication",
-        "name": "HireByCulture",
+        "name": "JobsByCulture",
         "description": "Culture-first job board matching professionals with companies based on shared values",
         "applicationCategory": "BusinessApplication",
         "operatingSystem": "Web",
@@ -143,8 +143,29 @@
         .hero h1 em { font-style: italic; color: var(--accent); }
         .hero-sub {
             font-size: 18px; color: var(--text-2); max-width: 520px;
-            line-height: 1.7; margin-bottom: 44px;
+            line-height: 1.7; margin-bottom: 16px;
             animation: fadeUp 0.5s ease 0.16s both;
+        }
+        .hero-trust {
+            display: inline-flex; align-items: center; gap: 6px;
+            font-size: 13px; color: var(--text-2);
+            margin-bottom: 44px; letter-spacing: 0.01em;
+            animation: fadeUp 0.5s ease 0.22s both;
+        }
+        .hero-trust::before {
+            content: ''; width: 6px; height: 6px; border-radius: 50%;
+            background: var(--accent); flex-shrink: 0;
+            animation: blink 2s ease-in-out infinite;
+        }
+        @keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: 0.3; } }
+        .hero-trust strong { 
+            color: var(--text-1); position: relative; display: inline;
+        }
+        .hero-trust strong::after {
+            content: ''; position: absolute; left: 0; right: 0; bottom: -2px;
+            height: 6px;
+            background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 8'%3E%3Cpath d='M0 6 Q50 0 100 6 Q150 12 200 6' stroke='%23facc15' stroke-width='2.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E") repeat-x;
+            background-size: 200px 8px;
         }
         .hero-actions {
             display: flex; align-items: center; gap: 16px; margin-bottom: 56px;
@@ -430,15 +451,16 @@
         </div>
         <h1>Stop guessing.<br>Find jobs that match your <em>culture.</em></h1>
         <p class="hero-sub">The first job board that filters by how teams actually work — async or sync, fast or careful, flat or structured. Pick your values, find your people.</p>
+        <p class="hero-trust">The first job board that matches you by culture — built on<strong> real employee reviews</strong>, not marketing fluff.</p>
         <div class="hero-actions">
             <a href="#values" class="btn-primary">Pick Your Values →</a>
             <a href="#quiz" class="btn-ghost">Take the Culture Quiz</a>
         </div>
         <div class="hero-metrics">
-            <div><div class="metric-val">200+</div><div class="metric-label">AI & tech roles</div></div>
+            <div><div class="metric-val">458</div><div class="metric-label">AI & tech roles</div></div>
             <div><div class="metric-val">18</div><div class="metric-label">culture values</div></div>
-            <div><div class="metric-val">75+</div><div class="metric-label">companies profiled</div></div>
-            <div><div class="metric-val">12</div><div class="metric-label">countries</div></div>
+            <div><div class="metric-val">14</div><div class="metric-label">companies profiled</div></div>
+            <div><div class="metric-val">10</div><div class="metric-label">countries</div></div>
         </div>
     </div>
 </section>
@@ -660,15 +682,15 @@
             <p class="s-desc">Deep-dive into companies that champion specific culture values.</p>
         </div>
         <div class="ex-grid">
-            <a href="/values/async-first" class="ex-card"><span class="ex-ico">💬</span><h3>Async-First Companies</h3><p>Teams that default to written communication over meetings</p><span class="ex-count">→ 34 companies</span></a>
-            <a href="/values/low-meetings" class="ex-card"><span class="ex-ico">🔇</span><h3>Low-Meeting Culture</h3><p>Where your calendar isn't the enemy of deep work</p><span class="ex-count">→ 28 companies</span></a>
-            <a href="/values/ethical-ai" class="ex-card"><span class="ex-ico">🛡️</span><h3>Ethical AI Jobs</h3><p>Companies with mandatory bias audits and safety-first AI</p><span class="ex-count">→ 22 companies</span></a>
-            <a href="/values/remote-native" class="ex-card"><span class="ex-ico">🌍</span><h3>Remote-Native Teams</h3><p>Built for distributed work from day one, not retrofitted</p><span class="ex-count">→ 45 companies</span></a>
-            <a href="/values/work-life-balance" class="ex-card"><span class="ex-ico">⚖️</span><h3>Work-Life Balance</h3><p>Sustainable pace, no hustle culture, real boundaries</p><span class="ex-count">→ 38 companies</span></a>
-            <a href="/values/open-source" class="ex-card"><span class="ex-ico">📖</span><h3>Open Source Contributors</h3><p>Teams that build in public and contribute back</p><span class="ex-count">→ 19 companies</span></a>
-            <a href="/values/ai-safety" class="ex-card"><span class="ex-ico">🤖</span><h3>AI Safety Focused</h3><p>Alignment research, red-teaming, responsible deployment</p><span class="ex-count">→ 15 companies</span></a>
-            <a href="/values/flat-hierarchy" class="ex-card"><span class="ex-ico">🤝</span><h3>Flat Hierarchy</h3><p>Minimal management layers, engineers talk to leadership</p><span class="ex-count">→ 26 companies</span></a>
-            <a href="/ai" class="ex-card" style="border-color:var(--accent-border);background:var(--accent-bg)"><span class="ex-ico">⚡</span><h3>All AI & ML Jobs</h3><p>Every AI role filtered by culture — our launch category</p><span class="ex-count">→ 200+ roles</span></a>
+            <a href="/jobs?value=eng-driven" class="ex-card"><span class="ex-ico">⚙️</span><h3>Engineering-Driven</h3><p>Where engineers shape product direction and technical decisions</p><span class="ex-count">→ 450 jobs</span></a>
+            <a href="/jobs?value=flat" class="ex-card"><span class="ex-ico">🤝</span><h3>Flat Hierarchy</h3><p>Minimal management layers, engineers talk to leadership</p><span class="ex-count">→ 306 jobs</span></a>
+            <a href="/jobs?value=learning" class="ex-card"><span class="ex-ico">📚</span><h3>Learning Culture</h3><p>Growth budgets, internal talks, and continuous development</p><span class="ex-count">→ 376 jobs</span></a>
+            <a href="/jobs?value=ethical-ai" class="ex-card"><span class="ex-ico">🛡️</span><h3>Ethical AI</h3><p>Safety-first AI with mandatory bias audits and responsible deployment</p><span class="ex-count">→ 203 jobs</span></a>
+            <a href="/jobs?value=equity" class="ex-card"><span class="ex-ico">💰</span><h3>Strong Equity</h3><p>Meaningful ownership stakes, not just token options</p><span class="ex-count">→ 270 jobs</span></a>
+            <a href="/jobs?value=many-hats" class="ex-card"><span class="ex-ico">🎭</span><h3>Wear Many Hats</h3><p>Small teams where you own problems end-to-end</p><span class="ex-count">→ 179 jobs</span></a>
+            <a href="/jobs?value=open-source" class="ex-card"><span class="ex-ico">📖</span><h3>Open Source</h3><p>Teams that build in public and contribute back</p><span class="ex-count">→ 102 jobs</span></a>
+            <a href="/jobs?value=ship-fast" class="ex-card"><span class="ex-ico">🚀</span><h3>Ship Fast</h3><p>Rapid iteration, bias for action, deploy daily</p><span class="ex-count">→ 137 jobs</span></a>
+            <a href="/jobs" class="ex-card" style="border-color:var(--accent-border);background:var(--accent-bg)"><span class="ex-ico">⚡</span><h3>All AI & Tech Jobs</h3><p>Every role filtered by culture values — browse all 14 companies</p><span class="ex-count">→ 458 jobs</span></a>
         </div>
     </div>
 </section>
@@ -732,11 +754,11 @@
                 <a href="/for-companies">List Your Company</a>
                 <a href="https://meetingtax.com" target="_blank">Meeting Tax</a>
                 <a href="https://paytaxfa.st" target="_blank">PayTaxFast</a>
-                <a href="https://x.com/hirebyculture" target="_blank">@hirebyculture</a>
+                <a href="https://x.com/jobsbyculture" target="_blank">@jobsbyculture</a>
             </div>
         </div>
         <div class="ft-bar">
-            <p>© 2026 HireByCulture. Inspired by <a href="#" style="color:var(--text-2);text-decoration:underline">KeyValues</a>. Built with ❤️ for the indie hacker community.</p>
+            <p>© 2026 JobsByCulture. Inspired by <a href="#" style="color:var(--text-2);text-decoration:underline">KeyValues</a>. Built with ❤️ for the indie hacker community.</p>
             <p>Made by <a href="https://x.com/itspradz" target="_blank" style="color:var(--accent);text-decoration:none">@itspradz</a></p>
         </div>
     </div>
