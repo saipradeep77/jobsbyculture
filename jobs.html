@@ -5,8 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AI & Tech Jobs Filtered by Culture | JobsByCulture</title>
     <meta name="description" content="Browse 458 AI and tech jobs filtered by culture values like async-first, work-life balance, remote-friendly, ethical AI, and more. Every job links to the original source.">
+    <meta property="og:image" content="https://jobsbyculture.com/og-image.png">
+    <meta name="twitter:card" content="summary_large_image">
     <link rel="canonical" href="https://jobsbyculture.com/jobs">
-    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎯</text></svg>">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='8' fill='%230a0a0b'/%3E%3Ccircle cx='20' cy='20' r='16' stroke='%2322c55e' stroke-width='1.5' fill='none' opacity='0.2'/%3E%3Ccircle cx='20' cy='20' r='10' stroke='%2322c55e' stroke-width='1.5' fill='none' opacity='0.4'/%3E%3Ccircle cx='20' cy='20' r='4.5' fill='%2322c55e'/%3E%3C/svg%3E">
     <link rel="preconnect" href="https://fonts.googleapis.com?ref=jobsbyculture.com">
     <link rel="preconnect" href="https://fonts.gstatic.com?ref=jobsbyculture.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Satoshi:wght@400;500;600;700;900&family=IBM+Plex+Mono:wght@400;500&display=swap&ref=jobsbyculture.com" rel="stylesheet">
@@ -59,7 +61,12 @@
         nav { position: sticky; top: 0; z-index: 100; background: rgba(250,250,248,0.9); backdrop-filter: blur(20px); border-bottom: 1px solid var(--border); }
         .nav-inner { max-width: 1200px; margin: 0 auto; padding: 12px 24px; display: flex; align-items: center; justify-content: space-between; }
         .nav-logo { display: flex; align-items: center; gap: 10px; text-decoration: none; color: var(--text); }
-        .nav-mark { width: 28px; height: 28px; border-radius: 7px; background: linear-gradient(135deg, var(--accent), #ea580c); display: grid; place-items: center; font-weight: 900; font-size: 12px; color: #fff; }
+        .nav-mark { width: 28px; height: 28px; position: relative; display: flex; align-items: center; justify-content: center; }
+        .nav-mark .ring { position: absolute; border: 1.5px solid var(--accent); border-radius: 50%; animation: logoPing 2.5s ease-out infinite; }
+        .nav-mark .ring-1 { width: 100%; height: 100%; opacity: 0.2; }
+        .nav-mark .ring-2 { width: 65%; height: 65%; opacity: 0.4; animation-delay: 0.3s; }
+        .nav-mark .nav-dot { width: 6px; height: 6px; background: var(--accent); border-radius: 50%; position: relative; z-index: 1; }
+        @keyframes logoPing { 0% { transform: scale(1); opacity: 0.4; } 100% { transform: scale(1.5); opacity: 0; } }
         .nav-wordmark { font-weight: 700; font-size: 15px; letter-spacing: -0.03em; }
         .nav-wordmark span { color: var(--accent); }
         .nav-links { display: flex; align-items: center; gap: 24px; }
@@ -198,8 +205,8 @@
 <nav>
     <div class="nav-inner">
         <a href="/" class="nav-logo">
-            <div class="nav-mark">HC</div>
-            <div class="nav-wordmark">Hire<span>By</span>Culture</div>
+            <div class="nav-mark"><div class="ring ring-1"></div><div class="ring ring-2"></div><div class="nav-dot"></div></div>
+            <div class="nav-wordmark">Jobs<span>By</span>Culture</div>
         </a>
         <div class="nav-links">
             <a href="/">Home</a>
@@ -1035,6 +1042,40 @@ function renderJobs() {
 // ═══ INIT ═══
 buildFilters();
 renderJobs();
+</script>
+
+<script>
+// Generate JobPosting schema for Google Jobs
+document.addEventListener('DOMContentLoaded', function() {
+    const schemaJobs = JOBS.slice(0, 50).map(j => {
+        const comp = COMPANIES[j.company] || {};
+        const schema = {
+            "@context": "https://schema.org",
+            "@type": "JobPosting",
+            "title": j.title,
+            "description": j.title + " at " + (comp.name || j.company),
+            "datePosted": new Date(Date.now() - (j.posted.includes('d') ? parseInt(j.posted)*86400000 : j.posted.includes('w') ? parseInt(j.posted)*604800000 : 2592000000)).toISOString().split('T')[0],
+            "hiringOrganization": {
+                "@type": "Organization",
+                "name": comp.name || j.company,
+                "sameAs": comp.careers || ""
+            },
+            "jobLocation": {
+                "@type": "Place",
+                "address": j.location
+            },
+            "employmentType": "FULL_TIME",
+            "directApply": false,
+            "url": j.url
+        };
+        if (j.salary) schema.baseSalary = { "@type": "MonetaryAmount", "currency": "USD", "value": { "@type": "QuantitativeValue", "value": j.salary } };
+        return schema;
+    });
+    const script = document.createElement('script');
+    script.type = 'application/ld+json';
+    script.textContent = JSON.stringify(schemaJobs);
+    document.head.appendChild(script);
+});
 </script>
 </body>
 </html>
