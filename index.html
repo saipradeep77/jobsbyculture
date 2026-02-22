@@ -273,6 +273,29 @@
             opacity: 0; transition: opacity 0.25s;
         }
         
+        
+        /* ═══ FEATURED JOBS ═══ */
+        .featured-jobs { padding: 100px 0; }
+        .fj-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 12px; margin-top: 48px; }
+        .fj-card {
+            display: flex; flex-direction: column; gap: 12px;
+            background: var(--bg-card); border: 1px solid var(--border);
+            border-radius: var(--radius); padding: 20px;
+            text-decoration: none; color: var(--text); transition: all 0.2s;
+        }
+        .fj-card:hover { border-color: var(--accent); transform: translateY(-2px); box-shadow: 0 8px 24px rgba(0,0,0,0.3); }
+        .fj-top { display: flex; align-items: center; gap: 12px; }
+        .fj-logo { width: 36px; height: 36px; border-radius: 8px; object-fit: contain; background: rgba(255,255,255,0.05); padding: 3px; flex-shrink: 0; }
+        .fj-title { font-size: 14px; font-weight: 600; line-height: 1.4; }
+        .fj-company { font-size: 12px; color: var(--text-2); margin-top: 2px; }
+        .fj-meta { display: flex; flex-wrap: wrap; gap: 8px; }
+        .fj-loc { font-size: 12px; color: var(--text-2); }
+        .fj-salary { font-size: 12px; color: var(--accent); font-weight: 600; font-family: var(--font-mono); }
+        .fj-bottom { display: flex; justify-content: space-between; align-items: center; margin-top: auto; }
+        .fj-posted { font-size: 11px; color: var(--text-2); opacity: 0.6; }
+        .fj-apply { font-size: 12px; color: var(--accent); font-weight: 600; }
+        .fj-cta { text-align: center; margin-top: 40px; }
+        .fj-note { font-size: 12px; color: var(--text-2); margin-top: 12px; }
         .co-avatar { width: 40px; height: 40px; border-radius: 10px; object-fit: contain; background: rgba(255,255,255,0.05); padding: 4px; }
         .co-rating { margin-left: auto; font-size: 13px; color: var(--text-2); background: rgba(255,255,255,0.04); padding: 4px 10px; border-radius: 6px; }
         .co-details { margin-top: 16px; padding-top: 16px; border-top: 1px solid var(--border); }
@@ -488,6 +511,161 @@
         </div>
     </div>
 </section>
+
+<!-- ═══ FEATURED JOBS ═══ -->
+<section class="featured-jobs" id="featured">
+    <div class="container">
+        <div class="s-center">
+            <span class="s-label">Live Jobs</span>
+            <h2 class="s-title">Real jobs, updated daily</h2>
+            <p class="s-desc">Hand-picked roles from companies with strong culture scores. All salaries shown.</p>
+        </div>
+        <div class="fj-grid">
+
+                <a href="https://openai.com/careers/search?ref=jobsbyculture.com" target="_blank" class="fj-card">
+                    <div class="fj-top">
+                        <img src="https://www.google.com/s2/favicons?domain=openai.com&sz=128" alt="OpenAI" class="fj-logo">
+                        <div>
+                            <div class="fj-title">Research Engineer — Safety</div>
+                            <div class="fj-company">OpenAI</div>
+                        </div>
+                    </div>
+                    <div class="fj-meta">
+                        <span class="fj-loc">San Francisco</span>
+                        <span class="fj-salary">$300k – $480k</span>
+                    </div>
+                    <div class="fj-bottom">
+                        <span class="fj-posted">4d ago</span>
+                        <span class="fj-apply">Apply →</span>
+                    </div>
+                </a>
+                <a href="https://cursor.com/careers/design-engineer?ref=jobsbyculture.com" target="_blank" class="fj-card">
+                    <div class="fj-top">
+                        <img src="https://www.google.com/s2/favicons?domain=cursor.com&sz=128" alt="Cursor" class="fj-logo">
+                        <div>
+                            <div class="fj-title">Design Engineer</div>
+                            <div class="fj-company">Cursor</div>
+                        </div>
+                    </div>
+                    <div class="fj-meta">
+                        <span class="fj-loc">SF / NY</span>
+                        <span class="fj-salary">$200k – $320k</span>
+                    </div>
+                    <div class="fj-bottom">
+                        <span class="fj-posted">4d ago</span>
+                        <span class="fj-apply">Apply →</span>
+                    </div>
+                </a>
+                <a href="https://www.databricks.com/company/careers/open-positions?ref=jobsbyculture.com" target="_blank" class="fj-card">
+                    <div class="fj-top">
+                        <img src="https://www.google.com/s2/favicons?domain=databricks.com&sz=128" alt="Databricks" class="fj-logo">
+                        <div>
+                            <div class="fj-title">Staff Engineer — Lakehouse Platform</div>
+                            <div class="fj-company">Databricks</div>
+                        </div>
+                    </div>
+                    <div class="fj-meta">
+                        <span class="fj-loc">San Francisco / Remote US</span>
+                        <span class="fj-salary">$220k – $340k</span>
+                    </div>
+                    <div class="fj-bottom">
+                        <span class="fj-posted">2d ago</span>
+                        <span class="fj-apply">Apply →</span>
+                    </div>
+                </a>
+                <a href="https://apply.workable.com/huggingface/j/ED25C4FEA1/?ref=jobsbyculture.com" target="_blank" class="fj-card">
+                    <div class="fj-top">
+                        <img src="https://www.google.com/s2/favicons?domain=huggingface.co&sz=128" alt="Hugging Face" class="fj-logo">
+                        <div>
+                            <div class="fj-title">Senior Open-Source ML Engineer, Computer Vision</div>
+                            <div class="fj-company">Hugging Face</div>
+                        </div>
+                    </div>
+                    <div class="fj-meta">
+                        <span class="fj-loc">Remote (US)</span>
+                        <span class="fj-salary">$160k – $230k</span>
+                    </div>
+                    <div class="fj-bottom">
+                        <span class="fj-posted">2d ago</span>
+                        <span class="fj-apply">Apply →</span>
+                    </div>
+                </a>
+                <a href="https://linear.app/careers/82778dbf-711e-4d23-9d49-4a60db76737a?ref=jobsbyculture.com" target="_blank" class="fj-card">
+                    <div class="fj-top">
+                        <img src="https://www.google.com/s2/favicons?domain=linear.app&sz=128" alt="Linear" class="fj-logo">
+                        <div>
+                            <div class="fj-title">Product Engineer</div>
+                            <div class="fj-company">Linear</div>
+                        </div>
+                    </div>
+                    <div class="fj-meta">
+                        <span class="fj-loc">Remote (Global)</span>
+                        <span class="fj-salary">$170k – $240k</span>
+                    </div>
+                    <div class="fj-bottom">
+                        <span class="fj-posted">3d ago</span>
+                        <span class="fj-apply">Apply →</span>
+                    </div>
+                </a>
+                <a href="https://stripe.com/jobs/search?ref=jobsbyculture.com" target="_blank" class="fj-card">
+                    <div class="fj-top">
+                        <img src="https://www.google.com/s2/favicons?domain=stripe.com&sz=128" alt="Stripe" class="fj-logo">
+                        <div>
+                            <div class="fj-title">Senior Engineer — Payments Platform</div>
+                            <div class="fj-company">Stripe</div>
+                        </div>
+                    </div>
+                    <div class="fj-meta">
+                        <span class="fj-loc">San Francisco / Seattle / NYC</span>
+                        <span class="fj-salary">$230k – $350k</span>
+                    </div>
+                    <div class="fj-bottom">
+                        <span class="fj-posted">1d ago</span>
+                        <span class="fj-apply">Apply →</span>
+                    </div>
+                </a>
+                <a href="https://vercel.com/careers/software-engineer-ai-sdk-5474915004?ref=jobsbyculture.com" target="_blank" class="fj-card">
+                    <div class="fj-top">
+                        <img src="https://www.google.com/s2/favicons?domain=vercel.com&sz=128" alt="Vercel" class="fj-logo">
+                        <div>
+                            <div class="fj-title">Software Engineer, AI SDK</div>
+                            <div class="fj-company">Vercel</div>
+                        </div>
+                    </div>
+                    <div class="fj-meta">
+                        <span class="fj-loc">Hybrid — NYC / San Francisco</span>
+                        <span class="fj-salary">$200k – $300k</span>
+                    </div>
+                    <div class="fj-bottom">
+                        <span class="fj-posted">2d ago</span>
+                        <span class="fj-apply">Apply →</span>
+                    </div>
+                </a>
+                <a href="https://www.hubspot.com/careers/jobs/7544176?hubs_signup-cta=careers-apply&ref=jobsbyculture.com" target="_blank" class="fj-card">
+                    <div class="fj-top">
+                        <img src="https://www.google.com/s2/favicons?domain=hubspot.com&sz=128" alt="HubSpot" class="fj-logo">
+                        <div>
+                            <div class="fj-title">Principal Software Engineer — Breeze Assistant</div>
+                            <div class="fj-company">HubSpot</div>
+                        </div>
+                    </div>
+                    <div class="fj-meta">
+                        <span class="fj-loc">Remote (US)</span>
+                        <span class="fj-salary">$180k – $250k</span>
+                    </div>
+                    <div class="fj-bottom">
+                        <span class="fj-posted">3d ago</span>
+                        <span class="fj-apply">Apply →</span>
+                    </div>
+                </a>
+        </div>
+        <div class="fj-cta">
+            <a href="/jobs" class="btn-primary">See all 458 jobs →</a>
+            <p class="fj-note">From 14 companies · Updated daily</p>
+        </div>
+    </div>
+</section>
+
 
 <!-- ═══ VALUE PICKER ═══ -->
 <section class="picker" id="values">
@@ -1269,6 +1447,10 @@
         </div>
     </div>
 </section>
+
+
+
+
 
 <!-- ═══ EXPLORE (SEO PAGES) ═══ -->
 <section class="explore" id="explore">
