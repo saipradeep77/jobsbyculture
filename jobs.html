@@ -192,7 +192,6 @@
             font-size: 13px; font-weight: 600; transition: all 0.2s;
         }
         .job-apply:hover { background: var(--accent-hover); transform: translateY(-1px); box-shadow: 0 4px 12px rgba(232,89,12,0.2); }
-        .job-source { font-size: 11px; color: var(--text-3); margin-top: 2px; }
 
         /* CULTURE SCORE BAR */
         .culture-score { display: flex; align-items: center; gap: 8px; margin-bottom: 10px; }
@@ -925,11 +924,10 @@ function parseSalaryMid(s) {
 function getLocation(loc) {
     if (loc.includes('Remote (Global)') || loc.includes('Remote (EU') || loc.includes('Remote (US')) return 'Remote';
     if (loc.includes('Remote')) return 'Hybrid / Remote Option';
-    if (loc.includes('San Francisco') || loc.includes('NYC') || loc.includes('Seattle') || loc.includes('Cambridge')) return 'US On-site';
-    if (loc.includes('Paris')) return 'Europe';
-    if (loc.includes('London')) return 'Europe';
-    if (loc.includes('Dublin')) return 'Europe';
-    if (loc.includes('Toronto')) return 'Canada';
+    if (loc.includes('India') || loc.includes('Bengaluru') || loc.includes('Bangalore') || loc.includes('Mumbai') || loc.includes('Hyderabad') || loc.includes('Gurgaon') || loc.includes('Delhi') || loc.includes('Pune') || loc.includes('Chennai')) return 'India';
+    if (loc.includes('San Francisco') || loc.includes('NYC') || loc.includes('New York') || loc.includes('Seattle') || loc.includes('Cambridge') || loc.includes('Austin') || loc.includes('Chicago') || loc.includes('Los Angeles') || loc.includes(', CA') || loc.includes(', NY') || loc.includes(', WA') || loc.includes(', MA') || loc.includes(', TX')) return 'US On-site';
+    if (loc.includes('Paris') || loc.includes('London') || loc.includes('Dublin') || loc.includes('Berlin') || loc.includes('Amsterdam') || loc.includes('Munich') || loc.includes('Zurich')) return 'Europe';
+    if (loc.includes('Toronto') || loc.includes('Montreal') || loc.includes('Vancouver')) return 'Canada';
     return 'Other';
 }
 
@@ -1102,7 +1100,6 @@ function renderJobs() {
             <div class="job-bottom">
                 <div>
                     ${j.salary ? `<div class="job-salary">${j.salary}</div>` : ''}
-                    <div class="job-source">via ${j.source}</div>
                 </div>
                 <span class="job-apply">Apply →</span>
             </div>
@@ -1132,9 +1129,20 @@ buildFilters();
         document.getElementById('searchInput').value = COMPANIES[company].name;
         searchQuery = COMPANIES[company].name.toLowerCase();
     }
+    // Support ?location=India or ?location=Europe (from footer links)
+    const locParam = params.get('location');
+    if (locParam) {
+        activeLocations.add(locParam);
+    }
     // Sync sidebar filter UI with activeValues
     if (activeValues.size > 0) {
         document.querySelectorAll('.vf').forEach(el => el.classList.toggle('on', activeValues.has(el.dataset.v)));
+    }
+    // Sync sidebar filter UI with activeLocations
+    if (activeLocations.size > 0) {
+        document.querySelectorAll('#locFilters .lf').forEach(el => el.classList.toggle('on', activeLocations.has(el.dataset.l)));
+    }
+    if (activeValues.size > 0 || activeLocations.size > 0) {
         document.getElementById('clearFilters').classList.toggle('show', true);
     }
 })();
