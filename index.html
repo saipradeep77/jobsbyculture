@@ -321,8 +321,8 @@
         .co-cons li::before { content: '✗ '; color: #ef4444; }
         .co-pros strong, .co-cons strong { font-size: 12px; color: var(--text); }
         .co-source { font-size: 11px; color: var(--text-2); opacity: 0.6; font-style: italic; }
-        .co-actions { display: flex; gap: 12px; align-items: center; }
-        .co-toggle { background: none; border: 1px solid var(--border-2); color: var(--text-2); padding: 5px 12px; border-radius: 6px; font-size: 12px; cursor: pointer; font-family: var(--font-body); transition: all 0.2s; }
+        .co-actions { display: flex; gap: 8px; align-items: center; flex-wrap: wrap; }
+        .co-toggle { background: none; border: 1px solid var(--border-2); color: var(--text-2); padding: 5px 10px; border-radius: 6px; font-size: 11.5px; cursor: pointer; font-family: var(--font-body); transition: all 0.2s; white-space: nowrap; }
         .co-toggle:hover { border-color: var(--accent); color: var(--accent); }
         .co-toggle.open { border-color: var(--accent); color: var(--accent); }
         .co-card:hover { border-color: var(--border-2); transform: translateY(-3px); box-shadow: var(--shadow-lg); }
@@ -344,13 +344,13 @@
             font-size: 13px; color: var(--text-2); line-height: 1.6; font-style: italic;
         }
         .co-foot {
-            display: flex; align-items: center; justify-content: space-between;
+            display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 10px;
             margin-top: 16px; padding-top: 14px; border-top: 1px solid var(--border);
         }
         .co-salary { font-family: var(--font-mono); font-size: 13px; color: var(--teal); }
-        .co-loc { font-size: 12px; color: var(--text-3); }
-        .co-link { font-size: 13px; color: var(--accent); text-decoration: none; font-weight: 600; }
-        .co-link:hover { text-decoration: underline; }
+        .co-loc { font-size: 12px; color: var(--text-3); flex-shrink: 0; }
+        .co-link { font-size: 11.5px; color: var(--accent); text-decoration: none; font-weight: 600; white-space: nowrap; padding: 5px 10px; border: 1px solid var(--accent-border); border-radius: 6px; transition: all 0.2s; }
+        .co-link:hover { background: var(--accent-bg); border-color: var(--accent); }
 
         /* ═══ QUIZ ═══ */
         .quiz { padding: 56px 0; position: relative; }
