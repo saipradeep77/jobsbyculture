@@ -466,7 +466,9 @@
 
         /* ═══ RESPONSIVE ═══ */
         @media (max-width: 768px) {
-            .nav-links { display: none; }
+            .hamburger { display: flex; }
+            .nav-links { display: none; position: absolute; top: 100%; left: 0; right: 0; background: rgba(250,250,248,0.98); backdrop-filter: blur(20px); border-bottom: 1px solid var(--border); padding: 20px 24px; flex-direction: column; gap: 16px; box-shadow: 0 8px 24px rgba(0,0,0,0.06); }
+            .nav-links.open { display: flex; }
             .hero { padding: 120px 0 60px; }
             .hero-metrics { gap: 28px; flex-wrap: wrap; }
             .hero-actions { flex-direction: column; align-items: flex-start; }
@@ -480,7 +482,18 @@
             .ex-grid { grid-template-columns: 1fr; }
             .ft-grid { grid-template-columns: 1fr; }
         }
+        .hamburger { display: none; background: none; border: none; cursor: pointer; padding: 4px; flex-direction: column; gap: 5px; }
+        .hamburger span { display: block; width: 22px; height: 2px; background: var(--text); border-radius: 1px; transition: all 0.3s; }
+        .hamburger.active span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
+        .hamburger.active span:nth-child(2) { opacity: 0; }
+        .hamburger.active span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
     </style>
+    <!-- Privacy-friendly analytics by Plausible -->
+    <script async src="https://plausible.io/js/pa-qa3pjs5eZbsfBQJMk4hVW.js"></script>
+    <script>
+      window.plausible=window.plausible||function(){(plausible.q=plausible.q||[]).push(arguments)},plausible.init=plausible.init||function(i){plausible.o=i||{}};
+      plausible.init()
+    </script>
 </head>
 <body>
 
@@ -498,6 +511,9 @@
             <a href="#explore">Explore</a>
             <a href="#newsletter" class="btn-sm" style="background:transparent;border:1px solid #ea580c;color:#ea580c">Get Alerts →</a>
         </div>
+        <button class="hamburger" onclick="this.classList.toggle('active');this.closest('.nav-inner').querySelector('.nav-links').classList.toggle('open')" aria-label="Menu">
+            <span></span><span></span><span></span>
+        </button>
     </div>
 </nav>
 
@@ -778,7 +794,7 @@
                     <div class="co-actions">
                         <button class="co-toggle" onclick="toggleProfile(this)">View Profile ↓</button>
                         <a href="/companies/anthropic" class="co-link">Full Profile →</a>
-                        <a href="/jobs" class="co-link" onclick="this.href='/jobs?company=anthropic'">See Jobs →</a>
+                        <a href="/jobs?company=anthropic" class="co-link">See Jobs →</a>
                     </div>
                 </div>
             </div>
@@ -829,7 +845,7 @@
                     <div class="co-actions">
                         <button class="co-toggle" onclick="toggleProfile(this)">View Profile ↓</button>
                         <a href="/companies/huggingface" class="co-link">Full Profile →</a>
-                        <a href="/jobs" class="co-link" onclick="this.href='/jobs?company=huggingface'">See Jobs →</a>
+                        <a href="/jobs?company=huggingface" class="co-link">See Jobs →</a>
                     </div>
                 </div>
             </div>
@@ -880,7 +896,7 @@
                     <div class="co-actions">
                         <button class="co-toggle" onclick="toggleProfile(this)">View Profile ↓</button>
                         <a href="/companies/mistral" class="co-link">Full Profile →</a>
-                        <a href="/jobs" class="co-link" onclick="this.href='/jobs?company=mistral'">See Jobs →</a>
+                        <a href="/jobs?company=mistral" class="co-link">See Jobs →</a>
                     </div>
                 </div>
             </div>
@@ -929,7 +945,7 @@
                     <div class="co-actions">
                         <button class="co-toggle" onclick="toggleProfile(this)">View Profile ↓</button>
                         <a href="/companies/cohere" class="co-link">Full Profile →</a>
-                        <a href="/jobs" class="co-link" onclick="this.href='/jobs?company=cohere'">See Jobs →</a>
+                        <a href="/jobs?company=cohere" class="co-link">See Jobs →</a>
                     </div>
                 </div>
             </div>
@@ -979,7 +995,7 @@
                     <div class="co-actions">
                         <button class="co-toggle" onclick="toggleProfile(this)">View Profile ↓</button>
                         <a href="/companies/perplexity" class="co-link">Full Profile →</a>
-                        <a href="/jobs" class="co-link" onclick="this.href='/jobs?company=perplexity'">See Jobs →</a>
+                        <a href="/jobs?company=perplexity" class="co-link">See Jobs →</a>
                     </div>
                 </div>
             </div>
@@ -1030,7 +1046,7 @@
                     <div class="co-actions">
                         <button class="co-toggle" onclick="toggleProfile(this)">View Profile ↓</button>
                         <a href="/companies/together" class="co-link">Full Profile →</a>
-                        <a href="/jobs" class="co-link" onclick="this.href='/jobs?company=together'">See Jobs →</a>
+                        <a href="/jobs?company=together" class="co-link">See Jobs →</a>
                     </div>
                 </div>
             </div>
@@ -1080,7 +1096,7 @@
                     <div class="co-actions">
                         <button class="co-toggle" onclick="toggleProfile(this)">View Profile ↓</button>
                         <a href="/companies/databricks" class="co-link">Full Profile →</a>
-                        <a href="/jobs" class="co-link" onclick="this.href='/jobs?company=databricks'">See Jobs →</a>
+                        <a href="/jobs?company=databricks" class="co-link">See Jobs →</a>
                     </div>
                 </div>
             </div>
@@ -1131,7 +1147,7 @@
                     <div class="co-actions">
                         <button class="co-toggle" onclick="toggleProfile(this)">View Profile ↓</button>
                         <a href="/companies/hubspot" class="co-link">Full Profile →</a>
-                        <a href="/jobs" class="co-link" onclick="this.href='/jobs?company=hubspot'">See Jobs →</a>
+                        <a href="/jobs?company=hubspot" class="co-link">See Jobs →</a>
                     </div>
                 </div>
             </div>
@@ -1181,7 +1197,7 @@
                     <div class="co-actions">
                         <button class="co-toggle" onclick="toggleProfile(this)">View Profile ↓</button>
                         <a href="/companies/vercel" class="co-link">Full Profile →</a>
-                        <a href="/jobs" class="co-link" onclick="this.href='/jobs?company=vercel'">See Jobs →</a>
+                        <a href="/jobs?company=vercel" class="co-link">See Jobs →</a>
                     </div>
                 </div>
             </div>
@@ -1231,7 +1247,7 @@
                     <div class="co-actions">
                         <button class="co-toggle" onclick="toggleProfile(this)">View Profile ↓</button>
                         <a href="/companies/stripe" class="co-link">Full Profile →</a>
-                        <a href="/jobs" class="co-link" onclick="this.href='/jobs?company=stripe'">See Jobs →</a>
+                        <a href="/jobs?company=stripe" class="co-link">See Jobs →</a>
                     </div>
                 </div>
             </div>
@@ -1281,7 +1297,7 @@
                     <div class="co-actions">
                         <button class="co-toggle" onclick="toggleProfile(this)">View Profile ↓</button>
                         <a href="/companies/cursor" class="co-link">Full Profile →</a>
-                        <a href="/jobs" class="co-link" onclick="this.href='/jobs?company=cursor'">See Jobs →</a>
+                        <a href="/jobs?company=cursor" class="co-link">See Jobs →</a>
                     </div>
                 </div>
             </div>
@@ -1332,7 +1348,7 @@
                     <div class="co-actions">
                         <button class="co-toggle" onclick="toggleProfile(this)">View Profile ↓</button>
                         <a href="/companies/linear" class="co-link">Full Profile →</a>
-                        <a href="/jobs" class="co-link" onclick="this.href='/jobs?company=linear'">See Jobs →</a>
+                        <a href="/jobs?company=linear" class="co-link">See Jobs →</a>
                     </div>
                 </div>
             </div>
@@ -1417,7 +1433,7 @@
         <div class="nl-card">
             <h2>Get culture-matched jobs <em style="font-family:var(--font-display);color:var(--accent)">weekly</em></h2>
             <p>New roles from companies that actually care about how teams work. No spam, no recruiter BS.</p>
-            <form class="nl-form" onsubmit="event.preventDefault();this.innerHTML='<p style=color:var(--teal);font-weight:600>🎉 You\'re in! Check your inbox.</p>'">
+            <form class="nl-form" onsubmit="event.preventDefault();if(window.plausible)plausible('Newsletter Signup');this.innerHTML='<p style=color:var(--teal);font-weight:600>Thanks! We\'ll notify you when our newsletter launches.</p>'">
                 <input type="email" class="nl-input" placeholder="you@email.com" required>
                 <button type="submit" class="nl-submit">Subscribe →</button>
             </form>
@@ -1438,24 +1454,23 @@
             </div>
             <div class="ft-col">
                 <h4>Values</h4>
-                <a href="/jobs">Async-First</a>
-                <a href="/jobs">Low-Meeting</a>
+                <a href="/jobs?value=async">Async-First</a>
+                <a href="/jobs?value=deep-work">Low-Meeting</a>
                 <a href="/jobs?value=ethical-ai">Ethical AI</a>
-                <a href="/jobs">Remote-Native</a>
-                <a href="/jobs">Work-Life Balance</a>
+                <a href="/jobs?value=remote">Remote-Native</a>
+                <a href="/jobs?value=wlb">Work-Life Balance</a>
             </div>
             <div class="ft-col">
                 <h4>Categories</h4>
                 <a href="/jobs">AI & ML Jobs</a>
-                <a href="/jobs">Startup Jobs</a>
-                <a href="/jobs">Remote Jobs</a>
+                <a href="/jobs?value=flat">Startup Jobs</a>
+                <a href="/jobs?value=remote">Remote Jobs</a>
                 <a href="/jobs">Jobs in India</a>
                 <a href="/jobs">Jobs in Europe</a>
             </div>
             <div class="ft-col">
                 <h4>Company</h4>
-                <a href="/">About</a>
-                <a href="/">List Your Company</a>
+                <a href="mailto:hello@jobsbyculture.com">List Your Company</a>
                 <a href="https://meetingtax.com" target="_blank">Meeting Tax</a>
                 <a href="https://paytaxfa.st" target="_blank">PayTaxFast</a>
                 <a href="https://x.com/jobsbyculture" target="_blank">@jobsbyculture</a>
