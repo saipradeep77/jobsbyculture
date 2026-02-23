@@ -1686,8 +1686,10 @@
         <div class="nl-card">
             <h2>Get culture-matched jobs <em style="font-family:var(--font-display);color:var(--accent)">weekly</em></h2>
             <p>New roles from companies that actually care about how teams work. No spam, no recruiter BS.</p>
-            <form class="nl-form" onsubmit="event.preventDefault();if(window.plausible)plausible('Newsletter Signup');this.innerHTML='<p style=color:var(--teal);font-weight:600>Thanks! We\'ll notify you when our newsletter launches.</p>'">
-                <input type="email" class="nl-input" placeholder="you@email.com" required>
+            <form class="nl-form" action="https://formspree.io/f/xbdapzke" method="POST" onsubmit="if(window.plausible)plausible('Newsletter Signup')">
+                <input type="email" name="email" class="nl-input" placeholder="you@email.com" required>
+                <input type="hidden" name="_subject" value="New JobsByCulture subscriber">
+                <input type="hidden" name="_next" value="https://jobsbyculture.com/?subscribed=1">
                 <button type="submit" class="nl-submit">Subscribe →</button>
             </form>
         </div>
@@ -1936,6 +1938,13 @@ document.querySelectorAll('.co-card').forEach(card => {
         window.location.href = '/companies/' + slug;
     });
 });
+
+// Show success message if redirected back after Formspree submission
+if (new URLSearchParams(window.location.search).get('subscribed')) {
+    var nlForm = document.querySelector('.nl-form');
+    if (nlForm) nlForm.innerHTML = '<p style="color:var(--teal);font-weight:600;font-size:16px">You\'re in! We\'ll send culture-matched jobs to your inbox weekly.</p>';
+    history.replaceState(null, '', '/');
+}
 </script>
 </body>
 </html>
