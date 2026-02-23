@@ -1605,6 +1605,27 @@ document.getElementById('searchInput').addEventListener('input', (e) => {
     renderJobs();
 });
 
+// ═══ DYNAMIC SEO ═══
+function updatePageMeta(count) {
+    var parts = [];
+    if (activeLocations.size > 0) parts.push(Array.from(activeLocations).join(', '));
+    if (activeValues.size > 0) {
+        var names = Array.from(activeValues).map(function(v) { return VALUES[v] ? VALUES[v].name : v; });
+        parts.push(names.join(', '));
+    }
+    if (searchQuery) parts.push(searchQuery);
+    if (parts.length === 0) {
+        document.title = 'AI & Tech Jobs Filtered by Culture | JobsByCulture';
+        var desc = 'Browse 1,044 AI & tech jobs filtered by culture values like async-first, work-life balance, remote-friendly, and ethical AI.';
+    } else {
+        var label = parts.join(' · ');
+        document.title = count + ' ' + label + ' Jobs | JobsByCulture';
+        var desc = 'Browse ' + count + ' ' + label + ' jobs filtered by culture values. Every job links directly to the original posting.';
+    }
+    var metaDesc = document.querySelector('meta[name="description"]');
+    if (metaDesc) metaDesc.setAttribute('content', desc);
+}
+
 // ═══ RENDER JOBS ═══
 function renderJobs() {
     let filtered = JOBS.filter(j => {
@@ -1639,6 +1660,9 @@ function renderJobs() {
     else if (activeValues.size > 0) filtered.sort((a,b) => matchScore(b.company) - matchScore(a.company));
 
     document.getElementById('resultsCount').innerHTML = `<b>${filtered.length}</b> jobs found${activeValues.size ? ` matching <b>${activeValues.size}</b> value${activeValues.size>1?'s':''}` : ''}`;
+
+    // Dynamic SEO: update title and meta description based on active filters
+    updatePageMeta(filtered.length);
 
     if (filtered.length === 0) {
         document.getElementById('jobsList').innerHTML = `<div class="no-results"><h3>No jobs match your filters</h3><p>Try removing some filters or broadening your search.</p></div>`;
