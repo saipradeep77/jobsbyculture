@@ -1660,6 +1660,14 @@ function toggleProfile(btn) {
         btn.classList.remove('open');
     }
 }
+
+document.querySelectorAll('.co-card').forEach(card => {
+    card.addEventListener('click', e => {
+        if (e.target.closest('a, button')) return;
+        const slug = card.dataset.company;
+        window.location.href = '/companies/' + slug;
+    });
+});
 </script>
 </body>
 </html>
