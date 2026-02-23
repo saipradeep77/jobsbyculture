@@ -1499,12 +1499,16 @@ function parseSalaryMid(s) {
 }
 
 function getLocation(loc) {
+    // Purely remote: starts with "Remote" (e.g. "Remote", "Remote, United States", "Remote — Texas")
+    if (/^Remote(\s|,|$)/.test(loc.trim())) return 'Remote';
+    // Remote with parenthetical region
     if (loc.includes('Remote (Global)') || loc.includes('Remote (EU') || loc.includes('Remote (US')) return 'Remote';
-    if (loc.includes('Remote')) return 'Hybrid / Remote Option';
+    // Hybrid: has Remote but also city names, or "Remote-Friendly"
+    if (loc.includes('Remote')) return 'Hybrid / Remote';
     if (loc.includes('India') || loc.includes('Bengaluru') || loc.includes('Bangalore') || loc.includes('Mumbai') || loc.includes('Hyderabad') || loc.includes('Gurgaon') || loc.includes('Delhi') || loc.includes('Pune') || loc.includes('Chennai')) return 'India';
     if (loc.includes('San Francisco') || loc.includes('NYC') || loc.includes('New York') || loc.includes('Seattle') || loc.includes('Cambridge') || loc.includes('Austin') || loc.includes('Chicago') || loc.includes('Los Angeles') || loc.includes(', CA') || loc.includes(', NY') || loc.includes(', WA') || loc.includes(', MA') || loc.includes(', TX')) return 'US On-site';
-    if (loc.includes('Paris') || loc.includes('London') || loc.includes('Dublin') || loc.includes('Berlin') || loc.includes('Amsterdam') || loc.includes('Munich') || loc.includes('Zurich')) return 'Europe';
-    if (loc.includes('Toronto') || loc.includes('Montreal') || loc.includes('Vancouver')) return 'Canada';
+    if (loc.includes('Paris') || loc.includes('London') || loc.includes('Dublin') || loc.includes('Berlin') || loc.includes('Amsterdam') || loc.includes('Munich') || loc.includes('Zurich') || loc.includes('Denmark')) return 'Europe';
+    if (loc.includes('Toronto') || loc.includes('Montreal') || loc.includes('Vancouver') || loc.includes('Canada')) return 'Canada';
     return 'Other';
 }
 
