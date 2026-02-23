@@ -1,5 +1,23 @@
 # Changelog
 
+## 2026-02-23 — Company Profile Pages
+
+### New: 12 Company Profile Pages (`/companies/{slug}`)
+- **Anthropic**, **Hugging Face**, **Databricks**, **Cohere**, **Mistral AI**, **HubSpot**, **Vercel**, **Stripe**, **Perplexity AI**, **Together AI**, **Cursor**, **Linear**
+- Each page includes: Glassdoor ratings grid (6 categories), employee review themes (pros/cons), engineering culture details (tech stack, open source), and live job listings with direct apply links
+- JSON-LD Organization schema on every page for rich search results
+- Full SEO meta tags (title, description, OG, Twitter card, canonical URL) unique per company
+- Responsive design matching the existing site aesthetic
+
+### index.html
+- Added "Full Profile →" link on each company card linking to `/companies/{slug}`
+
+### jobs.html
+- Added "Companies" link to navigation
+
+### sitemap.xml
+- Added 12 new company profile URLs (priority 0.8, weekly changefreq)
+
 ## 2026-02-22 — Clickable Cards, Real ATS Data, Emoji Refresh
 
 ### jobs.html
