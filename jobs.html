@@ -1778,8 +1778,64 @@ renderJobs();
 
         // Parse location into structured address
         const loc = j.location || '';
-        const locParts = loc.split(/[|,·]/).map(s => s.trim()).filter(Boolean);
+        const locParts = loc.split(/[|,;·\/]/).map(s => s.trim()).filter(Boolean);
         const primaryLoc = locParts[0] || loc;
+        const isRemote = /^Remote(\s|,|$)/.test(loc.trim()) || loc.includes('Remote (Global)') || loc.includes('Remote (EU') || loc.includes('Remote (US');
+        const hasRemote = loc.toLowerCase().includes('remote');
+
+        // Map location to country code and region
+        function parseAddress(locStr) {
+            var addr = { "@type": "PostalAddress" };
+            // US states
+            var usMatch = locStr.match(/,\s*(CA|NY|WA|MA|TX|NJ|OH|VA|NV|GA|PA|MO|IL|CO|SD|ND|OK|DC)\b/);
+            if (usMatch || /San Francisco|NYC|New York|Seattle|Austin|Chicago|Los Angeles|Sunnyvale|Bellevue|Boston|Palo Alto|Washington, D/.test(locStr)) {
+                var city = locStr.split(/[,|\/;]/)[0].trim().replace(/^(Office|Hybrid|Remote-Friendly[^|]*\|)\s*/i, '');
+                addr.addressLocality = city;
+                addr.addressRegion = usMatch ? usMatch[1] : '';
+                addr.addressCountry = 'US';
+            } else if (/Paris/.test(locStr)) {
+                addr.addressLocality = 'Paris'; addr.addressCountry = 'FR';
+            } else if (/London/.test(locStr)) {
+                addr.addressLocality = 'London'; addr.addressCountry = 'GB';
+            } else if (/Dublin/.test(locStr)) {
+                addr.addressLocality = 'Dublin'; addr.addressCountry = 'IE';
+            } else if (/Berlin|Munich/.test(locStr)) {
+                addr.addressLocality = locStr.match(/Berlin|Munich/)[0]; addr.addressCountry = 'DE';
+            } else if (/Amsterdam/.test(locStr)) {
+                addr.addressLocality = 'Amsterdam'; addr.addressCountry = 'NL';
+            } else if (/Zurich|Zürich|Switzerland/.test(locStr)) {
+                addr.addressLocality = 'Zurich'; addr.addressCountry = 'CH';
+            } else if (/Toronto|Montreal|Vancouver|Ottawa|Canada/.test(locStr)) {
+                addr.addressLocality = locStr.match(/Toronto|Montreal|Vancouver|Ottawa/)?.[0] || ''; addr.addressCountry = 'CA';
+            } else if (/Bengaluru|Bangalore|Mumbai|Hyderabad|Delhi|Pune|Chennai|India/.test(locStr)) {
+                addr.addressLocality = locStr.match(/Bengaluru|Bangalore|Mumbai|Hyderabad|Delhi|Pune|Chennai/)?.[0] || ''; addr.addressCountry = 'IN';
+            } else if (/Singapore/.test(locStr)) {
+                addr.addressLocality = 'Singapore'; addr.addressCountry = 'SG';
+            } else if (/Tokyo|Japan/.test(locStr)) {
+                addr.addressLocality = 'Tokyo'; addr.addressCountry = 'JP';
+            } else if (/Mexico/.test(locStr)) {
+                addr.addressLocality = 'Mexico City'; addr.addressCountry = 'MX';
+            } else if (/Belgrade/.test(locStr)) {
+                addr.addressLocality = 'Belgrade'; addr.addressCountry = 'RS';
+            } else if (/Warsaw/.test(locStr)) {
+                addr.addressLocality = 'Warsaw'; addr.addressCountry = 'PL';
+            } else if (/Doha|Qatar/.test(locStr)) {
+                addr.addressLocality = 'Doha'; addr.addressCountry = 'QA';
+            } else if (/Riyadh|Saudi/.test(locStr)) {
+                addr.addressLocality = 'Riyadh'; addr.addressCountry = 'SA';
+            } else if (/United Kingdom|, UK/.test(locStr)) {
+                addr.addressCountry = 'GB';
+            } else if (/United States|, US/.test(locStr)) {
+                addr.addressCountry = 'US';
+            } else if (/Philippines/.test(locStr)) {
+                addr.addressCountry = 'PH';
+            } else if (/Poland|, PL/.test(locStr)) {
+                addr.addressCountry = 'PL';
+            } else {
+                addr.addressLocality = primaryLoc;
+            }
+            return addr;
+        }
 
         const schema = {
             "@context": "https://schema.org",
@@ -1794,17 +1850,49 @@ renderJobs();
                 "sameAs": comp.careers || "",
                 "logo": comp.logo || ""
             },
-            "jobLocation": {
-                "@type": "Place",
-                "address": {
-                    "@type": "PostalAddress",
-                    "addressLocality": primaryLoc
-                }
-            },
             "employmentType": "FULL_TIME",
             "directApply": false,
             "url": j.url
         };
+
+        // Job location (required for non-remote, recommended for all)
+        if (!isRemote) {
+            schema.jobLocation = {
+                "@type": "Place",
+                "address": parseAddress(loc)
+            };
+        }
+
+        // Remote jobs: applicantLocationRequirements (critical for Google)
+        if (isRemote) {
+            schema.jobLocationType = "TELECOMMUTE";
+            // Determine location requirement from the remote string
+            if (loc.includes('Canada') && loc.includes('United States')) {
+                schema.applicantLocationRequirements = [
+                    { "@type": "Country", "name": "US" },
+                    { "@type": "Country", "name": "CA" }
+                ];
+            } else if (loc.includes('United States') || loc.includes('(US')) {
+                schema.applicantLocationRequirements = { "@type": "Country", "name": "US" };
+            } else if (loc.includes('Canada')) {
+                schema.applicantLocationRequirements = { "@type": "Country", "name": "CA" };
+            } else if (loc.includes('India')) {
+                schema.applicantLocationRequirements = { "@type": "Country", "name": "IN" };
+            } else if (loc.includes('Poland')) {
+                schema.applicantLocationRequirements = { "@type": "Country", "name": "PL" };
+            } else if (loc.includes('(EU') || loc.includes('Europe')) {
+                schema.applicantLocationRequirements = { "@type": "Continent", "name": "Europe" };
+            } else {
+                // Fully remote / global
+                schema.applicantLocationRequirements = { "@type": "Country", "name": "US" };
+            }
+        } else if (hasRemote) {
+            // Hybrid roles: include both location and telecommute
+            schema.jobLocationType = "TELECOMMUTE";
+            schema.applicantLocationRequirements = { "@type": "Country", "name": "US" };
+        }
+
+        // Salary (when available)
         if (j.salary) {
             const nums = j.salary.match(/[\d,]+/g);
             if (nums && nums.length >= 2) {
@@ -1819,9 +1907,6 @@ renderJobs();
                     }
                 };
             }
-        }
-        if (loc.toLowerCase().includes('remote')) {
-            schema.jobLocationType = "TELECOMMUTE";
         }
         return schema;
     });
