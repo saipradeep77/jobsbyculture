@@ -1503,21 +1503,19 @@ function getLocation(loc) {
     // Fully remote (no specific office required)
     if (/^Remote(\s|,|$)/.test(loc) || loc === 'Remote') return 'Remote';
     if (loc.includes('Remote (Global)') || loc.includes('Remote (EU') || loc.includes('Remote (US')) return 'Remote';
-    // United States (on-site, hybrid, or remote-friendly with US office)
-    if (/San Francisco|NYC|New York|Seattle|Cambridge|Austin|Chicago|Los Angeles|Sunnyvale|Bellevue|Livingston|Washington, D|Boston|Palo Alto|San Diego|Manhattan|Philadelphia|Dallas|Richmond|Detroit|Plano|Cincinnati|Colorado Springs|Lowell|Reno|Aberdeen|Dalton|Denton|Lubbock|Muskogee|Ellendale|Afton|Sandusky|Lebanon|Quincy|Clarksville|Las Vegas|Atlanta|Central US|Northeast US|Multiple U\.S\.|United States|SF \/ |, CA|, NY|, WA|, MA|, TX|, NJ|, OH|, VA|, NV|, GA|, PA|, MO|, IL|, CO|, SD|, ND|, OK/.test(loc) || loc === 'US') return 'United States';
-    // Europe & UK
-    if (/Paris|London|Dublin|Berlin|Amsterdam|Munich|Zurich|Zürich|Denmark|Barcelona|Madrid|Warsaw|Switzerland|Germany|United Kingdom|Belgrade|Europe|, UK|, IE|, PL|, CH/.test(loc)) return 'Europe & UK';
-    // Canada
-    if (/Toronto|Montreal|Vancouver|Canada|Ottawa/.test(loc)) return 'Canada';
-    // India
-    if (/India|Bengaluru|Bangalore|Mumbai|Hyderabad|Gurgaon|Delhi|Pune|Chennai/.test(loc)) return 'India';
-    // Asia Pacific
-    if (/Singapore|Japan|Tokyo|Korea|Taiwan|Philippines/.test(loc)) return 'Asia Pacific';
-    // Latin America
-    if (/Mexico|Brazil|Sao Paulo|São Paulo|Argentina|Uruguay|Costa Rica/.test(loc)) return 'Latin America';
-    // Middle East
-    if (/Doha|Qatar|Riyadh|Saudi|Dubai|UAE|Middle East|Casablanca/.test(loc)) return 'Middle East';
-    return 'Other';
+    // For multi-location strings, classify by the FIRST segment
+    var firstSeg = loc.split(/[;|]/).map(function(s){ return s.trim(); }).filter(function(s){ return s && !/^Remote/i.test(s); })[0] || loc;
+    function classifyOne(s) {
+        if (/San Francisco|NYC|New York|Seattle|Cambridge|Austin|Chicago|Los Angeles|Sunnyvale|Bellevue|Livingston|Washington, D|Boston|Palo Alto|San Diego|Manhattan|Philadelphia|Dallas|Richmond|Detroit|Plano|Cincinnati|Colorado Springs|Lowell|Reno|Aberdeen|Dalton|Denton|Lubbock|Muskogee|Ellendale|Afton|Sandusky|Lebanon|Quincy|Clarksville|Las Vegas|Atlanta|Central US|Northeast US|Multiple U\.S\.|United States|SF \/ |, CA|, NY|, WA|, MA|, TX|, NJ|, OH|, VA|, NV|, GA|, PA|, MO|, IL|, CO|, SD|, ND|, OK/.test(s) || s === 'US') return 'United States';
+        if (/Paris|London|Dublin|Berlin|Amsterdam|Munich|Zurich|Zürich|Denmark|Barcelona|Madrid|Warsaw|Switzerland|Germany|United Kingdom|Belgrade|Europe|, UK|, IE|, PL|, CH/.test(s)) return 'Europe & UK';
+        if (/Toronto|Montreal|Vancouver|Canada|Ottawa|, CAN/.test(s)) return 'Canada';
+        if (/India|Bengaluru|Bangalore|Mumbai|Hyderabad|Gurgaon|Delhi|Pune|Chennai/.test(s)) return 'India';
+        if (/Singapore|Japan|Tokyo|Korea|Taiwan|Philippines/.test(s)) return 'Asia Pacific';
+        if (/Mexico|Brazil|Sao Paulo|São Paulo|Argentina|Uruguay|Costa Rica/.test(s)) return 'Latin America';
+        if (/Doha|Qatar|Riyadh|Saudi|Dubai|UAE|Middle East|Casablanca/.test(s)) return 'Middle East';
+        return null;
+    }
+    return classifyOne(firstSeg) || classifyOne(loc) || 'Other';
 }
 
 function getCompanySize(companyId) {
@@ -1785,54 +1783,81 @@ renderJobs();
 
         // Map location to country code and region
         function parseAddress(locStr) {
+            // For multi-location strings, use the first non-remote segment
+            var seg = locStr.split(/[;|]/).map(function(s){ return s.trim(); }).filter(function(s){ return s && !/^Remote/i.test(s); })[0] || locStr;
+            seg = seg.replace(/^(Office,?\s*|Hybrid\s*[—-]?\s*)/i, '').trim();
             var addr = { "@type": "PostalAddress" };
             // US states
-            var usMatch = locStr.match(/,\s*(CA|NY|WA|MA|TX|NJ|OH|VA|NV|GA|PA|MO|IL|CO|SD|ND|OK|DC)\b/);
-            if (usMatch || /San Francisco|NYC|New York|Seattle|Austin|Chicago|Los Angeles|Sunnyvale|Bellevue|Boston|Palo Alto|Washington, D/.test(locStr)) {
-                var city = locStr.split(/[,|\/;]/)[0].trim().replace(/^(Office|Hybrid|Remote-Friendly[^|]*\|)\s*/i, '');
+            var usMatch = seg.match(/,\s*(CA|NY|WA|MA|TX|NJ|OH|VA|NV|GA|PA|MO|IL|CO|SD|ND|OK|DC)\b/);
+            if (usMatch || /San Francisco|NYC|New York|Seattle|Austin|Chicago|Los Angeles|Sunnyvale|Bellevue|Boston|Palo Alto|Washington, D|Manhattan|Philadelphia|Dallas|Richmond|Detroit|Plano|Cincinnati|Colorado Springs|Lowell|Reno|Aberdeen|Dalton|Denton|Lubbock|Muskogee|Ellendale|Afton|Sandusky|Lebanon|Quincy|Clarksville|Las Vegas|Atlanta/.test(seg) || /^SF\b/.test(seg)) {
+                var city = seg.split(/[,\/]/)[0].trim();
                 addr.addressLocality = city;
                 addr.addressRegion = usMatch ? usMatch[1] : '';
                 addr.addressCountry = 'US';
-            } else if (/Paris/.test(locStr)) {
-                addr.addressLocality = 'Paris'; addr.addressCountry = 'FR';
-            } else if (/London/.test(locStr)) {
-                addr.addressLocality = 'London'; addr.addressCountry = 'GB';
-            } else if (/Dublin/.test(locStr)) {
-                addr.addressLocality = 'Dublin'; addr.addressCountry = 'IE';
-            } else if (/Berlin|Munich/.test(locStr)) {
-                addr.addressLocality = locStr.match(/Berlin|Munich/)[0]; addr.addressCountry = 'DE';
-            } else if (/Amsterdam/.test(locStr)) {
-                addr.addressLocality = 'Amsterdam'; addr.addressCountry = 'NL';
-            } else if (/Zurich|Zürich|Switzerland/.test(locStr)) {
-                addr.addressLocality = 'Zurich'; addr.addressCountry = 'CH';
-            } else if (/Toronto|Montreal|Vancouver|Ottawa|Canada/.test(locStr)) {
-                addr.addressLocality = locStr.match(/Toronto|Montreal|Vancouver|Ottawa/)?.[0] || ''; addr.addressCountry = 'CA';
-            } else if (/Bengaluru|Bangalore|Mumbai|Hyderabad|Delhi|Pune|Chennai|India/.test(locStr)) {
-                addr.addressLocality = locStr.match(/Bengaluru|Bangalore|Mumbai|Hyderabad|Delhi|Pune|Chennai/)?.[0] || ''; addr.addressCountry = 'IN';
-            } else if (/Singapore/.test(locStr)) {
-                addr.addressLocality = 'Singapore'; addr.addressCountry = 'SG';
-            } else if (/Tokyo|Japan/.test(locStr)) {
-                addr.addressLocality = 'Tokyo'; addr.addressCountry = 'JP';
-            } else if (/Mexico/.test(locStr)) {
-                addr.addressLocality = 'Mexico City'; addr.addressCountry = 'MX';
-            } else if (/Belgrade/.test(locStr)) {
-                addr.addressLocality = 'Belgrade'; addr.addressCountry = 'RS';
-            } else if (/Warsaw/.test(locStr)) {
-                addr.addressLocality = 'Warsaw'; addr.addressCountry = 'PL';
-            } else if (/Doha|Qatar/.test(locStr)) {
-                addr.addressLocality = 'Doha'; addr.addressCountry = 'QA';
-            } else if (/Riyadh|Saudi/.test(locStr)) {
-                addr.addressLocality = 'Riyadh'; addr.addressCountry = 'SA';
-            } else if (/United Kingdom|, UK/.test(locStr)) {
-                addr.addressCountry = 'GB';
-            } else if (/United States|, US/.test(locStr)) {
+            } else if (/Central US|Northeast US|Multiple U\.S\./.test(seg) || seg === 'US' || /^United States/.test(seg)) {
                 addr.addressCountry = 'US';
-            } else if (/Philippines/.test(locStr)) {
-                addr.addressCountry = 'PH';
-            } else if (/Poland|, PL/.test(locStr)) {
+            } else if (/Paris/.test(seg)) {
+                addr.addressLocality = 'Paris'; addr.addressCountry = 'FR';
+            } else if (/London/.test(seg)) {
+                addr.addressLocality = 'London'; addr.addressCountry = 'GB';
+            } else if (/Dublin/.test(seg)) {
+                addr.addressLocality = 'Dublin'; addr.addressCountry = 'IE';
+            } else if (/Berlin|Munich/.test(seg)) {
+                addr.addressLocality = seg.match(/Berlin|Munich/)[0]; addr.addressCountry = 'DE';
+            } else if (/Amsterdam/.test(seg)) {
+                addr.addressLocality = 'Amsterdam'; addr.addressCountry = 'NL';
+            } else if (/Zurich|Zürich|Switzerland/.test(seg)) {
+                addr.addressLocality = 'Zurich'; addr.addressCountry = 'CH';
+            } else if (/Barcelona|Madrid/.test(seg)) {
+                addr.addressLocality = seg.match(/Barcelona|Madrid/)[0]; addr.addressCountry = 'ES';
+            } else if (/Denmark/.test(seg)) {
+                addr.addressCountry = 'DK';
+            } else if (/Belgrade/.test(seg)) {
+                addr.addressLocality = 'Belgrade'; addr.addressCountry = 'RS';
+            } else if (/Warsaw/.test(seg)) {
+                addr.addressLocality = 'Warsaw'; addr.addressCountry = 'PL';
+            } else if (/United Kingdom|, UK/.test(seg)) {
+                addr.addressCountry = 'GB';
+            } else if (/Poland|, PL/.test(seg)) {
                 addr.addressCountry = 'PL';
+            } else if (/Europe/.test(seg)) {
+                addr.addressCountry = 'DE';
+            } else if (/Toronto|Montreal|Vancouver|Ottawa|Canada|, CAN/.test(seg)) {
+                addr.addressLocality = (seg.match(/Toronto|Montreal|Vancouver|Ottawa/) || [''])[0]; addr.addressCountry = 'CA';
+            } else if (/Bengaluru|Bangalore|Mumbai|Hyderabad|Delhi|Pune|Chennai|India/.test(seg)) {
+                addr.addressLocality = (seg.match(/Bengaluru|Bangalore|Mumbai|Hyderabad|Delhi|Pune|Chennai/) || [''])[0]; addr.addressCountry = 'IN';
+            } else if (/Singapore/.test(seg)) {
+                addr.addressLocality = 'Singapore'; addr.addressCountry = 'SG';
+            } else if (/Tokyo|Japan/.test(seg)) {
+                addr.addressLocality = 'Tokyo'; addr.addressCountry = 'JP';
+            } else if (/Korea/.test(seg)) {
+                addr.addressCountry = 'KR';
+            } else if (/Taiwan/.test(seg)) {
+                addr.addressCountry = 'TW';
+            } else if (/Philippines/.test(seg)) {
+                addr.addressCountry = 'PH';
+            } else if (/Mexico/.test(seg)) {
+                addr.addressLocality = 'Mexico City'; addr.addressCountry = 'MX';
+            } else if (/Sao Paulo|São Paulo|Brazil/.test(seg)) {
+                addr.addressLocality = 'São Paulo'; addr.addressCountry = 'BR';
+            } else if (/Argentina/.test(seg)) {
+                addr.addressCountry = 'AR';
+            } else if (/Uruguay/.test(seg)) {
+                addr.addressCountry = 'UY';
+            } else if (/Costa Rica/.test(seg)) {
+                addr.addressCountry = 'CR';
+            } else if (/Doha|Qatar/.test(seg)) {
+                addr.addressLocality = 'Doha'; addr.addressCountry = 'QA';
+            } else if (/Riyadh|Saudi/.test(seg)) {
+                addr.addressLocality = 'Riyadh'; addr.addressCountry = 'SA';
+            } else if (/Dubai|UAE/.test(seg)) {
+                addr.addressLocality = 'Dubai'; addr.addressCountry = 'AE';
+            } else if (/Casablanca/.test(seg)) {
+                addr.addressLocality = 'Casablanca'; addr.addressCountry = 'MA';
+            } else if (/Middle East/.test(seg)) {
+                addr.addressCountry = 'QA';
             } else {
-                addr.addressLocality = primaryLoc;
+                addr.addressLocality = seg.split(/[,\/]/)[0].trim();
             }
             return addr;
         }
@@ -1889,7 +1914,8 @@ renderJobs();
         } else if (hasRemote) {
             // Hybrid roles: include both location and telecommute
             schema.jobLocationType = "TELECOMMUTE";
-            schema.applicantLocationRequirements = { "@type": "Country", "name": "US" };
+            var hybridAddr = parseAddress(loc);
+            schema.applicantLocationRequirements = { "@type": "Country", "name": hybridAddr.addressCountry || "US" };
         }
 
         // Salary (when available)
