@@ -1,5 +1,42 @@
 # Changelog
 
+## 2026-02-25 — Location Fixes, OG Image, Structured Data
+
+### jobs.html
+- **Fixed multi-location classification**: Jobs with multiple cities (e.g., "London, UK; New York City, NY") now classify by the first listed city instead of whichever regex matched first. Fixes 5 jobs that were in the wrong location bucket.
+- **Fixed Google JobPosting structured data**: Added `applicantLocationRequirements` and `jobLocationType` for remote/hybrid jobs (critical GSC error). Added `parseAddress()` with proper `addressCountry`, `addressRegion`, `addressLocality` for all locations. Added `baseSalary` extraction when salary data available.
+- **Added 16 missing country codes**: Spain (ES), Denmark (DK), South Korea (KR), Taiwan (TW), Brazil (BR), Argentina (AR), Uruguay (UY), Costa Rica (CR), UAE (AE), Morocco (MA), and generic US/Europe patterns.
+- **Fixed hybrid job country codes**: Hybrid roles now use the actual office country instead of hardcoded US.
+
+### index.html
+- **Fixed hero metric**: "15 companies profiled" → "17 companies profiled"
+- **Updated OG image**: Replaced og-image.png with new homepage screenshot
+
+### All pages (19 files)
+- Updated `og:image:width` (1200 → 2514) and `og:image:height` (630 → 1304) to match new image
+- Added missing `twitter:image` meta tag on Cohere, HubSpot, and Mistral profile pages
+
+## 2026-02-24 — New Companies, Newsletter, Location Redesign
+
+### New: 5 Company Additions (979 → 1,044 jobs, 12 → 17 companies)
+- **Scale AI** — 171 jobs, profile page, Glassdoor 3.5
+- **CoreWeave** — 279 jobs, profile page, Glassdoor 3.6
+- **Runway** — 30 jobs, profile page, Glassdoor 4.5
+- **Vast AI** — 10 jobs, profile page, Glassdoor 5.0
+- **Apollo.io** — 55 jobs, profile page, Glassdoor 4.0
+
+### jobs.html
+- **Redesigned location filters**: Replaced "US On-site / Hybrid / Other" with 8 clean regional categories: Remote, United States, Europe & UK, Canada, India, Asia Pacific, Latin America, Middle East
+- **Dynamic SEO meta tags**: `updatePageMeta()` updates `<title>` and meta description based on active filters
+- **Fixed Remote filter**: Was only showing 7 jobs; now correctly matches 82 Remote jobs using `/^Remote(\s|,|$)/` regex
+
+### index.html
+- **Newsletter form**: Wired up to Formspree (AJAX submission, inline success message, no redirect)
+- Added company cards for Scale AI, CoreWeave, Runway, Vast AI, Apollo.io
+
+### sitemap.xml
+- Added 8 location filter URLs, 17 company filter URLs, 5 company profile URLs (total: 62 URLs)
+
 ## 2026-02-23 — Company Profile Pages
 
 ### New: 12 Company Profile Pages (`/companies/{slug}`)
