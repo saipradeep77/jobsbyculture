@@ -217,8 +217,36 @@
         .jt.match-rose { background: var(--rose); border-color: var(--rose); color: #fff; }
 
         .job-bottom { display: flex; align-items: center; justify-content: space-between; padding-top: 12px; border-top: 1px solid var(--border); }
+        .job-bottom-left { display: flex; align-items: center; gap: 12px; }
         .job-salary { font-family: var(--font-mono); font-size: 13px; color: var(--teal); font-weight: 500; }
         .job-posted { font-size: 12px; color: var(--text-3); }
+        .culture-peek-btn {
+            display: inline-flex; align-items: center; gap: 4px;
+            font-size: 12px; font-weight: 600; color: var(--accent); cursor: pointer;
+            padding: 4px 10px; border-radius: var(--radius-full);
+            border: 1px solid var(--accent-border); background: var(--accent-bg);
+            transition: all 0.15s;
+        }
+        .culture-peek-btn:hover { background: rgba(232,89,12,0.12); border-color: var(--accent); }
+        .culture-peek-btn.open { background: var(--accent); color: #fff; border-color: var(--accent); }
+        .culture-peek {
+            display: none; padding: 16px 0 4px; margin-top: 12px;
+            border-top: 1px solid var(--border);
+        }
+        .culture-peek.open { display: block; }
+        .culture-peek-row { display: flex; align-items: center; gap: 8px; margin-bottom: 8px; font-size: 12px; color: var(--text-2); }
+        .culture-peek-row b { color: var(--text); font-weight: 600; }
+        .culture-peek-stars { font-family: var(--font-mono); font-weight: 600; }
+        .culture-peek-stars.high { color: var(--teal); }
+        .culture-peek-stars.mid { color: #d97706; }
+        .culture-peek-stars.low { color: var(--rose); }
+        .culture-peek-values { display: flex; flex-wrap: wrap; gap: 4px; margin-bottom: 10px; }
+        .culture-peek-values .jt { font-size: 10.5px; padding: 3px 8px; }
+        .culture-peek-profile {
+            font-size: 12px; font-weight: 600; color: var(--accent);
+            cursor: pointer; text-decoration: none;
+        }
+        .culture-peek-profile:hover { text-decoration: underline; }
         .job-apply {
             display: inline-flex; align-items: center; gap: 5px;
             padding: 8px 18px; border-radius: var(--radius-sm);
@@ -1774,6 +1802,15 @@ function clearAll() {
     document.getElementById('filterSections').classList.remove('open');
 }
 
+// ═══ CULTURE PEEK (expand culture info in job card) ═══
+function toggleCulturePeek(btn) {
+    var card = btn.closest('.job');
+    var peek = card.querySelector('.culture-peek');
+    var isOpen = peek.classList.toggle('open');
+    btn.classList.toggle('open', isOpen);
+    btn.textContent = isOpen ? '🏢 Culture Peek ↑' : '🏢 Culture Peek ↓';
+}
+
 // ═══ MOBILE FILTER COLLAPSE ═══
 function toggleMobileFilters() {
     document.getElementById('filterSections').classList.toggle('open');
@@ -1921,10 +1958,22 @@ function renderJobs() {
             </div>
             <div class="job-tags">${tags}</div>
             <div class="job-bottom">
-                <div>
+                <div class="job-bottom-left">
                     ${j.salary ? `<div class="job-salary">${j.salary}</div>` : ''}
+                    <span class="culture-peek-btn" onclick="event.preventDefault();event.stopPropagation();toggleCulturePeek(this)">🏢 Culture Peek ↓</span>
                 </div>
                 <span class="job-apply">Apply →</span>
+            </div>
+            <div class="culture-peek">
+                <div class="culture-peek-row">
+                    <b>${c.name}</b> · ${c.size}
+                </div>
+                <div class="culture-peek-row">
+                    ⭐ Glassdoor: <span class="culture-peek-stars ${c.glassdoor >= 4.0 ? 'high' : c.glassdoor >= 3.5 ? 'mid' : 'low'}">${c.glassdoor}/5</span>
+                    &nbsp;·&nbsp; Work-Life Balance: <span class="culture-peek-stars ${c.wlb_score >= 4.0 ? 'high' : c.wlb_score >= 3.5 ? 'mid' : 'low'}">${c.wlb_score}/5</span>
+                </div>
+                <div class="culture-peek-values">${c.values.map(v => { const val = VALUES[v]; return val ? '<span class="jt jt-'+val.color+'">'+val.ico+' '+val.name+'</span>' : ''; }).join('')}</div>
+                <span class="culture-peek-profile" onclick="event.preventDefault();event.stopPropagation();window.location.href='/companies/${j.company}'">View Full Culture Profile →</span>
             </div>
         </a>`;
     }).join('');
