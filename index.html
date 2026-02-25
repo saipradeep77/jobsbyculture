@@ -522,7 +522,7 @@
             Launching with AI & tech roles — more categories coming
         </div>
         <div class="hero-cta-line">
-            I'm a
+            I'm <span id="heroArticle">a</span>
             <span class="hero-dd" id="heroRoleDD">
                 <span class="hero-dd-trigger" onclick="toggleRoleDD()"><span id="heroRoleText">Software Engineer</span><span class="arrow">&#9662;</span></span>
                 <div class="hero-dd-menu" id="heroRoleMenu"></div>
@@ -1734,9 +1734,9 @@ const HERO_ROLES = [
     { label: 'Data Scientist',    slug: 'data', ico: '📊' },
     { label: 'Product Manager',   slug: 'product', ico: '📋' },
     { label: 'Designer',          slug: 'design', ico: '🎨' },
-    { label: 'Sales / GTM',       slug: 'sales', ico: '💼' },
-    { label: 'Marketing',         slug: 'marketing', ico: '📣' },
-    { label: 'Operations',        slug: 'operations', ico: '⚙️' },
+    { label: 'Sales Professional', slug: 'sales', ico: '💼' },
+    { label: 'Marketer',          slug: 'marketing', ico: '📣' },
+    { label: 'Ops Specialist',    slug: 'operations', ico: '⚙️' },
 ];
 
 const HERO_VALUES = [
@@ -1805,6 +1805,10 @@ function updateHeroCount() {
     document.getElementById('heroCount').textContent = n.toLocaleString();
 }
 
+function updateArticle(label) {
+    document.getElementById('heroArticle').textContent = /^[aeiou]/i.test(label) ? 'an' : 'a';
+}
+
 // Build role dropdown
 function buildRoleDD() {
     document.getElementById('heroRoleMenu').innerHTML = HERO_ROLES.map(r =>
@@ -1822,6 +1826,7 @@ function pickRole(slug) {
     heroRoleSlug = slug;
     var r = HERO_ROLES.find(function(x){ return x.slug === slug; });
     document.getElementById('heroRoleText').textContent = r.label;
+    updateArticle(r.label);
     document.getElementById('heroRoleMenu').classList.remove('open');
     document.querySelectorAll('#heroRoleMenu .hero-dd-opt').forEach(function(el) {
         el.classList.toggle('active', el.dataset.slug === slug);
@@ -1861,7 +1866,7 @@ document.addEventListener('click', function(e) {
 });
 
 // Typewriter — cycles role text only
-var roleCycle = ['Software Engineer', 'ML / AI Researcher', 'Product Manager', 'Data Scientist', 'Designer'];
+var roleCycle = ['Software Engineer', 'ML / AI Researcher', 'Product Manager', 'Data Scientist', 'Designer', 'Sales Professional', 'Marketer', 'Ops Specialist'];
 
 function twErase(el, text, cb) {
     var i = text.length;
@@ -1878,6 +1883,7 @@ function twRun() {
     var idx = (roleCycle.indexOf(el.textContent) + 1) % roleCycle.length;
     var slug = HERO_ROLES[idx] ? HERO_ROLES[idx].slug : 'engineering';
     twErase(el, el.textContent, function() {
+        updateArticle(roleCycle[idx]);
         twType(el, roleCycle[idx], function() {
             heroRoleSlug = slug;
             document.querySelectorAll('#heroRoleMenu .hero-dd-opt').forEach(function(b) { b.classList.toggle('active', b.dataset.slug === slug); });
