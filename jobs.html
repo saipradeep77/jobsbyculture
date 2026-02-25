@@ -230,33 +230,68 @@
         .culture-peek-btn:hover { background: rgba(232,89,12,0.12); border-color: var(--accent); }
         .culture-peek-btn.open { background: var(--accent); color: #fff; border-color: var(--accent); }
         .culture-peek {
-            display: none; padding: 16px 0 4px; margin-top: 12px;
-            border-top: 1px solid var(--border);
+            display: none; margin-top: 14px; padding: 18px;
+            background: var(--bg); border: 1px solid var(--border);
+            border-radius: var(--radius);
         }
         .culture-peek.open { display: block; }
-        .culture-peek-summary {
-            font-size: 13px; color: var(--text-2); line-height: 1.6;
+        /* Overall score badge */
+        .cp-overall {
+            display: flex; align-items: center; gap: 14px;
+            margin-bottom: 16px; padding-bottom: 14px; border-bottom: 1px solid var(--border);
+        }
+        .cp-overall-num {
+            width: 48px; height: 48px; border-radius: var(--radius-sm);
+            display: flex; align-items: center; justify-content: center;
+            font-family: var(--font-mono); font-size: 20px; font-weight: 600;
+            flex-shrink: 0;
+        }
+        .cp-overall-num.high { background: var(--teal-bg); color: var(--teal); border: 1px solid var(--teal-border); }
+        .cp-overall-num.mid { background: rgba(217,119,6,0.06); color: #d97706; border: 1px solid rgba(217,119,6,0.2); }
+        .cp-overall-num.low { background: var(--rose-bg); color: var(--rose); border: 1px solid var(--rose-border); }
+        .cp-overall-info { flex: 1; }
+        .cp-overall-title { font-size: 14px; font-weight: 600; color: var(--text); }
+        .cp-overall-sub { font-size: 12px; color: var(--text-3); }
+        /* Rating items grid (mirroring company pages) */
+        .cp-ratings {
+            display: grid; grid-template-columns: 1fr 1fr; gap: 10px;
+            margin-bottom: 16px;
+        }
+        .cp-rating-item {
+            background: var(--bg-raised); border: 1px solid var(--border);
+            border-radius: var(--radius-sm); padding: 12px 14px;
+        }
+        .cp-rating-head {
+            display: flex; justify-content: space-between; align-items: center;
+            margin-bottom: 8px;
+        }
+        .cp-rating-label { font-size: 12px; font-weight: 500; color: var(--text-2); }
+        .cp-rating-val { font-family: var(--font-mono); font-size: 14px; font-weight: 600; }
+        .cp-rating-val.high { color: var(--teal); }
+        .cp-rating-val.mid { color: #d97706; }
+        .cp-rating-val.low { color: var(--rose); }
+        .cp-rating-bar { height: 5px; background: var(--bg-hover); border-radius: 3px; overflow: hidden; }
+        .cp-rating-fill { height: 100%; border-radius: 3px; transition: width 0.5s ease; }
+        .cp-rating-fill.high { background: var(--teal); }
+        .cp-rating-fill.mid { background: #d97706; }
+        .cp-rating-fill.low { background: var(--rose); }
+        /* Summary text */
+        .cp-summary {
+            font-size: 13px; color: var(--text-2); line-height: 1.65;
             margin-bottom: 14px; font-style: italic;
         }
-        .culture-peek-scores { display: flex; gap: 20px; margin-bottom: 14px; }
-        .cp-score { flex: 1; }
-        .cp-score-label { font-size: 11px; color: var(--text-3); margin-bottom: 4px; display: flex; justify-content: space-between; }
-        .cp-score-val { font-family: var(--font-mono); font-weight: 600; }
-        .cp-score-val.high { color: var(--teal); }
-        .cp-score-val.mid { color: #d97706; }
-        .cp-score-val.low { color: var(--rose); }
-        .cp-bar { height: 6px; background: var(--bg-hover); border-radius: 3px; overflow: hidden; }
-        .cp-bar-fill { height: 100%; border-radius: 3px; transition: width 0.4s ease; }
-        .cp-bar-fill.high { background: var(--teal); }
-        .cp-bar-fill.mid { background: #f59e0b; }
-        .cp-bar-fill.low { background: var(--rose); }
-        .culture-peek-footer { display: flex; align-items: center; justify-content: space-between; }
-        .cp-size { font-size: 12px; color: var(--text-3); }
-        .culture-peek-profile {
+        /* Footer with size + profile link */
+        .cp-peek-footer { display: flex; align-items: center; justify-content: space-between; }
+        .cp-peek-size { font-size: 12px; color: var(--text-3); display: flex; align-items: center; gap: 4px; }
+        .cp-peek-link {
+            display: inline-flex; align-items: center; gap: 4px;
             font-size: 12px; font-weight: 600; color: var(--accent);
             cursor: pointer; text-decoration: none;
+            padding: 6px 14px; border-radius: var(--radius-full);
+            border: 1px solid var(--accent-border); background: var(--accent-bg);
+            transition: all 0.15s;
         }
-        .culture-peek-profile:hover { text-decoration: underline; }
+        .cp-peek-link:hover { background: rgba(232,89,12,0.12); border-color: var(--accent); }
         .job-apply {
             display: inline-flex; align-items: center; gap: 5px;
             padding: 8px 18px; border-radius: var(--radius-sm);
@@ -2010,20 +2045,33 @@ function renderJobs() {
                 <span class="job-apply">Apply →</span>
             </div>
             <div class="culture-peek">
-                <div class="culture-peek-summary">${getCultureSummary(j.company)}</div>
-                <div class="culture-peek-scores">
-                    <div class="cp-score">
-                        <div class="cp-score-label">Glassdoor Rating <span class="cp-score-val ${c.glassdoor >= 4.0 ? 'high' : c.glassdoor >= 3.5 ? 'mid' : 'low'}">${c.glassdoor}/5</span></div>
-                        <div class="cp-bar"><div class="cp-bar-fill ${c.glassdoor >= 4.0 ? 'high' : c.glassdoor >= 3.5 ? 'mid' : 'low'}" style="width:${(c.glassdoor/5)*100}%"></div></div>
-                    </div>
-                    <div class="cp-score">
-                        <div class="cp-score-label">Work-Life Balance <span class="cp-score-val ${c.wlb_score >= 4.0 ? 'high' : c.wlb_score >= 3.5 ? 'mid' : 'low'}">${c.wlb_score}/5</span></div>
-                        <div class="cp-bar"><div class="cp-bar-fill ${c.wlb_score >= 4.0 ? 'high' : c.wlb_score >= 3.5 ? 'mid' : 'low'}" style="width:${(c.wlb_score/5)*100}%"></div></div>
+                <div class="cp-overall">
+                    <div class="cp-overall-num ${c.glassdoor >= 4.0 ? 'high' : c.glassdoor >= 3.5 ? 'mid' : 'low'}">${c.glassdoor}</div>
+                    <div class="cp-overall-info">
+                        <div class="cp-overall-title">${c.name} — Overall Glassdoor</div>
+                        <div class="cp-overall-sub">${c.size} · Based on employee reviews</div>
                     </div>
                 </div>
-                <div class="culture-peek-footer">
-                    <span class="cp-size">👥 ${c.size}</span>
-                    <span class="culture-peek-profile" onclick="event.preventDefault();event.stopPropagation();window.location.href='/companies/${j.company}'">View Full Culture Profile →</span>
+                <div class="cp-ratings">
+                    <div class="cp-rating-item">
+                        <div class="cp-rating-head">
+                            <span class="cp-rating-label">Glassdoor Rating</span>
+                            <span class="cp-rating-val ${c.glassdoor >= 4.0 ? 'high' : c.glassdoor >= 3.5 ? 'mid' : 'low'}">${c.glassdoor}/5</span>
+                        </div>
+                        <div class="cp-rating-bar"><div class="cp-rating-fill ${c.glassdoor >= 4.0 ? 'high' : c.glassdoor >= 3.5 ? 'mid' : 'low'}" style="width:${(c.glassdoor/5)*100}%"></div></div>
+                    </div>
+                    <div class="cp-rating-item">
+                        <div class="cp-rating-head">
+                            <span class="cp-rating-label">Work-Life Balance</span>
+                            <span class="cp-rating-val ${c.wlb_score >= 4.0 ? 'high' : c.wlb_score >= 3.5 ? 'mid' : 'low'}">${c.wlb_score}/5</span>
+                        </div>
+                        <div class="cp-rating-bar"><div class="cp-rating-fill ${c.wlb_score >= 4.0 ? 'high' : c.wlb_score >= 3.5 ? 'mid' : 'low'}" style="width:${(c.wlb_score/5)*100}%"></div></div>
+                    </div>
+                </div>
+                <div class="cp-summary">${getCultureSummary(j.company)}</div>
+                <div class="cp-peek-footer">
+                    <span class="cp-peek-size">👥 ${c.size}</span>
+                    <span class="cp-peek-link" onclick="event.preventDefault();event.stopPropagation();window.location.href='/companies/${j.company}'">Full Culture Profile →</span>
                 </div>
             </div>
         </a>`;
