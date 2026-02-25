@@ -181,35 +181,69 @@
         }
         .hero-cta-line {
             font-family: var(--font-display); font-weight: 400;
-            font-size: clamp(38px, 5vw, 68px);
-            line-height: 1.12; letter-spacing: -0.025em;
+            font-size: clamp(36px, 4.8vw, 64px);
+            line-height: 1.15; letter-spacing: -0.025em;
             max-width: 960px; margin-bottom: 28px;
             animation: fadeUp 0.5s ease 0.08s both;
             color: var(--text);
         }
-        .hero-rotating {
-            color: var(--accent); font-style: italic;
-            display: inline; white-space: nowrap;
+        /* Role dropdown */
+        .hero-dd { display: inline-block; position: relative; z-index: 60; }
+        .hero-dd-trigger {
+            color: var(--accent); font-style: italic; font-family: var(--font-display);
+            cursor: pointer; white-space: nowrap;
             border-bottom: 2.5px solid var(--accent-border);
+            transition: border-color 0.2s;
         }
-        .hero-actions {
-            display: flex; align-items: center; gap: 16px; margin-bottom: 56px;
-            animation: fadeUp 0.5s ease 0.22s both;
+        .hero-dd-trigger:hover { border-bottom-color: var(--accent); }
+        .hero-dd-trigger .arrow { font-size: 0.55em; margin-left: 3px; font-style: normal; opacity: 0.5; vertical-align: middle; }
+        .hero-dd-menu {
+            display: none; position: absolute; top: calc(100% + 10px); left: 0;
+            background: var(--bg-raised); border: 1px solid var(--border-2);
+            border-radius: var(--radius); box-shadow: var(--shadow-lg);
+            padding: 6px; min-width: 240px; z-index: 999;
         }
-        .btn-primary {
-            background: var(--accent); color: #fff; padding: 13px 28px;
-            border-radius: var(--radius); font-size: 15px; font-weight: 700;
-            text-decoration: none; transition: all 0.25s; border: none; cursor: pointer;
+        .hero-dd-menu.open { display: block; }
+        .hero-dd-opt {
+            display: flex; align-items: center; gap: 8px; width: 100%;
+            padding: 10px 14px; border-radius: var(--radius-sm);
+            font-family: var(--font-body); font-size: 15px; font-weight: 500;
+            color: var(--text-2); cursor: pointer; transition: all 0.12s;
+            border: none; background: none; text-align: left;
+        }
+        .hero-dd-opt:hover { background: var(--bg-hover); color: var(--text); }
+        .hero-dd-opt.active { background: var(--accent-bg); color: var(--accent); font-weight: 600; }
+        .hero-dd-opt .opt-ico { font-size: 16px; flex-shrink: 0; }
+
+        /* Value chips */
+        .hero-values {
+            display: flex; flex-wrap: wrap; gap: 8px; max-width: 780px;
+            margin-bottom: 28px;
+            animation: fadeUp 0.5s ease 0.16s both;
+        }
+        .hero-chip {
+            padding: 8px 16px; border-radius: var(--radius-full);
+            background: var(--bg-raised); border: 1.5px solid var(--border);
+            color: var(--text-2); font-size: 14px; font-weight: 500;
+            cursor: pointer; transition: all 0.2s; user-select: none;
             font-family: var(--font-body);
         }
-        .btn-primary:hover { background: var(--accent-hover); transform: translateY(-2px); box-shadow: 0 6px 24px rgba(232,89,12,0.2); }
-        .btn-ghost {
-            background: transparent; color: var(--text-2); padding: 13px 24px;
-            border-radius: var(--radius); font-size: 15px; font-weight: 500;
-            text-decoration: none; border: 1px solid var(--border-2);
-            transition: all 0.2s; cursor: pointer; font-family: var(--font-body);
+        .hero-chip:hover { border-color: var(--border-3); color: var(--text); transform: translateY(-1px); }
+        .hero-chip .chip-ico { margin-right: 4px; }
+        .hero-chip.on { background: var(--accent); border-color: var(--accent); color: #fff; font-weight: 600; box-shadow: 0 2px 10px rgba(232,89,12,0.2); }
+        .hero-chip.on:hover { background: var(--accent-hover); border-color: var(--accent-hover); }
+
+        /* Match button */
+        .hero-match-btn {
+            display: inline-flex; align-items: center; gap: 8px;
+            background: var(--accent); color: #fff; padding: 14px 32px;
+            border-radius: var(--radius); font-size: 16px; font-weight: 700;
+            text-decoration: none; transition: all 0.25s; border: none; cursor: pointer;
+            font-family: var(--font-body); margin-bottom: 40px;
+            animation: fadeUp 0.5s ease 0.22s both;
         }
-        .btn-ghost:hover { border-color: var(--border-3); color: var(--text); }
+        .hero-match-btn:hover { background: var(--accent-hover); transform: translateY(-2px); box-shadow: 0 6px 24px rgba(232,89,12,0.2); }
+        .hero-match-btn .count { font-family: var(--font-mono); }
 
         .hero-metrics {
             display: flex; gap: 48px;
@@ -430,8 +464,9 @@
             .nav-links { display: none; position: absolute; top: 100%; left: 0; right: 0; background: rgba(250,250,248,0.98); backdrop-filter: blur(20px); border-bottom: 1px solid var(--border); padding: 20px 24px; flex-direction: column; gap: 16px; box-shadow: 0 8px 24px rgba(0,0,0,0.06); }
             .nav-links.open { display: flex; }
             .hero { padding: 120px 0 60px; }
-            .hero-cta-line { font-size: clamp(28px, 6.5vw, 44px); }
-            .hero-actions { flex-direction: column; align-items: flex-start; }
+            .hero-cta-line { font-size: clamp(26px, 6vw, 40px); }
+            .hero-values { gap: 6px; }
+            .hero-chip { padding: 6px 12px; font-size: 13px; }
             .hero-metrics { gap: 28px; flex-wrap: wrap; }
             .co-grid { grid-template-columns: 1fr; }
             .ex-grid { grid-template-columns: 1fr 1fr; }
@@ -486,14 +521,16 @@
             Launching with AI & tech roles — more categories coming
         </div>
         <div class="hero-cta-line">
-            I'm a <span class="hero-rotating" id="heroRoleText">Software Engineer</span> who cares about <span class="hero-rotating" id="heroValueText">Async-First</span>
+            I'm a
+            <span class="hero-dd" id="heroRoleDD">
+                <span class="hero-dd-trigger" onclick="toggleRoleDD()"><span id="heroRoleText">Software Engineer</span><span class="arrow">&#9662;</span></span>
+                <div class="hero-dd-menu" id="heroRoleMenu"></div>
+            </span>
+            who cares about&hellip;
         </div>
-        <p class="hero-sub">The first job board that filters by how teams actually work — async or sync, fast or careful, flat or structured.</p>
+        <div class="hero-values" id="heroValues"></div>
+        <button class="hero-match-btn" id="heroMatchBtn" onclick="goHeroMatch()">Show me <span class="count" id="heroCount">1,044</span> matches &rarr;</button>
         <p class="hero-trust">Built on<strong> real employee reviews</strong>, not marketing fluff.</p>
-        <div class="hero-actions">
-            <a href="/jobs" class="btn-primary">Pick Your Values &rarr;</a>
-            <a href="#quiz" class="btn-ghost">Take the Culture Quiz</a>
-        </div>
         <div class="hero-metrics">
             <div><div class="metric-val">1,044</div><div class="metric-label">AI & tech roles</div></div>
             <div><div class="metric-val">18</div><div class="metric-label">culture values</div></div>
@@ -1688,52 +1725,174 @@
 // ═══════════════════════════════════════
 // VALUE PICKER
 // ═══════════════════════════════════════
-// HERO TYPEWRITER
+// HERO CTA — role dropdown + multi-value chips + real counts
 // ═══════════════════════════════════════
-const roleCycle = ['Software Engineer', 'ML Researcher', 'Product Manager', 'Data Scientist', 'Designer'];
-const valueCycle = ['Async-First', 'Remote Work', 'Ethical AI', 'Work-Life Balance', 'Open Source'];
-let twTarget = 'role';
+const HERO_ROLES = [
+    { label: 'Software Engineer', slug: 'engineering', ico: '💻' },
+    { label: 'ML / AI Researcher', slug: 'ml-ai', ico: '🧠' },
+    { label: 'Data Scientist',    slug: 'data', ico: '📊' },
+    { label: 'Product Manager',   slug: 'product', ico: '📋' },
+    { label: 'Designer',          slug: 'design', ico: '🎨' },
+    { label: 'Sales / GTM',       slug: 'sales', ico: '💼' },
+    { label: 'Marketing',         slug: 'marketing', ico: '📣' },
+    { label: 'Operations',        slug: 'operations', ico: '⚙️' },
+];
+
+const HERO_VALUES = [
+    { slug: 'wlb',          ico: '⚖️', label: 'Work-Life Balance' },
+    { slug: 'remote',       ico: '🌐', label: 'Remote-Friendly' },
+    { slug: 'async',        ico: '📡', label: 'Async-First' },
+    { slug: 'deep-work',    ico: '🎧', label: 'Deep Work' },
+    { slug: 'flex-hours',   ico: '🕐', label: 'Flex Hours' },
+    { slug: 'transparent',  ico: '🪟', label: 'Transparent' },
+    { slug: 'flat',         ico: '🤝', label: 'Flat Hierarchy' },
+    { slug: 'diverse',      ico: '🌈', label: 'Diverse' },
+    { slug: 'eng-driven',   ico: '⚙️', label: 'Eng-Driven' },
+    { slug: 'ship-fast',    ico: '🚀', label: 'Ship Fast' },
+    { slug: 'open-source',  ico: '🔓', label: 'Open Source' },
+    { slug: 'learning',     ico: '🌱', label: 'Learning' },
+    { slug: 'equity',       ico: '💎', label: 'Strong Comp' },
+    { slug: 'product-impact',ico: '🎯', label: 'Impact' },
+    { slug: 'ethical-ai',   ico: '🤖', label: 'Ethical AI' },
+    { slug: 'social-impact',ico: '💜', label: 'Mission-Driven' },
+];
+
+// Real per-company per-role job counts (computed from JOBS data)
+const CRC = {"anthropic":{"operations":14,"ml-ai":46,"engineering":88,"product":14,"other":28,"marketing":7,"data":1,"sales":1,"design":4},"cohere":{"ml-ai":32,"product":4,"sales":7,"engineering":30,"other":3},"perplexity":{"engineering":41,"other":8,"ml-ai":5,"data":2,"marketing":2,"design":1},"mistral":{"ml-ai":16,"engineering":41,"product":3,"other":6,"operations":2},"together":{"engineering":14,"ml-ai":9,"sales":1,"data":2,"other":1},"vercel":{"engineering":2,"design":1},"cursor":{"engineering":1,"design":1,"ml-ai":2},"hubspot":{"engineering":1,"data":1,"other":1},"linear":{"design":1,"engineering":1},"huggingface":{"ml-ai":4},"stripe":{"engineering":16,"sales":1,"ml-ai":2,"data":1,"other":5},"databricks":{"engineering":11,"other":5,"sales":8,"operations":1},"scale":{"other":53,"operations":22,"engineering":47,"ml-ai":27,"marketing":6,"sales":13,"data":1,"product":2},"coreweave":{"operations":34,"other":85,"sales":19,"engineering":116,"ml-ai":3,"marketing":10,"product":7,"data":4,"design":1},"runway":{"other":14,"ml-ai":11,"operations":1,"marketing":2,"sales":1,"data":1},"vast":{"other":2,"engineering":5,"data":1,"ml-ai":2},"apollo":{"other":21,"operations":6,"sales":7,"data":4,"marketing":6,"engineering":11}};
+
+// Company → values mapping (mirrors COMPANIES in jobs.html)
+const CV = {
+    'anthropic':['ethical-ai','learning','equity','social-impact','eng-driven','flat'],
+    'huggingface':['open-source','flat','remote','flex-hours','transparent','many-hats','async'],
+    'databricks':['eng-driven','learning','equity','diverse','product-impact'],
+    'cohere':['learning','eng-driven','many-hats'],
+    'mistral':['ship-fast','eng-driven','flat','many-hats','open-source'],
+    'hubspot':['diverse','learning','wlb','transparent','flex-hours','psych-safety'],
+    'vercel':['ship-fast','eng-driven','remote','product-impact','open-source'],
+    'stripe':['eng-driven','learning','equity','product-impact','transparent'],
+    'perplexity':['ship-fast','eng-driven','product-impact','equity','learning'],
+    'together':['open-source','eng-driven','learning','flat','many-hats'],
+    'cursor':['ship-fast','eng-driven','product-impact','flat','many-hats'],
+    'linear':['deep-work','remote','async','eng-driven','product-impact','wlb'],
+    'scale':['eng-driven','product-impact','learning','ship-fast'],
+    'coreweave':['eng-driven','ship-fast','equity','many-hats'],
+    'runway':['eng-driven','product-impact','remote','learning','ship-fast'],
+    'vast':['eng-driven','ship-fast','flat','many-hats','equity'],
+    'apollo':['ship-fast','eng-driven','remote','product-impact','learning'],
+};
+
+let heroRoleSlug = 'engineering';
+let heroSelectedValues = new Set();
 let twTimer = null;
+let twPaused = false;
+
+function computeCount() {
+    const selVals = Array.from(heroSelectedValues);
+    let total = 0;
+    for (const [co, vals] of Object.entries(CV)) {
+        // If no values selected, count all jobs for this role; otherwise only from matching companies
+        const match = selVals.length === 0 || selVals.some(v => vals.includes(v));
+        if (match && CRC[co]) {
+            total += (CRC[co][heroRoleSlug] || 0);
+        }
+    }
+    return total;
+}
+
+function updateHeroCount() {
+    const n = computeCount();
+    document.getElementById('heroCount').textContent = n.toLocaleString();
+}
+
+// Build role dropdown
+function buildRoleDD() {
+    document.getElementById('heroRoleMenu').innerHTML = HERO_ROLES.map(r =>
+        '<button class="hero-dd-opt' + (r.slug === heroRoleSlug ? ' active' : '') + '" data-slug="' + r.slug + '" onclick="pickRole(\'' + r.slug + '\')">' +
+        '<span class="opt-ico">' + r.ico + '</span>' + r.label + '</button>'
+    ).join('');
+}
+
+function toggleRoleDD() {
+    document.getElementById('heroRoleMenu').classList.toggle('open');
+    pauseTW();
+}
+
+function pickRole(slug) {
+    heroRoleSlug = slug;
+    var r = HERO_ROLES.find(function(x){ return x.slug === slug; });
+    document.getElementById('heroRoleText').textContent = r.label;
+    document.getElementById('heroRoleMenu').classList.remove('open');
+    document.querySelectorAll('#heroRoleMenu .hero-dd-opt').forEach(function(el) {
+        el.classList.toggle('active', el.dataset.slug === slug);
+    });
+    updateHeroCount();
+    restartTW();
+}
+
+// Build value chips
+function buildValueChips() {
+    document.getElementById('heroValues').innerHTML = HERO_VALUES.map(v =>
+        '<span class="hero-chip" data-v="' + v.slug + '" onclick="toggleChip(\'' + v.slug + '\')">' +
+        '<span class="chip-ico">' + v.ico + '</span>' + v.label + '</span>'
+    ).join('');
+}
+
+function toggleChip(slug) {
+    if (heroSelectedValues.has(slug)) heroSelectedValues.delete(slug);
+    else heroSelectedValues.add(slug);
+    document.querySelectorAll('.hero-chip').forEach(function(el) {
+        el.classList.toggle('on', heroSelectedValues.has(el.dataset.v));
+    });
+    updateHeroCount();
+}
+
+function goHeroMatch() {
+    var params = 'role=' + heroRoleSlug;
+    if (heroSelectedValues.size > 0) params += '&values=' + Array.from(heroSelectedValues).join(',');
+    window.location.href = '/jobs?' + params;
+}
+
+// Close dropdown on outside click
+document.addEventListener('click', function(e) {
+    if (!e.target.closest('.hero-dd')) {
+        document.getElementById('heroRoleMenu').classList.remove('open');
+    }
+});
+
+// Typewriter — cycles role text only
+var roleCycle = ['Software Engineer', 'ML / AI Researcher', 'Product Manager', 'Data Scientist', 'Designer'];
 
 function twErase(el, text, cb) {
-    let i = text.length;
-    (function step() {
-        if (i <= 0) { cb(); return; }
-        el.textContent = text.substring(0, --i);
-        twTimer = setTimeout(step, 20);
-    })();
+    var i = text.length;
+    (function step() { if (twPaused || i <= 0) { if(!twPaused) cb(); return; } el.textContent = text.substring(0, --i); twTimer = setTimeout(step, 20); })();
 }
-
 function twType(el, text, cb) {
-    let i = 0;
-    (function step() {
-        if (i >= text.length) { cb(); return; }
-        el.textContent = text.substring(0, ++i);
-        twTimer = setTimeout(step, 35);
-    })();
+    var i = 0;
+    (function step() { if (twPaused || i >= text.length) { if(!twPaused) cb(); return; } el.textContent = text.substring(0, ++i); twTimer = setTimeout(step, 35); })();
 }
 
-function twCycle() {
-    var el, cycle;
-    if (twTarget === 'role') {
-        el = document.getElementById('heroRoleText');
-        cycle = roleCycle;
-    } else {
-        el = document.getElementById('heroValueText');
-        cycle = valueCycle;
-    }
-    var idx = (cycle.indexOf(el.textContent) + 1) % cycle.length;
-    var oldText = el.textContent;
-    var newText = cycle[idx];
-    twErase(el, oldText, function() {
-        twType(el, newText, function() {
-            twTarget = twTarget === 'role' ? 'value' : 'role';
-            twTimer = setTimeout(twCycle, 1800);
+function twRun() {
+    if (twPaused) return;
+    var el = document.getElementById('heroRoleText');
+    var idx = (roleCycle.indexOf(el.textContent) + 1) % roleCycle.length;
+    var slug = HERO_ROLES[idx] ? HERO_ROLES[idx].slug : 'engineering';
+    twErase(el, el.textContent, function() {
+        twType(el, roleCycle[idx], function() {
+            heroRoleSlug = slug;
+            document.querySelectorAll('#heroRoleMenu .hero-dd-opt').forEach(function(b) { b.classList.toggle('active', b.dataset.slug === slug); });
+            updateHeroCount();
+            twTimer = setTimeout(twRun, 1800);
         });
     });
 }
 
-twTimer = setTimeout(twCycle, 2000);
+function pauseTW() { twPaused = true; if (twTimer) clearTimeout(twTimer); }
+function restartTW() { pauseTW(); twTimer = setTimeout(function() { twPaused = false; twRun(); }, 3000); }
+
+buildRoleDD();
+buildValueChips();
+updateHeroCount();
+twTimer = setTimeout(twRun, 2200);
 
 function scrollToCompanies() {
     document.getElementById('companies').scrollIntoView({ behavior: 'smooth' });
