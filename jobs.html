@@ -268,6 +268,16 @@
             </div>
 
             <div class="sb-section">
+                <div class="sb-label">Role Category</div>
+                <div class="loc-filters" id="roleFilters"></div>
+            </div>
+
+            <div class="sb-section">
+                <div class="sb-label">Seniority</div>
+                <div class="loc-filters" id="seniorityFilters"></div>
+            </div>
+
+            <div class="sb-section">
                 <div class="sb-label">Location</div>
                 <div class="loc-filters" id="locFilters"></div>
             </div>
@@ -315,6 +325,27 @@ const VALUES = {
     'many-hats':    { ico: '🧩', name: 'Wears Many Hats', color: 'orange' },
     'ethical-ai':   { ico: '🤖', name: 'Ethical AI / Safety', color: 'rose' },
     'social-impact':{ ico: '💜', name: 'Mission-Driven', color: 'rose' },
+};
+
+// ═══ ROLE CATEGORIES ═══
+const ROLES = {
+    'engineering': { name: 'Engineering', ico: '💻' },
+    'ml-ai':       { name: 'ML / AI',    ico: '🧠' },
+    'data':        { name: 'Data',        ico: '📊' },
+    'product':     { name: 'Product',     ico: '📋' },
+    'design':      { name: 'Design',      ico: '🎨' },
+    'sales':       { name: 'Sales / GTM', ico: '💼' },
+    'marketing':   { name: 'Marketing',   ico: '📣' },
+    'operations':  { name: 'Operations',  ico: '⚙️' },
+};
+
+const SENIORITIES = {
+    'entry':    { name: 'Entry / Junior',   ico: '🌱' },
+    'mid':      { name: 'Mid-Level',        ico: '👤' },
+    'senior':   { name: 'Senior',           ico: '⭐' },
+    'staff':    { name: 'Staff / Principal', ico: '🔷' },
+    'lead':     { name: 'Lead / Manager',   ico: '👥' },
+    'director': { name: 'Director+',        ico: '🏛️' },
 };
 
 // ═══ COMPANY DATA (from Glassdoor analysis) ═══
@@ -1483,10 +1514,13 @@ const JOBS = [
     { id: 1043, title: 'Support Operations Manager', company: 'apollo', location: 'Remote, United States', type: 'Full-time', posted: '3w+ ago', source: 'API', url: 'https://job-boards.greenhouse.io/apolloio/jobs/5691274004?ref=jobsbyculture.com' },
     { id: 1044, title: 'Team Lead, Account Advocate', company: 'apollo', location: 'Office, Mexico City', type: 'Full-time', posted: '3w+ ago', source: 'API', url: 'https://job-boards.greenhouse.io/apolloio/jobs/5776029004?ref=jobsbyculture.com' }
 ];
+
 // ═══ STATE ═══
 let activeValues = new Set();
 let activeLocations = new Set();
 let activeSizes = new Set();
+let activeRoles = new Set();
+let activeSeniorities = new Set();
 let searchQuery = '';
 
 // ═══ HELPERS ═══
@@ -1525,6 +1559,31 @@ function getCompanySize(companyId) {
     return 'Small (<500)';
 }
 
+function getRole(title) {
+    const t = title.toLowerCase();
+    // ML/AI checked before Engineering to prevent "ML Engineer" matching generic "Engineer"
+    if (/\b(machine learning|ml |ml$|deep learning|llm|nlp|natural language|computer vision|generative ai|ai scientist|research scientist|research engineer|reinforcement learning|member of technical staff|neural|diffusion|pretraining|alignment|interpretability|reward model|fine-?tuning|inference optimization)\b/.test(t)) return 'ml-ai';
+    if (/\b(data scien|data analy|analytics|data engineer|business intelligence|bi |etl|data infra|data platform|data ops|database)\b/.test(t) && !/\bdata center\b/.test(t)) return 'data';
+    if (/\b(design|ux|ui |user experience|user interface|brand design|visual design|design system|interaction design|design engineer)\b/.test(t)) return 'design';
+    if (/\b(product manag|program manag|technical program|tpm|product lead|product strateg|product ops)\b/.test(t)) return 'product';
+    if (/\b(sales|account exec|account manag|business develop|revenue|go.to.market|gtm|solutions engineer|customer success|solutions architect|partnerships|deal desk)\b/.test(t)) return 'sales';
+    if (/\b(marketing|growth|content|seo|brand |demand gen|comms|communications|copywriter|social media|community manag|developer relations|devrel|evangelist)\b/.test(t)) return 'marketing';
+    if (/\b(engineer|developer|software|swe|frontend|backend|fullstack|full.stack|devops|sre|platform|infrastructure|security|cloud|systems|embedded|mobile|ios|android|rust|golang|architect)\b/.test(t)) return 'engineering';
+    if (/\b(operations|ops|people|hr|human resources|finance|accounting|legal|compliance|recrui|talent|office|admin|facilities|procurement|supply chain|logistics|support|coordinator|specialist|executive assistant)\b/.test(t)) return 'operations';
+    return null;
+}
+
+function getSeniority(title) {
+    const t = title.toLowerCase();
+    if (/\b(director|vp |vice president|chief|cto|ceo|cfo|coo|head of|svp|evp)\b/.test(t)) return 'director';
+    if (/\b(staff|principal|distinguished)\b/.test(t)) return 'staff';
+    // "Engineering Manager" and "Team Lead" → lead, but NOT "Product Manager" (that's a role)
+    if (/\b(engineering manager|eng manager|team lead|tech lead|lead engineer|manager,?\s*(software|engineering|infrastructure|platform|security)|head of engineering)\b/.test(t)) return 'lead';
+    if (/\b(senior|sr\.?|sr )\b/.test(t)) return 'senior';
+    if (/\b(junior|jr\.?|jr |intern|associate|entry|fellow|coordinator)\b/.test(t) && !/\bassociate (director|vp)\b/.test(t)) return 'entry';
+    return 'mid';
+}
+
 function getCultureScore(companyId) {
     const c = COMPANIES[companyId];
     if (activeValues.size === 0) return null; // no personal score without filters
@@ -1541,6 +1600,9 @@ function matchScore(companyId) {
     return matches / activeValues.size;
 }
 
+// Pre-compute role and seniority for each job
+JOBS.forEach(j => { j._role = getRole(j.title); j._seniority = getSeniority(j.title); });
+
 // ═══ BUILD SIDEBAR ═══
 function buildFilters() {
     // Value filters
@@ -1553,6 +1615,25 @@ function buildFilters() {
     vfEl.innerHTML = Object.entries(VALUES).map(([k,v]) => 
         `<div class="vf" data-v="${k}" onclick="toggleValue('${k}')"><span class="ico">${v.ico}</span>${v.name}<span class="cnt">${valueCounts[k]||0}</span></div>`
     ).join('');
+
+    // Role filters
+    const roleCounts = {};
+    JOBS.forEach(j => { if (j._role) roleCounts[j._role] = (roleCounts[j._role]||0) + 1; });
+    const rfEl = document.getElementById('roleFilters');
+    rfEl.innerHTML = Object.entries(roleCounts).sort((a,b)=>b[1]-a[1]).map(([k,c]) => {
+        const r = ROLES[k];
+        return r ? `<div class="lf" data-r="${k}" onclick="toggleRole('${k}')">${r.ico} ${r.name}<span class="cnt">${c}</span></div>` : '';
+    }).join('');
+
+    // Seniority filters (fixed order: entry → director)
+    const senCounts = {};
+    JOBS.forEach(j => { if (j._seniority) senCounts[j._seniority] = (senCounts[j._seniority]||0) + 1; });
+    const snEl = document.getElementById('seniorityFilters');
+    const senOrder = ['entry','mid','senior','staff','lead','director'];
+    snEl.innerHTML = senOrder.filter(k => senCounts[k]).map(k => {
+        const s = SENIORITIES[k];
+        return `<div class="lf" data-sn="${k}" onclick="toggleSeniority('${k}')">${s.ico} ${s.name}<span class="cnt">${senCounts[k]}</span></div>`;
+    }).join('');
 
     // Location filters
     const locCounts = {};
@@ -1590,8 +1671,23 @@ function toggleSize(s) {
     renderJobs();
 }
 
+function toggleRole(r) {
+    if (activeRoles.has(r)) activeRoles.delete(r); else activeRoles.add(r);
+    document.querySelectorAll('#roleFilters .lf').forEach(el => el.classList.toggle('on', activeRoles.has(el.dataset.r)));
+    document.getElementById('clearFilters').classList.toggle('show', activeValues.size > 0 || activeRoles.size > 0 || activeSeniorities.size > 0);
+    renderJobs();
+}
+
+function toggleSeniority(sn) {
+    if (activeSeniorities.has(sn)) activeSeniorities.delete(sn); else activeSeniorities.add(sn);
+    document.querySelectorAll('#seniorityFilters .lf').forEach(el => el.classList.toggle('on', activeSeniorities.has(el.dataset.sn)));
+    document.getElementById('clearFilters').classList.toggle('show', activeValues.size > 0 || activeRoles.size > 0 || activeSeniorities.size > 0);
+    renderJobs();
+}
+
 function clearAll() {
     activeValues.clear(); activeLocations.clear(); activeSizes.clear();
+    activeRoles.clear(); activeSeniorities.clear();
     document.querySelectorAll('.vf,.lf').forEach(el => el.classList.remove('on'));
     document.getElementById('clearFilters').classList.remove('show');
     renderJobs();
@@ -1606,6 +1702,14 @@ document.getElementById('searchInput').addEventListener('input', (e) => {
 // ═══ DYNAMIC SEO ═══
 function updatePageMeta(count) {
     var parts = [];
+    if (activeRoles.size > 0) {
+        var roleNames = Array.from(activeRoles).map(function(r) { return ROLES[r] ? ROLES[r].name : r; });
+        parts.push(roleNames.join(', '));
+    }
+    if (activeSeniorities.size > 0) {
+        var senNames = Array.from(activeSeniorities).map(function(s) { return SENIORITIES[s] ? SENIORITIES[s].name : s; });
+        parts.push(senNames.join(', '));
+    }
     if (activeLocations.size > 0) parts.push(Array.from(activeLocations).join(', '));
     if (activeValues.size > 0) {
         var names = Array.from(activeValues).map(function(v) { return VALUES[v] ? VALUES[v].name : v; });
@@ -1636,6 +1740,10 @@ function renderJobs() {
             activeValues.forEach(v => { if (c.values.includes(v)) hasAny = true; });
             if (!hasAny) return false;
         }
+        // Role filter
+        if (activeRoles.size > 0 && !activeRoles.has(j._role)) return false;
+        // Seniority filter
+        if (activeSeniorities.size > 0 && !activeSeniorities.has(j._seniority)) return false;
         // Location
         if (activeLocations.size > 0 && !activeLocations.has(getLocation(j.location))) return false;
         // Size
@@ -1740,6 +1848,16 @@ buildFilters();
         document.getElementById('searchInput').value = COMPANIES[company].name;
         searchQuery = COMPANIES[company].name.toLowerCase();
     }
+    // Support ?role=engineering or ?role=engineering,ml-ai
+    const roleParam = params.get('role');
+    if (roleParam) {
+        roleParam.split(',').forEach(r => { if (ROLES[r]) activeRoles.add(r); });
+    }
+    // Support ?seniority=senior or ?seniority=senior,staff
+    const senParam = params.get('seniority');
+    if (senParam) {
+        senParam.split(',').forEach(s => { if (SENIORITIES[s]) activeSeniorities.add(s); });
+    }
     // Support ?location=India or ?location=Europe (from footer links)
     const locParam = params.get('location');
     if (locParam) {
@@ -1749,11 +1867,19 @@ buildFilters();
     if (activeValues.size > 0) {
         document.querySelectorAll('.vf').forEach(el => el.classList.toggle('on', activeValues.has(el.dataset.v)));
     }
+    // Sync sidebar filter UI with activeRoles
+    if (activeRoles.size > 0) {
+        document.querySelectorAll('#roleFilters .lf').forEach(el => el.classList.toggle('on', activeRoles.has(el.dataset.r)));
+    }
+    // Sync sidebar filter UI with activeSeniorities
+    if (activeSeniorities.size > 0) {
+        document.querySelectorAll('#seniorityFilters .lf').forEach(el => el.classList.toggle('on', activeSeniorities.has(el.dataset.sn)));
+    }
     // Sync sidebar filter UI with activeLocations
     if (activeLocations.size > 0) {
         document.querySelectorAll('#locFilters .lf').forEach(el => el.classList.toggle('on', activeLocations.has(el.dataset.l)));
     }
-    if (activeValues.size > 0 || activeLocations.size > 0) {
+    if (activeValues.size > 0 || activeLocations.size > 0 || activeRoles.size > 0 || activeSeniorities.size > 0) {
         document.getElementById('clearFilters').classList.toggle('show', true);
     }
 })();

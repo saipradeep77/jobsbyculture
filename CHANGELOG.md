@@ -1,5 +1,26 @@
 # Changelog
 
+## 2026-02-25 — Role/Seniority Filters + Interactive Hero CTA
+
+### jobs.html
+- **New: Role Category filter** — 8 categories (Engineering, ML/AI, Data, Product, Design, Sales/GTM, Marketing, Operations) with automatic classification from job titles. ML/AI checked before Engineering to prevent "ML Engineer" misclassification.
+- **New: Seniority filter** — 6 levels (Entry/Junior, Mid-Level, Senior, Staff/Principal, Lead/Manager, Director+) parsed from title prefixes. "Product Manager" correctly classified as role=product (not seniority=lead).
+- **Pre-computed `_role` and `_seniority`** on every job for instant filtering
+- **Extended sidebar** with two new filter sections between Culture Values and Location
+- **Extended URL params**: `?role=engineering`, `?seniority=senior` (comma-separated for multiples)
+- **Extended SEO meta**: role and seniority names included in dynamic page title/description
+- **Extended Clear All** to reset role and seniority filters
+
+### index.html
+- **New: Interactive hero CTA** — "I'm a [Software Engineer ▾] who cares about [Async-First ▾]" with dropdown menus and typewriter cycling animation
+- **Dynamic match count button** — "Show me X matches →" updates based on role×value selection, links to /jobs with filters pre-applied
+- **Removed "Pick Your Values" section** — replaced by the hero CTA flow
+- **Updated nav**: "Values" link → "Browse Jobs" linking to /jobs
+- Typewriter cycles through roles and values with 50ms type / 30ms erase / 2.5s pause
+
+### sitemap.xml
+- Added 8 role filter URLs and 4 seniority filter URLs (12 new URLs)
+
 ## 2026-02-25 — Location Fixes, OG Image, Structured Data
 
 ### jobs.html

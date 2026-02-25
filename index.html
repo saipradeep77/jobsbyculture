@@ -179,17 +179,49 @@
             background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 8'%3E%3Cpath d='M0 6 Q50 0 100 6 Q150 12 200 6' stroke='%23facc15' stroke-width='2.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E") repeat-x;
             background-size: 200px 8px;
         }
-        .hero-actions {
-            display: flex; align-items: center; gap: 16px; margin-bottom: 56px;
+        .hero-cta-line {
+            font-family: var(--font-display); font-weight: 400;
+            font-size: clamp(36px, 4.5vw, 60px);
+            line-height: 1.2; letter-spacing: -0.02em;
+            max-width: 780px; margin-bottom: 32px;
+            animation: fadeUp 0.5s ease 0.08s both;
+            color: var(--text);
+        }
+        .hero-dropdown { display: inline-block; position: relative; }
+        .hero-dropdown-trigger {
+            color: var(--accent); font-style: italic; font-family: var(--font-display);
+            cursor: pointer; position: relative; white-space: nowrap;
+            border-bottom: 2px solid var(--accent-border);
+            transition: border-color 0.2s;
+        }
+        .hero-dropdown-trigger:hover { border-bottom-color: var(--accent); }
+        .hero-dropdown-trigger .dd-arrow { font-size: 0.6em; margin-left: 4px; font-style: normal; opacity: 0.5; }
+        .hero-dropdown-menu {
+            display: none; position: absolute; top: calc(100% + 8px); left: 50%; transform: translateX(-50%);
+            background: var(--bg-raised); border: 1px solid var(--border-2);
+            border-radius: var(--radius); box-shadow: var(--shadow-lg);
+            padding: 6px; min-width: 220px; z-index: 50;
+        }
+        .hero-dropdown-menu.open { display: block; }
+        .hero-dropdown-item {
+            display: block; width: 100%; padding: 10px 14px; border-radius: var(--radius-sm);
+            font-family: var(--font-body); font-size: 15px; font-weight: 500;
+            color: var(--text-2); cursor: pointer; transition: all 0.15s;
+            border: none; background: none; text-align: left;
+        }
+        .hero-dropdown-item:hover { background: var(--bg-hover); color: var(--text); }
+        .hero-dropdown-item.active { background: var(--accent-bg); color: var(--accent); font-weight: 600; }
+        .hero-match-btn {
+            display: inline-flex; align-items: center; gap: 8px;
+            background: var(--accent); color: #fff; padding: 14px 32px;
+            border-radius: var(--radius); font-size: 16px; font-weight: 700;
+            text-decoration: none; transition: all 0.25s; border: none; cursor: pointer;
+            font-family: var(--font-body); margin-bottom: 56px;
             animation: fadeUp 0.5s ease 0.22s both;
         }
-        .btn-primary {
-            background: var(--accent); color: #fff; padding: 13px 28px;
-            border-radius: var(--radius); font-size: 15px; font-weight: 700;
-            text-decoration: none; transition: all 0.25s; border: none; cursor: pointer;
-            font-family: var(--font-body);
-        }
-        .btn-primary:hover { background: var(--accent-hover); transform: translateY(-2px); box-shadow: 0 6px 24px rgba(232,89,12,0.2); }
+        .hero-match-btn:hover { background: var(--accent-hover); transform: translateY(-2px); box-shadow: 0 6px 24px rgba(232,89,12,0.2); }
+        .typewriter-cursor { display: inline-block; width: 2px; height: 0.85em; background: var(--accent); margin-left: 2px; vertical-align: text-bottom; animation: cursorBlink 0.7s infinite; }
+        @keyframes cursorBlink { 0%, 100% { opacity: 1; } 50% { opacity: 0; } }
         .btn-ghost {
             background: transparent; color: var(--text-2); padding: 13px 24px;
             border-radius: var(--radius); font-size: 15px; font-weight: 500;
@@ -205,8 +237,6 @@
         .metric-val { font-family: var(--font-mono); font-size: 26px; font-weight: 500; letter-spacing: -0.02em; }
         .metric-label { font-size: 13px; color: var(--text-3); margin-top: 2px; }
 
-        /* ═══ VALUE PICKER ═══ */
-        .picker { padding: 48px 0 56px; }
         .s-label {
             font-family: var(--font-mono); font-size: 11px; text-transform: uppercase;
             letter-spacing: 0.14em; color: var(--accent); display: block; margin-bottom: 14px;
@@ -219,57 +249,6 @@
         .s-desc { font-size: 16px; color: var(--text-2); max-width: 500px; line-height: 1.7; margin-bottom: 48px; }
         .s-center { text-align: center; }
         .s-center .s-desc { margin: 0 auto 48px; }
-
-        .tags {
-            display: flex; flex-wrap: wrap; gap: 10px; justify-content: center;
-            max-width: 860px; margin: 0 auto;
-        }
-        .tag {
-            padding: 12px 20px; border-radius: var(--radius-full);
-            background: var(--bg-raised); border: 2px solid var(--border);
-            color: var(--text-2); font-size: 15px; font-weight: 500;
-            cursor: pointer; transition: all 0.25s; user-select: none;
-            font-family: var(--font-body);
-        }
-        .tag:hover { border-color: var(--border-3); color: var(--text); transform: translateY(-2px); box-shadow: 0 4px 12px rgba(0,0,0,0.06); }
-        .tag .ico { margin-right: 6px; font-size: 17px; }
-        .tag.on { transform: translateY(-2px); font-weight: 600; }
-        .tag.on::after { content: ' ✓'; font-size: 13px; font-weight: 700; margin-left: 2px; }
-        .tag[data-c="orange"].on { background: var(--accent); border-color: var(--accent); color: #fff; box-shadow: 0 4px 16px rgba(232,89,12,0.25); }
-        .tag[data-c="teal"].on { background: var(--teal); border-color: var(--teal); color: #fff; box-shadow: 0 4px 16px rgba(13,148,136,0.25); }
-        .tag[data-c="violet"].on { background: var(--violet); border-color: var(--violet); color: #fff; box-shadow: 0 4px 16px rgba(124,58,237,0.25); }
-        .tag[data-c="rose"].on { background: var(--rose); border-color: var(--rose); color: #fff; box-shadow: 0 4px 16px rgba(225,29,72,0.25); }
-        .tag[data-c="sky"].on { background: var(--sky); border-color: var(--sky); color: #fff; box-shadow: 0 4px 16px rgba(2,132,199,0.25); }
-        .tag[data-c="lime"].on { background: #4d7c0f; border-color: #4d7c0f; color: #fff; box-shadow: 0 4px 16px rgba(77,124,15,0.25); }
-
-        .tag-group-label {
-            width: 100%; text-align: center;
-            font-family: var(--font-mono); font-size: 11px; text-transform: uppercase;
-            letter-spacing: 0.14em; margin-top: 12px; margin-bottom: -2px;
-        }
-        .tag-group-label:first-child { margin-top: 0; }
-        .teal-label { color: var(--teal); }
-        .violet-label { color: var(--violet); }
-        .sky-label { color: var(--sky); }
-        .orange-label { color: var(--accent); }
-        .rose-label { color: var(--rose); }
-
-        .picker-status {
-            text-align: center; margin-top: 28px; font-size: 14px; color: var(--text-3);
-        }
-        .picker-status b { color: var(--accent); }
-        .picker-cta {
-            text-align: center; margin-top: 20px;
-        }
-        .btn-match {
-            background: linear-gradient(135deg, var(--accent), #c2410c);
-            color: #fff; border: none; padding: 14px 36px;
-            border-radius: var(--radius); font-size: 16px; font-weight: 700;
-            cursor: pointer; font-family: var(--font-body); transition: all 0.3s;
-            opacity: 0.35; pointer-events: none;
-        }
-        .btn-match.ready { opacity: 1; pointer-events: all; }
-        .btn-match.ready:hover { transform: translateY(-2px); box-shadow: 0 8px 32px rgba(232,89,12,0.25); }
 
         /* ═══ COMPANIES ═══ */
         .companies { padding: 48px 0 56px; background: var(--bg-raised); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
@@ -470,8 +449,9 @@
             .nav-links { display: none; position: absolute; top: 100%; left: 0; right: 0; background: rgba(250,250,248,0.98); backdrop-filter: blur(20px); border-bottom: 1px solid var(--border); padding: 20px 24px; flex-direction: column; gap: 16px; box-shadow: 0 8px 24px rgba(0,0,0,0.06); }
             .nav-links.open { display: flex; }
             .hero { padding: 120px 0 60px; }
+            .hero-cta-line { font-size: clamp(28px, 6vw, 44px); }
+            .hero-dropdown-menu { left: 0; transform: none; min-width: 200px; }
             .hero-metrics { gap: 28px; flex-wrap: wrap; }
-            .hero-actions { flex-direction: column; align-items: flex-start; }
             .co-grid { grid-template-columns: 1fr; }
             .ex-grid { grid-template-columns: 1fr 1fr; }
             .ft-grid { grid-template-columns: 1fr 1fr; gap: 28px; }
@@ -505,7 +485,7 @@
             <div class="nav-wordmark">Jobs<span>By</span>Culture</div>
         </a>
         <div class="nav-links">
-            <a href="#values">Values</a>
+            <a href="/jobs">Browse Jobs</a>
             <a href="#companies">Companies</a>
             <a href="#quiz">Culture Quiz</a>
             <a href="#explore">Explore</a>
@@ -524,13 +504,21 @@
             <span class="hero-pill-dot"></span>
             Launching with AI & tech roles — more categories coming
         </div>
-        <h1>Stop guessing.<br>Find jobs that match your <em>culture.</em></h1>
-        <p class="hero-sub">The first job board that filters by how teams actually work — async or sync, fast or careful, flat or structured. Pick your values, find your people.</p>
-        <p class="hero-trust">The first job board that matches you by culture — built on<strong> real employee reviews</strong>, not marketing fluff.</p>
-        <div class="hero-actions">
-            <a href="#values" class="btn-primary">Pick Your Values →</a>
-            <a href="#quiz" class="btn-ghost">Take the Culture Quiz</a>
+        <div class="hero-cta-line">
+            I'm a
+            <span class="hero-dropdown" id="heroRoleDD">
+                <span class="hero-dropdown-trigger" id="heroRoleTrigger" onclick="toggleHeroDropdown('role')"><span id="heroRoleText">Software Engineer</span><span class="dd-arrow">&#9662;</span></span>
+                <div class="hero-dropdown-menu" id="heroRoleMenu"></div>
+            </span>
+            who cares about
+            <span class="hero-dropdown" id="heroValueDD">
+                <span class="hero-dropdown-trigger" id="heroValueTrigger" onclick="toggleHeroDropdown('value')"><span id="heroValueText">Async-First</span><span class="dd-arrow">&#9662;</span></span>
+                <div class="hero-dropdown-menu" id="heroValueMenu"></div>
+            </span>
         </div>
+        <button class="hero-match-btn" id="heroMatchBtn" onclick="goToHeroMatch()">Show me <span id="heroMatchCount">120</span> matches &rarr;</button>
+        <p class="hero-sub">The first job board that filters by how teams actually work — async or sync, fast or careful, flat or structured.</p>
+        <p class="hero-trust">Built on<strong> real employee reviews</strong>, not marketing fluff.</p>
         <div class="hero-metrics">
             <div><div class="metric-val">1,044</div><div class="metric-label">AI & tech roles</div></div>
             <div><div class="metric-val">18</div><div class="metric-label">culture values</div></div>
@@ -694,48 +682,6 @@
     </div>
 </section>
 
-
-<!-- ═══ VALUE PICKER ═══ -->
-<section class="picker" id="values">
-    <div class="container">
-        <div class="s-center">
-            <span class="s-label">01 — Pick Your Values</span>
-            <h2 class="s-title">What kind of team <em>fits you?</em></h2>
-            <p class="s-desc">Select up to 5 values that matter most. We'll match you with companies that actually live them.</p>
-        </div>
-
-        <div class="tags" id="tagsWrap">
-            <div class="tag-group-label teal-label">How You Work</div>
-            <div class="tag" data-v="wlb" data-c="teal"><span class="ico">⚖️</span>Work-Life Balance</div>
-            <div class="tag" data-v="remote" data-c="teal"><span class="ico">🌐</span>Remote-Friendly</div>
-            <div class="tag" data-v="flex-hours" data-c="teal"><span class="ico">🕐</span>Flexible Hours</div>
-            <div class="tag" data-v="async" data-c="teal"><span class="ico">📡</span>Async-First</div>
-            <div class="tag" data-v="deep-work" data-c="teal"><span class="ico">🎧</span>Deep Work / Low Meetings</div>
-            <div class="tag-group-label violet-label">How The Team Operates</div>
-            <div class="tag" data-v="transparent" data-c="violet"><span class="ico">🪟</span>Transparent Culture</div>
-            <div class="tag" data-v="flat" data-c="violet"><span class="ico">🤝</span>Flat Hierarchy</div>
-            <div class="tag" data-v="diverse" data-c="violet"><span class="ico">🌈</span>Diverse & Inclusive</div>
-            <div class="tag" data-v="psych-safety" data-c="violet"><span class="ico">🛡️</span>Safe to Fail</div>
-            <div class="tag-group-label sky-label">How You Build</div>
-            <div class="tag" data-v="eng-driven" data-c="sky"><span class="ico">⚙️</span>Engineering-Driven</div>
-            <div class="tag" data-v="ship-fast" data-c="sky"><span class="ico">🚀</span>Ship Fast & Iterate</div>
-            <div class="tag" data-v="open-source" data-c="sky"><span class="ico">🔓</span>Open Source Culture</div>
-            <div class="tag-group-label orange-label">How You Grow</div>
-            <div class="tag" data-v="learning" data-c="orange"><span class="ico">🌱</span>Learning & Growth</div>
-            <div class="tag" data-v="equity" data-c="orange"><span class="ico">💎</span>Strong Comp & Equity</div>
-            <div class="tag" data-v="product-impact" data-c="orange"><span class="ico">🎯</span>Direct Product Impact</div>
-            <div class="tag" data-v="many-hats" data-c="orange"><span class="ico">🧩</span>Wears Many Hats</div>
-            <div class="tag-group-label rose-label">What They Stand For</div>
-            <div class="tag" data-v="ethical-ai" data-c="rose"><span class="ico">🤖</span>Ethical AI / Safety</div>
-            <div class="tag" data-v="social-impact" data-c="rose"><span class="ico">💜</span>Mission-Driven</div>
-        </div>
-
-        <div class="picker-status" id="pickerStatus">Select at least <b>3</b> values to find matches</div>
-        <div class="picker-cta">
-            <button class="btn-match" id="matchBtn" onclick="goToJobs()">Show Matching Jobs →</button>
-        </div>
-    </div>
-</section>
 
 <!-- ═══ COMPANIES ═══ -->
 <section class="companies" id="companies">
@@ -1632,7 +1578,7 @@
                 <div class="quiz-result-type" id="qType"></div>
                 <p id="qDesc"></p>
                 <div class="quiz-result-tags" id="qTags"></div>
-                <a href="#values" class="btn-primary" onclick="resetQuiz()">Find Matching Jobs →</a>
+                <a href="/jobs" class="btn-primary">Find Matching Jobs →</a>
             </div>
             <div class="quiz-nav" id="qNav">
                 <button class="qbtn qbtn-back" id="qBack" onclick="prevQ()" disabled>← Back</button>
@@ -1767,57 +1713,189 @@
 // ═══════════════════════════════════════
 // VALUE PICKER
 // ═══════════════════════════════════════
-const tags = document.querySelectorAll('.tag');
-const matchBtn = document.getElementById('matchBtn');
-const pickerStatus = document.getElementById('pickerStatus');
-let selected = new Set();
+// ═══════════════════════════════════════
+// HERO INTERACTIVE CTA
+// ═══════════════════════════════════════
+const HERO_ROLES = [
+    { label: 'Software Engineer', slug: 'engineering' },
+    { label: 'ML Researcher',     slug: 'ml-ai' },
+    { label: 'Product Manager',   slug: 'product' },
+    { label: 'Data Scientist',    slug: 'data' },
+    { label: 'Designer',          slug: 'design' },
+    { label: 'Sales / GTM',       slug: 'sales' },
+    { label: 'Marketing',         slug: 'marketing' },
+    { label: 'Operations',        slug: 'operations' },
+];
+const HERO_VALUES = [
+    { label: 'Async-First',        slug: 'async' },
+    { label: 'Remote Work',        slug: 'remote' },
+    { label: 'Ethical AI',         slug: 'ethical-ai' },
+    { label: 'Work-Life Balance',  slug: 'wlb' },
+    { label: 'Open Source',        slug: 'open-source' },
+    { label: 'Engineering-Driven', slug: 'eng-driven' },
+    { label: 'Ship Fast',          slug: 'ship-fast' },
+    { label: 'Learning & Growth',  slug: 'learning' },
+    { label: 'Strong Comp',        slug: 'equity' },
+    { label: 'Flat Hierarchy',     slug: 'flat' },
+];
 
-tags.forEach(tag => {
-    tag.addEventListener('click', () => {
-        const v = tag.dataset.v;
-        if (selected.has(v)) {
-            selected.delete(v);
-            tag.classList.remove('on');
-        } else if (selected.size < 5) {
-            selected.add(v);
-            tag.classList.add('on');
-        }
-        updatePicker();
-    });
-});
+// Approximate role×value match counts (regenerate via browser console on /jobs after data updates)
+const MATCH_COUNTS = {
+    'engineering':{'async':18,'remote':42,'ethical-ai':38,'wlb':55,'open-source':32,'eng-driven':280,'ship-fast':195,'learning':170,'equity':145,'flat':22},
+    'ml-ai':{'async':4,'remote':8,'ethical-ai':30,'wlb':8,'open-source':10,'eng-driven':72,'ship-fast':45,'learning':55,'equity':40,'flat':6},
+    'data':{'async':2,'remote':5,'ethical-ai':5,'wlb':8,'open-source':5,'eng-driven':35,'ship-fast':22,'learning':28,'equity':20,'flat':3},
+    'product':{'async':2,'remote':5,'ethical-ai':4,'wlb':6,'open-source':3,'eng-driven':22,'ship-fast':16,'learning':18,'equity':14,'flat':3},
+    'design':{'async':1,'remote':4,'ethical-ai':2,'wlb':4,'open-source':2,'eng-driven':14,'ship-fast':10,'learning':10,'equity':8,'flat':2},
+    'sales':{'async':1,'remote':8,'ethical-ai':2,'wlb':10,'open-source':2,'eng-driven':30,'ship-fast':28,'learning':25,'equity':18,'flat':2},
+    'marketing':{'async':1,'remote':4,'ethical-ai':2,'wlb':5,'open-source':2,'eng-driven':15,'ship-fast':12,'learning':12,'equity':8,'flat':2},
+    'operations':{'async':3,'remote':10,'ethical-ai':8,'wlb':14,'open-source':5,'eng-driven':58,'ship-fast':42,'learning':45,'equity':32,'flat':5},
+};
 
-function updatePicker() {
-    const n = selected.size;
-    if (n === 0) {
-        pickerStatus.innerHTML = 'Select at least <b>3</b> values to find matches';
-        matchBtn.classList.remove('ready');
-    } else if (n < 3) {
-        pickerStatus.innerHTML = `<b>${n}</b>/5 selected — pick at least <b>${3 - n} more</b>`;
-        matchBtn.classList.remove('ready');
-    } else {
-        pickerStatus.innerHTML = `<b>${n}</b>/5 selected — ready to match!`;
-        matchBtn.classList.add('ready');
-    }
-    highlightCompanies();
+let heroRole = HERO_ROLES[0];
+let heroValue = HERO_VALUES[0];
+let typewriterTimer = null;
+let typewriterPaused = false;
+
+function buildHeroDropdowns() {
+    const roleMenu = document.getElementById('heroRoleMenu');
+    roleMenu.innerHTML = HERO_ROLES.map(r =>
+        `<button class="hero-dropdown-item${r.slug === heroRole.slug ? ' active' : ''}" data-slug="${r.slug}" onclick="selectHeroRole('${r.slug}')">${r.label}</button>`
+    ).join('');
+    const valueMenu = document.getElementById('heroValueMenu');
+    valueMenu.innerHTML = HERO_VALUES.map(v =>
+        `<button class="hero-dropdown-item${v.slug === heroValue.slug ? ' active' : ''}" data-slug="${v.slug}" onclick="selectHeroValue('${v.slug}')">${v.label}</button>`
+    ).join('');
+    updateHeroCount();
 }
 
-function highlightCompanies() {
-    document.querySelectorAll('.co-card').forEach(card => {
-        const vals = card.dataset.values.split(',');
-        let matches = 0;
-        card.querySelectorAll('.co-tag').forEach(ct => {
-            const v = ct.dataset.v;
-            if (selected.has(v)) { ct.classList.add('match'); matches++; }
-            else { ct.classList.remove('match'); }
+function toggleHeroDropdown(type) {
+    const roleMenu = document.getElementById('heroRoleMenu');
+    const valueMenu = document.getElementById('heroValueMenu');
+    if (type === 'role') {
+        roleMenu.classList.toggle('open');
+        valueMenu.classList.remove('open');
+    } else {
+        valueMenu.classList.toggle('open');
+        roleMenu.classList.remove('open');
+    }
+    pauseTypewriter();
+}
+
+function selectHeroRole(slug) {
+    heroRole = HERO_ROLES.find(r => r.slug === slug);
+    document.getElementById('heroRoleText').textContent = heroRole.label;
+    document.getElementById('heroRoleMenu').classList.remove('open');
+    document.querySelectorAll('#heroRoleMenu .hero-dropdown-item').forEach(el =>
+        el.classList.toggle('active', el.dataset.slug === slug)
+    );
+    updateHeroCount();
+    restartTypewriterDelayed();
+}
+
+function selectHeroValue(slug) {
+    heroValue = HERO_VALUES.find(v => v.slug === slug);
+    document.getElementById('heroValueText').textContent = heroValue.label;
+    document.getElementById('heroValueMenu').classList.remove('open');
+    document.querySelectorAll('#heroValueMenu .hero-dropdown-item').forEach(el =>
+        el.classList.toggle('active', el.dataset.slug === slug)
+    );
+    updateHeroCount();
+    restartTypewriterDelayed();
+}
+
+function updateHeroCount() {
+    const counts = MATCH_COUNTS[heroRole.slug];
+    const count = (counts && counts[heroValue.slug]) || 0;
+    document.getElementById('heroMatchCount').textContent = count;
+}
+
+function goToHeroMatch() {
+    window.location.href = '/jobs?role=' + heroRole.slug + '&values=' + heroValue.slug;
+}
+
+// Click-outside handler
+document.addEventListener('click', function(e) {
+    if (!e.target.closest('.hero-dropdown')) {
+        document.querySelectorAll('.hero-dropdown-menu').forEach(m => m.classList.remove('open'));
+    }
+});
+
+// Typewriter animation
+const roleCycle = ['Software Engineer', 'ML Researcher', 'Product Manager', 'Data Scientist', 'Designer'];
+const valueCycle = ['Async-First', 'Remote Work', 'Ethical AI', 'Work-Life Balance', 'Open Source'];
+let twTarget = 'role'; // alternates between 'role' and 'value'
+let twCycleIdx = 0;
+
+function typewriterErase(el, text, callback) {
+    let i = text.length;
+    function step() {
+        if (typewriterPaused) return;
+        if (i <= 0) { callback(); return; }
+        i--;
+        el.textContent = text.substring(0, i);
+        typewriterTimer = setTimeout(step, 30);
+    }
+    step();
+}
+
+function typewriterType(el, text, callback) {
+    let i = 0;
+    function step() {
+        if (typewriterPaused) return;
+        if (i >= text.length) { callback(); return; }
+        i++;
+        el.textContent = text.substring(0, i);
+        typewriterTimer = setTimeout(step, 50);
+    }
+    step();
+}
+
+function runTypewriterCycle() {
+    if (typewriterPaused) return;
+    let el, cycle, currentSlug;
+    if (twTarget === 'role') {
+        el = document.getElementById('heroRoleText');
+        cycle = roleCycle;
+        twCycleIdx = (roleCycle.indexOf(el.textContent) + 1) % roleCycle.length;
+    } else {
+        el = document.getElementById('heroValueText');
+        cycle = valueCycle;
+        twCycleIdx = (valueCycle.indexOf(el.textContent) + 1) % valueCycle.length;
+    }
+    const oldText = el.textContent;
+    const newText = cycle[twCycleIdx];
+    typewriterErase(el, oldText, function() {
+        typewriterType(el, newText, function() {
+            // Update state to match typewritten text
+            if (twTarget === 'role') {
+                const r = HERO_ROLES.find(r => r.label === newText);
+                if (r) { heroRole = r; updateHeroCount(); document.querySelectorAll('#heroRoleMenu .hero-dropdown-item').forEach(b => b.classList.toggle('active', b.dataset.slug === r.slug)); }
+            } else {
+                const v = HERO_VALUES.find(v => v.label === newText);
+                if (v) { heroValue = v; updateHeroCount(); document.querySelectorAll('#heroValueMenu .hero-dropdown-item').forEach(b => b.classList.toggle('active', b.dataset.slug === v.slug)); }
+            }
+            twTarget = twTarget === 'role' ? 'value' : 'role';
+            typewriterTimer = setTimeout(runTypewriterCycle, 2500);
         });
     });
 }
 
-function goToJobs() {
-    if (selected.size === 0) return;
-    const values = Array.from(selected).join(',');
-    window.location.href = '/jobs?values=' + values;
+function pauseTypewriter() {
+    typewriterPaused = true;
+    if (typewriterTimer) clearTimeout(typewriterTimer);
 }
+
+function restartTypewriterDelayed() {
+    pauseTypewriter();
+    typewriterTimer = setTimeout(function() {
+        typewriterPaused = false;
+        runTypewriterCycle();
+    }, 3000);
+}
+
+buildHeroDropdowns();
+// Start typewriter after a delay
+typewriterTimer = setTimeout(function() { runTypewriterCycle(); }, 2500);
 
 function scrollToCompanies() {
     document.getElementById('companies').scrollIntoView({ behavior: 'smooth' });

@@ -120,6 +120,80 @@
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
   </url>
+  <!-- Role filter pages -->
+  <url>
+    <loc>https://jobsbyculture.com/jobs?role=engineering</loc>
+    <lastmod>2026-02-25</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://jobsbyculture.com/jobs?role=ml-ai</loc>
+    <lastmod>2026-02-25</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://jobsbyculture.com/jobs?role=data</loc>
+    <lastmod>2026-02-25</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://jobsbyculture.com/jobs?role=product</loc>
+    <lastmod>2026-02-25</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://jobsbyculture.com/jobs?role=design</loc>
+    <lastmod>2026-02-25</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://jobsbyculture.com/jobs?role=sales</loc>
+    <lastmod>2026-02-25</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://jobsbyculture.com/jobs?role=marketing</loc>
+    <lastmod>2026-02-25</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://jobsbyculture.com/jobs?role=operations</loc>
+    <lastmod>2026-02-25</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <!-- Seniority filter pages -->
+  <url>
+    <loc>https://jobsbyculture.com/jobs?seniority=senior</loc>
+    <lastmod>2026-02-25</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://jobsbyculture.com/jobs?seniority=staff</loc>
+    <lastmod>2026-02-25</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://jobsbyculture.com/jobs?seniority=lead</loc>
+    <lastmod>2026-02-25</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://jobsbyculture.com/jobs?seniority=entry</loc>
+    <lastmod>2026-02-25</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.7</priority>
+  </url>
   <!-- Location filter pages -->
   <url>
     <loc>https://jobsbyculture.com/jobs?location=Remote</loc>
