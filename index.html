@@ -181,47 +181,28 @@
         }
         .hero-cta-line {
             font-family: var(--font-display); font-weight: 400;
-            font-size: clamp(36px, 4.5vw, 60px);
-            line-height: 1.2; letter-spacing: -0.02em;
-            max-width: 780px; margin-bottom: 32px;
+            font-size: clamp(38px, 5vw, 68px);
+            line-height: 1.12; letter-spacing: -0.025em;
+            max-width: 960px; margin-bottom: 28px;
             animation: fadeUp 0.5s ease 0.08s both;
             color: var(--text);
         }
-        .hero-dropdown { display: inline-block; position: relative; }
-        .hero-dropdown-trigger {
-            color: var(--accent); font-style: italic; font-family: var(--font-display);
-            cursor: pointer; position: relative; white-space: nowrap;
-            border-bottom: 2px solid var(--accent-border);
-            transition: border-color 0.2s;
+        .hero-rotating {
+            color: var(--accent); font-style: italic;
+            display: inline; white-space: nowrap;
+            border-bottom: 2.5px solid var(--accent-border);
         }
-        .hero-dropdown-trigger:hover { border-bottom-color: var(--accent); }
-        .hero-dropdown-trigger .dd-arrow { font-size: 0.6em; margin-left: 4px; font-style: normal; opacity: 0.5; }
-        .hero-dropdown-menu {
-            display: none; position: absolute; top: calc(100% + 8px); left: 50%; transform: translateX(-50%);
-            background: var(--bg-raised); border: 1px solid var(--border-2);
-            border-radius: var(--radius); box-shadow: var(--shadow-lg);
-            padding: 6px; min-width: 220px; z-index: 50;
-        }
-        .hero-dropdown-menu.open { display: block; }
-        .hero-dropdown-item {
-            display: block; width: 100%; padding: 10px 14px; border-radius: var(--radius-sm);
-            font-family: var(--font-body); font-size: 15px; font-weight: 500;
-            color: var(--text-2); cursor: pointer; transition: all 0.15s;
-            border: none; background: none; text-align: left;
-        }
-        .hero-dropdown-item:hover { background: var(--bg-hover); color: var(--text); }
-        .hero-dropdown-item.active { background: var(--accent-bg); color: var(--accent); font-weight: 600; }
-        .hero-match-btn {
-            display: inline-flex; align-items: center; gap: 8px;
-            background: var(--accent); color: #fff; padding: 14px 32px;
-            border-radius: var(--radius); font-size: 16px; font-weight: 700;
-            text-decoration: none; transition: all 0.25s; border: none; cursor: pointer;
-            font-family: var(--font-body); margin-bottom: 56px;
+        .hero-actions {
+            display: flex; align-items: center; gap: 16px; margin-bottom: 56px;
             animation: fadeUp 0.5s ease 0.22s both;
         }
-        .hero-match-btn:hover { background: var(--accent-hover); transform: translateY(-2px); box-shadow: 0 6px 24px rgba(232,89,12,0.2); }
-        .typewriter-cursor { display: inline-block; width: 2px; height: 0.85em; background: var(--accent); margin-left: 2px; vertical-align: text-bottom; animation: cursorBlink 0.7s infinite; }
-        @keyframes cursorBlink { 0%, 100% { opacity: 1; } 50% { opacity: 0; } }
+        .btn-primary {
+            background: var(--accent); color: #fff; padding: 13px 28px;
+            border-radius: var(--radius); font-size: 15px; font-weight: 700;
+            text-decoration: none; transition: all 0.25s; border: none; cursor: pointer;
+            font-family: var(--font-body);
+        }
+        .btn-primary:hover { background: var(--accent-hover); transform: translateY(-2px); box-shadow: 0 6px 24px rgba(232,89,12,0.2); }
         .btn-ghost {
             background: transparent; color: var(--text-2); padding: 13px 24px;
             border-radius: var(--radius); font-size: 15px; font-weight: 500;
@@ -449,8 +430,8 @@
             .nav-links { display: none; position: absolute; top: 100%; left: 0; right: 0; background: rgba(250,250,248,0.98); backdrop-filter: blur(20px); border-bottom: 1px solid var(--border); padding: 20px 24px; flex-direction: column; gap: 16px; box-shadow: 0 8px 24px rgba(0,0,0,0.06); }
             .nav-links.open { display: flex; }
             .hero { padding: 120px 0 60px; }
-            .hero-cta-line { font-size: clamp(28px, 6vw, 44px); }
-            .hero-dropdown-menu { left: 0; transform: none; min-width: 200px; }
+            .hero-cta-line { font-size: clamp(28px, 6.5vw, 44px); }
+            .hero-actions { flex-direction: column; align-items: flex-start; }
             .hero-metrics { gap: 28px; flex-wrap: wrap; }
             .co-grid { grid-template-columns: 1fr; }
             .ex-grid { grid-template-columns: 1fr 1fr; }
@@ -505,20 +486,14 @@
             Launching with AI & tech roles — more categories coming
         </div>
         <div class="hero-cta-line">
-            I'm a
-            <span class="hero-dropdown" id="heroRoleDD">
-                <span class="hero-dropdown-trigger" id="heroRoleTrigger" onclick="toggleHeroDropdown('role')"><span id="heroRoleText">Software Engineer</span><span class="dd-arrow">&#9662;</span></span>
-                <div class="hero-dropdown-menu" id="heroRoleMenu"></div>
-            </span>
-            who cares about
-            <span class="hero-dropdown" id="heroValueDD">
-                <span class="hero-dropdown-trigger" id="heroValueTrigger" onclick="toggleHeroDropdown('value')"><span id="heroValueText">Async-First</span><span class="dd-arrow">&#9662;</span></span>
-                <div class="hero-dropdown-menu" id="heroValueMenu"></div>
-            </span>
+            I'm a <span class="hero-rotating" id="heroRoleText">Software Engineer</span> who cares about <span class="hero-rotating" id="heroValueText">Async-First</span>
         </div>
-        <button class="hero-match-btn" id="heroMatchBtn" onclick="goToHeroMatch()">Show me <span id="heroMatchCount">120</span> matches &rarr;</button>
         <p class="hero-sub">The first job board that filters by how teams actually work — async or sync, fast or careful, flat or structured.</p>
         <p class="hero-trust">Built on<strong> real employee reviews</strong>, not marketing fluff.</p>
+        <div class="hero-actions">
+            <a href="/jobs" class="btn-primary">Pick Your Values &rarr;</a>
+            <a href="#quiz" class="btn-ghost">Take the Culture Quiz</a>
+        </div>
         <div class="hero-metrics">
             <div><div class="metric-val">1,044</div><div class="metric-label">AI & tech roles</div></div>
             <div><div class="metric-val">18</div><div class="metric-label">culture values</div></div>
@@ -1713,189 +1688,52 @@
 // ═══════════════════════════════════════
 // VALUE PICKER
 // ═══════════════════════════════════════
+// HERO TYPEWRITER
 // ═══════════════════════════════════════
-// HERO INTERACTIVE CTA
-// ═══════════════════════════════════════
-const HERO_ROLES = [
-    { label: 'Software Engineer', slug: 'engineering' },
-    { label: 'ML Researcher',     slug: 'ml-ai' },
-    { label: 'Product Manager',   slug: 'product' },
-    { label: 'Data Scientist',    slug: 'data' },
-    { label: 'Designer',          slug: 'design' },
-    { label: 'Sales / GTM',       slug: 'sales' },
-    { label: 'Marketing',         slug: 'marketing' },
-    { label: 'Operations',        slug: 'operations' },
-];
-const HERO_VALUES = [
-    { label: 'Async-First',        slug: 'async' },
-    { label: 'Remote Work',        slug: 'remote' },
-    { label: 'Ethical AI',         slug: 'ethical-ai' },
-    { label: 'Work-Life Balance',  slug: 'wlb' },
-    { label: 'Open Source',        slug: 'open-source' },
-    { label: 'Engineering-Driven', slug: 'eng-driven' },
-    { label: 'Ship Fast',          slug: 'ship-fast' },
-    { label: 'Learning & Growth',  slug: 'learning' },
-    { label: 'Strong Comp',        slug: 'equity' },
-    { label: 'Flat Hierarchy',     slug: 'flat' },
-];
-
-// Approximate role×value match counts (regenerate via browser console on /jobs after data updates)
-const MATCH_COUNTS = {
-    'engineering':{'async':18,'remote':42,'ethical-ai':38,'wlb':55,'open-source':32,'eng-driven':280,'ship-fast':195,'learning':170,'equity':145,'flat':22},
-    'ml-ai':{'async':4,'remote':8,'ethical-ai':30,'wlb':8,'open-source':10,'eng-driven':72,'ship-fast':45,'learning':55,'equity':40,'flat':6},
-    'data':{'async':2,'remote':5,'ethical-ai':5,'wlb':8,'open-source':5,'eng-driven':35,'ship-fast':22,'learning':28,'equity':20,'flat':3},
-    'product':{'async':2,'remote':5,'ethical-ai':4,'wlb':6,'open-source':3,'eng-driven':22,'ship-fast':16,'learning':18,'equity':14,'flat':3},
-    'design':{'async':1,'remote':4,'ethical-ai':2,'wlb':4,'open-source':2,'eng-driven':14,'ship-fast':10,'learning':10,'equity':8,'flat':2},
-    'sales':{'async':1,'remote':8,'ethical-ai':2,'wlb':10,'open-source':2,'eng-driven':30,'ship-fast':28,'learning':25,'equity':18,'flat':2},
-    'marketing':{'async':1,'remote':4,'ethical-ai':2,'wlb':5,'open-source':2,'eng-driven':15,'ship-fast':12,'learning':12,'equity':8,'flat':2},
-    'operations':{'async':3,'remote':10,'ethical-ai':8,'wlb':14,'open-source':5,'eng-driven':58,'ship-fast':42,'learning':45,'equity':32,'flat':5},
-};
-
-let heroRole = HERO_ROLES[0];
-let heroValue = HERO_VALUES[0];
-let typewriterTimer = null;
-let typewriterPaused = false;
-
-function buildHeroDropdowns() {
-    const roleMenu = document.getElementById('heroRoleMenu');
-    roleMenu.innerHTML = HERO_ROLES.map(r =>
-        `<button class="hero-dropdown-item${r.slug === heroRole.slug ? ' active' : ''}" data-slug="${r.slug}" onclick="selectHeroRole('${r.slug}')">${r.label}</button>`
-    ).join('');
-    const valueMenu = document.getElementById('heroValueMenu');
-    valueMenu.innerHTML = HERO_VALUES.map(v =>
-        `<button class="hero-dropdown-item${v.slug === heroValue.slug ? ' active' : ''}" data-slug="${v.slug}" onclick="selectHeroValue('${v.slug}')">${v.label}</button>`
-    ).join('');
-    updateHeroCount();
-}
-
-function toggleHeroDropdown(type) {
-    const roleMenu = document.getElementById('heroRoleMenu');
-    const valueMenu = document.getElementById('heroValueMenu');
-    if (type === 'role') {
-        roleMenu.classList.toggle('open');
-        valueMenu.classList.remove('open');
-    } else {
-        valueMenu.classList.toggle('open');
-        roleMenu.classList.remove('open');
-    }
-    pauseTypewriter();
-}
-
-function selectHeroRole(slug) {
-    heroRole = HERO_ROLES.find(r => r.slug === slug);
-    document.getElementById('heroRoleText').textContent = heroRole.label;
-    document.getElementById('heroRoleMenu').classList.remove('open');
-    document.querySelectorAll('#heroRoleMenu .hero-dropdown-item').forEach(el =>
-        el.classList.toggle('active', el.dataset.slug === slug)
-    );
-    updateHeroCount();
-    restartTypewriterDelayed();
-}
-
-function selectHeroValue(slug) {
-    heroValue = HERO_VALUES.find(v => v.slug === slug);
-    document.getElementById('heroValueText').textContent = heroValue.label;
-    document.getElementById('heroValueMenu').classList.remove('open');
-    document.querySelectorAll('#heroValueMenu .hero-dropdown-item').forEach(el =>
-        el.classList.toggle('active', el.dataset.slug === slug)
-    );
-    updateHeroCount();
-    restartTypewriterDelayed();
-}
-
-function updateHeroCount() {
-    const counts = MATCH_COUNTS[heroRole.slug];
-    const count = (counts && counts[heroValue.slug]) || 0;
-    document.getElementById('heroMatchCount').textContent = count;
-}
-
-function goToHeroMatch() {
-    window.location.href = '/jobs?role=' + heroRole.slug + '&values=' + heroValue.slug;
-}
-
-// Click-outside handler
-document.addEventListener('click', function(e) {
-    if (!e.target.closest('.hero-dropdown')) {
-        document.querySelectorAll('.hero-dropdown-menu').forEach(m => m.classList.remove('open'));
-    }
-});
-
-// Typewriter animation
 const roleCycle = ['Software Engineer', 'ML Researcher', 'Product Manager', 'Data Scientist', 'Designer'];
 const valueCycle = ['Async-First', 'Remote Work', 'Ethical AI', 'Work-Life Balance', 'Open Source'];
-let twTarget = 'role'; // alternates between 'role' and 'value'
-let twCycleIdx = 0;
+let twTarget = 'role';
+let twTimer = null;
 
-function typewriterErase(el, text, callback) {
+function twErase(el, text, cb) {
     let i = text.length;
-    function step() {
-        if (typewriterPaused) return;
-        if (i <= 0) { callback(); return; }
-        i--;
-        el.textContent = text.substring(0, i);
-        typewriterTimer = setTimeout(step, 30);
-    }
-    step();
+    (function step() {
+        if (i <= 0) { cb(); return; }
+        el.textContent = text.substring(0, --i);
+        twTimer = setTimeout(step, 20);
+    })();
 }
 
-function typewriterType(el, text, callback) {
+function twType(el, text, cb) {
     let i = 0;
-    function step() {
-        if (typewriterPaused) return;
-        if (i >= text.length) { callback(); return; }
-        i++;
-        el.textContent = text.substring(0, i);
-        typewriterTimer = setTimeout(step, 50);
-    }
-    step();
+    (function step() {
+        if (i >= text.length) { cb(); return; }
+        el.textContent = text.substring(0, ++i);
+        twTimer = setTimeout(step, 35);
+    })();
 }
 
-function runTypewriterCycle() {
-    if (typewriterPaused) return;
-    let el, cycle, currentSlug;
+function twCycle() {
+    var el, cycle;
     if (twTarget === 'role') {
         el = document.getElementById('heroRoleText');
         cycle = roleCycle;
-        twCycleIdx = (roleCycle.indexOf(el.textContent) + 1) % roleCycle.length;
     } else {
         el = document.getElementById('heroValueText');
         cycle = valueCycle;
-        twCycleIdx = (valueCycle.indexOf(el.textContent) + 1) % valueCycle.length;
     }
-    const oldText = el.textContent;
-    const newText = cycle[twCycleIdx];
-    typewriterErase(el, oldText, function() {
-        typewriterType(el, newText, function() {
-            // Update state to match typewritten text
-            if (twTarget === 'role') {
-                const r = HERO_ROLES.find(r => r.label === newText);
-                if (r) { heroRole = r; updateHeroCount(); document.querySelectorAll('#heroRoleMenu .hero-dropdown-item').forEach(b => b.classList.toggle('active', b.dataset.slug === r.slug)); }
-            } else {
-                const v = HERO_VALUES.find(v => v.label === newText);
-                if (v) { heroValue = v; updateHeroCount(); document.querySelectorAll('#heroValueMenu .hero-dropdown-item').forEach(b => b.classList.toggle('active', b.dataset.slug === v.slug)); }
-            }
+    var idx = (cycle.indexOf(el.textContent) + 1) % cycle.length;
+    var oldText = el.textContent;
+    var newText = cycle[idx];
+    twErase(el, oldText, function() {
+        twType(el, newText, function() {
             twTarget = twTarget === 'role' ? 'value' : 'role';
-            typewriterTimer = setTimeout(runTypewriterCycle, 2500);
+            twTimer = setTimeout(twCycle, 1800);
         });
     });
 }
 
-function pauseTypewriter() {
-    typewriterPaused = true;
-    if (typewriterTimer) clearTimeout(typewriterTimer);
-}
-
-function restartTypewriterDelayed() {
-    pauseTypewriter();
-    typewriterTimer = setTimeout(function() {
-        typewriterPaused = false;
-        runTypewriterCycle();
-    }, 3000);
-}
-
-buildHeroDropdowns();
-// Start typewriter after a delay
-typewriterTimer = setTimeout(function() { runTypewriterCycle(); }, 2500);
+twTimer = setTimeout(twCycle, 2000);
 
 function scrollToCompanies() {
     document.getElementById('companies').scrollIntoView({ behavior: 'smooth' });
