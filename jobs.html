@@ -160,6 +160,19 @@
         .sort-select { padding: 6px 10px; border-radius: var(--radius-sm); border: 1px solid var(--border); background: var(--bg-raised); font-size: 13px; font-family: var(--font-body); color: var(--text-2); cursor: pointer; }
         .results-list { display: flex; flex-direction: column; gap: 8px; }
 
+        /* COMPANY CULTURE CARD */
+        .company-culture-card {
+            background: var(--bg-raised); border: 1px solid var(--accent-border);
+            border-radius: var(--radius-lg); padding: 20px 22px; margin-bottom: 16px;
+        }
+        .ccc-top { display: flex; align-items: center; gap: 12px; margin-bottom: 12px; }
+        .ccc-logo { width: 36px; height: 36px; border-radius: var(--radius-sm); border: 1px solid var(--border); padding: 5px; object-fit: contain; }
+        .ccc-name { font-size: 16px; font-weight: 700; }
+        .ccc-meta { font-size: 12px; color: var(--text-2); }
+        .ccc-values { display: flex; flex-wrap: wrap; gap: 5px; margin-bottom: 14px; }
+        .ccc-link { display: inline-block; font-size: 13px; font-weight: 600; color: var(--accent); text-decoration: none; }
+        .ccc-link:hover { text-decoration: underline; }
+
         /* JOB CARD */
         .job {
             background: var(--bg-raised); border: 1px solid var(--border);
@@ -181,6 +194,8 @@
         .job-title { font-size: 16px; font-weight: 600; margin-bottom: 2px; line-height: 1.3; }
         .job-company { font-size: 13px; color: var(--text-2); }
         .job-company b { color: var(--text); font-weight: 600; }
+        .job-company-link { cursor: pointer; text-decoration: underline; text-decoration-color: transparent; transition: text-decoration-color 0.15s; }
+        .job-company-link:hover { text-decoration-color: var(--accent); color: var(--accent); }
         .job-meta { display: flex; flex-wrap: wrap; align-items: center; gap: 14px; font-size: 12.5px; color: var(--text-3); margin-bottom: 12px; }
         .job-meta span { display: flex; align-items: center; gap: 4px; }
         .job-tags { display: flex; flex-wrap: wrap; gap: 5px; margin-bottom: 14px; }
@@ -344,6 +359,17 @@
                     <option value="culture">Sort: Culture Score</option>
                     <option value="recent">Sort: Most Recent</option>
                 </select>
+            </div>
+            <div class="company-culture-card" id="companyCultureCard" style="display:none">
+                <div class="ccc-top">
+                    <img class="ccc-logo" id="cccLogo" src="" alt="">
+                    <div>
+                        <div class="ccc-name" id="cccName"></div>
+                        <div class="ccc-meta" id="cccMeta"></div>
+                    </div>
+                </div>
+                <div class="ccc-values" id="cccValues"></div>
+                <a class="ccc-link" id="cccLink" href="">View Full Culture Profile →</a>
             </div>
             <div class="results-list" id="jobsList"></div>
         </main>
@@ -1884,7 +1910,7 @@ function renderJobs() {
                 <div class="job-avatar"><img src="${c.logo}" alt="${c.name}" onerror="this.style.display='none';this.parentElement.textContent='${c.name[0]}'"></div>
                 <div class="job-info">
                     <div class="job-title">${j.title}</div>
-                    <div class="job-company"><b>${c.name}</b> · ${c.size} · ⭐ ${c.glassdoor}/5 Glassdoor</div>
+                    <div class="job-company"><b class="job-company-link" onclick="event.preventDefault();event.stopPropagation();window.location.href='/companies/${j.company}'">${c.name}</b> · ${c.size} · ⭐ ${c.glassdoor}/5 Glassdoor</div>
                 </div>
             </div>
             ${cultureHtml}
@@ -1926,6 +1952,18 @@ buildFilters();
         document.getElementById('searchInput').value = COMPANIES[company].name;
         document.getElementById('searchInputMobile').value = COMPANIES[company].name;
         searchQuery = COMPANIES[company].name.toLowerCase();
+        // Show company culture card
+        var co = COMPANIES[company];
+        document.getElementById('cccLogo').src = co.logo;
+        document.getElementById('cccLogo').alt = co.name;
+        document.getElementById('cccName').textContent = co.name;
+        document.getElementById('cccMeta').textContent = co.size + ' · ⭐ ' + co.glassdoor + '/5 Glassdoor · WLB ' + co.wlb_score + '/5';
+        document.getElementById('cccValues').innerHTML = co.values.map(function(v) {
+            var val = VALUES[v];
+            return val ? '<span class="jt jt-' + val.color + '">' + val.ico + ' ' + val.name + '</span>' : '';
+        }).join('');
+        document.getElementById('cccLink').href = '/companies/' + company;
+        document.getElementById('companyCultureCard').style.display = '';
     }
     // Support ?role=engineering or ?role=engineering,ml-ai
     const roleParam = params.get('role');
