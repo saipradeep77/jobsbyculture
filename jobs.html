@@ -2139,7 +2139,7 @@ renderJobs();
                 addr.addressRegion = usMatch ? usMatch[1] : '';
                 addr.addressCountry = 'US';
             } else if (/Central US|Northeast US|Multiple U\.S\./.test(seg) || seg === 'US' || /^United States/.test(seg)) {
-                addr.addressCountry = 'US';
+                addr.addressLocality = 'United States'; addr.addressCountry = 'US';
             } else if (/Paris/.test(seg)) {
                 addr.addressLocality = 'Paris'; addr.addressCountry = 'FR';
             } else if (/London/.test(seg)) {
@@ -2155,41 +2155,41 @@ renderJobs();
             } else if (/Barcelona|Madrid/.test(seg)) {
                 addr.addressLocality = seg.match(/Barcelona|Madrid/)[0]; addr.addressCountry = 'ES';
             } else if (/Denmark/.test(seg)) {
-                addr.addressCountry = 'DK';
+                addr.addressLocality = 'Copenhagen'; addr.addressCountry = 'DK';
             } else if (/Belgrade/.test(seg)) {
                 addr.addressLocality = 'Belgrade'; addr.addressCountry = 'RS';
             } else if (/Warsaw/.test(seg)) {
                 addr.addressLocality = 'Warsaw'; addr.addressCountry = 'PL';
             } else if (/United Kingdom|, UK/.test(seg)) {
-                addr.addressCountry = 'GB';
+                addr.addressLocality = 'London'; addr.addressCountry = 'GB';
             } else if (/Poland|, PL/.test(seg)) {
-                addr.addressCountry = 'PL';
+                addr.addressLocality = 'Warsaw'; addr.addressCountry = 'PL';
             } else if (/Europe/.test(seg)) {
-                addr.addressCountry = 'DE';
+                addr.addressLocality = 'Berlin'; addr.addressCountry = 'DE';
             } else if (/Toronto|Montreal|Vancouver|Ottawa|Canada|, CAN/.test(seg)) {
-                addr.addressLocality = (seg.match(/Toronto|Montreal|Vancouver|Ottawa/) || [''])[0]; addr.addressCountry = 'CA';
+                addr.addressLocality = (seg.match(/Toronto|Montreal|Vancouver|Ottawa/) || ['Toronto'])[0]; addr.addressCountry = 'CA';
             } else if (/Bengaluru|Bangalore|Mumbai|Hyderabad|Delhi|Pune|Chennai|India/.test(seg)) {
-                addr.addressLocality = (seg.match(/Bengaluru|Bangalore|Mumbai|Hyderabad|Delhi|Pune|Chennai/) || [''])[0]; addr.addressCountry = 'IN';
+                addr.addressLocality = (seg.match(/Bengaluru|Bangalore|Mumbai|Hyderabad|Delhi|Pune|Chennai/) || ['Bengaluru'])[0]; addr.addressCountry = 'IN';
             } else if (/Singapore/.test(seg)) {
                 addr.addressLocality = 'Singapore'; addr.addressCountry = 'SG';
             } else if (/Tokyo|Japan/.test(seg)) {
                 addr.addressLocality = 'Tokyo'; addr.addressCountry = 'JP';
             } else if (/Korea/.test(seg)) {
-                addr.addressCountry = 'KR';
+                addr.addressLocality = 'Seoul'; addr.addressCountry = 'KR';
             } else if (/Taiwan/.test(seg)) {
-                addr.addressCountry = 'TW';
+                addr.addressLocality = 'Taipei'; addr.addressCountry = 'TW';
             } else if (/Philippines/.test(seg)) {
-                addr.addressCountry = 'PH';
+                addr.addressLocality = 'Manila'; addr.addressCountry = 'PH';
             } else if (/Mexico/.test(seg)) {
                 addr.addressLocality = 'Mexico City'; addr.addressCountry = 'MX';
             } else if (/Sao Paulo|São Paulo|Brazil/.test(seg)) {
                 addr.addressLocality = 'São Paulo'; addr.addressCountry = 'BR';
             } else if (/Argentina/.test(seg)) {
-                addr.addressCountry = 'AR';
+                addr.addressLocality = 'Buenos Aires'; addr.addressCountry = 'AR';
             } else if (/Uruguay/.test(seg)) {
-                addr.addressCountry = 'UY';
+                addr.addressLocality = 'Montevideo'; addr.addressCountry = 'UY';
             } else if (/Costa Rica/.test(seg)) {
-                addr.addressCountry = 'CR';
+                addr.addressLocality = 'San José'; addr.addressCountry = 'CR';
             } else if (/Doha|Qatar/.test(seg)) {
                 addr.addressLocality = 'Doha'; addr.addressCountry = 'QA';
             } else if (/Riyadh|Saudi/.test(seg)) {
@@ -2199,7 +2199,7 @@ renderJobs();
             } else if (/Casablanca/.test(seg)) {
                 addr.addressLocality = 'Casablanca'; addr.addressCountry = 'MA';
             } else if (/Middle East/.test(seg)) {
-                addr.addressCountry = 'QA';
+                addr.addressLocality = 'Doha'; addr.addressCountry = 'QA';
             } else {
                 addr.addressLocality = seg.split(/[,\/]/)[0].trim();
             }
