@@ -11,14 +11,14 @@
     <meta property="og:description" content="Browse 1,044 AI & tech jobs filtered by culture values. Every job links directly to the original posting.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://jobsbyculture.com/jobs">
-    <meta property="og:image" content="https://jobsbyculture.com/og-image.png?v=3">
-    <meta property="og:image:width" content="2424">
-    <meta property="og:image:height" content="1480">
+    <meta property="og:image" content="https://jobsbyculture.com/og-image.png?v=4">
+    <meta property="og:image:width" content="2616">
+    <meta property="og:image:height" content="1190">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="1,044 AI & Tech Jobs Filtered by Culture | JobsByCulture">
     <meta name="twitter:description" content="Browse AI & tech jobs filtered by culture values like async-first, work-life balance, and ethical AI.">
     <meta name="twitter:site" content="@jobsbyculture">
-    <meta name="twitter:image" content="https://jobsbyculture.com/og-image.png?v=3">
+    <meta name="twitter:image" content="https://jobsbyculture.com/og-image.png?v=4">
     <link rel="canonical" href="https://jobsbyculture.com/jobs">
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='8' fill='%230a0a0b'/%3E%3Ccircle cx='20' cy='20' r='16' stroke='%2322c55e' stroke-width='1.5' fill='none' opacity='0.2'/%3E%3Ccircle cx='20' cy='20' r='10' stroke='%2322c55e' stroke-width='1.5' fill='none' opacity='0.4'/%3E%3Ccircle cx='20' cy='20' r='4.5' fill='%2322c55e'/%3E%3C/svg%3E">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -128,6 +128,25 @@
         .sb-clear:hover { text-decoration: underline; }
         .sb-clear.show { display: block; }
 
+        /* MOBILE FILTER COLLAPSE */
+        .mobile-filter-bar { display: none; }
+        .desktop-only { display: block; }
+        .filter-sections { display: block; }
+        .filter-toggle-btn {
+            display: inline-flex; align-items: center; gap: 6px;
+            padding: 10px 14px; border-radius: var(--radius);
+            border: 1px solid var(--border); background: var(--bg-raised);
+            font-size: 13px; font-weight: 600; color: var(--text-2);
+            white-space: nowrap; flex-shrink: 0; cursor: pointer;
+        }
+        .filter-toggle-btn.active { border-color: var(--accent); color: var(--accent); }
+        .filter-count {
+            display: none; min-width: 18px; height: 18px; padding: 0 5px;
+            border-radius: 9px; background: var(--accent); color: #fff;
+            font-size: 11px; font-weight: 700; line-height: 18px; text-align: center;
+        }
+        .filter-count.show { display: inline-block; }
+
         .loc-filters { display: flex; flex-direction: column; gap: 3px; }
         .lf { padding: 6px 10px; border-radius: var(--radius-sm); cursor: pointer; font-size: 13px; color: var(--text-2); transition: all 0.15s; }
         .lf:hover { background: var(--bg-hover); }
@@ -217,6 +236,16 @@
             .nav-links.open { display: flex; }
             .main-grid { grid-template-columns: 1fr; }
             .sidebar { position: static; max-height: none; }
+            /* Mobile filter collapse */
+            .desktop-only { display: none; }
+            .mobile-filter-bar {
+                display: flex; align-items: center; gap: 10px;
+                position: sticky; top: 53px; z-index: 50;
+                background: var(--bg); padding: 8px 0 16px;
+            }
+            .mobile-filter-bar .search-wrap { flex: 1; margin-bottom: 0; }
+            .filter-sections { display: none; padding-top: 8px; border-top: 1px solid var(--border); }
+            .filter-sections.open { display: block; }
         }
     </style>
     <!-- Privacy-friendly analytics by Plausible -->
@@ -256,35 +285,52 @@
     <div class="main-grid">
         <!-- SIDEBAR -->
         <aside class="sidebar">
-            <div class="search-wrap">
+            <!-- Mobile-only: sticky bar with search + filter toggle -->
+            <div class="mobile-filter-bar" id="mobileFilterBar">
+                <div class="search-wrap">
+                    <span class="search-ico">🔍</span>
+                    <input type="text" class="search-input" id="searchInputMobile" placeholder="Search role, company...">
+                </div>
+                <button class="filter-toggle-btn" id="filterToggleBtn" onclick="toggleMobileFilters()">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M2 4h12M4 8h8M6 12h4"/></svg>
+                    Filters
+                    <span class="filter-count" id="filterCount"></span>
+                </button>
+            </div>
+
+            <!-- Desktop-only search (hidden on mobile) -->
+            <div class="search-wrap desktop-only">
                 <span class="search-ico">🔍</span>
                 <input type="text" class="search-input" id="searchInput" placeholder="Search role, company...">
             </div>
 
-            <div class="sb-section">
-                <div class="sb-label">Filter by Culture Values</div>
-                <div class="value-filters" id="valueFilters"></div>
-                <div class="sb-clear" id="clearFilters" onclick="clearAll()">Clear all filters</div>
-            </div>
+            <!-- Filter sections — collapsible on mobile, always visible on desktop -->
+            <div class="filter-sections" id="filterSections">
+                <div class="sb-section">
+                    <div class="sb-label">Filter by Culture Values</div>
+                    <div class="value-filters" id="valueFilters"></div>
+                    <div class="sb-clear" id="clearFilters" onclick="clearAll()">Clear all filters</div>
+                </div>
 
-            <div class="sb-section">
-                <div class="sb-label">Role Category</div>
-                <div class="loc-filters" id="roleFilters"></div>
-            </div>
+                <div class="sb-section">
+                    <div class="sb-label">Role Category</div>
+                    <div class="loc-filters" id="roleFilters"></div>
+                </div>
 
-            <div class="sb-section">
-                <div class="sb-label">Seniority</div>
-                <div class="loc-filters" id="seniorityFilters"></div>
-            </div>
+                <div class="sb-section">
+                    <div class="sb-label">Seniority</div>
+                    <div class="loc-filters" id="seniorityFilters"></div>
+                </div>
 
-            <div class="sb-section">
-                <div class="sb-label">Location</div>
-                <div class="loc-filters" id="locFilters"></div>
-            </div>
+                <div class="sb-section">
+                    <div class="sb-label">Location</div>
+                    <div class="loc-filters" id="locFilters"></div>
+                </div>
 
-            <div class="sb-section">
-                <div class="sb-label">Company Size</div>
-                <div class="loc-filters" id="sizeFilters"></div>
+                <div class="sb-section">
+                    <div class="sb-label">Company Size</div>
+                    <div class="loc-filters" id="sizeFilters"></div>
+                </div>
             </div>
         </aside>
 
@@ -1658,18 +1704,21 @@ function toggleValue(v) {
     document.querySelectorAll('.vf').forEach(el => el.classList.toggle('on', activeValues.has(el.dataset.v)));
     document.getElementById('clearFilters').classList.toggle('show', activeValues.size > 0);
     renderJobs();
+    updateFilterCount();
 }
 
 function toggleLoc(l) {
     if (activeLocations.has(l)) activeLocations.delete(l); else activeLocations.add(l);
     document.querySelectorAll('#locFilters .lf').forEach(el => el.classList.toggle('on', activeLocations.has(el.dataset.l)));
     renderJobs();
+    updateFilterCount();
 }
 
 function toggleSize(s) {
     if (activeSizes.has(s)) activeSizes.delete(s); else activeSizes.add(s);
     document.querySelectorAll('#sizeFilters .lf').forEach(el => el.classList.toggle('on', activeSizes.has(el.dataset.s)));
     renderJobs();
+    updateFilterCount();
 }
 
 function toggleRole(r) {
@@ -1677,6 +1726,7 @@ function toggleRole(r) {
     document.querySelectorAll('#roleFilters .lf').forEach(el => el.classList.toggle('on', activeRoles.has(el.dataset.r)));
     document.getElementById('clearFilters').classList.toggle('show', activeValues.size > 0 || activeRoles.size > 0 || activeSeniorities.size > 0);
     renderJobs();
+    updateFilterCount();
 }
 
 function toggleSeniority(sn) {
@@ -1684,6 +1734,7 @@ function toggleSeniority(sn) {
     document.querySelectorAll('#seniorityFilters .lf').forEach(el => el.classList.toggle('on', activeSeniorities.has(el.dataset.sn)));
     document.getElementById('clearFilters').classList.toggle('show', activeValues.size > 0 || activeRoles.size > 0 || activeSeniorities.size > 0);
     renderJobs();
+    updateFilterCount();
 }
 
 function clearAll() {
@@ -1692,12 +1743,38 @@ function clearAll() {
     document.querySelectorAll('.vf,.lf').forEach(el => el.classList.remove('on'));
     document.getElementById('clearFilters').classList.remove('show');
     renderJobs();
+    updateFilterCount();
+    // Auto-close mobile filter panel after clearing
+    document.getElementById('filterSections').classList.remove('open');
 }
 
-// ═══ SEARCH ═══
-document.getElementById('searchInput').addEventListener('input', (e) => {
-    searchQuery = e.target.value.toLowerCase();
+// ═══ MOBILE FILTER COLLAPSE ═══
+function toggleMobileFilters() {
+    document.getElementById('filterSections').classList.toggle('open');
+    document.getElementById('filterToggleBtn').classList.toggle('active');
+}
+
+function updateFilterCount() {
+    var count = activeValues.size + activeLocations.size + activeSizes.size
+              + activeRoles.size + activeSeniorities.size;
+    var badge = document.getElementById('filterCount');
+    if (badge) { badge.textContent = count; badge.classList.toggle('show', count > 0); }
+    var btn = document.getElementById('filterToggleBtn');
+    if (btn) btn.classList.toggle('active', count > 0 || document.getElementById('filterSections').classList.contains('open'));
+}
+
+// ═══ SEARCH (synced mobile + desktop) ═══
+function syncSearch(value) {
+    searchQuery = value.toLowerCase();
+    document.getElementById('searchInput').value = value;
+    document.getElementById('searchInputMobile').value = value;
     renderJobs();
+}
+document.getElementById('searchInput').addEventListener('input', (e) => {
+    syncSearch(e.target.value);
+});
+document.getElementById('searchInputMobile').addEventListener('input', (e) => {
+    syncSearch(e.target.value);
 });
 
 // ═══ DYNAMIC SEO ═══
@@ -1847,6 +1924,7 @@ buildFilters();
     const company = params.get('company');
     if (company && COMPANIES[company]) {
         document.getElementById('searchInput').value = COMPANIES[company].name;
+        document.getElementById('searchInputMobile').value = COMPANIES[company].name;
         searchQuery = COMPANIES[company].name.toLowerCase();
     }
     // Support ?role=engineering or ?role=engineering,ml-ai
@@ -1883,6 +1961,7 @@ buildFilters();
     if (activeValues.size > 0 || activeLocations.size > 0 || activeRoles.size > 0 || activeSeniorities.size > 0) {
         document.getElementById('clearFilters').classList.toggle('show', true);
     }
+    updateFilterCount();
 })();
 
 renderJobs();
