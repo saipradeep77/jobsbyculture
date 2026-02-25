@@ -1591,7 +1591,7 @@
                 <div class="quiz-result-type" id="qType"></div>
                 <p id="qDesc"></p>
                 <div class="quiz-result-tags" id="qTags"></div>
-                <a href="/jobs" class="btn-primary">Find Matching Jobs →</a>
+                <a href="/jobs" class="btn-primary" id="qJobsLink">Find Matching Jobs →</a>
             </div>
             <div class="quiz-nav" id="qNav">
                 <button class="qbtn qbtn-back" id="qBack" onclick="prevQ()" disabled>← Back</button>
@@ -1995,6 +1995,14 @@ function nextQ() {
 }
 function prevQ() { if (qi > 0) { qi--; renderQ(); } }
 
+// Map quiz types to actual jobs page filter keys
+const typeToValues = {
+    'Deep Thinker': ['async', 'deep-work', 'wlb'],
+    'Builder-Shipper': ['ship-fast', 'product-impact', 'eng-driven'],
+    'Ethical Pioneer': ['ethical-ai', 'social-impact'],
+    'Growth Seeker': ['learning', 'diverse']
+};
+
 function showResult() {
     const tagCounts = {};
     answers.forEach((a, i) => {
@@ -2009,6 +2017,9 @@ function showResult() {
     document.getElementById('qType').textContent = '🎯 ' + best;
     document.getElementById('qDesc').textContent = r.desc;
     document.getElementById('qTags').innerHTML = r.tags.map(t => `<span class="qr-tag">${t}</span>`).join('');
+    // Build jobs link with matching culture values as filters
+    var vals = typeToValues[best] || [];
+    document.getElementById('qJobsLink').href = '/jobs' + (vals.length ? '?values=' + vals.join(',') : '');
     document.getElementById('qBody').style.display = 'none';
     document.getElementById('qNav').style.display = 'none';
     document.getElementById('qResult').style.display = 'block';
