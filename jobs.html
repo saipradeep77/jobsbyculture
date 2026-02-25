@@ -234,14 +234,24 @@
             border-top: 1px solid var(--border);
         }
         .culture-peek.open { display: block; }
-        .culture-peek-row { display: flex; align-items: center; gap: 8px; margin-bottom: 8px; font-size: 12px; color: var(--text-2); }
-        .culture-peek-row b { color: var(--text); font-weight: 600; }
-        .culture-peek-stars { font-family: var(--font-mono); font-weight: 600; }
-        .culture-peek-stars.high { color: var(--teal); }
-        .culture-peek-stars.mid { color: #d97706; }
-        .culture-peek-stars.low { color: var(--rose); }
-        .culture-peek-values { display: flex; flex-wrap: wrap; gap: 4px; margin-bottom: 10px; }
-        .culture-peek-values .jt { font-size: 10.5px; padding: 3px 8px; }
+        .culture-peek-summary {
+            font-size: 13px; color: var(--text-2); line-height: 1.6;
+            margin-bottom: 14px; font-style: italic;
+        }
+        .culture-peek-scores { display: flex; gap: 20px; margin-bottom: 14px; }
+        .cp-score { flex: 1; }
+        .cp-score-label { font-size: 11px; color: var(--text-3); margin-bottom: 4px; display: flex; justify-content: space-between; }
+        .cp-score-val { font-family: var(--font-mono); font-weight: 600; }
+        .cp-score-val.high { color: var(--teal); }
+        .cp-score-val.mid { color: #d97706; }
+        .cp-score-val.low { color: var(--rose); }
+        .cp-bar { height: 6px; background: var(--bg-hover); border-radius: 3px; overflow: hidden; }
+        .cp-bar-fill { height: 100%; border-radius: 3px; transition: width 0.4s ease; }
+        .cp-bar-fill.high { background: var(--teal); }
+        .cp-bar-fill.mid { background: #f59e0b; }
+        .cp-bar-fill.low { background: var(--rose); }
+        .culture-peek-footer { display: flex; align-items: center; justify-content: space-between; }
+        .cp-size { font-size: 12px; color: var(--text-3); }
         .culture-peek-profile {
             font-size: 12px; font-weight: 600; color: var(--accent);
             cursor: pointer; text-decoration: none;
@@ -1803,6 +1813,41 @@ function clearAll() {
 }
 
 // ═══ CULTURE PEEK (expand culture info in job card) ═══
+function getCultureSummary(companyKey) {
+    var c = COMPANIES[companyKey];
+    if (!c) return '';
+    var v = new Set(c.values);
+    var parts = [];
+    // Work style
+    if (v.has('async') && v.has('deep-work')) parts.push('async-first with a focus on deep work');
+    else if (v.has('async')) parts.push('async-first communication');
+    else if (v.has('deep-work')) parts.push('deep work over meetings');
+    if (v.has('remote')) parts.push('truly remote-friendly');
+    else if (v.has('flex-hours')) parts.push('flexible hours');
+    // Team
+    if (v.has('flat')) parts.push('flat hierarchy');
+    if (v.has('diverse') && v.has('psych-safety')) parts.push('inclusive and safe to fail');
+    else if (v.has('diverse')) parts.push('diverse & inclusive');
+    else if (v.has('psych-safety')) parts.push('psychological safety');
+    if (v.has('transparent')) parts.push('transparent decision-making');
+    // Engineering
+    if (v.has('eng-driven') && v.has('ship-fast')) parts.push('engineering-driven and ships fast');
+    else if (v.has('eng-driven')) parts.push('engineering-driven culture');
+    else if (v.has('ship-fast')) parts.push('ships fast and iterates');
+    if (v.has('open-source')) parts.push('strong open-source DNA');
+    // Growth & mission
+    if (v.has('ethical-ai') && v.has('social-impact')) parts.push('mission-driven with a focus on AI safety');
+    else if (v.has('ethical-ai')) parts.push('serious about AI safety');
+    else if (v.has('social-impact')) parts.push('mission-driven');
+    if (v.has('learning')) parts.push('invests in growth');
+    if (v.has('equity')) parts.push('strong comp & equity');
+    // Build sentence
+    if (parts.length === 0) return 'Explore what it\'s like to work at ' + c.name + '.';
+    if (parts.length === 1) return c.name + ' is known for ' + parts[0] + '.';
+    var last = parts.pop();
+    return c.name + ' is known for ' + parts.slice(0, 3).join(', ') + ', and ' + last + '.';
+}
+
 function toggleCulturePeek(btn) {
     var card = btn.closest('.job');
     var peek = card.querySelector('.culture-peek');
@@ -1965,15 +2010,21 @@ function renderJobs() {
                 <span class="job-apply">Apply →</span>
             </div>
             <div class="culture-peek">
-                <div class="culture-peek-row">
-                    <b>${c.name}</b> · ${c.size}
+                <div class="culture-peek-summary">${getCultureSummary(j.company)}</div>
+                <div class="culture-peek-scores">
+                    <div class="cp-score">
+                        <div class="cp-score-label">Glassdoor Rating <span class="cp-score-val ${c.glassdoor >= 4.0 ? 'high' : c.glassdoor >= 3.5 ? 'mid' : 'low'}">${c.glassdoor}/5</span></div>
+                        <div class="cp-bar"><div class="cp-bar-fill ${c.glassdoor >= 4.0 ? 'high' : c.glassdoor >= 3.5 ? 'mid' : 'low'}" style="width:${(c.glassdoor/5)*100}%"></div></div>
+                    </div>
+                    <div class="cp-score">
+                        <div class="cp-score-label">Work-Life Balance <span class="cp-score-val ${c.wlb_score >= 4.0 ? 'high' : c.wlb_score >= 3.5 ? 'mid' : 'low'}">${c.wlb_score}/5</span></div>
+                        <div class="cp-bar"><div class="cp-bar-fill ${c.wlb_score >= 4.0 ? 'high' : c.wlb_score >= 3.5 ? 'mid' : 'low'}" style="width:${(c.wlb_score/5)*100}%"></div></div>
+                    </div>
                 </div>
-                <div class="culture-peek-row">
-                    ⭐ Glassdoor: <span class="culture-peek-stars ${c.glassdoor >= 4.0 ? 'high' : c.glassdoor >= 3.5 ? 'mid' : 'low'}">${c.glassdoor}/5</span>
-                    &nbsp;·&nbsp; Work-Life Balance: <span class="culture-peek-stars ${c.wlb_score >= 4.0 ? 'high' : c.wlb_score >= 3.5 ? 'mid' : 'low'}">${c.wlb_score}/5</span>
+                <div class="culture-peek-footer">
+                    <span class="cp-size">👥 ${c.size}</span>
+                    <span class="culture-peek-profile" onclick="event.preventDefault();event.stopPropagation();window.location.href='/companies/${j.company}'">View Full Culture Profile →</span>
                 </div>
-                <div class="culture-peek-values">${c.values.map(v => { const val = VALUES[v]; return val ? '<span class="jt jt-'+val.color+'">'+val.ico+' '+val.name+'</span>' : ''; }).join('')}</div>
-                <span class="culture-peek-profile" onclick="event.preventDefault();event.stopPropagation();window.location.href='/companies/${j.company}'">View Full Culture Profile →</span>
             </div>
         </a>`;
     }).join('');
