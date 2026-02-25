@@ -1866,7 +1866,7 @@ document.addEventListener('click', function(e) {
 });
 
 // Typewriter — cycles role text only
-var roleCycle = ['Software Engineer', 'ML / AI Researcher', 'Product Manager', 'Data Scientist', 'Designer', 'Sales Professional', 'Marketer', 'Ops Specialist'];
+var roleCycle = HERO_ROLES.map(function(r) { return r.label; });
 
 function twErase(el, text, cb) {
     var i = text.length;
