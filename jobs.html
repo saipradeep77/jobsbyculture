@@ -1563,14 +1563,14 @@ function getRole(title) {
     const t = title.toLowerCase();
     // ML/AI checked before Engineering to prevent "ML Engineer" matching generic "Engineer"
     // NOTE: No trailing \b — partial-word prefixes like "product manag" must match "product manager"
-    if (/\b(machine learning|ml |ml$|deep learning|llm|nlp|natural language|computer vision|generative ai|ai scientist|research scientist|research engineer|reinforcement learning|member of technical staff|neural|diffusion|pretraining|alignment|interpretability|reward model|fine-?tuning|inference optimization)/.test(t)) return 'ml-ai';
+    if (/\b(machine learning|ml |ml$|deep learning|llm|nlp|natural language|computer vision|generative ai|ai scientist|research scientist|research engineer|reinforcement learning|member of technical staff|intern of technical staff|neural|diffusion|pretraining|alignment|interpretability|reward model|fine-?tuning|inference optimization|ai research|applied research|foundation model|ai safety)/.test(t)) return 'ml-ai';
     if (/\b(data scien|data analy|analytics|data engineer|business intelligence|bi |etl|data infra|data platform|data ops|database)/.test(t) && !/\bdata center\b/.test(t)) return 'data';
-    if (/\b(design|ux|ui |user experience|user interface|brand design|visual design|design system|interaction design|design engineer)/.test(t)) return 'design';
-    if (/\b(product manag|program manag|technical program|tpm|product lead|product strateg|product ops)/.test(t)) return 'product';
-    if (/\b(sales|account exec|account manag|business develop|revenue|go.to.market|gtm|solutions engineer|customer success|solutions architect|partnerships|deal desk)/.test(t)) return 'sales';
-    if (/\b(marketing|growth|content|seo|brand |demand gen|comms|communications|copywriter|social media|community manag|developer relations|devrel|evangelist)/.test(t)) return 'marketing';
-    if (/\b(engineer|developer|software|swe|frontend|backend|fullstack|full.stack|devops|sre|platform|infrastructure|security|cloud|systems|embedded|mobile|ios|android|rust|golang|architect)/.test(t)) return 'engineering';
-    if (/\b(operations|ops|people|hr|human resources|finance|accounting|legal|compliance|recrui|talent|office|admin|facilities|procurement|supply chain|logistics|support|coordinator|specialist|executive assistant)/.test(t)) return 'operations';
+    if (/\b(design|ux|ui |user experience|user interface|brand design|visual design|design system|interaction design|design engineer|art direct|creative)/.test(t)) return 'design';
+    if (/\b(product manag|program manag|project manag|technical program|tpm|product lead|product strateg|product ops)/.test(t)) return 'product';
+    if (/\b(sales|account exec|account manag|business develop|revenue|go.to.market|gtm|solutions engineer|customer success|solutions architect|partnerships|deal desk|sdr|engagement manag|solutions consult|customer advocate|technical solutions)/.test(t)) return 'sales';
+    if (/\b(marketing|growth|content|seo|brand |demand gen|comms|communications|copywriter|social media|community manag|developer relations|devrel|evangelist|analyst relation|pr |abm)/.test(t)) return 'marketing';
+    if (/\b(engineer|developer|software|swe|frontend|backend|fullstack|full.stack|devops|sre|platform|infrastructure|security|cloud|systems|embedded|mobile|ios|android|rust|golang|architect|qa )/.test(t)) return 'engineering';
+    if (/\b(operations|ops|people|hr|human resources|finance|accounting|legal|compliance|recrui|talent|office|admin|facilities|procurement|supply|logistics|support|coordinator|specialist|executive assistant|policy|counsel|investigat|technician|warehouse|payroll|accountant|fraud|ehs|sourcer|employee relation|tax|sox)/.test(t)) return 'operations';
     return null;
 }
 
