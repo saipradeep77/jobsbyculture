@@ -1,5 +1,13 @@
 {
   "cleanUrls": true,
+  "redirects": [
+    {
+      "source": "/:path(.*)",
+      "has": [{ "type": "host", "value": "www.jobsbyculture.com" }],
+      "destination": "https://jobsbyculture.com/:path",
+      "permanent": true
+    }
+  ],
   "headers": [
     {
       "source": "/(.*)",
