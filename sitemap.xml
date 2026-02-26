@@ -346,6 +346,12 @@
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
   </url>
+  <url>
+    <loc>https://jobsbyculture.com/jobs?company=airbnb</loc>
+    <lastmod>2026-02-27</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.7</priority>
+  </url>
   <!-- Company profile pages -->
   <url>
     <loc>https://jobsbyculture.com/companies/anthropic</loc>
@@ -446,6 +452,12 @@
   <url>
     <loc>https://jobsbyculture.com/companies/apollo</loc>
     <lastmod>2026-02-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://jobsbyculture.com/companies/airbnb</loc>
+    <lastmod>2026-02-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
