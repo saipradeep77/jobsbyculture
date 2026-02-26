@@ -3,22 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Airbnb Culture & Jobs | JobsByCulture</title>
+    <title>Airbnb Culture &amp; Jobs | JobsByCulture</title>
     <meta name="description" content="Airbnb engineering culture: 4.1 Glassdoor, Live and Work Anywhere policy, open source pioneers. See 247 open roles and real employee reviews.">
     <meta name="robots" content="index, follow">
-    <meta name="author" content="JobsByCulture">
-    <meta property="og:title" content="Airbnb Culture & Jobs | JobsByCulture">
+    <meta property="og:title" content="Airbnb Culture &amp; Jobs | JobsByCulture">
     <meta property="og:description" content="Airbnb engineering culture: 4.1 Glassdoor, Live and Work Anywhere policy, open source pioneers. See 247 open roles and real employee reviews.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://jobsbyculture.com/companies/airbnb">
-    <meta property="og:image" content="https://jobsbyculture.com/og-image.png?v=4">
-    <meta property="og:image:width" content="2616">
-    <meta property="og:image:height" content="1190">
+    <meta property="og:image" content="https://jobsbyculture.com/og-image.png?v=3">
+    <meta property="og:image:width" content="2424">
+    <meta property="og:image:height" content="1480">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Airbnb Culture & Jobs | JobsByCulture">
+    <meta name="twitter:title" content="Airbnb Culture &amp; Jobs | JobsByCulture">
     <meta name="twitter:description" content="Airbnb engineering culture: 4.1 Glassdoor, Live and Work Anywhere policy, open source pioneers. See 247 open roles and real employee reviews.">
     <meta name="twitter:site" content="@jobsbyculture">
-    <meta name="twitter:image" content="https://jobsbyculture.com/og-image.png?v=4">
+    <meta name="twitter:image" content="https://jobsbyculture.com/og-image.png?v=3">
     <link rel="canonical" href="https://jobsbyculture.com/companies/airbnb">
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='8' fill='%230a0a0b'/%3E%3Ccircle cx='20' cy='20' r='16' stroke='%2322c55e' stroke-width='1.5' fill='none' opacity='0.2'/%3E%3Ccircle cx='20' cy='20' r='10' stroke='%2322c55e' stroke-width='1.5' fill='none' opacity='0.4'/%3E%3Ccircle cx='20' cy='20' r='4.5' fill='%2322c55e'/%3E%3C/svg%3E">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -32,21 +31,9 @@
         "url": "https://airbnb.com",
         "description": "Global travel technology company that pioneered the sharing economy with its marketplace connecting hosts and travelers",
         "foundingDate": "2008",
-        "numberOfEmployees": {
-            "@type": "QuantitativeValue",
-            "value": 7300
-        },
-        "address": {
-            "@type": "PostalAddress",
-            "addressLocality": "San Francisco",
-            "addressRegion": "CA"
-        },
-        "aggregateRating": {
-            "@type": "AggregateRating",
-            "ratingValue": 4.1,
-            "bestRating": 5,
-            "ratingCount": 5000
-        }
+        "numberOfEmployees": { "@type": "QuantitativeValue", "value": 7300 },
+        "address": { "@type": "PostalAddress", "addressLocality": "San Francisco", "addressRegion": "CA" },
+        "aggregateRating": { "@type": "AggregateRating", "ratingValue": 4.1, "bestRating": 5, "ratingCount": 5000 }
     }
     </script>
     <style>
@@ -74,9 +61,9 @@
             --sky: #0284c7;
             --sky-bg: rgba(2,132,199,0.06);
             --sky-border: rgba(2,132,199,0.2);
-            --amber: #d97706;
-            --amber-bg: rgba(217,119,6,0.06);
-            --amber-border: rgba(217,119,6,0.2);
+            --lime: #4d7c0f;
+            --lime-bg: rgba(77,124,15,0.06);
+            --lime-border: rgba(77,124,15,0.2);
             --border: rgba(0,0,0,0.07);
             --border-2: rgba(0,0,0,0.12);
             --border-3: rgba(0,0,0,0.18);
@@ -138,296 +125,287 @@
         .hamburger.active span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
         .hamburger.active span:nth-child(2) { opacity: 0; }
         .hamburger.active span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
-        .btn-sm {
-            display: inline-flex; align-items: center; gap: 6px;
-            background: var(--accent); color: #fff; padding: 7px 16px;
-            border-radius: var(--radius-sm); font-size: 13px; font-weight: 600;
-            text-decoration: none; transition: all 0.2s; border: none; cursor: pointer;
+
+        /* ═══ ANIMATIONS ═══ */
+        @keyframes fadeUp {
+            from { opacity: 0; transform: translateY(16px); }
+            to { opacity: 1; transform: translateY(0); }
         }
-        .btn-sm:hover { background: var(--accent-hover); transform: translateY(-1px); }
+        @keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: 0.3; } }
 
         /* ═══ HERO ═══ */
-        .company-hero {
-            padding: 120px 0 56px;
+        .cp-hero {
+            padding: 130px 0 60px;
             position: relative;
+            text-align: center;
         }
-        .company-hero::before {
+        .cp-hero::before {
             content: ''; position: absolute; top: -100px; left: 50%; transform: translateX(-50%);
             width: 900px; height: 600px;
             background: radial-gradient(ellipse, rgba(232,89,12,0.06) 0%, transparent 70%);
             pointer-events: none;
         }
-        .hero-inner {
-            display: flex; align-items: flex-start; gap: 32px;
-            position: relative;
-        }
-        .company-logo {
-            width: 80px; height: 80px; border-radius: var(--radius-lg);
-            background: var(--bg-raised); border: 1px solid var(--border);
-            display: grid; place-items: center; flex-shrink: 0;
+        .cp-hero-logo {
+            width: 48px; height: 48px; border-radius: var(--radius);
             box-shadow: var(--shadow);
-            overflow: hidden;
+            margin: 0 auto 20px;
+            animation: fadeUp 0.5s ease both;
         }
-        .company-logo img {
-            width: 56px; height: 56px; object-fit: contain;
-        }
-        .hero-content { flex: 1; }
-        .hero-content h1 {
+        .cp-hero h1 {
             font-family: var(--font-display); font-weight: 400;
-            font-size: clamp(36px, 4.5vw, 56px);
+            font-size: clamp(36px, 4.5vw, 60px);
             line-height: 1.1; letter-spacing: -0.025em;
-            margin-bottom: 8px;
+            margin-bottom: 12px;
+            animation: fadeUp 0.5s ease 0.08s both;
         }
-        .hero-content h1 em { font-style: italic; color: var(--accent); }
-        .hero-tagline {
-            font-size: 17px; color: var(--text-2); line-height: 1.6;
-            margin-bottom: 24px; max-width: 600px;
+        .cp-hero-tagline {
+            font-size: 18px; color: var(--text-2); max-width: 560px;
+            line-height: 1.6; margin: 0 auto 32px;
+            animation: fadeUp 0.5s ease 0.16s both;
         }
-        .hero-stats {
-            display: flex; flex-wrap: wrap; gap: 32px;
+        .cp-hero-stats {
+            display: flex; justify-content: center; gap: 40px; flex-wrap: wrap;
+            animation: fadeUp 0.5s ease 0.24s both;
         }
-        .stat { display: flex; flex-direction: column; }
-        .stat-val {
-            font-family: var(--font-mono); font-size: 22px;
-            font-weight: 500; letter-spacing: -0.02em; color: var(--text);
+        .cp-stat {
+            text-align: center;
         }
-        .stat-val.teal { color: var(--teal); }
-        .stat-label { font-size: 12px; color: var(--text-3); margin-top: 2px; }
+        .cp-stat-val {
+            font-family: var(--font-mono); font-size: 22px; font-weight: 500;
+            letter-spacing: -0.02em; color: var(--text);
+        }
+        .cp-stat-label {
+            font-size: 13px; color: var(--text-3); margin-top: 2px;
+        }
 
         /* ═══ SECTIONS ═══ */
+        .cp-section {
+            padding: 56px 0;
+            border-top: 1px solid var(--border);
+        }
+        .cp-section-alt {
+            background: var(--bg-raised);
+        }
         .s-label {
             font-family: var(--font-mono); font-size: 11px; text-transform: uppercase;
             letter-spacing: 0.14em; color: var(--accent); display: block; margin-bottom: 14px;
         }
         .s-title {
-            font-family: var(--font-display); font-size: clamp(28px, 3vw, 40px);
-            line-height: 1.15; font-weight: 400; margin-bottom: 14px;
+            font-family: var(--font-display); font-size: clamp(26px, 2.8vw, 38px);
+            line-height: 1.15; font-weight: 400; margin-bottom: 20px;
         }
         .s-title em { font-style: italic; color: var(--accent); }
-        .s-desc { font-size: 16px; color: var(--text-2); max-width: 600px; line-height: 1.7; margin-bottom: 36px; }
+        .s-desc {
+            font-size: 16px; color: var(--text-2); max-width: 640px;
+            line-height: 1.7; margin-bottom: 32px;
+        }
 
-        /* ═══ CULTURE OVERVIEW ═══ */
-        .culture-section {
-            padding: 48px 0 56px;
-            border-top: 1px solid var(--border);
+        /* ═══ CULTURE TAGS ═══ */
+        .cp-values-tags {
+            display: flex; flex-wrap: wrap; gap: 10px;
         }
-        .culture-grid {
-            display: grid; grid-template-columns: 1fr 1fr; gap: 40px;
-            margin-bottom: 36px;
-        }
-        .culture-text p {
-            font-size: 15px; color: var(--text-2); line-height: 1.8; margin-bottom: 16px;
-        }
-        .value-tags {
-            display: flex; flex-wrap: wrap; gap: 8px; margin-top: 24px;
-        }
-        .vtag {
-            padding: 8px 16px; border-radius: var(--radius-full);
-            font-size: 13px; font-weight: 500;
+        .value-pill {
             display: inline-flex; align-items: center; gap: 6px;
+            padding: 8px 16px; border-radius: var(--radius-full);
+            font-size: 14px; font-weight: 500;
+            border: 1px solid;
         }
-        .vtag-teal { background: var(--teal-bg); border: 1px solid var(--teal-border); color: var(--teal); }
-        .vtag-sky { background: var(--sky-bg); border: 1px solid var(--sky-border); color: var(--sky); }
-        .vtag-orange { background: var(--accent-bg); border: 1px solid var(--accent-border); color: var(--accent); }
-        .vtag-violet { background: var(--violet-bg); border: 1px solid var(--violet-border); color: var(--violet); }
+        .value-pill.rose { color: var(--rose); background: var(--rose-bg); border-color: var(--rose-border); }
+        .value-pill.orange { color: var(--accent); background: var(--accent-bg); border-color: var(--accent-border); }
+        .value-pill.sky { color: var(--sky); background: var(--sky-bg); border-color: var(--sky-border); }
+        .value-pill.violet { color: var(--violet); background: var(--violet-bg); border-color: var(--violet-border); }
+        .value-pill.teal { color: var(--teal); background: var(--teal-bg); border-color: var(--teal-border); }
 
         /* ═══ RATINGS ═══ */
-        .ratings-section {
-            padding: 48px 0 56px;
-            background: var(--bg-raised);
-            border-top: 1px solid var(--border);
-            border-bottom: 1px solid var(--border);
+        .cp-ratings-grid {
+            display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 16px;
+            margin-bottom: 28px;
         }
-        .ratings-header {
-            display: flex; align-items: baseline; gap: 16px; margin-bottom: 8px;
-        }
-        .ratings-overall {
-            font-family: var(--font-mono); font-size: 48px; font-weight: 500;
-            color: var(--teal); letter-spacing: -0.03em;
-        }
-        .ratings-overall-label {
-            font-size: 15px; color: var(--text-2);
-        }
-        .ratings-meta {
-            display: flex; gap: 24px; margin-bottom: 36px; font-size: 14px; color: var(--text-2);
-        }
-        .ratings-meta strong { color: var(--text); }
-        .ratings-grid {
-            display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px;
-        }
-        .rating-item {
-            background: var(--bg); border: 1px solid var(--border);
+        .cp-rating-item {
+            background: var(--bg-card); border: 1px solid var(--border);
             border-radius: var(--radius); padding: 20px;
         }
-        .rating-label {
-            font-size: 13px; color: var(--text-2); margin-bottom: 10px; font-weight: 500;
+        .cp-rating-header {
+            display: flex; justify-content: space-between; align-items: center;
+            margin-bottom: 10px;
         }
-        .rating-bar-wrap {
-            display: flex; align-items: center; gap: 12px;
+        .cp-rating-label {
+            font-size: 14px; font-weight: 500; color: var(--text);
         }
-        .rating-bar {
-            flex: 1; height: 6px; background: var(--bg-hover);
-            border-radius: 3px; overflow: hidden;
+        .cp-rating-score {
+            font-family: var(--font-mono); font-size: 18px; font-weight: 500;
         }
-        .rating-fill {
+        .cp-rating-score.teal { color: var(--teal); }
+        .cp-rating-score.amber { color: #d97706; }
+        .cp-rating-score.rose { color: var(--rose); }
+        .cp-rating-bar {
+            width: 100%; height: 6px; border-radius: 3px;
+            background: var(--bg-hover); overflow: hidden;
+        }
+        .cp-rating-fill {
             height: 100%; border-radius: 3px; transition: width 0.6s ease;
         }
-        .rating-fill.teal { background: var(--teal); }
-        .rating-fill.amber { background: var(--amber); }
-        .rating-fill.rose { background: var(--rose); }
-        .rating-val {
-            font-family: var(--font-mono); font-size: 16px; font-weight: 600;
-            min-width: 32px; text-align: right;
+        .cp-rating-fill.teal { background: var(--teal); }
+        .cp-rating-fill.amber { background: #d97706; }
+        .cp-rating-fill.rose { background: var(--rose); }
+
+        .cp-approval-row {
+            display: flex; gap: 24px; flex-wrap: wrap;
         }
-        .rating-val.teal { color: var(--teal); }
-        .rating-val.amber { color: var(--amber); }
-        .rating-val.rose { color: var(--rose); }
+        .cp-approval-badge {
+            display: inline-flex; align-items: center; gap: 8px;
+            background: var(--teal-bg); border: 1px solid var(--teal-border);
+            padding: 10px 20px; border-radius: var(--radius-full);
+            font-size: 15px; font-weight: 600; color: var(--teal);
+        }
 
         /* ═══ REVIEWS ═══ */
-        .reviews-section {
-            padding: 48px 0 56px;
-            border-bottom: 1px solid var(--border);
-        }
-        .reviews-grid {
+        .cp-reviews-grid {
             display: grid; grid-template-columns: 1fr 1fr; gap: 24px;
         }
-        .review-card {
-            background: var(--bg-card); border: 1px solid var(--border);
-            border-radius: var(--radius-lg); padding: 28px;
-        }
-        .review-card h3 {
-            font-size: 15px; font-weight: 600; margin-bottom: 16px;
+        .cp-review-col h3 {
+            font-size: 16px; font-weight: 600; margin-bottom: 16px;
             display: flex; align-items: center; gap: 8px;
         }
-        .review-card h3 .ico { font-size: 18px; }
-        .review-card ul {
-            list-style: none; padding: 0;
+        .cp-review-col h3 .icon-pro { color: var(--teal); }
+        .cp-review-col h3 .icon-con { color: var(--rose); }
+        .cp-review-list {
+            list-style: none; display: flex; flex-direction: column; gap: 12px;
         }
-        .review-card li {
-            font-size: 14px; color: var(--text-2); padding: 8px 0;
-            line-height: 1.6; border-bottom: 1px solid var(--border);
-            display: flex; align-items: flex-start; gap: 8px;
+        .cp-review-list li {
+            display: flex; gap: 10px; align-items: flex-start;
+            font-size: 15px; color: var(--text-2); line-height: 1.6;
         }
-        .review-card li:last-child { border-bottom: none; }
-        .review-card li .bullet {
-            flex-shrink: 0; margin-top: 5px; width: 5px; height: 5px;
-            border-radius: 50%;
+        .cp-review-list li .check {
+            flex-shrink: 0; width: 20px; height: 20px; border-radius: 50%;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 12px; margin-top: 2px;
         }
-        .bullet-green { background: var(--teal); }
-        .bullet-red { background: var(--rose); }
-        .review-source {
-            font-size: 11px; color: var(--text-3); font-style: italic;
-            margin-top: 16px; padding-top: 12px; border-top: 1px solid var(--border);
-        }
+        .check-pro { background: var(--teal-bg); color: var(--teal); }
+        .check-con { background: var(--rose-bg); color: var(--rose); }
 
-        /* ═══ ENGINEERING ═══ */
-        .eng-section {
-            padding: 48px 0 56px;
-            border-bottom: 1px solid var(--border);
+        /* ═══ ENG CULTURE ═══ */
+        .cp-eng-grid {
+            display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 16px;
         }
-        .eng-grid {
-            display: grid; grid-template-columns: 1fr 1fr; gap: 24px;
-        }
-        .eng-card {
+        .cp-eng-card {
             background: var(--bg-card); border: 1px solid var(--border);
-            border-radius: var(--radius); padding: 24px;
+            border-radius: var(--radius); padding: 22px;
         }
-        .eng-card h4 {
+        .cp-eng-card h4 {
             font-size: 13px; font-weight: 600; text-transform: uppercase;
-            letter-spacing: 0.08em; color: var(--text-3); margin-bottom: 14px;
+            letter-spacing: 0.06em; color: var(--text-3); margin-bottom: 12px;
         }
-        .eng-tags {
-            display: flex; flex-wrap: wrap; gap: 6px;
+        .cp-eng-tags {
+            display: flex; flex-wrap: wrap; gap: 8px;
         }
-        .eng-tag {
-            padding: 6px 12px; border-radius: var(--radius-full);
-            font-family: var(--font-mono); font-size: 12px; font-weight: 500;
-            background: var(--bg); border: 1px solid var(--border);
-            color: var(--text-2);
+        .cp-eng-tag {
+            font-family: var(--font-mono); font-size: 13px; font-weight: 500;
+            padding: 5px 12px; border-radius: var(--radius-sm);
+            background: var(--sky-bg); border: 1px solid var(--sky-border);
+            color: var(--sky);
         }
-        .eng-tag.highlight {
-            background: var(--sky-bg); border-color: var(--sky-border); color: var(--sky);
+        .cp-eng-card p {
+            font-size: 15px; color: var(--text-2); line-height: 1.6;
         }
+        .cp-eng-card a {
+            color: var(--accent); text-decoration: none; font-weight: 500;
+        }
+        .cp-eng-card a:hover { text-decoration: underline; }
 
-        /* ═══ JOBS ═══ */
-        .jobs-section {
-            padding: 48px 0 56px;
-            background: var(--bg-raised);
-            border-bottom: 1px solid var(--border);
-        }
-        .jobs-list {
-            display: flex; flex-direction: column; gap: 8px;
+        /* ═══ JOB CARDS ═══ */
+        .cp-jobs-grid {
+            display: grid; grid-template-columns: repeat(auto-fill, minmax(340px, 1fr)); gap: 12px;
             margin-bottom: 32px;
         }
-        .job-card {
-            display: flex; align-items: center; justify-content: space-between;
-            background: var(--bg); border: 1px solid var(--border);
-            border-radius: var(--radius); padding: 18px 22px;
-            text-decoration: none; color: var(--text);
-            transition: all 0.2s;
+        .cp-job-card {
+            display: flex; flex-direction: column; justify-content: space-between;
+            background: var(--bg-card); border: 1px solid var(--border);
+            border-radius: var(--radius); padding: 20px;
+            text-decoration: none; color: var(--text); transition: all 0.2s;
         }
-        .job-card:hover {
-            border-color: var(--accent-border); transform: translateY(-1px);
+        .cp-job-card:hover {
+            border-color: var(--accent); transform: translateY(-2px);
             box-shadow: var(--shadow);
         }
-        .job-card-info { display: flex; flex-direction: column; gap: 4px; }
-        .job-card-title { font-size: 15px; font-weight: 600; }
-        .job-card-loc { font-size: 13px; color: var(--text-3); display: flex; align-items: center; gap: 4px; }
-        .job-card-arrow {
-            font-size: 18px; color: var(--text-3); transition: all 0.2s;
-            flex-shrink: 0;
+        .cp-job-title {
+            font-size: 15px; font-weight: 600; line-height: 1.4;
+            margin-bottom: 8px; color: var(--text);
         }
-        .job-card:hover .job-card-arrow { color: var(--accent); transform: translateX(3px); }
-
-        /* CTA */
-        .cta-wrap { text-align: center; }
+        .cp-job-location {
+            font-size: 13px; color: var(--text-3); margin-bottom: 14px;
+            display: flex; align-items: center; gap: 6px;
+        }
+        .cp-job-apply {
+            font-size: 13px; font-weight: 600; color: var(--accent);
+            display: inline-flex; align-items: center; gap: 4px;
+        }
+        .cp-cta-center {
+            text-align: center; margin-top: 8px;
+        }
         .btn-primary {
             display: inline-flex; align-items: center; gap: 8px;
-            background: var(--accent); color: #fff; padding: 14px 32px;
-            border-radius: var(--radius); font-size: 16px; font-weight: 700;
+            background: var(--accent); color: #fff; padding: 13px 28px;
+            border-radius: var(--radius); font-size: 15px; font-weight: 700;
             text-decoration: none; transition: all 0.25s; border: none; cursor: pointer;
             font-family: var(--font-body);
         }
-        .btn-primary:hover {
-            background: var(--accent-hover); transform: translateY(-2px);
-            box-shadow: 0 6px 24px rgba(232,89,12,0.2);
-        }
+        .btn-primary:hover { background: var(--accent-hover); transform: translateY(-2px); box-shadow: 0 6px 24px rgba(232,89,12,0.2); }
 
         /* ═══ FOOTER ═══ */
-        footer { padding: 56px 0 36px; border-top: 1px solid var(--border); }
-        .ft-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 40px; margin-bottom: 40px; }
-        .ft-about p { font-size: 13px; color: var(--text-3); margin-top: 10px; line-height: 1.7; max-width: 260px; }
-        .ft-col h4 { font-size: 12px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em; color: var(--text-2); margin-bottom: 14px; }
-        .ft-col a { display: block; font-size: 13px; color: var(--text-3); text-decoration: none; padding: 3px 0; transition: color 0.15s; }
-        .ft-col a:hover { color: var(--text); }
-        .ft-bar { border-top: 1px solid var(--border); padding-top: 20px; display: flex; justify-content: space-between; align-items: center; }
-        .ft-bar p { font-size: 12px; color: var(--text-3); }
+        .cp-footer {
+            padding: 40px 0;
+            border-top: 1px solid var(--border);
+            text-align: center;
+        }
+        .cp-footer-links {
+            display: flex; justify-content: center; align-items: center; gap: 24px;
+            margin-bottom: 12px;
+        }
+        .cp-footer-links a {
+            font-size: 14px; color: var(--text-2); text-decoration: none;
+            font-weight: 500; transition: color 0.15s;
+        }
+        .cp-footer-links a:hover { color: var(--accent); }
+        .cp-footer p {
+            font-size: 13px; color: var(--text-3);
+        }
+        .cp-footer p a {
+            color: var(--accent); text-decoration: none;
+        }
 
-        /* ═══ ANIMATIONS ═══ */
-        @keyframes fadeUp { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }
-        @keyframes blink { 0%,100% { opacity: 1; } 50% { opacity: 0.3; } }
-        .anim-1 { animation: fadeUp 0.5s ease both; }
-        .anim-2 { animation: fadeUp 0.5s ease 0.08s both; }
-        .anim-3 { animation: fadeUp 0.5s ease 0.16s both; }
-        .anim-4 { animation: fadeUp 0.5s ease 0.24s both; }
+        /* ═══ OVERALL SCORE BADGE ═══ */
+        .cp-overall-badge {
+            display: inline-flex; align-items: center; gap: 12px;
+            background: var(--bg-card); border: 1px solid var(--border);
+            border-radius: var(--radius); padding: 16px 24px;
+            margin-bottom: 28px;
+        }
+        .cp-overall-score {
+            font-family: var(--font-mono); font-size: 36px; font-weight: 500;
+            color: var(--teal);
+        }
+        .cp-overall-meta {
+            text-align: left;
+        }
+        .cp-overall-label {
+            font-size: 14px; font-weight: 600; color: var(--text);
+        }
+        .cp-overall-sub {
+            font-size: 13px; color: var(--text-3);
+        }
 
         /* ═══ RESPONSIVE ═══ */
         @media (max-width: 768px) {
             .hamburger { display: flex; }
             .nav-links { display: none; position: absolute; top: 100%; left: 0; right: 0; background: rgba(250,250,248,0.98); backdrop-filter: blur(20px); border-bottom: 1px solid var(--border); padding: 20px 24px; flex-direction: column; gap: 16px; box-shadow: 0 8px 24px rgba(0,0,0,0.06); }
             .nav-links.open { display: flex; }
-            .hero-inner { flex-direction: column; gap: 20px; }
-            .hero-stats { gap: 20px; }
-            .culture-grid { grid-template-columns: 1fr; }
-            .ratings-grid { grid-template-columns: 1fr 1fr; }
-            .reviews-grid { grid-template-columns: 1fr; }
-            .eng-grid { grid-template-columns: 1fr; }
-            .ft-grid { grid-template-columns: 1fr 1fr; gap: 28px; }
-        }
-        @media (max-width: 480px) {
-            .ratings-grid { grid-template-columns: 1fr; }
-            .ft-grid { grid-template-columns: 1fr; }
-            .hero-stats { flex-direction: column; gap: 16px; }
+            .cp-hero { padding: 110px 0 40px; }
+            .cp-hero-stats { gap: 24px; }
+            .cp-reviews-grid { grid-template-columns: 1fr; }
+            .cp-ratings-grid { grid-template-columns: 1fr; }
+            .cp-jobs-grid { grid-template-columns: 1fr; }
+            .cp-eng-grid { grid-template-columns: 1fr; }
         }
     </style>
 <!-- Privacy-friendly analytics by Plausible -->
@@ -458,286 +436,276 @@
     </div>
 </nav>
 
-<!-- ═══ COMPANY HERO ═══ -->
-<section class="company-hero">
+<!-- ═══ HERO ═══ -->
+<section class="cp-hero">
     <div class="container">
-        <div class="hero-inner anim-1">
-            <div class="company-logo">
-                <img src="https://www.google.com/s2/favicons?domain=airbnb.com&sz=128" alt="Airbnb logo">
+        <img src="https://www.google.com/s2/favicons?domain=airbnb.com&sz=128" alt="Airbnb logo" class="cp-hero-logo">
+        <h1>Airbnb</h1>
+        <p class="cp-hero-tagline">Global Travel Technology Company &mdash; Pioneering the Sharing Economy</p>
+        <div class="cp-hero-stats">
+            <div class="cp-stat">
+                <div class="cp-stat-val">2008</div>
+                <div class="cp-stat-label">Founded</div>
             </div>
-            <div class="hero-content">
-                <h1 class="anim-2"><em>Airbnb</em></h1>
-                <p class="hero-tagline anim-3">Global travel technology company &mdash; Pioneering the sharing economy</p>
-                <div class="hero-stats anim-4">
-                    <div class="stat">
-                        <div class="stat-val teal">4.1</div>
-                        <div class="stat-label">Glassdoor</div>
-                    </div>
-                    <div class="stat">
-                        <div class="stat-val">2008</div>
-                        <div class="stat-label">Founded</div>
-                    </div>
-                    <div class="stat">
-                        <div class="stat-val">~7,300</div>
-                        <div class="stat-label">Employees</div>
-                    </div>
-                    <div class="stat">
-                        <div class="stat-val">San Francisco</div>
-                        <div class="stat-label">Headquarters</div>
-                    </div>
-                    <div class="stat">
-                        <div class="stat-val">247</div>
-                        <div class="stat-label">Open Roles</div>
-                    </div>
-                </div>
+            <div class="cp-stat">
+                <div class="cp-stat-val">San Francisco</div>
+                <div class="cp-stat-label">Headquarters</div>
+            </div>
+            <div class="cp-stat">
+                <div class="cp-stat-val">~7,300</div>
+                <div class="cp-stat-label">Employees</div>
+            </div>
+            <div class="cp-stat">
+                <div class="cp-stat-val">247</div>
+                <div class="cp-stat-label">Open Roles</div>
             </div>
         </div>
     </div>
 </section>
 
 <!-- ═══ CULTURE OVERVIEW ═══ -->
-<section class="culture-section">
+<section class="cp-section cp-section-alt">
     <div class="container">
         <span class="s-label">Culture Overview</span>
         <h2 class="s-title">Live and work <em>anywhere</em></h2>
-        <div class="culture-grid">
-            <div class="culture-text">
-                <p>Airbnb redefined travel by creating the world's largest community-driven accommodation platform, and they've applied that same innovative spirit to how they build their workplace. Since 2022, their groundbreaking "Live and Work Anywhere" policy allows employees to live anywhere in their country of employment with no change to compensation &mdash; one of the most progressive remote work policies in tech.</p>
-            </div>
-            <div class="culture-text">
-                <p>The engineering culture is deeply rooted in open source &mdash; Airbnb has contributed major projects like Lottie (animation library used by millions of apps), Apache Airflow (now an Apache Foundation project), and dozens more across 200+ public repositories. Design and craft are central to the DNA, with CEO Brian Chesky famously modeling his leadership approach after Steve Jobs' obsession with product details.</p>
-            </div>
-        </div>
-        <div class="value-tags">
-            <span class="vtag vtag-teal">&#127760; Remote-Friendly</span>
-            <span class="vtag vtag-teal">&#9878;&#65039; Work-Life Balance</span>
-            <span class="vtag vtag-violet">&#127752; Diverse & Inclusive</span>
-            <span class="vtag vtag-sky">&#128275; Open Source Culture</span>
-            <span class="vtag vtag-orange">&#128142; Strong Comp & Equity</span>
+        <p class="s-desc">Airbnb redefined travel by creating the world's largest community-driven accommodation platform, and they've applied that same innovative spirit to how they build their workplace. Since 2022, their groundbreaking "Live and Work Anywhere" policy allows employees to live anywhere in their country of employment with no change to compensation &mdash; one of the most progressive remote work policies in tech. The engineering culture is deeply rooted in open source, with contributions like Lottie, Apache Airflow, and 200+ public repositories.</p>
+        <div class="cp-values-tags">
+            <span class="value-pill teal">Remote-Friendly</span>
+            <span class="value-pill teal">Work-Life Balance</span>
+            <span class="value-pill violet">Diverse &amp; Inclusive</span>
+            <span class="value-pill sky">Open Source Culture</span>
+            <span class="value-pill orange">Strong Comp &amp; Equity</span>
         </div>
     </div>
 </section>
 
 <!-- ═══ GLASSDOOR RATINGS ═══ -->
-<section class="ratings-section">
+<section class="cp-section">
     <div class="container">
         <span class="s-label">Glassdoor Ratings</span>
-        <div class="ratings-header">
-            <div class="ratings-overall">4.1</div>
-            <div class="ratings-overall-label">out of 5.0 &mdash; Glassdoor</div>
+        <h2 class="s-title">What employees <em>actually</em> say</h2>
+
+        <div class="cp-overall-badge">
+            <div class="cp-overall-score">4.1</div>
+            <div class="cp-overall-meta">
+                <div class="cp-overall-label">Overall Glassdoor Score</div>
+                <div class="cp-overall-sub">Based on 5,000 reviews</div>
+            </div>
         </div>
-        <div class="ratings-meta">
-            <span><strong>80%</strong> recommend to a friend</span>
-            <span><strong>87%</strong> approve of CEO (Brian Chesky)</span>
+
+        <div class="cp-ratings-grid">
+            <div class="cp-rating-item">
+                <div class="cp-rating-header">
+                    <span class="cp-rating-label">Culture &amp; Values</span>
+                    <span class="cp-rating-score teal">4.2</span>
+                </div>
+                <div class="cp-rating-bar"><div class="cp-rating-fill teal" style="width: 84%"></div></div>
+            </div>
+            <div class="cp-rating-item">
+                <div class="cp-rating-header">
+                    <span class="cp-rating-label">Work-Life Balance</span>
+                    <span class="cp-rating-score teal">4.0</span>
+                </div>
+                <div class="cp-rating-bar"><div class="cp-rating-fill teal" style="width: 80%"></div></div>
+            </div>
+            <div class="cp-rating-item">
+                <div class="cp-rating-header">
+                    <span class="cp-rating-label">Compensation &amp; Benefits</span>
+                    <span class="cp-rating-score teal">4.2</span>
+                </div>
+                <div class="cp-rating-bar"><div class="cp-rating-fill teal" style="width: 84%"></div></div>
+            </div>
+            <div class="cp-rating-item">
+                <div class="cp-rating-header">
+                    <span class="cp-rating-label">Career Opportunities</span>
+                    <span class="cp-rating-score amber">3.5</span>
+                </div>
+                <div class="cp-rating-bar"><div class="cp-rating-fill amber" style="width: 70%"></div></div>
+            </div>
+            <div class="cp-rating-item">
+                <div class="cp-rating-header">
+                    <span class="cp-rating-label">Senior Management</span>
+                    <span class="cp-rating-score amber">3.5</span>
+                </div>
+                <div class="cp-rating-bar"><div class="cp-rating-fill amber" style="width: 70%"></div></div>
+            </div>
+            <div class="cp-rating-item">
+                <div class="cp-rating-header">
+                    <span class="cp-rating-label">Overall Rating</span>
+                    <span class="cp-rating-score teal">4.1</span>
+                </div>
+                <div class="cp-rating-bar"><div class="cp-rating-fill teal" style="width: 82%"></div></div>
+            </div>
         </div>
-        <div class="ratings-grid" id="ratingsGrid"></div>
+
+        <div class="cp-approval-row">
+            <div class="cp-approval-badge">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 9V5a3 3 0 0 0-3-3l-4 9v11h11.28a2 2 0 0 0 2-1.7l1.38-9a2 2 0 0 0-2-2.3H14z"/><path d="M7 22H4a2 2 0 0 1-2-2v-7a2 2 0 0 1 2-2h3"/></svg>
+                80% Recommend to a Friend
+            </div>
+            <div class="cp-approval-badge">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+                87% CEO Approval (Brian Chesky)
+            </div>
+        </div>
     </div>
 </section>
 
-<!-- ═══ EMPLOYEE REVIEWS ═══ -->
-<section class="reviews-section">
+<!-- ═══ EMPLOYEE REVIEW THEMES ═══ -->
+<section class="cp-section cp-section-alt">
     <div class="container">
-        <span class="s-label">Employee Reviews</span>
-        <h2 class="s-title">What employees <em>actually</em> say</h2>
-        <p class="s-desc">Synthesized from hundreds of Glassdoor reviews. No marketing fluff &mdash; just the patterns that keep coming up.</p>
-        <div class="reviews-grid">
-            <div class="review-card">
-                <h3><span class="ico">+</span> What employees love</h3>
-                <ul>
-                    <li><span class="bullet bullet-green"></span><span>Live and Work Anywhere policy &mdash; genuine remote flexibility with no pay cuts, plus quarterly in-person gatherings</span></li>
-                    <li><span class="bullet bullet-green"></span><span>Strong compensation and benefits &mdash; competitive pay, quarterly travel credits, annual educational stipends, and excellent healthcare</span></li>
-                    <li><span class="bullet bullet-green"></span><span>Amazing people and collaborative culture &mdash; employees consistently praise the caliber of their colleagues</span></li>
-                    <li><span class="bullet bullet-green"></span><span>Strong company mission and brand &mdash; working on a product people genuinely love with a "belonging anywhere" mission</span></li>
-                    <li><span class="bullet bullet-green"></span><span>Good work-life balance &mdash; flexible schedules, limited mandatory in-office time, respect for personal time</span></li>
+        <span class="s-label">Employee Review Themes</span>
+        <h2 class="s-title">The <em>good</em> and the hard parts</h2>
+
+        <div class="cp-reviews-grid">
+            <div class="cp-review-col">
+                <h3><span class="icon-pro">&#10003;</span> What employees love</h3>
+                <ul class="cp-review-list">
+                    <li>
+                        <span class="check check-pro">&#10003;</span>
+                        <span>Live and Work Anywhere policy &mdash; genuine remote flexibility with no pay cuts, plus quarterly in-person gatherings</span>
+                    </li>
+                    <li>
+                        <span class="check check-pro">&#10003;</span>
+                        <span>Strong compensation and benefits &mdash; competitive pay, quarterly travel credits, annual educational stipends, and excellent healthcare</span>
+                    </li>
+                    <li>
+                        <span class="check check-pro">&#10003;</span>
+                        <span>Amazing people and collaborative culture &mdash; employees consistently praise the caliber of their colleagues</span>
+                    </li>
+                    <li>
+                        <span class="check check-pro">&#10003;</span>
+                        <span>Strong company mission and brand &mdash; working on a product people genuinely love with a "belonging anywhere" mission</span>
+                    </li>
+                    <li>
+                        <span class="check check-pro">&#10003;</span>
+                        <span>Good work-life balance &mdash; flexible schedules, limited mandatory in-office time, respect for personal time</span>
+                    </li>
                 </ul>
-                <div class="review-source">Source: Glassdoor employee reviews (aggregated patterns)</div>
             </div>
-            <div class="review-card">
-                <h3><span class="ico">&minus;</span> What could be better</h3>
-                <ul>
-                    <li><span class="bullet bullet-red"></span><span>Limited career growth &mdash; promotions are slow and senior positions frequently filled externally rather than promoted from within</span></li>
-                    <li><span class="bullet bullet-red"></span><span>Internal politics at mid-to-senior levels &mdash; decision-making influenced by alignments rather than performance</span></li>
-                    <li><span class="bullet bullet-red"></span><span>Senior management rated 3.5/5 &mdash; some disorganized procedures and micromanagement from top leadership</span></li>
-                    <li><span class="bullet bullet-red"></span><span>Post-IPO cultural decline &mdash; increasing corporate bureaucracy, declining benefits compared to pre-IPO era</span></li>
-                    <li><span class="bullet bullet-red"></span><span>Accountability gaps &mdash; some employees describe an "every man for himself" environment in certain teams</span></li>
+            <div class="cp-review-col">
+                <h3><span class="icon-con">&#10007;</span> What could be better</h3>
+                <ul class="cp-review-list">
+                    <li>
+                        <span class="check check-con">&#10007;</span>
+                        <span>Limited career growth &mdash; promotions are slow and senior positions frequently filled externally rather than promoted from within</span>
+                    </li>
+                    <li>
+                        <span class="check check-con">&#10007;</span>
+                        <span>Internal politics at mid-to-senior levels &mdash; decision-making influenced by alignments rather than performance</span>
+                    </li>
+                    <li>
+                        <span class="check check-con">&#10007;</span>
+                        <span>Senior management rated 3.5/5 &mdash; some disorganized procedures and micromanagement from top leadership</span>
+                    </li>
+                    <li>
+                        <span class="check check-con">&#10007;</span>
+                        <span>Post-IPO cultural decline &mdash; increasing corporate bureaucracy, declining benefits compared to pre-IPO era</span>
+                    </li>
+                    <li>
+                        <span class="check check-con">&#10007;</span>
+                        <span>Accountability gaps &mdash; some employees describe an "every man for himself" environment in certain teams</span>
+                    </li>
                 </ul>
-                <div class="review-source">Source: Glassdoor employee reviews (aggregated patterns)</div>
             </div>
         </div>
     </div>
 </section>
 
 <!-- ═══ ENGINEERING CULTURE ═══ -->
-<section class="eng-section">
+<section class="cp-section">
     <div class="container">
         <span class="s-label">Engineering Culture</span>
-        <h2 class="s-title">The <em>stack</em> and open-source footprint</h2>
-        <p class="s-desc">Airbnb engineers work across a wide stack, from frontend design systems to backend infrastructure, with a strong commitment to open source.</p>
-        <div class="eng-grid">
-            <div class="eng-card">
-                <h4>Languages</h4>
-                <div class="eng-tags">
-                    <span class="eng-tag highlight">Java</span>
-                    <span class="eng-tag highlight">Ruby</span>
-                    <span class="eng-tag highlight">JavaScript</span>
-                    <span class="eng-tag highlight">TypeScript</span>
-                    <span class="eng-tag highlight">Kotlin</span>
-                    <span class="eng-tag highlight">Swift</span>
+        <h2 class="s-title">How the <em>engineering</em> team works</h2>
+
+        <div class="cp-eng-grid">
+            <div class="cp-eng-card">
+                <h4>Tech Stack</h4>
+                <div class="cp-eng-tags">
+                    <span class="cp-eng-tag">Java</span>
+                    <span class="cp-eng-tag">Ruby</span>
+                    <span class="cp-eng-tag">JavaScript</span>
+                    <span class="cp-eng-tag">TypeScript</span>
+                    <span class="cp-eng-tag">Kotlin</span>
+                    <span class="cp-eng-tag">Swift</span>
                 </div>
             </div>
-            <div class="eng-card">
-                <h4>Open Source Projects</h4>
-                <div class="eng-tags">
-                    <span class="eng-tag highlight">Lottie</span>
-                    <span class="eng-tag highlight">Apache Airflow</span>
-                    <span class="eng-tag highlight">Visx</span>
-                    <span class="eng-tag highlight">Epoxy</span>
-                    <span class="eng-tag">200+ public repos</span>
-                </div>
+            <div class="cp-eng-card">
+                <h4>Open Source &amp; Research</h4>
+                <p>200+ public repositories including Lottie, Apache Airflow, Visx, and Epoxy. One of the most active open-source contributors in the industry.</p>
             </div>
-            <div class="eng-card">
-                <h4>Design & Product</h4>
-                <div class="eng-tags">
-                    <span class="eng-tag highlight">Design-Led Culture</span>
-                    <span class="eng-tag highlight">DLS (Design Language System)</span>
-                </div>
+            <div class="cp-eng-card">
+                <h4>Design &amp; Product</h4>
+                <p>Design-led culture with a proprietary Design Language System (DLS). CEO Brian Chesky models his leadership on Steve Jobs' obsession with product details.</p>
             </div>
-            <div class="eng-card">
-                <h4>Key Facts</h4>
-                <div class="eng-tags">
-                    <span class="eng-tag">Live and Work Anywhere</span>
-                    <span class="eng-tag">Sharing economy pioneer</span>
-                    <span class="eng-tag">200+ open source projects</span>
-                </div>
+            <div class="cp-eng-card">
+                <h4>Team Structure</h4>
+                <p>Cross-functional teams with strong engineering-design collaboration. Live and Work Anywhere policy for all employees.</p>
             </div>
         </div>
     </div>
 </section>
 
 <!-- ═══ OPEN POSITIONS ═══ -->
-<section class="jobs-section">
+<section class="cp-section cp-section-alt">
     <div class="container">
         <span class="s-label">Open Positions</span>
-        <h2 class="s-title">Jobs at <em>Airbnb</em></h2>
-        <p class="s-desc">Showing 10 of 247 open roles. All links go directly to the original job posting.</p>
-        <div class="jobs-list" id="jobsList"></div>
-        <div class="cta-wrap">
+        <h2 class="s-title">Join the <em>Airbnb</em> team</h2>
+        <p class="s-desc">Explore featured roles below, or browse all 247 open positions on the full jobs board.</p>
+
+        <div class="cp-jobs-grid" id="jobsGrid"></div>
+
+        <div class="cp-cta-center">
             <a href="/jobs?company=airbnb" class="btn-primary">See all 247 Airbnb jobs &rarr;</a>
         </div>
     </div>
 </section>
 
 <!-- ═══ FOOTER ═══ -->
-<footer>
+<footer class="cp-footer">
     <div class="container">
-        <div class="ft-grid">
-            <div class="ft-about">
-                <a href="/" class="nav-logo" style="margin-bottom:0">
-                    <div class="nav-mark"><div class="ring ring-1"></div><div class="ring ring-2"></div><div class="nav-dot"></div></div>
-                    <div class="nav-wordmark">Jobs<span>By</span>Culture</div>
-                </a>
-                <p>The culture-first job board. Built for the AI era. Find teams that work the way you do.</p>
-            </div>
-            <div class="ft-col">
-                <h4>Values</h4>
-                <a href="/jobs">Async-First</a>
-                <a href="/jobs">Low-Meeting</a>
-                <a href="/jobs?value=ethical-ai">Ethical AI</a>
-                <a href="/jobs">Remote-Native</a>
-                <a href="/jobs">Work-Life Balance</a>
-            </div>
-            <div class="ft-col">
-                <h4>Categories</h4>
-                <a href="/jobs">AI & ML Jobs</a>
-                <a href="/jobs">Startup Jobs</a>
-                <a href="/jobs">Remote Jobs</a>
-                <a href="/jobs">Jobs in India</a>
-                <a href="/jobs">Jobs in Europe</a>
-            </div>
-            <div class="ft-col">
-                <h4>Company</h4>
-                <a href="/">About</a>
-                <a href="/">List Your Company</a>
-                <a href="https://meetingtax.com" target="_blank">Meeting Tax</a>
-                <a href="https://paytaxfa.st" target="_blank">PayTaxFast</a>
-                <a href="https://x.com/jobsbyculture" target="_blank">@jobsbyculture</a>
-            </div>
+        <div class="cp-footer-links">
+            <a href="/">&larr; Back to Homepage</a>
+            <a href="/jobs">Browse All Jobs</a>
+            <a href="https://careers.airbnb.com/careers" target="_blank" rel="noopener">Airbnb Careers</a>
         </div>
-        <div class="ft-bar">
-            <p>&copy; 2026 JobsByCulture. Built with care for the indie hacker community.</p>
-            <p>Made by <a href="https://x.com/itspradz" target="_blank" style="color:var(--accent);text-decoration:none">@itspradz</a></p>
-        </div>
+        <p>Powered by <a href="/">JobsByCulture</a> &mdash; the culture-first job board</p>
     </div>
 </footer>
 
 <script>
-// ═══ RATINGS DATA ═══
-const RATINGS = [
-    { label: 'Culture & Values', value: 4.2 },
-    { label: 'Work-Life Balance', value: 4.0 },
-    { label: 'Compensation & Benefits', value: 4.2 },
-    { label: 'Career Opportunities', value: 3.5 },
-    { label: 'Senior Management', value: 3.5 },
-    { label: 'Overall Rating', value: 4.1 },
-];
-
-function getRatingColor(val) {
-    if (val >= 4.0) return 'teal';
-    if (val >= 3.5) return 'amber';
-    return 'rose';
-}
-
-function renderRatings() {
-    const grid = document.getElementById('ratingsGrid');
-    grid.innerHTML = RATINGS.map(r => {
-        const color = getRatingColor(r.value);
-        const pct = (r.value / 5) * 100;
-        return `
-            <div class="rating-item">
-                <div class="rating-label">${r.label}</div>
-                <div class="rating-bar-wrap">
-                    <div class="rating-bar">
-                        <div class="rating-fill ${color}" style="width:${pct}%"></div>
-                    </div>
-                    <div class="rating-val ${color}">${r.value}</div>
-                </div>
-            </div>
-        `;
-    }).join('');
-}
-
-// ═══ JOBS DATA ═══
 const COMPANY_JOBS = [
-    { title: 'Business Solutions Engineer, (Agentic AI)', location: 'Bangalore, India', url: 'https://careers.airbnb.com/positions/7541082?gh_jid=7541082&ref=jobsbyculture.com' },
-    { title: 'Engineering Manager, Ambassador Routing', location: 'Remote - USA', url: 'https://careers.airbnb.com/positions/7569268?gh_jid=7569268&ref=jobsbyculture.com' },
-    { title: 'Engineering Manager, Client Products & Emerging Tech', location: 'Remote - USA', url: 'https://careers.airbnb.com/positions/7522011?gh_jid=7522011&ref=jobsbyculture.com' },
-    { title: 'Senior Data Scientist, Platform (Integrity)', location: 'United States', url: 'https://careers.airbnb.com/positions/7594971?gh_jid=7594971&ref=jobsbyculture.com' },
-    { title: 'Senior Machine Learning Engineer, Community Support Engineering', location: 'Remote - USA', url: 'https://careers.airbnb.com/positions/7560504?gh_jid=7560504&ref=jobsbyculture.com' },
-    { title: 'Lead, Advanced Analytics, Product', location: 'United States', url: 'https://careers.airbnb.com/positions/7612790?gh_jid=7612790&ref=jobsbyculture.com' },
-    { title: 'Platform Lead - Agent Products, Community Support', location: 'United States', url: 'https://careers.airbnb.com/positions/7559510?gh_jid=7559510&ref=jobsbyculture.com' },
-    { title: 'Staff Experience Designer', location: 'United States', url: 'https://careers.airbnb.com/positions/6717690?gh_jid=6717690&ref=jobsbyculture.com' },
-    { title: 'Data Protection Operations Lead', location: 'United States', url: 'https://careers.airbnb.com/positions/7652631?gh_jid=7652631&ref=jobsbyculture.com' },
-    { title: 'Business Analyst', location: 'Singapore', url: 'https://careers.airbnb.com/positions/7543907?gh_jid=7543907&ref=jobsbyculture.com' },
+  { title: 'Business Solutions Engineer, (Agentic AI)', location: 'Bangalore, India', url: 'https://careers.airbnb.com/positions/7541082?gh_jid=7541082&ref=jobsbyculture.com' },
+  { title: 'Engineering Manager, Ambassador Routing', location: 'Remote - USA', url: 'https://careers.airbnb.com/positions/7569268?gh_jid=7569268&ref=jobsbyculture.com' },
+  { title: 'Engineering Manager, Client Products & Emerging Tech', location: 'Remote - USA', url: 'https://careers.airbnb.com/positions/7522011?gh_jid=7522011&ref=jobsbyculture.com' },
+  { title: 'Senior Data Scientist, Platform (Integrity)', location: 'United States', url: 'https://careers.airbnb.com/positions/7594971?gh_jid=7594971&ref=jobsbyculture.com' },
+  { title: 'Senior Machine Learning Engineer, Community Support Engineering', location: 'Remote - USA', url: 'https://careers.airbnb.com/positions/7560504?gh_jid=7560504&ref=jobsbyculture.com' },
+  { title: 'Lead, Advanced Analytics, Product', location: 'United States', url: 'https://careers.airbnb.com/positions/7612790?gh_jid=7612790&ref=jobsbyculture.com' },
+  { title: 'Platform Lead - Agent Products, Community Support', location: 'United States', url: 'https://careers.airbnb.com/positions/7559510?gh_jid=7559510&ref=jobsbyculture.com' },
+  { title: 'Staff Experience Designer', location: 'United States', url: 'https://careers.airbnb.com/positions/6717690?gh_jid=6717690&ref=jobsbyculture.com' },
+  { title: 'Data Protection Operations Lead', location: 'United States', url: 'https://careers.airbnb.com/positions/7652631?gh_jid=7652631&ref=jobsbyculture.com' },
+  { title: 'Business Analyst', location: 'Singapore', url: 'https://careers.airbnb.com/positions/7543907?gh_jid=7543907&ref=jobsbyculture.com' },
 ];
 
 function renderJobs() {
-    const list = document.getElementById('jobsList');
-    list.innerHTML = COMPANY_JOBS.map(job => `
-        <a href="${job.url}" target="_blank" rel="noopener" class="job-card">
-            <div class="job-card-info">
-                <div class="job-card-title">${job.title}</div>
-                <div class="job-card-loc">${job.location}</div>
-            </div>
-            <span class="job-card-arrow">&rarr;</span>
-        </a>
-    `).join('');
+    var grid = document.getElementById('jobsGrid');
+    var html = '';
+    COMPANY_JOBS.forEach(function(job) {
+        html += '<a class="cp-job-card" href="' + job.url + '" target="_blank" rel="noopener">' +
+            '<div>' +
+                '<div class="cp-job-title">' + job.title + '</div>' +
+                '<div class="cp-job-location">' +
+                    '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>' +
+                    job.location +
+                '</div>' +
+            '</div>' +
+            '<div class="cp-job-apply">Apply \u2192</div>' +
+        '</a>';
+    });
+    grid.innerHTML = html;
 }
 
-// ═══ INIT ═══
-document.addEventListener('DOMContentLoaded', function() {
-    renderRatings();
-    renderJobs();
-});
+renderJobs();
 </script>
 
 </body>

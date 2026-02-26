@@ -3,11 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HubSpot Culture & Jobs | JobsByCulture</title>
+    <title>HubSpot Culture &amp; Jobs | JobsByCulture</title>
     <meta name="description" content="HubSpot engineering culture: 4.3 Glassdoor, legendary Culture Code, remote-first. See 3 open roles and real employee reviews.">
     <meta name="robots" content="index, follow">
-    <meta name="author" content="JobsByCulture">
-    <meta property="og:title" content="HubSpot Culture & Jobs | JobsByCulture">
+    <meta property="og:title" content="HubSpot Culture &amp; Jobs | JobsByCulture">
     <meta property="og:description" content="HubSpot engineering culture: 4.3 Glassdoor, legendary Culture Code, remote-first. See 3 open roles and real employee reviews.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://jobsbyculture.com/companies/hubspot">
@@ -15,7 +14,7 @@
     <meta property="og:image:width" content="2424">
     <meta property="og:image:height" content="1480">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="HubSpot Culture & Jobs | JobsByCulture">
+    <meta name="twitter:title" content="HubSpot Culture &amp; Jobs | JobsByCulture">
     <meta name="twitter:description" content="HubSpot engineering culture: 4.3 Glassdoor, legendary Culture Code, remote-first. See 3 open roles and real employee reviews.">
     <meta name="twitter:site" content="@jobsbyculture">
     <meta name="twitter:image" content="https://jobsbyculture.com/og-image.png?v=3">
@@ -25,7 +24,17 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Satoshi:wght@400;500;600;700;900&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
     <script type="application/ld+json">
-    {"@context":"https://schema.org","@type":"Organization","name":"HubSpot","url":"https://hubspot.com","description":"CRM platform for scaling companies with legendary company culture","foundingDate":"2006","numberOfEmployees":{"@type":"QuantitativeValue","value":8000},"address":{"@type":"PostalAddress","addressLocality":"Cambridge","addressRegion":"MA"},"aggregateRating":{"@type":"AggregateRating","ratingValue":4.3,"bestRating":5,"ratingCount":3500}}
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "HubSpot",
+        "url": "https://hubspot.com",
+        "description": "CRM platform for scaling companies with legendary company culture",
+        "foundingDate": "2006",
+        "numberOfEmployees": { "@type": "QuantitativeValue", "value": 8000 },
+        "address": { "@type": "PostalAddress", "addressLocality": "Cambridge", "addressRegion": "MA" },
+        "aggregateRating": { "@type": "AggregateRating", "ratingValue": 4.3, "bestRating": 5, "ratingCount": 3500 }
+    }
     </script>
     <style>
         :root {
@@ -52,6 +61,9 @@
             --sky: #0284c7;
             --sky-bg: rgba(2,132,199,0.06);
             --sky-border: rgba(2,132,199,0.2);
+            --lime: #4d7c0f;
+            --lime-bg: rgba(77,124,15,0.06);
+            --lime-border: rgba(77,124,15,0.2);
             --border: rgba(0,0,0,0.07);
             --border-2: rgba(0,0,0,0.12);
             --border-3: rgba(0,0,0,0.18);
@@ -63,6 +75,7 @@
             --font-body: 'Satoshi', -apple-system, sans-serif;
             --font-mono: 'IBM Plex Mono', monospace;
             --shadow: 0 4px 24px rgba(0,0,0,0.06), 0 1px 3px rgba(0,0,0,0.04);
+            --shadow-lg: 0 12px 48px rgba(0,0,0,0.08);
         }
 
         * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -77,7 +90,7 @@
         }
         .container { max-width: 1140px; margin: 0 auto; padding: 0 24px; }
 
-        /* NAV */
+        /* ═══ NAV ═══ */
         nav {
             position: fixed; top: 0; left: 0; right: 0; z-index: 100;
             background: rgba(250,250,248,0.85);
@@ -113,249 +126,298 @@
         .hamburger.active span:nth-child(2) { opacity: 0; }
         .hamburger.active span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
 
-        /* HERO */
-        .hero {
-            padding: 140px 0 60px; position: relative;
-            border-bottom: 1px solid var(--border);
-            background: var(--bg-raised);
+        /* ═══ ANIMATIONS ═══ */
+        @keyframes fadeUp {
+            from { opacity: 0; transform: translateY(16px); }
+            to { opacity: 1; transform: translateY(0); }
         }
-        .hero::before {
+        @keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: 0.3; } }
+
+        /* ═══ HERO ═══ */
+        .cp-hero {
+            padding: 130px 0 60px;
+            position: relative;
+            text-align: center;
+        }
+        .cp-hero::before {
             content: ''; position: absolute; top: -100px; left: 50%; transform: translateX(-50%);
             width: 900px; height: 600px;
-            background: radial-gradient(ellipse, rgba(232,89,12,0.04) 0%, transparent 70%);
+            background: radial-gradient(ellipse, rgba(232,89,12,0.06) 0%, transparent 70%);
             pointer-events: none;
         }
-        .hero-top {
-            display: flex; align-items: center; gap: 24px; margin-bottom: 20px;
+        .cp-hero-logo {
+            width: 48px; height: 48px; border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            margin: 0 auto 20px;
+            animation: fadeUp 0.5s ease both;
         }
-        .hero-logo {
-            width: 72px; height: 72px; border-radius: var(--radius); border: 1px solid var(--border);
-            object-fit: contain; background: #fff; padding: 8px;
+        .cp-hero h1 {
+            font-family: var(--font-display); font-weight: 400;
+            font-size: clamp(36px, 4.5vw, 60px);
+            line-height: 1.1; letter-spacing: -0.025em;
+            margin-bottom: 12px;
+            animation: fadeUp 0.5s ease 0.08s both;
         }
-        .hero-info h1 {
-            font-family: var(--font-display); font-size: clamp(32px, 4vw, 48px);
-            font-weight: 400; line-height: 1.1; letter-spacing: -0.025em;
+        .cp-hero-tagline {
+            font-size: 18px; color: var(--text-2); max-width: 560px;
+            line-height: 1.6; margin: 0 auto 32px;
+            animation: fadeUp 0.5s ease 0.16s both;
         }
-        .hero-info .tagline {
-            font-size: 16px; color: var(--text-2); margin-top: 4px;
+        .cp-hero-stats {
+            display: flex; justify-content: center; gap: 40px; flex-wrap: wrap;
+            animation: fadeUp 0.5s ease 0.24s both;
         }
-        .hero-stats {
-            display: flex; flex-wrap: wrap; gap: 32px; margin-top: 24px;
+        .cp-stat {
+            text-align: center;
         }
-        .hero-stat .val {
-            font-family: var(--font-mono); font-size: 20px; font-weight: 500; letter-spacing: -0.02em;
+        .cp-stat-val {
+            font-family: var(--font-mono); font-size: 22px; font-weight: 500;
+            letter-spacing: -0.02em; color: var(--text);
         }
-        .hero-stat .label {
-            font-size: 12px; color: var(--text-3); margin-top: 2px;
+        .cp-stat-label {
+            font-size: 13px; color: var(--text-3); margin-top: 2px;
         }
 
-        /* SECTIONS */
-        .section {
-            padding: 56px 0; border-bottom: 1px solid var(--border);
+        /* ═══ SECTIONS ═══ */
+        .cp-section {
+            padding: 56px 0;
+            border-top: 1px solid var(--border);
         }
-        .section:last-of-type { border-bottom: none; }
+        .cp-section-alt {
+            background: var(--bg-raised);
+        }
         .s-label {
             font-family: var(--font-mono); font-size: 11px; text-transform: uppercase;
             letter-spacing: 0.14em; color: var(--accent); display: block; margin-bottom: 14px;
         }
         .s-title {
-            font-family: var(--font-display); font-size: clamp(26px, 3vw, 36px);
+            font-family: var(--font-display); font-size: clamp(26px, 2.8vw, 38px);
             line-height: 1.15; font-weight: 400; margin-bottom: 20px;
         }
         .s-title em { font-style: italic; color: var(--accent); }
         .s-desc {
-            font-size: 15px; color: var(--text-2); max-width: 640px; line-height: 1.7; margin-bottom: 28px;
+            font-size: 16px; color: var(--text-2); max-width: 640px;
+            line-height: 1.7; margin-bottom: 32px;
         }
 
-        /* VALUE TAGS */
-        .value-tags {
-            display: flex; flex-wrap: wrap; gap: 10px; margin-top: 16px;
+        /* ═══ CULTURE TAGS ═══ */
+        .cp-values-tags {
+            display: flex; flex-wrap: wrap; gap: 10px;
         }
-        .vtag {
+        .value-pill {
+            display: inline-flex; align-items: center; gap: 6px;
             padding: 8px 16px; border-radius: var(--radius-full);
-            font-size: 13px; font-weight: 600; display: inline-flex; align-items: center; gap: 6px;
+            font-size: 14px; font-weight: 500;
+            border: 1px solid;
         }
-        .vtag-orange { background: var(--accent-bg); border: 1px solid var(--accent-border); color: var(--accent); }
-        .vtag-sky { background: var(--sky-bg); border: 1px solid var(--sky-border); color: var(--sky); }
-        .vtag-teal { background: var(--teal-bg); border: 1px solid var(--teal-border); color: var(--teal); }
-        .vtag-violet { background: var(--violet-bg); border: 1px solid var(--violet-border); color: var(--violet); }
-        .vtag-rose { background: var(--rose-bg); border: 1px solid var(--rose-border); color: var(--rose); }
+        .value-pill.rose { color: var(--rose); background: var(--rose-bg); border-color: var(--rose-border); }
+        .value-pill.orange { color: var(--accent); background: var(--accent-bg); border-color: var(--accent-border); }
+        .value-pill.sky { color: var(--sky); background: var(--sky-bg); border-color: var(--sky-border); }
+        .value-pill.violet { color: var(--violet); background: var(--violet-bg); border-color: var(--violet-border); }
+        .value-pill.teal { color: var(--teal); background: var(--teal-bg); border-color: var(--teal-border); }
 
-        /* RATINGS */
-        .ratings-grid {
+        /* ═══ RATINGS ═══ */
+        .cp-ratings-grid {
             display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 16px;
+            margin-bottom: 28px;
         }
-        .rating-card {
-            background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius);
-            padding: 20px;
+        .cp-rating-item {
+            background: var(--bg-card); border: 1px solid var(--border);
+            border-radius: var(--radius); padding: 20px;
         }
-        .rating-header {
-            display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px;
+        .cp-rating-header {
+            display: flex; justify-content: space-between; align-items: center;
+            margin-bottom: 10px;
         }
-        .rating-cat { font-size: 14px; font-weight: 500; color: var(--text-2); }
-        .rating-score { font-family: var(--font-mono); font-size: 18px; font-weight: 600; }
-        .rating-score.teal { color: var(--teal); }
-        .rating-score.amber { color: #f59e0b; }
-        .rating-score.rose { color: var(--rose); }
-        .rating-bar {
-            height: 6px; background: var(--bg-hover); border-radius: 3px; overflow: hidden;
+        .cp-rating-label {
+            font-size: 14px; font-weight: 500; color: var(--text);
         }
-        .rating-fill {
-            height: 100%; border-radius: 3px; transition: width 0.8s ease;
+        .cp-rating-score {
+            font-family: var(--font-mono); font-size: 18px; font-weight: 500;
         }
-        .rating-fill.teal { background: var(--teal); }
-        .rating-fill.amber { background: #f59e0b; }
-        .rating-fill.rose { background: var(--rose); }
+        .cp-rating-score.teal { color: var(--teal); }
+        .cp-rating-score.amber { color: #d97706; }
+        .cp-rating-score.rose { color: var(--rose); }
+        .cp-rating-bar {
+            width: 100%; height: 6px; border-radius: 3px;
+            background: var(--bg-hover); overflow: hidden;
+        }
+        .cp-rating-fill {
+            height: 100%; border-radius: 3px; transition: width 0.6s ease;
+        }
+        .cp-rating-fill.teal { background: var(--teal); }
+        .cp-rating-fill.amber { background: #d97706; }
+        .cp-rating-fill.rose { background: var(--rose); }
 
-        .overall-box {
-            background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius-lg);
-            padding: 28px; text-align: center; margin-bottom: 24px;
-            display: flex; align-items: center; gap: 32px;
+        .cp-approval-row {
+            display: flex; gap: 24px; flex-wrap: wrap;
         }
-        .overall-score {
-            font-family: var(--font-mono); font-size: 48px; font-weight: 700;
-            line-height: 1;
+        .cp-approval-badge {
+            display: inline-flex; align-items: center; gap: 8px;
+            background: var(--teal-bg); border: 1px solid var(--teal-border);
+            padding: 10px 20px; border-radius: var(--radius-full);
+            font-size: 15px; font-weight: 600; color: var(--teal);
         }
-        .overall-meta { text-align: left; }
-        .overall-label { font-size: 14px; color: var(--text-2); }
-        .overall-rec { font-size: 13px; color: var(--text-3); margin-top: 4px; }
 
-        /* REVIEWS */
-        .review-grid {
+        /* ═══ REVIEWS ═══ */
+        .cp-reviews-grid {
             display: grid; grid-template-columns: 1fr 1fr; gap: 24px;
         }
-        .review-col h3 {
-            font-size: 15px; font-weight: 600; margin-bottom: 16px;
+        .cp-review-col h3 {
+            font-size: 16px; font-weight: 600; margin-bottom: 16px;
             display: flex; align-items: center; gap: 8px;
         }
-        .review-col h3 .icon-pro { color: var(--teal); }
-        .review-col h3 .icon-con { color: var(--rose); }
-        .review-item {
-            display: flex; gap: 10px; margin-bottom: 14px;
-            font-size: 14px; color: var(--text-2); line-height: 1.6;
+        .cp-review-col h3 .icon-pro { color: var(--teal); }
+        .cp-review-col h3 .icon-con { color: var(--rose); }
+        .cp-review-list {
+            list-style: none; display: flex; flex-direction: column; gap: 12px;
         }
-        .review-item .mark {
+        .cp-review-list li {
+            display: flex; gap: 10px; align-items: flex-start;
+            font-size: 15px; color: var(--text-2); line-height: 1.6;
+        }
+        .cp-review-list li .check {
             flex-shrink: 0; width: 20px; height: 20px; border-radius: 50%;
             display: flex; align-items: center; justify-content: center;
-            font-size: 11px; font-weight: 700; margin-top: 2px;
+            font-size: 12px; margin-top: 2px;
         }
-        .mark-pro { background: var(--teal-bg); color: var(--teal); }
-        .mark-con { background: var(--rose-bg); color: var(--rose); }
+        .check-pro { background: var(--teal-bg); color: var(--teal); }
+        .check-con { background: var(--rose-bg); color: var(--rose); }
 
-        /* ENG */
-        .eng-stack {
-            display: flex; flex-wrap: wrap; gap: 8px; margin-top: 12px;
+        /* ═══ ENG CULTURE ═══ */
+        .cp-eng-grid {
+            display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 16px;
         }
-        .eng-tag {
-            padding: 6px 14px; border-radius: var(--radius-full);
-            font-family: var(--font-mono); font-size: 12px; font-weight: 500;
-            background: var(--bg-hover); border: 1px solid var(--border); color: var(--text-2);
-        }
-
-        /* JOBS */
-        .jobs-grid {
-            display: grid; grid-template-columns: repeat(auto-fill, minmax(340px, 1fr)); gap: 12px;
-        }
-        .job-card {
-            display: flex; align-items: center; gap: 14px;
+        .cp-eng-card {
             background: var(--bg-card); border: 1px solid var(--border);
-            border-radius: var(--radius); padding: 18px 20px;
+            border-radius: var(--radius); padding: 22px;
+        }
+        .cp-eng-card h4 {
+            font-size: 13px; font-weight: 600; text-transform: uppercase;
+            letter-spacing: 0.06em; color: var(--text-3); margin-bottom: 12px;
+        }
+        .cp-eng-tags {
+            display: flex; flex-wrap: wrap; gap: 8px;
+        }
+        .cp-eng-tag {
+            font-family: var(--font-mono); font-size: 13px; font-weight: 500;
+            padding: 5px 12px; border-radius: var(--radius-sm);
+            background: var(--sky-bg); border: 1px solid var(--sky-border);
+            color: var(--sky);
+        }
+        .cp-eng-card p {
+            font-size: 15px; color: var(--text-2); line-height: 1.6;
+        }
+        .cp-eng-card a {
+            color: var(--accent); text-decoration: none; font-weight: 500;
+        }
+        .cp-eng-card a:hover { text-decoration: underline; }
+
+        /* ═══ JOB CARDS ═══ */
+        .cp-jobs-grid {
+            display: grid; grid-template-columns: repeat(auto-fill, minmax(340px, 1fr)); gap: 12px;
+            margin-bottom: 32px;
+        }
+        .cp-job-card {
+            display: flex; flex-direction: column; justify-content: space-between;
+            background: var(--bg-card); border: 1px solid var(--border);
+            border-radius: var(--radius); padding: 20px;
             text-decoration: none; color: var(--text); transition: all 0.2s;
         }
-        .job-card:hover {
+        .cp-job-card:hover {
             border-color: var(--accent); transform: translateY(-2px);
             box-shadow: var(--shadow);
         }
-        .job-card .job-logo {
-            width: 40px; height: 40px; border-radius: var(--radius-sm);
-            border: 1px solid var(--border); object-fit: contain; background: #fff; padding: 4px;
+        .cp-job-title {
+            font-size: 15px; font-weight: 600; line-height: 1.4;
+            margin-bottom: 8px; color: var(--text);
         }
-        .job-card .job-details { flex: 1; min-width: 0; }
-        .job-card .job-title {
-            font-size: 14px; font-weight: 600; white-space: nowrap;
-            overflow: hidden; text-overflow: ellipsis;
+        .cp-job-location {
+            font-size: 13px; color: var(--text-3); margin-bottom: 14px;
+            display: flex; align-items: center; gap: 6px;
         }
-        .job-card .job-loc {
-            font-size: 12px; color: var(--text-3); margin-top: 2px;
+        .cp-job-apply {
+            font-size: 13px; font-weight: 600; color: var(--accent);
+            display: inline-flex; align-items: center; gap: 4px;
         }
-        .job-card .job-arrow {
-            color: var(--text-3); font-size: 16px; flex-shrink: 0; transition: color 0.2s;
+        .cp-cta-center {
+            text-align: center; margin-top: 8px;
         }
-        .job-card:hover .job-arrow { color: var(--accent); }
-
-        .jobs-more {
-            text-align: center; margin-top: 20px;
-        }
-        .jobs-more a {
-            display: inline-flex; align-items: center; gap: 6px;
-            color: var(--accent); font-size: 14px; font-weight: 600;
-            text-decoration: none; transition: gap 0.2s;
-        }
-        .jobs-more a:hover { gap: 10px; }
-
-        /* CTA */
-        .cta-section {
-            padding: 72px 0; text-align: center;
-            background: var(--bg-raised); border-top: 1px solid var(--border);
-        }
-        .cta-section h2 {
-            font-family: var(--font-display); font-size: clamp(28px, 3.5vw, 40px);
-            font-weight: 400; margin-bottom: 12px;
-        }
-        .cta-section h2 em { font-style: italic; color: var(--accent); }
-        .cta-section p { color: var(--text-2); font-size: 16px; margin-bottom: 28px; }
         .btn-primary {
             display: inline-flex; align-items: center; gap: 8px;
-            background: var(--accent); color: #fff; padding: 14px 32px;
+            background: var(--accent); color: #fff; padding: 13px 28px;
             border-radius: var(--radius); font-size: 15px; font-weight: 700;
             text-decoration: none; transition: all 0.25s; border: none; cursor: pointer;
             font-family: var(--font-body);
         }
         .btn-primary:hover { background: var(--accent-hover); transform: translateY(-2px); box-shadow: 0 6px 24px rgba(232,89,12,0.2); }
 
-        /* FOOTER */
-        footer { padding: 56px 0 36px; border-top: 1px solid var(--border); }
-        .ft-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 40px; margin-bottom: 40px; }
-        .ft-about p { font-size: 13px; color: var(--text-3); margin-top: 10px; line-height: 1.7; max-width: 260px; }
-        .ft-col h4 { font-size: 12px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em; color: var(--text-2); margin-bottom: 14px; }
-        .ft-col a { display: block; font-size: 13px; color: var(--text-3); text-decoration: none; padding: 3px 0; transition: color 0.15s; }
-        .ft-col a:hover { color: var(--text); }
-        .ft-bar { border-top: 1px solid var(--border); padding-top: 20px; display: flex; justify-content: space-between; align-items: center; }
-        .ft-bar p { font-size: 12px; color: var(--text-3); }
+        /* ═══ FOOTER ═══ */
+        .cp-footer {
+            padding: 40px 0;
+            border-top: 1px solid var(--border);
+            text-align: center;
+        }
+        .cp-footer-links {
+            display: flex; justify-content: center; align-items: center; gap: 24px;
+            margin-bottom: 12px;
+        }
+        .cp-footer-links a {
+            font-size: 14px; color: var(--text-2); text-decoration: none;
+            font-weight: 500; transition: color 0.15s;
+        }
+        .cp-footer-links a:hover { color: var(--accent); }
+        .cp-footer p {
+            font-size: 13px; color: var(--text-3);
+        }
+        .cp-footer p a {
+            color: var(--accent); text-decoration: none;
+        }
 
-        /* ANIMATIONS */
-        @keyframes fadeUp { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }
+        /* ═══ OVERALL SCORE BADGE ═══ */
+        .cp-overall-badge {
+            display: inline-flex; align-items: center; gap: 12px;
+            background: var(--bg-card); border: 1px solid var(--border);
+            border-radius: var(--radius); padding: 16px 24px;
+            margin-bottom: 28px;
+        }
+        .cp-overall-score {
+            font-family: var(--font-mono); font-size: 36px; font-weight: 500;
+            color: var(--teal);
+        }
+        .cp-overall-meta {
+            text-align: left;
+        }
+        .cp-overall-label {
+            font-size: 14px; font-weight: 600; color: var(--text);
+        }
+        .cp-overall-sub {
+            font-size: 13px; color: var(--text-3);
+        }
 
-        /* RESPONSIVE */
+        /* ═══ RESPONSIVE ═══ */
         @media (max-width: 768px) {
             .hamburger { display: flex; }
             .nav-links { display: none; position: absolute; top: 100%; left: 0; right: 0; background: rgba(250,250,248,0.98); backdrop-filter: blur(20px); border-bottom: 1px solid var(--border); padding: 20px 24px; flex-direction: column; gap: 16px; box-shadow: 0 8px 24px rgba(0,0,0,0.06); }
             .nav-links.open { display: flex; }
-            .hero { padding: 110px 0 40px; }
-            .hero-top { flex-direction: column; align-items: flex-start; gap: 16px; }
-            .hero-stats { gap: 20px; }
-            .ratings-grid { grid-template-columns: 1fr; }
-            .review-grid { grid-template-columns: 1fr; }
-            .jobs-grid { grid-template-columns: 1fr; }
-            .overall-box { flex-direction: column; gap: 16px; text-align: center; }
-            .overall-meta { text-align: center; }
-            .ft-grid { grid-template-columns: 1fr 1fr; gap: 28px; }
-        }
-        @media (max-width: 480px) {
-            .ft-grid { grid-template-columns: 1fr; }
-            .hero-stats { flex-direction: column; gap: 12px; }
+            .cp-hero { padding: 110px 0 40px; }
+            .cp-hero-stats { gap: 24px; }
+            .cp-reviews-grid { grid-template-columns: 1fr; }
+            .cp-ratings-grid { grid-template-columns: 1fr; }
+            .cp-jobs-grid { grid-template-columns: 1fr; }
+            .cp-eng-grid { grid-template-columns: 1fr; }
         }
     </style>
-    <!-- Privacy-friendly analytics by Plausible -->
-    <script async src="https://plausible.io/js/pa-qa3pjs5eZbsfBQJMk4hVW.js"></script>
-    <script>
-      window.plausible=window.plausible||function(){(plausible.q=plausible.q||[]).push(arguments)},plausible.init=plausible.init||function(i){plausible.o=i||{}};
-      plausible.init()
-    </script>
+<!-- Privacy-friendly analytics by Plausible -->
+<script async src="https://plausible.io/js/pa-qa3pjs5eZbsfBQJMk4hVW.js"></script>
+<script>
+  window.plausible=window.plausible||function(){(plausible.q=plausible.q||[]).push(arguments)},plausible.init=plausible.init||function(i){plausible.o=i||{}};
+  plausible.init()
+</script>
 </head>
 <body>
 
-<!-- NAV -->
+<!-- ═══ NAV ═══ -->
 <nav>
     <div class="nav-inner">
         <a href="/" class="nav-logo">
@@ -374,244 +436,232 @@
     </div>
 </nav>
 
-<!-- HERO -->
-<section class="hero">
+<!-- ═══ HERO ═══ -->
+<section class="cp-hero">
     <div class="container">
-        <div class="hero-top" style="animation: fadeUp 0.5s ease both;">
-            <img src="https://www.google.com/s2/favicons?domain=hubspot.com&sz=128" alt="HubSpot logo" class="hero-logo">
-            <div class="hero-info">
-                <h1>HubSpot</h1>
-                <p class="tagline">CRM Platform &mdash; Legendary Culture Code, Remote-First</p>
+        <img src="https://www.google.com/s2/favicons?domain=hubspot.com&sz=128" alt="HubSpot logo" class="cp-hero-logo">
+        <h1>HubSpot</h1>
+        <p class="cp-hero-tagline">CRM Platform &mdash; Legendary Culture Code, Remote-First</p>
+        <div class="cp-hero-stats">
+            <div class="cp-stat">
+                <div class="cp-stat-val">2006</div>
+                <div class="cp-stat-label">Founded</div>
             </div>
-        </div>
-        <div class="hero-stats" style="animation: fadeUp 0.5s ease 0.1s both;">
-            <div class="hero-stat">
-                <div class="val">2006</div>
-                <div class="label">Founded by Halligan & Shah</div>
+            <div class="cp-stat">
+                <div class="cp-stat-val">Cambridge, MA</div>
+                <div class="cp-stat-label">Headquarters</div>
             </div>
-            <div class="hero-stat">
-                <div class="val">Cambridge, MA</div>
-                <div class="label">Headquarters</div>
+            <div class="cp-stat">
+                <div class="cp-stat-val">~8,000</div>
+                <div class="cp-stat-label">Employees</div>
             </div>
-            <div class="hero-stat">
-                <div class="val">~8,000</div>
-                <div class="label">Employees</div>
-            </div>
-            <div class="hero-stat">
-                <div class="val">NYSE: HUBS</div>
-                <div class="label">Public</div>
-            </div>
-            <div class="hero-stat">
-                <div class="val">3</div>
-                <div class="label">Open Roles</div>
+            <div class="cp-stat">
+                <div class="cp-stat-val">NYSE: HUBS</div>
+                <div class="cp-stat-label">Public</div>
             </div>
         </div>
     </div>
 </section>
 
-<!-- CULTURE OVERVIEW -->
-<section class="section">
+<!-- ═══ CULTURE OVERVIEW ═══ -->
+<section class="cp-section cp-section-alt">
     <div class="container">
         <span class="s-label">Culture Overview</span>
-        <h2 class="s-title">What it's like to work at <em>HubSpot</em></h2>
-        <p class="s-desc">
-            HubSpot's Culture Code is legendary in the tech industry -- a public document outlining their commitment to transparency, autonomy, and flexibility. As a remote-first organization with ~8,000 employees, they've built a genuinely inclusive environment with high psychological safety, strong work-life balance, and continuous learning opportunities.
-        </p>
-        <div class="value-tags">
-            <span class="vtag vtag-violet">Diverse & Inclusive</span>
-            <span class="vtag vtag-orange">Continuous Learning</span>
-            <span class="vtag vtag-teal">Work-Life Balance</span>
-            <span class="vtag vtag-violet">Transparent</span>
-            <span class="vtag vtag-teal">Flexible Hours</span>
-            <span class="vtag vtag-violet">Psychological Safety</span>
+        <h2 class="s-title">What it's <em>really</em> like to work at HubSpot</h2>
+        <p class="s-desc">HubSpot's Culture Code is legendary in the tech industry &mdash; a public document outlining their commitment to transparency, autonomy, and flexibility. As a remote-first organization with ~8,000 employees, they've built a genuinely inclusive environment with high psychological safety, strong work-life balance, and continuous learning opportunities.</p>
+        <div class="cp-values-tags">
+            <span class="value-pill violet">Diverse &amp; Inclusive</span>
+            <span class="value-pill orange">Continuous Learning</span>
+            <span class="value-pill teal">Work-Life Balance</span>
+            <span class="value-pill violet">Transparent</span>
+            <span class="value-pill teal">Flexible Hours</span>
+            <span class="value-pill violet">Psychological Safety</span>
         </div>
     </div>
 </section>
 
-<!-- GLASSDOOR RATINGS -->
-<section class="section" style="background: var(--bg-raised);">
+<!-- ═══ GLASSDOOR RATINGS ═══ -->
+<section class="cp-section">
     <div class="container">
         <span class="s-label">Glassdoor Ratings</span>
-        <h2 class="s-title">Employee satisfaction at <em>HubSpot</em></h2>
+        <h2 class="s-title">What employees <em>actually</em> say</h2>
 
-        <div class="overall-box" style="animation: fadeUp 0.5s ease both;">
-            <div class="overall-score" style="color: var(--teal);">4.3</div>
-            <div class="overall-meta">
-                <div class="overall-label">Overall Glassdoor Rating</div>
-                <div class="overall-rec">87% would recommend &middot; 92% CEO approval</div>
+        <div class="cp-overall-badge">
+            <div class="cp-overall-score">4.3</div>
+            <div class="cp-overall-meta">
+                <div class="cp-overall-label">Overall Glassdoor Score</div>
+                <div class="cp-overall-sub">Based on 3,500 reviews</div>
             </div>
         </div>
 
-        <div class="ratings-grid">
-            <div class="rating-card">
-                <div class="rating-header">
-                    <span class="rating-cat">Culture & Values</span>
-                    <span class="rating-score teal">4.5</span>
+        <div class="cp-ratings-grid">
+            <div class="cp-rating-item">
+                <div class="cp-rating-header">
+                    <span class="cp-rating-label">Culture &amp; Values</span>
+                    <span class="cp-rating-score teal">4.5</span>
                 </div>
-                <div class="rating-bar"><div class="rating-fill teal" style="width: 90%;"></div></div>
+                <div class="cp-rating-bar"><div class="cp-rating-fill teal" style="width: 90%"></div></div>
             </div>
-            <div class="rating-card">
-                <div class="rating-header">
-                    <span class="rating-cat">Work-Life Balance</span>
-                    <span class="rating-score teal">4.1</span>
+            <div class="cp-rating-item">
+                <div class="cp-rating-header">
+                    <span class="cp-rating-label">Work-Life Balance</span>
+                    <span class="cp-rating-score teal">4.1</span>
                 </div>
-                <div class="rating-bar"><div class="rating-fill teal" style="width: 82%;"></div></div>
+                <div class="cp-rating-bar"><div class="cp-rating-fill teal" style="width: 82%"></div></div>
             </div>
-            <div class="rating-card">
-                <div class="rating-header">
-                    <span class="rating-cat">Compensation & Benefits</span>
-                    <span class="rating-score amber">3.9</span>
+            <div class="cp-rating-item">
+                <div class="cp-rating-header">
+                    <span class="cp-rating-label">Compensation &amp; Benefits</span>
+                    <span class="cp-rating-score amber">3.9</span>
                 </div>
-                <div class="rating-bar"><div class="rating-fill amber" style="width: 78%;"></div></div>
+                <div class="cp-rating-bar"><div class="cp-rating-fill amber" style="width: 78%"></div></div>
             </div>
-            <div class="rating-card">
-                <div class="rating-header">
-                    <span class="rating-cat">Career Opportunities</span>
-                    <span class="rating-score teal">4.0</span>
+            <div class="cp-rating-item">
+                <div class="cp-rating-header">
+                    <span class="cp-rating-label">Career Opportunities</span>
+                    <span class="cp-rating-score teal">4.0</span>
                 </div>
-                <div class="rating-bar"><div class="rating-fill teal" style="width: 80%;"></div></div>
+                <div class="cp-rating-bar"><div class="cp-rating-fill teal" style="width: 80%"></div></div>
             </div>
-            <div class="rating-card">
-                <div class="rating-header">
-                    <span class="rating-cat">Senior Management</span>
-                    <span class="rating-score teal">4.1</span>
+            <div class="cp-rating-item">
+                <div class="cp-rating-header">
+                    <span class="cp-rating-label">Senior Management</span>
+                    <span class="cp-rating-score teal">4.1</span>
                 </div>
-                <div class="rating-bar"><div class="rating-fill teal" style="width: 82%;"></div></div>
+                <div class="cp-rating-bar"><div class="cp-rating-fill teal" style="width: 82%"></div></div>
+            </div>
+            <div class="cp-rating-item">
+                <div class="cp-rating-header">
+                    <span class="cp-rating-label">Overall Rating</span>
+                    <span class="cp-rating-score teal">4.3</span>
+                </div>
+                <div class="cp-rating-bar"><div class="cp-rating-fill teal" style="width: 86%"></div></div>
+            </div>
+        </div>
+
+        <div class="cp-approval-row">
+            <div class="cp-approval-badge">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 9V5a3 3 0 0 0-3-3l-4 9v11h11.28a2 2 0 0 0 2-1.7l1.38-9a2 2 0 0 0-2-2.3H14z"/><path d="M7 22H4a2 2 0 0 1-2-2v-7a2 2 0 0 1 2-2h3"/></svg>
+                87% Recommend to a Friend
+            </div>
+            <div class="cp-approval-badge">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+                92% CEO Approval
             </div>
         </div>
     </div>
 </section>
 
-<!-- EMPLOYEE REVIEWS -->
-<section class="section">
+<!-- ═══ EMPLOYEE REVIEW THEMES ═══ -->
+<section class="cp-section cp-section-alt">
     <div class="container">
-        <span class="s-label">Employee Reviews</span>
-        <h2 class="s-title">What employees say about <em>HubSpot</em></h2>
+        <span class="s-label">Employee Review Themes</span>
+        <h2 class="s-title">The <em>good</em> and the hard parts</h2>
 
-        <div class="review-grid">
-            <div class="review-col">
-                <h3><span class="icon-pro">&#10003;</span> Pros</h3>
-                <div class="review-item">
-                    <span class="mark mark-pro">&#10003;</span>
-                    <span>Culture Code is legendary &mdash; transparency, autonomy, flexibility are real</span>
-                </div>
-                <div class="review-item">
-                    <span class="mark mark-pro">&#10003;</span>
-                    <span>Remote-first done right</span>
-                </div>
-                <div class="review-item">
-                    <span class="mark mark-pro">&#10003;</span>
-                    <span>Strong engineering blog and internal learning</span>
-                </div>
-                <div class="review-item">
-                    <span class="mark mark-pro">&#10003;</span>
-                    <span>Genuinely inclusive, high psychological safety</span>
-                </div>
+        <div class="cp-reviews-grid">
+            <div class="cp-review-col">
+                <h3><span class="icon-pro">&#10003;</span> What employees love</h3>
+                <ul class="cp-review-list">
+                    <li>
+                        <span class="check check-pro">&#10003;</span>
+                        <span>Culture Code is legendary &mdash; transparency, autonomy, flexibility are real</span>
+                    </li>
+                    <li>
+                        <span class="check check-pro">&#10003;</span>
+                        <span>Remote-first done right</span>
+                    </li>
+                    <li>
+                        <span class="check check-pro">&#10003;</span>
+                        <span>Strong engineering blog and internal learning</span>
+                    </li>
+                    <li>
+                        <span class="check check-pro">&#10003;</span>
+                        <span>Genuinely inclusive, high psychological safety</span>
+                    </li>
+                </ul>
             </div>
-            <div class="review-col">
-                <h3><span class="icon-con">&#10007;</span> Cons</h3>
-                <div class="review-item">
-                    <span class="mark mark-con">&#10007;</span>
-                    <span>Enterprise sales culture can clash with eng</span>
-                </div>
-                <div class="review-item">
-                    <span class="mark mark-con">&#10007;</span>
-                    <span>Comp below FAANG for senior roles</span>
-                </div>
-                <div class="review-item">
-                    <span class="mark mark-con">&#10007;</span>
-                    <span>Large org = slower decisions</span>
-                </div>
-                <div class="review-item">
-                    <span class="mark mark-con">&#10007;</span>
-                    <span>Some teams feel bureaucratic</span>
-                </div>
+            <div class="cp-review-col">
+                <h3><span class="icon-con">&#10007;</span> What could be better</h3>
+                <ul class="cp-review-list">
+                    <li>
+                        <span class="check check-con">&#10007;</span>
+                        <span>Enterprise sales culture can clash with eng</span>
+                    </li>
+                    <li>
+                        <span class="check check-con">&#10007;</span>
+                        <span>Comp below FAANG for senior roles</span>
+                    </li>
+                    <li>
+                        <span class="check check-con">&#10007;</span>
+                        <span>Large org = slower decisions</span>
+                    </li>
+                    <li>
+                        <span class="check check-con">&#10007;</span>
+                        <span>Some teams feel bureaucratic</span>
+                    </li>
+                </ul>
             </div>
         </div>
     </div>
 </section>
 
-<!-- ENGINEERING CULTURE -->
-<section class="section" style="background: var(--bg-raised);">
+<!-- ═══ ENGINEERING CULTURE ═══ -->
+<section class="cp-section">
     <div class="container">
         <span class="s-label">Engineering Culture</span>
-        <h2 class="s-title">How engineers build at <em>HubSpot</em></h2>
-        <p class="s-desc">
-            HubSpot's engineering team builds the CRM platform used by thousands of growing businesses. The stack is centered on Java, Python, and React, with an active engineering blog, strong open-source contributions, and a culture that genuinely invests in developer learning and growth.
-        </p>
-        <div class="eng-stack">
-            <span class="eng-tag">Java</span>
-            <span class="eng-tag">Python</span>
-            <span class="eng-tag">React</span>
-            <span class="eng-tag">HubSpot CRM Platform</span>
-            <span class="eng-tag">Engineering Blog</span>
-            <span class="eng-tag">Open Source</span>
+        <h2 class="s-title">How the <em>engineering</em> team works</h2>
+
+        <div class="cp-eng-grid">
+            <div class="cp-eng-card">
+                <h4>Tech Stack</h4>
+                <div class="cp-eng-tags">
+                    <span class="cp-eng-tag">Java</span>
+                    <span class="cp-eng-tag">Python</span>
+                    <span class="cp-eng-tag">React</span>
+                </div>
+            </div>
+            <div class="cp-eng-card">
+                <h4>Platform</h4>
+                <div class="cp-eng-tags">
+                    <span class="cp-eng-tag">HubSpot CRM Platform</span>
+                </div>
+            </div>
+            <div class="cp-eng-card">
+                <h4>Open Source &amp; Blog</h4>
+                <p>Active engineering blog with deep technical content. Strong open-source contributions to the developer community.</p>
+            </div>
+            <div class="cp-eng-card">
+                <h4>Team Structure</h4>
+                <p>Autonomous engineering teams with genuine ownership. Remote-first culture that actually works, with strong async communication practices.</p>
+            </div>
         </div>
     </div>
 </section>
 
-<!-- OPEN JOBS -->
-<section class="section" id="jobs">
+<!-- ═══ OPEN POSITIONS ═══ -->
+<section class="cp-section cp-section-alt">
     <div class="container">
         <span class="s-label">Open Positions</span>
-        <h2 class="s-title">Jobs at <em>HubSpot</em></h2>
-        <p class="s-desc">3 open roles. Showing all current positions below.</p>
-        <div class="jobs-grid" id="jobsGrid"></div>
-        <div class="jobs-more">
-            <a href="https://hubspot.com/careers" target="_blank" rel="noopener">View all jobs at HubSpot &rarr;</a>
+        <h2 class="s-title">Join the <em>HubSpot</em> team</h2>
+        <p class="s-desc">Explore featured roles below, or browse all 3 open positions on the full jobs board.</p>
+
+        <div class="cp-jobs-grid" id="jobsGrid"></div>
+
+        <div class="cp-cta-center">
+            <a href="/jobs?company=hubspot" class="btn-primary">See all 3 HubSpot jobs &rarr;</a>
         </div>
     </div>
 </section>
 
-<!-- CTA -->
-<section class="cta-section">
+<!-- ═══ FOOTER ═══ -->
+<footer class="cp-footer">
     <div class="container">
-        <h2>Find your <em>culture fit</em></h2>
-        <p>Take the Culture Quiz to see how HubSpot matches your working style.</p>
-        <a href="/#quiz" class="btn-primary">Take the Culture Quiz &rarr;</a>
-    </div>
-</section>
-
-<!-- FOOTER -->
-<footer>
-    <div class="container">
-        <div class="ft-grid">
-            <div class="ft-about">
-                <a href="/" class="nav-logo" style="margin-bottom:0">
-                    <div class="nav-mark"><div class="ring ring-1"></div><div class="ring ring-2"></div><div class="nav-dot"></div></div>
-                    <div class="nav-wordmark">Jobs<span>By</span>Culture</div>
-                </a>
-                <p>The culture-first job board. Built for the AI era. Find teams that work the way you do.</p>
-            </div>
-            <div class="ft-col">
-                <h4>Values</h4>
-                <a href="/jobs">Async-First</a>
-                <a href="/jobs">Low-Meeting</a>
-                <a href="/jobs">Ethical AI</a>
-                <a href="/jobs">Remote-Native</a>
-                <a href="/jobs">Work-Life Balance</a>
-            </div>
-            <div class="ft-col">
-                <h4>Categories</h4>
-                <a href="/jobs">AI & ML Jobs</a>
-                <a href="/jobs">Startup Jobs</a>
-                <a href="/jobs">Remote Jobs</a>
-                <a href="/jobs">Jobs in India</a>
-                <a href="/jobs">Jobs in Europe</a>
-            </div>
-            <div class="ft-col">
-                <h4>Company</h4>
-                <a href="/">About</a>
-                <a href="/">List Your Company</a>
-                <a href="https://meetingtax.com" target="_blank">Meeting Tax</a>
-                <a href="https://paytaxfa.st" target="_blank">PayTaxFast</a>
-                <a href="https://x.com/jobsbyculture" target="_blank">@jobsbyculture</a>
-            </div>
+        <div class="cp-footer-links">
+            <a href="/">&larr; Back to Homepage</a>
+            <a href="/jobs">Browse All Jobs</a>
+            <a href="https://www.hubspot.com/careers" target="_blank" rel="noopener">HubSpot Careers</a>
         </div>
-        <div class="ft-bar">
-            <p>&copy; 2026 JobsByCulture. Built for the indie hacker community.</p>
-            <p>Made by <a href="https://x.com/itspradz" target="_blank" style="color:var(--accent);text-decoration:none">@itspradz</a></p>
-        </div>
+        <p>Powered by <a href="/">JobsByCulture</a> &mdash; the culture-first job board</p>
     </div>
 </footer>
 
@@ -622,23 +672,25 @@ const COMPANY_JOBS = [
   { title: 'Product Manager, Voice Intelligence', location: 'Remote (US)', url: 'https://boards.greenhouse.io/embed/job_app?for=hubspotjobs&token=7363105&ref=jobsbyculture.com' },
 ];
 
-const grid = document.getElementById('jobsGrid');
-COMPANY_JOBS.forEach(job => {
-    const card = document.createElement('a');
-    card.href = job.url;
-    card.target = '_blank';
-    card.rel = 'noopener';
-    card.className = 'job-card';
-    card.innerHTML = `
-        <img src="https://www.google.com/s2/favicons?domain=hubspot.com&sz=128" alt="HubSpot" class="job-logo">
-        <div class="job-details">
-            <div class="job-title">${job.title}</div>
-            <div class="job-loc">${job.location}</div>
-        </div>
-        <span class="job-arrow">&rarr;</span>
-    `;
-    grid.appendChild(card);
-});
+function renderJobs() {
+    var grid = document.getElementById('jobsGrid');
+    var html = '';
+    COMPANY_JOBS.forEach(function(job) {
+        html += '<a class="cp-job-card" href="' + job.url + '" target="_blank" rel="noopener">' +
+            '<div>' +
+                '<div class="cp-job-title">' + job.title + '</div>' +
+                '<div class="cp-job-location">' +
+                    '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>' +
+                    job.location +
+                '</div>' +
+            '</div>' +
+            '<div class="cp-job-apply">Apply \u2192</div>' +
+        '</a>';
+    });
+    grid.innerHTML = html;
+}
+
+renderJobs();
 </script>
 
 </body>
