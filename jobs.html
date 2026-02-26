@@ -275,11 +275,28 @@
         .cp-rating-fill.high { background: var(--teal); }
         .cp-rating-fill.mid { background: #d97706; }
         .cp-rating-fill.low { background: var(--rose); }
-        /* Summary text */
-        .cp-summary {
-            font-size: 13px; color: var(--text-2); line-height: 1.65;
-            margin-bottom: 14px; font-style: italic;
+        /* Pros & Cons */
+        .cp-reviews { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-bottom: 14px; }
+        .cp-review-col h4 {
+            font-size: 12px; font-weight: 600; margin-bottom: 8px;
+            display: flex; align-items: center; gap: 5px;
         }
+        .cp-review-col h4 .cp-ico-pro { color: var(--teal); font-size: 13px; }
+        .cp-review-col h4 .cp-ico-con { color: var(--rose); font-size: 13px; }
+        .cp-review-list {
+            list-style: none; display: flex; flex-direction: column; gap: 8px;
+        }
+        .cp-review-list li {
+            display: flex; gap: 8px; align-items: flex-start;
+            font-size: 12px; color: var(--text-2); line-height: 1.55;
+        }
+        .cp-review-list li .cp-dot {
+            flex-shrink: 0; width: 16px; height: 16px; border-radius: 50%;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 9px; margin-top: 1px;
+        }
+        .cp-dot-pro { background: var(--teal-bg); color: var(--teal); }
+        .cp-dot-con { background: var(--rose-bg); color: var(--rose); }
         /* Footer with size + profile link */
         .cp-peek-footer { display: flex; align-items: center; justify-content: space-between; }
         .cp-peek-size { font-size: 12px; color: var(--text-3); display: flex; align-items: center; gap: 4px; }
@@ -334,6 +351,7 @@
             .mobile-filter-bar .search-wrap { flex: 1; margin-bottom: 0; }
             .filter-sections { display: none; padding-top: 8px; border-top: 1px solid var(--border); }
             .filter-sections.open { display: block; }
+            .cp-reviews { grid-template-columns: 1fr; }
         }
     </style>
     <!-- Privacy-friendly analytics by Plausible -->
@@ -597,6 +615,78 @@ const COMPANIES = {
         values: ['ship-fast','eng-driven','remote','product-impact','learning'],
         careers: 'https://www.apollo.io/careers?ref=jobsbyculture.com'
     },
+};
+
+// ═══ COMPANY REVIEWS (top 2 pros/cons from employee reviews) ═══
+const COMPANY_REVIEWS = {
+    'anthropic': {
+        pros: ['Mission-driven to the core — the safety focus is genuine and deeply embedded', 'Incredible autonomy and ownership, even for mid-level engineers'],
+        cons: ['High-intensity environment — extended work hours are common during peak periods', 'Processes still catching up to hypergrowth; some things feel ad-hoc']
+    },
+    'apollo': {
+        pros: ['Strong product-market fit — best-in-class sales intelligence platform', 'Competitive compensation with RSUs, performance bonuses, and paid health insurance'],
+        cons: ['Some reports of leadership involvement in granular decisions and frequent pivots', 'Work-life balance challenges under high-growth pressure']
+    },
+    'cohere': {
+        pros: ['Cutting-edge NLP research from Transformer co-author', 'Enterprise AI focus gives real customer impact'],
+        cons: ['Frequent organizational restructuring has led to notable team turnover', 'Internal communication from leadership could be more transparent']
+    },
+    'coreweave': {
+        pros: ['GPU cloud infrastructure leader backed by NVIDIA ($2B investment)', 'Strong compensation and equity — especially valuable post-IPO'],
+        cons: ['Work-life balance can be challenging — some teams expect off-hours availability', 'Culture and values rated 3.1/5 — processes still maturing']
+    },
+    'cursor': {
+        pros: ['Building the most-loved AI code editor — massive developer love and daily impact', 'Tiny team, extreme ownership — every person shapes the product directly'],
+        cons: ['Extremely small team = no specialists; everyone does everything', 'Intense pace — the speed of shipping can be relentless']
+    },
+    'databricks': {
+        pros: ['Engineers who built Spark, Delta Lake, MLflow — deep technical pedigree', 'Strong compensation and equity packages consistently above market'],
+        cons: ['Hypergrowth means org changes are constant — teams restructure frequently', 'Some legacy Spark-era tech debt that can slow down new features']
+    },
+    'hubspot': {
+        pros: ['Culture Code is legendary — transparency, autonomy, flexibility are real', 'Remote-first done right with genuine work-life balance'],
+        cons: ['Enterprise sales culture can clash with engineering', 'Comp below FAANG for senior roles']
+    },
+    'huggingface': {
+        pros: ['True open-source DNA — you work on things millions of developers actually use', 'Remote-first and async culture that actually works across time zones'],
+        cons: ['Below-market comp compared to FAANG', 'Career progression is unclear — no well-defined ladder']
+    },
+    'linear': {
+        pros: ['Obsessive product craft — building the best-in-class PM tool teams genuinely love', 'Deep work culture with no standups and minimal meetings — actually practiced'],
+        cons: ['Very small team = limited roles available at any given time', 'High hiring bar means slow growth — patience required']
+    },
+    'mistral': {
+        pros: ['Small team punching way above weight — Mixtral, Mistral Large', 'European AI champion with strong research DNA'],
+        cons: ['Very early-stage — processes are minimal', 'Paris-centric with limited remote options']
+    },
+    'perplexity': {
+        pros: ['Fastest-growing AI product — real users, real revenue, genuine product-market fit', 'Small team, massive impact per engineer — your work ships to millions quickly'],
+        cons: ['Startup intensity — expect long hours and high expectations', 'Growing pains as the team scales — roles and responsibilities shift frequently']
+    },
+    'runway': {
+        pros: ['Pioneer in AI video generation — Gen-3 Alpha is industry-leading', 'Unique blend of art and engineering — creative culture values both'],
+        cons: ['Smaller team (~420) means limited specialization — engineers wear multiple hats', 'AI video generation is an increasingly competitive space']
+    },
+    'scale': {
+        pros: ['Building critical AI data infrastructure used by OpenAI, Meta, Microsoft, and the US government', 'Strong compensation for engineers — competitive base + equity'],
+        cons: ['Work-life balance rated 2.7/5 — long hours common during client deadlines', 'Culture and values scored 2.9/5 — inconsistent management quality']
+    },
+    'stripe': {
+        pros: ['Engineering culture is elite — code quality and writing culture are best-in-class', 'Top compensation in fintech — competitive base, equity, and benefits'],
+        cons: ['Perfectionism can slow shipping — high bar sometimes means slower velocity', 'The 2022-23 layoffs affected morale — company has been rebuilding confidence']
+    },
+    'together': {
+        pros: ['Open-source AI infrastructure — real mission alignment, not just marketing', 'Small team with outsized research output; your work has direct impact'],
+        cons: ['Early-stage means wearing many hats constantly — not for specialists', 'Limited career ladder; growth paths are still being defined']
+    },
+    'vast': {
+        pros: ['Front-row seat to the AI compute revolution — demand for GPU cloud is surging', 'Strong compensation and generous equity stakes for a bootstrapped startup'],
+        cons: ['Processes are still being defined — expect ad hoc workflows', 'Intense workload — the team explicitly values high output']
+    },
+    'vercel': {
+        pros: ['Building the future of web infrastructure — Next.js, Turbopack, edge runtime', 'Remote-first with strong async culture — true flexibility'],
+        cons: ['High expectations and fast pace can lead to burnout', 'Leadership sets very high standards — the pace isn\'t for everyone']
+    }
 };
 
 // ═══ JOBS DATA ═══
@@ -2068,7 +2158,20 @@ function renderJobs() {
                         <div class="cp-rating-bar"><div class="cp-rating-fill ${c.wlb_score >= 4.0 ? 'high' : c.wlb_score >= 3.5 ? 'mid' : 'low'}" style="width:${(c.wlb_score/5)*100}%"></div></div>
                     </div>
                 </div>
-                <div class="cp-summary">${getCultureSummary(j.company)}</div>
+                ${COMPANY_REVIEWS[j.company] ? `<div class="cp-reviews">
+                    <div class="cp-review-col">
+                        <h4><span class="cp-ico-pro">✓</span> What employees love</h4>
+                        <ul class="cp-review-list">
+                            ${COMPANY_REVIEWS[j.company].pros.map(p => `<li><span class="cp-dot cp-dot-pro">+</span><span>${p}</span></li>`).join('')}
+                        </ul>
+                    </div>
+                    <div class="cp-review-col">
+                        <h4><span class="cp-ico-con">✗</span> What could be better</h4>
+                        <ul class="cp-review-list">
+                            ${COMPANY_REVIEWS[j.company].cons.map(c2 => `<li><span class="cp-dot cp-dot-con">−</span><span>${c2}</span></li>`).join('')}
+                        </ul>
+                    </div>
+                </div>` : `<div class="cp-summary">${getCultureSummary(j.company)}</div>`}
                 <div class="cp-peek-footer">
                     <span class="cp-peek-size">👥 ${c.size}</span>
                     <span class="cp-peek-link" onclick="event.preventDefault();event.stopPropagation();window.location.href='/companies/${j.company}'">Full Culture Profile →</span>
