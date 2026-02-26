@@ -320,33 +320,6 @@
             margin-top: 16px; padding-top: 12px; border-top: 1px solid var(--border);
         }
 
-        /* ═══ QUOTES ═══ */
-        .quotes-section {
-            padding: 48px 0 56px;
-            border-bottom: 1px solid var(--border);
-        }
-        .quotes-grid {
-            display: grid; grid-template-columns: 1fr 1fr; gap: 24px;
-        }
-        .quote-card {
-            background: var(--bg-card); border: 1px solid var(--border);
-            border-radius: var(--radius-lg); padding: 28px;
-        }
-        .quote-card h3 {
-            font-size: 15px; font-weight: 600; margin-bottom: 16px;
-            display: flex; align-items: center; gap: 8px;
-        }
-        .quote-card blockquote {
-            font-size: 14px; color: var(--text-2); line-height: 1.7;
-            padding: 12px 0; border-bottom: 1px solid var(--border);
-            font-style: italic;
-        }
-        .quote-card blockquote:last-of-type { border-bottom: none; }
-        .quote-card .review-source {
-            font-size: 11px; color: var(--text-3); font-style: italic;
-            margin-top: 16px; padding-top: 12px; border-top: 1px solid var(--border);
-        }
-
         /* ═══ ENGINEERING ═══ */
         .eng-section {
             padding: 48px 0 56px;
@@ -448,7 +421,6 @@
             .culture-grid { grid-template-columns: 1fr; }
             .ratings-grid { grid-template-columns: 1fr 1fr; }
             .reviews-grid { grid-template-columns: 1fr; }
-            .quotes-grid { grid-template-columns: 1fr; }
             .eng-grid { grid-template-columns: 1fr; }
             .ft-grid { grid-template-columns: 1fr 1fr; gap: 28px; }
         }
@@ -477,7 +449,7 @@
         <div class="nav-links">
             <a href="/">Values</a>
             <a href="/#companies" class="active">Companies</a>
-            <a href="/#quiz">Quiz</a>
+            <a href="/#quiz">Culture Quiz</a>
             <a href="/jobs">Jobs</a>
         </div>
         <button class="hamburger" onclick="this.classList.toggle('active');this.closest('.nav-inner').querySelector('.nav-links').classList.toggle('open')" aria-label="Menu">
@@ -595,31 +567,6 @@
     </div>
 </section>
 
-<!-- ═══ EMPLOYEE QUOTES ═══ -->
-<section class="quotes-section">
-    <div class="container">
-        <span class="s-label">Employee Quotes</span>
-        <h2 class="s-title">In their <em>own</em> words</h2>
-        <p class="s-desc">Direct quotes from Airbnb employees on Glassdoor.</p>
-        <div class="quotes-grid">
-            <div class="quote-card">
-                <h3><span class="ico">+</span> Positive</h3>
-                <blockquote>"We have a great downtown office and culture is at the center of many decisions made."</blockquote>
-                <blockquote>"Amazing people, incredible environment &mdash; you're continuously being challenged to do new work or try something different."</blockquote>
-                <blockquote>"Great team and colleagues, fully remote options, and good pay."</blockquote>
-                <div class="review-source">Source: Glassdoor employee reviews</div>
-            </div>
-            <div class="quote-card">
-                <h3><span class="ico">&minus;</span> Negative</h3>
-                <blockquote>"Leadership culture can be highly political, especially at mid-to-senior levels."</blockquote>
-                <blockquote>"Airbnb is a great company to retire at. If you are looking to grow professionally, please look elsewhere."</blockquote>
-                <blockquote>"Generally good but lack of accountability in work can be maddening."</blockquote>
-                <div class="review-source">Source: Glassdoor employee reviews</div>
-            </div>
-        </div>
-    </div>
-</section>
-
 <!-- ═══ ENGINEERING CULTURE ═══ -->
 <section class="eng-section">
     <div class="container">
@@ -672,9 +619,10 @@
     <div class="container">
         <span class="s-label">Open Positions</span>
         <h2 class="s-title">Jobs at <em>Airbnb</em></h2>
-        <p class="s-desc">247 open roles at Airbnb. Browse all positions on the jobs page.</p>
+        <p class="s-desc">Showing 10 of 247 open roles. All links go directly to the original job posting.</p>
+        <div class="jobs-list" id="jobsList"></div>
         <div class="cta-wrap">
-            <a href="/jobs?company=airbnb" class="btn-primary">View All 247 Airbnb Jobs &rarr;</a>
+            <a href="/jobs?company=airbnb" class="btn-primary">See all 247 Airbnb jobs &rarr;</a>
         </div>
     </div>
 </section>
@@ -758,9 +706,37 @@ function renderRatings() {
     }).join('');
 }
 
+// ═══ JOBS DATA ═══
+const COMPANY_JOBS = [
+    { title: 'Business Solutions Engineer, (Agentic AI)', location: 'Bangalore, India', url: 'https://careers.airbnb.com/positions/7541082?gh_jid=7541082&ref=jobsbyculture.com' },
+    { title: 'Engineering Manager, Ambassador Routing', location: 'Remote - USA', url: 'https://careers.airbnb.com/positions/7569268?gh_jid=7569268&ref=jobsbyculture.com' },
+    { title: 'Engineering Manager, Client Products & Emerging Tech', location: 'Remote - USA', url: 'https://careers.airbnb.com/positions/7522011?gh_jid=7522011&ref=jobsbyculture.com' },
+    { title: 'Senior Data Scientist, Platform (Integrity)', location: 'United States', url: 'https://careers.airbnb.com/positions/7594971?gh_jid=7594971&ref=jobsbyculture.com' },
+    { title: 'Senior Machine Learning Engineer, Community Support Engineering', location: 'Remote - USA', url: 'https://careers.airbnb.com/positions/7560504?gh_jid=7560504&ref=jobsbyculture.com' },
+    { title: 'Lead, Advanced Analytics, Product', location: 'United States', url: 'https://careers.airbnb.com/positions/7612790?gh_jid=7612790&ref=jobsbyculture.com' },
+    { title: 'Platform Lead - Agent Products, Community Support', location: 'United States', url: 'https://careers.airbnb.com/positions/7559510?gh_jid=7559510&ref=jobsbyculture.com' },
+    { title: 'Staff Experience Designer', location: 'United States', url: 'https://careers.airbnb.com/positions/6717690?gh_jid=6717690&ref=jobsbyculture.com' },
+    { title: 'Data Protection Operations Lead', location: 'United States', url: 'https://careers.airbnb.com/positions/7652631?gh_jid=7652631&ref=jobsbyculture.com' },
+    { title: 'Business Analyst', location: 'Singapore', url: 'https://careers.airbnb.com/positions/7543907?gh_jid=7543907&ref=jobsbyculture.com' },
+];
+
+function renderJobs() {
+    const list = document.getElementById('jobsList');
+    list.innerHTML = COMPANY_JOBS.map(job => `
+        <a href="${job.url}" target="_blank" rel="noopener" class="job-card">
+            <div class="job-card-info">
+                <div class="job-card-title">${job.title}</div>
+                <div class="job-card-loc">${job.location}</div>
+            </div>
+            <span class="job-card-arrow">&rarr;</span>
+        </a>
+    `).join('');
+}
+
 // ═══ INIT ═══
 document.addEventListener('DOMContentLoaded', function() {
     renderRatings();
+    renderJobs();
 });
 </script>
 
