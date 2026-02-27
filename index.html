@@ -1949,7 +1949,7 @@ function pickRole(slug) {
         el.classList.toggle('active', el.dataset.slug === slug);
     });
     updateHeroCount();
-    restartTW();
+    pauseTW();          // user made a deliberate choice — stop rotating
 }
 
 // Build value chips
