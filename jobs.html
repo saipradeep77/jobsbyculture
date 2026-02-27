@@ -4,18 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AI & Tech Jobs Filtered by Culture | JobsByCulture</title>
-    <meta name="description" content="Browse 1,291 AI & tech jobs filtered by culture values like async-first, work-life balance, remote-friendly, and ethical AI.">
+    <meta name="description" content="Browse 1,463 AI & tech jobs filtered by culture values like async-first, work-life balance, remote-friendly, and ethical AI.">
     <meta name="robots" content="index, follow">
     <meta name="author" content="JobsByCulture">
     <meta property="og:title" content="AI & Tech Jobs Filtered by Culture | JobsByCulture">
-    <meta property="og:description" content="Browse 1,291 AI & tech jobs filtered by culture values. Every job links directly to the original posting.">
+    <meta property="og:description" content="Browse 1,463 AI & tech jobs filtered by culture values. Every job links directly to the original posting.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://jobsbyculture.com/jobs">
     <meta property="og:image" content="https://jobsbyculture.com/og-image.png?v=4">
     <meta property="og:image:width" content="2616">
     <meta property="og:image:height" content="1190">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="1,291 AI & Tech Jobs Filtered by Culture | JobsByCulture">
+    <meta name="twitter:title" content="1,463 AI & Tech Jobs Filtered by Culture | JobsByCulture">
     <meta name="twitter:description" content="Browse AI & tech jobs filtered by culture values like async-first, work-life balance, and ethical AI.">
     <meta name="twitter:site" content="@jobsbyculture">
     <meta name="twitter:image" content="https://jobsbyculture.com/og-image.png?v=4">
@@ -495,14 +495,18 @@ const VALUES = {
 
 // ═══ ROLE CATEGORIES ═══
 const ROLES = {
-    'engineering': { name: 'Engineering', ico: '💻' },
-    'ml-ai':       { name: 'ML / AI',    ico: '🧠' },
-    'data':        { name: 'Data',        ico: '📊' },
-    'product':     { name: 'Product',     ico: '📋' },
-    'design':      { name: 'Design',      ico: '🎨' },
-    'sales':       { name: 'Sales / GTM', ico: '💼' },
-    'marketing':   { name: 'Marketing',   ico: '📣' },
-    'operations':  { name: 'Operations',  ico: '⚙️' },
+    'ml-ai':       { name: 'ML / AI',       ico: '🧠' },
+    'data':        { name: 'Data',           ico: '📊' },
+    'design':      { name: 'Design',         ico: '🎨' },
+    'engineering': { name: 'Engineering',    ico: '💻' },
+    'product':     { name: 'Product',        ico: '📋' },
+    'marketing':   { name: 'Marketing',      ico: '📣' },
+    'sales':       { name: 'Sales / GTM',    ico: '💼' },
+    'finance':     { name: 'Finance',        ico: '💰' },
+    'hr-people':   { name: 'HR / People',    ico: '👤' },
+    'legal':       { name: 'Legal',          ico: '⚖️' },
+    'support':     { name: 'Support',        ico: '🎧' },
+    'operations':  { name: 'Operations',     ico: '⚙️' },
 };
 
 const SENIORITIES = {
@@ -624,6 +628,12 @@ const COMPANIES = {
         values: ['remote','wlb','diverse','open-source','equity'],
         careers: 'https://careers.airbnb.com/?ref=jobsbyculture.com'
     },
+    'figma': {
+        name: 'Figma', logo: 'https://www.google.com/s2/favicons?domain=figma.com&sz=128',
+        size: 'Large (~2,800)', glassdoor: 3.7, wlb_score: 3.1,
+        values: ['eng-driven','ship-fast','learning','product-impact','deep-work'],
+        careers: 'https://www.figma.com/careers?ref=jobsbyculture.com'
+    },
 };
 
 // ═══ COMPANY REVIEWS (top 2 pros/cons from employee reviews) ═══
@@ -699,6 +709,10 @@ const COMPANY_REVIEWS = {
     'airbnb': {
         pros: ['Live and Work Anywhere policy — genuine remote flexibility with no pay cuts', 'Strong compensation and benefits with quarterly travel credits and educational stipends'],
         cons: ['Limited career growth — senior roles often filled externally, promotions are slow', 'Post-IPO cultural shift — increasing bureaucracy and internal politics at mid-to-senior levels']
+    },
+    'figma': {
+        pros: ['World-class talent and technically ambitious problems — real-time multiplayer, WebAssembly rendering', 'Strong product mission that employees genuinely believe in — Figma is loved by its users'],
+        cons: ['Work-life balance rated 3.1/5 — 60+ hour weeks common, especially near deadlines', 'Hypergrowth growing pains — product suite doubled without proportional hiring']
     }
 };
 
@@ -2007,7 +2021,179 @@ const JOBS = [
     { id: 1288, title: 'Team Specialist, Premium Support (Korean Speaking)', company: 'airbnb', location: 'Seoul, Korea', type: 'Full-time · Remote', posted: '2w ago', source: 'API', url: 'https://careers.airbnb.com/positions/7552398?gh_jid=7552398&ref=jobsbyculture.com' },
     { id: 1289, title: 'Team Specialist, Premium Support(Mandarin Speaking)', company: 'airbnb', location: 'Singapore', type: 'Full-time · Remote', posted: '2w ago', source: 'API', url: 'https://careers.airbnb.com/positions/7552175?gh_jid=7552175&ref=jobsbyculture.com' },
     { id: 1290, title: 'Tech Lead Manager, Biztech', company: 'airbnb', location: 'Bangalore, India', type: 'Full-time · Hybrid', posted: '3w+ ago', source: 'API', url: 'https://careers.airbnb.com/positions/7587950?gh_jid=7587950&ref=jobsbyculture.com' },
-    { id: 1291, title: 'Vendor Performance Manager', company: 'airbnb', location: 'Canada', type: 'Full-time · Remote', posted: '1w ago', source: 'API', url: 'https://careers.airbnb.com/positions/7585385?gh_jid=7585385&ref=jobsbyculture.com' }
+    { id: 1291, title: 'Vendor Performance Manager', company: 'airbnb', location: 'Canada', type: 'Full-time · Remote', posted: '1w ago', source: 'API', url: 'https://careers.airbnb.com/positions/7585385?gh_jid=7585385&ref=jobsbyculture.com' },
+    { id: 1292, title: 'Account Executive, Enterprise', company: 'figma', location: 'San Francisco, CA · New York, NY · United States', type: 'Full-time', posted: '2w ago', source: 'API', url: 'https://boards.greenhouse.io/figma/jobs/5426468004?gh_jid=5426468004&ref=jobsbyculture.com' },
+    { id: 1293, title: 'Account Executive, Enterprise', company: 'figma', location: 'Bengaluru, India', type: 'Full-time', posted: '2w ago', source: 'API', url: 'https://boards.greenhouse.io/figma/jobs/5579204004?gh_jid=5579204004&ref=jobsbyculture.com' },
+    { id: 1294, title: 'Account Executive, Enterprise', company: 'figma', location: 'Berlin, Germany', type: 'Full-time', posted: '2w ago', source: 'API', url: 'https://boards.greenhouse.io/figma/jobs/5783812004?gh_jid=5783812004&ref=jobsbyculture.com' },
+    { id: 1295, title: 'Account Executive, Enterprise - Figma Weave', company: 'figma', location: 'London, England', type: 'Full-time', posted: '2w ago', source: 'API', url: 'https://boards.greenhouse.io/figma/jobs/5759392004?gh_jid=5759392004&ref=jobsbyculture.com' },
+    { id: 1296, title: 'Account Executive, Enterprise - Figma Weave', company: 'figma', location: 'New York, NY', type: 'Full-time', posted: '2w ago', source: 'API', url: 'https://boards.greenhouse.io/figma/jobs/5759369004?gh_jid=5759369004&ref=jobsbyculture.com' },
+    { id: 1297, title: 'Account Executive, Enterprise', company: 'figma', location: 'London, England', type: 'Full-time', posted: '2w ago', source: 'API', url: 'https://boards.greenhouse.io/figma/jobs/5458801004?gh_jid=5458801004&ref=jobsbyculture.com' },
+    { id: 1298, title: 'Account Executive, Enterprise', company: 'figma', location: 'Paris, France', type: 'Full-time', posted: '2w ago', source: 'API', url: 'https://boards.greenhouse.io/figma/jobs/5428656004?gh_jid=5428656004&ref=jobsbyculture.com' },
+    { id: 1299, title: 'Account Executive, Enterprise, Spanish &amp; Portuguese Speaking', company: 'figma', location: 'São Paulo, Brazil', type: 'Full-time', posted: '2w ago', source: 'API', url: 'https://boards.greenhouse.io/figma/jobs/5798928004?gh_jid=5798928004&ref=jobsbyculture.com' },
+    { id: 1300, title: 'Account Executive, Enterprise', company: 'figma', location: 'Sydney, Australia', type: 'Full-time', posted: '2w ago', source: 'API', url: 'https://boards.greenhouse.io/figma/jobs/5803515004?gh_jid=5803515004&ref=jobsbyculture.com' },
+    { id: 1301, title: 'Account Executive, Enterprise', company: 'figma', location: 'Tokyo, Japan', type: 'Full-time', posted: '2w ago', source: 'API', url: 'https://boards.greenhouse.io/figma/jobs/5806875004?gh_jid=5806875004&ref=jobsbyculture.com' },
+    { id: 1302, title: 'Account Executive, Federal', company: 'figma', location: 'Washington, DC', type: 'Full-time', posted: '2w ago', source: 'API', url: 'https://boards.greenhouse.io/figma/jobs/5425993004?gh_jid=5425993004&ref=jobsbyculture.com' },
+    { id: 1303, title: 'Account Executive, Mid-Market', company: 'figma', location: 'San Francisco, CA · New York, NY · United States', type: 'Full-time', posted: '2w ago', source: 'API', url: 'https://boards.greenhouse.io/figma/jobs/5422236004?gh_jid=5422236004&ref=jobsbyculture.com' },
+    { id: 1304, title: 'Account Executive, Mid-Market', company: 'figma', location: 'Bengaluru, India', type: 'Full-time', posted: '2w ago', source: 'API', url: 'https://boards.greenhouse.io/figma/jobs/5576544004?gh_jid=5576544004&ref=jobsbyculture.com' },
+    { id: 1305, title: 'Account Executive, Mid-Market', company: 'figma', location: 'Berlin, Germany', type: 'Full-time', posted: '2w ago', source: 'API', url: 'https://boards.greenhouse.io/figma/jobs/5364702004?gh_jid=5364702004&ref=jobsbyculture.com' },
+    { id: 1306, title: 'Account Executive, Mid-Market - Figma Weave', company: 'figma', location: 'London, England', type: 'Full-time', posted: '2w ago', source: 'API', url: 'https://boards.greenhouse.io/figma/jobs/5760223004?gh_jid=5760223004&ref=jobsbyculture.com' },
+    { id: 1307, title: 'Account Executive, Mid-Market - Figma Weave', company: 'figma', location: 'New York, NY · United States', type: 'Full-time', posted: '2w ago', source: 'API', url: 'https://boards.greenhouse.io/figma/jobs/5755146004?gh_jid=5755146004&ref=jobsbyculture.com' },
+    { id: 1308, title: 'Account Executive, Mid-Market', company: 'figma', location: 'London, England', type: 'Full-time', posted: '2w ago', source: 'API', url: 'https://boards.greenhouse.io/figma/jobs/5415515004?gh_jid=5415515004&ref=jobsbyculture.com' },
+    { id: 1309, title: 'Account Executive, Mid-Market, Spanish &amp; Portuguese Speaking', company: 'figma', location: 'São Paulo, Brazil', type: 'Full-time', posted: '2w ago', source: 'API', url: 'https://boards.greenhouse.io/figma/jobs/5783321004?gh_jid=5783321004&ref=jobsbyculture.com' },
+    { id: 1310, title: 'Account Executive, Mid-Market', company: 'figma', location: 'Tokyo, Japan', type: 'Full-time', posted: '2w ago', source: 'API', url: 'https://boards.greenhouse.io/figma/jobs/5809131004?gh_jid=5809131004&ref=jobsbyculture.com' },
+    { id: 1311, title: 'Account Executive, SMB', company: 'figma', location: 'San Francisco, CA · New York, NY', type: 'Full-time', posted: '2w ago', source: 'API', url: 'https://boards.greenhouse.io/figma/jobs/5694259004?gh_jid=5694259004&ref=jobsbyculture.com' },
+    { id: 1312, title: 'Account Executive, SMB', company: 'figma', location: 'Berlin, Germany', type: 'Full-time', posted: '2w ago', source: 'API', url: 'https://boards.greenhouse.io/figma/jobs/5077339004?gh_jid=5077339004&ref=jobsbyculture.com' },
+    { id: 1313, title: 'Account Executive, SMB - Figma Weave', company: 'figma', location: 'New York, NY · United States', type: 'Full-time', posted: '2w ago', source: 'API', url: 'https://boards.greenhouse.io/figma/jobs/5759582004?gh_jid=5759582004&ref=jobsbyculture.com' },
+    { id: 1314, title: 'Account Executive, SMB', company: 'figma', location: 'Paris, France', type: 'Full-time', posted: '2w ago', source: 'API', url: 'https://boards.greenhouse.io/figma/jobs/5675771004?gh_jid=5675771004&ref=jobsbyculture.com' },
+    { id: 1315, title: 'Account Executive, SMB', company: 'figma', location: 'Singapore', type: 'Full-time', posted: '2w ago', source: 'API', url: 'https://boards.greenhouse.io/figma/jobs/5727187004?gh_jid=5727187004&ref=jobsbyculture.com' },
+    { id: 1316, title: 'Account Executive, SMB, Spanish &amp; Portuguese Speaking', company: 'figma', location: 'São Paulo, Brazil', type: 'Full-time', posted: '2w ago', source: 'API', url: 'https://boards.greenhouse.io/figma/jobs/5706866004?gh_jid=5706866004&ref=jobsbyculture.com' },
+    { id: 1317, title: 'Account Executive, SMB', company: 'figma', location: 'Sydney, Australia', type: 'Full-time', posted: '2w ago', source: 'API', url: 'https://boards.greenhouse.io/figma/jobs/5770232004?gh_jid=5770232004&ref=jobsbyculture.com' },
+    { id: 1318, title: 'Account Executive, SMB', company: 'figma', location: 'Tokyo, Japan', type: 'Full-time', posted: '2w ago', source: 'API', url: 'https://boards.greenhouse.io/figma/jobs/5729844004?gh_jid=5729844004&ref=jobsbyculture.com' },
+    { id: 1319, title: 'Account Executive, Strategic', company: 'figma', location: 'San Francisco, CA · New York, NY · United States', type: 'Full-time', posted: '2w ago', source: 'API', url: 'https://boards.greenhouse.io/figma/jobs/5558737004?gh_jid=5558737004&ref=jobsbyculture.com' },
+    { id: 1320, title: 'Account Executive, Strategic', company: 'figma', location: 'Singapore', type: 'Full-time', posted: '2w ago', source: 'API', url: 'https://boards.greenhouse.io/figma/jobs/5753209004?gh_jid=5753209004&ref=jobsbyculture.com' },
+    { id: 1321, title: 'Account Executive, Strategic, Spanish &amp; Portuguese Speaking', company: 'figma', location: 'São Paulo, Brazil', type: 'Full-time', posted: '2w ago', source: 'API', url: 'https://boards.greenhouse.io/figma/jobs/5797769004?gh_jid=5797769004&ref=jobsbyculture.com' },
+    { id: 1322, title: 'Account Executive, Strategic', company: 'figma', location: 'Tokyo, Japan', type: 'Full-time', posted: '2w ago', source: 'API', url: 'https://boards.greenhouse.io/figma/jobs/5756182004?gh_jid=5756182004&ref=jobsbyculture.com' },
+    { id: 1323, title: 'Accounting Analyst', company: 'figma', location: 'Dublin, Ireland', type: 'Full-time', posted: '2w ago', source: 'API', url: 'https://boards.greenhouse.io/figma/jobs/5802812004?gh_jid=5802812004&ref=jobsbyculture.com' },
+    { id: 1324, title: 'AI Applied Scientist', company: 'figma', location: 'San Francisco, CA · New York, NY · United States', type: 'Full-time', posted: '2w ago', source: 'API', url: 'https://boards.greenhouse.io/figma/jobs/5707966004?gh_jid=5707966004&ref=jobsbyculture.com' },
+    { id: 1325, title: 'Associate Solutions Consultant', company: 'figma', location: 'San Francisco, CA · New York, NY · United States', type: 'Full-time', posted: '2w ago', source: 'API', url: 'https://boards.greenhouse.io/figma/jobs/5633324004?gh_jid=5633324004&ref=jobsbyculture.com' },
+    { id: 1326, title: 'Automations &amp; AI Specialist, Product Support', company: 'figma', location: 'San Francisco, CA · New York, NY · United States', type: 'Full-time', posted: '2w ago', source: 'API', url: 'https://boards.greenhouse.io/figma/jobs/5802956004?gh_jid=5802956004&ref=jobsbyculture.com' },
+    { id: 1327, title: 'Brand Designer - Figma Weave', company: 'figma', location: 'Tel Aviv, Israel', type: 'Full-time', posted: '2w ago', source: 'API', url: 'https://boards.greenhouse.io/figma/jobs/5750938004?gh_jid=5750938004&ref=jobsbyculture.com' },
+    { id: 1328, title: 'Business Operations', company: 'figma', location: 'San Francisco, CA · New York, NY · United States', type: 'Full-time', posted: '2w ago', source: 'API', url: 'https://boards.greenhouse.io/figma/jobs/5786381004?gh_jid=5786381004&ref=jobsbyculture.com' },
+    { id: 1329, title: 'Business Recruiter', company: 'figma', location: 'San Francisco, CA · New York, NY · United States', type: 'Full-time', posted: '2w ago', source: 'API', url: 'https://boards.greenhouse.io/figma/jobs/5754209004?gh_jid=5754209004&ref=jobsbyculture.com' },
+    { id: 1330, title: 'Community Marketing Manager - Figma Weave', company: 'figma', location: 'New York, NY', type: 'Full-time', posted: '2w ago', source: 'API', url: 'https://boards.greenhouse.io/figma/jobs/5748282004?gh_jid=5748282004&ref=jobsbyculture.com' },
+    { id: 1331, title: 'Compliance Manager, Customer Trust &amp; Third Party Risk', company: 'figma', location: 'San Francisco, CA · New York, NY · United States', type: 'Full-time', posted: '2w ago', source: 'API', url: 'https://boards.greenhouse.io/figma/jobs/5735296004?gh_jid=5735296004&ref=jobsbyculture.com' },
+    { id: 1332, title: 'Corporate Development &amp; Strategy, M&amp;A Integration', company: 'figma', location: 'San Francisco, CA · New York, NY · United States', type: 'Full-time', posted: '2w ago', source: 'API', url: 'https://boards.greenhouse.io/figma/jobs/5699991004?gh_jid=5699991004&ref=jobsbyculture.com' },
+    { id: 1333, title: 'Customer Enablement Manager - Figma Weave', company: 'figma', location: 'London, England; Tel Aviv, Israel · London, England', type: 'Full-time', posted: '2w ago', source: 'API', url: 'https://boards.greenhouse.io/figma/jobs/5765688004?gh_jid=5765688004&ref=jobsbyculture.com' },
+    { id: 1334, title: 'Customer Enablement Manager - Figma Weave', company: 'figma', location: 'New York, NY', type: 'Full-time', posted: '2w ago', source: 'API', url: 'https://boards.greenhouse.io/figma/jobs/5765928004?gh_jid=5765928004&ref=jobsbyculture.com' },
+    { id: 1335, title: 'Data Engineer', company: 'figma', location: 'San Francisco, CA · New York, NY · United States', type: 'Full-time', posted: '2w ago', source: 'API', url: 'https://boards.greenhouse.io/figma/jobs/5220003004?gh_jid=5220003004&ref=jobsbyculture.com' },
+    { id: 1336, title: 'Data Scientist', company: 'figma', location: 'San Francisco, CA · New York, NY · United States', type: 'Full-time', posted: '2w ago', source: 'API', url: 'https://boards.greenhouse.io/figma/jobs/5552580004?gh_jid=5552580004&ref=jobsbyculture.com' },
+    { id: 1337, title: 'Demand Generation Manager', company: 'figma', location: 'Singapore', type: 'Full-time', posted: '2w ago', source: 'API', url: 'https://boards.greenhouse.io/figma/jobs/5774993004?gh_jid=5774993004&ref=jobsbyculture.com' },
+    { id: 1338, title: 'Demo Strategy &amp; Effectiveness Manager', company: 'figma', location: 'San Francisco, CA · New York, NY · United States', type: 'Full-time', posted: '2w ago', source: 'API', url: 'https://boards.greenhouse.io/figma/jobs/5628218004?gh_jid=5628218004&ref=jobsbyculture.com' },
+    { id: 1339, title: 'Designer Advocate, Federal', company: 'figma', location: 'Washington, DC', type: 'Full-time', posted: '2w ago', source: 'API', url: 'https://boards.greenhouse.io/figma/jobs/5790731004?gh_jid=5790731004&ref=jobsbyculture.com' },
+    { id: 1340, title: 'Designer Advocate - Figma Weave', company: 'figma', location: 'New York, NY', type: 'Full-time', posted: '2w ago', source: 'API', url: 'https://boards.greenhouse.io/figma/jobs/5692764004?gh_jid=5692764004&ref=jobsbyculture.com' },
+    { id: 1341, title: 'Design Operations Strategist', company: 'figma', location: 'San Francisco, CA · New York, NY · United States', type: 'Full-time', posted: '2w ago', source: 'API', url: 'https://boards.greenhouse.io/figma/jobs/5776278004?gh_jid=5776278004&ref=jobsbyculture.com' },
+    { id: 1342, title: 'Design Program Manager, AI', company: 'figma', location: 'San Francisco, CA · New York, NY · United States', type: 'Full-time', posted: '2w ago', source: 'API', url: 'https://boards.greenhouse.io/figma/jobs/5799555004?gh_jid=5799555004&ref=jobsbyculture.com' },
+    { id: 1343, title: 'Director, Commercial Sales', company: 'figma', location: 'Paris, France', type: 'Full-time', posted: '2w ago', source: 'API', url: 'https://boards.greenhouse.io/figma/jobs/5734999004?gh_jid=5734999004&ref=jobsbyculture.com' },
+    { id: 1344, title: 'Director, Corporate &amp; Securities Counsel', company: 'figma', location: 'San Francisco, CA · New York, NY · United States', type: 'Full-time', posted: '2w ago', source: 'API', url: 'https://boards.greenhouse.io/figma/jobs/5752781004?gh_jid=5752781004&ref=jobsbyculture.com' },
+    { id: 1345, title: 'Director, Design - Communication Tools', company: 'figma', location: 'San Francisco, CA · New York, NY · United States', type: 'Full-time', posted: '2w ago', source: 'API', url: 'https://boards.greenhouse.io/figma/jobs/5661397004?gh_jid=5661397004&ref=jobsbyculture.com' },
+    { id: 1346, title: 'Director, Federal Sales', company: 'figma', location: 'San Francisco, CA · New York, NY · United States', type: 'Full-time', posted: '2w ago', source: 'API', url: 'https://boards.greenhouse.io/figma/jobs/5728495004?gh_jid=5728495004&ref=jobsbyculture.com' },
+    { id: 1347, title: 'Director, Product Marketing', company: 'figma', location: 'San Francisco, CA · New York, NY · United States', type: 'Full-time', posted: '2w ago', source: 'API', url: 'https://boards.greenhouse.io/figma/jobs/5732415004?gh_jid=5732415004&ref=jobsbyculture.com' },
+    { id: 1348, title: 'Director, Sales - Figma Weave', company: 'figma', location: 'New York, NY · United States', type: 'Full-time', posted: '2w ago', source: 'API', url: 'https://boards.greenhouse.io/figma/jobs/5787289004?gh_jid=5787289004&ref=jobsbyculture.com' },
+    { id: 1349, title: 'Director, Software Engineering - Product Platform', company: 'figma', location: 'San Francisco, CA · New York, NY · United States', type: 'Full-time', posted: '2w ago', source: 'API', url: 'https://boards.greenhouse.io/figma/jobs/5600388004?gh_jid=5600388004&ref=jobsbyculture.com' },
+    { id: 1350, title: 'Distribution Partner Manager', company: 'figma', location: 'London, England', type: 'Full-time', posted: '2w ago', source: 'API', url: 'https://boards.greenhouse.io/figma/jobs/5660873004?gh_jid=5660873004&ref=jobsbyculture.com' },
+    { id: 1351, title: 'Distribution Partner Manager', company: 'figma', location: 'Singapore', type: 'Full-time', posted: '2w ago', source: 'API', url: 'https://boards.greenhouse.io/figma/jobs/5756184004?gh_jid=5756184004&ref=jobsbyculture.com' },
+    { id: 1352, title: 'Distribution Partner Manager', company: 'figma', location: 'Tokyo, Japan', type: 'Full-time', posted: '2w ago', source: 'API', url: 'https://boards.greenhouse.io/figma/jobs/5724297004?gh_jid=5724297004&ref=jobsbyculture.com' },
+    { id: 1353, title: 'Education Program Strategist', company: 'figma', location: 'San Francisco, CA · New York, NY · United States', type: 'Full-time', posted: '2w ago', source: 'API', url: 'https://boards.greenhouse.io/figma/jobs/5808441004?gh_jid=5808441004&ref=jobsbyculture.com' },
+    { id: 1354, title: 'Email Marketing Operations', company: 'figma', location: 'San Francisco, CA · New York, NY · United States', type: 'Full-time', posted: '2w ago', source: 'API', url: 'https://boards.greenhouse.io/figma/jobs/5781862004?gh_jid=5781862004&ref=jobsbyculture.com' },
+    { id: 1355, title: 'Enterprise Solutions Consultant', company: 'figma', location: 'Bengaluru, India', type: 'Full-time', posted: '2w ago', source: 'API', url: 'https://boards.greenhouse.io/figma/jobs/5615966004?gh_jid=5615966004&ref=jobsbyculture.com' },
+    { id: 1356, title: 'Enterprise Support Specialist, Japanese Speaking', company: 'figma', location: 'San Francisco, CA · New York, NY · United States', type: 'Full-time', posted: '2w ago', source: 'API', url: 'https://boards.greenhouse.io/figma/jobs/5728959004?gh_jid=5728959004&ref=jobsbyculture.com' },
+    { id: 1357, title: 'Enterprise Support Specialist, Korean Speaking', company: 'figma', location: 'San Francisco, CA · New York, NY · United States', type: 'Full-time', posted: '2w ago', source: 'API', url: 'https://boards.greenhouse.io/figma/jobs/5733495004?gh_jid=5733495004&ref=jobsbyculture.com' },
+    { id: 1358, title: 'Enterprise Support Specialist, Portuguese Speaking', company: 'figma', location: 'San Francisco, CA · New York, NY · United States', type: 'Full-time', posted: '2w ago', source: 'API', url: 'https://boards.greenhouse.io/figma/jobs/5733496004?gh_jid=5733496004&ref=jobsbyculture.com' },
+    { id: 1359, title: 'Executive Assistant, Product Support', company: 'figma', location: 'San Francisco, CA', type: 'Full-time', posted: '2w ago', source: 'API', url: 'https://boards.greenhouse.io/figma/jobs/5575026004?gh_jid=5575026004&ref=jobsbyculture.com' },
+    { id: 1360, title: 'Executive Assistant, Sales', company: 'figma', location: 'London, England', type: 'Full-time', posted: '2w ago', source: 'API', url: 'https://boards.greenhouse.io/figma/jobs/5764896004?gh_jid=5764896004&ref=jobsbyculture.com' },
+    { id: 1361, title: 'GTM Strategy Manager', company: 'figma', location: 'New York, NY · United States', type: 'Full-time', posted: '2w ago', source: 'API', url: 'https://boards.greenhouse.io/figma/jobs/5739002004?gh_jid=5739002004&ref=jobsbyculture.com' },
+    { id: 1362, title: 'GTM Systems Analyst', company: 'figma', location: 'San Francisco, CA · New York, NY · United States', type: 'Full-time', posted: '2w ago', source: 'API', url: 'https://boards.greenhouse.io/figma/jobs/5811266004?gh_jid=5811266004&ref=jobsbyculture.com' },
+    { id: 1363, title: 'Inside Sales Representative - Early Career (2026)', company: 'figma', location: 'New York, NY', type: 'Full-time', posted: '2w ago', source: 'API', url: 'https://boards.greenhouse.io/figma/jobs/5726175004?gh_jid=5726175004&ref=jobsbyculture.com' },
+    { id: 1364, title: 'Inside Sales Representative', company: 'figma', location: 'São Paulo, Brazil', type: 'Full-time', posted: '2w ago', source: 'API', url: 'https://boards.greenhouse.io/figma/jobs/5721644004?gh_jid=5721644004&ref=jobsbyculture.com' },
+    { id: 1365, title: 'Inside Sales Representative', company: 'figma', location: 'Tokyo, Japan', type: 'Full-time', posted: '2w ago', source: 'API', url: 'https://boards.greenhouse.io/figma/jobs/5727166004?gh_jid=5727166004&ref=jobsbyculture.com' },
+    { id: 1366, title: 'International Tax Manager', company: 'figma', location: 'San Francisco, CA · New York, NY · United States', type: 'Internship', posted: '2w ago', source: 'API', url: 'https://boards.greenhouse.io/figma/jobs/5802466004?gh_jid=5802466004&ref=jobsbyculture.com' },
+    { id: 1367, title: 'IT Operations Specialist', company: 'figma', location: 'Singapore', type: 'Full-time', posted: '2w ago', source: 'API', url: 'https://boards.greenhouse.io/figma/jobs/5770235004?gh_jid=5770235004&ref=jobsbyculture.com' },
+    { id: 1368, title: 'Launch Strategy &amp; Operations - Marketing &amp; Comms', company: 'figma', location: 'San Francisco, CA · New York, NY · United States', type: 'Full-time', posted: '2w ago', source: 'API', url: 'https://boards.greenhouse.io/figma/jobs/5729141004?gh_jid=5729141004&ref=jobsbyculture.com' },
+    { id: 1369, title: 'Legal Counsel', company: 'figma', location: 'San Francisco, CA · New York, NY · United States', type: 'Full-time', posted: '2w ago', source: 'API', url: 'https://boards.greenhouse.io/figma/jobs/5795034004?gh_jid=5795034004&ref=jobsbyculture.com' },
+    { id: 1370, title: 'Legal Counsel, Commercial', company: 'figma', location: 'San Francisco, CA · New York, NY · United States', type: 'Full-time', posted: '2w ago', source: 'API', url: 'https://boards.greenhouse.io/figma/jobs/5811082004?gh_jid=5811082004&ref=jobsbyculture.com' },
+    { id: 1371, title: 'Legal Operations Lead, CLM &amp; Technology', company: 'figma', location: 'San Francisco, CA · New York, NY · United States', type: 'Full-time', posted: '2w ago', source: 'API', url: 'https://boards.greenhouse.io/figma/jobs/5737291004?gh_jid=5737291004&ref=jobsbyculture.com' },
+    { id: 1372, title: 'Manager, Enterprise Sales', company: 'figma', location: 'São Paulo, Brazil', type: 'Full-time', posted: '2w ago', source: 'API', url: 'https://boards.greenhouse.io/figma/jobs/5737083004?gh_jid=5737083004&ref=jobsbyculture.com' },
+    { id: 1373, title: 'Manager, Enterprise Support', company: 'figma', location: 'London, England', type: 'Full-time', posted: '2w ago', source: 'API', url: 'https://boards.greenhouse.io/figma/jobs/5740382004?gh_jid=5740382004&ref=jobsbyculture.com' },
+    { id: 1374, title: 'Manager, Field Marketing', company: 'figma', location: 'San Francisco, CA · New York, NY · United States', type: 'Full-time', posted: '2w ago', source: 'API', url: 'https://boards.greenhouse.io/figma/jobs/5711923004?gh_jid=5711923004&ref=jobsbyculture.com' },
+    { id: 1375, title: 'Manager, Figma for Education', company: 'figma', location: 'San Francisco, CA · New York, NY · United States', type: 'Full-time', posted: '2w ago', source: 'API', url: 'https://boards.greenhouse.io/figma/jobs/5737701004?gh_jid=5737701004&ref=jobsbyculture.com' },
+    { id: 1376, title: 'Manager, GTM Finance', company: 'figma', location: 'San Francisco, CA · New York, NY · United States', type: 'Full-time', posted: '2w ago', source: 'API', url: 'https://boards.greenhouse.io/figma/jobs/5722839004?gh_jid=5722839004&ref=jobsbyculture.com' },
+    { id: 1377, title: 'Manager, Mid-Market Sales', company: 'figma', location: 'San Francisco, CA · United States', type: 'Full-time', posted: '2w ago', source: 'API', url: 'https://boards.greenhouse.io/figma/jobs/5696205004?gh_jid=5696205004&ref=jobsbyculture.com' },
+    { id: 1378, title: 'Manager, Mid-Market Sales', company: 'figma', location: 'New York, NY · United States', type: 'Full-time', posted: '2w ago', source: 'API', url: 'https://boards.greenhouse.io/figma/jobs/5564202004?gh_jid=5564202004&ref=jobsbyculture.com' },
+    { id: 1379, title: 'Manager, Mid-Market Sales', company: 'figma', location: 'São Paulo, Brazil', type: 'Full-time', posted: '2w ago', source: 'API', url: 'https://boards.greenhouse.io/figma/jobs/5563744004?gh_jid=5563744004&ref=jobsbyculture.com' },
+    { id: 1380, title: 'Manager, Mid-Market Sales', company: 'figma', location: 'Sydney, Australia', type: 'Full-time', posted: '2w ago', source: 'API', url: 'https://boards.greenhouse.io/figma/jobs/5803517004?gh_jid=5803517004&ref=jobsbyculture.com' },
+    { id: 1381, title: 'Manager, Product Design', company: 'figma', location: 'San Francisco, CA · New York, NY · United States', type: 'Full-time', posted: '2w ago', source: 'API', url: 'https://boards.greenhouse.io/figma/jobs/5790585004?gh_jid=5790585004&ref=jobsbyculture.com' },
+    { id: 1382, title: 'Manager, Product Marketing', company: 'figma', location: 'San Francisco, CA · New York, NY · United States', type: 'Full-time', posted: '2w ago', source: 'API', url: 'https://boards.greenhouse.io/figma/jobs/5732508004?gh_jid=5732508004&ref=jobsbyculture.com' },
+    { id: 1383, title: 'Manager, Product Support - Figma Weave', company: 'figma', location: 'Tel Aviv, Israel · London, England', type: 'Full-time', posted: '2w ago', source: 'API', url: 'https://boards.greenhouse.io/figma/jobs/5741609004?gh_jid=5741609004&ref=jobsbyculture.com' },
+    { id: 1384, title: 'Manager, SMB Sales', company: 'figma', location: 'São Paulo, Brazil', type: 'Full-time', posted: '2w ago', source: 'API', url: 'https://boards.greenhouse.io/figma/jobs/5736080004?gh_jid=5736080004&ref=jobsbyculture.com' },
+    { id: 1385, title: 'Manager, SMB Sales', company: 'figma', location: 'Tokyo, Japan', type: 'Full-time', posted: '2w ago', source: 'API', url: 'https://boards.greenhouse.io/figma/jobs/5738017004?gh_jid=5738017004&ref=jobsbyculture.com' },
+    { id: 1386, title: 'Manager, Software Engineering - Billing', company: 'figma', location: 'San Francisco, CA · New York, NY · United States', type: 'Full-time', posted: '2w ago', source: 'API', url: 'https://boards.greenhouse.io/figma/jobs/5722244004?gh_jid=5722244004&ref=jobsbyculture.com' },
+    { id: 1387, title: 'Manager, Software Engineering - Collaboration Tools', company: 'figma', location: 'San Francisco, CA · New York, NY · United States', type: 'Full-time', posted: '2w ago', source: 'API', url: 'https://boards.greenhouse.io/figma/jobs/5654898004?gh_jid=5654898004&ref=jobsbyculture.com' },
+    { id: 1388, title: 'Manager, Software Engineering - Creation Engine', company: 'figma', location: 'San Francisco, CA · New York, NY · United States', type: 'Full-time', posted: '2w ago', source: 'API', url: 'https://boards.greenhouse.io/figma/jobs/5696366004?gh_jid=5696366004&ref=jobsbyculture.com' },
+    { id: 1389, title: 'Manager, Software Engineering - Design Systems Management', company: 'figma', location: 'San Francisco, CA · New York, NY · United States', type: 'Full-time', posted: '2w ago', source: 'API', url: 'https://boards.greenhouse.io/figma/jobs/5787320004?gh_jid=5787320004&ref=jobsbyculture.com' },
+    { id: 1390, title: 'Manager, Software Engineering - Developer Tools', company: 'figma', location: 'London, England', type: 'Full-time', posted: '2w ago', source: 'API', url: 'https://boards.greenhouse.io/figma/jobs/5574708004?gh_jid=5574708004&ref=jobsbyculture.com' },
+    { id: 1391, title: 'Manager, Software Engineering - Expressive AI', company: 'figma', location: 'New York, NY · United States', type: 'Full-time', posted: '2w ago', source: 'API', url: 'https://boards.greenhouse.io/figma/jobs/5678196004?gh_jid=5678196004&ref=jobsbyculture.com' },
+    { id: 1392, title: 'Manager, Software Engineering - Interaction Design', company: 'figma', location: 'San Francisco, CA · New York, NY · United States', type: 'Full-time', posted: '2w ago', source: 'API', url: 'https://boards.greenhouse.io/figma/jobs/5778796004?gh_jid=5778796004&ref=jobsbyculture.com' },
+    { id: 1393, title: 'Manager, Software Engineering - Internal Tools', company: 'figma', location: 'San Francisco, CA · New York, NY · United States', type: 'Internship', posted: '2w ago', source: 'API', url: 'https://boards.greenhouse.io/figma/jobs/5792689004?gh_jid=5792689004&ref=jobsbyculture.com' },
+    { id: 1394, title: 'Manager, Software Engineering - Search &amp; Recommendations', company: 'figma', location: 'San Francisco, CA · New York, NY · United States', type: 'Full-time', posted: '2w ago', source: 'API', url: 'https://boards.greenhouse.io/figma/jobs/5804108004?gh_jid=5804108004&ref=jobsbyculture.com' },
+    { id: 1395, title: 'Manager, Solutions Consulting', company: 'figma', location: 'San Francisco, CA · New York, NY · United States', type: 'Full-time', posted: '2w ago', source: 'API', url: 'https://boards.greenhouse.io/figma/jobs/5697641004?gh_jid=5697641004&ref=jobsbyculture.com' },
+    { id: 1396, title: 'Manager, Solutions Consulting', company: 'figma', location: 'Berlin, Germany', type: 'Full-time', posted: '2w ago', source: 'API', url: 'https://boards.greenhouse.io/figma/jobs/5594549004?gh_jid=5594549004&ref=jobsbyculture.com' },
+    { id: 1397, title: 'Manager, Solutions Consulting', company: 'figma', location: 'Paris, France', type: 'Full-time', posted: '2w ago', source: 'API', url: 'https://boards.greenhouse.io/figma/jobs/5735113004?gh_jid=5735113004&ref=jobsbyculture.com' },
+    { id: 1398, title: 'Manager, Strategic Sales', company: 'figma', location: 'San Francisco, CA · New York, NY', type: 'Full-time', posted: '2w ago', source: 'API', url: 'https://boards.greenhouse.io/figma/jobs/5620034004?gh_jid=5620034004&ref=jobsbyculture.com' },
+    { id: 1399, title: 'Manager, Web Development', company: 'figma', location: 'San Francisco, CA · New York, NY · United States', type: 'Full-time', posted: '2w ago', source: 'API', url: 'https://boards.greenhouse.io/figma/jobs/5802947004?gh_jid=5802947004&ref=jobsbyculture.com' },
+    { id: 1400, title: 'Marketing Strategy Manager', company: 'figma', location: 'San Francisco, CA · New York, NY · United States', type: 'Full-time', posted: '2w ago', source: 'API', url: 'https://boards.greenhouse.io/figma/jobs/5725496004?gh_jid=5725496004&ref=jobsbyculture.com' },
+    { id: 1401, title: 'Office Manager', company: 'figma', location: 'Tel Aviv, Israel', type: 'Full-time', posted: '2w ago', source: 'API', url: 'https://boards.greenhouse.io/figma/jobs/5764795004?gh_jid=5764795004&ref=jobsbyculture.com' },
+    { id: 1402, title: 'Office Manager', company: 'figma', location: 'Tokyo, Japan', type: 'Full-time', posted: '2w ago', source: 'API', url: 'https://boards.greenhouse.io/figma/jobs/5775045004?gh_jid=5775045004&ref=jobsbyculture.com' },
+    { id: 1403, title: 'Operations Program Manager', company: 'figma', location: 'San Francisco, CA · New York, NY · United States', type: 'Full-time', posted: '2w ago', source: 'API', url: 'https://boards.greenhouse.io/figma/jobs/5801730004?gh_jid=5801730004&ref=jobsbyculture.com' },
+    { id: 1404, title: 'People Analyst', company: 'figma', location: 'San Francisco, CA · New York, NY · United States', type: 'Full-time', posted: '2w ago', source: 'API', url: 'https://boards.greenhouse.io/figma/jobs/5737300004?gh_jid=5737300004&ref=jobsbyculture.com' },
+    { id: 1405, title: 'Product Designer', company: 'figma', location: 'San Francisco, CA · New York, NY · United States', type: 'Full-time', posted: '2w ago', source: 'API', url: 'https://boards.greenhouse.io/figma/jobs/5711571004?gh_jid=5711571004&ref=jobsbyculture.com' },
+    { id: 1406, title: 'Product Designer, AI Models', company: 'figma', location: 'San Francisco, CA · New York, NY · United States', type: 'Full-time', posted: '2w ago', source: 'API', url: 'https://boards.greenhouse.io/figma/jobs/5711913004?gh_jid=5711913004&ref=jobsbyculture.com' },
+    { id: 1407, title: 'Product Designer - Design, Dev, &amp; AI Tools', company: 'figma', location: 'San Francisco, CA · New York, NY · United States', type: 'Full-time', posted: '2w ago', source: 'API', url: 'https://boards.greenhouse.io/figma/jobs/5711468004?gh_jid=5711468004&ref=jobsbyculture.com' },
+    { id: 1408, title: 'Product Designer - Figma Weave', company: 'figma', location: 'Tel Aviv, Israel', type: 'Full-time', posted: '2w ago', source: 'API', url: 'https://boards.greenhouse.io/figma/jobs/5753515004?gh_jid=5753515004&ref=jobsbyculture.com' },
+    { id: 1409, title: 'Product Designer, Growth &amp; Monetization', company: 'figma', location: 'San Francisco, CA · New York, NY · United States', type: 'Full-time', posted: '2w ago', source: 'API', url: 'https://boards.greenhouse.io/figma/jobs/5711595004?gh_jid=5711595004&ref=jobsbyculture.com' },
+    { id: 1410, title: 'Product Manager, AI', company: 'figma', location: 'San Francisco, CA · New York, NY · United States', type: 'Full-time', posted: '2w ago', source: 'API', url: 'https://boards.greenhouse.io/figma/jobs/5574247004?gh_jid=5574247004&ref=jobsbyculture.com' },
+    { id: 1411, title: 'Product Manager, CMS', company: 'figma', location: 'San Francisco, CA · New York, NY · United States', type: 'Full-time', posted: '2w ago', source: 'API', url: 'https://boards.greenhouse.io/figma/jobs/5694470004?gh_jid=5694470004&ref=jobsbyculture.com' },
+    { id: 1412, title: 'Product Manager, Design Tools', company: 'figma', location: 'San Francisco, CA · New York, NY · United States', type: 'Full-time', posted: '2w ago', source: 'API', url: 'https://boards.greenhouse.io/figma/jobs/5505263004?gh_jid=5505263004&ref=jobsbyculture.com' },
+    { id: 1413, title: 'Product Manager, Sites', company: 'figma', location: 'San Francisco, CA · New York, NY · United States', type: 'Full-time', posted: '2w ago', source: 'API', url: 'https://boards.greenhouse.io/figma/jobs/5701839004?gh_jid=5701839004&ref=jobsbyculture.com' },
+    { id: 1414, title: 'Product Marketing Manager, Builder Audience', company: 'figma', location: 'San Francisco, CA · New York, NY · United States', type: 'Full-time', posted: '2w ago', source: 'API', url: 'https://boards.greenhouse.io/figma/jobs/5776152004?gh_jid=5776152004&ref=jobsbyculture.com' },
+    { id: 1415, title: 'Program Manager, Real Estate &amp; Facilities', company: 'figma', location: 'San Francisco, CA', type: 'Full-time', posted: '2w ago', source: 'API', url: 'https://boards.greenhouse.io/figma/jobs/5792497004?gh_jid=5792497004&ref=jobsbyculture.com' },
+    { id: 1416, title: 'Recruiter', company: 'figma', location: 'Singapore', type: 'Full-time', posted: '2w ago', source: 'API', url: 'https://boards.greenhouse.io/figma/jobs/5811784004?gh_jid=5811784004&ref=jobsbyculture.com' },
+    { id: 1417, title: 'Recruiter', company: 'figma', location: 'Tokyo, Japan', type: 'Full-time', posted: '2w ago', source: 'API', url: 'https://boards.greenhouse.io/figma/jobs/5808829004?gh_jid=5808829004&ref=jobsbyculture.com' },
+    { id: 1418, title: 'Recruiting Associate', company: 'figma', location: 'Tel Aviv, Israel', type: 'Full-time', posted: '2w ago', source: 'API', url: 'https://boards.greenhouse.io/figma/jobs/5731760004?gh_jid=5731760004&ref=jobsbyculture.com' },
+    { id: 1419, title: 'Regional Marketing Manager', company: 'figma', location: 'Tokyo, Japan', type: 'Full-time', posted: '2w ago', source: 'API', url: 'https://boards.greenhouse.io/figma/jobs/5728528004?gh_jid=5728528004&ref=jobsbyculture.com' },
+    { id: 1420, title: 'Researcher, Core Product Strategy', company: 'figma', location: 'San Francisco, CA · New York, NY · United States', type: 'Full-time', posted: '2w ago', source: 'API', url: 'https://boards.greenhouse.io/figma/jobs/5651744004?gh_jid=5651744004&ref=jobsbyculture.com' },
+    { id: 1421, title: 'Sales Onboarding Program Manager', company: 'figma', location: 'San Francisco, CA · New York, NY · United States', type: 'Full-time', posted: '2w ago', source: 'API', url: 'https://boards.greenhouse.io/figma/jobs/5659927004?gh_jid=5659927004&ref=jobsbyculture.com' },
+    { id: 1422, title: 'Sales Operations Manager', company: 'figma', location: 'Tokyo, Japan', type: 'Full-time', posted: '2w ago', source: 'API', url: 'https://boards.greenhouse.io/figma/jobs/5756186004?gh_jid=5756186004&ref=jobsbyculture.com' },
+    { id: 1423, title: 'Sales Recruiter', company: 'figma', location: 'San Francisco, CA · New York, NY · United States', type: 'Full-time', posted: '2w ago', source: 'API', url: 'https://boards.greenhouse.io/figma/jobs/5798281004?gh_jid=5798281004&ref=jobsbyculture.com' },
+    { id: 1424, title: 'Security Engineer', company: 'figma', location: 'San Francisco, CA · New York, NY · United States', type: 'Full-time', posted: '2w ago', source: 'API', url: 'https://boards.greenhouse.io/figma/jobs/5551463004?gh_jid=5551463004&ref=jobsbyculture.com' },
+    { id: 1425, title: 'Senior Account Executive, SMB', company: 'figma', location: 'San Francisco, CA · New York, NY · United States', type: 'Full-time', posted: '2w ago', source: 'API', url: 'https://boards.greenhouse.io/figma/jobs/5565447004?gh_jid=5565447004&ref=jobsbyculture.com' },
+    { id: 1426, title: 'Senior Inside Sales Representative', company: 'figma', location: 'Tokyo, Japan', type: 'Full-time', posted: '2w ago', source: 'API', url: 'https://boards.greenhouse.io/figma/jobs/5727168004?gh_jid=5727168004&ref=jobsbyculture.com' },
+    { id: 1427, title: 'Senior Manager, Enterprise Sales', company: 'figma', location: 'Berlin, Germany', type: 'Full-time', posted: '2w ago', source: 'API', url: 'https://boards.greenhouse.io/figma/jobs/5720434004?gh_jid=5720434004&ref=jobsbyculture.com' },
+    { id: 1428, title: 'Senior Manager, Enterprise Sales', company: 'figma', location: 'London, England', type: 'Full-time', posted: '2w ago', source: 'API', url: 'https://boards.greenhouse.io/figma/jobs/5670593004?gh_jid=5670593004&ref=jobsbyculture.com' },
+    { id: 1429, title: 'Senior Manager, Enterprise Sales', company: 'figma', location: 'Tokyo, Japan', type: 'Full-time', posted: '2w ago', source: 'API', url: 'https://boards.greenhouse.io/figma/jobs/5753194004?gh_jid=5753194004&ref=jobsbyculture.com' },
+    { id: 1430, title: 'Senior Solutions Consultant', company: 'figma', location: 'Tokyo, Japan', type: 'Full-time', posted: '2w ago', source: 'API', url: 'https://boards.greenhouse.io/figma/jobs/5721527004?gh_jid=5721527004&ref=jobsbyculture.com' },
+    { id: 1431, title: 'Senior Technical Revenue Manager', company: 'figma', location: 'San Francisco, CA · New York, NY · United States', type: 'Full-time', posted: '2w ago', source: 'API', url: 'https://boards.greenhouse.io/figma/jobs/5735644004?gh_jid=5735644004&ref=jobsbyculture.com' },
+    { id: 1432, title: 'Software Engineer, AI Platforms', company: 'figma', location: 'San Francisco, CA · New York, NY · United States', type: 'Full-time', posted: '2w ago', source: 'API', url: 'https://boards.greenhouse.io/figma/jobs/5691886004?gh_jid=5691886004&ref=jobsbyculture.com' },
+    { id: 1433, title: 'Software Engineer, AI Product', company: 'figma', location: 'San Francisco, CA · New York, NY · United States', type: 'Full-time', posted: '2w ago', source: 'API', url: 'https://boards.greenhouse.io/figma/jobs/5551730004?gh_jid=5551730004&ref=jobsbyculture.com' },
+    { id: 1434, title: 'Software Engineer, Backend - Figma Weave', company: 'figma', location: 'Tel Aviv, Israel', type: 'Full-time', posted: '2w ago', source: 'API', url: 'https://boards.greenhouse.io/figma/jobs/5692525004?gh_jid=5692525004&ref=jobsbyculture.com' },
+    { id: 1435, title: 'Software Engineer, C++', company: 'figma', location: 'San Francisco, CA · New York, NY · United States', type: 'Full-time', posted: '2w ago', source: 'API', url: 'https://boards.greenhouse.io/figma/jobs/5552530004?gh_jid=5552530004&ref=jobsbyculture.com' },
+    { id: 1436, title: 'Software Engineer, Developer Experience', company: 'figma', location: 'San Francisco, CA · New York, NY · United States', type: 'Full-time', posted: '2w ago', source: 'API', url: 'https://boards.greenhouse.io/figma/jobs/5790627004?gh_jid=5790627004&ref=jobsbyculture.com' },
+    { id: 1437, title: 'Software Engineer, Distributed Systems', company: 'figma', location: 'San Francisco, CA · New York, NY · United States', type: 'Full-time', posted: '2w ago', source: 'API', url: 'https://boards.greenhouse.io/figma/jobs/5552549004?gh_jid=5552549004&ref=jobsbyculture.com' },
+    { id: 1438, title: 'Software Engineer - Figma Weave', company: 'figma', location: 'Tel Aviv, Israel', type: 'Full-time', posted: '2w ago', source: 'API', url: 'https://boards.greenhouse.io/figma/jobs/5812592004?gh_jid=5812592004&ref=jobsbyculture.com' },
+    { id: 1439, title: 'Software Engineer, Full Stack', company: 'figma', location: 'San Francisco, CA · New York, NY · United States', type: 'Full-time', posted: '2w ago', source: 'API', url: 'https://boards.greenhouse.io/figma/jobs/5691911004?gh_jid=5691911004&ref=jobsbyculture.com' },
+    { id: 1440, title: 'Software Engineer, Fullstack - Figma Weave', company: 'figma', location: 'Tel Aviv, Israel', type: 'Full-time', posted: '2w ago', source: 'API', url: 'https://boards.greenhouse.io/figma/jobs/5692524004?gh_jid=5692524004&ref=jobsbyculture.com' },
+    { id: 1441, title: 'Software Engineer, Graphics &amp; Media', company: 'figma', location: 'San Francisco, CA · New York, NY · United States', type: 'Full-time', posted: '2w ago', source: 'API', url: 'https://boards.greenhouse.io/figma/jobs/5552522004?gh_jid=5552522004&ref=jobsbyculture.com' },
+    { id: 1442, title: 'Software Engineer, Growth &amp; Monetization', company: 'figma', location: 'San Francisco, CA · New York, NY · United States', type: 'Full-time', posted: '2w ago', source: 'API', url: 'https://boards.greenhouse.io/figma/jobs/5552560004?gh_jid=5552560004&ref=jobsbyculture.com' },
+    { id: 1443, title: 'Software Engineer Intern, Developer Tools (2026)', company: 'figma', location: 'London, England', type: 'Internship', posted: '2w ago', source: 'API', url: 'https://boards.greenhouse.io/figma/jobs/5621177004?gh_jid=5621177004&ref=jobsbyculture.com' },
+    { id: 1444, title: 'Software Engineer, Machine Learning', company: 'figma', location: 'San Francisco, CA · New York, NY · United States', type: 'Full-time', posted: '2w ago', source: 'API', url: 'https://boards.greenhouse.io/figma/jobs/5551532004?gh_jid=5551532004&ref=jobsbyculture.com' },
+    { id: 1445, title: 'Software Engineer, Production Engineering', company: 'figma', location: 'San Francisco, CA · New York, NY · United States', type: 'Full-time', posted: '2w ago', source: 'API', url: 'https://boards.greenhouse.io/figma/jobs/5551649004?gh_jid=5551649004&ref=jobsbyculture.com' },
+    { id: 1446, title: 'Software Engineer, Production Engineering', company: 'figma', location: 'London, England', type: 'Full-time', posted: '2w ago', source: 'API', url: 'https://boards.greenhouse.io/figma/jobs/5781928004?gh_jid=5781928004&ref=jobsbyculture.com' },
+    { id: 1447, title: 'Software Engineer, Web Platform', company: 'figma', location: 'San Francisco, CA · New York, NY · United States', type: 'Full-time', posted: '2w ago', source: 'API', url: 'https://boards.greenhouse.io/figma/jobs/5759501004?gh_jid=5759501004&ref=jobsbyculture.com' },
+    { id: 1448, title: 'Solutions Consultant', company: 'figma', location: 'San Francisco, CA · New York, NY · United States', type: 'Full-time', posted: '2w ago', source: 'API', url: 'https://boards.greenhouse.io/figma/jobs/5783377004?gh_jid=5783377004&ref=jobsbyculture.com' },
+    { id: 1449, title: 'Solutions Consultant', company: 'figma', location: 'Berlin, Germany', type: 'Full-time', posted: '2w ago', source: 'API', url: 'https://boards.greenhouse.io/figma/jobs/5735853004?gh_jid=5735853004&ref=jobsbyculture.com' },
+    { id: 1450, title: 'Solutions Consultant', company: 'figma', location: 'London, England', type: 'Full-time', posted: '2w ago', source: 'API', url: 'https://boards.greenhouse.io/figma/jobs/5735493004?gh_jid=5735493004&ref=jobsbyculture.com' },
+    { id: 1451, title: 'Solutions Consultant', company: 'figma', location: 'Paris, France', type: 'Full-time', posted: '2w ago', source: 'API', url: 'https://boards.greenhouse.io/figma/jobs/5735542004?gh_jid=5735542004&ref=jobsbyculture.com' },
+    { id: 1452, title: 'Solutions Consultant', company: 'figma', location: 'São Paulo, Brazil', type: 'Full-time', posted: '2w ago', source: 'API', url: 'https://boards.greenhouse.io/figma/jobs/5659640004?gh_jid=5659640004&ref=jobsbyculture.com' },
+    { id: 1453, title: 'Strategic Finance', company: 'figma', location: 'San Francisco, CA · New York, NY · United States', type: 'Full-time', posted: '2w ago', source: 'API', url: 'https://boards.greenhouse.io/figma/jobs/5792631004?gh_jid=5792631004&ref=jobsbyculture.com' },
+    { id: 1454, title: 'Strategic Program Manager', company: 'figma', location: 'San Francisco, CA · New York, NY · United States', type: 'Full-time', posted: '2w ago', source: 'API', url: 'https://boards.greenhouse.io/figma/jobs/5737778004?gh_jid=5737778004&ref=jobsbyculture.com' },
+    { id: 1455, title: 'Strategic Program Manager, Contingent Workforce', company: 'figma', location: 'San Francisco, CA · New York, NY · United States', type: 'Full-time', posted: '2w ago', source: 'API', url: 'https://boards.greenhouse.io/figma/jobs/5735636004?gh_jid=5735636004&ref=jobsbyculture.com' },
+    { id: 1456, title: 'Technical Account Manager', company: 'figma', location: 'London, England; Paris, France', type: 'Full-time', posted: '2w ago', source: 'API', url: 'https://boards.greenhouse.io/figma/jobs/5587219004?gh_jid=5587219004&ref=jobsbyculture.com' },
+    { id: 1457, title: 'Technical Program Manager, AI Research', company: 'figma', location: 'San Francisco, CA · New York, NY · United States', type: 'Full-time', posted: '2w ago', source: 'API', url: 'https://boards.greenhouse.io/figma/jobs/5707695004?gh_jid=5707695004&ref=jobsbyculture.com' },
+    { id: 1458, title: 'Technical Quality Specialist', company: 'figma', location: 'London, England', type: 'Full-time', posted: '2w ago', source: 'API', url: 'https://boards.greenhouse.io/figma/jobs/5708436004?gh_jid=5708436004&ref=jobsbyculture.com' },
+    { id: 1459, title: 'Technical Recruiter', company: 'figma', location: 'San Francisco, CA · New York, NY · United States', type: 'Full-time', posted: '2w ago', source: 'API', url: 'https://boards.greenhouse.io/figma/jobs/5699965004?gh_jid=5699965004&ref=jobsbyculture.com' },
+    { id: 1460, title: 'Technical Recruiter, Design', company: 'figma', location: 'San Francisco, CA · New York, NY · United States', type: 'Full-time', posted: '2w ago', source: 'API', url: 'https://boards.greenhouse.io/figma/jobs/5789620004?gh_jid=5789620004&ref=jobsbyculture.com' },
+    { id: 1461, title: 'Technical Recruiter - Figma Weave', company: 'figma', location: 'Tel Aviv, Israel', type: 'Full-time', posted: '2w ago', source: 'API', url: 'https://boards.greenhouse.io/figma/jobs/5692186004?gh_jid=5692186004&ref=jobsbyculture.com' },
+    { id: 1462, title: 'Web Content Strategist', company: 'figma', location: 'San Francisco, CA · New York, NY · United States', type: 'Full-time', posted: '2w ago', source: 'API', url: 'https://boards.greenhouse.io/figma/jobs/5736009004?gh_jid=5736009004&ref=jobsbyculture.com' },
+    { id: 1463, title: 'Workplace Generalist', company: 'figma', location: 'San Francisco, CA', type: 'Full-time', posted: '2w ago', source: 'API', url: 'https://boards.greenhouse.io/figma/jobs/5784186004?gh_jid=5784186004&ref=jobsbyculture.com' },
 ];
 
 // ═══ STATE ═══
@@ -2056,16 +2242,119 @@ function getCompanySize(companyId) {
 
 function getRole(title) {
     const t = title.toLowerCase();
-    // ML/AI checked before Engineering to prevent "ML Engineer" matching generic "Engineer"
-    // NOTE: No trailing \b — partial-word prefixes like "product manag" must match "product manager"
-    if (/\b(machine learning|ml |ml$|deep learning|llm|nlp|natural language|computer vision|generative ai|ai scientist|research scientist|research engineer|reinforcement learning|member of technical staff|intern of technical staff|neural|diffusion|pretraining|alignment|interpretability|reward model|fine-?tuning|inference optimization|ai research|applied research|foundation model|ai safety)/.test(t)) return 'ml-ai';
-    if (/\b(data scien|data analy|analytics|data engineer|business intelligence|bi |etl|data infra|data platform|data ops|database)/.test(t) && !/\bdata center\b/.test(t)) return 'data';
-    if (/\b(design|ux|ui |user experience|user interface|brand design|visual design|design system|interaction design|art direct|creative)/.test(t) && !/\b(software engineer|engineering manag|frontend engineer|backend engineer|site selection|design engineer)/.test(t)) return 'design';
-    if (/\b(product manag|program manag|project manag|technical program|tpm|product lead|product strateg|product ops)/.test(t)) return 'product';
-    if (/\b(sales|account exec|account manag|business develop|revenue|go.to.market|gtm|solutions engineer|customer success|solutions architect|partnerships|deal desk|sdr|engagement manag|solutions consult|customer advocate|technical solutions)/.test(t)) return 'sales';
-    if (/\b(marketing|growth|content|seo|brand |demand gen|comms|communications|copywriter|social media|community manag|developer relations|devrel|evangelist|analyst relation|pr |abm)/.test(t)) return 'marketing';
-    if (/\b(engineer|developer|software|swe|frontend|backend|fullstack|full.stack|devops|sre|platform|infrastructure|security|cloud|systems|embedded|mobile|ios|android|rust|golang|architect|qa )/.test(t)) return 'engineering';
-    if (/\b(operations|ops|people|hr|human resources|finance|accounting|legal|compliance|recrui|talent|office|admin|facilities|procurement|supply|logistics|support|coordinator|specialist|executive assistant|policy|counsel|investigat|technician|warehouse|payroll|accountant|fraud|ehs|sourcer|employee relation|tax|sox)/.test(t)) return 'operations';
+
+    // Priority 1: ML/AI — most specific, checked first to prevent "ML Engineer" → engineering
+    const mlPatterns = [
+        'machine learning', 'research scientist', 'research engineer',
+        'reinforcement learning', 'ai safety', 'interpretability',
+        'alignment', 'computer vision', 'nlp engineer', 'natural language',
+        'deep learning', 'ai researcher', 'ai research',
+        'ml engineer', 'ml infrastructure', 'ml platform', 'ml acceleration',
+        'ml networking'
+    ];
+    if (mlPatterns.some(p => t.includes(p)) || / ml /i.test(t) || /\bllm\b/i.test(t)) {
+        return 'ml-ai';
+    }
+
+    // Priority 2: Data
+    const dataPatterns = [
+        'data scien', 'data engineer', 'data analy', 'data infra',
+        'data platform', 'advanced analytics', 'business intelligence',
+        'bi engineer', 'bi analyst', 'analytics engineer'
+    ];
+    if (dataPatterns.some(p => t.includes(p))) return 'data';
+
+    // Priority 3: Design (exclude "design engineer" → falls to engineering)
+    if (t.includes('design') && !t.includes('engineer') && !t.includes('security')) {
+        return 'design';
+    }
+
+    // Priority 4: Engineering (with exclusions for devrel, solutions/sales eng, biz systems)
+    const engPatterns = [
+        'engineer', 'developer', 'architect', 'platform', 'sre ',
+        'site reliability', 'devops', 'qa ', 'quality assurance',
+        'security', 'systems', 'infrastructure', 'frontend', 'backend',
+        'fullstack', 'full stack', 'firmware', 'embedded'
+    ];
+    const engExclusions = [
+        'developer relations', 'developer education', 'devrel',
+        'solutions engineer', 'solutions architect', 'sales engineer',
+        'business systems', 'customer support engineer', 'gtm'
+    ];
+    if (engPatterns.some(p => t.includes(p)) && !engExclusions.some(p => t.includes(p))) {
+        return 'engineering';
+    }
+
+    // Priority 5: Product
+    const productPatterns = [
+        'product manag', 'program manag', 'technical program',
+        'product owner', 'product lead', 'scrum master', 'agile coach'
+    ];
+    if (productPatterns.some(p => t.includes(p))) return 'product';
+
+    // Priority 6: Marketing
+    const marketingPatterns = [
+        'marketing', 'communications', 'developer relations',
+        'developer education', 'devrel', 'brand', 'social media',
+        'public relations', 'copywriter', 'growth marketing',
+        'community manag', 'influencer', 'creative', 'editorial',
+        'content'
+    ];
+    if (marketingPatterns.some(p => t.includes(p))) return 'marketing';
+
+    // Priority 7: Sales (exclude "accountant" so "Revenue Accountant" → finance)
+    const salesPatterns = [
+        'account exec', 'account manag', 'sales', 'solutions engineer',
+        'solutions architect', 'sales engineer', 'gtm', 'business develop',
+        'partnerships', 'deal desk', 'revenue', 'engagement manag',
+        'customer success', 'pre-sales'
+    ];
+    if (salesPatterns.some(p => t.includes(p)) && !t.includes('accountant')) return 'sales';
+
+    // Priority 8: Finance
+    const financePatterns = [
+        'accountant', 'accounting', 'financial', 'fp&a', 'treasury',
+        'controller', 'actuary', 'actuarial', 'investor relations',
+        'bookkeeper'
+    ];
+    if (financePatterns.some(p => t.includes(p))) return 'finance';
+    if (t.includes('finance') && !t.includes('engineer')) return 'finance';
+
+    // Priority 9: HR / People
+    const hrPatterns = [
+        'recruiter', 'recruiting', 'talent acquisition', 'people ops',
+        'people operations', 'human resources', 'enablement', 'sourcer',
+        'sourcing manag', 'learning and development', 'l&d',
+        'executive business partner', 'people partner', 'hrbp',
+        'onboarding'
+    ];
+    if (hrPatterns.some(p => t.includes(p)) || / hr /i.test(t)) return 'hr-people';
+
+    // Priority 10: Legal
+    const legalPatterns = [
+        'legal', 'counsel', 'attorney', 'lawyer', 'policy',
+        'regulatory', 'compliance', 'paralegal', 'data protection'
+    ];
+    if (legalPatterns.some(p => t.includes(p))) return 'legal';
+
+    // Priority 11: Support
+    const supportPatterns = [
+        'customer support', 'premium support', 'claims',
+        'service recovery', 'call center', 'help desk',
+        'support specialist', 'support delivery', 'cs labs',
+        'safety specialist', 'safety appeals'
+    ];
+    if (supportPatterns.some(p => t.includes(p))) return 'support';
+
+    // Priority 12: Operations (catch-all for remaining ops roles)
+    const opsPatterns = [
+        'operations', 'supply', 'logistics', 'facilities',
+        'localization', 'coordinator', 'vendor', 'procurement',
+        'market manag', 'market assoc', 'business systems',
+        'workplace', 'office manag', 'real estate', 'supervisor'
+    ];
+    if (opsPatterns.some(p => t.includes(p))) return 'operations';
+
     return null;
 }
 
@@ -2289,7 +2578,7 @@ function updatePageMeta(count) {
     if (searchQuery) parts.push(searchQuery);
     if (parts.length === 0) {
         document.title = 'AI & Tech Jobs Filtered by Culture | JobsByCulture';
-        var desc = 'Browse 1,291 AI & tech jobs filtered by culture values like async-first, work-life balance, remote-friendly, and ethical AI.';
+        var desc = 'Browse 1,463 AI & tech jobs filtered by culture values like async-first, work-life balance, remote-friendly, and ethical AI.';
     } else {
         var label = parts.join(' · ');
         document.title = count + ' ' + label + ' Jobs | JobsByCulture';
