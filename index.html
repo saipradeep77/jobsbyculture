@@ -1831,7 +1831,7 @@
             </div>
             <div class="ft-col">
                 <h4>Company</h4>
-                <a href="mailto:hello@jobsbyculture.com">List Your Company</a>
+                <a href="#" onclick="document.getElementById('listModal').style.display='flex';return false">List Your Company</a>
                 <a href="https://meetingtax.com" target="_blank">Meeting Tax</a>
                 <a href="https://paytaxfa.st" target="_blank">PayTaxFast</a>
             </div>
@@ -1842,6 +1842,46 @@
         </div>
     </div>
 </footer>
+
+<!-- ═══ LIST YOUR COMPANY MODAL ═══ -->
+<div id="listModal" style="display:none;position:fixed;inset:0;z-index:9999;background:rgba(0,0,0,0.5);align-items:center;justify-content:center" onclick="if(event.target===this)this.style.display='none'">
+    <div style="background:var(--bg-raised);border-radius:var(--radius);padding:32px;max-width:400px;width:90%;position:relative;box-shadow:0 20px 60px rgba(0,0,0,0.15)">
+        <button onclick="document.getElementById('listModal').style.display='none'" style="position:absolute;top:12px;right:16px;background:none;border:none;font-size:20px;cursor:pointer;color:var(--text-3)">&times;</button>
+        <h3 style="margin:0 0 4px;font-family:var(--font-display);font-size:20px">List Your Company</h3>
+        <p style="margin:0 0 20px;color:var(--text-2);font-size:14px">We'll reach out to get your culture profile set up.</p>
+        <form id="listForm" style="display:flex;flex-direction:column;gap:12px">
+            <input type="text" name="company" placeholder="Company name" required style="padding:10px 14px;border:1px solid var(--border-2);border-radius:var(--radius-sm);font-size:15px;background:var(--bg);color:var(--text);font-family:inherit">
+            <input type="email" name="email" placeholder="Your work email" required style="padding:10px 14px;border:1px solid var(--border-2);border-radius:var(--radius-sm);font-size:15px;background:var(--bg);color:var(--text);font-family:inherit">
+            <button type="submit" class="nl-submit" style="width:100%;margin-top:4px">Submit →</button>
+        </form>
+        <script>
+        document.getElementById('listForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            var form = this;
+            var btn = form.querySelector('button[type=submit]');
+            btn.textContent = 'Sending...';
+            btn.disabled = true;
+            fetch('https://formspree.io/f/xbdapzke', {
+                method: 'POST',
+                headers: { 'Accept': 'application/json', 'Content-Type': 'application/json' },
+                body: JSON.stringify({ _subject: 'List Your Company', company: form.company.value, email: form.email.value })
+            }).then(function(r) {
+                if (r.ok) {
+                    form.innerHTML = '<p style="color:var(--teal);font-weight:600;font-size:15px;text-align:center;padding:12px 0">Thanks! We\'ll be in touch soon.</p>';
+                } else {
+                    btn.textContent = 'Submit →';
+                    btn.disabled = false;
+                    alert('Something went wrong. Please try again.');
+                }
+            }).catch(function() {
+                btn.textContent = 'Submit →';
+                btn.disabled = false;
+                alert('Something went wrong. Please try again.');
+            });
+        });
+        </script>
+    </div>
+</div>
 
 <script>
 // ═══════════════════════════════════════
