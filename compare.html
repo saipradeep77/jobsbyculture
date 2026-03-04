@@ -1,0 +1,938 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compare Company Cultures Side-by-Side | JobsByCulture</title>
+    <meta name="description" content="Compare any two company cultures side-by-side. See Glassdoor ratings, work-life balance, values, pros &amp; cons, and open roles for 19 AI &amp; tech companies.">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="JobsByCulture">
+    <meta property="og:title" content="Compare Company Cultures | JobsByCulture">
+    <meta property="og:description" content="Side-by-side company culture comparison. Glassdoor ratings, values, pros &amp; cons, and job counts for AI &amp; tech companies.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://jobsbyculture.com/compare">
+    <meta property="og:image" content="https://jobsbyculture.com/og-image.png?v=4">
+    <meta property="og:image:width" content="2616">
+    <meta property="og:image:height" content="1190">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Compare Company Cultures | JobsByCulture">
+    <meta name="twitter:description" content="Side-by-side company culture comparison for AI &amp; tech companies.">
+    <meta name="twitter:image" content="https://jobsbyculture.com/og-image.png?v=4">
+    <link rel="canonical" href="https://jobsbyculture.com/compare">
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <link rel="icon" type="image/png" sizes="512x512" href="/logo.png">
+    <link rel="apple-touch-icon" href="/logo.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Satoshi:wght@400;500;600;700;900&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #fafaf8;
+            --bg-raised: #ffffff;
+            --bg-card: #ffffff;
+            --bg-hover: #f4f3ef;
+            --text: #1a1a1f;
+            --text-2: #52525b;
+            --text-3: #9ca3af;
+            --accent: #e8590c;
+            --accent-hover: #c2410c;
+            --accent-bg: rgba(232,89,12,0.06);
+            --accent-border: rgba(232,89,12,0.2);
+            --teal: #0d9488;
+            --teal-bg: rgba(13,148,136,0.06);
+            --teal-border: rgba(13,148,136,0.2);
+            --violet: #7c3aed;
+            --violet-bg: rgba(124,58,237,0.06);
+            --violet-border: rgba(124,58,237,0.2);
+            --rose: #e11d48;
+            --rose-bg: rgba(225,29,72,0.06);
+            --rose-border: rgba(225,29,72,0.2);
+            --sky: #0284c7;
+            --sky-bg: rgba(2,132,199,0.06);
+            --sky-border: rgba(2,132,199,0.2);
+            --orange: #e8590c;
+            --orange-bg: rgba(232,89,12,0.06);
+            --orange-border: rgba(232,89,12,0.2);
+            --lime: #4d7c0f;
+            --lime-bg: rgba(77,124,15,0.06);
+            --lime-border: rgba(77,124,15,0.2);
+            --border: rgba(0,0,0,0.07);
+            --border-2: rgba(0,0,0,0.12);
+            --border-3: rgba(0,0,0,0.18);
+            --radius: 12px;
+            --radius-sm: 8px;
+            --radius-lg: 20px;
+            --radius-full: 100px;
+            --font-display: 'Instrument Serif', Georgia, serif;
+            --font-body: 'Satoshi', -apple-system, sans-serif;
+            --font-mono: 'IBM Plex Mono', monospace;
+            --shadow: 0 4px 24px rgba(0,0,0,0.06), 0 1px 3px rgba(0,0,0,0.04);
+            --shadow-lg: 0 12px 48px rgba(0,0,0,0.08);
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body { font-family: var(--font-body); background: var(--bg); color: var(--text); line-height: 1.6; -webkit-font-smoothing: antialiased; overflow-x: hidden; }
+        .container { max-width: 1140px; margin: 0 auto; padding: 0 24px; }
+
+        /* NAV */
+        nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; background: rgba(250,250,248,0.85); backdrop-filter: blur(24px) saturate(1.4); border-bottom: 1px solid var(--border); }
+        .nav-inner { max-width: 1140px; margin: 0 auto; padding: 14px 24px; display: flex; align-items: center; justify-content: space-between; }
+        .nav-logo { display: flex; align-items: center; gap: 10px; text-decoration: none; color: var(--text); }
+        .nav-mark { width: 30px; height: 30px; position: relative; display: flex; align-items: center; justify-content: center; }
+        .nav-mark .ring { position: absolute; border: 1.5px solid var(--accent); border-radius: 50%; animation: logoPing 2.5s ease-out infinite; }
+        .nav-mark .ring-1 { width: 100%; height: 100%; opacity: 0.2; }
+        .nav-mark .ring-2 { width: 65%; height: 65%; opacity: 0.4; animation-delay: 0.3s; }
+        .nav-mark .nav-dot { width: 7px; height: 7px; background: var(--accent); border-radius: 50%; position: relative; z-index: 1; }
+        @keyframes logoPing { 0% { transform: scale(1); opacity: 0.4; } 100% { transform: scale(1.5); opacity: 0; } }
+        .nav-wordmark { font-weight: 700; font-size: 16px; letter-spacing: -0.03em; }
+        .nav-wordmark span { color: var(--accent); }
+        .nav-links { display: flex; align-items: center; gap: 28px; }
+        .nav-links a { color: var(--text-2); text-decoration: none; font-size: 14px; font-weight: 500; transition: color 0.15s; }
+        .nav-links a:hover { color: var(--text); }
+        .nav-links a.active { color: var(--accent); font-weight: 600; }
+        .hamburger { display: none; background: none; border: none; cursor: pointer; padding: 4px; flex-direction: column; gap: 5px; }
+        .hamburger span { display: block; width: 22px; height: 2px; background: var(--text); border-radius: 1px; transition: all 0.3s; }
+        .hamburger.active span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
+        .hamburger.active span:nth-child(2) { opacity: 0; }
+        .hamburger.active span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
+
+        /* HERO */
+        .cmp-hero { padding: 130px 0 60px; text-align: center; position: relative; }
+        .cmp-hero::before {
+            content: ''; position: absolute; top: -100px; left: 50%; transform: translateX(-50%);
+            width: 900px; height: 600px;
+            background: radial-gradient(ellipse, rgba(232,89,12,0.06) 0%, transparent 70%);
+            pointer-events: none;
+        }
+        .cmp-hero-pill {
+            display: inline-flex; align-items: center; gap: 8px;
+            background: var(--accent-bg); border: 1px solid var(--accent-border);
+            padding: 5px 14px 5px 8px; border-radius: var(--radius-full);
+            font-size: 13px; font-weight: 500; color: var(--accent);
+            margin-bottom: 24px; animation: fadeUp 0.5s ease both;
+        }
+        .cmp-hero-pill-dot { width: 7px; height: 7px; border-radius: 50%; background: var(--accent); animation: blink 2s infinite; }
+        @keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: 0.3; } }
+        .cmp-hero h1 {
+            font-family: var(--font-display); font-weight: 400;
+            font-size: clamp(36px, 5vw, 60px); line-height: 1.1;
+            letter-spacing: -0.025em; margin-bottom: 16px;
+            animation: fadeUp 0.5s ease 0.08s both;
+        }
+        .cmp-hero h1 em { font-style: italic; color: var(--accent); }
+        .cmp-hero-sub {
+            font-size: 17px; color: var(--text-2); max-width: 520px; margin: 0 auto 40px;
+            line-height: 1.7; animation: fadeUp 0.5s ease 0.16s both;
+        }
+        @keyframes fadeUp { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }
+
+        /* SELECTOR */
+        .cmp-selector {
+            display: flex; align-items: center; gap: 16px; justify-content: center;
+            flex-wrap: wrap; animation: fadeUp 0.5s ease 0.24s both;
+        }
+        .cmp-input-wrap {
+            position: relative; width: 280px;
+        }
+        .cmp-input {
+            width: 100%; padding: 14px 18px; border: 2px solid var(--border-2);
+            border-radius: var(--radius); font-size: 15px; font-family: inherit;
+            background: var(--bg-raised); color: var(--text); outline: none;
+            transition: border-color 0.2s;
+        }
+        .cmp-input:focus { border-color: var(--accent); }
+        .cmp-input::placeholder { color: var(--text-3); }
+        .cmp-dropdown {
+            display: none; position: absolute; top: calc(100% + 6px); left: 0; right: 0;
+            background: var(--bg-raised); border: 1px solid var(--border-2);
+            border-radius: var(--radius); box-shadow: var(--shadow-lg);
+            max-height: 320px; overflow-y: auto; z-index: 50; padding: 6px;
+        }
+        .cmp-dropdown.open { display: block; }
+        .cmp-dd-item {
+            display: flex; align-items: center; gap: 10px;
+            padding: 10px 12px; border-radius: var(--radius-sm);
+            cursor: pointer; font-size: 14px; font-weight: 500;
+            transition: background 0.15s;
+        }
+        .cmp-dd-item:hover { background: var(--bg-hover); }
+        .cmp-dd-item img { width: 24px; height: 24px; border-radius: 6px; }
+        .cmp-vs { font-family: var(--font-display); font-size: 24px; color: var(--text-3); font-style: italic; }
+        .cmp-go {
+            display: inline-flex; align-items: center; gap: 8px;
+            background: var(--accent); color: #fff; padding: 14px 32px;
+            border-radius: var(--radius); font-size: 15px; font-weight: 700;
+            border: none; cursor: pointer; font-family: inherit;
+            transition: all 0.25s;
+        }
+        .cmp-go:hover { background: var(--accent-hover); transform: translateY(-2px); box-shadow: 0 6px 24px rgba(232,89,12,0.2); }
+        .cmp-go:disabled { opacity: 0.5; cursor: not-allowed; transform: none; box-shadow: none; }
+
+        /* LOADING */
+        .cmp-loading {
+            display: none; text-align: center; padding: 80px 0;
+        }
+        .cmp-loading.active { display: block; }
+        .cmp-spinner {
+            width: 40px; height: 40px; border: 3px solid var(--border);
+            border-top-color: var(--accent); border-radius: 50%;
+            animation: spin 0.8s linear infinite; margin: 0 auto 16px;
+        }
+        @keyframes spin { to { transform: rotate(360deg); } }
+        .cmp-loading-text { font-size: 15px; color: var(--text-2); }
+
+        /* ERROR */
+        .cmp-error {
+            display: none; text-align: center; padding: 40px 0;
+            color: var(--rose); font-size: 15px;
+        }
+        .cmp-error.active { display: block; }
+
+        /* RESULTS */
+        .cmp-results { display: none; padding: 20px 0 80px; }
+        .cmp-results.active { display: block; }
+
+        .cmp-section { margin-bottom: 48px; }
+        .cmp-section-label {
+            font-size: 11px; font-weight: 700; text-transform: uppercase;
+            letter-spacing: 0.12em; color: var(--accent); margin-bottom: 16px;
+        }
+
+        /* COMPANY HEADERS */
+        .cmp-headers {
+            display: grid; grid-template-columns: 1fr 1fr; gap: 24px;
+            margin-bottom: 48px;
+        }
+        .cmp-header-card {
+            background: var(--bg-card); border: 1px solid var(--border);
+            border-radius: var(--radius-lg); padding: 28px; text-align: center;
+            position: relative;
+        }
+        .cmp-header-card img {
+            width: 56px; height: 56px; border-radius: 14px; margin-bottom: 12px;
+            border: 1px solid var(--border);
+        }
+        .cmp-header-card h2 {
+            font-family: var(--font-display); font-size: 28px; font-weight: 400;
+            margin-bottom: 4px;
+        }
+        .cmp-header-size { font-size: 13px; color: var(--text-3); font-family: var(--font-mono); }
+        .cmp-ai-badge {
+            display: inline-flex; align-items: center; gap: 4px;
+            background: var(--violet-bg); border: 1px solid var(--violet-border);
+            color: var(--violet); font-size: 11px; font-weight: 600;
+            padding: 3px 10px; border-radius: var(--radius-full);
+            margin-top: 8px;
+        }
+
+        /* SCORE BARS */
+        .cmp-scores {
+            background: var(--bg-card); border: 1px solid var(--border);
+            border-radius: var(--radius-lg); padding: 32px; margin-bottom: 48px;
+        }
+        .cmp-score-row {
+            display: flex; align-items: center; gap: 16px; margin-bottom: 20px;
+        }
+        .cmp-score-row:last-child { margin-bottom: 0; }
+        .cmp-score-label {
+            font-size: 13px; font-weight: 600; color: var(--text-2);
+            width: 100px; text-align: center; flex-shrink: 0;
+        }
+        .cmp-bar-track {
+            flex: 1; height: 28px; background: var(--bg); border-radius: var(--radius-full);
+            position: relative; overflow: hidden;
+        }
+        .cmp-bar-a {
+            position: absolute; right: 50%; top: 0; height: 100%;
+            background: var(--accent); border-radius: var(--radius-full) 0 0 var(--radius-full);
+            transition: width 0.6s ease;
+        }
+        .cmp-bar-b {
+            position: absolute; left: 50%; top: 0; height: 100%;
+            background: var(--teal); border-radius: 0 var(--radius-full) var(--radius-full) 0;
+            transition: width 0.6s ease;
+        }
+        .cmp-bar-mid {
+            position: absolute; left: 50%; top: 0; width: 2px; height: 100%;
+            background: var(--border-3); transform: translateX(-1px); z-index: 2;
+        }
+        .cmp-score-val {
+            font-family: var(--font-mono); font-size: 14px; font-weight: 600;
+            width: 36px; text-align: center; flex-shrink: 0;
+        }
+        .cmp-score-val.a { color: var(--accent); }
+        .cmp-score-val.b { color: var(--teal); }
+        .cmp-score-names {
+            display: flex; justify-content: space-between; margin-bottom: 20px;
+            font-size: 13px; font-weight: 600;
+        }
+        .cmp-score-names .a-name { color: var(--accent); }
+        .cmp-score-names .b-name { color: var(--teal); }
+
+        /* VALUES */
+        .cmp-values-grid {
+            display: grid; grid-template-columns: 1fr auto 1fr; gap: 24px;
+            align-items: start;
+        }
+        .cmp-values-col { display: flex; flex-wrap: wrap; gap: 8px; }
+        .cmp-values-col.left { justify-content: flex-end; }
+        .cmp-values-col.right { justify-content: flex-start; }
+        .cmp-values-shared {
+            display: flex; flex-direction: column; align-items: center; gap: 8px;
+            padding: 0 12px;
+        }
+        .cmp-values-shared-label {
+            font-size: 11px; font-weight: 700; text-transform: uppercase;
+            letter-spacing: 0.1em; color: var(--teal); margin-bottom: 4px;
+        }
+        .value-pill {
+            display: inline-flex; align-items: center; gap: 6px;
+            padding: 7px 14px; border-radius: var(--radius-full);
+            font-size: 13px; font-weight: 500; border: 1px solid;
+            white-space: nowrap;
+        }
+        .value-pill.teal { color: var(--teal); background: var(--teal-bg); border-color: var(--teal-border); }
+        .value-pill.violet { color: var(--violet); background: var(--violet-bg); border-color: var(--violet-border); }
+        .value-pill.sky { color: var(--sky); background: var(--sky-bg); border-color: var(--sky-border); }
+        .value-pill.orange { color: var(--accent); background: var(--accent-bg); border-color: var(--accent-border); }
+        .value-pill.rose { color: var(--rose); background: var(--rose-bg); border-color: var(--rose-border); }
+        .value-pill.shared { color: var(--teal); background: var(--teal-bg); border-color: var(--teal-border); }
+
+        /* PROS & CONS */
+        .cmp-proscons {
+            display: grid; grid-template-columns: 1fr 1fr; gap: 24px;
+        }
+        .cmp-pc-card {
+            background: var(--bg-card); border: 1px solid var(--border);
+            border-radius: var(--radius-lg); padding: 28px;
+        }
+        .cmp-pc-card h3 {
+            font-size: 16px; font-weight: 700; margin-bottom: 16px;
+            display: flex; align-items: center; gap: 8px;
+        }
+        .cmp-pc-list { list-style: none; display: flex; flex-direction: column; gap: 12px; }
+        .cmp-pc-list li {
+            display: flex; align-items: flex-start; gap: 8px;
+            font-size: 14px; line-height: 1.55; color: var(--text-2);
+        }
+        .cmp-pc-icon {
+            flex-shrink: 0; width: 20px; height: 20px; border-radius: 50%;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 11px; font-weight: 700; margin-top: 2px;
+        }
+        .cmp-pc-icon.pro { background: var(--teal-bg); color: var(--teal); }
+        .cmp-pc-icon.con { background: var(--rose-bg); color: var(--rose); }
+
+        /* JOB COUNTS */
+        .cmp-jobs-section { margin-bottom: 48px; }
+        .cmp-jobs-grid {
+            display: grid; grid-template-columns: 1fr 1fr; gap: 24px;
+        }
+        .cmp-jobs-card {
+            background: var(--bg-card); border: 1px solid var(--border);
+            border-radius: var(--radius-lg); padding: 28px;
+        }
+        .cmp-jobs-card h3 {
+            font-size: 16px; font-weight: 700; margin-bottom: 16px;
+        }
+        .cmp-role-row {
+            display: flex; align-items: center; gap: 10px; margin-bottom: 8px;
+        }
+        .cmp-role-row:last-child { margin-bottom: 0; }
+        .cmp-role-label { font-size: 13px; color: var(--text-2); width: 100px; flex-shrink: 0; }
+        .cmp-role-bar-track {
+            flex: 1; height: 18px; background: var(--bg); border-radius: var(--radius-full);
+            overflow: hidden;
+        }
+        .cmp-role-bar {
+            height: 100%; border-radius: var(--radius-full);
+            transition: width 0.5s ease; min-width: 2px;
+        }
+        .cmp-role-bar.a { background: var(--accent); }
+        .cmp-role-bar.b { background: var(--teal); }
+        .cmp-role-count {
+            font-family: var(--font-mono); font-size: 12px; color: var(--text-3);
+            width: 30px; text-align: right; flex-shrink: 0;
+        }
+        .cmp-na-msg { font-size: 14px; color: var(--text-3); font-style: italic; padding: 20px 0; }
+
+        /* CTAs */
+        .cmp-ctas {
+            display: grid; grid-template-columns: 1fr 1fr; gap: 24px;
+            margin-bottom: 48px;
+        }
+        .cmp-cta-col { display: flex; gap: 12px; flex-wrap: wrap; }
+        .cmp-cta-col.right { justify-content: flex-end; }
+        .cmp-btn {
+            display: inline-flex; align-items: center; gap: 8px;
+            padding: 12px 24px; border-radius: var(--radius);
+            font-size: 14px; font-weight: 600; text-decoration: none;
+            transition: all 0.25s; border: 1px solid;
+        }
+        .cmp-btn-primary { background: var(--accent); color: #fff; border-color: var(--accent); }
+        .cmp-btn-primary:hover { background: var(--accent-hover); transform: translateY(-2px); }
+        .cmp-btn-outline { background: transparent; color: var(--text); border-color: var(--border-2); }
+        .cmp-btn-outline:hover { border-color: var(--text); transform: translateY(-2px); }
+
+        /* FOOTER */
+        footer { padding: 56px 0 36px; border-top: 1px solid var(--border); }
+        .ft-bar { display: flex; justify-content: space-between; align-items: center; font-size: 12px; color: var(--text-3); }
+        .ft-bar a { color: var(--accent); text-decoration: none; }
+        .ft-links { display: flex; gap: 24px; margin-bottom: 20px; }
+        .ft-links a { font-size: 13px; color: var(--text-2); text-decoration: none; }
+        .ft-links a:hover { color: var(--text); }
+
+        /* RESPONSIVE */
+        @media (max-width: 768px) {
+            .hamburger { display: flex; }
+            .nav-links { display: none; position: absolute; top: 100%; left: 0; right: 0; background: rgba(250,250,248,0.98); backdrop-filter: blur(20px); border-bottom: 1px solid var(--border); padding: 20px 24px; flex-direction: column; gap: 16px; box-shadow: 0 8px 24px rgba(0,0,0,0.06); }
+            .nav-links.open { display: flex; }
+            .cmp-hero { padding: 110px 0 40px; }
+            .cmp-selector { flex-direction: column; align-items: stretch; }
+            .cmp-input-wrap { width: 100%; }
+            .cmp-vs { text-align: center; }
+            .cmp-headers { grid-template-columns: 1fr; }
+            .cmp-proscons { grid-template-columns: 1fr; }
+            .cmp-jobs-grid { grid-template-columns: 1fr; }
+            .cmp-ctas { grid-template-columns: 1fr; }
+            .cmp-cta-col.right { justify-content: flex-start; }
+            .cmp-values-grid { grid-template-columns: 1fr; gap: 16px; }
+            .cmp-values-col.left, .cmp-values-col.right { justify-content: flex-start; }
+            .cmp-values-shared { align-items: flex-start; padding: 0; }
+        }
+    </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+    <div class="nav-inner">
+        <a href="/" class="nav-logo">
+            <div class="nav-mark"><div class="ring ring-1"></div><div class="ring ring-2"></div><div class="nav-dot"></div></div>
+            <div class="nav-wordmark">Jobs<span>By</span>Culture</div>
+        </a>
+        <div class="nav-links">
+            <a href="/">Home</a>
+            <a href="/jobs">Jobs</a>
+            <a href="/compare" class="active">Compare</a>
+            <a href="/#companies">Companies</a>
+        </div>
+        <button class="hamburger" onclick="this.classList.toggle('active');this.closest('.nav-inner').querySelector('.nav-links').classList.toggle('open')" aria-label="Menu">
+            <span></span><span></span><span></span>
+        </button>
+    </div>
+</nav>
+
+<!-- HERO -->
+<section class="cmp-hero">
+    <div class="container">
+        <div class="cmp-hero-pill">
+            <span class="cmp-hero-pill-dot"></span>
+            Compare any two companies
+        </div>
+        <h1>Compare company <em>cultures</em></h1>
+        <p class="cmp-hero-sub">Side-by-side culture comparison. See ratings, values, pros &amp; cons, and open roles to find your best fit.</p>
+
+        <div class="cmp-selector">
+            <div class="cmp-input-wrap" id="wrapA">
+                <input class="cmp-input" id="inputA" type="text" placeholder="First company..." autocomplete="off">
+                <div class="cmp-dropdown" id="dropA"></div>
+            </div>
+            <span class="cmp-vs">vs</span>
+            <div class="cmp-input-wrap" id="wrapB">
+                <input class="cmp-input" id="inputB" type="text" placeholder="Second company..." autocomplete="off">
+                <div class="cmp-dropdown" id="dropB"></div>
+            </div>
+            <button class="cmp-go" id="goBtn" disabled>Compare</button>
+        </div>
+    </div>
+</section>
+
+<!-- LOADING -->
+<div class="cmp-loading" id="loading">
+    <div class="cmp-spinner"></div>
+    <div class="cmp-loading-text">Analyzing cultures with AI...</div>
+</div>
+
+<!-- ERROR -->
+<div class="cmp-error" id="errorMsg"></div>
+
+<!-- RESULTS -->
+<div class="cmp-results" id="results">
+    <div class="container">
+        <!-- Company Headers -->
+        <div class="cmp-headers" id="headerCards"></div>
+
+        <!-- Scores -->
+        <div class="cmp-section">
+            <div class="cmp-section-label">Ratings</div>
+            <div class="cmp-scores" id="scoreSection"></div>
+        </div>
+
+        <!-- Values -->
+        <div class="cmp-section">
+            <div class="cmp-section-label">Culture Values</div>
+            <div class="cmp-values-grid" id="valuesSection"></div>
+        </div>
+
+        <!-- Pros & Cons -->
+        <div class="cmp-section">
+            <div class="cmp-section-label">Pros &amp; Cons</div>
+            <div class="cmp-proscons" id="prosConsSection"></div>
+        </div>
+
+        <!-- Job Counts -->
+        <div class="cmp-section cmp-jobs-section">
+            <div class="cmp-section-label">Open Roles</div>
+            <div class="cmp-jobs-grid" id="jobsSection"></div>
+        </div>
+
+        <!-- CTAs -->
+        <div class="cmp-ctas" id="ctaSection"></div>
+    </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+    <div class="container">
+        <div class="ft-links">
+            <a href="/">Home</a>
+            <a href="/jobs">Browse Jobs</a>
+            <a href="/compare">Compare Cultures</a>
+            <a href="/#companies">Companies</a>
+        </div>
+        <div class="ft-bar">
+            <p>&copy; 2026 JobsByCulture</p>
+            <p>Made by <a href="https://x.com/itspradz" target="_blank">@itspradz</a></p>
+        </div>
+    </div>
+</footer>
+
+<script>
+// ═══ DATA ═══
+const VALUES = {
+    'wlb':          { ico: '\u2696\uFE0F', name: 'Work-Life Balance', color: 'teal' },
+    'remote':       { ico: '\uD83C\uDF10', name: 'Remote-Friendly', color: 'teal' },
+    'flex-hours':   { ico: '\uD83D\uDD50', name: 'Flexible Hours', color: 'teal' },
+    'async':        { ico: '\uD83D\uDCE1', name: 'Async-First', color: 'teal' },
+    'deep-work':    { ico: '\uD83C\uDFA7', name: 'Deep Work / Low Meetings', color: 'teal' },
+    'transparent':  { ico: '\uD83E\uDE9F', name: 'Transparent Culture', color: 'violet' },
+    'flat':         { ico: '\uD83E\uDD1D', name: 'Flat Hierarchy', color: 'violet' },
+    'diverse':      { ico: '\uD83C\uDF08', name: 'Diverse & Inclusive', color: 'violet' },
+    'psych-safety': { ico: '\uD83D\uDEE1\uFE0F', name: 'Safe to Fail', color: 'violet' },
+    'eng-driven':   { ico: '\u2699\uFE0F', name: 'Engineering-Driven', color: 'sky' },
+    'ship-fast':    { ico: '\uD83D\uDE80', name: 'Ship Fast & Iterate', color: 'sky' },
+    'open-source':  { ico: '\uD83D\uDD13', name: 'Open Source Culture', color: 'sky' },
+    'learning':     { ico: '\uD83C\uDF31', name: 'Learning & Growth', color: 'orange' },
+    'equity':       { ico: '\uD83D\uDC8E', name: 'Strong Comp & Equity', color: 'orange' },
+    'product-impact': { ico: '\uD83C\uDFAF', name: 'Direct Product Impact', color: 'orange' },
+    'many-hats':    { ico: '\uD83E\uDDE9', name: 'Wears Many Hats', color: 'orange' },
+    'ethical-ai':   { ico: '\uD83E\uDD16', name: 'Ethical AI / Safety', color: 'rose' },
+    'social-impact':{ ico: '\uD83D\uDC9C', name: 'Mission-Driven', color: 'rose' },
+};
+
+const ROLES = {
+    'ml-ai':       { name: 'ML / AI',       ico: '\uD83E\uDDE0' },
+    'data':        { name: 'Data',           ico: '\uD83D\uDCCA' },
+    'design':      { name: 'Design',         ico: '\uD83C\uDFA8' },
+    'engineering': { name: 'Engineering',    ico: '\uD83D\uDCBB' },
+    'product':     { name: 'Product',        ico: '\uD83D\uDCCB' },
+    'marketing':   { name: 'Marketing',      ico: '\uD83D\uDCE3' },
+    'sales':       { name: 'Sales / GTM',    ico: '\uD83D\uDCBC' },
+    'finance':     { name: 'Finance',        ico: '\uD83D\uDCB0' },
+    'hr-people':   { name: 'HR / People',    ico: '\uD83D\uDC64' },
+    'legal':       { name: 'Legal',          ico: '\u2696\uFE0F' },
+    'support':     { name: 'Support',        ico: '\uD83C\uDFA7' },
+    'operations':  { name: 'Operations',     ico: '\u2699\uFE0F' },
+};
+
+const COMPANIES = {
+    'anthropic': { name: 'Anthropic', logo: 'https://www.google.com/s2/favicons?domain=anthropic.com&sz=128', size: 'Mid (~1,500)', glassdoor: 4.4, wlb_score: 3.7, values: ['ethical-ai','learning','equity','social-impact','eng-driven','flat'], careers: 'https://www.anthropic.com/careers?ref=jobsbyculture.com' },
+    'huggingface': { name: 'Hugging Face', logo: 'https://www.google.com/s2/favicons?domain=huggingface.co&sz=128', size: 'Small (~400)', glassdoor: 3.8, wlb_score: 4.1, values: ['open-source','flat','remote','flex-hours','transparent','many-hats','async'], careers: 'https://huggingface.co/jobs?ref=jobsbyculture.com' },
+    'databricks': { name: 'Databricks', logo: 'https://www.google.com/s2/favicons?domain=databricks.com&sz=128', size: 'Large (~7,000)', glassdoor: 4.1, wlb_score: 3.9, values: ['eng-driven','learning','equity','diverse','product-impact'], careers: 'https://www.databricks.com/company/careers?ref=jobsbyculture.com' },
+    'cohere': { name: 'Cohere', logo: 'https://www.google.com/s2/favicons?domain=cohere.com&sz=128', size: 'Small (~500)', glassdoor: 2.9, wlb_score: 3.5, values: ['learning','eng-driven','many-hats'], careers: 'https://cohere.com/careers?ref=jobsbyculture.com' },
+    'mistral': { name: 'Mistral AI', logo: 'https://www.google.com/s2/favicons?domain=mistral.ai&sz=128', size: 'Small (~100)', glassdoor: 4.0, wlb_score: 3.6, values: ['ship-fast','eng-driven','flat','many-hats','open-source'], careers: 'https://mistral.ai/careers?ref=jobsbyculture.com' },
+    'hubspot': { name: 'HubSpot', logo: 'https://www.google.com/s2/favicons?domain=hubspot.com&sz=128', size: 'Large (~8,000)', glassdoor: 4.3, wlb_score: 4.1, values: ['diverse','learning','wlb','transparent','flex-hours','psych-safety'], careers: 'https://www.hubspot.com/careers?ref=jobsbyculture.com' },
+    'vercel': { name: 'Vercel', logo: 'https://www.google.com/s2/favicons?domain=vercel.com&sz=128', size: 'Mid (~600)', glassdoor: 3.9, wlb_score: 3.4, values: ['ship-fast','eng-driven','remote','product-impact','open-source'], careers: 'https://vercel.com/careers?ref=jobsbyculture.com' },
+    'stripe': { name: 'Stripe', logo: 'https://www.google.com/s2/favicons?domain=stripe.com&sz=128', size: 'Large (~8,000)', glassdoor: 4.0, wlb_score: 3.6, values: ['eng-driven','learning','equity','product-impact','transparent'], careers: 'https://stripe.com/jobs?ref=jobsbyculture.com' },
+    'perplexity': { name: 'Perplexity AI', logo: 'https://www.google.com/s2/favicons?domain=perplexity.ai&sz=128', size: 'Mid (~500)', glassdoor: 4.7, wlb_score: 3.3, values: ['ship-fast','eng-driven','product-impact','equity','learning'], careers: 'https://www.perplexity.ai/hub/careers?ref=jobsbyculture.com' },
+    'together': { name: 'Together AI', logo: 'https://www.google.com/s2/favicons?domain=together.ai&sz=128', size: 'Small (~150)', glassdoor: 4.1, wlb_score: 3.8, values: ['open-source','eng-driven','learning','flat','many-hats'], careers: 'https://www.together.ai/about?ref=jobsbyculture.com' },
+    'cursor': { name: 'Cursor (Anysphere)', logo: 'https://www.google.com/s2/favicons?domain=cursor.com&sz=128', size: 'Small (~50)', glassdoor: 4.0, wlb_score: 3.5, values: ['ship-fast','eng-driven','product-impact','flat','many-hats'], careers: 'https://anysphere.inc?ref=jobsbyculture.com' },
+    'linear': { name: 'Linear', logo: 'https://www.google.com/s2/favicons?domain=linear.app&sz=128', size: 'Small (~80)', glassdoor: 4.6, wlb_score: 4.4, values: ['deep-work','remote','async','eng-driven','product-impact','wlb'], careers: 'https://linear.app/careers?ref=jobsbyculture.com' },
+    'scale': { name: 'Scale AI', logo: 'https://www.google.com/s2/favicons?domain=scale.com&sz=128', size: 'Large (~1,200)', glassdoor: 3.5, wlb_score: 2.7, values: ['eng-driven','product-impact','learning','ship-fast'], careers: 'https://scale.com/careers?ref=jobsbyculture.com' },
+    'coreweave': { name: 'CoreWeave', logo: 'https://www.google.com/s2/favicons?domain=coreweave.com&sz=128', size: 'Large (~1,800)', glassdoor: 3.6, wlb_score: 3.2, values: ['eng-driven','ship-fast','equity','many-hats'], careers: 'https://coreweave.com/careers?ref=jobsbyculture.com' },
+    'runway': { name: 'Runway', logo: 'https://www.google.com/s2/favicons?domain=runwayml.com&sz=128', size: 'Mid (~420)', glassdoor: 4.5, wlb_score: 4.0, values: ['eng-driven','product-impact','remote','learning','ship-fast'], careers: 'https://runwayml.com/careers?ref=jobsbyculture.com' },
+    'vast': { name: 'Vast AI', logo: 'https://www.google.com/s2/favicons?domain=vast.ai&sz=128', size: 'Small (~30)', glassdoor: 5.0, wlb_score: 4.5, values: ['eng-driven','ship-fast','flat','many-hats','equity'], careers: 'https://vast.ai/careers?ref=jobsbyculture.com' },
+    'apollo': { name: 'Apollo.io', logo: 'https://www.google.com/s2/favicons?domain=apollo.io&sz=128', size: 'Large (~800)', glassdoor: 4.0, wlb_score: 3.6, values: ['ship-fast','eng-driven','remote','product-impact','learning'], careers: 'https://www.apollo.io/careers?ref=jobsbyculture.com' },
+    'airbnb': { name: 'Airbnb', logo: 'https://www.google.com/s2/favicons?domain=airbnb.com&sz=128', size: 'Large (~7,300)', glassdoor: 4.1, wlb_score: 4.0, values: ['remote','wlb','diverse','open-source','equity'], careers: 'https://careers.airbnb.com/?ref=jobsbyculture.com' },
+    'figma': { name: 'Figma', logo: 'https://www.google.com/s2/favicons?domain=figma.com&sz=128', size: 'Large (~2,800)', glassdoor: 3.7, wlb_score: 3.1, values: ['eng-driven','ship-fast','learning','product-impact','deep-work'], careers: 'https://www.figma.com/careers?ref=jobsbyculture.com' },
+};
+
+const COMPANY_REVIEWS = {
+    'anthropic': { pros: ['Mission-driven to the core \u2014 the safety focus is genuine and deeply embedded', 'Incredible autonomy and ownership, even for mid-level engineers'], cons: ['High-intensity environment \u2014 extended work hours are common during peak periods', 'Processes still catching up to hypergrowth; some things feel ad-hoc'] },
+    'apollo': { pros: ['Strong product-market fit \u2014 best-in-class sales intelligence platform', 'Competitive compensation with RSUs, performance bonuses, and paid health insurance'], cons: ['Some reports of leadership involvement in granular decisions and frequent pivots', 'Work-life balance challenges under high-growth pressure'] },
+    'cohere': { pros: ['Cutting-edge NLP research from Transformer co-author', 'Enterprise AI focus gives real customer impact'], cons: ['Frequent organizational restructuring has led to notable team turnover', 'Internal communication from leadership could be more transparent'] },
+    'coreweave': { pros: ['GPU cloud infrastructure leader backed by NVIDIA ($2B investment)', 'Strong compensation and equity \u2014 especially valuable post-IPO'], cons: ['Work-life balance can be challenging \u2014 some teams expect off-hours availability', 'Culture and values rated 3.1/5 \u2014 processes still maturing'] },
+    'cursor': { pros: ['Building the most-loved AI code editor \u2014 massive developer love and daily impact', 'Tiny team, extreme ownership \u2014 every person shapes the product directly'], cons: ['Extremely small team = no specialists; everyone does everything', 'Intense pace \u2014 the speed of shipping can be relentless'] },
+    'databricks': { pros: ['Engineers who built Spark, Delta Lake, MLflow \u2014 deep technical pedigree', 'Strong compensation and equity packages consistently above market'], cons: ['Hypergrowth means org changes are constant \u2014 teams restructure frequently', 'Some legacy Spark-era tech debt that can slow down new features'] },
+    'hubspot': { pros: ['Culture Code is legendary \u2014 transparency, autonomy, flexibility are real', 'Remote-first done right with genuine work-life balance'], cons: ['Enterprise sales culture can clash with engineering', 'Comp below FAANG for senior roles'] },
+    'huggingface': { pros: ['True open-source DNA \u2014 you work on things millions of developers actually use', 'Remote-first and async culture that actually works across time zones'], cons: ['Below-market comp compared to FAANG', 'Career progression is unclear \u2014 no well-defined ladder'] },
+    'linear': { pros: ['Obsessive product craft \u2014 building the best-in-class PM tool teams genuinely love', 'Deep work culture with no standups and minimal meetings \u2014 actually practiced'], cons: ['Very small team = limited roles available at any given time', 'High hiring bar means slow growth \u2014 patience required'] },
+    'mistral': { pros: ['Small team punching way above weight \u2014 Mixtral, Mistral Large', 'European AI champion with strong research DNA'], cons: ['Very early-stage \u2014 processes are minimal', 'Paris-centric with limited remote options'] },
+    'perplexity': { pros: ['Fastest-growing AI product \u2014 real users, real revenue, genuine product-market fit', 'Small team, massive impact per engineer \u2014 your work ships to millions quickly'], cons: ['Startup intensity \u2014 expect long hours and high expectations', 'Growing pains as the team scales \u2014 roles and responsibilities shift frequently'] },
+    'runway': { pros: ['Pioneer in AI video generation \u2014 Gen-3 Alpha is industry-leading', 'Unique blend of art and engineering \u2014 creative culture values both'], cons: ['Smaller team (~420) means limited specialization \u2014 engineers wear multiple hats', 'AI video generation is an increasingly competitive space'] },
+    'scale': { pros: ['Building critical AI data infrastructure used by OpenAI, Meta, Microsoft, and the US government', 'Strong compensation for engineers \u2014 competitive base + equity'], cons: ['Work-life balance rated 2.7/5 \u2014 long hours common during client deadlines', 'Culture and values scored 2.9/5 \u2014 inconsistent management quality'] },
+    'stripe': { pros: ['Engineering culture is elite \u2014 code quality and writing culture are best-in-class', 'Top compensation in fintech \u2014 competitive base, equity, and benefits'], cons: ['Perfectionism can slow shipping \u2014 high bar sometimes means slower velocity', 'The 2022-23 layoffs affected morale \u2014 company has been rebuilding confidence'] },
+    'together': { pros: ['Open-source AI infrastructure \u2014 real mission alignment, not just marketing', 'Small team with outsized research output; your work has direct impact'], cons: ['Early-stage means wearing many hats constantly \u2014 not for specialists', 'Limited career ladder; growth paths are still being defined'] },
+    'vast': { pros: ['Front-row seat to the AI compute revolution \u2014 demand for GPU cloud is surging', 'Strong compensation and generous equity stakes for a bootstrapped startup'], cons: ['Processes are still being defined \u2014 expect ad hoc workflows', 'Intense workload \u2014 the team explicitly values high output'] },
+    'vercel': { pros: ['Building the future of web infrastructure \u2014 Next.js, Turbopack, edge runtime', 'Remote-first with strong async culture \u2014 true flexibility'], cons: ['High expectations and fast pace can lead to burnout', 'Leadership sets very high standards \u2014 the pace isn\'t for everyone'] },
+    'airbnb': { pros: ['Live and Work Anywhere policy \u2014 genuine remote flexibility with no pay cuts', 'Strong compensation and benefits with quarterly travel credits and educational stipends'], cons: ['Limited career growth \u2014 senior roles often filled externally, promotions are slow', 'Post-IPO cultural shift \u2014 increasing bureaucracy and internal politics at mid-to-senior levels'] },
+    'figma': { pros: ['World-class talent and technically ambitious problems \u2014 real-time multiplayer, WebAssembly rendering', 'Strong product mission that employees genuinely believe in \u2014 Figma is loved by its users'], cons: ['Work-life balance rated 3.1/5 \u2014 60+ hour weeks common, especially near deadlines', 'Hypergrowth growing pains \u2014 product suite doubled without proportional hiring'] },
+};
+
+const CRC = {"airbnb":{"sales":10,"marketing":11,"data":17,"support":36,"legal":8,"operations":39,"engineering":66,"finance":2,"design":4,"hr-people":5,"product":11,"ml-ai":9},"anthropic":{"operations":10,"ml-ai":47,"engineering":103,"product":15,"support":4,"data":4,"legal":4,"marketing":4,"sales":1},"apollo":{"sales":14,"support":2,"engineering":16,"hr-people":1,"product":3,"finance":1,"marketing":3,"design":1,"legal":1,"operations":1},"cohere":{"ml-ai":10,"product":4,"sales":7,"engineering":31,"data":2,"support":2},"coreweave":{"finance":9,"sales":27,"engineering":126,"legal":6,"operations":16,"marketing":9,"hr-people":4,"product":14,"data":6},"cursor":{"engineering":2,"ml-ai":2},"databricks":{"engineering":16,"sales":8},"figma":{"sales":58,"finance":2,"design":14,"operations":5,"hr-people":8,"marketing":10,"legal":5,"data":2,"engineering":26,"support":3,"product":8,"ml-ai":2},"hubspot":{"engineering":1,"data":1,"product":1},"huggingface":{"ml-ai":4},"linear":{"engineering":2},"mistral":{"engineering":45,"product":6,"ml-ai":10,"data":1},"perplexity":{"engineering":45,"data":6,"sales":1,"ml-ai":6,"product":1},"runway":{"sales":2,"ml-ai":5,"marketing":4,"engineering":2,"data":3,"hr-people":1,"product":1},"scale":{"finance":10,"engineering":53,"product":15,"ml-ai":25,"operations":8,"hr-people":4,"marketing":4,"data":3,"sales":16,"legal":6,"design":5},"stripe":{"engineering":22,"ml-ai":2,"data":1},"together":{"engineering":13,"ml-ai":10,"sales":1,"data":2,"support":1},"vast":{"engineering":6,"data":1,"ml-ai":2},"vercel":{"engineering":3}};
+
+// ═══ DROPDOWN LOGIC ═══
+var slugList = Object.keys(COMPANIES);
+
+function buildDropdown(inputId, dropId, side) {
+    var input = document.getElementById(inputId);
+    var drop = document.getElementById(dropId);
+
+    input.addEventListener('focus', function() { updateDropdown(input, drop); });
+    input.addEventListener('input', function() { updateDropdown(input, drop); updateGoBtn(); });
+    document.addEventListener('click', function(e) {
+        if (!e.target.closest('#wrap' + side.toUpperCase())) {
+            drop.classList.remove('open');
+        }
+    });
+}
+
+function updateDropdown(input, drop) {
+    var q = input.value.trim().toLowerCase();
+    var html = '';
+    var matches = slugList.filter(function(s) {
+        var c = COMPANIES[s];
+        return c.name.toLowerCase().indexOf(q) !== -1 || s.indexOf(q) !== -1;
+    });
+
+    matches.forEach(function(slug) {
+        var c = COMPANIES[slug];
+        html += '<div class="cmp-dd-item" data-slug="' + slug + '">' +
+            '<img src="' + c.logo + '" alt="' + c.name + '">' +
+            '<span>' + c.name + '</span>' +
+            '</div>';
+    });
+
+    drop.innerHTML = html;
+    drop.classList.toggle('open', html.length > 0);
+
+    // Attach click handlers
+    drop.querySelectorAll('.cmp-dd-item').forEach(function(item) {
+        item.addEventListener('click', function() {
+            var slug = item.getAttribute('data-slug');
+            input.value = COMPANIES[slug].name;
+            drop.classList.remove('open');
+            updateGoBtn();
+        });
+    });
+}
+
+function updateGoBtn() {
+    var a = document.getElementById('inputA').value.trim();
+    var b = document.getElementById('inputB').value.trim();
+    document.getElementById('goBtn').disabled = !(a.length >= 2 && b.length >= 2);
+}
+
+function escHtml(s) {
+    var d = document.createElement('div');
+    d.textContent = s;
+    return d.innerHTML;
+}
+
+// Resolve a typed name to a known company slug, or null if not found
+function resolveCompany(name) {
+    var lower = name.trim().toLowerCase();
+    for (var i = 0; i < slugList.length; i++) {
+        var slug = slugList[i];
+        if (COMPANIES[slug].name.toLowerCase() === lower) return slug;
+    }
+    return null;
+}
+
+buildDropdown('inputA', 'dropA', 'a');
+buildDropdown('inputB', 'dropB', 'b');
+
+// ═══ COMPARE ACTION ═══
+document.getElementById('goBtn').addEventListener('click', doCompare);
+
+async function doCompare() {
+    var nameA = document.getElementById('inputA').value.trim();
+    var nameB = document.getElementById('inputB').value.trim();
+    if (nameA.length < 2 || nameB.length < 2) return;
+
+    var loading = document.getElementById('loading');
+    var results = document.getElementById('results');
+    var errorEl = document.getElementById('errorMsg');
+    results.classList.remove('active');
+    errorEl.classList.remove('active');
+
+    // Resolve each side: known company slug or null
+    var slugA = resolveCompany(nameA);
+    var slugB = resolveCompany(nameB);
+
+    // Both on-site — instant
+    if (slugA && slugB) {
+        var dataA = getOnsiteData(slugA);
+        var dataB = getOnsiteData(slugB);
+        renderResults(dataA, dataB);
+        updateURL(slugA, slugB);
+        return;
+    }
+
+    // Need API for at least one side
+    loading.classList.add('active');
+
+    var bodyA = slugA ? { data: getOnsiteData(slugA) } : { name: nameA };
+    var bodyB = slugB ? { data: getOnsiteData(slugB) } : { name: nameB };
+
+    try {
+        var resp = await fetch('/api/compare', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ companyA: bodyA, companyB: bodyB })
+        });
+        var json = await resp.json();
+        loading.classList.remove('active');
+
+        if (!resp.ok) {
+            errorEl.textContent = json.error || 'Something went wrong. Please try again.';
+            errorEl.classList.add('active');
+            return;
+        }
+
+        renderResults(json.companyA, json.companyB);
+        updateURL(slugA || slugify(nameA), slugB || slugify(nameB));
+    } catch (err) {
+        loading.classList.remove('active');
+        errorEl.textContent = 'Network error. Please check your connection and try again.';
+        errorEl.classList.add('active');
+    }
+}
+
+function getOnsiteData(slug) {
+    var c = COMPANIES[slug];
+    var r = COMPANY_REVIEWS[slug] || { pros: [], cons: [] };
+    return {
+        name: c.name,
+        slug: slug,
+        logo: c.logo,
+        size: c.size,
+        glassdoor: c.glassdoor,
+        wlb_score: c.wlb_score,
+        values: c.values,
+        pros: r.pros,
+        cons: r.cons,
+        careers: c.careers,
+        roleCounts: CRC[slug] || {},
+        onsite: true
+    };
+}
+
+function slugify(name) {
+    return name.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
+}
+
+function updateURL(a, b) {
+    var url = '/compare?a=' + encodeURIComponent(a) + '&b=' + encodeURIComponent(b);
+    history.replaceState(null, '', url);
+}
+
+// ═══ RENDER RESULTS ═══
+function renderResults(a, b) {
+    renderHeaders(a, b);
+    renderScores(a, b);
+    renderValues(a, b);
+    renderProsCons(a, b);
+    renderJobs(a, b);
+    renderCTAs(a, b);
+    document.getElementById('results').classList.add('active');
+    document.getElementById('results').scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
+
+function renderHeaders(a, b) {
+    var html = '';
+    [a, b].forEach(function(co) {
+        html += '<div class="cmp-header-card">' +
+            '<img src="' + (co.logo || 'https://www.google.com/s2/favicons?domain=' + encodeURIComponent(slugify(co.name)) + '.com&sz=128') + '" alt="' + escHtml(co.name) + '">' +
+            '<h2>' + escHtml(co.name) + '</h2>' +
+            '<div class="cmp-header-size">' + escHtml(co.size || 'Unknown size') + '</div>' +
+            (co.ai_generated ? '<div class="cmp-ai-badge">\u2728 AI-generated</div>' : '') +
+            '</div>';
+    });
+    document.getElementById('headerCards').innerHTML = html;
+}
+
+function renderScores(a, b) {
+    var maxScore = 5;
+    var metrics = [
+        { label: 'Glassdoor', keyA: a.glassdoor, keyB: b.glassdoor },
+        { label: 'Work-Life', keyA: a.wlb_score, keyB: b.wlb_score }
+    ];
+    var html = '<div class="cmp-score-names"><span class="a-name">' + escHtml(a.name) + '</span><span class="b-name">' + escHtml(b.name) + '</span></div>';
+    metrics.forEach(function(m) {
+        var pctA = ((m.keyA / maxScore) * 50);
+        var pctB = ((m.keyB / maxScore) * 50);
+        html += '<div class="cmp-score-row">' +
+            '<span class="cmp-score-val a">' + m.keyA.toFixed(1) + '</span>' +
+            '<div class="cmp-bar-track">' +
+                '<div class="cmp-bar-a" style="width:' + pctA + '%"></div>' +
+                '<div class="cmp-bar-b" style="width:' + pctB + '%"></div>' +
+                '<div class="cmp-bar-mid"></div>' +
+            '</div>' +
+            '<span class="cmp-score-val b">' + m.keyB.toFixed(1) + '</span>' +
+            '</div>' +
+            '<div style="text-align:center;font-size:12px;color:var(--text-3);margin:-12px 0 16px">' + m.label + '</div>';
+    });
+    document.getElementById('scoreSection').innerHTML = html;
+}
+
+function renderValues(a, b) {
+    var setA = new Set(a.values || []);
+    var setB = new Set(b.values || []);
+    var shared = [];
+    var uniqueA = [];
+    var uniqueB = [];
+
+    setA.forEach(function(v) {
+        if (setB.has(v)) shared.push(v);
+        else uniqueA.push(v);
+    });
+    setB.forEach(function(v) {
+        if (!setA.has(v)) uniqueB.push(v);
+    });
+
+    function pill(slug, extraClass) {
+        var v = VALUES[slug];
+        if (!v) return '';
+        var cls = extraClass || v.color;
+        return '<span class="value-pill ' + cls + '">' + v.ico + ' ' + v.name + '</span>';
+    }
+
+    var htmlLeft = '<div class="cmp-values-col left">';
+    if (uniqueA.length) {
+        uniqueA.forEach(function(v) { htmlLeft += pill(v); });
+    } else {
+        htmlLeft += '<span style="font-size:13px;color:var(--text-3);font-style:italic">No unique values</span>';
+    }
+    htmlLeft += '</div>';
+
+    var htmlMid = '<div class="cmp-values-shared">';
+    htmlMid += '<div class="cmp-values-shared-label">Shared</div>';
+    if (shared.length) {
+        shared.forEach(function(v) { htmlMid += pill(v, 'shared'); });
+    } else {
+        htmlMid += '<span style="font-size:13px;color:var(--text-3);font-style:italic">None</span>';
+    }
+    htmlMid += '</div>';
+
+    var htmlRight = '<div class="cmp-values-col right">';
+    if (uniqueB.length) {
+        uniqueB.forEach(function(v) { htmlRight += pill(v); });
+    } else {
+        htmlRight += '<span style="font-size:13px;color:var(--text-3);font-style:italic">No unique values</span>';
+    }
+    htmlRight += '</div>';
+
+    document.getElementById('valuesSection').innerHTML =
+        '<div style="text-align:right;font-size:12px;color:var(--accent);font-weight:600;margin-bottom:8px">' + escHtml(a.name) + ' only</div>' +
+        '<div style="text-align:center;font-size:12px;color:var(--teal);font-weight:600;margin-bottom:8px">&nbsp;</div>' +
+        '<div style="text-align:left;font-size:12px;color:var(--teal);font-weight:600;margin-bottom:8px">' + escHtml(b.name) + ' only</div>' +
+        htmlLeft + htmlMid + htmlRight;
+}
+
+function renderProsCons(a, b) {
+    function card(co) {
+        var html = '<div class="cmp-pc-card">';
+        html += '<h3>' + escHtml(co.name) + '</h3>';
+        html += '<ul class="cmp-pc-list">';
+        (co.pros || []).forEach(function(p) {
+            html += '<li><span class="cmp-pc-icon pro">\u2713</span><span>' + escHtml(p) + '</span></li>';
+        });
+        (co.cons || []).forEach(function(c) {
+            html += '<li><span class="cmp-pc-icon con">\u2717</span><span>' + escHtml(c) + '</span></li>';
+        });
+        html += '</ul></div>';
+        return html;
+    }
+    document.getElementById('prosConsSection').innerHTML = card(a) + card(b);
+}
+
+function renderJobs(a, b) {
+    function jobCard(co) {
+        var rc = co.roleCounts || {};
+        var hasRoles = Object.keys(rc).length > 0;
+        var total = 0;
+        Object.values(rc).forEach(function(n) { total += n; });
+
+        var html = '<div class="cmp-jobs-card">';
+        html += '<h3>' + escHtml(co.name) + (hasRoles ? ' \u2014 ' + total + ' jobs' : '') + '</h3>';
+
+        if (!hasRoles) {
+            html += '<div class="cmp-na-msg">' + (co.ai_generated ? 'Job counts not available for AI-analyzed companies' : 'No open roles currently listed') + '</div>';
+            html += '</div>';
+            return html;
+        }
+
+        // Sort roles by count descending
+        var roles = Object.keys(rc).sort(function(x, y) { return rc[y] - rc[x]; });
+        var max = rc[roles[0]] || 1;
+        roles.forEach(function(r) {
+            var role = ROLES[r];
+            if (!role) return;
+            var pct = (rc[r] / max * 100);
+            var color = co === a ? 'a' : 'b';
+            html += '<div class="cmp-role-row">' +
+                '<span class="cmp-role-label">' + role.ico + ' ' + role.name + '</span>' +
+                '<div class="cmp-role-bar-track"><div class="cmp-role-bar ' + color + '" style="width:' + pct + '%"></div></div>' +
+                '<span class="cmp-role-count">' + rc[r] + '</span>' +
+                '</div>';
+        });
+
+        html += '</div>';
+        return html;
+    }
+    document.getElementById('jobsSection').innerHTML = jobCard(a) + jobCard(b);
+}
+
+function renderCTAs(a, b) {
+    function ctaCol(co, isRight) {
+        var cls = isRight ? 'cmp-cta-col right' : 'cmp-cta-col';
+        var html = '<div class="' + cls + '">';
+        if (co.onsite && co.slug) {
+            html += '<a class="cmp-btn cmp-btn-primary" href="/jobs?company=' + co.slug + '">See ' + escHtml(co.name) + ' jobs \u2192</a>';
+            html += '<a class="cmp-btn cmp-btn-outline" href="/companies/' + co.slug + '">Full profile \u2192</a>';
+        } else {
+            html += '<a class="cmp-btn cmp-btn-primary" href="' + escHtml(co.careers || '#') + '" target="_blank">Visit ' + escHtml(co.name) + ' careers \u2192</a>';
+        }
+        html += '</div>';
+        return html;
+    }
+    document.getElementById('ctaSection').innerHTML = ctaCol(a, false) + ctaCol(b, true);
+}
+
+// ═══ URL PARAMS — AUTO COMPARE ═══
+(function() {
+    var params = new URLSearchParams(window.location.search);
+    var a = params.get('a');
+    var b = params.get('b');
+    if (a && b) {
+        document.getElementById('inputA').value = COMPANIES[a] ? COMPANIES[a].name : decodeURIComponent(a);
+        document.getElementById('inputB').value = COMPANIES[b] ? COMPANIES[b].name : decodeURIComponent(b);
+        updateGoBtn();
+        doCompare();
+    }
+})();
+</script>
+</body>
+</html>
