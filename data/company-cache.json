@@ -1,0 +1,751 @@
+{
+  "google": {
+    "name": "Google",
+    "size": "Large (~190,000)",
+    "glassdoor": 4,
+    "wlb_score": 3.6,
+    "culture_values": 4.1,
+    "comp_benefits": 4.3,
+    "senior_mgmt": 3.7,
+    "career_opps": 4,
+    "recommend": 78,
+    "ceo_approval": 82,
+    "ceo_name": "Sundar Pichai",
+    "bestFor": "Engineers and product-minded professionals seeking world-class compensation, learning opportunities, and impact on billions of users.",
+    "verdict": "Choose Google if you want prestige, competitive pay, and cutting-edge projects — but expect bureaucracy, politics, and slower decision-making as you scale.",
+    "values": [
+      "eng-driven",
+      "learning",
+      "product-impact",
+      "diverse",
+      "ethical-ai"
+    ],
+    "pros": [
+      "Industry-leading compensation and benefits packages with equity upside.",
+      "Unmatched learning resources, internal mobility, and career development opportunities."
+    ],
+    "cons": [
+      "Bureaucracy and slow decision-making can frustrate fast-moving engineers.",
+      "Work-life balance varies significantly by team and can be demanding during launches."
+    ],
+    "careers": "https://careers.google.com",
+    "ai_generated": true,
+    "slug": "google",
+    "logo": "https://www.google.com/s2/favicons?domain=careers.google.com&sz=128"
+  },
+  "amazon": {
+    "name": "Amazon",
+    "size": "Large (~1,500,000)",
+    "glassdoor": 3.8,
+    "wlb_score": 2.9,
+    "culture_values": 3.7,
+    "comp_benefits": 4.1,
+    "senior_mgmt": 3.4,
+    "career_opps": 4,
+    "recommend": 68,
+    "ceo_approval": 73,
+    "ceo_name": "Andy Jassy",
+    "bestFor": "Ambitious engineers and builders who thrive in high-pressure, customer-obsessed environments with significant growth opportunities.",
+    "verdict": "Choose Amazon if you want career acceleration and competitive compensation — but expect intense work pace and demanding leadership principles.",
+    "values": [
+      "ship-fast",
+      "eng-driven",
+      "product-impact",
+      "learning"
+    ],
+    "pros": [
+      "Massive scale and resources enable building products that reach billions of users",
+      "Strong compensation packages and stock options provide significant wealth-building potential"
+    ],
+    "cons": [
+      "Work-life balance expectations are notoriously demanding with long hours common",
+      "Organizational complexity and bureaucracy can slow decision-making despite ship-fast culture"
+    ],
+    "careers": "https://www.amazon.jobs",
+    "ai_generated": true,
+    "slug": "amazon",
+    "logo": "https://www.google.com/s2/favicons?domain=www.amazon.jobs&sz=128"
+  },
+  "microsoft": {
+    "name": "Microsoft Corporation",
+    "size": "Large (~220,000)",
+    "glassdoor": 4.1,
+    "wlb_score": 3.6,
+    "culture_values": 4,
+    "comp_benefits": 4.2,
+    "senior_mgmt": 3.8,
+    "career_opps": 4.1,
+    "recommend": 78,
+    "ceo_approval": 82,
+    "ceo_name": "Satya Nadella",
+    "bestFor": "Engineers and technologists seeking a stable, innovative tech giant with strong learning opportunities and competitive compensation.",
+    "verdict": "Choose Microsoft if you want growth, strong benefits, and work on impactful products — but expect bureaucracy and competitive internal dynamics.",
+    "values": [
+      "eng-driven",
+      "learning",
+      "product-impact",
+      "diverse",
+      "ethical-ai",
+      "social-impact"
+    ],
+    "pros": [
+      "Exceptional compensation and benefits package including generous stock equity",
+      "Strong focus on professional development and upskilling through internal training programs"
+    ],
+    "cons": [
+      "Large bureaucratic structure can slow decision-making and innovation velocity",
+      "Internal competition between divisions can create siloed teams and politics"
+    ],
+    "careers": "https://careers.microsoft.com",
+    "ai_generated": true,
+    "slug": "microsoft",
+    "logo": "https://www.google.com/s2/favicons?domain=careers.microsoft.com&sz=128"
+  },
+  "apple": {
+    "name": "Apple Inc.",
+    "size": "Large (~164,000)",
+    "glassdoor": 3.8,
+    "wlb_score": 3.2,
+    "culture_values": 4.1,
+    "comp_benefits": 4.3,
+    "senior_mgmt": 3.6,
+    "career_opps": 3.7,
+    "recommend": 72,
+    "ceo_approval": 82,
+    "ceo_name": "Tim Cook",
+    "bestFor": "Engineers and designers passionate about building world-class products with relentless attention to detail and aesthetic excellence.",
+    "verdict": "Choose Apple if you want product-obsessed culture and top compensation — but expect intense work demands and limited work-life balance.",
+    "values": [
+      "eng-driven",
+      "product-impact",
+      "deep-work",
+      "ethical-ai",
+      "social-impact"
+    ],
+    "pros": [
+      "Exceptional compensation and benefits packages for top talent",
+      "Uncompromising focus on product quality and user experience"
+    ],
+    "cons": [
+      "Demanding work environment with long hours expected during product launches",
+      "Hierarchical structure can limit autonomy for individual contributors"
+    ],
+    "careers": "https://www.apple.com/careers",
+    "ai_generated": true,
+    "slug": "apple",
+    "logo": "https://www.google.com/s2/favicons?domain=www.apple.com&sz=128"
+  },
+  "meta": {
+    "name": "Meta Platforms, Inc.",
+    "size": "Large (~67,000)",
+    "glassdoor": 3.8,
+    "wlb_score": 3.2,
+    "culture_values": 3.9,
+    "comp_benefits": 4.3,
+    "senior_mgmt": 3.4,
+    "career_opps": 4,
+    "recommend": 68,
+    "ceo_approval": 72,
+    "ceo_name": "Mark Zuckerberg",
+    "bestFor": "Ambitious engineers and product-minded professionals who thrive in a fast-paced, impact-driven environment with exceptional compensation.",
+    "verdict": "Choose Meta if you want high compensation, rapid career growth, and cutting-edge tech — but expect intense pressure, demanding work hours, and a culture that prioritizes shipping over work-life balance.",
+    "values": [
+      "eng-driven",
+      "ship-fast",
+      "product-impact",
+      "learning",
+      "transparent"
+    ],
+    "pros": [
+      "Exceptional compensation packages including equity that can significantly appreciate",
+      "Rapid skill development and exposure to massive scale and complex technical challenges"
+    ],
+    "cons": [
+      "Work-life balance is frequently compromised by high intensity and always-on culture",
+      "Organizational restructuring and layoffs create job insecurity"
+    ],
+    "careers": "https://www.metacareers.com/",
+    "ai_generated": true,
+    "slug": "meta",
+    "logo": "https://www.google.com/s2/favicons?domain=www.metacareers.com&sz=128"
+  },
+  "netflix": {
+    "name": "Netflix",
+    "size": "Large (~12,000)",
+    "glassdoor": 3.8,
+    "wlb_score": 3.2,
+    "culture_values": 4.2,
+    "comp_benefits": 4.5,
+    "senior_mgmt": 3.6,
+    "career_opps": 3.8,
+    "recommend": 72,
+    "ceo_approval": 82,
+    "ceo_name": "Ted Sarandos",
+    "bestFor": "High-performing engineers and creatives who thrive in a fast-paced, results-oriented environment with exceptional compensation.",
+    "verdict": "Choose Netflix if you want autonomy, impact, and top-tier compensation — but expect intense pressure and a performance-driven culture.",
+    "values": [
+      "eng-driven",
+      "ship-fast",
+      "transparent",
+      "product-impact",
+      "diverse"
+    ],
+    "pros": [
+      "Industry-leading compensation packages with stock options and competitive salaries.",
+      "High autonomy and trust in decision-making with minimal bureaucracy."
+    ],
+    "cons": [
+      "Intense performance expectations and low tolerance for underperformance.",
+      "Work-life balance challenges due to fast-paced, deadline-driven culture."
+    ],
+    "careers": "https://jobs.netflix.com",
+    "ai_generated": true,
+    "slug": "netflix",
+    "logo": "https://www.google.com/s2/favicons?domain=jobs.netflix.com&sz=128"
+  },
+  "openai": {
+    "name": "OpenAI",
+    "size": "Mid (~500)",
+    "glassdoor": 3.8,
+    "wlb_score": 3.2,
+    "culture_values": 4.2,
+    "comp_benefits": 4.1,
+    "senior_mgmt": 3.6,
+    "career_opps": 4,
+    "recommend": 72,
+    "ceo_approval": 75,
+    "ceo_name": "Sam Altman",
+    "bestFor": "Researchers and engineers passionate about advancing artificial general intelligence and pushing the boundaries of AI technology.",
+    "verdict": "Choose OpenAI if you want cutting-edge AI work and significant product impact — but expect intense pressure, occasional instability, and demanding work-life balance.",
+    "values": [
+      "eng-driven",
+      "product-impact",
+      "ethical-ai",
+      "learning",
+      "deep-work",
+      "ship-fast"
+    ],
+    "pros": [
+      "Working on frontier AI models with massive real-world impact",
+      "Strong compensation and equity packages for top talent"
+    ],
+    "cons": [
+      "High-intensity work environment with demanding deadlines and internal organizational changes",
+      "Work-life balance can suffer due to the competitive and fast-paced nature"
+    ],
+    "careers": "https://openai.com/careers",
+    "ai_generated": true,
+    "slug": "openai",
+    "logo": "https://www.google.com/s2/favicons?domain=openai.com&sz=128"
+  },
+  "snowflake": {
+    "name": "Snowflake Inc.",
+    "size": "Large (~5,000)",
+    "glassdoor": 4.1,
+    "wlb_score": 3.7,
+    "culture_values": 4,
+    "comp_benefits": 4.2,
+    "senior_mgmt": 3.8,
+    "career_opps": 3.9,
+    "recommend": 78,
+    "ceo_approval": 82,
+    "ceo_name": "Frank Slootman",
+    "bestFor": "Data engineers and cloud infrastructure professionals seeking competitive compensation and rapid career growth in a high-growth SaaS company.",
+    "verdict": "Choose Snowflake if you want strong compensation and impact in data cloud infrastructure — but expect fast-paced execution and occasional work-life balance trade-offs.",
+    "values": [
+      "eng-driven",
+      "product-impact",
+      "learning",
+      "transparent",
+      "ship-fast"
+    ],
+    "pros": [
+      "Highly competitive salary and equity packages attract top talent",
+      "Clear product impact working on the leading cloud data platform"
+    ],
+    "cons": [
+      "High-pressure, fast-moving environment can create work-life balance challenges",
+      "Large organization has become more bureaucratic as it scales"
+    ],
+    "careers": "https://www.snowflake.com/careers",
+    "ai_generated": true,
+    "slug": "snowflake",
+    "logo": "https://www.google.com/s2/favicons?domain=www.snowflake.com&sz=128"
+  },
+  "uber": {
+    "name": "Uber Technologies, Inc.",
+    "size": "Large (~30,000)",
+    "glassdoor": 3.7,
+    "wlb_score": 3.2,
+    "culture_values": 3.8,
+    "comp_benefits": 4.1,
+    "senior_mgmt": 3.5,
+    "career_opps": 4,
+    "recommend": 72,
+    "ceo_approval": 76,
+    "ceo_name": "Dara Khosrowshahi",
+    "bestFor": "Ambitious engineers and product professionals who thrive in fast-paced, competitive environments and want to work on massive scale problems.",
+    "verdict": "Choose Uber if you want competitive compensation, rapid career growth, and high-impact product work — but expect intense pressure, long hours, and a data-driven, results-oriented culture.",
+    "values": [
+      "eng-driven",
+      "ship-fast",
+      "product-impact",
+      "learning",
+      "diverse"
+    ],
+    "pros": [
+      "Strong compensation and equity packages attract top talent across engineering and product roles",
+      "Massive scale and technical complexity provide excellent learning opportunities for ambitious professionals"
+    ],
+    "cons": [
+      "Work-life balance challenges due to competitive pressure and rapid shipping culture",
+      "Historical concerns about workplace culture and management approaches despite recent improvements"
+    ],
+    "careers": "https://www.uber.com/careers",
+    "ai_generated": true,
+    "slug": "uber",
+    "logo": "https://www.google.com/s2/favicons?domain=www.uber.com&sz=128"
+  },
+  "canva": {
+    "name": "Canva",
+    "size": "Large (~5,000)",
+    "glassdoor": 4.1,
+    "wlb_score": 3.8,
+    "culture_values": 4.2,
+    "comp_benefits": 3.9,
+    "senior_mgmt": 3.8,
+    "career_opps": 4,
+    "recommend": 82,
+    "ceo_approval": 85,
+    "ceo_name": "Melanie Perkins",
+    "bestFor": "Creative professionals and engineers who want to democratize design while working for a rapidly scaling, mission-driven company.",
+    "verdict": "Choose Canva if you want meaningful product impact and strong growth opportunities — but expect a fast-paced, competitive environment with occasional crunch periods.",
+    "values": [
+      "product-impact",
+      "learning",
+      "ship-fast",
+      "diverse",
+      "remote"
+    ],
+    "pros": [
+      "Strong mission to democratize design resonates deeply with employees.",
+      "Competitive compensation with equity packages and stock options."
+    ],
+    "cons": [
+      "Fast-paced environment can lead to burnout during product launches.",
+      "Hierarchy and decision-making speed can slow at scale."
+    ],
+    "careers": "https://www.canva.com/careers",
+    "ai_generated": true,
+    "slug": "canva",
+    "logo": "https://www.google.com/s2/favicons?domain=www.canva.com&sz=128"
+  },
+  "salesforce": {
+    "name": "Salesforce",
+    "size": "Large (~80,000)",
+    "glassdoor": 3.8,
+    "wlb_score": 3.4,
+    "culture_values": 4.1,
+    "comp_benefits": 4,
+    "senior_mgmt": 3.6,
+    "career_opps": 3.9,
+    "recommend": 72,
+    "ceo_approval": 78,
+    "ceo_name": "Marc Benioff",
+    "bestFor": "Purpose-driven professionals seeking enterprise SaaS scale with strong social impact initiatives and comprehensive benefits.",
+    "verdict": "Choose Salesforce if you want established market leadership and social impact alignment — but expect bureaucratic complexity and work-life balance trade-offs at scale.",
+    "values": [
+      "social-impact",
+      "learning",
+      "diverse",
+      "product-impact",
+      "ethical-ai"
+    ],
+    "pros": [
+      "Strong commitment to social impact and 1-1-1 philanthropy model integrated into company mission",
+      "Extensive learning and development opportunities with Trailhead platform available to employees"
+    ],
+    "cons": [
+      "Work-life balance concerns with high workload expectations, particularly during quota cycles",
+      "Large organizational structure can create silos and slow decision-making despite push toward agility"
+    ],
+    "careers": "https://salesforce.wd1.myworkdaycdn.com/en-US/salesforce/careers",
+    "ai_generated": true,
+    "slug": "salesforce",
+    "logo": "https://www.google.com/s2/favicons?domain=salesforce.wd1.myworkdaycdn.com&sz=128"
+  },
+  "github-copilot": {
+    "name": "GitHub Copilot",
+    "size": "Large (~5,000)",
+    "glassdoor": 4.1,
+    "wlb_score": 3.8,
+    "culture_values": 4.2,
+    "comp_benefits": 4,
+    "senior_mgmt": 3.9,
+    "career_opps": 4,
+    "recommend": 82,
+    "ceo_approval": 85,
+    "ceo_name": "Thomas Dohmke",
+    "bestFor": "Engineers who want to build AI-powered developer tools with deep technical impact at scale.",
+    "verdict": "Choose GitHub Copilot if you want to work on cutting-edge AI for developers and remote flexibility — but expect fast-paced iteration and high technical bar.",
+    "values": [
+      "eng-driven",
+      "ship-fast",
+      "learning",
+      "deep-work",
+      "product-impact",
+      "open-source"
+    ],
+    "pros": [
+      "Strong engineering-first culture with autonomy to solve complex problems",
+      "Remote-friendly work environment with flexible hours"
+    ],
+    "cons": [
+      "Rapid pace can create burnout for some team members",
+      "High technical bar may limit mentorship bandwidth"
+    ],
+    "careers": "https://github.com/about/careers",
+    "ai_generated": true,
+    "slug": "github-copilot",
+    "logo": "https://www.google.com/s2/favicons?domain=github.com&sz=128"
+  },
+  "netlify": {
+    "name": "Netlify",
+    "size": "Mid (~500)",
+    "glassdoor": 4.1,
+    "wlb_score": 4,
+    "culture_values": 4.2,
+    "comp_benefits": 3.9,
+    "senior_mgmt": 3.8,
+    "career_opps": 3.7,
+    "recommend": 78,
+    "ceo_approval": 82,
+    "ceo_name": "Matt Biilmann",
+    "bestFor": "Engineers who want to build modern web infrastructure with autonomy and flexible work arrangements.",
+    "verdict": "Choose Netlify if you want remote flexibility, developer-first culture, and impact on web platform — but expect rapid growth challenges and occasional organizational shifts.",
+    "values": [
+      "remote",
+      "async",
+      "eng-driven",
+      "ship-fast",
+      "open-source",
+      "learning"
+    ],
+    "pros": [
+      "Strong remote-first and async culture enabling global collaboration",
+      "Deeply technical engineering leadership with respect for developer experience"
+    ],
+    "cons": [
+      "Rapid scaling has led to occasional communication gaps between teams",
+      "Career progression can be unclear during fast growth phases"
+    ],
+    "careers": "https://www.netlify.com/careers/",
+    "ai_generated": true,
+    "slug": "netlify",
+    "logo": "https://www.google.com/s2/favicons?domain=www.netlify.com&sz=128"
+  },
+  "shopify": {
+    "name": "Shopify Inc.",
+    "size": "Large (~10,000)",
+    "glassdoor": 4.1,
+    "wlb_score": 3.6,
+    "culture_values": 4.2,
+    "comp_benefits": 4,
+    "senior_mgmt": 3.8,
+    "career_opps": 4,
+    "recommend": 78,
+    "ceo_approval": 82,
+    "ceo_name": "Tobias Lütke",
+    "bestFor": "Engineers and makers who want to build commerce infrastructure at scale with flexibility and autonomy.",
+    "verdict": "Choose Shopify if you want remote-first culture, ownership, and fast shipping — but expect high-growth chaos and evolving processes.",
+    "values": [
+      "remote",
+      "ship-fast",
+      "eng-driven",
+      "learning",
+      "transparent",
+      "product-impact"
+    ],
+    "pros": [
+      "Strong remote-first and async-work culture enabling global collaboration",
+      "High autonomy with trust-based management and fewer unnecessary meetings"
+    ],
+    "cons": [
+      "Rapid growth creates organizational churn and shifting priorities",
+      "Work-life balance can suffer during critical product launches or scaling phases"
+    ],
+    "careers": "https://www.shopify.com/careers",
+    "ai_generated": true,
+    "slug": "shopify",
+    "logo": "https://www.google.com/s2/favicons?domain=www.shopify.com&sz=128"
+  },
+  "nvidia": {
+    "name": "NVIDIA Corporation",
+    "size": "Large (~30,000)",
+    "glassdoor": 4.1,
+    "wlb_score": 3.2,
+    "culture_values": 4.3,
+    "comp_benefits": 4.5,
+    "senior_mgmt": 4,
+    "career_opps": 4.2,
+    "recommend": 82,
+    "ceo_approval": 87,
+    "ceo_name": "Jensen Huang",
+    "bestFor": "Engineers and researchers passionate about AI, deep learning, and cutting-edge hardware who thrive in a high-performance, technically rigorous environment.",
+    "verdict": "Choose NVIDIA if you want industry-leading compensation, access to transformative AI technology, and a culture of technical excellence — but expect intense pressure to deliver and limited work-life balance.",
+    "values": [
+      "eng-driven",
+      "learning",
+      "product-impact",
+      "ethical-ai",
+      "equity"
+    ],
+    "pros": [
+      "Exceptional compensation packages including stock equity with significant upside",
+      "At the forefront of AI and GPU innovation with unmatched technical resources"
+    ],
+    "cons": [
+      "High-intensity work environment with demanding performance expectations",
+      "Work-life balance can suffer during critical product cycles and deadlines"
+    ],
+    "careers": "https://www.nvidia.com/en-us/about-nvidia/careers/",
+    "ai_generated": true,
+    "slug": "nvidia",
+    "logo": "https://www.google.com/s2/favicons?domain=www.nvidia.com&sz=128"
+  },
+  "amd": {
+    "name": "AMD",
+    "size": "Large (~25,000)",
+    "glassdoor": 3.9,
+    "wlb_score": 3.6,
+    "culture_values": 3.8,
+    "comp_benefits": 4.1,
+    "senior_mgmt": 3.7,
+    "career_opps": 3.8,
+    "recommend": 76,
+    "ceo_approval": 82,
+    "ceo_name": "Lisa Su",
+    "bestFor": "Engineers passionate about high-performance computing and AI who want to work on cutting-edge semiconductor technology at scale.",
+    "verdict": "Choose AMD if you want strong compensation and technical impact — but expect intense competition pressure and a traditionally hierarchical structure.",
+    "values": [
+      "eng-driven",
+      "product-impact",
+      "learning",
+      "transparent"
+    ],
+    "pros": [
+      "Strong compensation and equity packages for technical roles",
+      "Access to cutting-edge semiconductor and AI technology"
+    ],
+    "cons": [
+      "Work-life balance can suffer during critical product cycles",
+      "Traditional hierarchical structure with slower decision-making"
+    ],
+    "careers": "https://careers.amd.com",
+    "ai_generated": true,
+    "slug": "amd",
+    "logo": "https://www.google.com/s2/favicons?domain=careers.amd.com&sz=128"
+  },
+  "tesla": {
+    "name": "Tesla, Inc.",
+    "size": "Large (~140,000)",
+    "glassdoor": 3.4,
+    "wlb_score": 2.5,
+    "culture_values": 3.8,
+    "comp_benefits": 3.9,
+    "senior_mgmt": 3.2,
+    "career_opps": 3.9,
+    "recommend": 65,
+    "ceo_approval": 72,
+    "ceo_name": "Elon Musk",
+    "bestFor": "Engineers and builders who thrive in high-pressure environments and want to work on cutting-edge technology with direct product impact.",
+    "verdict": "Choose Tesla if you want to work on transformative technology and rapid innovation — but expect intense pressure, long hours, and a demanding culture.",
+    "values": [
+      "eng-driven",
+      "ship-fast",
+      "product-impact",
+      "many-hats"
+    ],
+    "pros": [
+      "Direct impact on revolutionary products like electric vehicles and renewable energy solutions",
+      "Rapid innovation cycles and opportunities to wear multiple hats across teams"
+    ],
+    "cons": [
+      "Notoriously poor work-life balance with frequent long hours and weekend work expectations",
+      "High-stress environment with demanding performance standards and limited psychological safety"
+    ],
+    "careers": "https://www.tesla.com/careers",
+    "ai_generated": true,
+    "slug": "tesla",
+    "logo": "https://www.google.com/s2/favicons?domain=www.tesla.com&sz=128"
+  },
+  "rivian": {
+    "name": "Rivian Automotive, Inc.",
+    "size": "Large (~8,000)",
+    "glassdoor": 3.8,
+    "wlb_score": 3.2,
+    "culture_values": 4.1,
+    "comp_benefits": 3.9,
+    "senior_mgmt": 3.4,
+    "career_opps": 3.9,
+    "recommend": 72,
+    "ceo_approval": 75,
+    "ceo_name": "RJ Scaringe",
+    "bestFor": "Engineers and product teams passionate about building next-generation electric vehicles and sustainable transportation.",
+    "verdict": "Choose Rivian if you want to impact the EV industry and work on cutting-edge automotive tech — but expect intense startup-like pressure despite being larger, evolving management structures, and work-life balance challenges.",
+    "values": [
+      "eng-driven",
+      "product-impact",
+      "learning",
+      "social-impact"
+    ],
+    "pros": [
+      "Mission-driven company transforming electric vehicle industry with strong product vision",
+      "Competitive equity packages and benefits for early employees"
+    ],
+    "cons": [
+      "High-pressure startup environment with demanding timelines despite size",
+      "Inconsistent work-life balance with periods of intense crunch"
+    ],
+    "careers": "https://careers.rivian.com",
+    "ai_generated": true,
+    "slug": "rivian",
+    "logo": "https://www.google.com/s2/favicons?domain=careers.rivian.com&sz=128"
+  },
+  "coinbase": {
+    "name": "Coinbase",
+    "size": "Large (~5,000)",
+    "glassdoor": 3.8,
+    "wlb_score": 3.2,
+    "culture_values": 3.9,
+    "comp_benefits": 4.1,
+    "senior_mgmt": 3.6,
+    "career_opps": 3.7,
+    "recommend": 72,
+    "ceo_approval": 78,
+    "ceo_name": "Brian Armstrong",
+    "bestFor": "Ambitious engineers and product-minded professionals who want to work at the forefront of cryptocurrency and blockchain technology.",
+    "verdict": "Choose Coinbase if you want competitive compensation and rapid product iteration — but expect intense pressure, regulatory complexity, and occasional work-life balance trade-offs.",
+    "values": [
+      "eng-driven",
+      "ship-fast",
+      "product-impact",
+      "remote",
+      "learning"
+    ],
+    "pros": [
+      "Highly competitive compensation packages with equity upside in a high-growth fintech company",
+      "Mission-driven culture focused on financial inclusion and blockchain adoption"
+    ],
+    "cons": [
+      "Intense pressure and high expectations can lead to burnout, particularly during market volatility",
+      "Regulatory uncertainty in crypto industry creates job security concerns"
+    ],
+    "careers": "https://www.coinbase.com/careers",
+    "ai_generated": true,
+    "slug": "coinbase",
+    "logo": "https://www.google.com/s2/favicons?domain=www.coinbase.com&sz=128"
+  },
+  "palantir": {
+    "name": "Palantir Technologies",
+    "size": "Large (~5,000)",
+    "glassdoor": 3.8,
+    "wlb_score": 3,
+    "culture_values": 4.2,
+    "comp_benefits": 4.3,
+    "senior_mgmt": 3.6,
+    "career_opps": 3.9,
+    "recommend": 72,
+    "ceo_approval": 82,
+    "ceo_name": "Alexander Karp",
+    "bestFor": "Exceptional engineers and analysts who want to work on high-impact, classified government and enterprise projects with top-tier compensation.",
+    "verdict": "Choose Palantir if you want significant compensation and cutting-edge data analytics challenges — but expect intense security requirements, demanding work hours, and a mission-focused rather than startup-casual culture.",
+    "values": [
+      "eng-driven",
+      "product-impact",
+      "deep-work",
+      "learning",
+      "ethical-ai"
+    ],
+    "pros": [
+      "Exceptional compensation packages with competitive salaries and equity",
+      "Work on genuinely impactful problems for government and Fortune 500 clients"
+    ],
+    "cons": [
+      "High-pressure environment with demanding work hours and limited work-life balance",
+      "Extensive security clearance processes and classified work can limit flexibility and external discussion"
+    ],
+    "careers": "https://www.palantir.com/careers",
+    "ai_generated": true,
+    "slug": "palantir",
+    "logo": "https://www.google.com/s2/favicons?domain=www.palantir.com&sz=128"
+  },
+  "datadog": {
+    "name": "Datadog",
+    "size": "Large (~5,000)",
+    "glassdoor": 4.1,
+    "wlb_score": 3.6,
+    "culture_values": 4.2,
+    "comp_benefits": 4,
+    "senior_mgmt": 3.8,
+    "career_opps": 3.9,
+    "recommend": 78,
+    "ceo_approval": 82,
+    "ceo_name": "Olivier Pomel",
+    "bestFor": "Engineers who want to build monitoring infrastructure at scale with strong compensation and technical depth.",
+    "verdict": "Choose Datadog if you want a high-growth, engineering-focused company with competitive pay and learning opportunities — but expect rapid scaling challenges and occasional work intensity spikes.",
+    "values": [
+      "eng-driven",
+      "learning",
+      "ship-fast",
+      "product-impact",
+      "transparent"
+    ],
+    "pros": [
+      "Strong engineering culture with deep technical challenges and autonomy",
+      "Competitive compensation and equity packages with consistent growth"
+    ],
+    "cons": [
+      "Rapid growth can create organizational friction and unclear processes",
+      "Work-life balance can suffer during critical releases or scaling initiatives"
+    ],
+    "careers": "https://www.datadoghq.com/careers/",
+    "ai_generated": true,
+    "slug": "datadog",
+    "logo": "https://www.google.com/s2/favicons?domain=www.datadoghq.com&sz=128"
+  },
+  "splunk": {
+    "name": "Splunk Inc.",
+    "size": "Large (~8,000)",
+    "glassdoor": 3.9,
+    "wlb_score": 3.6,
+    "culture_values": 4,
+    "comp_benefits": 4.1,
+    "senior_mgmt": 3.7,
+    "career_opps": 3.8,
+    "recommend": 72,
+    "ceo_approval": 78,
+    "ceo_name": "Gary Steele",
+    "bestFor": "Data-driven engineers and analysts who want to solve complex observability problems at scale with strong compensation.",
+    "verdict": "Choose Splunk if you want eng-driven culture and learning opportunities — but expect rapid growth pains and occasional organizational restructuring.",
+    "values": [
+      "eng-driven",
+      "learning",
+      "product-impact",
+      "transparent",
+      "diverse"
+    ],
+    "pros": [
+      "Strong technical culture with emphasis on solving hard data problems",
+      "Competitive compensation and equity packages"
+    ],
+    "cons": [
+      "Work-life balance can suffer during product launches and quarterly pushes",
+      "Fast growth has led to organizational changes and role ambiguity"
+    ],
+    "careers": "https://www.splunk.com/en_us/careers.html",
+    "ai_generated": true,
+    "slug": "splunk",
+    "logo": "https://www.google.com/s2/favicons?domain=www.splunk.com&sz=128"
+  }
+}

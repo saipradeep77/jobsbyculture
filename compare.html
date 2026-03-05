@@ -433,6 +433,50 @@
         .cmp-btn-outline { background: transparent; color: var(--text); border-color: var(--border-2); }
         .cmp-btn-outline:hover { border-color: var(--text); transform: translateY(-2px); }
 
+        /* POPULAR COMPARISONS GRID */
+        .cmp-popular { padding: 60px 0 80px; }
+        .cmp-popular h2 {
+            font-family: var(--font-display); font-size: 32px; font-weight: 400;
+            text-align: center; margin-bottom: 8px;
+        }
+        .cmp-popular h2 em { font-style: italic; color: var(--accent); }
+        .cmp-popular-sub {
+            text-align: center; font-size: 15px; color: var(--text-2);
+            margin-bottom: 32px;
+        }
+        .cmp-popular-grid {
+            display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 16px;
+        }
+        .cmp-popular-card {
+            display: flex; align-items: center; gap: 12px;
+            padding: 16px 20px; background: var(--bg-card);
+            border: 1px solid var(--border); border-radius: var(--radius);
+            text-decoration: none; color: var(--text);
+            transition: all 0.2s;
+        }
+        .cmp-popular-card:hover {
+            border-color: var(--accent-border); background: var(--accent-bg);
+            transform: translateY(-2px); box-shadow: var(--shadow);
+        }
+        .cmp-popular-logos { display: flex; align-items: center; flex-shrink: 0; }
+        .cmp-popular-logos img {
+            width: 28px; height: 28px; border-radius: 6px;
+            border: 2px solid var(--bg-card);
+        }
+        .cmp-popular-logos img:last-child { margin-left: -8px; }
+        .cmp-popular-names { font-size: 14px; font-weight: 600; }
+        .cmp-popular-vs { color: var(--text-3); font-weight: 400; margin: 0 4px; }
+
+        /* DD free-text item */
+        .cmp-dd-item.free-text {
+            border-top: 1px solid var(--border);
+            margin-top: 4px; padding-top: 12px;
+            color: var(--accent); font-style: italic;
+        }
+        .cmp-dd-item.clearbit-item { opacity: 0.85; }
+        .cmp-dd-item.clearbit-item img { border-radius: 50%; }
+
         /* FOOTER */
         footer { padding: 56px 0 36px; border-top: 1px solid var(--border); }
         .ft-bar { display: flex; justify-content: space-between; align-items: center; font-size: 12px; color: var(--text-3); }
@@ -566,6 +610,15 @@
     </div>
 </div>
 
+<!-- POPULAR COMPARISONS -->
+<section class="cmp-popular">
+    <div class="container">
+        <h2>Popular <em>comparisons</em></h2>
+        <p class="cmp-popular-sub">Pre-built culture comparisons for the most-searched company matchups</p>
+        <div class="cmp-popular-grid" id="popularGrid"></div>
+    </div>
+</section>
+
 <!-- FOOTER -->
 <footer>
     <div class="container">
@@ -583,6 +636,201 @@
 </footer>
 
 <script>
+// ═══ AUTOCOMPLETE LIST (~200 companies) ═══
+const AUTOCOMPLETE_LIST = [
+    // Our 19 profiled companies
+    { name: 'Anthropic', domain: 'anthropic.com', slug: 'anthropic' },
+    { name: 'Hugging Face', domain: 'huggingface.co', slug: 'huggingface' },
+    { name: 'Databricks', domain: 'databricks.com', slug: 'databricks' },
+    { name: 'Cohere', domain: 'cohere.com', slug: 'cohere' },
+    { name: 'Mistral AI', domain: 'mistral.ai', slug: 'mistral' },
+    { name: 'HubSpot', domain: 'hubspot.com', slug: 'hubspot' },
+    { name: 'Vercel', domain: 'vercel.com', slug: 'vercel' },
+    { name: 'Stripe', domain: 'stripe.com', slug: 'stripe' },
+    { name: 'Perplexity AI', domain: 'perplexity.ai', slug: 'perplexity' },
+    { name: 'Together AI', domain: 'together.ai', slug: 'together' },
+    { name: 'Cursor (Anysphere)', domain: 'cursor.com', slug: 'cursor' },
+    { name: 'Linear', domain: 'linear.app', slug: 'linear' },
+    { name: 'Scale AI', domain: 'scale.com', slug: 'scale' },
+    { name: 'CoreWeave', domain: 'coreweave.com', slug: 'coreweave' },
+    { name: 'Runway', domain: 'runwayml.com', slug: 'runway' },
+    { name: 'Vast AI', domain: 'vast.ai', slug: 'vast' },
+    { name: 'Apollo.io', domain: 'apollo.io', slug: 'apollo' },
+    { name: 'Airbnb', domain: 'airbnb.com', slug: 'airbnb' },
+    { name: 'Figma', domain: 'figma.com', slug: 'figma' },
+    // FAANG / Big Tech
+    { name: 'Google', domain: 'google.com', slug: 'google' },
+    { name: 'Amazon', domain: 'amazon.com', slug: 'amazon' },
+    { name: 'Apple', domain: 'apple.com', slug: 'apple' },
+    { name: 'Microsoft', domain: 'microsoft.com', slug: 'microsoft' },
+    { name: 'Meta', domain: 'meta.com', slug: 'meta' },
+    { name: 'Netflix', domain: 'netflix.com', slug: 'netflix' },
+    { name: 'NVIDIA', domain: 'nvidia.com', slug: 'nvidia' },
+    { name: 'Intel', domain: 'intel.com', slug: 'intel' },
+    { name: 'AMD', domain: 'amd.com', slug: 'amd' },
+    { name: 'IBM', domain: 'ibm.com', slug: 'ibm' },
+    { name: 'Oracle', domain: 'oracle.com', slug: 'oracle' },
+    { name: 'Adobe', domain: 'adobe.com', slug: 'adobe' },
+    { name: 'Salesforce', domain: 'salesforce.com', slug: 'salesforce' },
+    // Hot AI
+    { name: 'OpenAI', domain: 'openai.com', slug: 'openai' },
+    { name: 'DeepMind', domain: 'deepmind.com', slug: 'deepmind' },
+    { name: 'Midjourney', domain: 'midjourney.com', slug: 'midjourney' },
+    { name: 'Stability AI', domain: 'stability.ai', slug: 'stability-ai' },
+    { name: 'xAI', domain: 'x.ai', slug: 'xai' },
+    { name: 'Inflection', domain: 'inflection.ai', slug: 'inflection' },
+    // Top Tech
+    { name: 'Uber', domain: 'uber.com', slug: 'uber' },
+    { name: 'Lyft', domain: 'lyft.com', slug: 'lyft' },
+    { name: 'DoorDash', domain: 'doordash.com', slug: 'doordash' },
+    { name: 'Snap', domain: 'snap.com', slug: 'snap' },
+    { name: 'Pinterest', domain: 'pinterest.com', slug: 'pinterest' },
+    { name: 'Reddit', domain: 'reddit.com', slug: 'reddit' },
+    { name: 'Discord', domain: 'discord.com', slug: 'discord' },
+    { name: 'Spotify', domain: 'spotify.com', slug: 'spotify' },
+    { name: 'Shopify', domain: 'shopify.com', slug: 'shopify' },
+    { name: 'Snowflake', domain: 'snowflake.com', slug: 'snowflake' },
+    { name: 'Datadog', domain: 'datadoghq.com', slug: 'datadog' },
+    { name: 'Palantir', domain: 'palantir.com', slug: 'palantir' },
+    { name: 'Cloudflare', domain: 'cloudflare.com', slug: 'cloudflare' },
+    { name: 'MongoDB', domain: 'mongodb.com', slug: 'mongodb' },
+    { name: 'GitLab', domain: 'gitlab.com', slug: 'gitlab' },
+    { name: 'GitHub', domain: 'github.com', slug: 'github' },
+    { name: 'Atlassian', domain: 'atlassian.com', slug: 'atlassian' },
+    { name: 'Notion', domain: 'notion.so', slug: 'notion' },
+    { name: 'Canva', domain: 'canva.com', slug: 'canva' },
+    { name: 'Netlify', domain: 'netlify.com', slug: 'netlify' },
+    { name: 'Supabase', domain: 'supabase.com', slug: 'supabase' },
+    { name: 'Tesla', domain: 'tesla.com', slug: 'tesla' },
+    { name: 'Rivian', domain: 'rivian.com', slug: 'rivian' },
+    { name: 'Splunk', domain: 'splunk.com', slug: 'splunk' },
+    // Fintech
+    { name: 'JPMorgan', domain: 'jpmorgan.com', slug: 'jpmorgan' },
+    { name: 'Goldman Sachs', domain: 'goldmansachs.com', slug: 'goldman-sachs' },
+    { name: 'Robinhood', domain: 'robinhood.com', slug: 'robinhood' },
+    { name: 'Plaid', domain: 'plaid.com', slug: 'plaid' },
+    { name: 'Coinbase', domain: 'coinbase.com', slug: 'coinbase' },
+    { name: 'Block', domain: 'block.xyz', slug: 'block' },
+    { name: 'Affirm', domain: 'affirm.com', slug: 'affirm' },
+    { name: 'Brex', domain: 'brex.com', slug: 'brex' },
+    { name: 'Ramp', domain: 'ramp.com', slug: 'ramp' },
+    // More top employers
+    { name: 'Twitter / X', domain: 'x.com', slug: 'twitter' },
+    { name: 'Twitch', domain: 'twitch.tv', slug: 'twitch' },
+    { name: 'Slack', domain: 'slack.com', slug: 'slack' },
+    { name: 'Zoom', domain: 'zoom.us', slug: 'zoom' },
+    { name: 'Dropbox', domain: 'dropbox.com', slug: 'dropbox' },
+    { name: 'Asana', domain: 'asana.com', slug: 'asana' },
+    { name: 'Monday.com', domain: 'monday.com', slug: 'monday' },
+    { name: 'Airtable', domain: 'airtable.com', slug: 'airtable' },
+    { name: 'Elastic', domain: 'elastic.co', slug: 'elastic' },
+    { name: 'HashiCorp', domain: 'hashicorp.com', slug: 'hashicorp' },
+    { name: 'Confluent', domain: 'confluent.io', slug: 'confluent' },
+    { name: 'Twilio', domain: 'twilio.com', slug: 'twilio' },
+    { name: 'Okta', domain: 'okta.com', slug: 'okta' },
+    { name: 'CrowdStrike', domain: 'crowdstrike.com', slug: 'crowdstrike' },
+    { name: 'Palo Alto Networks', domain: 'paloaltonetworks.com', slug: 'palo-alto-networks' },
+    { name: 'Zscaler', domain: 'zscaler.com', slug: 'zscaler' },
+    { name: 'ServiceNow', domain: 'servicenow.com', slug: 'servicenow' },
+    { name: 'Workday', domain: 'workday.com', slug: 'workday' },
+    { name: 'Intuit', domain: 'intuit.com', slug: 'intuit' },
+    { name: 'PayPal', domain: 'paypal.com', slug: 'paypal' },
+    { name: 'Square', domain: 'squareup.com', slug: 'square' },
+    { name: 'Instacart', domain: 'instacart.com', slug: 'instacart' },
+    { name: 'Grammarly', domain: 'grammarly.com', slug: 'grammarly' },
+    { name: 'Loom', domain: 'loom.com', slug: 'loom' },
+    { name: 'Retool', domain: 'retool.com', slug: 'retool' },
+    { name: 'Anduril', domain: 'anduril.com', slug: 'anduril' },
+    { name: 'SpaceX', domain: 'spacex.com', slug: 'spacex' },
+    { name: 'Waymo', domain: 'waymo.com', slug: 'waymo' },
+    { name: 'Cruise', domain: 'getcruise.com', slug: 'cruise' },
+    { name: 'Epic Games', domain: 'epicgames.com', slug: 'epic-games' },
+    { name: 'Unity', domain: 'unity.com', slug: 'unity' },
+    { name: 'Roblox', domain: 'roblox.com', slug: 'roblox' },
+    { name: 'Duolingo', domain: 'duolingo.com', slug: 'duolingo' },
+    { name: 'Wiz', domain: 'wiz.io', slug: 'wiz' },
+    { name: 'Rippling', domain: 'rippling.com', slug: 'rippling' },
+    { name: 'Gusto', domain: 'gusto.com', slug: 'gusto' },
+    { name: 'Deel', domain: 'deel.com', slug: 'deel' },
+    { name: 'Flexport', domain: 'flexport.com', slug: 'flexport' },
+    { name: 'Vanta', domain: 'vanta.com', slug: 'vanta' },
+    { name: 'Navan', domain: 'navan.com', slug: 'navan' },
+    { name: 'Celonis', domain: 'celonis.com', slug: 'celonis' },
+    { name: 'Miro', domain: 'miro.com', slug: 'miro' },
+    { name: 'ClickUp', domain: 'clickup.com', slug: 'clickup' },
+    { name: 'Calendly', domain: 'calendly.com', slug: 'calendly' },
+    { name: 'Webflow', domain: 'webflow.com', slug: 'webflow' },
+    { name: 'Dbt Labs', domain: 'getdbt.com', slug: 'dbt-labs' },
+    { name: 'Fivetran', domain: 'fivetran.com', slug: 'fivetran' },
+    { name: 'Census', domain: 'getcensus.com', slug: 'census' },
+    { name: 'Verbit', domain: 'verbit.ai', slug: 'verbit' },
+    { name: 'Samsara', domain: 'samsara.com', slug: 'samsara' },
+    { name: 'GitPod', domain: 'gitpod.io', slug: 'gitpod' },
+    { name: 'Replit', domain: 'replit.com', slug: 'replit' },
+    { name: 'Sourcegraph', domain: 'sourcegraph.com', slug: 'sourcegraph' },
+    { name: 'Cockroach Labs', domain: 'cockroachlabs.com', slug: 'cockroach-labs' },
+    { name: 'PlanetScale', domain: 'planetscale.com', slug: 'planetscale' },
+    { name: 'Neon', domain: 'neon.tech', slug: 'neon' },
+    { name: 'Temporal', domain: 'temporal.io', slug: 'temporal' },
+    { name: 'LaunchDarkly', domain: 'launchdarkly.com', slug: 'launchdarkly' },
+    { name: 'PostHog', domain: 'posthog.com', slug: 'posthog' },
+    { name: 'Amplitude', domain: 'amplitude.com', slug: 'amplitude' },
+    { name: 'Segment', domain: 'segment.com', slug: 'segment' },
+    { name: 'Mixpanel', domain: 'mixpanel.com', slug: 'mixpanel' },
+    { name: 'Heap', domain: 'heap.io', slug: 'heap' },
+    { name: 'Grafana Labs', domain: 'grafana.com', slug: 'grafana-labs' },
+    { name: 'Kong', domain: 'konghq.com', slug: 'kong' },
+    { name: 'Snyk', domain: 'snyk.io', slug: 'snyk' },
+    { name: 'SonarSource', domain: 'sonarsource.com', slug: 'sonarsource' },
+    { name: 'JFrog', domain: 'jfrog.com', slug: 'jfrog' },
+    { name: 'CircleCI', domain: 'circleci.com', slug: 'circleci' },
+    { name: 'Buildkite', domain: 'buildkite.com', slug: 'buildkite' },
+    { name: 'Render', domain: 'render.com', slug: 'render' },
+    { name: 'Railway', domain: 'railway.app', slug: 'railway' },
+    { name: 'Fly.io', domain: 'fly.io', slug: 'fly-io' },
+    { name: 'Hetzner', domain: 'hetzner.com', slug: 'hetzner' },
+    { name: 'DigitalOcean', domain: 'digitalocean.com', slug: 'digitalocean' },
+    { name: 'Linode', domain: 'linode.com', slug: 'linode' },
+    { name: 'Fastly', domain: 'fastly.com', slug: 'fastly' },
+    { name: 'Deno', domain: 'deno.com', slug: 'deno' },
+    { name: 'Bun', domain: 'bun.sh', slug: 'bun' },
+    { name: 'Prisma', domain: 'prisma.io', slug: 'prisma' },
+    { name: 'Hasura', domain: 'hasura.io', slug: 'hasura' },
+    { name: 'Sanity', domain: 'sanity.io', slug: 'sanity' },
+    { name: 'Contentful', domain: 'contentful.com', slug: 'contentful' },
+    { name: 'Stytch', domain: 'stytch.com', slug: 'stytch' },
+    { name: 'Auth0', domain: 'auth0.com', slug: 'auth0' },
+    { name: 'Clerk', domain: 'clerk.com', slug: 'clerk' },
+    { name: 'Sentry', domain: 'sentry.io', slug: 'sentry' },
+    { name: 'Weights & Biases', domain: 'wandb.ai', slug: 'weights-and-biases' },
+    { name: 'LangChain', domain: 'langchain.com', slug: 'langchain' },
+    { name: 'Pinecone', domain: 'pinecone.io', slug: 'pinecone' },
+    { name: 'Weaviate', domain: 'weaviate.io', slug: 'weaviate' },
+    { name: 'Qdrant', domain: 'qdrant.tech', slug: 'qdrant' },
+    { name: 'Comet', domain: 'comet.com', slug: 'comet' },
+    { name: 'Labelbox', domain: 'labelbox.com', slug: 'labelbox' },
+    { name: 'Roboflow', domain: 'roboflow.com', slug: 'roboflow' },
+    { name: 'Character.ai', domain: 'character.ai', slug: 'character-ai' },
+    { name: 'Jasper', domain: 'jasper.ai', slug: 'jasper' },
+    { name: 'Copy.ai', domain: 'copy.ai', slug: 'copy-ai' },
+    { name: 'Moveworks', domain: 'moveworks.com', slug: 'moveworks' },
+    { name: 'Adept AI', domain: 'adept.ai', slug: 'adept-ai' },
+    { name: 'Covariant', domain: 'covariant.ai', slug: 'covariant' },
+    { name: 'Mosaic ML', domain: 'mosaicml.com', slug: 'mosaic-ml' },
+    { name: 'Lightning AI', domain: 'lightning.ai', slug: 'lightning-ai' },
+    { name: 'Modal', domain: 'modal.com', slug: 'modal' },
+    { name: 'Baseten', domain: 'baseten.co', slug: 'baseten' },
+    { name: 'Replicate', domain: 'replicate.com', slug: 'replicate' },
+    { name: 'Groq', domain: 'groq.com', slug: 'groq' },
+    { name: 'Cerebras', domain: 'cerebras.net', slug: 'cerebras' },
+    { name: 'SambaNova', domain: 'sambanova.ai', slug: 'sambanova' },
+    { name: 'Mythic', domain: 'mythic.ai', slug: 'mythic' },
+    { name: 'GitHub Copilot', domain: 'github.com', slug: 'github-copilot' },
+];
+
+// Build a quick-lookup set by slug for our 19 on-site companies
+const ONSITE_SLUGS = new Set(Object.keys({})); // populated below after COMPANIES defined
+
 // ═══ DATA ═══
 const VALUES = {
     'wlb':          { ico: '\u2696\uFE0F', name: 'Work-Life Balance', color: 'teal' },
@@ -668,13 +916,43 @@ const CRC = {"airbnb":{"sales":10,"marketing":11,"data":17,"support":36,"legal":
 
 // ═══ DROPDOWN LOGIC ═══
 var slugList = Object.keys(COMPANIES);
+// Populate ONSITE_SLUGS
+slugList.forEach(function(s) { ONSITE_SLUGS.add(s); });
+
+// Debounce helper
+function debounce(fn, ms) {
+    var timer;
+    return function() {
+        var args = arguments, ctx = this;
+        clearTimeout(timer);
+        timer = setTimeout(function() { fn.apply(ctx, args); }, ms);
+    };
+}
+
+// Clearbit Autocomplete API
+var clearbitCache = {};
+function fetchClearbit(query, callback) {
+    if (clearbitCache[query]) { callback(clearbitCache[query]); return; }
+    fetch('https://autocomplete.clearbit.com/v1/companies/suggest?query=' + encodeURIComponent(query))
+        .then(function(r) { return r.json(); })
+        .then(function(results) {
+            var mapped = (results || []).map(function(r) {
+                return { name: r.name, domain: r.domain, logo: r.logo, slug: r.name.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '') };
+            });
+            clearbitCache[query] = mapped;
+            callback(mapped);
+        })
+        .catch(function() { callback([]); });
+}
 
 function buildDropdown(inputId, dropId, side) {
     var input = document.getElementById(inputId);
     var drop = document.getElementById(dropId);
 
-    input.addEventListener('focus', function() { updateDropdown(input, drop); });
-    input.addEventListener('input', function() { updateDropdown(input, drop); updateGoBtn(); });
+    var debouncedClearbit = debounce(function(q, cb) { fetchClearbit(q, cb); }, 300);
+
+    input.addEventListener('focus', function() { updateDropdown(input, drop, debouncedClearbit); });
+    input.addEventListener('input', function() { updateDropdown(input, drop, debouncedClearbit); updateGoBtn(); });
     document.addEventListener('click', function(e) {
         if (!e.target.closest('#wrap' + side.toUpperCase())) {
             drop.classList.remove('open');
@@ -682,21 +960,64 @@ function buildDropdown(inputId, dropId, side) {
     });
 }
 
-function updateDropdown(input, drop) {
+function updateDropdown(input, drop, debouncedClearbit) {
     var q = input.value.trim().toLowerCase();
-    var html = '';
-    var matches = slugList.filter(function(s) {
-        var c = COMPANIES[s];
-        return c.name.toLowerCase().indexOf(q) !== -1 || s.indexOf(q) !== -1;
+
+    // 1. Filter static AUTOCOMPLETE_LIST (includes our 19 + ~180 more)
+    var staticMatches = AUTOCOMPLETE_LIST.filter(function(item) {
+        return item.name.toLowerCase().indexOf(q) !== -1 || item.slug.indexOf(q) !== -1 || item.domain.indexOf(q) !== -1;
     });
 
-    matches.forEach(function(slug) {
-        var c = COMPANIES[slug];
-        html += '<div class="cmp-dd-item" data-slug="' + slug + '">' +
-            '<img src="' + c.logo + '" alt="' + c.name + '">' +
-            '<span>' + c.name + '</span>' +
+    // Render what we have now
+    renderDropdownItems(drop, input, staticMatches, [], q);
+
+    // 2. If < 5 static matches and query >= 3 chars, call Clearbit for broader results
+    if (staticMatches.length < 5 && q.length >= 3 && debouncedClearbit) {
+        debouncedClearbit(q, function(clearbitResults) {
+            // Only update if input still matches this query
+            if (input.value.trim().toLowerCase() !== q) return;
+            // Deduplicate by domain
+            var seenDomains = new Set(staticMatches.map(function(m) { return m.domain; }));
+            var filtered = clearbitResults.filter(function(r) {
+                if (seenDomains.has(r.domain)) return false;
+                seenDomains.add(r.domain);
+                return true;
+            });
+            renderDropdownItems(drop, input, staticMatches, filtered, q);
+        });
+    }
+}
+
+function renderDropdownItems(drop, input, staticMatches, clearbitMatches, q) {
+    var html = '';
+
+    // Static matches first (with favicons)
+    staticMatches.slice(0, 8).forEach(function(item) {
+        var isOnsite = COMPANIES[item.slug];
+        var logo = isOnsite ? COMPANIES[item.slug].logo : 'https://www.google.com/s2/favicons?domain=' + item.domain + '&sz=128';
+        html += '<div class="cmp-dd-item" data-name="' + escHtml(item.name) + '" data-slug="' + item.slug + '">' +
+            '<img src="' + logo + '" alt="' + escHtml(item.name) + '">' +
+            '<span>' + escHtml(item.name) + '</span>' +
+            (isOnsite ? '' : '<span style="font-size:11px;color:var(--text-3);margin-left:auto">AI</span>') +
             '</div>';
     });
+
+    // Clearbit matches
+    clearbitMatches.slice(0, 4).forEach(function(item) {
+        html += '<div class="cmp-dd-item clearbit-item" data-name="' + escHtml(item.name) + '" data-slug="' + item.slug + '">' +
+            '<img src="' + (item.logo || 'https://www.google.com/s2/favicons?domain=' + item.domain + '&sz=128') + '" alt="' + escHtml(item.name) + '">' +
+            '<span>' + escHtml(item.name) + '</span>' +
+            '<span style="font-size:11px;color:var(--text-3);margin-left:auto">AI</span>' +
+            '</div>';
+    });
+
+    // Always show free-text option if query has text
+    if (q.length >= 2) {
+        var typed = input.value.trim();
+        html += '<div class="cmp-dd-item free-text" data-name="' + escHtml(typed) + '" data-slug="">' +
+            '<span>\uD83D\uDD0D Compare "' + escHtml(typed) + '"</span>' +
+            '</div>';
+    }
 
     drop.innerHTML = html;
     drop.classList.toggle('open', html.length > 0);
@@ -704,8 +1025,7 @@ function updateDropdown(input, drop) {
     // Attach click handlers
     drop.querySelectorAll('.cmp-dd-item').forEach(function(item) {
         item.addEventListener('click', function() {
-            var slug = item.getAttribute('data-slug');
-            input.value = COMPANIES[slug].name;
+            input.value = item.getAttribute('data-name');
             drop.classList.remove('open');
             updateGoBtn();
         });
@@ -1058,6 +1378,45 @@ function renderCTAs(a, b) {
     }
     document.getElementById('ctaSection').innerHTML = ctaCol(a, false) + ctaCol(b, true);
 }
+
+// ═══ POPULAR COMPARISONS GRID ═══
+(function() {
+    var pairs = [
+        ['anthropic','openai'], ['google','amazon'], ['google','microsoft'],
+        ['anthropic','google'], ['stripe','google'], ['databricks','snowflake'],
+        ['airbnb','uber'], ['figma','canva'], ['hubspot','salesforce'],
+        ['openai','meta'], ['nvidia','amd'], ['perplexity','openai'],
+        ['cursor','github-copilot'], ['vercel','netlify'], ['stripe','shopify'],
+        ['anthropic','meta'], ['openai','google'], ['coinbase','stripe'],
+        ['palantir','databricks'], ['anthropic','cohere'], ['linear','figma'],
+        ['netflix','google'], ['tesla','rivian'], ['datadog','splunk'],
+    ];
+    var grid = document.getElementById('popularGrid');
+    if (!grid) return;
+    var html = '';
+    pairs.forEach(function(pair) {
+        var a = pair[0], b = pair[1];
+        // Look up display names from AUTOCOMPLETE_LIST or COMPANIES
+        var infoA = COMPANIES[a] || AUTOCOMPLETE_LIST.find(function(x) { return x.slug === a; });
+        var infoB = COMPANIES[b] || AUTOCOMPLETE_LIST.find(function(x) { return x.slug === b; });
+        var nameA = infoA ? (infoA.name || a) : a;
+        var nameB = infoB ? (infoB.name || b) : b;
+        var domainA = infoA ? (infoA.domain || a + '.com') : a + '.com';
+        var domainB = infoB ? (infoB.domain || b + '.com') : b + '.com';
+        var logoA = COMPANIES[a] ? COMPANIES[a].logo : 'https://www.google.com/s2/favicons?domain=' + domainA + '&sz=128';
+        var logoB = COMPANIES[b] ? COMPANIES[b].logo : 'https://www.google.com/s2/favicons?domain=' + domainB + '&sz=128';
+        // Link to SEO page if it exists, otherwise use query params
+        var href = '/compare/' + a + '-vs-' + b;
+        html += '<a class="cmp-popular-card" href="' + href + '">' +
+            '<div class="cmp-popular-logos">' +
+            '<img src="' + logoA + '" alt="' + escHtml(nameA) + '">' +
+            '<img src="' + logoB + '" alt="' + escHtml(nameB) + '">' +
+            '</div>' +
+            '<span class="cmp-popular-names">' + escHtml(nameA) + '<span class="cmp-popular-vs">vs</span>' + escHtml(nameB) + '</span>' +
+            '</a>';
+    });
+    grid.innerHTML = html;
+})();
 
 // ═══ URL PARAMS — AUTO COMPARE ═══
 (function() {

@@ -2,6 +2,9 @@
   "name": "jobsbyculture",
   "private": true,
   "type": "module",
+  "scripts": {
+    "build:compare": "node scripts/build-compare-pages.js"
+  },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.39.0"
   }
