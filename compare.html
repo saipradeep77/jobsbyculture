@@ -965,10 +965,18 @@ function updateDropdown(input, drop, debouncedClearbit) {
     // Don't show dropdown until user types something
     if (q.length === 0) { drop.classList.remove('open'); return; }
 
-    // 1. Filter static AUTOCOMPLETE_LIST (includes our 19 + ~180 more)
-    var staticMatches = AUTOCOMPLETE_LIST.filter(function(item) {
-        return item.name.toLowerCase().indexOf(q) !== -1 || item.slug.indexOf(q) !== -1 || item.domain.indexOf(q) !== -1;
+    // 1. Filter static AUTOCOMPLETE_LIST — prioritize names starting with query
+    var startsWithMatches = [];
+    var containsMatches = [];
+    AUTOCOMPLETE_LIST.forEach(function(item) {
+        var nameLower = item.name.toLowerCase();
+        if (nameLower.indexOf(q) === 0) {
+            startsWithMatches.push(item);
+        } else if (nameLower.indexOf(q) !== -1 || item.slug.indexOf(q) === 0 || item.domain.indexOf(q) === 0) {
+            containsMatches.push(item);
+        }
     });
+    var staticMatches = startsWithMatches.concat(containsMatches);
 
     // Render what we have now
     renderDropdownItems(drop, input, staticMatches, [], q);
