@@ -143,6 +143,6 @@ export default async function handler(req, res) {
     return res.status(200).json(result);
   } catch (err) {
     console.error('Compare API error:', err);
-    return res.status(500).json({ error: 'Failed to analyze company cultures. Please try again.' });
+    return res.status(500).json({ error: 'Failed to analyze company cultures. Please try again.', debug: err.message });
   }
 }
