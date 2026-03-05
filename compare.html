@@ -1334,7 +1334,9 @@ function renderJobs(a, b) {
     jobsWrapper.style.display = '';
 
     function jobCard(co) {
-        if (co.ai_generated) return '';
+        if (co.ai_generated) {
+            return '<div class="cmp-jobs-card"><h3>' + escHtml(co.name) + '</h3><div class="cmp-na-msg">Role data not available for this company</div></div>';
+        }
 
         var rc = co.roleCounts || {};
         var hasRoles = Object.keys(rc).length > 0;
