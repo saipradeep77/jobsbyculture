@@ -868,7 +868,17 @@ function renderProsCons(a, b) {
 }
 
 function renderJobs(a, b) {
+    // Hide entire section if both are AI-generated
+    var jobsWrapper = document.getElementById('jobsSection').closest('.cmp-jobs-section');
+    if (a.ai_generated && b.ai_generated) {
+        jobsWrapper.style.display = 'none';
+        return;
+    }
+    jobsWrapper.style.display = '';
+
     function jobCard(co) {
+        if (co.ai_generated) return '';
+
         var rc = co.roleCounts || {};
         var hasRoles = Object.keys(rc).length > 0;
         var total = 0;
@@ -878,7 +888,7 @@ function renderJobs(a, b) {
         html += '<h3>' + escHtml(co.name) + (hasRoles ? ' \u2014 ' + total + ' jobs' : '') + '</h3>';
 
         if (!hasRoles) {
-            html += '<div class="cmp-na-msg">' + (co.ai_generated ? 'Job counts not available for AI-analyzed companies' : 'No open roles currently listed') + '</div>';
+            html += '<div class="cmp-na-msg">No open roles currently listed</div>';
             html += '</div>';
             return html;
         }
