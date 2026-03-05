@@ -951,7 +951,6 @@ function buildDropdown(inputId, dropId, side) {
 
     var debouncedClearbit = debounce(function(q, cb) { fetchClearbit(q, cb); }, 300);
 
-    input.addEventListener('focus', function() { updateDropdown(input, drop, debouncedClearbit); });
     input.addEventListener('input', function() { updateDropdown(input, drop, debouncedClearbit); updateGoBtn(); });
     document.addEventListener('click', function(e) {
         if (!e.target.closest('#wrap' + side.toUpperCase())) {
@@ -962,6 +961,9 @@ function buildDropdown(inputId, dropId, side) {
 
 function updateDropdown(input, drop, debouncedClearbit) {
     var q = input.value.trim().toLowerCase();
+
+    // Don't show dropdown until user types something
+    if (q.length === 0) { drop.classList.remove('open'); return; }
 
     // 1. Filter static AUTOCOMPLETE_LIST (includes our 19 + ~180 more)
     var staticMatches = AUTOCOMPLETE_LIST.filter(function(item) {
@@ -998,7 +1000,6 @@ function renderDropdownItems(drop, input, staticMatches, clearbitMatches, q) {
         html += '<div class="cmp-dd-item" data-name="' + escHtml(item.name) + '" data-slug="' + item.slug + '">' +
             '<img src="' + logo + '" alt="' + escHtml(item.name) + '">' +
             '<span>' + escHtml(item.name) + '</span>' +
-            (isOnsite ? '' : '<span style="font-size:11px;color:var(--text-3);margin-left:auto">AI</span>') +
             '</div>';
     });
 
@@ -1007,7 +1008,6 @@ function renderDropdownItems(drop, input, staticMatches, clearbitMatches, q) {
         html += '<div class="cmp-dd-item clearbit-item" data-name="' + escHtml(item.name) + '" data-slug="' + item.slug + '">' +
             '<img src="' + (item.logo || 'https://www.google.com/s2/favicons?domain=' + item.domain + '&sz=128') + '" alt="' + escHtml(item.name) + '">' +
             '<span>' + escHtml(item.name) + '</span>' +
-            '<span style="font-size:11px;color:var(--text-3);margin-left:auto">AI</span>' +
             '</div>';
     });
 
