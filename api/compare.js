@@ -89,6 +89,12 @@ Return ONLY valid JSON, no markdown, no explanation:
   data.ai_generated = true;
   data.logo = `https://www.google.com/s2/favicons?domain=${encodeURIComponent(data.careers?.replace(/https?:\/\/([^/]+).*/, '$1') || name.toLowerCase().replace(/\s+/g, '') + '.com')}&sz=128`;
 
+  // Append ref param to careers URL
+  if (data.careers) {
+    const sep = data.careers.includes('?') ? '&' : '?';
+    data.careers = data.careers + sep + 'ref=jobsbyculture.com';
+  }
+
   return data;
 }
 
