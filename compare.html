@@ -360,6 +360,61 @@
         }
         .cmp-na-msg { font-size: 14px; color: var(--text-3); font-style: italic; padding: 20px 0; }
 
+        /* BEST FOR */
+        .cmp-bestfor {
+            display: grid; grid-template-columns: 1fr 1fr; gap: 24px;
+            margin-bottom: 48px;
+        }
+        .cmp-bestfor-card {
+            background: var(--bg-card); border: 1px solid var(--border);
+            border-radius: var(--radius-lg); padding: 24px 28px;
+        }
+        .cmp-bestfor-card .cmp-bestfor-label {
+            font-size: 11px; font-weight: 700; text-transform: uppercase;
+            letter-spacing: 0.1em; color: var(--text-3); margin-bottom: 8px;
+        }
+        .cmp-bestfor-card .cmp-bestfor-text {
+            font-size: 15px; line-height: 1.6; color: var(--text);
+        }
+        .cmp-bestfor-card.a .cmp-bestfor-label { color: var(--accent); }
+        .cmp-bestfor-card.b .cmp-bestfor-label { color: var(--teal); }
+
+        /* APPROVAL ROW */
+        .cmp-approval-row {
+            display: flex; align-items: center; justify-content: space-between;
+            gap: 16px; margin-top: 24px; padding-top: 24px;
+            border-top: 1px solid var(--border);
+        }
+        .cmp-approval-side {
+            display: flex; flex-direction: column; gap: 8px; flex: 1;
+        }
+        .cmp-approval-side.right { align-items: flex-end; text-align: right; }
+        .cmp-approval-badge {
+            display: inline-flex; align-items: center; gap: 6px;
+            font-size: 13px; font-weight: 600; padding: 6px 14px;
+            border-radius: var(--radius-full); border: 1px solid;
+        }
+        .cmp-approval-badge.a { color: var(--accent); background: var(--accent-bg); border-color: var(--accent-border); }
+        .cmp-approval-badge.b { color: var(--teal); background: var(--teal-bg); border-color: var(--teal-border); }
+
+        /* VERDICT */
+        .cmp-verdict {
+            display: grid; grid-template-columns: 1fr 1fr; gap: 24px;
+        }
+        .cmp-verdict-card {
+            background: var(--bg-card); border: 1px solid var(--border);
+            border-radius: var(--radius-lg); padding: 24px 28px;
+        }
+        .cmp-verdict-card .cmp-verdict-label {
+            font-size: 11px; font-weight: 700; text-transform: uppercase;
+            letter-spacing: 0.1em; margin-bottom: 8px;
+        }
+        .cmp-verdict-card.a .cmp-verdict-label { color: var(--accent); }
+        .cmp-verdict-card.b .cmp-verdict-label { color: var(--teal); }
+        .cmp-verdict-card .cmp-verdict-text {
+            font-size: 15px; line-height: 1.6; color: var(--text-2);
+        }
+
         /* CTAs */
         .cmp-ctas {
             display: grid; grid-template-columns: 1fr 1fr; gap: 24px;
@@ -402,6 +457,10 @@
             .cmp-cta-col.right { justify-content: flex-start; }
             .cmp-values-row { grid-template-columns: 1fr; }
             .cmp-values-shared { padding: 16px; }
+            .cmp-bestfor { grid-template-columns: 1fr; }
+            .cmp-verdict { grid-template-columns: 1fr; }
+            .cmp-approval-row { flex-direction: column; align-items: stretch; }
+            .cmp-approval-side.right { align-items: flex-start; text-align: left; }
         }
     </style>
 </head>
@@ -466,6 +525,12 @@
         <!-- Company Headers -->
         <div class="cmp-headers" id="headerCards"></div>
 
+        <!-- Best For -->
+        <div class="cmp-section">
+            <div class="cmp-section-label">Best For</div>
+            <div class="cmp-bestfor" id="bestForSection"></div>
+        </div>
+
         <!-- Scores -->
         <div class="cmp-section">
             <div class="cmp-section-label">Ratings</div>
@@ -482,6 +547,12 @@
         <div class="cmp-section">
             <div class="cmp-section-label">Pros &amp; Cons</div>
             <div class="cmp-proscons" id="prosConsSection"></div>
+        </div>
+
+        <!-- Bottom Line -->
+        <div class="cmp-section">
+            <div class="cmp-section-label">Bottom Line</div>
+            <div class="cmp-verdict" id="verdictSection"></div>
         </div>
 
         <!-- Job Counts -->
@@ -550,25 +621,25 @@ const ROLES = {
 };
 
 const COMPANIES = {
-    'anthropic': { name: 'Anthropic', logo: 'https://www.google.com/s2/favicons?domain=anthropic.com&sz=128', size: 'Mid (~1,500)', glassdoor: 4.4, wlb_score: 3.7, values: ['ethical-ai','learning','equity','social-impact','eng-driven','flat'], careers: 'https://www.anthropic.com/careers?ref=jobsbyculture.com' },
-    'huggingface': { name: 'Hugging Face', logo: 'https://www.google.com/s2/favicons?domain=huggingface.co&sz=128', size: 'Small (~400)', glassdoor: 3.8, wlb_score: 4.1, values: ['open-source','flat','remote','flex-hours','transparent','many-hats','async'], careers: 'https://huggingface.co/jobs?ref=jobsbyculture.com' },
-    'databricks': { name: 'Databricks', logo: 'https://www.google.com/s2/favicons?domain=databricks.com&sz=128', size: 'Large (~7,000)', glassdoor: 4.1, wlb_score: 3.9, values: ['eng-driven','learning','equity','diverse','product-impact'], careers: 'https://www.databricks.com/company/careers?ref=jobsbyculture.com' },
-    'cohere': { name: 'Cohere', logo: 'https://www.google.com/s2/favicons?domain=cohere.com&sz=128', size: 'Small (~500)', glassdoor: 2.9, wlb_score: 3.5, values: ['learning','eng-driven','many-hats'], careers: 'https://cohere.com/careers?ref=jobsbyculture.com' },
-    'mistral': { name: 'Mistral AI', logo: 'https://www.google.com/s2/favicons?domain=mistral.ai&sz=128', size: 'Small (~100)', glassdoor: 4.0, wlb_score: 3.6, values: ['ship-fast','eng-driven','flat','many-hats','open-source'], careers: 'https://mistral.ai/careers?ref=jobsbyculture.com' },
-    'hubspot': { name: 'HubSpot', logo: 'https://www.google.com/s2/favicons?domain=hubspot.com&sz=128', size: 'Large (~8,000)', glassdoor: 4.3, wlb_score: 4.1, values: ['diverse','learning','wlb','transparent','flex-hours','psych-safety'], careers: 'https://www.hubspot.com/careers?ref=jobsbyculture.com' },
-    'vercel': { name: 'Vercel', logo: 'https://www.google.com/s2/favicons?domain=vercel.com&sz=128', size: 'Mid (~600)', glassdoor: 3.9, wlb_score: 3.4, values: ['ship-fast','eng-driven','remote','product-impact','open-source'], careers: 'https://vercel.com/careers?ref=jobsbyculture.com' },
-    'stripe': { name: 'Stripe', logo: 'https://www.google.com/s2/favicons?domain=stripe.com&sz=128', size: 'Large (~8,000)', glassdoor: 4.0, wlb_score: 3.6, values: ['eng-driven','learning','equity','product-impact','transparent'], careers: 'https://stripe.com/jobs?ref=jobsbyculture.com' },
-    'perplexity': { name: 'Perplexity AI', logo: 'https://www.google.com/s2/favicons?domain=perplexity.ai&sz=128', size: 'Mid (~500)', glassdoor: 4.7, wlb_score: 3.3, values: ['ship-fast','eng-driven','product-impact','equity','learning'], careers: 'https://www.perplexity.ai/hub/careers?ref=jobsbyculture.com' },
-    'together': { name: 'Together AI', logo: 'https://www.google.com/s2/favicons?domain=together.ai&sz=128', size: 'Small (~150)', glassdoor: 4.1, wlb_score: 3.8, values: ['open-source','eng-driven','learning','flat','many-hats'], careers: 'https://www.together.ai/about?ref=jobsbyculture.com' },
-    'cursor': { name: 'Cursor (Anysphere)', logo: 'https://www.google.com/s2/favicons?domain=cursor.com&sz=128', size: 'Small (~50)', glassdoor: 4.0, wlb_score: 3.5, values: ['ship-fast','eng-driven','product-impact','flat','many-hats'], careers: 'https://anysphere.inc?ref=jobsbyculture.com' },
-    'linear': { name: 'Linear', logo: 'https://www.google.com/s2/favicons?domain=linear.app&sz=128', size: 'Small (~80)', glassdoor: 4.6, wlb_score: 4.4, values: ['deep-work','remote','async','eng-driven','product-impact','wlb'], careers: 'https://linear.app/careers?ref=jobsbyculture.com' },
-    'scale': { name: 'Scale AI', logo: 'https://www.google.com/s2/favicons?domain=scale.com&sz=128', size: 'Large (~1,200)', glassdoor: 3.5, wlb_score: 2.7, values: ['eng-driven','product-impact','learning','ship-fast'], careers: 'https://scale.com/careers?ref=jobsbyculture.com' },
-    'coreweave': { name: 'CoreWeave', logo: 'https://www.google.com/s2/favicons?domain=coreweave.com&sz=128', size: 'Large (~1,800)', glassdoor: 3.6, wlb_score: 3.2, values: ['eng-driven','ship-fast','equity','many-hats'], careers: 'https://coreweave.com/careers?ref=jobsbyculture.com' },
-    'runway': { name: 'Runway', logo: 'https://www.google.com/s2/favicons?domain=runwayml.com&sz=128', size: 'Mid (~420)', glassdoor: 4.5, wlb_score: 4.0, values: ['eng-driven','product-impact','remote','learning','ship-fast'], careers: 'https://runwayml.com/careers?ref=jobsbyculture.com' },
-    'vast': { name: 'Vast AI', logo: 'https://www.google.com/s2/favicons?domain=vast.ai&sz=128', size: 'Small (~30)', glassdoor: 5.0, wlb_score: 4.5, values: ['eng-driven','ship-fast','flat','many-hats','equity'], careers: 'https://vast.ai/careers?ref=jobsbyculture.com' },
-    'apollo': { name: 'Apollo.io', logo: 'https://www.google.com/s2/favicons?domain=apollo.io&sz=128', size: 'Large (~800)', glassdoor: 4.0, wlb_score: 3.6, values: ['ship-fast','eng-driven','remote','product-impact','learning'], careers: 'https://www.apollo.io/careers?ref=jobsbyculture.com' },
-    'airbnb': { name: 'Airbnb', logo: 'https://www.google.com/s2/favicons?domain=airbnb.com&sz=128', size: 'Large (~7,300)', glassdoor: 4.1, wlb_score: 4.0, values: ['remote','wlb','diverse','open-source','equity'], careers: 'https://careers.airbnb.com/?ref=jobsbyculture.com' },
-    'figma': { name: 'Figma', logo: 'https://www.google.com/s2/favicons?domain=figma.com&sz=128', size: 'Large (~2,800)', glassdoor: 3.7, wlb_score: 3.1, values: ['eng-driven','ship-fast','learning','product-impact','deep-work'], careers: 'https://www.figma.com/careers?ref=jobsbyculture.com' },
+    'anthropic': { name: 'Anthropic', logo: 'https://www.google.com/s2/favicons?domain=anthropic.com&sz=128', size: 'Mid (~1,500)', glassdoor: 4.4, wlb_score: 3.7, culture_values: 4.5, comp_benefits: 4.8, senior_mgmt: 4.2, career_opps: 4.0, recommend: 95, ceo_approval: 93, ceo_name: 'Dario Amodei', values: ['ethical-ai','learning','equity','social-impact','eng-driven','flat'], careers: 'https://www.anthropic.com/careers?ref=jobsbyculture.com', bestFor: 'Safety-minded researchers who want mission-driven work with top-tier comp', verdict: 'Choose Anthropic if you want genuine AI safety mission, elite comp, and high autonomy \u2014 but expect intense hours.' },
+    'huggingface': { name: 'Hugging Face', logo: 'https://www.google.com/s2/favicons?domain=huggingface.co&sz=128', size: 'Small (~400)', glassdoor: 3.8, wlb_score: 4.1, culture_values: 4.2, comp_benefits: 3.4, senior_mgmt: 3.6, career_opps: 3.5, recommend: 78, ceo_approval: 85, ceo_name: 'Clement Delangue', values: ['open-source','flat','remote','flex-hours','transparent','many-hats','async'], careers: 'https://huggingface.co/jobs?ref=jobsbyculture.com', bestFor: 'Open-source enthusiasts who value remote flexibility over top comp', verdict: 'Choose Hugging Face if you want to build tools millions of ML devs use with true remote freedom \u2014 but comp lags FAANG.' },
+    'databricks': { name: 'Databricks', logo: 'https://www.google.com/s2/favicons?domain=databricks.com&sz=128', size: 'Large (~7,000)', glassdoor: 4.1, wlb_score: 3.9, culture_values: 4.0, comp_benefits: 4.3, senior_mgmt: 3.8, career_opps: 3.9, recommend: 82, ceo_approval: 88, ceo_name: 'Ali Ghodsi', values: ['eng-driven','learning','equity','diverse','product-impact'], careers: 'https://www.databricks.com/company/careers?ref=jobsbyculture.com', bestFor: 'Data engineers who want strong comp and deep technical pedigree at scale', verdict: 'Choose Databricks if you want elite data infrastructure work with strong equity \u2014 but brace for constant org changes.' },
+    'cohere': { name: 'Cohere', logo: 'https://www.google.com/s2/favicons?domain=cohere.com&sz=128', size: 'Small (~500)', glassdoor: 2.9, wlb_score: 3.5, culture_values: 3.0, comp_benefits: 3.2, senior_mgmt: 2.3, career_opps: 2.5, recommend: 48, ceo_approval: 55, ceo_name: 'Aidan Gomez', values: ['learning','eng-driven','many-hats'], careers: 'https://cohere.com/careers?ref=jobsbyculture.com', bestFor: 'Enterprise AI builders willing to trade stability for cutting-edge NLP research', verdict: 'Choose Cohere if you want Transformer co-author pedigree and enterprise AI focus \u2014 but expect turbulence and lower ratings.' },
+    'mistral': { name: 'Mistral AI', logo: 'https://www.google.com/s2/favicons?domain=mistral.ai&sz=128', size: 'Small (~100)', glassdoor: 4.0, wlb_score: 3.6, culture_values: 4.2, comp_benefits: 4.0, senior_mgmt: 3.8, career_opps: 3.5, recommend: 80, ceo_approval: 85, ceo_name: 'Arthur Mensch', values: ['ship-fast','eng-driven','flat','many-hats','open-source'], careers: 'https://mistral.ai/careers?ref=jobsbyculture.com', bestFor: 'Researchers who want to build open-weight models at a fast-moving European AI lab', verdict: 'Choose Mistral if you want small-team impact at Europe\'s top AI lab \u2014 but expect minimal process and Paris-first culture.' },
+    'hubspot': { name: 'HubSpot', logo: 'https://www.google.com/s2/favicons?domain=hubspot.com&sz=128', size: 'Large (~8,000)', glassdoor: 4.3, wlb_score: 4.1, culture_values: 4.5, comp_benefits: 3.9, senior_mgmt: 4.1, career_opps: 4.0, recommend: 87, ceo_approval: 92, ceo_name: 'Yamini Rangan', values: ['diverse','learning','wlb','transparent','flex-hours','psych-safety'], careers: 'https://www.hubspot.com/careers?ref=jobsbyculture.com', bestFor: 'People who prioritize genuine work-life balance and a transparent, inclusive culture', verdict: 'Choose HubSpot if you want legendary culture with real flexibility and psychological safety \u2014 but comp is below FAANG.' },
+    'vercel': { name: 'Vercel', logo: 'https://www.google.com/s2/favicons?domain=vercel.com&sz=128', size: 'Mid (~600)', glassdoor: 3.9, wlb_score: 3.4, culture_values: 3.8, comp_benefits: 4.0, senior_mgmt: 3.5, career_opps: 3.5, recommend: 72, ceo_approval: 78, ceo_name: 'Guillermo Rauch', values: ['ship-fast','eng-driven','remote','product-impact','open-source'], careers: 'https://vercel.com/careers?ref=jobsbyculture.com', bestFor: 'Frontend engineers who want to shape the future of web infrastructure', verdict: 'Choose Vercel if you want to build Next.js and edge runtime \u2014 but the pace is relentless and standards are sky-high.' },
+    'stripe': { name: 'Stripe', logo: 'https://www.google.com/s2/favicons?domain=stripe.com&sz=128', size: 'Large (~8,000)', glassdoor: 4.0, wlb_score: 3.6, culture_values: 4.1, comp_benefits: 4.5, senior_mgmt: 3.7, career_opps: 3.8, recommend: 80, ceo_approval: 82, ceo_name: 'Patrick Collison', values: ['eng-driven','learning','equity','product-impact','transparent'], careers: 'https://stripe.com/jobs?ref=jobsbyculture.com', bestFor: 'Engineers who value code quality, writing culture, and fintech at the highest level', verdict: 'Choose Stripe if you want elite engineering culture with top comp \u2014 but perfectionism can slow shipping velocity.' },
+    'perplexity': { name: 'Perplexity AI', logo: 'https://www.google.com/s2/favicons?domain=perplexity.ai&sz=128', size: 'Mid (~500)', glassdoor: 4.7, wlb_score: 3.3, culture_values: 4.8, comp_benefits: 4.5, senior_mgmt: 4.5, career_opps: 4.2, recommend: 92, ceo_approval: 95, ceo_name: 'Aravind Srinivas', values: ['ship-fast','eng-driven','product-impact','equity','learning'], careers: 'https://www.perplexity.ai/hub/careers?ref=jobsbyculture.com', bestFor: 'Builders who thrive on speed and want massive user-facing impact at a rocketship', verdict: 'Choose Perplexity if you want the fastest-growing AI product and huge per-engineer impact \u2014 but expect startup intensity.' },
+    'together': { name: 'Together AI', logo: 'https://www.google.com/s2/favicons?domain=together.ai&sz=128', size: 'Small (~150)', glassdoor: 4.1, wlb_score: 3.8, culture_values: 4.3, comp_benefits: 4.0, senior_mgmt: 4.0, career_opps: 3.8, recommend: 82, ceo_approval: 85, ceo_name: 'Vipul Ved Prakash', values: ['open-source','eng-driven','learning','flat','many-hats'], careers: 'https://www.together.ai/about?ref=jobsbyculture.com', bestFor: 'Open-source AI infrastructure builders who want research-level impact at a startup', verdict: 'Choose Together AI if you want real open-source mission with outsized research output \u2014 but expect to wear many hats.' },
+    'cursor': { name: 'Cursor (Anysphere)', logo: 'https://www.google.com/s2/favicons?domain=cursor.com&sz=128', size: 'Small (~50)', glassdoor: 4.0, wlb_score: 3.5, culture_values: 4.0, comp_benefits: 4.2, senior_mgmt: 3.8, career_opps: 3.5, recommend: 85, ceo_approval: 90, ceo_name: 'Michael Truell', values: ['ship-fast','eng-driven','product-impact','flat','many-hats'], careers: 'https://anysphere.inc?ref=jobsbyculture.com', bestFor: 'Generalist engineers who want extreme ownership at the most-loved AI code editor', verdict: 'Choose Cursor if you want to shape the future of AI-assisted coding on a tiny team \u2014 but the pace is relentless.' },
+    'linear': { name: 'Linear', logo: 'https://www.google.com/s2/favicons?domain=linear.app&sz=128', size: 'Small (~80)', glassdoor: 4.6, wlb_score: 4.4, culture_values: 4.8, comp_benefits: 4.3, senior_mgmt: 4.5, career_opps: 4.0, recommend: 95, ceo_approval: 95, ceo_name: 'Karri Saarinen', values: ['deep-work','remote','async','eng-driven','product-impact','wlb'], careers: 'https://linear.app/careers?ref=jobsbyculture.com', bestFor: 'Craftspeople who value deep work, async communication, and minimal meetings', verdict: 'Choose Linear if you want obsessive product craft with genuine work-life balance \u2014 but the team is tiny and hiring bar is extreme.' },
+    'scale': { name: 'Scale AI', logo: 'https://www.google.com/s2/favicons?domain=scale.com&sz=128', size: 'Large (~1,200)', glassdoor: 3.5, wlb_score: 2.7, culture_values: 2.9, comp_benefits: 3.5, senior_mgmt: 2.8, career_opps: 3.6, recommend: 56, ceo_approval: 60, ceo_name: 'Alexandr Wang', values: ['eng-driven','product-impact','learning','ship-fast'], careers: 'https://scale.com/careers?ref=jobsbyculture.com', bestFor: 'Ambitious builders who want critical AI infrastructure work serving top-tier clients', verdict: 'Choose Scale AI if you want to build data infrastructure for OpenAI and the US government \u2014 but expect long hours and inconsistent management.' },
+    'coreweave': { name: 'CoreWeave', logo: 'https://www.google.com/s2/favicons?domain=coreweave.com&sz=128', size: 'Large (~1,800)', glassdoor: 3.6, wlb_score: 3.2, culture_values: 3.1, comp_benefits: 3.8, senior_mgmt: 3.0, career_opps: 3.4, recommend: 62, ceo_approval: 65, ceo_name: 'Michael Intrator', values: ['eng-driven','ship-fast','equity','many-hats'], careers: 'https://coreweave.com/careers?ref=jobsbyculture.com', bestFor: 'Infrastructure engineers who want GPU cloud exposure with strong equity upside', verdict: 'Choose CoreWeave if you want NVIDIA-backed GPU cloud with equity upside \u2014 but culture and processes are still maturing.' },
+    'runway': { name: 'Runway', logo: 'https://www.google.com/s2/favicons?domain=runwayml.com&sz=128', size: 'Mid (~420)', glassdoor: 4.5, wlb_score: 4.0, culture_values: 4.6, comp_benefits: 4.3, senior_mgmt: 4.4, career_opps: 4.2, recommend: 90, ceo_approval: 90, ceo_name: 'Crist\u00f3bal Valenzuela', values: ['eng-driven','product-impact','remote','learning','ship-fast'], careers: 'https://runwayml.com/careers?ref=jobsbyculture.com', bestFor: 'Creative technologists who want to pioneer AI video generation at the intersection of art and engineering', verdict: 'Choose Runway if you want to build Gen-3 Alpha at the art-meets-AI frontier \u2014 but the space is getting competitive.' },
+    'vast': { name: 'Vast AI', logo: 'https://www.google.com/s2/favicons?domain=vast.ai&sz=128', size: 'Small (~30)', glassdoor: 5.0, wlb_score: 4.5, culture_values: 5.0, comp_benefits: 5.0, senior_mgmt: 5.0, career_opps: 5.0, recommend: 100, ceo_approval: 100, ceo_name: 'Jake Cannell', values: ['eng-driven','ship-fast','flat','many-hats','equity'], careers: 'https://vast.ai/careers?ref=jobsbyculture.com', bestFor: 'Scrappy generalists who want a front-row seat to the AI compute revolution', verdict: 'Choose Vast AI if you want perfect Glassdoor scores and generous equity at a tiny GPU marketplace \u2014 but expect startup chaos.' },
+    'apollo': { name: 'Apollo.io', logo: 'https://www.google.com/s2/favicons?domain=apollo.io&sz=128', size: 'Large (~800)', glassdoor: 4.0, wlb_score: 3.6, culture_values: 4.0, comp_benefits: 4.1, senior_mgmt: 3.6, career_opps: 4.1, recommend: 77, ceo_approval: 81, ceo_name: 'Matt Curl', values: ['ship-fast','eng-driven','remote','product-impact','learning'], careers: 'https://www.apollo.io/careers?ref=jobsbyculture.com', bestFor: 'Product builders who want strong PMF and competitive comp at a sales-tech leader', verdict: 'Choose Apollo.io if you want best-in-class sales intelligence with competitive comp \u2014 but leadership can be hands-on.' },
+    'airbnb': { name: 'Airbnb', logo: 'https://www.google.com/s2/favicons?domain=airbnb.com&sz=128', size: 'Large (~7,300)', glassdoor: 4.1, wlb_score: 4.0, culture_values: 4.2, comp_benefits: 4.2, senior_mgmt: 3.5, career_opps: 3.5, recommend: 80, ceo_approval: 87, ceo_name: 'Brian Chesky', values: ['remote','wlb','diverse','open-source','equity'], careers: 'https://careers.airbnb.com/?ref=jobsbyculture.com', bestFor: 'Engineers who want Live Anywhere flexibility with strong comp and no pay cuts', verdict: 'Choose Airbnb if you want genuine remote flexibility and travel perks \u2014 but promotions are slow and bureaucracy is growing.' },
+    'figma': { name: 'Figma', logo: 'https://www.google.com/s2/favicons?domain=figma.com&sz=128', size: 'Large (~2,800)', glassdoor: 3.7, wlb_score: 3.1, culture_values: 4.0, comp_benefits: 4.0, senior_mgmt: 3.2, career_opps: 3.5, recommend: 73, ceo_approval: 95, ceo_name: 'Dylan Field', values: ['eng-driven','ship-fast','learning','product-impact','deep-work'], careers: 'https://www.figma.com/careers?ref=jobsbyculture.com', bestFor: 'Ambitious engineers who want world-class technical challenges on a beloved product', verdict: 'Choose Figma if you want WebAssembly-level challenges on a product people love \u2014 but expect 60+ hour weeks during crunch.' },
 };
 
 const COMPANY_REVIEWS = {
@@ -733,6 +804,15 @@ function getOnsiteData(slug) {
         size: c.size,
         glassdoor: c.glassdoor,
         wlb_score: c.wlb_score,
+        culture_values: c.culture_values,
+        comp_benefits: c.comp_benefits,
+        senior_mgmt: c.senior_mgmt,
+        career_opps: c.career_opps,
+        recommend: c.recommend,
+        ceo_approval: c.ceo_approval,
+        ceo_name: c.ceo_name,
+        bestFor: c.bestFor,
+        verdict: c.verdict,
         values: c.values,
         pros: r.pros,
         cons: r.cons,
@@ -754,9 +834,11 @@ function updateURL(a, b) {
 // ═══ RENDER RESULTS ═══
 function renderResults(a, b) {
     renderHeaders(a, b);
+    renderBestFor(a, b);
     renderScores(a, b);
     renderValues(a, b);
     renderProsCons(a, b);
+    renderVerdict(a, b);
     renderJobs(a, b);
     renderCTAs(a, b);
     document.getElementById('results').classList.add('active');
@@ -776,27 +858,74 @@ function renderHeaders(a, b) {
     document.getElementById('headerCards').innerHTML = html;
 }
 
+function renderBestFor(a, b) {
+    var html = '';
+    html += '<div class="cmp-bestfor-card a">' +
+        '<div class="cmp-bestfor-label">' + escHtml(a.name) + '</div>' +
+        '<div class="cmp-bestfor-text">Best for: ' + escHtml(a.bestFor || 'Professionals seeking this company\'s unique culture') + '</div>' +
+        '</div>';
+    html += '<div class="cmp-bestfor-card b">' +
+        '<div class="cmp-bestfor-label">' + escHtml(b.name) + '</div>' +
+        '<div class="cmp-bestfor-text">Best for: ' + escHtml(b.bestFor || 'Professionals seeking this company\'s unique culture') + '</div>' +
+        '</div>';
+    document.getElementById('bestForSection').innerHTML = html;
+}
+
+function renderVerdict(a, b) {
+    var html = '';
+    html += '<div class="cmp-verdict-card a">' +
+        '<div class="cmp-verdict-label">' + escHtml(a.name) + '</div>' +
+        '<div class="cmp-verdict-text">' + escHtml(a.verdict || 'Choose ' + a.name + ' if their culture and values align with your priorities.') + '</div>' +
+        '</div>';
+    html += '<div class="cmp-verdict-card b">' +
+        '<div class="cmp-verdict-label">' + escHtml(b.name) + '</div>' +
+        '<div class="cmp-verdict-text">' + escHtml(b.verdict || 'Choose ' + b.name + ' if their culture and values align with your priorities.') + '</div>' +
+        '</div>';
+    document.getElementById('verdictSection').innerHTML = html;
+}
+
 function renderScores(a, b) {
     var maxScore = 5;
     var metrics = [
-        { label: 'Glassdoor', keyA: a.glassdoor, keyB: b.glassdoor },
-        { label: 'Work-Life', keyA: a.wlb_score, keyB: b.wlb_score }
+        { label: 'Overall', keyA: a.glassdoor, keyB: b.glassdoor },
+        { label: 'Work-Life Balance', keyA: a.wlb_score, keyB: b.wlb_score },
+        { label: 'Culture & Values', keyA: a.culture_values, keyB: b.culture_values },
+        { label: 'Comp & Benefits', keyA: a.comp_benefits, keyB: b.comp_benefits },
+        { label: 'Senior Mgmt', keyA: a.senior_mgmt, keyB: b.senior_mgmt },
+        { label: 'Career Opps', keyA: a.career_opps, keyB: b.career_opps }
     ];
     var html = '<div class="cmp-score-names"><span class="a-name">' + escHtml(a.name) + '</span><span class="b-name">' + escHtml(b.name) + '</span></div>';
     metrics.forEach(function(m) {
-        var pctA = ((m.keyA / maxScore) * 50);
-        var pctB = ((m.keyB / maxScore) * 50);
+        var valA = Number(m.keyA) || 0;
+        var valB = Number(m.keyB) || 0;
+        var pctA = ((valA / maxScore) * 50);
+        var pctB = ((valB / maxScore) * 50);
         html += '<div class="cmp-score-row">' +
-            '<span class="cmp-score-val a">' + m.keyA.toFixed(1) + '</span>' +
+            '<span class="cmp-score-val a">' + valA.toFixed(1) + '</span>' +
             '<div class="cmp-bar-track">' +
                 '<div class="cmp-bar-a" style="width:' + pctA + '%"></div>' +
                 '<div class="cmp-bar-b" style="width:' + pctB + '%"></div>' +
                 '<div class="cmp-bar-mid"></div>' +
             '</div>' +
-            '<span class="cmp-score-val b">' + m.keyB.toFixed(1) + '</span>' +
+            '<span class="cmp-score-val b">' + valB.toFixed(1) + '</span>' +
             '</div>' +
             '<div style="text-align:center;font-size:13px;font-weight:600;color:var(--text-2);margin:-12px 0 16px">' + m.label + '</div>';
     });
+    // Approval row
+    var recA = a.recommend, recB = b.recommend;
+    var ceoA = a.ceo_approval, ceoB = b.ceo_approval;
+    if (recA || recB || ceoA || ceoB) {
+        html += '<div class="cmp-approval-row">';
+        html += '<div class="cmp-approval-side">';
+        if (recA) html += '<span class="cmp-approval-badge a">\uD83D\uDC4D ' + recA + '% Recommend</span>';
+        if (ceoA) html += '<span class="cmp-approval-badge a">\uD83D\uDC64 ' + ceoA + '% CEO Approval' + (a.ceo_name ? ' (' + escHtml(a.ceo_name) + ')' : '') + '</span>';
+        html += '</div>';
+        html += '<div class="cmp-approval-side right">';
+        if (recB) html += '<span class="cmp-approval-badge b">\uD83D\uDC4D ' + recB + '% Recommend</span>';
+        if (ceoB) html += '<span class="cmp-approval-badge b">\uD83D\uDC64 ' + ceoB + '% CEO Approval' + (b.ceo_name ? ' (' + escHtml(b.ceo_name) + ')' : '') + '</span>';
+        html += '</div>';
+        html += '</div>';
+    }
     document.getElementById('scoreSection').innerHTML = html;
 }
 

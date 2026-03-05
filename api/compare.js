@@ -67,6 +67,15 @@ Return ONLY valid JSON, no markdown, no explanation:
   "size": "Small (~50)" or "Mid (~500)" or "Large (~5,000)" etc,
   "glassdoor": 4.0,
   "wlb_score": 3.5,
+  "culture_values": 4.0,
+  "comp_benefits": 3.8,
+  "senior_mgmt": 3.5,
+  "career_opps": 3.5,
+  "recommend": 75,
+  "ceo_approval": 80,
+  "ceo_name": "CEO Full Name",
+  "bestFor": "One sentence describing who this company is best for",
+  "verdict": "Choose [Company] if you want X — but expect Y.",
   "values": ["eng-driven", "learning", ...],
   "pros": ["One sentence pro", "Another sentence pro"],
   "cons": ["One sentence con", "Another sentence con"],
@@ -86,6 +95,15 @@ Return ONLY valid JSON, no markdown, no explanation:
   data.cons = (data.cons || []).slice(0, 2);
   data.glassdoor = Math.max(1, Math.min(5, Number(data.glassdoor) || 3.5));
   data.wlb_score = Math.max(1, Math.min(5, Number(data.wlb_score) || 3.5));
+  data.culture_values = Math.max(1, Math.min(5, Number(data.culture_values) || 3.5));
+  data.comp_benefits = Math.max(1, Math.min(5, Number(data.comp_benefits) || 3.5));
+  data.senior_mgmt = Math.max(1, Math.min(5, Number(data.senior_mgmt) || 3.5));
+  data.career_opps = Math.max(1, Math.min(5, Number(data.career_opps) || 3.5));
+  data.recommend = Math.max(0, Math.min(100, Math.round(Number(data.recommend) || 70)));
+  data.ceo_approval = Math.max(0, Math.min(100, Math.round(Number(data.ceo_approval) || 70)));
+  data.ceo_name = (data.ceo_name || '').slice(0, 50);
+  data.bestFor = (data.bestFor || '').slice(0, 200);
+  data.verdict = (data.verdict || '').slice(0, 300);
   data.ai_generated = true;
   data.logo = `https://www.google.com/s2/favicons?domain=${encodeURIComponent(data.careers?.replace(/https?:\/\/([^/]+).*/, '$1') || name.toLowerCase().replace(/\s+/g, '') + '.com')}&sz=128`;
 
