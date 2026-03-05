@@ -75,7 +75,9 @@ Return ONLY valid JSON, no markdown, no explanation:
     }]
   });
 
-  const text = response.content[0].text.trim();
+  let text = response.content[0].text.trim();
+  // Strip markdown code fences if present
+  text = text.replace(/^```(?:json)?\s*/i, '').replace(/\s*```$/i, '');
   const data = JSON.parse(text);
 
   // Validate and sanitize
@@ -98,11 +100,6 @@ export default async function handler(req, res) {
 
   if (req.method === 'OPTIONS') {
     return res.status(200).end();
-  }
-
-  if (req.method === 'GET') {
-    const key = process.env.ANTHROPIC_API_KEY || '';
-    return res.status(200).json({ keyPresent: !!key, keyPrefix: key.substring(0, 10) + '...' });
   }
 
   if (req.method !== 'POST') {
@@ -148,6 +145,6 @@ export default async function handler(req, res) {
     return res.status(200).json(result);
   } catch (err) {
     console.error('Compare API error:', err);
-    return res.status(500).json({ error: 'Failed to analyze company cultures. Please try again.', debug: err.message });
+    return res.status(500).json({ error: 'Failed to analyze company cultures. Please try again.' });
   }
 }
