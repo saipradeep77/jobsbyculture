@@ -5,7 +5,7 @@
   "scripts": {
     "build:compare": "node scripts/build-compare-pages.js",
     "build:clusters": "node scripts/build-cluster-pages.js",
-    "build": "node scripts/build-compare-pages.js && node scripts/build-cluster-pages.js"
+    "build:all": "node scripts/build-compare-pages.js && node scripts/build-cluster-pages.js"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.39.0"

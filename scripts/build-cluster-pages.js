@@ -154,6 +154,8 @@ function footerHtml() {
             <a href="/jobs">Browse Jobs</a>
             <a href="/compare">Compare Cultures</a>
             <a href="/directory">Company Directory</a>
+            <a href="/values/remote">By Culture</a>
+            <a href="/roles/engineering">By Role</a>
         </div>
         <div class="ft-bar">
             <p>&copy; 2026 JobsByCulture</p>
