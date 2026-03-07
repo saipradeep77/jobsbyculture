@@ -178,13 +178,14 @@ function headHtml(title, description, canonical) {
     <meta property="og:description" content="${esc(description)}">
     <meta property="og:type" content="website">
     <meta property="og:url" content="${esc(canonical)}">
-    <meta property="og:image" content="https://jobsbyculture.com/og-image.png?v=5">
+    <meta property="og:image" content="https://jobsbyculture.com/og-image.png">
+    <meta property="og:image:type" content="image/png">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="${esc(title)}">
     <meta name="twitter:description" content="${esc(description)}">
-    <meta name="twitter:image" content="https://jobsbyculture.com/og-image.png?v=5">
+    <meta name="twitter:image" content="https://jobsbyculture.com/og-image.png">
     <link rel="canonical" href="${esc(canonical)}">
     <link rel="icon" type="image/svg+xml" href="/favicon.svg">
     <link rel="icon" type="image/png" sizes="512x512" href="/logo.png">
