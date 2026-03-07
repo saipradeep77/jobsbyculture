@@ -2809,7 +2809,31 @@ renderJobs();
 <script>
 // Generate JobPosting schema for Google Jobs (injected synchronously for crawler visibility)
 (function() {
-    const schemaJobs = JOBS.map(j => {
+    // Filter jobs to match current URL params so Google doesn't see mismatched schema
+    var params = new URLSearchParams(window.location.search);
+    var filterCompany = params.get('company');
+    var filterValue = params.get('value');
+    var filterRole = params.get('role');
+    var filterLocation = params.get('location');
+
+    var filteredJobs = JOBS;
+    if (filterCompany) {
+        filteredJobs = filteredJobs.filter(function(j) { return j.company === filterCompany; });
+    }
+    if (filterValue) {
+        filteredJobs = filteredJobs.filter(function(j) {
+            var co = COMPANIES[j.company];
+            return co && co.values && co.values.indexOf(filterValue) !== -1;
+        });
+    }
+    if (filterLocation) {
+        filteredJobs = filteredJobs.filter(function(j) {
+            if (filterLocation === 'Remote') return /remote/i.test(j.location);
+            return j.location && j.location.indexOf(filterLocation) !== -1;
+        });
+    }
+
+    const schemaJobs = filteredJobs.map(j => {
         const comp = COMPANIES[j.company] || {};
         const posted = j.posted || '3w+ ago';
         let daysAgo = 21;
