@@ -1,0 +1,17 @@
+{
+  "companies": [
+    { "slug": "anthropic",   "name": "Anthropic",      "ats": "greenhouse", "atsSlug": "anthropic",    "domain": "anthropic.com" },
+    { "slug": "cohere",      "name": "Cohere",         "ats": "ashby",      "atsSlug": "cohere",       "domain": "cohere.com" },
+    { "slug": "perplexity",  "name": "Perplexity AI",  "ats": "ashby",      "atsSlug": "perplexity",   "domain": "perplexity.ai" },
+    { "slug": "mistral",     "name": "Mistral AI",     "ats": "lever",      "atsSlug": "mistral",      "domain": "mistral.ai" },
+    { "slug": "databricks",  "name": "Databricks",     "ats": "greenhouse", "atsSlug": "databricks",   "domain": "databricks.com" },
+    { "slug": "hubspot",     "name": "HubSpot",        "ats": "greenhouse", "atsSlug": "hubspotjobs",  "domain": "hubspot.com" },
+    { "slug": "stripe",      "name": "Stripe",         "ats": "greenhouse", "atsSlug": "stripe",       "domain": "stripe.com" },
+    { "slug": "scale",       "name": "Scale AI",       "ats": "greenhouse", "atsSlug": "scaleai",      "domain": "scale.com" },
+    { "slug": "together",    "name": "Together AI",    "ats": "greenhouse", "atsSlug": "togetherai",   "domain": "together.ai" },
+    { "slug": "apollo",      "name": "Apollo.io",      "ats": "greenhouse", "atsSlug": "apolloio",     "domain": "apollo.io" },
+    { "slug": "runway",      "name": "Runway",         "ats": "greenhouse", "atsSlug": "runwayml",     "domain": "runwayml.com" },
+    { "slug": "vast",        "name": "Vast AI",        "ats": "greenhouse", "atsSlug": "vastai",       "domain": "vast.ai" },
+    { "slug": "huggingface", "name": "Hugging Face",   "ats": "workable",   "atsSlug": "huggingface",  "domain": "huggingface.co" }
+  ]
+}
