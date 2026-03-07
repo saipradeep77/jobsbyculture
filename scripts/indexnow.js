@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 /**
- * Submit all site URLs to IndexNow (Bing, Yandex, Seznam, Naver)
+ * Submit all site URLs to IndexNow (Bing, Yandex, Naver, Seznam)
  * Usage: node scripts/indexnow.js
  */
 
@@ -13,42 +13,55 @@ const ROOT = resolve(__dirname, '..');
 
 const KEY = '1e92a6c89b31471786df024393c4a944';
 const HOST = 'jobsbyculture.com';
-const ENDPOINT = 'https://api.indexnow.org/IndexNow';
+
+const ENDPOINTS = [
+    { name: 'IndexNow (Bing)', url: 'https://api.indexnow.org/IndexNow' },
+    { name: 'Yandex',          url: 'https://yandex.com/indexnow' },
+    { name: 'Naver',           url: 'https://searchadvisor.naver.com/indexnow' },
+];
 
 // Parse sitemap.xml to extract all URLs
 const sitemap = readFileSync(resolve(ROOT, 'sitemap.xml'), 'utf-8');
 const urls = [...sitemap.matchAll(/<loc>([^<]+)<\/loc>/g)].map(m => m[1]);
 
-console.log(`Found ${urls.length} URLs in sitemap.xml`);
+console.log(`Found ${urls.length} URLs in sitemap.xml\n`);
 
-// Submit in batches of 100 (IndexNow limit per request)
 const BATCH_SIZE = 100;
-let submitted = 0;
 
-for (let i = 0; i < urls.length; i += BATCH_SIZE) {
-    const batch = urls.slice(i, i + BATCH_SIZE);
-    const body = {
-        host: HOST,
-        key: KEY,
-        keyLocation: `https://${HOST}/${KEY}.txt`,
-        urlList: batch
-    };
+for (const endpoint of ENDPOINTS) {
+    console.log(`Submitting to ${endpoint.name}...`);
+    let ok = 0, fail = 0;
 
-    const res = await fetch(ENDPOINT, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json; charset=utf-8' },
-        body: JSON.stringify(body)
-    });
+    for (let i = 0; i < urls.length; i += BATCH_SIZE) {
+        const batch = urls.slice(i, i + BATCH_SIZE);
+        const body = {
+            host: HOST,
+            key: KEY,
+            keyLocation: `https://${HOST}/${KEY}.txt`,
+            urlList: batch
+        };
 
-    submitted += batch.length;
+        try {
+            const res = await fetch(endpoint.url, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json; charset=utf-8' },
+                body: JSON.stringify(body)
+            });
 
-    if (res.ok || res.status === 200 || res.status === 202) {
-        console.log(`  Batch ${Math.floor(i / BATCH_SIZE) + 1}: submitted ${batch.length} URLs (${res.status})`);
-    } else {
-        const text = await res.text().catch(() => '');
-        console.error(`  Batch ${Math.floor(i / BATCH_SIZE) + 1}: FAILED (${res.status}) ${text}`);
+            if (res.ok || res.status === 202) {
+                ok += batch.length;
+            } else {
+                const text = await res.text().catch(() => '');
+                console.error(`  Batch failed (${res.status}): ${text.slice(0, 100)}`);
+                fail += batch.length;
+            }
+        } catch (err) {
+            console.error(`  Network error: ${err.message}`);
+            fail += batch.length;
+        }
     }
+
+    console.log(`  ${ok} submitted${fail ? `, ${fail} failed` : ''}\n`);
 }
 
-console.log(`\nDone! Submitted ${submitted} URLs to IndexNow.`);
-console.log('Bing, Yandex, Seznam, and Naver will process these within minutes.');
+console.log('Done! Search engines will process submitted URLs within minutes.');
