@@ -1,0 +1,73 @@
+# JobsByCulture
+
+> Culture-first job search for AI & tech professionals. Browse 1,463+ jobs filtered by culture values like async-first, work-life balance, remote-friendly, and ethical AI.
+
+## About
+
+JobsByCulture helps professionals find jobs at companies whose culture actually matches how they like to work. Instead of generic job boards, we tag every role with real culture data from employee reviews.
+
+## Key Pages
+
+- [Browse Jobs](https://jobsbyculture.com/jobs): 1,463+ AI & tech jobs filtered by 18 culture values, 12 role categories, and 8 locations
+- [Compare Cultures](https://jobsbyculture.com/compare): Side-by-side company culture comparison tool
+- [Company Directory](https://jobsbyculture.com/directory): All 19 profiled companies with ratings, values, and reviews
+
+## Company Profiles
+
+- [Anthropic](https://jobsbyculture.com/companies/anthropic): 4.4 Glassdoor, AI Safety, 95% recommend
+- [Hugging Face](https://jobsbyculture.com/companies/huggingface): 3.8 Glassdoor, Open Source, 78% recommend
+- [Databricks](https://jobsbyculture.com/companies/databricks): 4.1 Glassdoor, Data Infrastructure, 82% recommend
+- [Cohere](https://jobsbyculture.com/companies/cohere): 2.9 Glassdoor, Enterprise NLP, 48% recommend
+- [Mistral AI](https://jobsbyculture.com/companies/mistral): 4.0 Glassdoor, Open-Weight Models, 80% recommend
+- [HubSpot](https://jobsbyculture.com/companies/hubspot): 4.3 Glassdoor, Legendary Culture, 87% recommend
+- [Vercel](https://jobsbyculture.com/companies/vercel): 3.9 Glassdoor, Web Infrastructure, 72% recommend
+- [Stripe](https://jobsbyculture.com/companies/stripe): 4.0 Glassdoor, Elite Engineering, 80% recommend
+- [Perplexity AI](https://jobsbyculture.com/companies/perplexity): 4.7 Glassdoor, AI Search, 92% recommend
+- [Together AI](https://jobsbyculture.com/companies/together): 4.1 Glassdoor, Open Source AI, 82% recommend
+- [Cursor](https://jobsbyculture.com/companies/cursor): 4.0 Glassdoor, AI Code Editor, 85% recommend
+- [Linear](https://jobsbyculture.com/companies/linear): 4.6 Glassdoor, Deep Work Culture, 95% recommend
+- [Scale AI](https://jobsbyculture.com/companies/scale): 3.5 Glassdoor, AI Data Infrastructure, 56% recommend
+- [CoreWeave](https://jobsbyculture.com/companies/coreweave): 3.6 Glassdoor, GPU Cloud, 62% recommend
+- [Runway](https://jobsbyculture.com/companies/runway): 4.5 Glassdoor, AI Video Generation, 90% recommend
+- [Vast AI](https://jobsbyculture.com/companies/vast): 5.0 Glassdoor, GPU Marketplace, 100% recommend
+- [Apollo.io](https://jobsbyculture.com/companies/apollo): 4.0 Glassdoor, Sales Intelligence, 77% recommend
+- [Airbnb](https://jobsbyculture.com/companies/airbnb): 4.1 Glassdoor, Live Anywhere, 80% recommend
+- [Figma](https://jobsbyculture.com/companies/figma): 3.7 Glassdoor, Design Tools, 73% recommend
+
+## Popular Comparisons
+
+- [Anthropic vs OpenAI](https://jobsbyculture.com/compare/anthropic-vs-openai)
+- [Google vs Amazon](https://jobsbyculture.com/compare/google-vs-amazon)
+- [Figma vs Canva](https://jobsbyculture.com/compare/figma-vs-canva)
+- [Stripe vs Shopify](https://jobsbyculture.com/compare/stripe-vs-shopify)
+- [NVIDIA vs AMD](https://jobsbyculture.com/compare/nvidia-vs-amd)
+
+## Culture Values We Track
+
+1. Work-Life Balance
+2. Remote-Friendly
+3. Flexible Hours
+4. Async-First
+5. Deep Work / Low Meetings
+6. Transparent Culture
+7. Flat Hierarchy
+8. Diverse & Inclusive
+9. Safe to Fail
+10. Engineering-Driven
+11. Ship Fast & Iterate
+12. Open Source Culture
+13. Learning & Growth
+14. Strong Comp & Equity
+15. Direct Product Impact
+16. Wears Many Hats
+17. Ethical AI / Safety
+18. Mission-Driven
+
+## Data Sources
+
+Company culture ratings are sourced from Glassdoor employee reviews, public company culture documents, and verified employee feedback. AI-generated analysis uses Anthropic Claude for companies not yet profiled.
+
+## Contact
+
+Built by [@itspradz](https://x.com/itspradz)
+Website: https://jobsbyculture.com

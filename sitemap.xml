@@ -358,6 +358,13 @@
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
   </url>
+  <!-- Directory page -->
+  <url>
+    <loc>https://jobsbyculture.com/directory</loc>
+    <lastmod>2026-03-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
   <!-- Compare page -->
   <url>
     <loc>https://jobsbyculture.com/compare</loc>
@@ -482,12 +489,6 @@
   </url>
 
   <!-- Compare pages -->
-  <url>
-    <loc>https://jobsbyculture.com/compare</loc>
-    <lastmod>2026-03-05</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
   <url>
     <loc>https://jobsbyculture.com/compare/google-vs-amazon</loc>
     <lastmod>2026-03-05</lastmod>

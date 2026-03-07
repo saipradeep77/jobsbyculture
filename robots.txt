@@ -2,3 +2,23 @@ User-agent: *
 Allow: /
 
 Sitemap: https://jobsbyculture.com/sitemap.xml
+
+# LLM discovery
+# See https://llmstxt.org for spec
+User-agent: ChatGPT-User
+Allow: /llms.txt
+
+User-agent: GPTBot
+Allow: /llms.txt
+
+User-agent: Claude-Web
+Allow: /llms.txt
+
+User-agent: Anthropic-AI
+Allow: /llms.txt
+
+User-agent: Google-Extended
+Allow: /llms.txt
+
+User-agent: PerplexityBot
+Allow: /llms.txt
