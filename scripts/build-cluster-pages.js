@@ -137,7 +137,7 @@ function navHtml(activeLabel) {
             <a href="/">Home</a>
             <a href="/jobs"${activeLabel==='jobs'?' class="active"':''}>Jobs</a>
             <a href="/compare">Compare</a>
-            <a href="/directory">Companies</a>
+            <a href="/directory">Culture Directory</a>
         </div>
         <button class="hamburger" onclick="this.classList.toggle('active');this.closest('.nav-inner').querySelector('.nav-links').classList.toggle('open')" aria-label="Menu">
             <span></span><span></span><span></span>
@@ -153,7 +153,7 @@ function footerHtml() {
             <a href="/">Home</a>
             <a href="/jobs">Browse Jobs</a>
             <a href="/compare">Compare Cultures</a>
-            <a href="/directory">Company Directory</a>
+            <a href="/directory">Culture Directory</a>
             <a href="/values/remote">By Culture</a>
             <a href="/roles/engineering">By Role</a>
         </div>
