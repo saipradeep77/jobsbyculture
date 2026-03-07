@@ -2809,7 +2809,7 @@ renderJobs();
 <script>
 // Generate JobPosting schema for Google Jobs (injected synchronously for crawler visibility)
 (function() {
-    const schemaJobs = JOBS.slice(0, 50).map(j => {
+    const schemaJobs = JOBS.map(j => {
         const comp = COMPANIES[j.company] || {};
         const posted = j.posted || '3w+ ago';
         let daysAgo = 21;
@@ -2827,17 +2827,54 @@ renderJobs();
         const hasRemote = loc.toLowerCase().includes('remote');
 
         // Map location to country code and region
+        var US_CITY_STATE = {
+            'San Francisco':'CA','SF':'CA','NYC':'NY','New York':'NY','Manhattan':'NY','Brooklyn':'NY',
+            'Seattle':'WA','Bellevue':'WA','Redmond':'WA',
+            'Austin':'TX','Dallas':'TX','Plano':'TX','Houston':'TX','San Antonio':'TX','Denton':'TX','Lubbock':'TX',
+            'Chicago':'IL','Quincy':'IL',
+            'Los Angeles':'CA','Sunnyvale':'CA','Palo Alto':'CA','Mountain View':'CA','San Jose':'CA','Menlo Park':'CA','Santa Clara':'CA','Oakland':'CA','San Diego':'CA','Cupertino':'CA','Irvine':'CA','Redwood City':'CA',
+            'Boston':'MA','Cambridge':'MA','Lowell':'MA',
+            'Washington':'DC','Arlington':'VA','Richmond':'VA','McLean':'VA',
+            'Philadelphia':'PA','Pittsburgh':'PA',
+            'Las Vegas':'NV','Reno':'NV',
+            'Atlanta':'GA','Dalton':'GA',
+            'Detroit':'MI',
+            'Cincinnati':'OH','Sandusky':'OH','Cleveland':'OH','Columbus':'OH',
+            'Colorado Springs':'CO','Denver':'CO','Boulder':'CO',
+            'Minneapolis':'MN',
+            'Portland':'OR',
+            'Nashville':'TN','Clarksville':'TN',
+            'Lebanon':'NH',
+            'Aberdeen':'SD',
+            'Muskogee':'OK',
+            'Ellendale':'ND',
+            'Afton':'MO',
+            'Miami':'FL','Tampa':'FL','Orlando':'FL',
+            'Salt Lake City':'UT',
+            'Raleigh':'NC','Charlotte':'NC','Durham':'NC',
+            'Indianapolis':'IN'
+        };
         function parseAddress(locStr) {
             // For multi-location strings, use the first non-remote segment
             var seg = locStr.split(/[;|]/).map(function(s){ return s.trim(); }).filter(function(s){ return s && !/^Remote/i.test(s); })[0] || locStr;
             seg = seg.replace(/^(Office,?\s*|Hybrid\s*[—-]?\s*)/i, '').trim();
             var addr = { "@type": "PostalAddress" };
             // US states
-            var usMatch = seg.match(/,\s*(CA|NY|WA|MA|TX|NJ|OH|VA|NV|GA|PA|MO|IL|CO|SD|ND|OK|DC)\b/);
-            if (usMatch || /San Francisco|NYC|New York|Seattle|Austin|Chicago|Los Angeles|Sunnyvale|Bellevue|Boston|Palo Alto|Washington, D|Manhattan|Philadelphia|Dallas|Richmond|Detroit|Plano|Cincinnati|Colorado Springs|Lowell|Reno|Aberdeen|Dalton|Denton|Lubbock|Muskogee|Ellendale|Afton|Sandusky|Lebanon|Quincy|Clarksville|Las Vegas|Atlanta/.test(seg) || /^SF\b/.test(seg)) {
+            var usMatch = seg.match(/,\s*(CA|NY|WA|MA|TX|NJ|OH|VA|NV|GA|PA|MO|IL|CO|SD|ND|OK|DC|FL|OR|MN|MI|UT|NC|IN|TN|NH|MD|CT|WI|AZ|SC|KY|LA|AL|HI)\b/);
+            if (usMatch || /San Francisco|NYC|New York|Seattle|Austin|Chicago|Los Angeles|Sunnyvale|Bellevue|Boston|Palo Alto|Washington, D|Manhattan|Philadelphia|Dallas|Richmond|Detroit|Plano|Cincinnati|Colorado Springs|Lowell|Reno|Aberdeen|Dalton|Denton|Lubbock|Muskogee|Ellendale|Afton|Sandusky|Lebanon|Quincy|Clarksville|Las Vegas|Atlanta|Denver|Boulder|Portland|Minneapolis|Miami|Tampa|Salt Lake|Raleigh|Charlotte|Durham|Mountain View|San Jose|Menlo Park|Santa Clara|Oakland|Cupertino|Irvine|Redwood City|Cambridge|Pittsburgh|Cleveland|Columbus|Orlando|Indianapolis|Nashville|Brooklyn|Houston|San Diego|San Antonio/.test(seg) || /^SF\b/.test(seg)) {
                 var city = seg.split(/[,\/]/)[0].trim();
                 addr.addressLocality = city;
-                addr.addressRegion = usMatch ? usMatch[1] : '';
+                // Try explicit state match first, then city lookup
+                if (usMatch) {
+                    addr.addressRegion = usMatch[1];
+                } else {
+                    // Look up city in mapping
+                    var foundState = '';
+                    for (var c in US_CITY_STATE) {
+                        if (seg.indexOf(c) !== -1) { foundState = US_CITY_STATE[c]; break; }
+                    }
+                    addr.addressRegion = foundState;
+                }
                 addr.addressCountry = 'US';
             } else if (/Central US|Northeast US|Multiple U\.S\./.test(seg) || seg === 'US' || /^United States/.test(seg)) {
                 addr.addressLocality = 'United States'; addr.addressCountry = 'US';
@@ -2867,8 +2904,11 @@ renderJobs();
                 addr.addressLocality = 'Warsaw'; addr.addressCountry = 'PL';
             } else if (/Europe/.test(seg)) {
                 addr.addressLocality = 'Berlin'; addr.addressCountry = 'DE';
-            } else if (/Toronto|Montreal|Vancouver|Ottawa|Canada|, CAN/.test(seg)) {
-                addr.addressLocality = (seg.match(/Toronto|Montreal|Vancouver|Ottawa/) || ['Toronto'])[0]; addr.addressCountry = 'CA';
+            } else if (/Toronto|Montreal|Vancouver|Ottawa|Calgary|Edmonton|Waterloo|Canada|, CAN/.test(seg)) {
+                addr.addressLocality = (seg.match(/Toronto|Montreal|Vancouver|Ottawa|Calgary|Edmonton|Waterloo/) || ['Toronto'])[0];
+                var caProvinces = {'Toronto':'ON','Ottawa':'ON','Waterloo':'ON','Montreal':'QC','Vancouver':'BC','Calgary':'AB','Edmonton':'AB'};
+                addr.addressRegion = caProvinces[addr.addressLocality] || '';
+                addr.addressCountry = 'CA';
             } else if (/Bengaluru|Bangalore|Mumbai|Hyderabad|Delhi|Pune|Chennai|India/.test(seg)) {
                 addr.addressLocality = (seg.match(/Bengaluru|Bangalore|Mumbai|Hyderabad|Delhi|Pune|Chennai/) || ['Bengaluru'])[0]; addr.addressCountry = 'IN';
             } else if (/Singapore/.test(seg)) {
@@ -2903,7 +2943,21 @@ renderJobs();
                 addr.addressLocality = 'Doha'; addr.addressCountry = 'QA';
             } else {
                 addr.addressLocality = seg.split(/[,\/]/)[0].trim();
+                // Try to infer country from remaining text
+                var countryMatch = seg.match(/,\s*(Australia|New Zealand|Israel|Nigeria|Kenya|South Africa|China|Hong Kong|Indonesia|Vietnam|Thailand|Malaysia|Romania|Czech|Hungary|Finland|Sweden|Norway|Italy|Austria|Belgium|Greece|Portugal|Lithuania|Latvia|Estonia|Croatia|Slovakia|Slovenia|Bulgaria|Ukraine|Turkey|Egypt|Chile|Colombia|Peru|Ecuador)/i);
+                if (countryMatch) {
+                    var countryMap = {'Australia':'AU','New Zealand':'NZ','Israel':'IL','Nigeria':'NG','Kenya':'KE','South Africa':'ZA','China':'CN','Hong Kong':'HK','Indonesia':'ID','Vietnam':'VN','Thailand':'TH','Malaysia':'MY','Romania':'RO','Czech':'CZ','Hungary':'HU','Finland':'FI','Sweden':'SE','Norway':'NO','Italy':'IT','Austria':'AT','Belgium':'BE','Greece':'GR','Portugal':'PT','Lithuania':'LT','Latvia':'LV','Estonia':'EE','Croatia':'HR','Slovakia':'SK','Slovenia':'SI','Bulgaria':'BG','Ukraine':'UA','Turkey':'TR','Egypt':'EG','Chile':'CL','Colombia':'CO','Peru':'PE','Ecuador':'EC'};
+                    for (var cn in countryMap) {
+                        if (countryMatch[1].toLowerCase().indexOf(cn.toLowerCase()) !== -1) {
+                            addr.addressCountry = countryMap[cn]; break;
+                        }
+                    }
+                }
             }
+            // Remove empty string fields — missing is better than empty for Google
+            if (!addr.addressLocality) delete addr.addressLocality;
+            if (!addr.addressRegion) delete addr.addressRegion;
+            if (!addr.addressCountry) delete addr.addressCountry;
             return addr;
         }
 
