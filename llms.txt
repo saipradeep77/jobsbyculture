@@ -1,6 +1,6 @@
 # JobsByCulture
 
-> Culture-first job search for AI & tech professionals. Browse 1,463+ jobs filtered by culture values like async-first, work-life balance, remote-friendly, and ethical AI.
+> Culture-first job search for AI & tech professionals. Browse 2,976+ jobs filtered by culture values like async-first, work-life balance, remote-friendly, and ethical AI.
 
 ## About
 
@@ -8,9 +8,9 @@ JobsByCulture helps professionals find jobs at companies whose culture actually 
 
 ## Key Pages
 
-- [Browse Jobs](https://jobsbyculture.com/jobs): 1,463+ AI & tech jobs filtered by 18 culture values, 12 role categories, and 8 locations
+- [Browse Jobs](https://jobsbyculture.com/jobs): 2,976+ AI & tech jobs filtered by 18 culture values, 12 role categories, and 8 locations
 - [Compare Cultures](https://jobsbyculture.com/compare): Side-by-side company culture comparison tool
-- [Company Directory](https://jobsbyculture.com/directory): All 19 profiled companies with ratings, values, and reviews
+- [Company Directory](https://jobsbyculture.com/directory): All 24 profiled companies with ratings, values, and reviews
 
 ## Company Profiles
 
@@ -33,6 +33,11 @@ JobsByCulture helps professionals find jobs at companies whose culture actually 
 - [Apollo.io](https://jobsbyculture.com/companies/apollo): 4.0 Glassdoor, Sales Intelligence, 77% recommend
 - [Airbnb](https://jobsbyculture.com/companies/airbnb): 4.1 Glassdoor, Live Anywhere, 80% recommend
 - [Figma](https://jobsbyculture.com/companies/figma): 3.7 Glassdoor, Design Tools, 73% recommend
+- [ElevenLabs](https://jobsbyculture.com/companies/elevenlabs): 4.2 Glassdoor, AI Voice, 73% recommend
+- [Pinecone](https://jobsbyculture.com/companies/pinecone): 4.2 Glassdoor, Vector Database, 76% recommend
+- [Modal](https://jobsbyculture.com/companies/modal): 4.0 Glassdoor, AI Infrastructure, 85% recommend
+- [Ramp](https://jobsbyculture.com/companies/ramp): 4.2 Glassdoor, Corporate Finance, 80% recommend
+- [Weaviate](https://jobsbyculture.com/companies/weaviate): 4.3 Glassdoor, Vector Database, 81% recommend
 
 ## Popular Comparisons
 
