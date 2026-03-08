@@ -306,18 +306,15 @@
         .btn-primary:hover { background: var(--accent-hover); transform: translateY(-2px); box-shadow: 0 6px 24px rgba(232,89,12,0.2); }
         .cp-cta-center { text-align: center; margin-top: 8px; }
 
-        /* ═══ VERIFIED BADGE ═══ */
-        .cp-verified {
-            display: inline-flex; align-items: center; gap: 8px;
-            margin-top: 8px; animation: fadeUp 0.5s ease 0.12s both;
+        /* ═══ VERIFIED TICK ═══ */
+        .cp-hero h1 {
+            display: flex; align-items: center; justify-content: center; gap: 12px;
         }
-        .cp-verified-badge {
-            display: inline-flex; align-items: center; gap: 6px;
-            background: var(--teal-bg); border: 1px solid var(--teal-border);
-            padding: 6px 14px; border-radius: var(--radius-full);
-            font-size: 13px; font-weight: 600; color: var(--teal);
+        .cp-verified-tick {
+            display: inline-flex; align-items: center; justify-content: center;
+            width: 32px; height: 32px; border-radius: 50%;
+            background: #1d9bf0; flex-shrink: 0;
         }
-        .cp-verified-badge svg { flex-shrink: 0; }
 
         /* ═══ OVERALL SCORE BADGE ═══ */
         .cp-overall-badge {
@@ -399,13 +396,7 @@
 <section class="cp-hero">
     <div class="container">
         <img src="https://www.google.com/s2/favicons?domain=15five.com&sz=128" alt="15Five logo" class="cp-hero-logo">
-        <h1>15Five</h1>
-        <div class="cp-verified">
-            <span class="cp-verified-badge">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
-                Verified Culture Profile
-            </span>
-        </div>
+        <h1>15Five <span class="cp-verified-tick"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span></h1>
         <p class="cp-hero-tagline">Performance Management Platform &mdash; Human-Centered Leadership, Fully Remote</p>
         <p class="cp-consensus">The consensus on 15Five: A company that practices what it preaches about employee development and psychological safety. Best for people who want remote flexibility and a strengths-based management culture.</p>
         <div class="cp-hero-stats">
