@@ -12,6 +12,16 @@
     { "slug": "apollo",      "name": "Apollo.io",      "ats": "greenhouse", "atsSlug": "apolloio",     "domain": "apollo.io" },
     { "slug": "runway",      "name": "Runway",         "ats": "greenhouse", "atsSlug": "runwayml",     "domain": "runwayml.com" },
     { "slug": "vast",        "name": "Vast AI",        "ats": "greenhouse", "atsSlug": "vastai",       "domain": "vast.ai" },
-    { "slug": "huggingface", "name": "Hugging Face",   "ats": "workable",   "atsSlug": "huggingface",  "domain": "huggingface.co" }
+    { "slug": "huggingface", "name": "Hugging Face",   "ats": "workable",   "atsSlug": "huggingface",  "domain": "huggingface.co" },
+    { "slug": "openai",      "name": "OpenAI",         "ats": "ashby",      "atsSlug": "openai",       "domain": "openai.com" },
+    { "slug": "deepmind",    "name": "DeepMind",       "ats": "greenhouse", "atsSlug": "deepmind",     "domain": "deepmind.com" },
+    { "slug": "notion",      "name": "Notion",         "ats": "ashby",      "atsSlug": "notion",       "domain": "notion.so" },
+    { "slug": "langchain",   "name": "LangChain",      "ats": "ashby",      "atsSlug": "langchain",    "domain": "langchain.com" },
+    { "slug": "replit",      "name": "Replit",          "ats": "ashby",      "atsSlug": "replit",       "domain": "replit.com" },
+    { "slug": "elevenlabs", "name": "ElevenLabs",      "ats": "ashby",      "atsSlug": "elevenlabs",   "domain": "elevenlabs.io" },
+    { "slug": "pinecone",   "name": "Pinecone",        "ats": "ashby",      "atsSlug": "pinecone",     "domain": "pinecone.io" },
+    { "slug": "modal",      "name": "Modal",           "ats": "ashby",      "atsSlug": "modal",        "domain": "modal.com" },
+    { "slug": "ramp",       "name": "Ramp",            "ats": "ashby",      "atsSlug": "ramp",         "domain": "ramp.com" },
+    { "slug": "weaviate",   "name": "Weaviate",        "ats": "ashby",      "atsSlug": "weaviate",     "domain": "weaviate.io" }
   ]
 }

@@ -358,6 +358,36 @@
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
   </url>
+  <url>
+    <loc>https://jobsbyculture.com/jobs?company=elevenlabs</loc>
+    <lastmod>2026-03-08</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://jobsbyculture.com/jobs?company=pinecone</loc>
+    <lastmod>2026-03-08</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://jobsbyculture.com/jobs?company=modal</loc>
+    <lastmod>2026-03-08</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://jobsbyculture.com/jobs?company=ramp</loc>
+    <lastmod>2026-03-08</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://jobsbyculture.com/jobs?company=weaviate</loc>
+    <lastmod>2026-03-08</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.7</priority>
+  </url>
   <!-- Directory page -->
   <url>
     <loc>https://jobsbyculture.com/directory</loc>
@@ -484,6 +514,36 @@
   <url>
     <loc>https://jobsbyculture.com/companies/figma</loc>
     <lastmod>2026-02-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://jobsbyculture.com/companies/elevenlabs</loc>
+    <lastmod>2026-03-08</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://jobsbyculture.com/companies/pinecone</loc>
+    <lastmod>2026-03-08</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://jobsbyculture.com/companies/modal</loc>
+    <lastmod>2026-03-08</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://jobsbyculture.com/companies/ramp</loc>
+    <lastmod>2026-03-08</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://jobsbyculture.com/companies/weaviate</loc>
+    <lastmod>2026-03-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
