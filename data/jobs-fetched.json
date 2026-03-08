@@ -1992,13 +1992,13 @@
   },
   {
     "id": 182,
-    "title": "Manager, Customer Success",
+    "title": "Manager, Applied AI (Startups)",
     "company": "anthropic",
     "location": "London, UK",
     "type": "Full-time",
     "posted": "1d ago",
     "source": "API",
-    "url": "https://job-boards.greenhouse.io/anthropic/jobs/4989228008?ref=jobsbyculture.com",
+    "url": "https://job-boards.greenhouse.io/anthropic/jobs/5142110008?ref=jobsbyculture.com",
     "department": "Sales"
   },
   {
@@ -2014,6 +2014,17 @@
   },
   {
     "id": 184,
+    "title": "Manager, Customer Success",
+    "company": "anthropic",
+    "location": "London, UK",
+    "type": "Full-time",
+    "posted": "1d ago",
+    "source": "API",
+    "url": "https://job-boards.greenhouse.io/anthropic/jobs/4989228008?ref=jobsbyculture.com",
+    "department": "Sales"
+  },
+  {
+    "id": 185,
     "title": "Manager, Enterprise Account Executive, Tech",
     "company": "anthropic",
     "location": "San Francisco, CA",
@@ -2024,7 +2035,7 @@
     "department": "Sales"
   },
   {
-    "id": 185,
+    "id": 186,
     "title": "Manager, Enterprise Sales - DACH & CEE",
     "company": "anthropic",
     "location": "Munich, Germany",
@@ -2035,7 +2046,7 @@
     "department": "Sales"
   },
   {
-    "id": 186,
+    "id": 187,
     "title": "Manager, Enterprise Sales, Financial Services",
     "company": "anthropic",
     "location": "Paris, France",
@@ -2046,7 +2057,7 @@
     "department": "Sales"
   },
   {
-    "id": 187,
+    "id": 188,
     "title": "Manager, Forward Deployed Engineering",
     "company": "anthropic",
     "location": "Boston, MA; San Francisco, CA | New York City, NY; Seattle, WA; Washington, DC",
@@ -2057,7 +2068,7 @@
     "department": "Sales"
   },
   {
-    "id": 188,
+    "id": 189,
     "title": "Manager, Growth Account Executive (Startups)",
     "company": "anthropic",
     "location": "New York City, NY",
@@ -2068,29 +2079,7 @@
     "department": "Sales"
   },
   {
-    "id": 189,
-    "title": "Manager of Solutions Architecture, Applied AI (Industries)",
-    "company": "anthropic",
-    "location": "Paris, France",
-    "type": "Full-time",
-    "posted": "1d ago",
-    "source": "API",
-    "url": "https://job-boards.greenhouse.io/anthropic/jobs/5054600008?ref=jobsbyculture.com",
-    "department": "Sales"
-  },
-  {
     "id": 190,
-    "title": "Manager of Solutions Architecture, Applied AI (Industries)",
-    "company": "anthropic",
-    "location": "London, UK",
-    "type": "Full-time",
-    "posted": "1d ago",
-    "source": "API",
-    "url": "https://job-boards.greenhouse.io/anthropic/jobs/5115884008?ref=jobsbyculture.com",
-    "department": "Sales"
-  },
-  {
-    "id": 191,
     "title": "Manager of Solutions Architecture, Applied AI (Industries)",
     "company": "anthropic",
     "location": "Munich, Germany",
@@ -2101,7 +2090,7 @@
     "department": "Sales"
   },
   {
-    "id": 192,
+    "id": 191,
     "title": "Manager of Solutions Architecture, Applied AI (Industries)",
     "company": "anthropic",
     "location": "San Francisco, CA | New York City, NY",
@@ -2112,14 +2101,25 @@
     "department": "Sales"
   },
   {
+    "id": 192,
+    "title": "Manager of Solutions Architecture, Applied AI (Industries)",
+    "company": "anthropic",
+    "location": "Paris, France",
+    "type": "Full-time",
+    "posted": "1d ago",
+    "source": "API",
+    "url": "https://job-boards.greenhouse.io/anthropic/jobs/5054600008?ref=jobsbyculture.com",
+    "department": "Sales"
+  },
+  {
     "id": 193,
-    "title": "Manager of Solutions Architecture, Applied AI (Startups)",
+    "title": "Manager of Solutions Architecture, Applied AI (Industries)",
     "company": "anthropic",
     "location": "London, UK",
     "type": "Full-time",
     "posted": "1d ago",
     "source": "API",
-    "url": "https://job-boards.greenhouse.io/anthropic/jobs/5142110008?ref=jobsbyculture.com",
+    "url": "https://job-boards.greenhouse.io/anthropic/jobs/5115884008?ref=jobsbyculture.com",
     "department": "Sales"
   },
   {
@@ -8772,7 +8772,7 @@
     "company": "databricks",
     "location": "Melbourne, Australia",
     "type": "Full-time",
-    "posted": "1d ago",
+    "posted": "2d ago",
     "source": "API",
     "url": "https://databricks.com/company/careers/open-positions/job?gh_jid=8441871002?ref=jobsbyculture.com",
     "department": "Enterprise Sales"
@@ -8849,7 +8849,7 @@
     "company": "databricks",
     "location": "United States",
     "type": "Full-time",
-    "posted": "6d ago",
+    "posted": "1w ago",
     "source": "API",
     "url": "https://databricks.com/company/careers/open-positions/job?gh_jid=8335860002?ref=jobsbyculture.com",
     "department": "Professional Services Operations"
@@ -8904,7 +8904,7 @@
     "company": "databricks",
     "location": "Maryland; Virginia; Washington, D.C.",
     "type": "Full-time",
-    "posted": "6d ago",
+    "posted": "1w ago",
     "source": "API",
     "url": "https://databricks.com/company/careers/open-positions/job?gh_jid=8415203002?ref=jobsbyculture.com",
     "department": "Professional Services Operations"
@@ -9102,7 +9102,7 @@
     "company": "databricks",
     "location": "Sydney, Australia",
     "type": "Full-time",
-    "posted": "1d ago",
+    "posted": "2d ago",
     "source": "API",
     "url": "https://databricks.com/company/careers/open-positions/job?gh_jid=8441865002?ref=jobsbyculture.com",
     "department": "Enterprise Sales"
@@ -9894,7 +9894,7 @@
     "company": "databricks",
     "location": "London, United Kingdom",
     "type": "Full-time",
-    "posted": "2d ago",
+    "posted": "3d ago",
     "source": "API",
     "url": "https://databricks.com/company/careers/open-positions/job?gh_jid=8449125002?ref=jobsbyculture.com",
     "department": "Education & Training"
@@ -10928,7 +10928,7 @@
     "company": "databricks",
     "location": "Tokyo, Japan",
     "type": "Full-time",
-    "posted": "1d ago",
+    "posted": "2d ago",
     "source": "API",
     "url": "https://databricks.com/company/careers/open-positions/job?gh_jid=8437076002?ref=jobsbyculture.com",
     "department": "Field Engineering - Other"
@@ -11324,7 +11324,7 @@
     "company": "databricks",
     "location": "Melbourne, Australia",
     "type": "Full-time",
-    "posted": "1d ago",
+    "posted": "2d ago",
     "source": "API",
     "url": "https://databricks.com/company/careers/open-positions/job?gh_jid=8441879002?ref=jobsbyculture.com",
     "department": "Enterprise Sales"
@@ -13469,7 +13469,7 @@
     "company": "databricks",
     "location": "Finland",
     "type": "Full-time",
-    "posted": "5d ago",
+    "posted": "6d ago",
     "source": "API",
     "url": "https://databricks.com/company/careers/open-positions/job?gh_jid=8025551002?ref=jobsbyculture.com",
     "department": "Field Engineering - Other"
@@ -14096,7 +14096,7 @@
     "company": "databricks",
     "location": "Central - United States; Northeast - United States; Southeast - United States",
     "type": "Full-time",
-    "posted": "6d ago",
+    "posted": "1w ago",
     "source": "API",
     "url": "https://databricks.com/company/careers/open-positions/job?gh_jid=8414367002?ref=jobsbyculture.com",
     "department": "Field Engineering - BIF"
@@ -17451,7 +17451,7 @@
     "company": "hubspot",
     "location": "Flex - Madrid, Spain",
     "type": "Full-time",
-    "posted": "2d ago",
+    "posted": "3d ago",
     "source": "API",
     "url": "https://www.hubspot.com/careers/jobs/5986484?gh_jid=5986484?ref=jobsbyculture.com",
     "department": "Sales"
@@ -17462,7 +17462,7 @@
     "company": "hubspot",
     "location": "Flex - Dublin, Ireland",
     "type": "Full-time",
-    "posted": "2d ago",
+    "posted": "3d ago",
     "source": "API",
     "url": "https://www.hubspot.com/careers/jobs/5986485?gh_jid=5986485?ref=jobsbyculture.com",
     "department": "Sales"
@@ -17484,7 +17484,7 @@
     "company": "hubspot",
     "location": "Dublin, Ireland",
     "type": "Full-time",
-    "posted": "2d ago",
+    "posted": "3d ago",
     "source": "API",
     "url": "https://www.hubspot.com/careers/jobs/6382666?gh_jid=6382666?ref=jobsbyculture.com",
     "department": "Sales"
@@ -18012,7 +18012,7 @@
     "company": "hubspot",
     "location": "Tokyo, Japan",
     "type": "Full-time",
-    "posted": "4d ago",
+    "posted": "5d ago",
     "source": "API",
     "url": "https://www.hubspot.com/careers/jobs/7589346?gh_jid=7589346?ref=jobsbyculture.com",
     "department": "Services"
@@ -18298,7 +18298,7 @@
     "company": "hubspot",
     "location": "Flex - Sydney, Australia",
     "type": "Full-time",
-    "posted": "2d ago",
+    "posted": "3d ago",
     "source": "API",
     "url": "https://www.hubspot.com/careers/jobs/7661444?gh_jid=7661444?ref=jobsbyculture.com",
     "department": "Account Management"
@@ -18837,7 +18837,7 @@
     "company": "hubspot",
     "location": "Singapore",
     "type": "Full-time",
-    "posted": "5d ago",
+    "posted": "6d ago",
     "source": "API",
     "url": "https://www.hubspot.com/careers/jobs/7657092?gh_jid=7657092?ref=jobsbyculture.com",
     "department": "Sales"

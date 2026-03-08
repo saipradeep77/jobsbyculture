@@ -47,6 +47,15 @@ if (unknownCompanies.length > 0) {
     console.log('  Add them to COMPANIES{} and COMPANY_REVIEWS{} in jobs.html first.\n');
 }
 
+// Update job count in meta tags and visible text BEFORE replacing JOBS array
+// (to avoid the count regex accidentally matching job IDs inside the array)
+const oldCount = html.match(/Browse ([\d,]+) AI/)?.[1] || '1,463';
+const newCount = knownJobs.length.toLocaleString();
+html = html.replace(new RegExp(oldCount.replace(/,/g, ',?'), 'g'), newCount);
+
+// Also update any hardcoded "1,463" references
+html = html.replace(/1,?463/g, newCount);
+
 // Format jobs as JS array entries
 const jobLines = knownJobs.map(j => {
     const title = j.title.replace(/'/g, "\\'");
@@ -59,7 +68,7 @@ const jobLines = knownJobs.map(j => {
 
 const newJobsBlock = `const JOBS = [\n${jobLines}\n];`;
 
-// Replace JOBS array in HTML
+// Replace JOBS array in HTML (AFTER count replacement to avoid corrupting job IDs)
 const jobsRegex = /const JOBS = \[[\s\S]*?\n\];/;
 if (!jobsRegex.test(html)) {
     console.error('Could not find JOBS array in jobs.html');
@@ -67,14 +76,6 @@ if (!jobsRegex.test(html)) {
 }
 
 html = html.replace(jobsRegex, newJobsBlock);
-
-// Update job count in meta tags and visible text
-const oldCount = html.match(/Browse ([\d,]+) AI/)?.[1] || '1,463';
-const newCount = knownJobs.length.toLocaleString();
-html = html.replace(new RegExp(oldCount.replace(/,/g, ',?'), 'g'), newCount);
-
-// Also update any hardcoded "1,463" references
-html = html.replace(/1,?463/g, newCount);
 
 writeFileSync(htmlPath, html);
 

@@ -10,7 +10,8 @@
     "fetch-jobs": "node scripts/fetch-jobs.js",
     "update-jobs": "node scripts/update-jobs-html.js",
     "detect-ats": "node scripts/detect-ats.js",
-    "refresh": "node scripts/fetch-jobs.js && node scripts/update-jobs-html.js && node scripts/build-cluster-pages.js && node scripts/indexnow.js"
+    "export-social": "node scripts/export-social.js",
+    "refresh": "node scripts/fetch-jobs.js && node scripts/update-jobs-html.js && node scripts/build-cluster-pages.js && node scripts/indexnow.js && node scripts/export-social.js"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.39.0"
