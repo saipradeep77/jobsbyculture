@@ -306,6 +306,19 @@
         .btn-primary:hover { background: var(--accent-hover); transform: translateY(-2px); box-shadow: 0 6px 24px rgba(232,89,12,0.2); }
         .cp-cta-center { text-align: center; margin-top: 8px; }
 
+        /* ═══ VERIFIED BADGE ═══ */
+        .cp-verified {
+            display: inline-flex; align-items: center; gap: 8px;
+            margin-top: 8px; animation: fadeUp 0.5s ease 0.12s both;
+        }
+        .cp-verified-badge {
+            display: inline-flex; align-items: center; gap: 6px;
+            background: var(--teal-bg); border: 1px solid var(--teal-border);
+            padding: 6px 14px; border-radius: var(--radius-full);
+            font-size: 13px; font-weight: 600; color: var(--teal);
+        }
+        .cp-verified-badge svg { flex-shrink: 0; }
+
         /* ═══ OVERALL SCORE BADGE ═══ */
         .cp-overall-badge {
             display: inline-flex; align-items: center; gap: 12px;
@@ -340,7 +353,23 @@
         }
         .claim-banner h2 em { color: var(--accent); font-style: italic; }
         .claim-banner p { font-size: 16px; color: #9ca3af; margin-bottom: 24px; max-width: 500px; margin-left: auto; margin-right: auto; }
-        .claim-banner .btn-primary { font-size: 16px; padding: 16px 36px; }
+        .claim-form {
+            display: flex; gap: 10px; max-width: 520px; margin: 0 auto;
+            flex-wrap: wrap; justify-content: center;
+        }
+        .claim-form input {
+            flex: 1; min-width: 180px; padding: 14px 18px; border-radius: var(--radius);
+            border: 1px solid rgba(255,255,255,0.15); background: rgba(255,255,255,0.08);
+            color: #fff; font-size: 15px; font-family: var(--font-body);
+            outline: none; transition: border-color 0.2s;
+        }
+        .claim-form input::placeholder { color: rgba(255,255,255,0.4); }
+        .claim-form input:focus { border-color: var(--accent); }
+        .claim-form .btn-primary { font-size: 15px; padding: 14px 28px; white-space: nowrap; }
+        .claim-success {
+            display: none; color: var(--teal); font-size: 16px; font-weight: 600;
+            padding: 16px; animation: fadeUp 0.3s ease both;
+        }
 
         /* ═══ RESPONSIVE ═══ */
         @media (max-width: 768px) {
@@ -371,6 +400,12 @@
     <div class="container">
         <img src="https://www.google.com/s2/favicons?domain=15five.com&sz=128" alt="15Five logo" class="cp-hero-logo">
         <h1>15Five</h1>
+        <div class="cp-verified">
+            <span class="cp-verified-badge">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                Verified Culture Profile
+            </span>
+        </div>
         <p class="cp-hero-tagline">Performance Management Platform &mdash; Human-Centered Leadership, Fully Remote</p>
         <p class="cp-consensus">The consensus on 15Five: A company that practices what it preaches about employee development and psychological safety. Best for people who want remote flexibility and a strengths-based management culture.</p>
         <div class="cp-hero-stats">
@@ -592,7 +627,12 @@
     <div class="container">
         <h2>This is your <em>Verified Culture Profile</em></h2>
         <p>Claim it to update your story, add custom quotes, and automatically sync all open roles from your careers page.</p>
-        <a href="mailto:pradeep@jobsbyculture.com?subject=Claim 15Five Profile" class="btn-primary">Claim This Profile &rarr;</a>
+        <form class="claim-form" id="claimForm" onsubmit="return submitClaim(event)">
+            <input type="text" name="name" placeholder="Your name" required>
+            <input type="email" name="email" placeholder="Work email" required>
+            <button type="submit" class="btn-primary">Claim Profile &rarr;</button>
+        </form>
+        <div class="claim-success" id="claimSuccess">&#10003; Thanks! We'll be in touch shortly.</div>
     </div>
 </section>
 
@@ -632,6 +672,32 @@ function renderJobs() {
 }
 
 renderJobs();
+
+function submitClaim(e) {
+    e.preventDefault();
+    var form = document.getElementById('claimForm');
+    var data = new FormData(form);
+    data.append('_subject', 'Profile Claim: 15Five');
+    data.append('_captcha', 'false');
+    data.append('_template', 'table');
+    data.append('company', '15Five');
+
+    fetch('https://formsubmit.co/ajax/saipradeep7@gmail.com', {
+        method: 'POST',
+        body: data
+    }).then(function(res) {
+        if (res.ok) {
+            form.style.display = 'none';
+            document.getElementById('claimSuccess').style.display = 'block';
+        }
+    }).catch(function() {
+        // Fallback: open email client
+        var name = data.get('name');
+        var email = data.get('email');
+        window.location.href = 'mailto:saipradeep7@gmail.com?subject=Claim 15Five Profile&body=Name: ' + name + '%0AEmail: ' + email;
+    });
+    return false;
+}
 </script>
 
 </body>
