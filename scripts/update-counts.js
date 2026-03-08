@@ -36,7 +36,7 @@ function classifyRole(title) {
     if (/(data scien|data eng|data analy|data infra|data platform|analytics engineer|business intel)/.test(t)) return 'data';
     if (/design/.test(t) && !/engineer|security/.test(t)) return 'design';
     if (/(product manag|program manag|technical program|product owner|product lead|head of product|product strateg|product director|product operation|product analys|scrum master|agile coach)/.test(t)) return 'product';
-    if (/(engineer|developer|swe|software|frontend|backend|fullstack|full-stack|devops|sre|infrastructure|platform|architect|firmware|embedded)/.test(t) && !/(solutions engineer|solutions architect|sales engineer|developer relations|devrel)/.test(t)) return 'engineering';
+    if (/(engineer|developer|swe|software|frontend|backend|fullstack|full-stack|devops|sre|infrastructure|platform|architect|firmware|embedded)/.test(t) && !/(solutions engineer|solutions architect|sales engineer|developer relations|devrel|account exec|account manag)/.test(t)) return 'engineering';
     if (/(marketing|growth|content|seo|communications|brand|copywriter|developer relations|devrel|community manag|editorial|creative)/.test(t)) return 'marketing';
     if (/(sales|account exec|account manag|business develop|revenue|gtm|go-to-market|solutions|partnerships|customer success|pre-sales)/.test(t) && !/accountant/.test(t)) return 'sales';
     if (/(finance|accounti|accountant|controller|treasury|fp&a|financial|investor relations)/.test(t)) return 'finance';
@@ -152,8 +152,57 @@ indexHtml = indexHtml.replace(
     `$1${fmt(totalJobs)}$2`
 );
 
+// Featured jobs — pick 8 recent jobs from different companies, prefer eng/ml/data roles
+const featuredRoles = new Set(['engineering', 'ml-ai', 'data', 'design', 'product']);
+
+// Build best candidate per company (prefer featured roles)
+const bestPerCompany = {};
+for (const job of knownJobs) {
+    const co = job.company;
+    const role = classifyRole(job.title);
+    const isFeatured = featuredRoles.has(role);
+    if (!bestPerCompany[co] || (isFeatured && !bestPerCompany[co].isFeatured)) {
+        bestPerCompany[co] = { job, isFeatured };
+    }
+}
+// Sort: companies with featured roles first, then by job count (bigger = more recognizable)
+const featured = Object.entries(bestPerCompany)
+    .sort((a, b) => {
+        const af = a[1].isFeatured ? 1 : 0, bf = b[1].isFeatured ? 1 : 0;
+        if (af !== bf) return bf - af;
+        return (companyTotals[b[0]] || 0) - (companyTotals[a[0]] || 0);
+    })
+    .slice(0, 8)
+    .map(([, c]) => c.job);
+
+const featuredCards = featured.map(job => {
+    const co = COMPANIES[job.company];
+    const domain = co.careers.replace(/https?:\/\/(www\.)?/, '').replace(/\/.*/, '');
+    return `                <a href="${job.url}" target="_blank" class="fj-card">
+                    <div class="fj-top">
+                        <img src="https://www.google.com/s2/favicons?domain=${domain}&sz=128" alt="${co.name}" class="fj-logo">
+                        <div>
+                            <div class="fj-title">${job.title}</div>
+                            <div class="fj-company">${co.name}</div>
+                        </div>
+                    </div>
+                    <div class="fj-meta">
+                        <span class="fj-loc">${job.location || 'Remote'}</span>
+                    </div>
+                    <div class="fj-bottom">
+                        <span class="fj-posted">${job.posted || 'Recent'}</span>
+                        <span class="fj-apply">Apply →</span>
+                    </div>
+                </a>`;
+}).join('\n');
+
+indexHtml = indexHtml.replace(
+    /(<div class="fj-grid">)[\s\S]*?(<\/div>\s*<div class="fj-cta">)/,
+    `$1\n\n${featuredCards}\n        $2`
+);
+
 writeFileSync(resolve(ROOT, 'index.html'), indexHtml);
-console.log(`✓ index.html — CRC (${Object.keys(sortedCRC).length}), CV (${Object.keys(cv).length}), ${valueCardSlugs.length} value cards, hero, meta`);
+console.log(`✓ index.html — CRC (${Object.keys(sortedCRC).length}), CV (${Object.keys(cv).length}), ${valueCardSlugs.length} value cards, ${featured.length} featured jobs, hero, meta`);
 
 // ═══════════════════════════════════════════════════════════════
 // UPDATE compare.html
