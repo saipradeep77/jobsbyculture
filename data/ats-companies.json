@@ -22,6 +22,12 @@
     { "slug": "pinecone",   "name": "Pinecone",        "ats": "ashby",      "atsSlug": "pinecone",     "domain": "pinecone.io" },
     { "slug": "modal",      "name": "Modal",           "ats": "ashby",      "atsSlug": "modal",        "domain": "modal.com" },
     { "slug": "ramp",       "name": "Ramp",            "ats": "ashby",      "atsSlug": "ramp",         "domain": "ramp.com" },
-    { "slug": "weaviate",   "name": "Weaviate",        "ats": "ashby",      "atsSlug": "weaviate",     "domain": "weaviate.io" }
+    { "slug": "weaviate",   "name": "Weaviate",        "ats": "ashby",      "atsSlug": "weaviate",     "domain": "weaviate.io" },
+    { "slug": "airbnb",    "name": "Airbnb",          "ats": "greenhouse", "atsSlug": "airbnb",       "domain": "airbnb.com" },
+    { "slug": "coreweave", "name": "CoreWeave",       "ats": "greenhouse", "atsSlug": "coreweave",    "domain": "coreweave.com" },
+    { "slug": "cursor",    "name": "Cursor",          "ats": "ashby",      "atsSlug": "cursor",       "domain": "cursor.com" },
+    { "slug": "figma",     "name": "Figma",           "ats": "greenhouse", "atsSlug": "figma",        "domain": "figma.com" },
+    { "slug": "linear",    "name": "Linear",          "ats": "ashby",      "atsSlug": "linear",       "domain": "linear.app" },
+    { "slug": "vercel",    "name": "Vercel",          "ats": "greenhouse", "atsSlug": "vercel",       "domain": "vercel.com" }
   ]
 }

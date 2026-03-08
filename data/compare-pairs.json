@@ -7,6 +7,7 @@
   ["apple", "microsoft"],
   ["meta", "amazon"],
   ["netflix", "google"],
+  ["google", "netflix"],
   ["meta", "apple"],
   ["anthropic", "openai"],
   ["anthropic", "google"],

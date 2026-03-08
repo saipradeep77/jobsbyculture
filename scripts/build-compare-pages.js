@@ -8,7 +8,7 @@
  */
 
 import Anthropic from '@anthropic-ai/sdk';
-import { readFileSync, writeFileSync, existsSync } from 'fs';
+import { readFileSync, writeFileSync, existsSync, mkdirSync } from 'fs';
 import { resolve, dirname } from 'path';
 import { fileURLToPath } from 'url';
 
@@ -536,6 +536,9 @@ async function main() {
     // Save cache after all API calls
     writeFileSync(cachePath, JSON.stringify(cache, null, 2));
     console.log(`\nSaved cache (${Object.keys(cache).length} entries)`);
+
+    // Ensure compare/ directory exists
+    mkdirSync(resolve(ROOT, 'compare'), { recursive: true });
 
     // Generate pages
     const generatedSlugs = [];
