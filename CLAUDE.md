@@ -79,7 +79,7 @@ This runs 4 scripts in sequence:
 3. `build-cluster-pages.js` — Rebuilds 162+ programmatic SEO pages
 4. `indexnow.js` — Submits all URLs to search engines (Bing, Yandex, Naver)
 
-### Step 8: Commit & Push
+### Step 8: Commit (DO NOT PUSH)
 ```bash
 git add -A
 git commit -m "Add [company names] + refresh all jobs
@@ -89,8 +89,9 @@ git commit -m "Add [company names] + refresh all jobs
 - Rebuilt cluster pages and submitted to IndexNow
 
 Co-Authored-By: Claude Opus 4.6 <noreply@anthropic.com>"
-git push
 ```
+
+**IMPORTANT: Do NOT run `git push`. The owner will review and push to production manually.**
 
 ## Important Rules
 
