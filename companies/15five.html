@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>15Five Culture &amp; Jobs | JobsByCulture</title>
+    <meta name="description" content="15Five culture profile: 3.1 Glassdoor, remote-first, human-centered leadership. See open roles and real employee reviews.">
+    <meta name="robots" content="noindex, nofollow">
+    <meta property="og:title" content="15Five Culture &amp; Jobs | JobsByCulture">
+    <meta property="og:description" content="15Five culture profile: 3.1 Glassdoor, remote-first, human-centered leadership. See open roles and real employee reviews.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://jobsbyculture.com/og-image.png">
+    <meta property="og:image:type" content="image/png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Satoshi:wght@400;500;600;700;900&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #fafaf8;
+            --bg-raised: #ffffff;
+            --bg-card: #ffffff;
+            --bg-hover: #f4f3ef;
+            --text: #1a1a1f;
+            --text-2: #52525b;
+            --text-3: #9ca3af;
+            --accent: #e8590c;
+            --accent-hover: #c2410c;
+            --accent-bg: rgba(232,89,12,0.06);
+            --accent-border: rgba(232,89,12,0.2);
+            --teal: #0d9488;
+            --teal-bg: rgba(13,148,136,0.06);
+            --teal-border: rgba(13,148,136,0.2);
+            --violet: #7c3aed;
+            --violet-bg: rgba(124,58,237,0.06);
+            --violet-border: rgba(124,58,237,0.2);
+            --rose: #e11d48;
+            --rose-bg: rgba(225,29,72,0.06);
+            --rose-border: rgba(225,29,72,0.2);
+            --sky: #0284c7;
+            --sky-bg: rgba(2,132,199,0.06);
+            --sky-border: rgba(2,132,199,0.2);
+            --lime: #4d7c0f;
+            --lime-bg: rgba(77,124,15,0.06);
+            --lime-border: rgba(77,124,15,0.2);
+            --border: rgba(0,0,0,0.07);
+            --border-2: rgba(0,0,0,0.12);
+            --border-3: rgba(0,0,0,0.18);
+            --radius: 12px;
+            --radius-sm: 8px;
+            --radius-lg: 20px;
+            --radius-full: 100px;
+            --font-display: 'Instrument Serif', Georgia, serif;
+            --font-body: 'Satoshi', -apple-system, sans-serif;
+            --font-mono: 'IBM Plex Mono', monospace;
+            --shadow: 0 4px 24px rgba(0,0,0,0.06), 0 1px 3px rgba(0,0,0,0.04);
+            --shadow-lg: 0 12px 48px rgba(0,0,0,0.08);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body {
+            font-family: var(--font-body);
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+            overflow-x: hidden;
+        }
+        .container { max-width: 1140px; margin: 0 auto; padding: 0 24px; }
+
+        .cp-consensus {
+            font-size: 15px; color: var(--text-2); max-width: 620px;
+            margin: -16px auto 32px; line-height: 1.7;
+            padding: 16px 24px; background: var(--accent-bg);
+            border: 1px solid var(--accent-border); border-radius: var(--radius);
+            text-align: center; animation: fadeUp 0.5s ease 0.2s both;
+        }
+
+        /* ═══ NAV ═══ */
+        nav {
+            position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+            background: rgba(250,250,248,0.85);
+            backdrop-filter: blur(24px) saturate(1.4);
+            border-bottom: 1px solid var(--border);
+        }
+        .nav-inner {
+            max-width: 1140px; margin: 0 auto; padding: 14px 24px;
+            display: flex; align-items: center; justify-content: space-between;
+        }
+        .nav-logo { display: flex; align-items: center; gap: 10px; text-decoration: none; color: var(--text); }
+        .nav-mark {
+            width: 30px; height: 30px; position: relative;
+            display: flex; align-items: center; justify-content: center;
+        }
+        .nav-mark .ring {
+            position: absolute; border: 1.5px solid var(--accent); border-radius: 50%;
+            animation: logoPing 2.5s ease-out infinite;
+        }
+        .nav-mark .ring-1 { width: 100%; height: 100%; opacity: 0.2; }
+        .nav-mark .ring-2 { width: 65%; height: 65%; opacity: 0.4; animation-delay: 0.3s; }
+        .nav-mark .nav-dot { width: 7px; height: 7px; background: var(--accent); border-radius: 50%; position: relative; z-index: 1; }
+        @keyframes logoPing { 0% { transform: scale(1); opacity: 0.4; } 100% { transform: scale(1.5); opacity: 0; } }
+        .nav-wordmark { font-weight: 700; font-size: 16px; letter-spacing: -0.03em; }
+        .nav-wordmark span { color: var(--accent); }
+        .nav-badge {
+            font-family: var(--font-mono); font-size: 11px; font-weight: 500;
+            color: var(--accent); background: var(--accent-bg); border: 1px solid var(--accent-border);
+            padding: 4px 12px; border-radius: var(--radius-full);
+        }
+
+        /* ═══ ANIMATIONS ═══ */
+        @keyframes fadeUp {
+            from { opacity: 0; transform: translateY(16px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* ═══ HERO ═══ */
+        .cp-hero {
+            padding: 130px 0 60px;
+            position: relative;
+            text-align: center;
+        }
+        .cp-hero::before {
+            content: ''; position: absolute; top: -100px; left: 50%; transform: translateX(-50%);
+            width: 900px; height: 600px;
+            background: radial-gradient(ellipse, rgba(232,89,12,0.06) 0%, transparent 70%);
+            pointer-events: none;
+        }
+        .cp-hero-logo {
+            width: 48px; height: 48px; border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            margin: 0 auto 20px;
+            animation: fadeUp 0.5s ease both;
+        }
+        .cp-hero h1 {
+            font-family: var(--font-display); font-weight: 400;
+            font-size: clamp(36px, 4.5vw, 60px);
+            line-height: 1.1; letter-spacing: -0.025em;
+            margin-bottom: 12px;
+            animation: fadeUp 0.5s ease 0.08s both;
+        }
+        .cp-hero-tagline {
+            font-size: 18px; color: var(--text-2); max-width: 560px;
+            line-height: 1.6; margin: 0 auto 32px;
+            animation: fadeUp 0.5s ease 0.16s both;
+        }
+        .cp-hero-stats {
+            display: flex; justify-content: center; gap: 40px; flex-wrap: wrap;
+            animation: fadeUp 0.5s ease 0.24s both;
+        }
+        .cp-stat { text-align: center; }
+        .cp-stat-val {
+            font-family: var(--font-mono); font-size: 22px; font-weight: 500;
+            letter-spacing: -0.02em; color: var(--text);
+        }
+        .cp-stat-label {
+            font-size: 13px; color: var(--text-3); margin-top: 2px;
+        }
+
+        /* ═══ SECTIONS ═══ */
+        .cp-section {
+            padding: 56px 0;
+            border-top: 1px solid var(--border);
+        }
+        .cp-section-alt { background: var(--bg-raised); }
+        .s-label {
+            font-family: var(--font-mono); font-size: 11px; text-transform: uppercase;
+            letter-spacing: 0.14em; color: var(--accent); display: block; margin-bottom: 14px;
+        }
+        .s-title {
+            font-family: var(--font-display); font-size: clamp(26px, 2.8vw, 38px);
+            line-height: 1.15; font-weight: 400; margin-bottom: 20px;
+        }
+        .s-title em { font-style: italic; color: var(--accent); }
+        .s-desc {
+            font-size: 16px; color: var(--text-2); max-width: 640px;
+            line-height: 1.7; margin-bottom: 32px;
+        }
+
+        /* ═══ CULTURE TAGS ═══ */
+        .cp-values-tags { display: flex; flex-wrap: wrap; gap: 10px; }
+        .value-pill {
+            display: inline-flex; align-items: center; gap: 6px;
+            padding: 8px 16px; border-radius: var(--radius-full);
+            font-size: 14px; font-weight: 500; border: 1px solid;
+        }
+        .value-pill.rose { color: var(--rose); background: var(--rose-bg); border-color: var(--rose-border); }
+        .value-pill.orange { color: var(--accent); background: var(--accent-bg); border-color: var(--accent-border); }
+        .value-pill.sky { color: var(--sky); background: var(--sky-bg); border-color: var(--sky-border); }
+        .value-pill.violet { color: var(--violet); background: var(--violet-bg); border-color: var(--violet-border); }
+        .value-pill.teal { color: var(--teal); background: var(--teal-bg); border-color: var(--teal-border); }
+
+        /* ═══ RATINGS ═══ */
+        .cp-ratings-grid {
+            display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 16px;
+            margin-bottom: 28px;
+        }
+        .cp-rating-item {
+            background: var(--bg-card); border: 1px solid var(--border);
+            border-radius: var(--radius); padding: 20px;
+        }
+        .cp-rating-header {
+            display: flex; justify-content: space-between; align-items: center;
+            margin-bottom: 10px;
+        }
+        .cp-rating-label { font-size: 14px; font-weight: 500; color: var(--text); }
+        .cp-rating-score { font-family: var(--font-mono); font-size: 18px; font-weight: 500; }
+        .cp-rating-score.teal { color: var(--teal); }
+        .cp-rating-score.amber { color: #d97706; }
+        .cp-rating-score.rose { color: var(--rose); }
+        .cp-rating-bar {
+            width: 100%; height: 6px; border-radius: 3px;
+            background: var(--bg-hover); overflow: hidden;
+        }
+        .cp-rating-fill { height: 100%; border-radius: 3px; transition: width 0.6s ease; }
+        .cp-rating-fill.teal { background: var(--teal); }
+        .cp-rating-fill.amber { background: #d97706; }
+        .cp-rating-fill.rose { background: var(--rose); }
+
+        .cp-approval-row { display: flex; gap: 24px; flex-wrap: wrap; }
+        .cp-approval-badge {
+            display: inline-flex; align-items: center; gap: 8px;
+            background: var(--teal-bg); border: 1px solid var(--teal-border);
+            padding: 10px 20px; border-radius: var(--radius-full);
+            font-size: 15px; font-weight: 600; color: var(--teal);
+        }
+        .cp-approval-badge.amber {
+            background: rgba(217,119,6,0.06); border-color: rgba(217,119,6,0.2); color: #d97706;
+        }
+
+        /* ═══ REVIEWS ═══ */
+        .cp-reviews-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+        .cp-review-col h3 {
+            font-size: 16px; font-weight: 600; margin-bottom: 16px;
+            display: flex; align-items: center; gap: 8px;
+        }
+        .cp-review-col h3 .icon-pro { color: var(--teal); }
+        .cp-review-col h3 .icon-con { color: var(--rose); }
+        .cp-review-list { list-style: none; display: flex; flex-direction: column; gap: 12px; }
+        .cp-review-list li {
+            display: flex; gap: 10px; align-items: flex-start;
+            font-size: 15px; color: var(--text-2); line-height: 1.6;
+        }
+        .cp-review-list li .check {
+            flex-shrink: 0; width: 20px; height: 20px; border-radius: 50%;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 12px; margin-top: 2px;
+        }
+        .check-pro { background: var(--teal-bg); color: var(--teal); }
+        .check-con { background: var(--rose-bg); color: var(--rose); }
+
+        /* ═══ ENG CULTURE ═══ */
+        .cp-eng-grid {
+            display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 16px;
+        }
+        .cp-eng-card {
+            background: var(--bg-card); border: 1px solid var(--border);
+            border-radius: var(--radius); padding: 22px;
+        }
+        .cp-eng-card h4 {
+            font-size: 13px; font-weight: 600; text-transform: uppercase;
+            letter-spacing: 0.06em; color: var(--text-3); margin-bottom: 12px;
+        }
+        .cp-eng-tags { display: flex; flex-wrap: wrap; gap: 8px; }
+        .cp-eng-tag {
+            font-family: var(--font-mono); font-size: 13px; font-weight: 500;
+            padding: 5px 12px; border-radius: var(--radius-sm);
+            background: var(--sky-bg); border: 1px solid var(--sky-border); color: var(--sky);
+        }
+        .cp-eng-card p { font-size: 15px; color: var(--text-2); line-height: 1.6; }
+
+        /* ═══ JOB CARDS ═══ */
+        .cp-jobs-grid {
+            display: grid; grid-template-columns: repeat(auto-fill, minmax(340px, 1fr)); gap: 12px;
+            margin-bottom: 32px;
+        }
+        .cp-job-card {
+            display: flex; flex-direction: column; justify-content: space-between;
+            background: var(--bg-card); border: 1px solid var(--border);
+            border-radius: var(--radius); padding: 20px;
+            text-decoration: none; color: var(--text); transition: all 0.2s;
+        }
+        .cp-job-card:hover {
+            border-color: var(--accent); transform: translateY(-2px);
+            box-shadow: var(--shadow);
+        }
+        .cp-job-title { font-size: 15px; font-weight: 600; line-height: 1.4; margin-bottom: 8px; }
+        .cp-job-location {
+            font-size: 13px; color: var(--text-3); margin-bottom: 14px;
+            display: flex; align-items: center; gap: 6px;
+        }
+        .cp-job-apply {
+            font-size: 13px; font-weight: 600; color: var(--accent);
+            display: inline-flex; align-items: center; gap: 4px;
+        }
+        .btn-primary {
+            display: inline-flex; align-items: center; gap: 8px;
+            background: var(--accent); color: #fff; padding: 13px 28px;
+            border-radius: var(--radius); font-size: 15px; font-weight: 700;
+            text-decoration: none; transition: all 0.25s; border: none; cursor: pointer;
+            font-family: var(--font-body);
+        }
+        .btn-primary:hover { background: var(--accent-hover); transform: translateY(-2px); box-shadow: 0 6px 24px rgba(232,89,12,0.2); }
+        .cp-cta-center { text-align: center; margin-top: 8px; }
+
+        /* ═══ OVERALL SCORE BADGE ═══ */
+        .cp-overall-badge {
+            display: inline-flex; align-items: center; gap: 12px;
+            background: var(--bg-card); border: 1px solid var(--border);
+            border-radius: var(--radius); padding: 16px 24px;
+            margin-bottom: 28px;
+        }
+        .cp-overall-score {
+            font-family: var(--font-mono); font-size: 36px; font-weight: 500;
+        }
+        .cp-overall-score.amber { color: #d97706; }
+        .cp-overall-meta { text-align: left; }
+        .cp-overall-label { font-size: 14px; font-weight: 600; color: var(--text); }
+        .cp-overall-sub { font-size: 13px; color: var(--text-3); }
+
+        /* ═══ FOOTER ═══ */
+        .cp-footer {
+            padding: 40px 0;
+            border-top: 1px solid var(--border);
+            text-align: center;
+        }
+        .cp-footer p { font-size: 13px; color: var(--text-3); }
+        .cp-footer p a { color: var(--accent); text-decoration: none; }
+
+        /* ═══ CLAIM BANNER ═══ */
+        .claim-banner {
+            background: linear-gradient(135deg, #1a1a1f 0%, #2d1b0e 100%);
+            padding: 48px 0; text-align: center;
+        }
+        .claim-banner h2 {
+            font-family: var(--font-display); font-size: 32px; color: #fff; font-weight: 400; margin-bottom: 12px;
+        }
+        .claim-banner h2 em { color: var(--accent); font-style: italic; }
+        .claim-banner p { font-size: 16px; color: #9ca3af; margin-bottom: 24px; max-width: 500px; margin-left: auto; margin-right: auto; }
+        .claim-banner .btn-primary { font-size: 16px; padding: 16px 36px; }
+
+        /* ═══ RESPONSIVE ═══ */
+        @media (max-width: 768px) {
+            .cp-hero { padding: 110px 0 40px; }
+            .cp-hero-stats { gap: 24px; }
+            .cp-reviews-grid { grid-template-columns: 1fr; }
+            .cp-ratings-grid { grid-template-columns: 1fr; }
+            .cp-jobs-grid { grid-template-columns: 1fr; }
+            .cp-eng-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+<!-- ═══ NAV (demo — no links) ═══ -->
+<nav>
+    <div class="nav-inner">
+        <a href="/" class="nav-logo">
+            <div class="nav-mark"><div class="ring ring-1"></div><div class="ring ring-2"></div><div class="nav-dot"></div></div>
+            <div class="nav-wordmark">Jobs<span>By</span>Culture</div>
+        </a>
+        <span class="nav-badge">Verified Culture Profile</span>
+    </div>
+</nav>
+
+<!-- ═══ HERO ═══ -->
+<section class="cp-hero">
+    <div class="container">
+        <img src="https://www.google.com/s2/favicons?domain=15five.com&sz=128" alt="15Five logo" class="cp-hero-logo">
+        <h1>15Five</h1>
+        <p class="cp-hero-tagline">Performance Management Platform &mdash; Human-Centered Leadership, Fully Remote</p>
+        <p class="cp-consensus">The consensus on 15Five: A company that practices what it preaches about employee development and psychological safety. Best for people who want remote flexibility and a strengths-based management culture.</p>
+        <div class="cp-hero-stats">
+            <div class="cp-stat">
+                <div class="cp-stat-val">2011</div>
+                <div class="cp-stat-label">Founded</div>
+            </div>
+            <div class="cp-stat">
+                <div class="cp-stat-val">San Francisco, CA</div>
+                <div class="cp-stat-label">Headquarters</div>
+            </div>
+            <div class="cp-stat">
+                <div class="cp-stat-val">~240</div>
+                <div class="cp-stat-label">Employees</div>
+            </div>
+            <div class="cp-stat">
+                <div class="cp-stat-val">Series B</div>
+                <div class="cp-stat-label">Private</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ═══ CULTURE OVERVIEW ═══ -->
+<section class="cp-section cp-section-alt">
+    <div class="container">
+        <span class="s-label">Culture Overview</span>
+        <h2 class="s-title">What it's <em>really</em> like to work at 15Five</h2>
+        <p class="s-desc">15Five literally builds the software that helps other companies create better cultures &mdash; and they aim to walk the talk internally. Founded by David Hassell with a mission to unlock human potential at work, the company pioneered the Best-Self Management methodology grounded in positive psychology and psychological safety. As a fully remote team of ~240, they emphasize strengths-based development, continuous feedback, and conscious leadership.</p>
+        <div class="cp-values-tags">
+            <span class="value-pill violet">Psychological Safety</span>
+            <span class="value-pill teal">Remote-First</span>
+            <span class="value-pill orange">Learning &amp; Growth</span>
+            <span class="value-pill violet">Transparent Culture</span>
+            <span class="value-pill teal">Flexible Hours</span>
+            <span class="value-pill rose">Mission-Driven</span>
+        </div>
+    </div>
+</section>
+
+<!-- ═══ GLASSDOOR RATINGS ═══ -->
+<section class="cp-section">
+    <div class="container">
+        <span class="s-label">Glassdoor Ratings</span>
+        <h2 class="s-title">What employees <em>actually</em> say</h2>
+
+        <div class="cp-overall-badge">
+            <div class="cp-overall-score amber">3.1</div>
+            <div class="cp-overall-meta">
+                <div class="cp-overall-label">Overall Glassdoor Score</div>
+                <div class="cp-overall-sub">Based on 217 reviews</div>
+            </div>
+        </div>
+
+        <div class="cp-ratings-grid">
+            <div class="cp-rating-item">
+                <div class="cp-rating-header">
+                    <span class="cp-rating-label">Culture &amp; Values</span>
+                    <span class="cp-rating-score amber">3.2</span>
+                </div>
+                <div class="cp-rating-bar"><div class="cp-rating-fill amber" style="width: 64%"></div></div>
+            </div>
+            <div class="cp-rating-item">
+                <div class="cp-rating-header">
+                    <span class="cp-rating-label">Work-Life Balance</span>
+                    <span class="cp-rating-score amber">3.6</span>
+                </div>
+                <div class="cp-rating-bar"><div class="cp-rating-fill amber" style="width: 72%"></div></div>
+            </div>
+            <div class="cp-rating-item">
+                <div class="cp-rating-header">
+                    <span class="cp-rating-label">Compensation &amp; Benefits</span>
+                    <span class="cp-rating-score amber">3.1</span>
+                </div>
+                <div class="cp-rating-bar"><div class="cp-rating-fill amber" style="width: 62%"></div></div>
+            </div>
+            <div class="cp-rating-item">
+                <div class="cp-rating-header">
+                    <span class="cp-rating-label">Career Opportunities</span>
+                    <span class="cp-rating-score rose">3.0</span>
+                </div>
+                <div class="cp-rating-bar"><div class="cp-rating-fill rose" style="width: 60%"></div></div>
+            </div>
+            <div class="cp-rating-item">
+                <div class="cp-rating-header">
+                    <span class="cp-rating-label">Senior Management</span>
+                    <span class="cp-rating-score rose">2.7</span>
+                </div>
+                <div class="cp-rating-bar"><div class="cp-rating-fill rose" style="width: 54%"></div></div>
+            </div>
+            <div class="cp-rating-item">
+                <div class="cp-rating-header">
+                    <span class="cp-rating-label">Overall Rating</span>
+                    <span class="cp-rating-score amber">3.1</span>
+                </div>
+                <div class="cp-rating-bar"><div class="cp-rating-fill amber" style="width: 62%"></div></div>
+            </div>
+        </div>
+
+        <div class="cp-approval-row">
+            <div class="cp-approval-badge amber">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 9V5a3 3 0 0 0-3-3l-4 9v11h11.28a2 2 0 0 0 2-1.7l1.38-9a2 2 0 0 0-2-2.3H14z"/><path d="M7 22H4a2 2 0 0 1-2-2v-7a2 2 0 0 1 2-2h3"/></svg>
+                41% Recommend to a Friend
+            </div>
+            <div class="cp-approval-badge amber">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+                David Hassell (CEO, Returned Nov 2025)
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ═══ EMPLOYEE REVIEW THEMES ═══ -->
+<section class="cp-section cp-section-alt">
+    <div class="container">
+        <span class="s-label">Employee Review Themes</span>
+        <h2 class="s-title">The <em>good</em> and the hard parts</h2>
+
+        <div class="cp-reviews-grid">
+            <div class="cp-review-col">
+                <h3><span class="icon-pro">&#10003;</span> What employees love</h3>
+                <ul class="cp-review-list">
+                    <li>
+                        <span class="check check-pro">&#10003;</span>
+                        <span>Mission-driven to the core &mdash; building software that genuinely helps people thrive at work</span>
+                    </li>
+                    <li>
+                        <span class="check check-pro">&#10003;</span>
+                        <span>Fully remote with real flexibility &mdash; no return-to-office pressure</span>
+                    </li>
+                    <li>
+                        <span class="check check-pro">&#10003;</span>
+                        <span>Incredible coworkers &mdash; kind, smart, and genuinely caring people</span>
+                    </li>
+                    <li>
+                        <span class="check check-pro">&#10003;</span>
+                        <span>Best-Self Management philosophy creates a strengths-based, growth-oriented environment</span>
+                    </li>
+                </ul>
+            </div>
+            <div class="cp-review-col">
+                <h3><span class="icon-con">&#10007;</span> What could be better</h3>
+                <ul class="cp-review-list">
+                    <li>
+                        <span class="check check-con">&#10007;</span>
+                        <span>Company went through turbulent leadership changes &mdash; founder recently returned as CEO</span>
+                    </li>
+                    <li>
+                        <span class="check check-con">&#10007;</span>
+                        <span>Multiple rounds of layoffs created uncertainty and eroded trust</span>
+                    </li>
+                    <li>
+                        <span class="check check-con">&#10007;</span>
+                        <span>Strategy and priorities shifted frequently &mdash; talk track changes every 60&ndash;75 days</span>
+                    </li>
+                    <li>
+                        <span class="check check-con">&#10007;</span>
+                        <span>Compensation is below market for some roles, especially engineering</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ═══ PRODUCT & ENGINEERING ═══ -->
+<section class="cp-section">
+    <div class="container">
+        <span class="s-label">Product &amp; Engineering</span>
+        <h2 class="s-title">How the <em>engineering</em> team works</h2>
+
+        <div class="cp-eng-grid">
+            <div class="cp-eng-card">
+                <h4>Tech Stack</h4>
+                <div class="cp-eng-tags">
+                    <span class="cp-eng-tag">Ruby on Rails</span>
+                    <span class="cp-eng-tag">React</span>
+                    <span class="cp-eng-tag">Python</span>
+                    <span class="cp-eng-tag">AI/ML</span>
+                </div>
+            </div>
+            <div class="cp-eng-card">
+                <h4>Platform</h4>
+                <div class="cp-eng-tags">
+                    <span class="cp-eng-tag">Performance Management</span>
+                    <span class="cp-eng-tag">OKRs</span>
+                    <span class="cp-eng-tag">Employee Engagement</span>
+                </div>
+            </div>
+            <div class="cp-eng-card">
+                <h4>AI Investment</h4>
+                <p>Building AI-powered performance management with agentic workflows &mdash; the Data Intelligence Platform is a major engineering investment area.</p>
+            </div>
+            <div class="cp-eng-card">
+                <h4>Team Structure</h4>
+                <p>Small, autonomous engineering squads. Fully remote with async-friendly practices. Product engineers have high ownership and direct impact on the platform.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ═══ OPEN POSITIONS ═══ -->
+<section class="cp-section cp-section-alt">
+    <div class="container">
+        <span class="s-label">Open Positions</span>
+        <h2 class="s-title">Join the <em>15Five</em> team</h2>
+        <p class="s-desc">Featured roles currently hiring at 15Five.</p>
+
+        <div class="cp-jobs-grid" id="jobsGrid"></div>
+
+        <div class="cp-cta-center">
+            <a href="https://www.15five.com/about/careers?ref=jobsbyculture.com" class="btn-primary" target="_blank">See all 15Five jobs &rarr;</a>
+        </div>
+    </div>
+</section>
+
+<!-- ═══ CLAIM BANNER ═══ -->
+<section class="claim-banner">
+    <div class="container">
+        <h2>This is your <em>Verified Culture Profile</em></h2>
+        <p>Claim it to update your story, add custom quotes, and automatically sync all open roles from your careers page.</p>
+        <a href="mailto:pradeep@jobsbyculture.com?subject=Claim 15Five Profile" class="btn-primary">Claim This Profile &rarr;</a>
+    </div>
+</section>
+
+<!-- ═══ FOOTER ═══ -->
+<footer class="cp-footer">
+    <div class="container">
+        <p>Powered by <a href="https://jobsbyculture.com">JobsByCulture</a> &mdash; the culture-first job board</p>
+    </div>
+</footer>
+
+<script>
+const COMPANY_JOBS = [
+  { title: 'Senior Software Engineer', location: 'Remote (US)', url: 'https://jobs.lever.co/15five/e6981021-c19b-485f-9510-877605e985d0?ref=jobsbyculture.com' },
+  { title: 'Software Engineer', location: 'Remote (US)', url: 'https://jobs.lever.co/15five/f4b54260-2589-49d4-a51a-40650e3be080?ref=jobsbyculture.com' },
+  { title: 'Senior Product Manager', location: 'Remote (US)', url: 'https://jobs.lever.co/15five/3a9d8a84-8895-41c4-bd22-1fc555ba0c27?ref=jobsbyculture.com' },
+  { title: 'Corporate Counsel', location: 'Remote (US)', url: 'https://jobs.lever.co/15five/c22cca4c-e850-4eb7-bcdc-b4657171f875?ref=jobsbyculture.com' },
+  { title: 'Strategic Account Manager', location: 'Remote (US)', url: 'https://jobs.lever.co/15five/dd8af103-91cc-495d-a3f9-cb7c64dd9064?ref=jobsbyculture.com' },
+  { title: 'Sr. Manager, Demand Generation', location: 'Remote (US)', url: 'https://jobs.lever.co/15five/354a9e36-f4d7-481b-aae0-6eff56f5fa2f?ref=jobsbyculture.com' },
+];
+
+function renderJobs() {
+    var grid = document.getElementById('jobsGrid');
+    var html = '';
+    COMPANY_JOBS.forEach(function(job) {
+        html += '<a class="cp-job-card" href="' + job.url + '" target="_blank" rel="noopener">' +
+            '<div>' +
+                '<div class="cp-job-title">' + job.title + '</div>' +
+                '<div class="cp-job-location">' +
+                    '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>' +
+                    job.location +
+                '</div>' +
+            '</div>' +
+            '<div class="cp-job-apply">Apply \u2192</div>' +
+        '</a>';
+    });
+    grid.innerHTML = html;
+}
+
+renderJobs();
+</script>
+
+</body>
+</html>
