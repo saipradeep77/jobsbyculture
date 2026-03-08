@@ -54,10 +54,10 @@ function categorizeRole(title) {
         return 'Data';
     if (/\b(design|ux|ui|brand design|graphic design|visual design|content design)\b/.test(t))
         return 'Design';
+    if (/\b(product manager|product lead|program manager|technical program|product owner|head of product|product strateg|product director|product operation|product analys|scrum master|agile coach)\b/.test(t))
+        return 'Product';
     if (/\b(engineer|developer|sre|devops|infrastructure|backend|frontend|fullstack|full.stack|platform|security engineer|software)\b/.test(t))
         return 'Engineering';
-    if (/\b(product manager|product lead|product director)\b/.test(t))
-        return 'Product';
     if (/\b(marketing|growth|content strat|seo|communications|copywriter|brand manager|social media)\b/.test(t))
         return 'Marketing';
     if (/\b(sales|account executive|account manager|business develop|solutions architect|solutions engineer|customer success|revenue|partnerships)\b/.test(t))
@@ -70,7 +70,7 @@ function categorizeRole(title) {
         return 'Legal';
     if (/\b(support|customer service|help desk|technical support|customer experience)\b/.test(t))
         return 'Support';
-    if (/\b(operations|program manager|project manager|chief of staff|office manager|facilities|workplace|supply chain|logistics)\b/.test(t))
+    if (/\b(operations|project manager|chief of staff|office manager|facilities|workplace|supply chain|logistics)\b/.test(t))
         return 'Operations';
 
     return 'Other';

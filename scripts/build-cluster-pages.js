@@ -44,18 +44,18 @@ const JOBS = extractArray('JOBS');
 // ─── Classify helpers (same logic as export script) ───
 function classifyRole(title) {
     const t = title.toLowerCase();
-    if (/\b(machine learning|ml |ml\/|deep learning|ai research|ai scientist|llm|nlp|computer vision|cv engineer)\b/.test(t)) return 'ml-ai';
-    if (/\b(data scien|data eng|data analy|analytics|business intel)\b/.test(t)) return 'data';
-    if (/\b(design|ux|ui |visual|brand design|graphic)\b/.test(t)) return 'design';
-    if (/\b(engineer|developer|swe|software|frontend|backend|fullstack|full-stack|devops|sre|infrastructure|platform)\b/.test(t)) return 'engineering';
-    if (/\b(product manage|product lead|pm |head of product)\b/.test(t)) return 'product';
-    if (/\b(marketing|growth|content|seo|communications|brand)\b/.test(t)) return 'marketing';
-    if (/\b(sales|account exec|business develop|revenue|gtm|go-to-market|solutions)\b/.test(t)) return 'sales';
-    if (/\b(finance|accounting|controller|treasury|fp&a)\b/.test(t)) return 'finance';
-    if (/\b(recruiter|people|hr |talent|human resources)\b/.test(t)) return 'hr-people';
-    if (/\b(legal|counsel|compliance|policy)\b/.test(t)) return 'legal';
-    if (/\b(support|customer success|helpdesk)\b/.test(t)) return 'support';
-    if (/\b(operations|ops |logistics|supply chain|procurement)\b/.test(t)) return 'operations';
+    if (/(machine learning|ml |ml\/|deep learning|ai research|ai scientist|llm|nlp|computer vision|cv engineer|research scientist|research engineer|reinforcement learning|ai safety|interpretability|alignment)/.test(t)) return 'ml-ai';
+    if (/(data scien|data eng|data analy|data infra|data platform|analytics engineer|business intel)/.test(t)) return 'data';
+    if (/design/.test(t) && !/engineer|security/.test(t)) return 'design';
+    if (/(product manag|program manag|technical program|product owner|product lead|head of product|product strateg|product director|product operation|product analys|scrum master|agile coach)/.test(t)) return 'product';
+    if (/(engineer|developer|swe|software|frontend|backend|fullstack|full-stack|devops|sre|infrastructure|platform|architect|firmware|embedded)/.test(t) && !/(solutions engineer|solutions architect|sales engineer|developer relations|devrel)/.test(t)) return 'engineering';
+    if (/(marketing|growth|content|seo|communications|brand|copywriter|developer relations|devrel|community manag|editorial|creative)/.test(t)) return 'marketing';
+    if (/(sales|account exec|account manag|business develop|revenue|gtm|go-to-market|solutions|partnerships|customer success|pre-sales)/.test(t) && !/accountant/.test(t)) return 'sales';
+    if (/(finance|accounti|accountant|controller|treasury|fp&a|financial|investor relations)/.test(t)) return 'finance';
+    if (/(recruiter|recruiting|people ops|people partner|talent|hr |human resources|sourcer|onboarding|enablement)/.test(t)) return 'hr-people';
+    if (/(legal|counsel|compliance|policy|regulatory|paralegal|attorney)/.test(t)) return 'legal';
+    if (/(support specialist|customer support|premium support|help desk|safety specialist|support delivery)/.test(t)) return 'support';
+    if (/(operations|ops |logistics|supply chain|procurement|coordinator|facilities|workplace|office manag)/.test(t)) return 'operations';
     return 'other';
 }
 

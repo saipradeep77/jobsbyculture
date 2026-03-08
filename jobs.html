@@ -3818,7 +3818,16 @@ function getRole(title) {
         return 'design';
     }
 
-    // Priority 4: Engineering (with exclusions for devrel, solutions/sales eng, biz systems)
+    // Priority 4: Product (before Engineering so TPMs don't get stolen)
+    const productPatterns = [
+        'product manag', 'program manag', 'technical program',
+        'product owner', 'product lead', 'scrum master', 'agile coach',
+        'product strateg', 'product director', 'head of product',
+        'product operation', 'product analys'
+    ];
+    if (productPatterns.some(p => t.includes(p))) return 'product';
+
+    // Priority 5: Engineering (with exclusions for devrel, solutions/sales eng, biz systems)
     const engPatterns = [
         'engineer', 'developer', 'architect', 'platform', 'sre ',
         'site reliability', 'devops', 'qa ', 'quality assurance',
@@ -3833,13 +3842,6 @@ function getRole(title) {
     if (engPatterns.some(p => t.includes(p)) && !engExclusions.some(p => t.includes(p))) {
         return 'engineering';
     }
-
-    // Priority 5: Product
-    const productPatterns = [
-        'product manag', 'program manag', 'technical program',
-        'product owner', 'product lead', 'scrum master', 'agile coach'
-    ];
-    if (productPatterns.some(p => t.includes(p))) return 'product';
 
     // Priority 6: Marketing
     const marketingPatterns = [
