@@ -73,19 +73,35 @@ Add new entries to `sitemap.xml`:
 ```bash
 npm run refresh
 ```
-This runs 4 scripts in sequence:
+This runs 5 scripts in sequence:
 1. `fetch-jobs.js` — Fetches live jobs from all ATS APIs → `data/jobs-fetched.json`
 2. `update-jobs-html.js` — Replaces the JOBS array in `jobs.html` with fresh data
-3. `build-cluster-pages.js` — Rebuilds 162+ programmatic SEO pages
+3. `build-cluster-pages.js` — Rebuilds 192+ programmatic SEO pages
 4. `indexnow.js` — Submits all URLs to search engines (Bing, Yandex, Naver)
+5. `export-social.js` — Generates `data/jobs-export.csv` for Google Sheets/Zapier
 
-### Step 8: Commit (DO NOT PUSH)
+### Step 8: Update ALL Counts Site-Wide
+After refresh, update job/company counts in **every** file that references them:
+
+| File | What to update |
+|------|---------------|
+| `index.html` | Meta description, twitter description, hero count, hero metrics (jobs + companies profiled), "See all X jobs" CTA, "From N companies" note, ALL browse-by-value counts (eng-driven, flat, learning, ethical-ai, equity, many-hats, open-source, ship-fast), "All AI & Tech Jobs" card count + company count |
+| `compare.html` | Profiled companies comment, AUTOCOMPLETE_LIST (add new companies) |
+| `llms.txt` | Job count, company count, add new company profile entries |
+| `directory.html` | Meta description, og:description, twitter:description, visible company count |
+
+**Get the correct per-value job counts from the cluster page build output or from the generated `values/*.html` files.**
+
+**This step is MANDATORY. Never skip it. Every number on the site must match reality.**
+
+### Step 9: Commit (DO NOT PUSH)
 ```bash
 git add -A
 git commit -m "Add [company names] + refresh all jobs
 
 - Added X new companies with profile pages
 - Refreshed jobs: N total from M companies
+- Updated all counts site-wide (index, compare, directory, llms.txt)
 - Rebuilt cluster pages and submitted to IndexNow
 
 Co-Authored-By: Claude Opus 4.6 <noreply@anthropic.com>"
@@ -124,6 +140,8 @@ Co-Authored-By: Claude Opus 4.6 <noreply@anthropic.com>"
 | `scripts/build-cluster-pages.js` | Generates programmatic SEO cluster pages |
 | `scripts/build-compare-pages.js` | Generates static compare pages |
 | `scripts/indexnow.js` | Submits all sitemap URLs to IndexNow |
+| `scripts/export-social.js` | Generates CSV for Google Sheets/Zapier with status tracking |
+| `data/jobs-export.csv` | Social media export — pending/posted/expired status per job |
 | `sitemap.xml` | Lists all pages for search engines |
 | `robots.txt` | Crawl directives including LLM bot rules |
 | `llms.txt` | LLM-readable site description |
