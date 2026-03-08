@@ -8,7 +8,9 @@
     "build:all": "node scripts/build-compare-pages.js && node scripts/build-cluster-pages.js",
     "indexnow": "node scripts/indexnow.js",
     "fetch-jobs": "node scripts/fetch-jobs.js",
-    "detect-ats": "node scripts/detect-ats.js"
+    "update-jobs": "node scripts/update-jobs-html.js",
+    "detect-ats": "node scripts/detect-ats.js",
+    "refresh": "node scripts/fetch-jobs.js && node scripts/update-jobs-html.js && node scripts/build-cluster-pages.js && node scripts/indexnow.js"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.39.0"
