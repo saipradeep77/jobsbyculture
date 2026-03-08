@@ -550,236 +550,248 @@
 
   <!-- Compare pages -->
   <url>
+    <loc>https://jobsbyculture.com/compare</loc>
+    <lastmod>2026-03-08</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://jobsbyculture.com/compare/google-vs-amazon</loc>
-    <lastmod>2026-03-05</lastmod>
+    <lastmod>2026-03-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://jobsbyculture.com/compare/google-vs-microsoft</loc>
-    <lastmod>2026-03-05</lastmod>
+    <lastmod>2026-03-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://jobsbyculture.com/compare/google-vs-apple</loc>
-    <lastmod>2026-03-05</lastmod>
+    <lastmod>2026-03-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://jobsbyculture.com/compare/google-vs-meta</loc>
-    <lastmod>2026-03-05</lastmod>
+    <lastmod>2026-03-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://jobsbyculture.com/compare/amazon-vs-microsoft</loc>
-    <lastmod>2026-03-05</lastmod>
+    <lastmod>2026-03-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://jobsbyculture.com/compare/apple-vs-microsoft</loc>
-    <lastmod>2026-03-05</lastmod>
+    <lastmod>2026-03-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://jobsbyculture.com/compare/meta-vs-amazon</loc>
-    <lastmod>2026-03-05</lastmod>
+    <lastmod>2026-03-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://jobsbyculture.com/compare/netflix-vs-google</loc>
-    <lastmod>2026-03-05</lastmod>
+    <lastmod>2026-03-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://jobsbyculture.com/compare/google-vs-netflix</loc>
+    <lastmod>2026-03-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://jobsbyculture.com/compare/meta-vs-apple</loc>
-    <lastmod>2026-03-05</lastmod>
+    <lastmod>2026-03-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://jobsbyculture.com/compare/anthropic-vs-openai</loc>
-    <lastmod>2026-03-05</lastmod>
+    <lastmod>2026-03-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://jobsbyculture.com/compare/anthropic-vs-google</loc>
-    <lastmod>2026-03-05</lastmod>
+    <lastmod>2026-03-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://jobsbyculture.com/compare/stripe-vs-google</loc>
-    <lastmod>2026-03-05</lastmod>
+    <lastmod>2026-03-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://jobsbyculture.com/compare/databricks-vs-snowflake</loc>
-    <lastmod>2026-03-05</lastmod>
+    <lastmod>2026-03-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://jobsbyculture.com/compare/airbnb-vs-uber</loc>
-    <lastmod>2026-03-05</lastmod>
+    <lastmod>2026-03-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://jobsbyculture.com/compare/figma-vs-canva</loc>
-    <lastmod>2026-03-05</lastmod>
+    <lastmod>2026-03-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://jobsbyculture.com/compare/hubspot-vs-salesforce</loc>
-    <lastmod>2026-03-05</lastmod>
+    <lastmod>2026-03-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://jobsbyculture.com/compare/perplexity-vs-openai</loc>
-    <lastmod>2026-03-05</lastmod>
+    <lastmod>2026-03-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://jobsbyculture.com/compare/cursor-vs-github-copilot</loc>
-    <lastmod>2026-03-05</lastmod>
+    <lastmod>2026-03-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://jobsbyculture.com/compare/vercel-vs-netlify</loc>
-    <lastmod>2026-03-05</lastmod>
+    <lastmod>2026-03-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://jobsbyculture.com/compare/stripe-vs-shopify</loc>
-    <lastmod>2026-03-05</lastmod>
+    <lastmod>2026-03-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://jobsbyculture.com/compare/scale-vs-databricks</loc>
-    <lastmod>2026-03-05</lastmod>
+    <lastmod>2026-03-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://jobsbyculture.com/compare/huggingface-vs-openai</loc>
-    <lastmod>2026-03-05</lastmod>
+    <lastmod>2026-03-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://jobsbyculture.com/compare/mistral-vs-openai</loc>
-    <lastmod>2026-03-05</lastmod>
+    <lastmod>2026-03-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://jobsbyculture.com/compare/anthropic-vs-meta</loc>
-    <lastmod>2026-03-05</lastmod>
+    <lastmod>2026-03-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://jobsbyculture.com/compare/openai-vs-google</loc>
-    <lastmod>2026-03-05</lastmod>
+    <lastmod>2026-03-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://jobsbyculture.com/compare/openai-vs-meta</loc>
-    <lastmod>2026-03-05</lastmod>
+    <lastmod>2026-03-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://jobsbyculture.com/compare/openai-vs-microsoft</loc>
-    <lastmod>2026-03-05</lastmod>
+    <lastmod>2026-03-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://jobsbyculture.com/compare/nvidia-vs-amd</loc>
-    <lastmod>2026-03-05</lastmod>
+    <lastmod>2026-03-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://jobsbyculture.com/compare/nvidia-vs-google</loc>
-    <lastmod>2026-03-05</lastmod>
+    <lastmod>2026-03-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://jobsbyculture.com/compare/tesla-vs-rivian</loc>
-    <lastmod>2026-03-05</lastmod>
+    <lastmod>2026-03-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://jobsbyculture.com/compare/coinbase-vs-stripe</loc>
-    <lastmod>2026-03-05</lastmod>
+    <lastmod>2026-03-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://jobsbyculture.com/compare/palantir-vs-databricks</loc>
-    <lastmod>2026-03-05</lastmod>
+    <lastmod>2026-03-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://jobsbyculture.com/compare/datadog-vs-splunk</loc>
-    <lastmod>2026-03-05</lastmod>
+    <lastmod>2026-03-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://jobsbyculture.com/compare/snowflake-vs-databricks</loc>
-    <lastmod>2026-03-05</lastmod>
+    <lastmod>2026-03-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://jobsbyculture.com/compare/anthropic-vs-cohere</loc>
-    <lastmod>2026-03-05</lastmod>
+    <lastmod>2026-03-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://jobsbyculture.com/compare/stripe-vs-airbnb</loc>
-    <lastmod>2026-03-05</lastmod>
+    <lastmod>2026-03-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://jobsbyculture.com/compare/linear-vs-figma</loc>
-    <lastmod>2026-03-05</lastmod>
+    <lastmod>2026-03-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://jobsbyculture.com/compare/cursor-vs-perplexity</loc>
-    <lastmod>2026-03-05</lastmod>
+    <lastmod>2026-03-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://jobsbyculture.com/compare/vercel-vs-stripe</loc>
-    <lastmod>2026-03-05</lastmod>
+    <lastmod>2026-03-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>

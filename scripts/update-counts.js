@@ -14,7 +14,7 @@
  * Part of `npm run refresh`. You never need to update counts manually.
  */
 
-import { readFileSync, writeFileSync } from 'fs';
+import { readFileSync, writeFileSync, readdirSync } from 'fs';
 import { resolve, dirname } from 'path';
 import { fileURLToPath } from 'url';
 
@@ -55,6 +55,8 @@ const allJobs = JSON.parse(readFileSync(resolve(ROOT, 'data/jobs-fetched.json'),
 const jobsHtml = readFileSync(resolve(ROOT, 'jobs.html'), 'utf-8');
 const COMPANIES = extract(jobsHtml, 'COMPANIES');
 const COMPANY_REVIEWS = extract(jobsHtml, 'COMPANY_REVIEWS');
+const VALUES = extract(jobsHtml, 'VALUES');
+const ROLES = extract(jobsHtml, 'ROLES');
 
 const knownSlugs = new Set(Object.keys(COMPANIES));
 const companyCount = knownSlugs.size;
@@ -327,6 +329,105 @@ llms = llms.replace(/[\d,]+(\+ AI & tech jobs)/g, `${fmt(totalJobs)}$1`);
 llms = llms.replace(/(All )\d+( profiled)/g, `$1${companyCount}$2`);
 writeFileSync(resolve(ROOT, 'llms.txt'), llms);
 console.log(`✓ llms.txt — ${fmt(totalJobs)} jobs, ${companyCount} companies`);
+
+// ═══════════════════════════════════════════════════════════════
+// UPDATE OG image URLs (static → dynamic /api/og)
+// ═══════════════════════════════════════════════════════════════
+
+const OG_BASE = 'https://jobsbyculture.com/api/og';
+const STATIC_OG = /https:\/\/jobsbyculture\.com\/og-image\.png/g;
+
+function setOgUrl(html, ogUrl) {
+    return html
+        .replace(/(og:image" content=")https:\/\/jobsbyculture\.com\/[^"]*(")/g, `$1${ogUrl}$2`)
+        .replace(/(twitter:image" content=")https:\/\/jobsbyculture\.com\/[^"]*(")/g, `$1${ogUrl}$2`);
+}
+
+// Re-read files that were already written (with updated counts)
+let idxOg = readFileSync(resolve(ROOT, 'index.html'), 'utf-8');
+idxOg = setOgUrl(idxOg, `${OG_BASE}?type=home`);
+writeFileSync(resolve(ROOT, 'index.html'), idxOg);
+
+let cmpOg = readFileSync(resolve(ROOT, 'compare.html'), 'utf-8');
+cmpOg = setOgUrl(cmpOg, `${OG_BASE}?type=compare-tool`);
+writeFileSync(resolve(ROOT, 'compare.html'), cmpOg);
+
+let dirOg = readFileSync(resolve(ROOT, 'directory.html'), 'utf-8');
+dirOg = setOgUrl(dirOg, `${OG_BASE}?type=directory`);
+writeFileSync(resolve(ROOT, 'directory.html'), dirOg);
+
+let jobsOg = readFileSync(resolve(ROOT, 'jobs.html'), 'utf-8');
+jobsOg = setOgUrl(jobsOg, `${OG_BASE}?type=jobs`);
+writeFileSync(resolve(ROOT, 'jobs.html'), jobsOg);
+
+// Company profile pages
+const companiesDir = resolve(ROOT, 'companies');
+const companyFiles = readdirSync(companiesDir).filter(f => f.endsWith('.html'));
+for (const file of companyFiles) {
+    const slug = file.replace('.html', '');
+    const path = resolve(companiesDir, file);
+    let compHtml = readFileSync(path, 'utf-8');
+    compHtml = setOgUrl(compHtml, `${OG_BASE}?type=company&slug=${slug}`);
+    writeFileSync(path, compHtml);
+}
+console.log(`✓ OG images — dynamic URLs for index, compare, directory, jobs, ${companyFiles.length} company pages`);
+
+// ═══════════════════════════════════════════════════════════════
+// GENERATE data/og-data.json (consumed by api/og.jsx edge function)
+// ═══════════════════════════════════════════════════════════════
+
+const roleCounts = {};
+for (const [co, roles] of Object.entries(sortedCRC)) {
+    for (const [role, count] of Object.entries(roles)) {
+        roleCounts[role] = (roleCounts[role] || 0) + count;
+    }
+}
+
+const valueCompanyCounts = {};
+for (const [slug, vals] of Object.entries(cv)) {
+    for (const v of vals) {
+        valueCompanyCounts[v] = (valueCompanyCounts[v] || 0) + 1;
+    }
+}
+
+const ogData = {
+    totalJobs,
+    companyCount,
+    companies: {},
+    values: {},
+    roles: {},
+};
+
+for (const [slug, data] of Object.entries(COMPANIES)) {
+    ogData.companies[slug] = {
+        name: data.name,
+        glassdoor: data.glassdoor,
+        jobCount: companyTotals[slug] || 0,
+        values: (data.values || []).slice(0, 3),
+    };
+}
+
+for (const [slug, meta] of Object.entries(VALUES)) {
+    if (valueCounts[slug]) {
+        ogData.values[slug] = {
+            name: meta.name,
+            jobCount: valueCounts[slug],
+            companyCount: valueCompanyCounts[slug] || 0,
+        };
+    }
+}
+
+for (const [slug, meta] of Object.entries(ROLES)) {
+    if (roleCounts[slug]) {
+        ogData.roles[slug] = {
+            name: meta.name,
+            jobCount: roleCounts[slug],
+        };
+    }
+}
+
+writeFileSync(resolve(ROOT, 'data/og-data.json'), JSON.stringify(ogData, null, 2));
+console.log(`✓ data/og-data.json — ${Object.keys(ogData.companies).length} companies, ${Object.keys(ogData.values).length} values, ${Object.keys(ogData.roles).length} roles`);
 
 // ═══════════════════════════════════════════════════════════════
 // SUMMARY

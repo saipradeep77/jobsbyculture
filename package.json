@@ -15,6 +15,7 @@
     "refresh": "node scripts/fetch-jobs.js && node scripts/update-jobs-html.js && node scripts/build-cluster-pages.js && node scripts/update-counts.js && node scripts/indexnow.js && node scripts/export-social.js"
   },
   "dependencies": {
-    "@anthropic-ai/sdk": "^0.39.0"
+    "@anthropic-ai/sdk": "^0.39.0",
+    "@vercel/og": "^0.11.1"
   }
 }

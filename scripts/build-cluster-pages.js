@@ -165,7 +165,8 @@ function footerHtml() {
 </footer>`;
 }
 
-function headHtml(title, description, canonical) {
+function headHtml(title, description, canonical, ogImageUrl) {
+    const ogImg = ogImageUrl || 'https://jobsbyculture.com/og-image.png';
     return `<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -178,14 +179,14 @@ function headHtml(title, description, canonical) {
     <meta property="og:description" content="${esc(description)}">
     <meta property="og:type" content="website">
     <meta property="og:url" content="${esc(canonical)}">
-    <meta property="og:image" content="https://jobsbyculture.com/og-image.png">
+    <meta property="og:image" content="${ogImg}">
     <meta property="og:image:type" content="image/png">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="${esc(title)}">
     <meta name="twitter:description" content="${esc(description)}">
-    <meta name="twitter:image" content="https://jobsbyculture.com/og-image.png">
+    <meta name="twitter:image" content="${ogImg}">
     <link rel="canonical" href="${esc(canonical)}">
     <link rel="icon" type="image/svg+xml" href="/favicon.svg">
     <link rel="icon" type="image/png" sizes="512x512" href="/logo.png">
@@ -439,7 +440,8 @@ function generateValuePage(valueSlug) {
     // Related values
     const relatedValues = Object.keys(VALUES).filter(v => v !== valueSlug);
 
-    let html = headHtml(title, desc, canonical) + sharedCSS + `
+    const ogUrl = `https://jobsbyculture.com/api/og?type=value&slug=${valueSlug}`;
+    let html = headHtml(title, desc, canonical, ogUrl) + sharedCSS + `
 </head>
 <body>
 ${navHtml('jobs')}
@@ -541,7 +543,8 @@ function generateRolePage(roleSlug) {
         .sort((a, b) => b[1] - a[1])
         .slice(0, 8);
 
-    let html = headHtml(title, desc, canonical) + sharedCSS + `
+    const ogUrl = `https://jobsbyculture.com/api/og?type=role&slug=${roleSlug}`;
+    let html = headHtml(title, desc, canonical, ogUrl) + sharedCSS + `
 </head>
 <body>
 ${navHtml('jobs')}
@@ -644,7 +647,8 @@ function generateCrossPage(valueSlug, roleSlug) {
     const canonical = `https://jobsbyculture.com/roles/${valueSlug}/${roleSlug}`;
     const showJobs = matchingJobs.slice(0, 20);
 
-    let html = headHtml(title, desc, canonical) + sharedCSS + `
+    const ogUrl = `https://jobsbyculture.com/api/og?type=value&slug=${valueSlug}`;
+    let html = headHtml(title, desc, canonical, ogUrl) + sharedCSS + `
 </head>
 <body>
 ${navHtml('jobs')}

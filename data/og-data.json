@@ -1,0 +1,388 @@
+{
+  "totalJobs": 3845,
+  "companyCount": 24,
+  "companies": {
+    "anthropic": {
+      "name": "Anthropic",
+      "glassdoor": 4.4,
+      "jobCount": 447,
+      "values": [
+        "ethical-ai",
+        "learning",
+        "equity"
+      ]
+    },
+    "huggingface": {
+      "name": "Hugging Face",
+      "glassdoor": 3.8,
+      "jobCount": 14,
+      "values": [
+        "open-source",
+        "flat",
+        "remote"
+      ]
+    },
+    "databricks": {
+      "name": "Databricks",
+      "glassdoor": 4.1,
+      "jobCount": 762,
+      "values": [
+        "eng-driven",
+        "learning",
+        "equity"
+      ]
+    },
+    "cohere": {
+      "name": "Cohere",
+      "glassdoor": 2.9,
+      "jobCount": 122,
+      "values": [
+        "learning",
+        "eng-driven",
+        "many-hats"
+      ]
+    },
+    "mistral": {
+      "name": "Mistral AI",
+      "glassdoor": 4,
+      "jobCount": 144,
+      "values": [
+        "ship-fast",
+        "eng-driven",
+        "flat"
+      ]
+    },
+    "hubspot": {
+      "name": "HubSpot",
+      "glassdoor": 4.3,
+      "jobCount": 256,
+      "values": [
+        "diverse",
+        "learning",
+        "wlb"
+      ]
+    },
+    "vercel": {
+      "name": "Vercel",
+      "glassdoor": 3.9,
+      "jobCount": 80,
+      "values": [
+        "ship-fast",
+        "eng-driven",
+        "remote"
+      ]
+    },
+    "stripe": {
+      "name": "Stripe",
+      "glassdoor": 4,
+      "jobCount": 560,
+      "values": [
+        "eng-driven",
+        "learning",
+        "equity"
+      ]
+    },
+    "perplexity": {
+      "name": "Perplexity AI",
+      "glassdoor": 4.7,
+      "jobCount": 82,
+      "values": [
+        "ship-fast",
+        "eng-driven",
+        "product-impact"
+      ]
+    },
+    "together": {
+      "name": "Together AI",
+      "glassdoor": 4.1,
+      "jobCount": 43,
+      "values": [
+        "open-source",
+        "eng-driven",
+        "learning"
+      ]
+    },
+    "cursor": {
+      "name": "Cursor (Anysphere)",
+      "glassdoor": 4,
+      "jobCount": 54,
+      "values": [
+        "ship-fast",
+        "eng-driven",
+        "product-impact"
+      ]
+    },
+    "linear": {
+      "name": "Linear",
+      "glassdoor": 4.6,
+      "jobCount": 20,
+      "values": [
+        "deep-work",
+        "remote",
+        "async"
+      ]
+    },
+    "scale": {
+      "name": "Scale AI",
+      "glassdoor": 3.5,
+      "jobCount": 172,
+      "values": [
+        "eng-driven",
+        "product-impact",
+        "learning"
+      ]
+    },
+    "coreweave": {
+      "name": "CoreWeave",
+      "glassdoor": 3.6,
+      "jobCount": 284,
+      "values": [
+        "eng-driven",
+        "ship-fast",
+        "equity"
+      ]
+    },
+    "runway": {
+      "name": "Runway",
+      "glassdoor": 4.5,
+      "jobCount": 30,
+      "values": [
+        "eng-driven",
+        "product-impact",
+        "remote"
+      ]
+    },
+    "vast": {
+      "name": "Vast AI",
+      "glassdoor": 5,
+      "jobCount": 10,
+      "values": [
+        "eng-driven",
+        "ship-fast",
+        "flat"
+      ]
+    },
+    "apollo": {
+      "name": "Apollo.io",
+      "glassdoor": 4,
+      "jobCount": 55,
+      "values": [
+        "ship-fast",
+        "eng-driven",
+        "remote"
+      ]
+    },
+    "airbnb": {
+      "name": "Airbnb",
+      "glassdoor": 4.1,
+      "jobCount": 258,
+      "values": [
+        "remote",
+        "wlb",
+        "diverse"
+      ]
+    },
+    "figma": {
+      "name": "Figma",
+      "glassdoor": 3.7,
+      "jobCount": 172,
+      "values": [
+        "eng-driven",
+        "ship-fast",
+        "learning"
+      ]
+    },
+    "elevenlabs": {
+      "name": "ElevenLabs",
+      "glassdoor": 4.2,
+      "jobCount": 99,
+      "values": [
+        "ship-fast",
+        "remote",
+        "eng-driven"
+      ]
+    },
+    "pinecone": {
+      "name": "Pinecone",
+      "glassdoor": 4.2,
+      "jobCount": 13,
+      "values": [
+        "remote",
+        "flex-hours",
+        "diverse"
+      ]
+    },
+    "modal": {
+      "name": "Modal",
+      "glassdoor": 4,
+      "jobCount": 31,
+      "values": [
+        "eng-driven",
+        "ship-fast",
+        "deep-work"
+      ]
+    },
+    "ramp": {
+      "name": "Ramp",
+      "glassdoor": 4.2,
+      "jobCount": 132,
+      "values": [
+        "ship-fast",
+        "product-impact",
+        "eng-driven"
+      ]
+    },
+    "weaviate": {
+      "name": "Weaviate",
+      "glassdoor": 4.3,
+      "jobCount": 5,
+      "values": [
+        "remote",
+        "async",
+        "flat"
+      ]
+    }
+  },
+  "values": {
+    "wlb": {
+      "name": "Work-Life Balance",
+      "jobCount": 539,
+      "companyCount": 4
+    },
+    "remote": {
+      "name": "Remote-Friendly",
+      "jobCount": 574,
+      "companyCount": 9
+    },
+    "flex-hours": {
+      "name": "Flexible Hours",
+      "jobCount": 283,
+      "companyCount": 3
+    },
+    "async": {
+      "name": "Async-First",
+      "jobCount": 39,
+      "companyCount": 3
+    },
+    "deep-work": {
+      "name": "Deep Work / Low Meetings",
+      "jobCount": 223,
+      "companyCount": 3
+    },
+    "transparent": {
+      "name": "Transparent Culture",
+      "jobCount": 962,
+      "companyCount": 4
+    },
+    "flat": {
+      "name": "Flat Hierarchy",
+      "jobCount": 717,
+      "companyCount": 7
+    },
+    "diverse": {
+      "name": "Diverse & Inclusive",
+      "jobCount": 1294,
+      "companyCount": 5
+    },
+    "psych-safety": {
+      "name": "Safe to Fail",
+      "jobCount": 261,
+      "companyCount": 2
+    },
+    "eng-driven": {
+      "name": "Engineering-Driven",
+      "jobCount": 3312,
+      "companyCount": 20
+    },
+    "ship-fast": {
+      "name": "Ship Fast & Iterate",
+      "jobCount": 1345,
+      "companyCount": 13
+    },
+    "open-source": {
+      "name": "Open Source Culture",
+      "jobCount": 575,
+      "companyCount": 7
+    },
+    "learning": {
+      "name": "Learning & Growth",
+      "jobCount": 2945,
+      "companyCount": 14
+    },
+    "equity": {
+      "name": "Strong Comp & Equity",
+      "jobCount": 2535,
+      "companyCount": 8
+    },
+    "product-impact": {
+      "name": "Direct Product Impact",
+      "jobCount": 2262,
+      "companyCount": 14
+    },
+    "many-hats": {
+      "name": "Wears Many Hats",
+      "jobCount": 702,
+      "companyCount": 8
+    },
+    "ethical-ai": {
+      "name": "Ethical AI / Safety",
+      "jobCount": 546,
+      "companyCount": 2
+    },
+    "social-impact": {
+      "name": "Mission-Driven",
+      "jobCount": 447,
+      "companyCount": 1
+    }
+  },
+  "roles": {
+    "ml-ai": {
+      "name": "ML / AI",
+      "jobCount": 185
+    },
+    "data": {
+      "name": "Data",
+      "jobCount": 100
+    },
+    "design": {
+      "name": "Design",
+      "jobCount": 68
+    },
+    "engineering": {
+      "name": "Engineering",
+      "jobCount": 1089
+    },
+    "product": {
+      "name": "Product",
+      "jobCount": 243
+    },
+    "marketing": {
+      "name": "Marketing",
+      "jobCount": 176
+    },
+    "sales": {
+      "name": "Sales / GTM",
+      "jobCount": 962
+    },
+    "finance": {
+      "name": "Finance",
+      "jobCount": 97
+    },
+    "hr-people": {
+      "name": "HR / People",
+      "jobCount": 87
+    },
+    "legal": {
+      "name": "Legal",
+      "jobCount": 81
+    },
+    "support": {
+      "name": "Support",
+      "jobCount": 56
+    },
+    "operations": {
+      "name": "Operations",
+      "jobCount": 123
+    }
+  }
+}
