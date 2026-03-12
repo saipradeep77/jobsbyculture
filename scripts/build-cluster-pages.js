@@ -125,6 +125,16 @@ const ROLE_DESCRIPTIONS = {
     'operations': 'Operations roles: operations managers, logistics specialists, supply chain professionals, and procurement specialists keeping the business running smoothly.',
 };
 
+// ─── Seniority descriptions for SEO content ───
+const SENIORITY_DESCRIPTIONS = {
+    'entry': { emoji: '🌱', tagline: 'Start your career at culture-first AI & tech companies', description: 'Entry-level and junior roles perfect for new graduates and early-career professionals. These companies invest in mentorship, onboarding, and growth — ideal for launching your tech career at a place that values culture.' },
+    'mid': { emoji: '👤', tagline: 'Mid-level roles at companies that value culture', description: 'Mid-level roles for professionals with 2-5 years of experience. These positions offer the sweet spot of autonomy and mentorship at companies known for strong culture and values.' },
+    'senior': { emoji: '⭐', tagline: 'Senior roles at top-rated AI & tech companies', description: 'Senior individual contributor roles at culture-first companies. Lead technical projects, mentor junior engineers, and shape product direction at companies that value your expertise and experience.' },
+    'staff': { emoji: '🔷', tagline: 'Staff & principal roles at culture-driven companies', description: 'Staff and principal-level roles for deep technical experts. These positions offer org-wide technical influence at companies that respect senior IC career paths and culture.' },
+    'lead': { emoji: '👥', tagline: 'Leadership roles at companies with strong culture scores', description: 'Team lead and engineering manager roles at culture-first companies. Build and manage high-performing teams while working at companies known for strong leadership practices.' },
+    'director': { emoji: '🏛️', tagline: 'Director+ roles at culture-first companies', description: 'Director, VP, and executive-level roles at top-rated AI & tech companies. Shape strategy and culture at companies where leadership truly drives the mission.' },
+};
+
 // ─── Shared HTML template components ───
 function navHtml(activeLabel) {
     return `<nav>
@@ -597,6 +607,27 @@ ${topValues.map(([v, count]) => {
 </section>`;
     }
 
+    // Browse by Seniority for this role
+    const seniorityLinks = Object.keys(SENIORITIES).map(s => {
+        const senData = SENIORITIES[s];
+        const senDesc = SENIORITY_DESCRIPTIONS[s];
+        const count = enrichedJobs.filter(j => j.seniority === s && j.role === roleSlug).length;
+        if (count < 5) return '';
+        return `            <a href="/seniority/${esc(s)}/${esc(roleSlug)}" class="cl-related-link">${senDesc?.emoji || ''} ${esc(senData.name)} ${esc(role.name)} <span class="count">${count}</span></a>`;
+    }).filter(Boolean);
+
+    if (seniorityLinks.length > 0) {
+        html += `
+<section class="cl-related">
+    <div class="container">
+        <h2 class="cl-section-title">${esc(role.name)} jobs by seniority</h2>
+        <div class="cl-related-grid">
+${seniorityLinks.join('\n')}
+        </div>
+    </div>
+</section>`;
+    }
+
     // Other roles
     const otherRoles = Object.keys(ROLES).filter(r => r !== roleSlug);
     html += `
@@ -619,6 +650,196 @@ ${footerHtml()}
 </html>`;
 
     return { slug: roleSlug, html, path: `roles/${roleSlug}.html`, jobs: matchingJobs.length };
+}
+
+// ─── Generate a SENIORITY page ───
+function generateSeniorityPage(senioritySlug) {
+    const sen = SENIORITIES[senioritySlug];
+    const desc_data = SENIORITY_DESCRIPTIONS[senioritySlug];
+    if (!sen || !desc_data) return null;
+
+    const matchingJobs = enrichedJobs.filter(j => j.seniority === senioritySlug);
+    if (matchingJobs.length === 0) return null;
+
+    const companySet = new Set(matchingJobs.map(j => j.company));
+    const matchingCompanies = [...companySet].filter(s => COMPANIES[s]);
+
+    // Group by role
+    const byRole = {};
+    matchingJobs.forEach(j => {
+        if (!byRole[j.role]) byRole[j.role] = [];
+        byRole[j.role].push(j);
+    });
+
+    const title = `${sen.name} Jobs at AI & Tech Companies | JobsByCulture`;
+    const metaDesc = `Browse ${matchingJobs.length} ${sen.name.toLowerCase()} jobs at ${matchingCompanies.length} AI & tech companies. ${desc_data.tagline}.`.slice(0, 160);
+    const canonical = `https://jobsbyculture.com/seniority/${senioritySlug}`;
+    const showJobs = matchingJobs.slice(0, 20);
+
+    const relatedRoles = Object.entries(byRole)
+        .filter(([r]) => r !== 'other' && ROLES[r])
+        .sort((a, b) => b[1].length - a[1].length)
+        .slice(0, 8);
+
+    const ogUrl = `https://jobsbyculture.com/api/og?type=seniority&slug=${senioritySlug}`;
+    let html = headHtml(title, metaDesc, canonical, ogUrl) + sharedCSS + `
+</head>
+<body>
+${navHtml('jobs')}
+
+<section class="cl-hero">
+    <div class="container">
+        <div class="cl-hero-pill"><span class="cl-hero-pill-dot"></span>${esc(sen.name)}</div>
+        <h1>${desc_data.emoji} <em>${esc(sen.name)}</em> Jobs</h1>
+        <p class="cl-hero-sub">${esc(desc_data.description)}</p>
+        <div class="cl-stats">
+            <div class="cl-stat"><div class="cl-stat-val">${matchingJobs.length}</div><div class="cl-stat-label">Open Roles</div></div>
+            <div class="cl-stat"><div class="cl-stat-val">${matchingCompanies.length}</div><div class="cl-stat-label">Companies</div></div>
+        </div>
+    </div>
+</section>
+
+<section class="cl-companies">
+    <div class="container">
+        <h2 class="cl-section-title">Companies hiring <em>${esc(sen.name.toLowerCase())}</em> roles</h2>
+        <div class="cl-company-grid">
+${matchingCompanies.map(s => companyCardHtml(s)).filter(Boolean).join('\n')}
+        </div>
+    </div>
+</section>
+
+<section class="cl-jobs">
+    <div class="container">
+        <h2 class="cl-section-title">Latest ${esc(sen.name)} jobs</h2>
+        <div class="cl-job-list">
+${showJobs.map(j => jobCardHtml(j)).join('\n')}
+        </div>
+        <a href="/jobs" class="cl-show-more">View all ${matchingJobs.length} jobs &rarr;</a>
+    </div>
+</section>`;
+
+    // Cross-links: seniority × role
+    if (relatedRoles.length > 0) {
+        html += `
+<section class="cl-related">
+    <div class="container">
+        <h2 class="cl-section-title">${esc(sen.name)} jobs by role</h2>
+        <div class="cl-related-grid">
+${relatedRoles.map(([r, jobs]) => {
+    const roleName = ROLES[r]?.name || r;
+    if (jobs.length < 5) return '';
+    return `            <a href="/seniority/${esc(senioritySlug)}/${esc(r)}" class="cl-related-link">${desc_data.emoji} ${esc(sen.name)} ${esc(roleName)} <span class="count">${jobs.length}</span></a>`;
+}).filter(Boolean).join('\n')}
+        </div>
+    </div>
+</section>`;
+    }
+
+    // Other seniority levels
+    const otherSeniorities = Object.keys(SENIORITIES).filter(s => s !== senioritySlug);
+    html += `
+<section class="cl-related">
+    <div class="container">
+        <h2 class="cl-section-title">Other seniority levels</h2>
+        <div class="cl-related-grid">
+${otherSeniorities.map(s => {
+    const sData = SENIORITIES[s];
+    const sDesc = SENIORITY_DESCRIPTIONS[s];
+    const count = enrichedJobs.filter(j => j.seniority === s).length;
+    if (count === 0) return '';
+    return `            <a href="/seniority/${esc(s)}" class="cl-related-link">${sDesc?.emoji || ''} ${esc(sData.name)} <span class="count">${count}</span></a>`;
+}).filter(Boolean).join('\n')}
+        </div>
+    </div>
+</section>
+
+${footerHtml()}
+</body>
+</html>`;
+
+    return { slug: senioritySlug, html, path: `seniority/${senioritySlug}.html`, jobs: matchingJobs.length };
+}
+
+// ─── Generate a SENIORITY × ROLE page ───
+function generateSeniorityRolePage(senioritySlug, roleSlug) {
+    const sen = SENIORITIES[senioritySlug];
+    const role = ROLES[roleSlug];
+    const desc_data = SENIORITY_DESCRIPTIONS[senioritySlug];
+    if (!sen || !role || !desc_data) return null;
+
+    const matchingJobs = enrichedJobs.filter(j =>
+        j.seniority === senioritySlug && j.role === roleSlug
+    );
+
+    if (matchingJobs.length < 5) return null;
+
+    const companySet = new Set(matchingJobs.map(j => j.company));
+    const matchingCompanies = [...companySet].filter(s => COMPANIES[s]);
+
+    const title = `${sen.name} ${role.name} Jobs | AI & Tech Companies | JobsByCulture`;
+    const metaDesc = `${matchingJobs.length} ${sen.name.toLowerCase()} ${role.name.toLowerCase()} jobs at ${matchingCompanies.length} companies. Find ${sen.name.toLowerCase()} ${role.name.toLowerCase()} roles at culture-first companies.`.slice(0, 160);
+    const canonical = `https://jobsbyculture.com/seniority/${senioritySlug}/${roleSlug}`;
+    const showJobs = matchingJobs.slice(0, 20);
+
+    const ogUrl = `https://jobsbyculture.com/api/og?type=seniority&slug=${senioritySlug}&role=${roleSlug}`;
+    let html = headHtml(title, metaDesc, canonical, ogUrl) + sharedCSS + `
+</head>
+<body>
+${navHtml('jobs')}
+
+<section class="cl-hero">
+    <div class="container">
+        <div class="cl-hero-pill"><span class="cl-hero-pill-dot"></span>${esc(sen.name)} + ${esc(role.name)}</div>
+        <h1>${desc_data.emoji} <em>${esc(sen.name)}</em> ${esc(role.name)} Jobs</h1>
+        <p class="cl-hero-sub">${esc(sen.name)} ${esc(role.name.toLowerCase())} roles at companies known for strong culture. ${esc(desc_data.tagline)}.</p>
+        <div class="cl-stats">
+            <div class="cl-stat"><div class="cl-stat-val">${matchingJobs.length}</div><div class="cl-stat-label">Open Roles</div></div>
+            <div class="cl-stat"><div class="cl-stat-val">${matchingCompanies.length}</div><div class="cl-stat-label">Companies</div></div>
+        </div>
+    </div>
+</section>
+
+<section class="cl-companies">
+    <div class="container">
+        <h2 class="cl-section-title">Companies hiring</h2>
+        <div class="cl-company-grid">
+${matchingCompanies.map(s => companyCardHtml(s)).filter(Boolean).join('\n')}
+        </div>
+    </div>
+</section>
+
+<section class="cl-jobs">
+    <div class="container">
+        <h2 class="cl-section-title">Open ${esc(sen.name.toLowerCase())} ${esc(role.name.toLowerCase())} roles</h2>
+        <div class="cl-job-list">
+${showJobs.map(j => jobCardHtml(j)).join('\n')}
+        </div>
+        <a href="/jobs" class="cl-show-more">View all ${matchingJobs.length} jobs &rarr;</a>
+    </div>
+</section>
+
+<section class="cl-related">
+    <div class="container">
+        <h2 class="cl-section-title">Related pages</h2>
+        <div class="cl-related-grid">
+            <a href="/seniority/${esc(senioritySlug)}" class="cl-related-link">${desc_data.emoji} All ${esc(sen.name)} Jobs</a>
+            <a href="/roles/${esc(roleSlug)}" class="cl-related-link">${esc(role.ico)} All ${esc(role.name)} Jobs</a>
+${Object.keys(SENIORITIES).filter(s => s !== senioritySlug).map(s => {
+    const otherSen = SENIORITIES[s];
+    const otherDesc = SENIORITY_DESCRIPTIONS[s];
+    const count = enrichedJobs.filter(j => j.seniority === s && j.role === roleSlug).length;
+    if (count < 5) return '';
+    return `            <a href="/seniority/${esc(s)}/${esc(roleSlug)}" class="cl-related-link">${otherDesc?.emoji || ''} ${esc(otherSen.name)} ${esc(role.name)} <span class="count">${count}</span></a>`;
+}).filter(Boolean).join('\n')}
+        </div>
+    </div>
+</section>
+
+${footerHtml()}
+</body>
+</html>`;
+
+    return { slug: `${senioritySlug}/${roleSlug}`, html, path: `seniority/${senioritySlug}/${roleSlug}.html`, jobs: matchingJobs.length };
 }
 
 // ─── Generate a CROSS page (value + role) ───
@@ -748,29 +969,60 @@ for (const valueSlug of Object.keys(VALUES)) {
     }
 }
 
+// 4. Seniority pages
+const seniorityDir = resolve(ROOT, 'seniority');
+if (!existsSync(seniorityDir)) mkdirSync(seniorityDir, { recursive: true });
+
+for (const senioritySlug of Object.keys(SENIORITIES)) {
+    const result = generateSeniorityPage(senioritySlug);
+    if (result) {
+        writeFileSync(resolve(ROOT, result.path), result.html);
+        generated.push(result);
+        console.log(`  [seniority] ${result.path} (${result.jobs} jobs)`);
+    }
+
+    // Seniority × Role cross pages
+    const subdir = resolve(ROOT, 'seniority', senioritySlug);
+    if (!existsSync(subdir)) mkdirSync(subdir, { recursive: true });
+
+    for (const roleSlug of Object.keys(ROLES)) {
+        const crossResult = generateSeniorityRolePage(senioritySlug, roleSlug);
+        if (crossResult) {
+            writeFileSync(resolve(ROOT, crossResult.path), crossResult.html);
+            generated.push(crossResult);
+            console.log(`  [sen×role] ${crossResult.path} (${crossResult.jobs} jobs)`);
+        }
+    }
+}
+
 console.log(`\nGenerated ${generated.length} cluster pages.`);
 
 // ─── Update sitemap.xml ───
 const sitemapPath = resolve(ROOT, 'sitemap.xml');
 let sitemap = readFileSync(sitemapPath, 'utf-8');
 
-// Remove old cluster entries
-sitemap = sitemap.replace(/\s*<!-- Cluster pages -->[\s\S]*?(?=<\/urlset>)/, '\n');
+// Remove old cluster entries (with or without end marker)
+sitemap = sitemap.replace(/\s*<!-- Cluster pages -->[\s\S]*?(?:<!-- \/Cluster pages -->\n?|(?=\s*<!--\s|<\/urlset>))/, '\n');
 
 // Add new entries
 const today = new Date().toISOString().slice(0, 10);
 let clusterEntries = '\n  <!-- Cluster pages -->';
 for (const page of generated) {
     const loc = `https://jobsbyculture.com/${page.path.replace('.html', '')}`;
+    // Seniority top-level pages get 0.6, seniority×role get 0.5, others get 0.6
+    let priority = '0.6';
+    if (page.path.startsWith('seniority/') && page.path.split('/').length > 2) {
+        priority = '0.5';
+    }
     clusterEntries += `
   <url>
     <loc>${loc}</loc>
     <lastmod>${today}</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
+    <priority>${priority}</priority>
   </url>`;
 }
-clusterEntries += '\n';
+clusterEntries += '  <!-- /Cluster pages -->\n';
 
 sitemap = sitemap.replace('</urlset>', clusterEntries + '</urlset>');
 writeFileSync(sitemapPath, sitemap);

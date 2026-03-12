@@ -384,5 +384,117 @@
       "name": "Operations",
       "jobCount": 123
     }
+  },
+  "seniorities": {
+    "entry": {
+      "name": "Entry / Junior",
+      "jobCount": 102,
+      "roles": {
+        "ml-ai": 8,
+        "engineering": 19,
+        "support": 2,
+        "sales": 9,
+        "other": 27,
+        "legal": 3,
+        "hr-people": 3,
+        "operations": 17,
+        "product": 2,
+        "finance": 4,
+        "data": 2,
+        "marketing": 5,
+        "design": 1
+      }
+    },
+    "mid": {
+      "name": "Mid-Level",
+      "jobCount": 1715,
+      "roles": {
+        "operations": 40,
+        "sales": 624,
+        "marketing": 45,
+        "data": 35,
+        "ml-ai": 111,
+        "other": 223,
+        "engineering": 432,
+        "legal": 36,
+        "finance": 35,
+        "hr-people": 54,
+        "design": 29,
+        "product": 8,
+        "support": 43
+      }
+    },
+    "senior": {
+      "name": "Senior",
+      "jobCount": 425,
+      "roles": {
+        "other": 18,
+        "finance": 11,
+        "engineering": 215,
+        "ml-ai": 25,
+        "operations": 3,
+        "data": 22,
+        "sales": 92,
+        "legal": 13,
+        "hr-people": 4,
+        "product": 1,
+        "design": 14,
+        "marketing": 2,
+        "support": 5
+      }
+    },
+    "staff": {
+      "name": "Staff / Principal",
+      "jobCount": 340,
+      "roles": {
+        "other": 34,
+        "engineering": 230,
+        "ml-ai": 25,
+        "data": 24,
+        "sales": 5,
+        "product": 2,
+        "design": 16,
+        "hr-people": 2,
+        "finance": 1,
+        "operations": 1
+      }
+    },
+    "lead": {
+      "name": "Lead / Manager",
+      "jobCount": 1105,
+      "roles": {
+        "data": 15,
+        "engineering": 163,
+        "other": 235,
+        "sales": 195,
+        "finance": 35,
+        "marketing": 111,
+        "operations": 54,
+        "ml-ai": 15,
+        "product": 227,
+        "legal": 21,
+        "hr-people": 21,
+        "design": 7,
+        "support": 6
+      }
+    },
+    "director": {
+      "name": "Director+",
+      "jobCount": 158,
+      "roles": {
+        "finance": 11,
+        "engineering": 30,
+        "other": 41,
+        "marketing": 13,
+        "sales": 37,
+        "product": 3,
+        "operations": 8,
+        "legal": 8,
+        "data": 2,
+        "ml-ai": 1,
+        "hr-people": 3,
+        "design": 1
+      }
+    }
   }
 }

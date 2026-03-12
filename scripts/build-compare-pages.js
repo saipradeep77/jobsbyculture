@@ -495,8 +495,8 @@ function updateSitemap(generatedSlugs) {
     let sitemap = readFileSync(sitemapPath, 'utf-8');
     const today = new Date().toISOString().split('T')[0];
 
-    // Remove existing compare page entries
-    sitemap = sitemap.replace(/\s*<!-- Compare pages -->[\s\S]*?(?=<\/urlset>)/, '\n');
+    // Remove existing compare page entries (with or without end marker)
+    sitemap = sitemap.replace(/\s*<!-- Compare pages -->[\s\S]*?(?:<!-- \/Compare pages -->\n?|(?=\s*<!--\s|<\/urlset>))/, '\n');
 
     // Add compare main page + all generated pages
     let compareUrls = '\n  <!-- Compare pages -->\n';
@@ -505,6 +505,7 @@ function updateSitemap(generatedSlugs) {
     for (const slug of generatedSlugs) {
         compareUrls += `  <url>\n    <loc>https://jobsbyculture.com/compare/${slug}</loc>\n    <lastmod>${today}</lastmod>\n    <changefreq>monthly</changefreq>\n    <priority>0.7</priority>\n  </url>\n`;
     }
+    compareUrls += '  <!-- /Compare pages -->\n';
 
     sitemap = sitemap.replace('</urlset>', compareUrls + '</urlset>');
     writeFileSync(sitemapPath, sitemap);
@@ -514,11 +515,36 @@ function updateSitemap(generatedSlugs) {
 // ─── Main ───
 async function main() {
     const client = new Anthropic();
-    console.log(`Building ${pairs.length} compare pages...\n`);
+
+    // Auto-generate all profiled-vs-profiled pairs (C(n,2))
+    const profiledSlugs = Object.keys(COMPANIES).sort();
+    const profiledPairs = [];
+    for (let i = 0; i < profiledSlugs.length; i++) {
+        for (let j = i + 1; j < profiledSlugs.length; j++) {
+            profiledPairs.push([profiledSlugs[i], profiledSlugs[j]]);
+        }
+    }
+
+    // Keep external pairs from compare-pairs.json that aren't already covered
+    const profiledSet = new Set(profiledSlugs);
+    const externalPairs = pairs.filter(([a, b]) => !profiledSet.has(a) || !profiledSet.has(b));
+
+    // Deduplicate: create a set of "a-vs-b" keys
+    const pairKeys = new Set();
+    const allPairs = [];
+    for (const [a, b] of [...profiledPairs, ...externalPairs]) {
+        const key = [a, b].sort().join('-vs-');
+        if (!pairKeys.has(key)) {
+            pairKeys.add(key);
+            allPairs.push([a, b]);
+        }
+    }
+
+    console.log(`Building ${allPairs.length} compare pages (${profiledPairs.length} profiled + ${externalPairs.length} external)...\n`);
 
     // Collect all unique slugs needed
     const allSlugs = new Set();
-    for (const [a, b] of pairs) {
+    for (const [a, b] of allPairs) {
         allSlugs.add(a);
         allSlugs.add(b);
     }
@@ -542,7 +568,7 @@ async function main() {
 
     // Generate pages
     const generatedSlugs = [];
-    for (const [slugA, slugB] of pairs) {
+    for (const [slugA, slugB] of allPairs) {
         const a = companyData[slugA];
         const b = companyData[slugB];
         if (!a || !b) {

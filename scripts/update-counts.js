@@ -390,12 +390,36 @@ for (const [slug, vals] of Object.entries(cv)) {
     }
 }
 
+// ─── Compute seniority counts ───
+function classifySeniority(title) {
+    const t = title.toLowerCase();
+    if (/\b(director|vp |vice president|head of|chief)\b/.test(t)) return 'director';
+    if (/\b(lead|manager|engineering manager)\b/.test(t)) return 'lead';
+    if (/\b(staff|principal|distinguished)\b/.test(t)) return 'staff';
+    if (/\b(senior|sr\.?)\b/.test(t)) return 'senior';
+    if (/\b(junior|jr\.?|intern|entry|associate|new grad)\b/.test(t)) return 'entry';
+    return 'mid';
+}
+
+const SENIORITIES = extract(jobsHtml, 'SENIORITIES');
+
+const seniorityCounts = {};
+const seniorityRoleCounts = {};
+for (const job of knownJobs) {
+    const sen = classifySeniority(job.title);
+    const role = classifyRole(job.title);
+    seniorityCounts[sen] = (seniorityCounts[sen] || 0) + 1;
+    if (!seniorityRoleCounts[sen]) seniorityRoleCounts[sen] = {};
+    seniorityRoleCounts[sen][role] = (seniorityRoleCounts[sen][role] || 0) + 1;
+}
+
 const ogData = {
     totalJobs,
     companyCount,
     companies: {},
     values: {},
     roles: {},
+    seniorities: {},
 };
 
 for (const [slug, data] of Object.entries(COMPANIES)) {
@@ -426,8 +450,18 @@ for (const [slug, meta] of Object.entries(ROLES)) {
     }
 }
 
+for (const [slug, meta] of Object.entries(SENIORITIES)) {
+    if (seniorityCounts[slug]) {
+        ogData.seniorities[slug] = {
+            name: meta.name,
+            jobCount: seniorityCounts[slug],
+            roles: seniorityRoleCounts[slug] || {},
+        };
+    }
+}
+
 writeFileSync(resolve(ROOT, 'data/og-data.json'), JSON.stringify(ogData, null, 2));
-console.log(`✓ data/og-data.json — ${Object.keys(ogData.companies).length} companies, ${Object.keys(ogData.values).length} values, ${Object.keys(ogData.roles).length} roles`);
+console.log(`✓ data/og-data.json — ${Object.keys(ogData.companies).length} companies, ${Object.keys(ogData.values).length} values, ${Object.keys(ogData.roles).length} roles, ${Object.keys(ogData.seniorities).length} seniorities`);
 
 // ═══════════════════════════════════════════════════════════════
 // SUMMARY

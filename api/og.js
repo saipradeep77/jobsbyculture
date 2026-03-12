@@ -364,6 +364,49 @@ function renderRole(slug) {
   );
 }
 
+function renderSeniority(slug, roleSlug) {
+  const sen = ogData.seniorities?.[slug];
+  if (!sen) return renderHome();
+  const label = roleSlug && ogData.roles?.[roleSlug]
+    ? `${sen.name} ${ogData.roles[roleSlug].name}`
+    : sen.name;
+  const jobCount = roleSlug && sen.roles?.[roleSlug]
+    ? sen.roles[roleSlug]
+    : sen.jobCount;
+  return wrapper(
+    brand('Browse by Seniority'),
+    h('div', { style: { display: 'flex', flexDirection: 'column', flex: 1, justifyContent: 'center' } },
+      h('div', { style: { display: 'flex', alignItems: 'center', gap: 16, marginBottom: 24 } },
+        h('div', { style: { width: 6, height: 52, borderRadius: 3, background: ORANGE, flexShrink: 0 } }),
+        h('div', { style: { fontSize: 48, fontWeight: 700, color: TEXT, lineHeight: 1.12 } },
+          `${label} Jobs`
+        )
+      ),
+      h('div', { style: { display: 'flex', gap: 20 } },
+        h('div', { style: {
+          display: 'flex', flexDirection: 'column',
+          background: hexToRgba(ORANGE, 0.06), border: `1.5px solid ${hexToRgba(ORANGE, 0.15)}`,
+          borderRadius: 14, padding: '16px 28px',
+        }},
+          h('div', { style: { fontSize: 38, fontWeight: 700, color: ORANGE, lineHeight: 1 } },
+            jobCount.toLocaleString()
+          ),
+          h('div', { style: { fontSize: 14, color: TEXT_SEC, fontWeight: 400, marginTop: 4 } }, 'open jobs')
+        ),
+        h('div', { style: {
+          display: 'flex', flexDirection: 'column',
+          background: WHITE, border: '1px solid rgba(0,0,0,0.07)',
+          borderRadius: 14, padding: '16px 28px',
+        }},
+          h('div', { style: { fontSize: 14, color: TEXT_SEC, fontWeight: 400 } }, 'at culture-first companies'),
+          h('div', { style: { fontSize: 15, color: TEXT_MUTED, fontWeight: 400, marginTop: 4 } }, 'jobsbyculture.com')
+        )
+      )
+    ),
+    footer(`${ogData.companyCount} companies profiled  ·  jobsbyculture.com`)
+  );
+}
+
 function renderDirectory() {
   // Show a few company names as a teaser
   const names = Object.values(ogData.companies).slice(0, 6).map(c => c.name);
@@ -411,6 +454,7 @@ export default async function handler(request) {
   const { searchParams } = new URL(request.url);
   const type = searchParams.get('type') || 'home';
   const slug = searchParams.get('slug') || '';
+  const role = searchParams.get('role') || '';
   const a = searchParams.get('a') || '';
   const b = searchParams.get('b') || '';
 
@@ -421,6 +465,7 @@ export default async function handler(request) {
     case 'compare': element = renderCompare(a, b); break;
     case 'value': element = renderValue(slug); break;
     case 'role': element = renderRole(slug); break;
+    case 'seniority': element = renderSeniority(slug, role); break;
     case 'directory': element = renderDirectory(); break;
     case 'compare-tool': element = renderCompareTool(); break;
     default: element = renderHome();
