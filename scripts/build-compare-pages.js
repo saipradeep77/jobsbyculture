@@ -477,6 +477,7 @@ function generatePage(a, b) {
             <a href="/directory">Culture Directory</a>
             <a href="/values/remote">By Culture</a>
             <a href="/roles/engineering">By Role</a>
+            <a href="/seniority/senior">By Seniority</a>
         </div>
         <div class="ft-bar">
             <p>&copy; 2026 JobsByCulture</p>

@@ -47,6 +47,15 @@ JobsByCulture helps professionals find jobs at companies whose culture actually 
 - [Stripe vs Shopify](https://jobsbyculture.com/compare/stripe-vs-shopify)
 - [NVIDIA vs AMD](https://jobsbyculture.com/compare/nvidia-vs-amd)
 
+## Browse by Seniority
+
+- [Entry / Junior Jobs](https://jobsbyculture.com/seniority/entry): Early-career roles at culture-first companies
+- [Mid-Level Jobs](https://jobsbyculture.com/seniority/mid): Mid-level roles at companies that value culture
+- [Senior Jobs](https://jobsbyculture.com/seniority/senior): Senior IC roles at top-rated AI & tech companies
+- [Staff / Principal Jobs](https://jobsbyculture.com/seniority/staff): Staff and principal-level roles for deep experts
+- [Lead / Manager Jobs](https://jobsbyculture.com/seniority/lead): Team lead and manager roles at culture-first companies
+- [Director+ Jobs](https://jobsbyculture.com/seniority/director): Director, VP, and executive-level roles
+
 ## Culture Values We Track
 
 1. Work-Life Balance
