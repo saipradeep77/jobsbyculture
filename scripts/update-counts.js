@@ -367,7 +367,7 @@ for (const file of companyFiles) {
     const slug = file.replace('.html', '');
     const path = resolve(companiesDir, file);
     let compHtml = readFileSync(path, 'utf-8');
-    compHtml = setOgUrl(compHtml, `${OG_BASE}?type=company&slug=${slug}`);
+    compHtml = setOgUrl(compHtml, `${OG_BASE}?type=company&amp;slug=${slug}`);
     writeFileSync(path, compHtml);
 }
 console.log(`✓ OG images — dynamic URLs for index, compare, directory, jobs, ${companyFiles.length} company pages`);

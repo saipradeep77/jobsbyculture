@@ -334,14 +334,14 @@ function generatePage(a, b) {
     <meta property="og:description" content="${esc(desc)}">
     <meta property="og:type" content="website">
     <meta property="og:url" content="${url}">
-    <meta property="og:image" content="https://jobsbyculture.com/api/og?type=compare&a=${slugA}&b=${slugB}">
+    <meta property="og:image" content="https://jobsbyculture.com/api/og?type=compare&amp;a=${slugA}&amp;b=${slugB}">
     <meta property="og:image:type" content="image/png">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="${esc(a.name)} vs ${esc(b.name)} Culture Comparison">
     <meta name="twitter:description" content="${esc(desc)}">
-    <meta name="twitter:image" content="https://jobsbyculture.com/api/og?type=compare&a=${slugA}&b=${slugB}">
+    <meta name="twitter:image" content="https://jobsbyculture.com/api/og?type=compare&amp;a=${slugA}&amp;b=${slugB}">
     <link rel="canonical" href="${url}">
     <link rel="icon" type="image/svg+xml" href="/favicon.svg">
     <link rel="icon" type="image/png" sizes="512x512" href="/logo.png">
