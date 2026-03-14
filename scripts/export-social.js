@@ -202,7 +202,7 @@ if (existsSync(csvPath)) {
 const freshUrls = new Set(knownJobs.map(j => j.url));
 
 // 5. Build rows for active jobs
-const HEADER = 'id,title,company,company_slug,location,type,posted,role_category,seniority,culture_values,glassdoor_rating,apply_url,profile_url,jobs_filter_url,post_count,last_posted,status';
+const HEADER = 'id,title,company,company_slug,location,type,posted,role_category,seniority,culture_values,glassdoor_rating,apply_url,profile_url,jobs_filter_url,post_count,last_posted,status,og_image';
 
 const rows = [];
 let newCount = 0;
@@ -242,7 +242,8 @@ for (const j of knownJobs) {
         `https://jobsbyculture.com/jobs?company=${j.company}`,
         escapeCSV(postCount),
         escapeCSV(lastPosted),
-        status
+        status,
+        `https://jobsbyculture.com/api/og?type=company&slug=${j.company}`
     ].join(','));
 }
 
@@ -272,11 +273,12 @@ if (prevStatuses.size > 0) {
             const postCountIdx = headerFields.indexOf('post_count');
             const lastPostedIdx = headerFields.indexOf('last_posted');
 
+            const companySlug = fields[headerFields.indexOf('company_slug')];
             rows.push([
                 fields[headerFields.indexOf('id')],
                 escapeCSV(fields[headerFields.indexOf('title')]),
                 escapeCSV(fields[headerFields.indexOf('company')]),
-                fields[headerFields.indexOf('company_slug')],
+                companySlug,
                 escapeCSV(fields[headerFields.indexOf('location')]),
                 escapeCSV(fields[headerFields.indexOf('type')]),
                 escapeCSV(fields[headerFields.indexOf('posted')]),
@@ -289,7 +291,8 @@ if (prevStatuses.size > 0) {
                 fields[headerFields.indexOf('jobs_filter_url')],
                 escapeCSV(postCountIdx >= 0 ? fields[postCountIdx] : ''),
                 escapeCSV(lastPostedIdx >= 0 ? fields[lastPostedIdx] : ''),
-                'expired'
+                'expired',
+                `https://jobsbyculture.com/api/og?type=company&slug=${companySlug}`
             ].join(','));
         }
     }
