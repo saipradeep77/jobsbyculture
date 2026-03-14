@@ -6092,7 +6092,7 @@ function renderJobs() {
     let filtered = JOBS.filter(j => {
         const c = COMPANIES[j.company];
         // Search
-        if (searchQuery && !j.title.toLowerCase().includes(searchQuery) && !c.name.toLowerCase().includes(searchQuery)) return false;
+        if (searchQuery && !j.title.toLowerCase().includes(searchQuery) && !c.name.toLowerCase().includes(searchQuery) && !j.location.toLowerCase().includes(searchQuery)) return false;
         // Value filters
         if (activeValues.size > 0) {
             let hasAny = false;
@@ -6278,6 +6278,13 @@ buildFilters();
     const locParam = params.get('location');
     if (locParam) {
         activeLocations.add(locParam);
+    }
+    // Support ?search=Dublin (from location pages, etc.)
+    const searchParam = params.get('search');
+    if (searchParam) {
+        searchQuery = searchParam.toLowerCase();
+        document.getElementById('searchInput').value = searchParam;
+        document.getElementById('searchInputMobile').value = searchParam;
     }
     // Sync sidebar filter UI with activeValues
     if (activeValues.size > 0) {

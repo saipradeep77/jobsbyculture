@@ -718,7 +718,7 @@ ${matchingCompanies.map(s => companyCardHtml(s)).filter(Boolean).join('\n')}
         <div class="cl-job-list">
 ${showJobs.map(j => jobCardHtml(j)).join('\n')}
         </div>
-        <a href="/jobs" class="cl-show-more">View all ${matchingJobs.length} jobs &rarr;</a>
+        <a href="/jobs?seniority=${esc(senioritySlug)}" class="cl-show-more">View all ${matchingJobs.length} jobs &rarr;</a>
     </div>
 </section>`;
 
@@ -818,7 +818,7 @@ ${matchingCompanies.map(s => companyCardHtml(s)).filter(Boolean).join('\n')}
         <div class="cl-job-list">
 ${showJobs.map(j => jobCardHtml(j)).join('\n')}
         </div>
-        <a href="/jobs" class="cl-show-more">View all ${matchingJobs.length} jobs &rarr;</a>
+        <a href="/jobs?seniority=${esc(senioritySlug)}&role=${esc(roleSlug)}" class="cl-show-more">View all ${matchingJobs.length} jobs &rarr;</a>
     </div>
 </section>
 

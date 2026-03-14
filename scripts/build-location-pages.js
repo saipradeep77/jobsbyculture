@@ -571,7 +571,7 @@ ${roleBreakdown.map(([r, jobs]) => {
         <div class="cl-job-list">
 ${showJobs.map(j => jobCardHtml(j)).join('\n')}
         </div>
-        <a href="/jobs" class="cl-show-more">View all ${matchingJobs.length.toLocaleString()} jobs &rarr;</a>
+        <a href="/jobs?search=${encodeURIComponent(loc.name)}" class="cl-show-more">View all ${matchingJobs.length.toLocaleString()} jobs &rarr;</a>
     </div>
 </section>`;
 
