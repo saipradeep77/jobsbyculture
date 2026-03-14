@@ -298,8 +298,43 @@ if (prevStatuses.size > 0) {
     }
 }
 
-// 7. Write output
-const output = HEADER + '\n' + rows.join('\n') + '\n';
+// 7. Interleave rows so consecutive jobs are from different companies
+function interleaveByCompany(csvRows) {
+    // Group by company_slug (column index 3)
+    const buckets = new Map();
+    for (const row of csvRows) {
+        const slug = parseCSVLine(row)[3];
+        if (!buckets.has(slug)) buckets.set(slug, []);
+        buckets.get(slug).push(row);
+    }
+    // Sort buckets by size descending so largest companies spread evenly
+    const sorted = [...buckets.values()].sort((a, b) => b.length - a.length);
+    const result = [];
+    let remaining = true;
+    let idx = 0;
+    while (remaining) {
+        remaining = false;
+        for (const bucket of sorted) {
+            if (idx < bucket.length) {
+                result.push(bucket[idx]);
+                remaining = true;
+            }
+        }
+        idx++;
+    }
+    return result;
+}
+
+const shuffled = interleaveByCompany(rows);
+
+// 8. Re-number IDs sequentially after shuffle
+const finalRows = shuffled.map((row, i) => {
+    const fields = parseCSVLine(row);
+    fields[0] = String(i + 1);
+    return fields.map(f => escapeCSV(f)).join(',');
+});
+
+const output = HEADER + '\n' + finalRows.join('\n') + '\n';
 writeFileSync(csvPath, output);
 
 console.log(`\n✓ Exported ${rows.length} total rows to ${csvPath}`);
