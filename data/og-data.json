@@ -1,5 +1,5 @@
 {
-  "totalJobs": 3845,
+  "totalJobs": 3839,
   "companyCount": 24,
   "companies": {
     "anthropic": {
@@ -25,7 +25,7 @@
     "databricks": {
       "name": "Databricks",
       "glassdoor": 4.1,
-      "jobCount": 762,
+      "jobCount": 760,
       "values": [
         "eng-driven",
         "learning",
@@ -55,7 +55,7 @@
     "hubspot": {
       "name": "HubSpot",
       "glassdoor": 4.3,
-      "jobCount": 256,
+      "jobCount": 252,
       "values": [
         "diverse",
         "learning",
@@ -246,7 +246,7 @@
   "values": {
     "wlb": {
       "name": "Work-Life Balance",
-      "jobCount": 539,
+      "jobCount": 535,
       "companyCount": 4
     },
     "remote": {
@@ -256,7 +256,7 @@
     },
     "flex-hours": {
       "name": "Flexible Hours",
-      "jobCount": 283,
+      "jobCount": 279,
       "companyCount": 3
     },
     "async": {
@@ -271,7 +271,7 @@
     },
     "transparent": {
       "name": "Transparent Culture",
-      "jobCount": 962,
+      "jobCount": 958,
       "companyCount": 4
     },
     "flat": {
@@ -281,17 +281,17 @@
     },
     "diverse": {
       "name": "Diverse & Inclusive",
-      "jobCount": 1294,
+      "jobCount": 1288,
       "companyCount": 5
     },
     "psych-safety": {
       "name": "Safe to Fail",
-      "jobCount": 261,
+      "jobCount": 257,
       "companyCount": 2
     },
     "eng-driven": {
       "name": "Engineering-Driven",
-      "jobCount": 3312,
+      "jobCount": 3310,
       "companyCount": 20
     },
     "ship-fast": {
@@ -306,17 +306,17 @@
     },
     "learning": {
       "name": "Learning & Growth",
-      "jobCount": 2945,
+      "jobCount": 2939,
       "companyCount": 14
     },
     "equity": {
       "name": "Strong Comp & Equity",
-      "jobCount": 2535,
+      "jobCount": 2533,
       "companyCount": 8
     },
     "product-impact": {
       "name": "Direct Product Impact",
-      "jobCount": 2262,
+      "jobCount": 2260,
       "companyCount": 14
     },
     "many-hats": {
@@ -358,11 +358,11 @@
     },
     "marketing": {
       "name": "Marketing",
-      "jobCount": 176
+      "jobCount": 173
     },
     "sales": {
       "name": "Sales / GTM",
-      "jobCount": 962
+      "jobCount": 961
     },
     "finance": {
       "name": "Finance",
@@ -407,14 +407,14 @@
     },
     "mid": {
       "name": "Mid-Level",
-      "jobCount": 1715,
+      "jobCount": 1709,
       "roles": {
         "operations": 40,
-        "sales": 624,
-        "marketing": 45,
+        "sales": 623,
+        "marketing": 42,
         "data": 35,
         "ml-ai": 111,
-        "other": 223,
+        "other": 221,
         "engineering": 432,
         "legal": 36,
         "finance": 35,

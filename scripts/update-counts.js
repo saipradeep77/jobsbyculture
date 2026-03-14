@@ -60,7 +60,9 @@ const ROLES = extract(jobsHtml, 'ROLES');
 
 const knownSlugs = new Set(Object.keys(COMPANIES));
 const companyCount = knownSlugs.size;
-const knownJobs = allJobs.filter(j => knownSlugs.has(j.company));
+// Filter out non-English job titles
+const isEnglishTitle = (title) => !/[\u3000-\u9FFF\uAC00-\uD7AF\uF900-\uFAFF\u0600-\u06FF\u0400-\u04FF\u0E00-\u0E7F\u0900-\u097F\u1100-\u11FF]/.test(title);
+const knownJobs = allJobs.filter(j => knownSlugs.has(j.company) && isEnglishTitle(j.title));
 const totalJobs = knownJobs.length;
 
 console.log(`\nComputing counts for ${companyCount} companies, ${fmt(totalJobs)} jobs...\n`);

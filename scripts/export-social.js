@@ -167,9 +167,15 @@ console.log(`Loaded ${Object.keys(companyData).length} companies from jobs.html`
 const jobsPath = resolve(ROOT, 'data/jobs-fetched.json');
 const freshJobs = JSON.parse(readFileSync(jobsPath, 'utf-8'));
 
+// Filter out non-English job titles
+const isEnglishTitle = (title) => !/[\u3000-\u9FFF\uAC00-\uD7AF\uF900-\uFAFF\u0600-\u06FF\u0400-\u04FF\u0E00-\u0E7F\u0900-\u097F\u1100-\u11FF]/.test(title);
+const englishJobs = freshJobs.filter(j => isEnglishTitle(j.title));
+const nonEnglishCount = freshJobs.length - englishJobs.length;
+if (nonEnglishCount > 0) console.log(`⚠ Filtered out ${nonEnglishCount} non-English job titles`);
+
 // Filter to known companies only
-const knownJobs = freshJobs.filter(j => companyData[j.company]);
-console.log(`${knownJobs.length} jobs from known companies (${freshJobs.length - knownJobs.length} skipped)`);
+const knownJobs = englishJobs.filter(j => companyData[j.company]);
+console.log(`${knownJobs.length} jobs from known companies (${freshJobs.length - knownJobs.length - nonEnglishCount} skipped)`);
 
 // 3. Read previous CSV for status preservation
 const csvPath = resolve(ROOT, 'data/jobs-export.csv');

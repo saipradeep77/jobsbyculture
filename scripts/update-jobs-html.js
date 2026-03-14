@@ -38,8 +38,16 @@ if (!companiesMatch) {
 const companyKeys = [...companiesMatch[0].matchAll(/'([a-z0-9-]+)'\s*:\s*\{/g)].map(m => m[1]);
 console.log(`Found ${companyKeys.length} companies in COMPANIES: ${companyKeys.join(', ')}`);
 
+// Filter out non-English job titles (CJK, Arabic, Cyrillic, Thai, Devanagari, etc.)
+const isEnglishTitle = (title) => !/[\u3000-\u9FFF\uAC00-\uD7AF\uF900-\uFAFF\u0600-\u06FF\u0400-\u04FF\u0E00-\u0E7F\u0900-\u097F\u1100-\u11FF]/.test(title);
+const englishJobs = jobs.filter(j => isEnglishTitle(j.title));
+const nonEnglishCount = jobs.length - englishJobs.length;
+if (nonEnglishCount > 0) {
+    console.log(`⚠ Filtered out ${nonEnglishCount} non-English job titles`);
+}
+
 // Filter jobs to only include known companies
-const knownJobs = jobs.filter(j => companyKeys.includes(j.company));
+const knownJobs = englishJobs.filter(j => companyKeys.includes(j.company));
 const unknownCompanies = [...new Set(jobs.filter(j => !companyKeys.includes(j.company)).map(j => j.company))];
 
 if (unknownCompanies.length > 0) {
