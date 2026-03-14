@@ -5,14 +5,15 @@
   "scripts": {
     "build:compare": "node scripts/build-compare-pages.js",
     "build:clusters": "node scripts/build-cluster-pages.js",
-    "build:all": "node scripts/build-compare-pages.js && node scripts/build-cluster-pages.js",
+    "build:locations": "node scripts/build-location-pages.js",
+    "build:all": "node scripts/build-compare-pages.js && node scripts/build-cluster-pages.js && node scripts/build-location-pages.js",
     "indexnow": "node scripts/indexnow.js",
     "fetch-jobs": "node scripts/fetch-jobs.js",
     "update-jobs": "node scripts/update-jobs-html.js",
     "detect-ats": "node scripts/detect-ats.js",
     "export-social": "node scripts/export-social.js",
     "update-counts": "node scripts/update-counts.js",
-    "refresh": "node scripts/fetch-jobs.js && node scripts/update-jobs-html.js && node scripts/build-cluster-pages.js && node scripts/update-counts.js && node scripts/indexnow.js && node scripts/export-social.js"
+    "refresh": "node scripts/fetch-jobs.js && node scripts/update-jobs-html.js && node scripts/build-cluster-pages.js && node scripts/build-location-pages.js && node scripts/update-counts.js && node scripts/indexnow.js && node scripts/export-social.js"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.39.0",
