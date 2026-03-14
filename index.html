@@ -467,7 +467,7 @@
 
         /* ═══ FOOTER ═══ */
         footer { padding: 56px 0 36px; border-top: 1px solid var(--border); }
-        .ft-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr 1fr; gap: 40px; margin-bottom: 40px; }
+        .ft-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 40px; margin-bottom: 40px; }
         .ft-about p { font-size: 13px; color: var(--text-3); margin-top: 10px; line-height: 1.7; max-width: 260px; }
         .ft-col h4 { font-size: 12px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em; color: var(--text-2); margin-bottom: 14px; }
         .ft-col a { display: block; font-size: 13px; color: var(--text-3); text-decoration: none; padding: 3px 0; transition: color 0.15s; }
@@ -2349,13 +2349,6 @@
 <footer>
     <div class="container">
         <div class="ft-grid">
-            <div class="ft-about">
-                <a href="/" class="nav-logo" style="margin-bottom:0">
-                    <div class="nav-mark"><div class="ring ring-1"></div><div class="ring ring-2"></div><div class="nav-dot"></div></div>
-                    <div class="nav-wordmark">Jobs<span>By</span>Culture</div>
-                </a>
-                <p>The culture-first job board. Built for the AI era. Find teams that work the way you do.</p>
-            </div>
             <div class="ft-col">
                 <h4>By Culture</h4>
                 <a href="/values/remote">Remote-Friendly</a>
@@ -2396,6 +2389,7 @@
                 <h4>Explore</h4>
                 <a href="/directory">Culture Directory</a>
                 <a href="/compare">Compare Cultures</a>
+                <a href="/blog">Blog</a>
                 <a href="#" onclick="document.getElementById('listModal').style.display='flex';return false">List Your Company</a>
                 <a href="https://meetingtax.com" target="_blank">Meeting Tax</a>
                 <a href="https://paytaxfa.st" target="_blank">PayTaxFast</a>
