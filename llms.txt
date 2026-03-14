@@ -1,6 +1,6 @@
 # JobsByCulture
 
-> Culture-first job search for AI & tech professionals. Browse 3,839+ jobs filtered by culture values like async-first, work-life balance, remote-friendly, and ethical AI.
+> Culture-first job search for AI & tech professionals. Browse 4,873+ jobs filtered by culture values like async-first, work-life balance, remote-friendly, and ethical AI.
 
 ## About
 
@@ -8,9 +8,9 @@ JobsByCulture helps professionals find jobs at companies whose culture actually 
 
 ## Key Pages
 
-- [Browse Jobs](https://jobsbyculture.com/jobs): 3,839+ AI & tech jobs filtered by 18 culture values, 12 role categories, and 8 locations
+- [Browse Jobs](https://jobsbyculture.com/jobs): 4,873+ AI & tech jobs filtered by 18 culture values, 12 role categories, and 8 locations
 - [Compare Cultures](https://jobsbyculture.com/compare): Side-by-side company culture comparison tool
-- [Company Directory](https://jobsbyculture.com/directory): All 24 profiled companies with ratings, values, and reviews
+- [Company Directory](https://jobsbyculture.com/directory): All 29 profiled companies with ratings, values, and reviews
 
 ## Company Profiles
 
@@ -38,6 +38,11 @@ JobsByCulture helps professionals find jobs at companies whose culture actually 
 - [Modal](https://jobsbyculture.com/companies/modal): 4.0 Glassdoor, AI Infrastructure, 85% recommend
 - [Ramp](https://jobsbyculture.com/companies/ramp): 4.2 Glassdoor, Corporate Finance, 80% recommend
 - [Weaviate](https://jobsbyculture.com/companies/weaviate): 4.3 Glassdoor, Vector Database, 81% recommend
+- [OpenAI](https://jobsbyculture.com/companies/openai): 4.5 Glassdoor, Frontier AI Research, 82% recommend
+- [Google DeepMind](https://jobsbyculture.com/companies/deepmind): 4.2 Glassdoor, AI Research Lab, 85% recommend
+- [Notion](https://jobsbyculture.com/companies/notion): 4.4 Glassdoor, Productivity Tools, 89% recommend
+- [LangChain](https://jobsbyculture.com/companies/langchain): 4.6 Glassdoor, LLM Framework, N/A recommend
+- [Replit](https://jobsbyculture.com/companies/replit): 4.0 Glassdoor, AI Code Editor, 83% recommend
 
 ## Popular Comparisons
 

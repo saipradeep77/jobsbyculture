@@ -547,6 +547,36 @@
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
+  <url>
+    <loc>https://jobsbyculture.com/companies/openai</loc>
+    <lastmod>2026-03-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://jobsbyculture.com/companies/deepmind</loc>
+    <lastmod>2026-03-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://jobsbyculture.com/companies/notion</loc>
+    <lastmod>2026-03-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://jobsbyculture.com/companies/langchain</loc>
+    <lastmod>2026-03-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://jobsbyculture.com/companies/replit</loc>
+    <lastmod>2026-03-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
 
   <!-- /Compare pages -->
   <!-- /Cluster pages -->
@@ -556,6 +586,9 @@
 
   <!-- /Compare pages -->
   <!-- /Cluster pages -->
+  <!-- /Cluster pages -->
+
+  <!-- /Compare pages -->
 
   <!-- Cluster pages -->
   <url>
@@ -925,12 +958,6 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://jobsbyculture.com/roles/flex-hours/legal</loc>
-    <lastmod>2026-03-14</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
     <loc>https://jobsbyculture.com/roles/flex-hours/support</loc>
     <lastmod>2026-03-14</lastmod>
     <changefreq>weekly</changefreq>
@@ -968,6 +995,12 @@
   </url>
   <url>
     <loc>https://jobsbyculture.com/roles/deep-work/ml-ai</loc>
+    <lastmod>2026-03-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://jobsbyculture.com/roles/deep-work/data</loc>
     <lastmod>2026-03-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
@@ -1885,6 +1918,12 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://jobsbyculture.com/roles/social-impact/design</loc>
+    <lastmod>2026-03-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://jobsbyculture.com/roles/social-impact/engineering</loc>
     <lastmod>2026-03-14</lastmod>
     <changefreq>weekly</changefreq>
@@ -2089,6 +2128,12 @@
     <priority>0.5</priority>
   </url>
   <url>
+    <loc>https://jobsbyculture.com/seniority/senior/hr-people</loc>
+    <lastmod>2026-03-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
     <loc>https://jobsbyculture.com/seniority/senior/legal</loc>
     <lastmod>2026-03-14</lastmod>
     <changefreq>weekly</changefreq>
@@ -2245,6 +2290,12 @@
     <priority>0.5</priority>
   </url>
   <url>
+    <loc>https://jobsbyculture.com/seniority/director/hr-people</loc>
+    <lastmod>2026-03-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
     <loc>https://jobsbyculture.com/seniority/director/legal</loc>
     <lastmod>2026-03-14</lastmod>
     <changefreq>weekly</changefreq>
@@ -2301,6 +2352,12 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://jobsbyculture.com/compare/airbnb-vs-deepmind</loc>
+    <lastmod>2026-03-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://jobsbyculture.com/compare/airbnb-vs-elevenlabs</loc>
     <lastmod>2026-03-14</lastmod>
     <changefreq>monthly</changefreq>
@@ -2325,6 +2382,12 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://jobsbyculture.com/compare/airbnb-vs-langchain</loc>
+    <lastmod>2026-03-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://jobsbyculture.com/compare/airbnb-vs-linear</loc>
     <lastmod>2026-03-14</lastmod>
     <changefreq>monthly</changefreq>
@@ -2343,6 +2406,18 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://jobsbyculture.com/compare/airbnb-vs-notion</loc>
+    <lastmod>2026-03-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://jobsbyculture.com/compare/airbnb-vs-openai</loc>
+    <lastmod>2026-03-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://jobsbyculture.com/compare/airbnb-vs-perplexity</loc>
     <lastmod>2026-03-14</lastmod>
     <changefreq>monthly</changefreq>
@@ -2356,6 +2431,12 @@
   </url>
   <url>
     <loc>https://jobsbyculture.com/compare/airbnb-vs-ramp</loc>
+    <lastmod>2026-03-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://jobsbyculture.com/compare/airbnb-vs-replit</loc>
     <lastmod>2026-03-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -2433,6 +2514,12 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://jobsbyculture.com/compare/anthropic-vs-deepmind</loc>
+    <lastmod>2026-03-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://jobsbyculture.com/compare/anthropic-vs-elevenlabs</loc>
     <lastmod>2026-03-14</lastmod>
     <changefreq>monthly</changefreq>
@@ -2457,6 +2544,12 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://jobsbyculture.com/compare/anthropic-vs-langchain</loc>
+    <lastmod>2026-03-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://jobsbyculture.com/compare/anthropic-vs-linear</loc>
     <lastmod>2026-03-14</lastmod>
     <changefreq>monthly</changefreq>
@@ -2475,6 +2568,18 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://jobsbyculture.com/compare/anthropic-vs-notion</loc>
+    <lastmod>2026-03-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://jobsbyculture.com/compare/anthropic-vs-openai</loc>
+    <lastmod>2026-03-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://jobsbyculture.com/compare/anthropic-vs-perplexity</loc>
     <lastmod>2026-03-14</lastmod>
     <changefreq>monthly</changefreq>
@@ -2488,6 +2593,12 @@
   </url>
   <url>
     <loc>https://jobsbyculture.com/compare/anthropic-vs-ramp</loc>
+    <lastmod>2026-03-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://jobsbyculture.com/compare/anthropic-vs-replit</loc>
     <lastmod>2026-03-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -2559,6 +2670,12 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://jobsbyculture.com/compare/apollo-vs-deepmind</loc>
+    <lastmod>2026-03-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://jobsbyculture.com/compare/apollo-vs-elevenlabs</loc>
     <lastmod>2026-03-14</lastmod>
     <changefreq>monthly</changefreq>
@@ -2583,6 +2700,12 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://jobsbyculture.com/compare/apollo-vs-langchain</loc>
+    <lastmod>2026-03-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://jobsbyculture.com/compare/apollo-vs-linear</loc>
     <lastmod>2026-03-14</lastmod>
     <changefreq>monthly</changefreq>
@@ -2601,6 +2724,18 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://jobsbyculture.com/compare/apollo-vs-notion</loc>
+    <lastmod>2026-03-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://jobsbyculture.com/compare/apollo-vs-openai</loc>
+    <lastmod>2026-03-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://jobsbyculture.com/compare/apollo-vs-perplexity</loc>
     <lastmod>2026-03-14</lastmod>
     <changefreq>monthly</changefreq>
@@ -2614,6 +2749,12 @@
   </url>
   <url>
     <loc>https://jobsbyculture.com/compare/apollo-vs-ramp</loc>
+    <lastmod>2026-03-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://jobsbyculture.com/compare/apollo-vs-replit</loc>
     <lastmod>2026-03-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -2679,6 +2820,12 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://jobsbyculture.com/compare/cohere-vs-deepmind</loc>
+    <lastmod>2026-03-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://jobsbyculture.com/compare/cohere-vs-elevenlabs</loc>
     <lastmod>2026-03-14</lastmod>
     <changefreq>monthly</changefreq>
@@ -2703,6 +2850,12 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://jobsbyculture.com/compare/cohere-vs-langchain</loc>
+    <lastmod>2026-03-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://jobsbyculture.com/compare/cohere-vs-linear</loc>
     <lastmod>2026-03-14</lastmod>
     <changefreq>monthly</changefreq>
@@ -2721,6 +2874,18 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://jobsbyculture.com/compare/cohere-vs-notion</loc>
+    <lastmod>2026-03-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://jobsbyculture.com/compare/cohere-vs-openai</loc>
+    <lastmod>2026-03-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://jobsbyculture.com/compare/cohere-vs-perplexity</loc>
     <lastmod>2026-03-14</lastmod>
     <changefreq>monthly</changefreq>
@@ -2734,6 +2899,12 @@
   </url>
   <url>
     <loc>https://jobsbyculture.com/compare/cohere-vs-ramp</loc>
+    <lastmod>2026-03-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://jobsbyculture.com/compare/cohere-vs-replit</loc>
     <lastmod>2026-03-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -2793,6 +2964,12 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://jobsbyculture.com/compare/coreweave-vs-deepmind</loc>
+    <lastmod>2026-03-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://jobsbyculture.com/compare/coreweave-vs-elevenlabs</loc>
     <lastmod>2026-03-14</lastmod>
     <changefreq>monthly</changefreq>
@@ -2817,6 +2994,12 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://jobsbyculture.com/compare/coreweave-vs-langchain</loc>
+    <lastmod>2026-03-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://jobsbyculture.com/compare/coreweave-vs-linear</loc>
     <lastmod>2026-03-14</lastmod>
     <changefreq>monthly</changefreq>
@@ -2835,6 +3018,18 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://jobsbyculture.com/compare/coreweave-vs-notion</loc>
+    <lastmod>2026-03-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://jobsbyculture.com/compare/coreweave-vs-openai</loc>
+    <lastmod>2026-03-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://jobsbyculture.com/compare/coreweave-vs-perplexity</loc>
     <lastmod>2026-03-14</lastmod>
     <changefreq>monthly</changefreq>
@@ -2848,6 +3043,12 @@
   </url>
   <url>
     <loc>https://jobsbyculture.com/compare/coreweave-vs-ramp</loc>
+    <lastmod>2026-03-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://jobsbyculture.com/compare/coreweave-vs-replit</loc>
     <lastmod>2026-03-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -2901,6 +3102,12 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://jobsbyculture.com/compare/cursor-vs-deepmind</loc>
+    <lastmod>2026-03-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://jobsbyculture.com/compare/cursor-vs-elevenlabs</loc>
     <lastmod>2026-03-14</lastmod>
     <changefreq>monthly</changefreq>
@@ -2925,6 +3132,12 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://jobsbyculture.com/compare/cursor-vs-langchain</loc>
+    <lastmod>2026-03-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://jobsbyculture.com/compare/cursor-vs-linear</loc>
     <lastmod>2026-03-14</lastmod>
     <changefreq>monthly</changefreq>
@@ -2943,6 +3156,18 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://jobsbyculture.com/compare/cursor-vs-notion</loc>
+    <lastmod>2026-03-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://jobsbyculture.com/compare/cursor-vs-openai</loc>
+    <lastmod>2026-03-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://jobsbyculture.com/compare/cursor-vs-perplexity</loc>
     <lastmod>2026-03-14</lastmod>
     <changefreq>monthly</changefreq>
@@ -2956,6 +3181,12 @@
   </url>
   <url>
     <loc>https://jobsbyculture.com/compare/cursor-vs-ramp</loc>
+    <lastmod>2026-03-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://jobsbyculture.com/compare/cursor-vs-replit</loc>
     <lastmod>2026-03-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -3003,6 +3234,12 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://jobsbyculture.com/compare/databricks-vs-deepmind</loc>
+    <lastmod>2026-03-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://jobsbyculture.com/compare/databricks-vs-elevenlabs</loc>
     <lastmod>2026-03-14</lastmod>
     <changefreq>monthly</changefreq>
@@ -3027,6 +3264,12 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://jobsbyculture.com/compare/databricks-vs-langchain</loc>
+    <lastmod>2026-03-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://jobsbyculture.com/compare/databricks-vs-linear</loc>
     <lastmod>2026-03-14</lastmod>
     <changefreq>monthly</changefreq>
@@ -3045,6 +3288,18 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://jobsbyculture.com/compare/databricks-vs-notion</loc>
+    <lastmod>2026-03-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://jobsbyculture.com/compare/databricks-vs-openai</loc>
+    <lastmod>2026-03-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://jobsbyculture.com/compare/databricks-vs-perplexity</loc>
     <lastmod>2026-03-14</lastmod>
     <changefreq>monthly</changefreq>
@@ -3058,6 +3313,12 @@
   </url>
   <url>
     <loc>https://jobsbyculture.com/compare/databricks-vs-ramp</loc>
+    <lastmod>2026-03-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://jobsbyculture.com/compare/databricks-vs-replit</loc>
     <lastmod>2026-03-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -3105,6 +3366,132 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://jobsbyculture.com/compare/deepmind-vs-elevenlabs</loc>
+    <lastmod>2026-03-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://jobsbyculture.com/compare/deepmind-vs-figma</loc>
+    <lastmod>2026-03-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://jobsbyculture.com/compare/deepmind-vs-hubspot</loc>
+    <lastmod>2026-03-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://jobsbyculture.com/compare/deepmind-vs-huggingface</loc>
+    <lastmod>2026-03-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://jobsbyculture.com/compare/deepmind-vs-langchain</loc>
+    <lastmod>2026-03-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://jobsbyculture.com/compare/deepmind-vs-linear</loc>
+    <lastmod>2026-03-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://jobsbyculture.com/compare/deepmind-vs-mistral</loc>
+    <lastmod>2026-03-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://jobsbyculture.com/compare/deepmind-vs-modal</loc>
+    <lastmod>2026-03-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://jobsbyculture.com/compare/deepmind-vs-notion</loc>
+    <lastmod>2026-03-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://jobsbyculture.com/compare/deepmind-vs-openai</loc>
+    <lastmod>2026-03-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://jobsbyculture.com/compare/deepmind-vs-perplexity</loc>
+    <lastmod>2026-03-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://jobsbyculture.com/compare/deepmind-vs-pinecone</loc>
+    <lastmod>2026-03-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://jobsbyculture.com/compare/deepmind-vs-ramp</loc>
+    <lastmod>2026-03-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://jobsbyculture.com/compare/deepmind-vs-replit</loc>
+    <lastmod>2026-03-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://jobsbyculture.com/compare/deepmind-vs-runway</loc>
+    <lastmod>2026-03-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://jobsbyculture.com/compare/deepmind-vs-scale</loc>
+    <lastmod>2026-03-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://jobsbyculture.com/compare/deepmind-vs-stripe</loc>
+    <lastmod>2026-03-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://jobsbyculture.com/compare/deepmind-vs-together</loc>
+    <lastmod>2026-03-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://jobsbyculture.com/compare/deepmind-vs-vast</loc>
+    <lastmod>2026-03-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://jobsbyculture.com/compare/deepmind-vs-vercel</loc>
+    <lastmod>2026-03-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://jobsbyculture.com/compare/deepmind-vs-weaviate</loc>
+    <lastmod>2026-03-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://jobsbyculture.com/compare/elevenlabs-vs-figma</loc>
     <lastmod>2026-03-14</lastmod>
     <changefreq>monthly</changefreq>
@@ -3118,6 +3505,12 @@
   </url>
   <url>
     <loc>https://jobsbyculture.com/compare/elevenlabs-vs-huggingface</loc>
+    <lastmod>2026-03-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://jobsbyculture.com/compare/elevenlabs-vs-langchain</loc>
     <lastmod>2026-03-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -3141,6 +3534,18 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://jobsbyculture.com/compare/elevenlabs-vs-notion</loc>
+    <lastmod>2026-03-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://jobsbyculture.com/compare/elevenlabs-vs-openai</loc>
+    <lastmod>2026-03-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://jobsbyculture.com/compare/elevenlabs-vs-perplexity</loc>
     <lastmod>2026-03-14</lastmod>
     <changefreq>monthly</changefreq>
@@ -3154,6 +3559,12 @@
   </url>
   <url>
     <loc>https://jobsbyculture.com/compare/elevenlabs-vs-ramp</loc>
+    <lastmod>2026-03-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://jobsbyculture.com/compare/elevenlabs-vs-replit</loc>
     <lastmod>2026-03-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -3213,6 +3624,12 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://jobsbyculture.com/compare/figma-vs-langchain</loc>
+    <lastmod>2026-03-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://jobsbyculture.com/compare/figma-vs-linear</loc>
     <lastmod>2026-03-14</lastmod>
     <changefreq>monthly</changefreq>
@@ -3231,6 +3648,18 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://jobsbyculture.com/compare/figma-vs-notion</loc>
+    <lastmod>2026-03-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://jobsbyculture.com/compare/figma-vs-openai</loc>
+    <lastmod>2026-03-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://jobsbyculture.com/compare/figma-vs-perplexity</loc>
     <lastmod>2026-03-14</lastmod>
     <changefreq>monthly</changefreq>
@@ -3244,6 +3673,12 @@
   </url>
   <url>
     <loc>https://jobsbyculture.com/compare/figma-vs-ramp</loc>
+    <lastmod>2026-03-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://jobsbyculture.com/compare/figma-vs-replit</loc>
     <lastmod>2026-03-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -3297,6 +3732,12 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://jobsbyculture.com/compare/hubspot-vs-langchain</loc>
+    <lastmod>2026-03-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://jobsbyculture.com/compare/hubspot-vs-linear</loc>
     <lastmod>2026-03-14</lastmod>
     <changefreq>monthly</changefreq>
@@ -3315,6 +3756,18 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://jobsbyculture.com/compare/hubspot-vs-notion</loc>
+    <lastmod>2026-03-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://jobsbyculture.com/compare/hubspot-vs-openai</loc>
+    <lastmod>2026-03-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://jobsbyculture.com/compare/hubspot-vs-perplexity</loc>
     <lastmod>2026-03-14</lastmod>
     <changefreq>monthly</changefreq>
@@ -3328,6 +3781,12 @@
   </url>
   <url>
     <loc>https://jobsbyculture.com/compare/hubspot-vs-ramp</loc>
+    <lastmod>2026-03-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://jobsbyculture.com/compare/hubspot-vs-replit</loc>
     <lastmod>2026-03-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -3375,6 +3834,12 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://jobsbyculture.com/compare/huggingface-vs-langchain</loc>
+    <lastmod>2026-03-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://jobsbyculture.com/compare/huggingface-vs-linear</loc>
     <lastmod>2026-03-14</lastmod>
     <changefreq>monthly</changefreq>
@@ -3393,6 +3858,18 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://jobsbyculture.com/compare/huggingface-vs-notion</loc>
+    <lastmod>2026-03-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://jobsbyculture.com/compare/huggingface-vs-openai</loc>
+    <lastmod>2026-03-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://jobsbyculture.com/compare/huggingface-vs-perplexity</loc>
     <lastmod>2026-03-14</lastmod>
     <changefreq>monthly</changefreq>
@@ -3406,6 +3883,12 @@
   </url>
   <url>
     <loc>https://jobsbyculture.com/compare/huggingface-vs-ramp</loc>
+    <lastmod>2026-03-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://jobsbyculture.com/compare/huggingface-vs-replit</loc>
     <lastmod>2026-03-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -3453,6 +3936,102 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://jobsbyculture.com/compare/langchain-vs-linear</loc>
+    <lastmod>2026-03-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://jobsbyculture.com/compare/langchain-vs-mistral</loc>
+    <lastmod>2026-03-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://jobsbyculture.com/compare/langchain-vs-modal</loc>
+    <lastmod>2026-03-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://jobsbyculture.com/compare/langchain-vs-notion</loc>
+    <lastmod>2026-03-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://jobsbyculture.com/compare/langchain-vs-openai</loc>
+    <lastmod>2026-03-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://jobsbyculture.com/compare/langchain-vs-perplexity</loc>
+    <lastmod>2026-03-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://jobsbyculture.com/compare/langchain-vs-pinecone</loc>
+    <lastmod>2026-03-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://jobsbyculture.com/compare/langchain-vs-ramp</loc>
+    <lastmod>2026-03-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://jobsbyculture.com/compare/langchain-vs-replit</loc>
+    <lastmod>2026-03-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://jobsbyculture.com/compare/langchain-vs-runway</loc>
+    <lastmod>2026-03-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://jobsbyculture.com/compare/langchain-vs-scale</loc>
+    <lastmod>2026-03-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://jobsbyculture.com/compare/langchain-vs-stripe</loc>
+    <lastmod>2026-03-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://jobsbyculture.com/compare/langchain-vs-together</loc>
+    <lastmod>2026-03-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://jobsbyculture.com/compare/langchain-vs-vast</loc>
+    <lastmod>2026-03-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://jobsbyculture.com/compare/langchain-vs-vercel</loc>
+    <lastmod>2026-03-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://jobsbyculture.com/compare/langchain-vs-weaviate</loc>
+    <lastmod>2026-03-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://jobsbyculture.com/compare/linear-vs-mistral</loc>
     <lastmod>2026-03-14</lastmod>
     <changefreq>monthly</changefreq>
@@ -3460,6 +4039,18 @@
   </url>
   <url>
     <loc>https://jobsbyculture.com/compare/linear-vs-modal</loc>
+    <lastmod>2026-03-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://jobsbyculture.com/compare/linear-vs-notion</loc>
+    <lastmod>2026-03-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://jobsbyculture.com/compare/linear-vs-openai</loc>
     <lastmod>2026-03-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -3478,6 +4069,12 @@
   </url>
   <url>
     <loc>https://jobsbyculture.com/compare/linear-vs-ramp</loc>
+    <lastmod>2026-03-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://jobsbyculture.com/compare/linear-vs-replit</loc>
     <lastmod>2026-03-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -3531,6 +4128,18 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://jobsbyculture.com/compare/mistral-vs-notion</loc>
+    <lastmod>2026-03-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://jobsbyculture.com/compare/mistral-vs-openai</loc>
+    <lastmod>2026-03-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://jobsbyculture.com/compare/mistral-vs-perplexity</loc>
     <lastmod>2026-03-14</lastmod>
     <changefreq>monthly</changefreq>
@@ -3544,6 +4153,12 @@
   </url>
   <url>
     <loc>https://jobsbyculture.com/compare/mistral-vs-ramp</loc>
+    <lastmod>2026-03-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://jobsbyculture.com/compare/mistral-vs-replit</loc>
     <lastmod>2026-03-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -3591,6 +4206,18 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://jobsbyculture.com/compare/modal-vs-notion</loc>
+    <lastmod>2026-03-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://jobsbyculture.com/compare/modal-vs-openai</loc>
+    <lastmod>2026-03-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://jobsbyculture.com/compare/modal-vs-perplexity</loc>
     <lastmod>2026-03-14</lastmod>
     <changefreq>monthly</changefreq>
@@ -3604,6 +4231,12 @@
   </url>
   <url>
     <loc>https://jobsbyculture.com/compare/modal-vs-ramp</loc>
+    <lastmod>2026-03-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://jobsbyculture.com/compare/modal-vs-replit</loc>
     <lastmod>2026-03-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -3651,6 +4284,144 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://jobsbyculture.com/compare/notion-vs-openai</loc>
+    <lastmod>2026-03-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://jobsbyculture.com/compare/notion-vs-perplexity</loc>
+    <lastmod>2026-03-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://jobsbyculture.com/compare/notion-vs-pinecone</loc>
+    <lastmod>2026-03-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://jobsbyculture.com/compare/notion-vs-ramp</loc>
+    <lastmod>2026-03-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://jobsbyculture.com/compare/notion-vs-replit</loc>
+    <lastmod>2026-03-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://jobsbyculture.com/compare/notion-vs-runway</loc>
+    <lastmod>2026-03-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://jobsbyculture.com/compare/notion-vs-scale</loc>
+    <lastmod>2026-03-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://jobsbyculture.com/compare/notion-vs-stripe</loc>
+    <lastmod>2026-03-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://jobsbyculture.com/compare/notion-vs-together</loc>
+    <lastmod>2026-03-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://jobsbyculture.com/compare/notion-vs-vast</loc>
+    <lastmod>2026-03-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://jobsbyculture.com/compare/notion-vs-vercel</loc>
+    <lastmod>2026-03-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://jobsbyculture.com/compare/notion-vs-weaviate</loc>
+    <lastmod>2026-03-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://jobsbyculture.com/compare/openai-vs-perplexity</loc>
+    <lastmod>2026-03-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://jobsbyculture.com/compare/openai-vs-pinecone</loc>
+    <lastmod>2026-03-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://jobsbyculture.com/compare/openai-vs-ramp</loc>
+    <lastmod>2026-03-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://jobsbyculture.com/compare/openai-vs-replit</loc>
+    <lastmod>2026-03-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://jobsbyculture.com/compare/openai-vs-runway</loc>
+    <lastmod>2026-03-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://jobsbyculture.com/compare/openai-vs-scale</loc>
+    <lastmod>2026-03-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://jobsbyculture.com/compare/openai-vs-stripe</loc>
+    <lastmod>2026-03-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://jobsbyculture.com/compare/openai-vs-together</loc>
+    <lastmod>2026-03-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://jobsbyculture.com/compare/openai-vs-vast</loc>
+    <lastmod>2026-03-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://jobsbyculture.com/compare/openai-vs-vercel</loc>
+    <lastmod>2026-03-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://jobsbyculture.com/compare/openai-vs-weaviate</loc>
+    <lastmod>2026-03-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://jobsbyculture.com/compare/perplexity-vs-pinecone</loc>
     <lastmod>2026-03-14</lastmod>
     <changefreq>monthly</changefreq>
@@ -3658,6 +4429,12 @@
   </url>
   <url>
     <loc>https://jobsbyculture.com/compare/perplexity-vs-ramp</loc>
+    <lastmod>2026-03-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://jobsbyculture.com/compare/perplexity-vs-replit</loc>
     <lastmod>2026-03-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -3711,6 +4488,12 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://jobsbyculture.com/compare/pinecone-vs-replit</loc>
+    <lastmod>2026-03-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://jobsbyculture.com/compare/pinecone-vs-runway</loc>
     <lastmod>2026-03-14</lastmod>
     <changefreq>monthly</changefreq>
@@ -3753,6 +4536,12 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://jobsbyculture.com/compare/ramp-vs-replit</loc>
+    <lastmod>2026-03-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://jobsbyculture.com/compare/ramp-vs-runway</loc>
     <lastmod>2026-03-14</lastmod>
     <changefreq>monthly</changefreq>
@@ -3790,6 +4579,48 @@
   </url>
   <url>
     <loc>https://jobsbyculture.com/compare/ramp-vs-weaviate</loc>
+    <lastmod>2026-03-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://jobsbyculture.com/compare/replit-vs-runway</loc>
+    <lastmod>2026-03-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://jobsbyculture.com/compare/replit-vs-scale</loc>
+    <lastmod>2026-03-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://jobsbyculture.com/compare/replit-vs-stripe</loc>
+    <lastmod>2026-03-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://jobsbyculture.com/compare/replit-vs-together</loc>
+    <lastmod>2026-03-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://jobsbyculture.com/compare/replit-vs-vast</loc>
+    <lastmod>2026-03-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://jobsbyculture.com/compare/replit-vs-vercel</loc>
+    <lastmod>2026-03-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://jobsbyculture.com/compare/replit-vs-weaviate</loc>
     <lastmod>2026-03-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -3975,12 +4806,6 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://jobsbyculture.com/compare/anthropic-vs-openai</loc>
-    <lastmod>2026-03-14</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
     <loc>https://jobsbyculture.com/compare/anthropic-vs-google</loc>
     <lastmod>2026-03-14</lastmod>
     <changefreq>monthly</changefreq>
@@ -4017,12 +4842,6 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://jobsbyculture.com/compare/perplexity-vs-openai</loc>
-    <lastmod>2026-03-14</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
     <loc>https://jobsbyculture.com/compare/cursor-vs-github-copilot</loc>
     <lastmod>2026-03-14</lastmod>
     <changefreq>monthly</changefreq>
@@ -4036,18 +4855,6 @@
   </url>
   <url>
     <loc>https://jobsbyculture.com/compare/stripe-vs-shopify</loc>
-    <lastmod>2026-03-14</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://jobsbyculture.com/compare/huggingface-vs-openai</loc>
-    <lastmod>2026-03-14</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://jobsbyculture.com/compare/mistral-vs-openai</loc>
     <lastmod>2026-03-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
