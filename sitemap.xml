@@ -591,6 +591,41 @@
   <!-- /Compare pages -->
   <!-- /Cluster pages -->
 
+  <!-- /Compare pages -->
+  <!-- /Cluster pages -->
+  <!-- Blog pages -->
+  <url>
+    <loc>https://jobsbyculture.com/blog</loc>
+    <lastmod>2026-03-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://jobsbyculture.com/blog/best-ai-companies-work-life-balance-2026</loc>
+    <lastmod>2026-03-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://jobsbyculture.com/blog/anthropic-vs-openai-culture-comparison</loc>
+    <lastmod>2026-03-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://jobsbyculture.com/blog/remote-friendly-ai-companies-hiring-2026</loc>
+    <lastmod>2026-03-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://jobsbyculture.com/blog/flat-hierarchy-tech-companies</loc>
+    <lastmod>2026-03-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- /Blog pages -->
+
   <!-- Compare pages -->
   <url>
     <loc>https://jobsbyculture.com/compare</loc>

@@ -388,7 +388,16 @@
             <div class="nav-mark"><div class="ring ring-1"></div><div class="ring ring-2"></div><div class="nav-dot"></div></div>
             <div class="nav-wordmark">Jobs<span>By</span>Culture</div>
         </a>
-        <span class="nav-badge">Verified Culture Profile</span>
+        <div class="nav-links">
+            <a href="/">Values</a>
+            <a href="/directory">Culture Directory</a>
+            <a href="/compare">Compare</a>
+            <a href="/jobs">Jobs</a>
+            <a href="/blog">Blog</a>
+        </div>
+        <button class="hamburger" onclick="this.classList.toggle('active');this.closest('.nav-inner').querySelector('.nav-links').classList.toggle('open')" aria-label="Menu">
+            <span></span><span></span><span></span>
+        </button>
     </div>
 </nav>
 

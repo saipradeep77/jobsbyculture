@@ -80,6 +80,15 @@ JobsByCulture helps professionals find jobs at companies whose culture actually 
 - [Austin](https://jobsbyculture.com/locations/austin): 31 jobs at 5 companies
 - [Chicago](https://jobsbyculture.com/locations/chicago): 64 jobs at 4 companies
 
+## Blog — The Culture Report
+
+Data-driven insights on AI company culture, work-life balance, and what it's actually like to work at top tech companies.
+
+- [Best AI Companies for Work-Life Balance in 2026](https://jobsbyculture.com/blog/best-ai-companies-work-life-balance-2026): All 29 companies ranked by WLB score — from Vast AI (4.5) to Scale AI (2.7)
+- [Anthropic vs OpenAI: Culture Compared](https://jobsbyculture.com/blog/anthropic-vs-openai-culture-comparison): Side-by-side comparison of Glassdoor ratings, culture values, compensation, and employee reviews
+- [Remote-Friendly AI Companies Hiring in 2026](https://jobsbyculture.com/blog/remote-friendly-ai-companies-hiring-2026): 11 companies with genuine remote culture and real open roles
+- [Flat Hierarchy in Tech](https://jobsbyculture.com/blog/flat-hierarchy-tech-companies): 8 companies where flat hierarchy is real — with Glassdoor data and employee reviews
+
 ## Culture Values We Track
 
 1. Work-Life Balance
