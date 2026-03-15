@@ -120,6 +120,15 @@ Co-Authored-By: Claude Opus 4.6 <noreply@anthropic.com>"
 7. **Navigation**: Use "Culture Directory" linking to `/directory` in nav. Footer should include Culture Directory, By Culture, and By Role links.
 8. **H1 tags**: Every page must have exactly one `<h1>` tag.
 9. **Ref tracking**: Append `?ref=jobsbyculture.com` to all external career/job URLs.
+10. **All "View all jobs" CTAs must link with correct filters.** Never link to bare `/jobs`. Use the appropriate query params:
+    - Location pages: `/jobs?search={city name}` (e.g., `/jobs?search=Dublin`)
+    - Value pages: `/jobs?value={slug}` (e.g., `/jobs?value=remote`)
+    - Role pages: `/jobs?role={slug}` (e.g., `/jobs?role=engineering`)
+    - Seniority pages: `/jobs?seniority={slug}` (e.g., `/jobs?seniority=senior`)
+    - Seniority×role pages: `/jobs?seniority={slug}&role={slug}`
+    - Cross pages (value×role): `/jobs?value={slug}&role={slug}`
+    - Company-specific: `/jobs?company={slug}`
+    - Blog posts: use actual job counts from `data/jobs-fetched.json`, never hardcode or guess
 
 ## File Map
 

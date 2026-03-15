@@ -1,0 +1,681 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Company Culture Map: Glassdoor vs Work-Life Balance | JobsByCulture</title>
+    <meta name="description" content="Interactive chart comparing 29 AI & tech companies by Glassdoor rating and work-life balance score. See which companies have the best culture.">
+    <meta name="keywords" content="AI company culture, Glassdoor ratings, work-life balance, tech company comparison, company culture map">
+    <meta name="author" content="JobsByCulture">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="AI Company Culture Map: Glassdoor vs Work-Life Balance | JobsByCulture">
+    <meta property="og:description" content="Interactive chart comparing 29 AI & tech companies by Glassdoor rating and work-life balance score. See which companies have the best culture.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://jobsbyculture.com/culture-map">
+    <meta property="og:image" content="https://jobsbyculture.com/og-image.png">
+    <meta property="og:image:type" content="image/png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="AI Company Culture Map: Glassdoor vs Work-Life Balance | JobsByCulture">
+    <meta name="twitter:description" content="Interactive chart comparing 29 AI & tech companies by Glassdoor rating and work-life balance score.">
+    <meta name="twitter:image" content="https://jobsbyculture.com/og-image.png">
+    <link rel="canonical" href="https://jobsbyculture.com/culture-map">
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <link rel="icon" type="image/png" sizes="512x512" href="/logo.png">
+    <link rel="apple-touch-icon" href="/logo.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Satoshi:wght@400;500;600;700;900&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "name": "AI Company Culture Map",
+        "description": "Interactive scatter chart comparing 29 AI & tech companies by Glassdoor rating vs work-life balance score.",
+        "url": "https://jobsbyculture.com/culture-map",
+        "publisher": {
+            "@type": "Organization",
+            "name": "JobsByCulture",
+            "url": "https://jobsbyculture.com"
+        }
+    }
+    </script>
+    <style>
+        :root {
+            --bg: #fafaf8;
+            --bg-raised: #ffffff;
+            --bg-card: #ffffff;
+            --bg-hover: #f4f3ef;
+            --text: #1a1a1f;
+            --text-2: #52525b;
+            --text-3: #9ca3af;
+            --accent: #e8590c;
+            --accent-hover: #c2410c;
+            --accent-bg: rgba(232,89,12,0.06);
+            --accent-border: rgba(232,89,12,0.2);
+            --teal: #0d9488;
+            --teal-bg: rgba(13,148,136,0.06);
+            --teal-border: rgba(13,148,136,0.2);
+            --violet: #7c3aed;
+            --violet-bg: rgba(124,58,237,0.06);
+            --violet-border: rgba(124,58,237,0.2);
+            --rose: #e11d48;
+            --rose-bg: rgba(225,29,72,0.06);
+            --rose-border: rgba(225,29,72,0.2);
+            --sky: #0284c7;
+            --sky-bg: rgba(2,132,199,0.06);
+            --sky-border: rgba(2,132,199,0.2);
+            --orange: #e8590c;
+            --orange-bg: rgba(232,89,12,0.06);
+            --orange-border: rgba(232,89,12,0.2);
+            --lime: #4d7c0f;
+            --lime-bg: rgba(77,124,15,0.06);
+            --lime-border: rgba(77,124,15,0.2);
+            --border: rgba(0,0,0,0.07);
+            --border-2: rgba(0,0,0,0.12);
+            --border-3: rgba(0,0,0,0.18);
+            --radius: 12px;
+            --radius-sm: 8px;
+            --radius-lg: 20px;
+            --radius-full: 100px;
+            --font-display: 'Instrument Serif', Georgia, serif;
+            --font-body: 'Satoshi', -apple-system, sans-serif;
+            --font-mono: 'IBM Plex Mono', monospace;
+            --shadow: 0 4px 24px rgba(0,0,0,0.06), 0 1px 3px rgba(0,0,0,0.04);
+            --shadow-lg: 0 12px 48px rgba(0,0,0,0.08);
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body { font-family: var(--font-body); background: var(--bg); color: var(--text); line-height: 1.6; -webkit-font-smoothing: antialiased; overflow-x: hidden; }
+        .container { max-width: 1140px; margin: 0 auto; padding: 0 24px; }
+
+        /* NAV */
+        nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; background: rgba(250,250,248,0.85); backdrop-filter: blur(24px) saturate(1.4); border-bottom: 1px solid var(--border); }
+        .nav-inner { max-width: 1140px; margin: 0 auto; padding: 14px 24px; display: flex; align-items: center; justify-content: space-between; }
+        .nav-logo { display: flex; align-items: center; gap: 10px; text-decoration: none; color: var(--text); }
+        .nav-mark { width: 30px; height: 30px; position: relative; display: flex; align-items: center; justify-content: center; }
+        .nav-mark .ring { position: absolute; border: 1.5px solid var(--accent); border-radius: 50%; animation: logoPing 2.5s ease-out infinite; }
+        .nav-mark .ring-1 { width: 100%; height: 100%; opacity: 0.2; }
+        .nav-mark .ring-2 { width: 65%; height: 65%; opacity: 0.4; animation-delay: 0.3s; }
+        .nav-mark .nav-dot { width: 7px; height: 7px; background: var(--accent); border-radius: 50%; position: relative; z-index: 1; }
+        @keyframes logoPing { 0% { transform: scale(1); opacity: 0.4; } 100% { transform: scale(1.5); opacity: 0; } }
+        .nav-wordmark { font-weight: 700; font-size: 16px; letter-spacing: -0.03em; }
+        .nav-wordmark span { color: var(--accent); }
+        .nav-links { display: flex; align-items: center; gap: 28px; }
+        .nav-links a { color: var(--text-2); text-decoration: none; font-size: 14px; font-weight: 500; transition: color 0.15s; }
+        .nav-links a:hover { color: var(--text); }
+        .nav-links a.active { color: var(--accent); font-weight: 600; }
+        .hamburger { display: none; background: none; border: none; cursor: pointer; padding: 4px; flex-direction: column; gap: 5px; }
+        .hamburger span { display: block; width: 22px; height: 2px; background: var(--text); border-radius: 1px; transition: all 0.3s; }
+        .hamburger.active span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
+        .hamburger.active span:nth-child(2) { opacity: 0; }
+        .hamburger.active span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
+
+        /* HERO */
+        .cm-hero { padding: 130px 0 48px; text-align: center; position: relative; }
+        .cm-hero::before {
+            content: ''; position: absolute; top: -100px; left: 50%; transform: translateX(-50%);
+            width: 900px; height: 600px;
+            background: radial-gradient(ellipse, rgba(232,89,12,0.06) 0%, transparent 70%);
+            pointer-events: none;
+        }
+        .cm-hero-pill {
+            display: inline-flex; align-items: center; gap: 8px;
+            background: var(--accent-bg); border: 1px solid var(--accent-border);
+            padding: 5px 14px 5px 8px; border-radius: var(--radius-full);
+            font-size: 13px; font-weight: 500; color: var(--accent);
+            margin-bottom: 24px; animation: fadeUp 0.5s ease both;
+        }
+        .cm-hero-pill-dot { width: 7px; height: 7px; border-radius: 50%; background: var(--accent); animation: blink 2s infinite; }
+        @keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: 0.3; } }
+        .cm-hero h1 {
+            font-family: var(--font-display); font-weight: 400;
+            font-size: clamp(36px, 5vw, 60px); line-height: 1.1;
+            letter-spacing: -0.025em; margin-bottom: 16px;
+            animation: fadeUp 0.5s ease 0.08s both;
+        }
+        .cm-hero h1 em { font-style: italic; color: var(--accent); }
+        .cm-hero-sub {
+            font-size: 17px; color: var(--text-2); max-width: 620px; margin: 0 auto;
+            line-height: 1.7; animation: fadeUp 0.5s ease 0.16s both;
+        }
+        @keyframes fadeUp { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }
+
+        /* CHART SECTION */
+        .cm-chart-wrap {
+            background: var(--bg-card); border: 1px solid var(--border);
+            border-radius: var(--radius-lg); padding: 32px 24px 24px;
+            margin-bottom: 24px; position: relative;
+        }
+        .cm-chart-container {
+            position: relative; width: 100%; max-width: 1000px; margin: 0 auto;
+        }
+        .cm-chart-container canvas { width: 100% !important; }
+
+        /* LEGEND */
+        .cm-legend {
+            display: flex; flex-wrap: wrap; align-items: center; justify-content: center;
+            gap: 24px; padding: 20px 0 0;
+            font-size: 13px; color: var(--text-2);
+            border-top: 1px solid var(--border); margin-top: 16px;
+        }
+        .cm-legend-item { display: flex; align-items: center; gap: 8px; }
+        .cm-legend-dot {
+            border-radius: 50%; background: rgba(232,89,12,0.6);
+            border: 2px solid var(--accent); flex-shrink: 0;
+        }
+        .cm-legend-dot.sm { width: 10px; height: 10px; }
+        .cm-legend-dot.md { width: 18px; height: 18px; }
+        .cm-legend-dot.lg { width: 26px; height: 26px; }
+        .cm-quadrant-labels {
+            display: flex; flex-wrap: wrap; gap: 12px; justify-content: center;
+            margin-top: 12px;
+        }
+        .cm-ql {
+            display: inline-flex; align-items: center; gap: 6px;
+            font-size: 12px; font-weight: 600; padding: 4px 12px;
+            border-radius: var(--radius-full); border: 1px solid;
+        }
+        .cm-ql-dot { width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0; }
+        .cm-ql.green { color: var(--teal); background: var(--teal-bg); border-color: var(--teal-border); }
+        .cm-ql.green .cm-ql-dot { background: var(--teal); }
+        .cm-ql.blue { color: var(--sky); background: var(--sky-bg); border-color: var(--sky-border); }
+        .cm-ql.blue .cm-ql-dot { background: var(--sky); }
+        .cm-ql.orange { color: var(--orange); background: var(--orange-bg); border-color: var(--orange-border); }
+        .cm-ql.orange .cm-ql-dot { background: var(--orange); }
+        .cm-ql.muted { color: var(--text-3); background: rgba(0,0,0,0.03); border-color: var(--border-2); }
+        .cm-ql.muted .cm-ql-dot { background: var(--text-3); }
+
+        /* COMPANY GRID */
+        .cm-companies { padding: 0 0 60px; }
+        .cm-companies-title {
+            font-family: var(--font-display); font-size: 28px; font-weight: 400;
+            text-align: center; margin-bottom: 8px;
+        }
+        .cm-companies-sub {
+            font-size: 15px; color: var(--text-2); text-align: center;
+            margin-bottom: 28px;
+        }
+        .cm-grid {
+            display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 12px;
+        }
+        .cm-card {
+            display: flex; align-items: center; gap: 12px; padding: 14px 16px;
+            background: var(--bg-card); border: 1px solid var(--border);
+            border-radius: var(--radius); text-decoration: none; color: var(--text);
+            transition: all 0.2s;
+        }
+        .cm-card:hover { box-shadow: var(--shadow); border-color: var(--border-2); transform: translateY(-1px); }
+        .cm-card img { width: 32px; height: 32px; border-radius: 8px; border: 1px solid var(--border); flex-shrink: 0; }
+        .cm-card-info { flex: 1; min-width: 0; }
+        .cm-card-name { font-size: 14px; font-weight: 600; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+        .cm-card-scores {
+            display: flex; gap: 12px; font-size: 12px; color: var(--text-2);
+            font-family: var(--font-mono);
+        }
+        .cm-card-scores strong { color: var(--accent); font-weight: 600; }
+        .cm-card-jobs {
+            font-size: 12px; font-weight: 600; color: var(--teal);
+            white-space: nowrap;
+        }
+
+        /* CTA */
+        .cm-cta {
+            text-align: center; padding: 48px 32px;
+            background: var(--bg-card); border: 1px solid var(--border);
+            border-radius: var(--radius-lg); margin-bottom: 60px;
+        }
+        .cm-cta h2 {
+            font-family: var(--font-display); font-size: 28px; font-weight: 400;
+            margin-bottom: 12px;
+        }
+        .cm-cta p { font-size: 15px; color: var(--text-2); margin-bottom: 24px; }
+        .cm-cta-links { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+        .cm-cta-btn {
+            display: inline-flex; align-items: center; gap: 6px;
+            padding: 12px 24px; border-radius: var(--radius);
+            font-size: 14px; font-weight: 600; text-decoration: none;
+            transition: all 0.2s; border: 1px solid;
+        }
+        .cm-cta-btn.primary { background: var(--accent); color: #fff; border-color: var(--accent); }
+        .cm-cta-btn.primary:hover { background: var(--accent-hover); transform: translateY(-1px); }
+        .cm-cta-btn.outline { background: transparent; color: var(--text); border-color: var(--border-2); }
+        .cm-cta-btn.outline:hover { border-color: var(--text); transform: translateY(-1px); }
+
+        /* CUSTOM TOOLTIP */
+        .cm-tooltip {
+            position: absolute; pointer-events: none; opacity: 0;
+            background: #fff; border: 1px solid var(--border-2);
+            border-radius: var(--radius); padding: 16px;
+            box-shadow: var(--shadow-lg); z-index: 50;
+            transition: opacity 0.15s; min-width: 240px; max-width: 300px;
+        }
+        .cm-tooltip.visible { opacity: 1; }
+        .cm-tooltip-header { display: flex; align-items: center; gap: 10px; margin-bottom: 10px; }
+        .cm-tooltip-header img { width: 28px; height: 28px; border-radius: 6px; border: 1px solid var(--border); }
+        .cm-tooltip-header strong { font-size: 15px; font-weight: 700; }
+        .cm-tooltip-scores { display: flex; gap: 16px; margin-bottom: 8px; font-size: 13px; }
+        .cm-tooltip-scores .label { color: var(--text-3); }
+        .cm-tooltip-scores .val { font-family: var(--font-mono); font-weight: 600; color: var(--text); }
+        .cm-tooltip-meta { font-size: 12px; color: var(--text-2); margin-bottom: 8px; }
+        .cm-tooltip-values { font-size: 12px; color: var(--text-2); line-height: 1.5; }
+        .cm-tooltip-values strong { color: var(--text-3); font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; }
+        .cm-tooltip-cta { font-size: 11px; color: var(--accent); font-weight: 600; margin-top: 8px; }
+
+        /* FOOTER */
+        footer { padding: 56px 0 36px; border-top: 1px solid var(--border); }
+        .ft-links { display: flex; flex-wrap: wrap; gap: 24px; margin-bottom: 20px; }
+        .ft-links a { font-size: 13px; color: var(--text-2); text-decoration: none; }
+        .ft-links a:hover { color: var(--text); }
+        .ft-bar { display: flex; justify-content: space-between; align-items: center; font-size: 12px; color: var(--text-3); }
+        .ft-bar a { color: var(--accent); text-decoration: none; }
+
+        /* RESPONSIVE */
+        @media (max-width: 768px) {
+            .hamburger { display: flex; }
+            .nav-links { display: none; position: absolute; top: 100%; left: 0; right: 0; background: rgba(250,250,248,0.98); backdrop-filter: blur(20px); border-bottom: 1px solid var(--border); padding: 20px 24px; flex-direction: column; gap: 16px; box-shadow: 0 8px 24px rgba(0,0,0,0.06); }
+            .nav-links.open { display: flex; }
+            .cm-hero { padding: 110px 0 32px; }
+            .cm-chart-wrap { padding: 16px 8px 16px; }
+            .cm-grid { grid-template-columns: 1fr; }
+            .cm-cta { padding: 32px 20px; }
+            .cm-legend { gap: 16px; }
+            .cm-quadrant-labels { gap: 8px; }
+        }
+    </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+    <div class="nav-inner">
+        <a href="/" class="nav-logo">
+            <div class="nav-mark"><div class="ring ring-1"></div><div class="ring ring-2"></div><div class="nav-dot"></div></div>
+            <div class="nav-wordmark">Jobs<span>By</span>Culture</div>
+        </a>
+        <div class="nav-links">
+            <a href="/">Home</a>
+            <a href="/jobs">Jobs</a>
+            <a href="/compare">Compare</a>
+            <a href="/directory">Culture Directory</a>
+            <a href="/blog">Blog</a>
+        </div>
+        <button class="hamburger" onclick="this.classList.toggle('active');this.closest('.nav-inner').querySelector('.nav-links').classList.toggle('open')" aria-label="Menu">
+            <span></span><span></span><span></span>
+        </button>
+    </div>
+</nav>
+
+<!-- HERO -->
+<section class="cm-hero">
+    <div class="container">
+        <div class="cm-hero-pill">
+            <span class="cm-hero-pill-dot"></span>
+            29 companies mapped
+        </div>
+        <h1>AI Company Culture <em>Map</em></h1>
+        <p class="cm-hero-sub">How do top AI &amp; tech companies stack up on Glassdoor rating vs work-life balance? Explore the interactive chart below &mdash; bigger dots mean bigger companies.</p>
+    </div>
+</section>
+
+<!-- CHART -->
+<section class="container" style="padding-bottom:32px;">
+    <div class="cm-chart-wrap">
+        <div class="cm-chart-container">
+            <canvas id="cultureChart"></canvas>
+            <!-- Custom tooltip -->
+            <div class="cm-tooltip" id="chartTooltip">
+                <div class="cm-tooltip-header">
+                    <img id="ttLogo" src="" alt="">
+                    <strong id="ttName"></strong>
+                </div>
+                <div class="cm-tooltip-scores">
+                    <div><span class="label">Glassdoor </span><span class="val" id="ttGlass"></span></div>
+                    <div><span class="label">WLB </span><span class="val" id="ttWlb"></span></div>
+                </div>
+                <div class="cm-tooltip-meta">
+                    <span id="ttSize"></span> &middot; <span id="ttJobs"></span> open jobs
+                </div>
+                <div class="cm-tooltip-values">
+                    <strong>Values: </strong><span id="ttValues"></span>
+                </div>
+                <div class="cm-tooltip-cta">Click to view full profile &rarr;</div>
+            </div>
+        </div>
+        <!-- Legend -->
+        <div class="cm-legend">
+            <div class="cm-legend-item"><div class="cm-legend-dot sm"></div> Small (&lt;200)</div>
+            <div class="cm-legend-item"><div class="cm-legend-dot md"></div> Mid (200&ndash;1k)</div>
+            <div class="cm-legend-item"><div class="cm-legend-dot lg"></div> Large (1k+)</div>
+        </div>
+        <div class="cm-quadrant-labels">
+            <div class="cm-ql green"><div class="cm-ql-dot"></div> High Rated + Good WLB</div>
+            <div class="cm-ql blue"><div class="cm-ql-dot"></div> Good WLB, Lower Rated</div>
+            <div class="cm-ql orange"><div class="cm-ql-dot"></div> High Rated but Intense</div>
+            <div class="cm-ql muted"><div class="cm-ql-dot"></div> Challenging</div>
+        </div>
+    </div>
+</section>
+
+<!-- COMPANY LIST -->
+<section class="container cm-companies">
+    <h2 class="cm-companies-title">All 29 Companies</h2>
+    <p class="cm-companies-sub">Click any company to view their full culture profile, ratings, and open jobs.</p>
+    <div class="cm-grid" id="companyGrid"></div>
+</section>
+
+<!-- CTA -->
+<section class="container">
+    <div class="cm-cta">
+        <h2>Find your culture fit</h2>
+        <p>Compare any two companies side-by-side or browse 4,873+ jobs filtered by culture values.</p>
+        <div class="cm-cta-links">
+            <a href="/compare" class="cm-cta-btn primary">Compare Companies &rarr;</a>
+            <a href="/jobs" class="cm-cta-btn outline">Browse All Jobs &rarr;</a>
+            <a href="/directory" class="cm-cta-btn outline">Culture Directory &rarr;</a>
+        </div>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+    <div class="container">
+        <div class="ft-links">
+            <a href="/">Home</a>
+            <a href="/jobs">Browse Jobs</a>
+            <a href="/compare">Compare Cultures</a>
+            <a href="/directory">Culture Directory</a>
+            <a href="/values/remote">By Culture</a>
+            <a href="/roles/engineering">By Role</a>
+            <a href="/seniority/senior">By Seniority</a>
+            <a href="/locations/san-francisco">By Location</a>
+        </div>
+        <div class="ft-bar">
+            <p>&copy; 2026 JobsByCulture</p>
+            <p>Made by <a href="https://x.com/itspradz" target="_blank">@itspradz</a></p>
+        </div>
+    </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+const VALUE_LABELS = {
+    'wlb':'Work-Life Balance','remote':'Remote-Friendly','flex-hours':'Flexible Hours',
+    'async':'Async-First','deep-work':'Deep Work','transparent':'Transparent Culture',
+    'flat':'Flat Hierarchy','diverse':'Diverse & Inclusive','psych-safety':'Safe to Fail',
+    'eng-driven':'Engineering-Driven','ship-fast':'Ship Fast','open-source':'Open Source',
+    'learning':'Learning & Growth','equity':'Strong Comp & Equity',
+    'product-impact':'Product Impact','many-hats':'Many Hats',
+    'ethical-ai':'Ethical AI','social-impact':'Mission-Driven'
+};
+
+const COMPANIES = [
+    { slug:'anthropic', name:'Anthropic', glassdoor:4.4, wlb:3.7, size:1500, sizeLabel:'Mid (~1,500)', jobs:443, values:['ethical-ai','learning','equity'], logo:'https://www.google.com/s2/favicons?domain=anthropic.com&sz=128' },
+    { slug:'huggingface', name:'Hugging Face', glassdoor:3.8, wlb:4.1, size:400, sizeLabel:'Small (~400)', jobs:14, values:['open-source','flat','remote'], logo:'https://www.google.com/s2/favicons?domain=huggingface.co&sz=128' },
+    { slug:'databricks', name:'Databricks', glassdoor:4.1, wlb:3.9, size:7000, sizeLabel:'Large (~7,000)', jobs:791, values:['eng-driven','learning','equity'], logo:'https://www.google.com/s2/favicons?domain=databricks.com&sz=128' },
+    { slug:'cohere', name:'Cohere', glassdoor:2.9, wlb:3.5, size:500, sizeLabel:'Small (~500)', jobs:123, values:['learning','eng-driven','many-hats'], logo:'https://www.google.com/s2/favicons?domain=cohere.com&sz=128' },
+    { slug:'mistral', name:'Mistral AI', glassdoor:4.0, wlb:3.6, size:100, sizeLabel:'Small (~100)', jobs:142, values:['ship-fast','eng-driven','flat'], logo:'https://www.google.com/s2/favicons?domain=mistral.ai&sz=128' },
+    { slug:'hubspot', name:'HubSpot', glassdoor:4.3, wlb:4.1, size:8000, sizeLabel:'Large (~8,000)', jobs:267, values:['diverse','learning','wlb'], logo:'https://www.google.com/s2/favicons?domain=hubspot.com&sz=128' },
+    { slug:'vercel', name:'Vercel', glassdoor:3.9, wlb:3.4, size:600, sizeLabel:'Mid (~600)', jobs:79, values:['ship-fast','eng-driven','remote'], logo:'https://www.google.com/s2/favicons?domain=vercel.com&sz=128' },
+    { slug:'stripe', name:'Stripe', glassdoor:4.0, wlb:3.6, size:8000, sizeLabel:'Large (~8,000)', jobs:526, values:['eng-driven','learning','equity'], logo:'https://www.google.com/s2/favicons?domain=stripe.com&sz=128' },
+    { slug:'perplexity', name:'Perplexity AI', glassdoor:4.7, wlb:3.3, size:500, sizeLabel:'Mid (~500)', jobs:81, values:['ship-fast','eng-driven','product-impact'], logo:'https://www.google.com/s2/favicons?domain=perplexity.ai&sz=128' },
+    { slug:'together', name:'Together AI', glassdoor:4.1, wlb:3.8, size:150, sizeLabel:'Small (~150)', jobs:48, values:['open-source','eng-driven','learning'], logo:'https://www.google.com/s2/favicons?domain=together.ai&sz=128' },
+    { slug:'cursor', name:'Cursor (Anysphere)', glassdoor:4.0, wlb:3.5, size:50, sizeLabel:'Small (~50)', jobs:59, values:['ship-fast','eng-driven','flat'], logo:'https://www.google.com/s2/favicons?domain=cursor.com&sz=128' },
+    { slug:'linear', name:'Linear', glassdoor:4.6, wlb:4.4, size:80, sizeLabel:'Small (~80)', jobs:21, values:['deep-work','remote','async'], logo:'https://www.google.com/s2/favicons?domain=linear.app&sz=128' },
+    { slug:'scale', name:'Scale AI', glassdoor:3.5, wlb:2.7, size:1200, sizeLabel:'Large (~1,200)', jobs:169, values:['eng-driven','product-impact','learning'], logo:'https://www.google.com/s2/favicons?domain=scale.com&sz=128' },
+    { slug:'coreweave', name:'CoreWeave', glassdoor:3.6, wlb:3.2, size:1800, sizeLabel:'Large (~1,800)', jobs:278, values:['eng-driven','ship-fast','equity'], logo:'https://www.google.com/s2/favicons?domain=coreweave.com&sz=128' },
+    { slug:'runway', name:'Runway', glassdoor:4.5, wlb:4.0, size:420, sizeLabel:'Mid (~420)', jobs:31, values:['eng-driven','product-impact','remote'], logo:'https://www.google.com/s2/favicons?domain=runwayml.com&sz=128' },
+    { slug:'vast', name:'Vast AI', glassdoor:5.0, wlb:4.5, size:30, sizeLabel:'Small (~30)', jobs:10, values:['eng-driven','ship-fast','flat'], logo:'https://www.google.com/s2/favicons?domain=vast.ai&sz=128' },
+    { slug:'apollo', name:'Apollo.io', glassdoor:4.0, wlb:3.6, size:800, sizeLabel:'Large (~800)', jobs:54, values:['ship-fast','eng-driven','remote'], logo:'https://www.google.com/s2/favicons?domain=apollo.io&sz=128' },
+    { slug:'airbnb', name:'Airbnb', glassdoor:4.1, wlb:4.0, size:7300, sizeLabel:'Large (~7,300)', jobs:243, values:['remote','wlb','diverse'], logo:'https://www.google.com/s2/favicons?domain=airbnb.com&sz=128' },
+    { slug:'figma', name:'Figma', glassdoor:3.7, wlb:3.1, size:2800, sizeLabel:'Large (~2,800)', jobs:165, values:['eng-driven','ship-fast','learning'], logo:'https://www.google.com/s2/favicons?domain=figma.com&sz=128' },
+    { slug:'elevenlabs', name:'ElevenLabs', glassdoor:4.2, wlb:3.6, size:600, sizeLabel:'Mid (~600)', jobs:102, values:['ship-fast','remote','eng-driven'], logo:'https://www.google.com/s2/favicons?domain=elevenlabs.io&sz=128' },
+    { slug:'pinecone', name:'Pinecone', glassdoor:4.2, wlb:4.3, size:130, sizeLabel:'Small (~130)', jobs:13, values:['remote','flex-hours','diverse'], logo:'https://www.google.com/s2/favicons?domain=pinecone.io&sz=128' },
+    { slug:'modal', name:'Modal', glassdoor:4.0, wlb:3.8, size:110, sizeLabel:'Small (~110)', jobs:31, values:['eng-driven','ship-fast','deep-work'], logo:'https://www.google.com/s2/favicons?domain=modal.com&sz=128' },
+    { slug:'ramp', name:'Ramp', glassdoor:4.2, wlb:3.5, size:1000, sizeLabel:'Large (~1,000+)', jobs:130, values:['ship-fast','product-impact','eng-driven'], logo:'https://www.google.com/s2/favicons?domain=ramp.com&sz=128' },
+    { slug:'weaviate', name:'Weaviate', glassdoor:4.3, wlb:4.2, size:110, sizeLabel:'Small (~110)', jobs:3, values:['remote','async','flat'], logo:'https://www.google.com/s2/favicons?domain=weaviate.io&sz=128' },
+    { slug:'openai', name:'OpenAI', glassdoor:4.5, wlb:3.6, size:3500, sizeLabel:'Large (~3,500)', jobs:624, values:['eng-driven','ship-fast','learning'], logo:'https://www.google.com/s2/favicons?domain=openai.com&sz=128' },
+    { slug:'deepmind', name:'Google DeepMind', glassdoor:4.2, wlb:4.0, size:7000, sizeLabel:'Large (~7,000)', jobs:112, values:['deep-work','learning','eng-driven'], logo:'https://www.google.com/s2/favicons?domain=deepmind.google&sz=128' },
+    { slug:'notion', name:'Notion', glassdoor:4.4, wlb:4.2, size:800, sizeLabel:'Mid (~800)', jobs:151, values:['product-impact','eng-driven','learning'], logo:'https://www.google.com/s2/favicons?domain=notion.so&sz=128' },
+    { slug:'langchain', name:'LangChain', glassdoor:4.6, wlb:4.0, size:230, sizeLabel:'Small (~230)', jobs:84, values:['open-source','eng-driven','ship-fast'], logo:'https://www.google.com/s2/favicons?domain=langchain.com&sz=128' },
+    { slug:'replit', name:'Replit', glassdoor:4.0, wlb:3.9, size:200, sizeLabel:'Small (~200)', jobs:85, values:['ship-fast','remote','many-hats'], logo:'https://www.google.com/s2/favicons?domain=replit.com&sz=128' }
+];
+
+// Bubble radius: scale by sqrt of employee count
+function getRadius(size) {
+    return 5 + Math.sqrt(size) * 0.22;
+}
+
+// Quadrant color based on position
+const Q_MID_X = 4.0, Q_MID_Y = 3.8;
+function getColor(gd, wlb) {
+    if (gd >= Q_MID_X && wlb >= Q_MID_Y) return { bg: 'rgba(13,148,136,0.45)', border: '#0d9488' }; // green - top right
+    if (gd < Q_MID_X && wlb >= Q_MID_Y)  return { bg: 'rgba(2,132,199,0.40)', border: '#0284c7' };  // blue - top left
+    if (gd >= Q_MID_X && wlb < Q_MID_Y)  return { bg: 'rgba(232,89,12,0.45)', border: '#e8590c' };  // orange - bottom right
+    return { bg: 'rgba(156,163,175,0.40)', border: '#9ca3af' }; // grey - bottom left
+}
+
+// Build chart data
+const chartData = COMPANIES.map(c => ({
+    x: c.glassdoor,
+    y: c.wlb,
+    r: getRadius(c.size),
+    ...c
+}));
+
+// Quadrant line plugin
+const quadrantPlugin = {
+    id: 'quadrantLines',
+    beforeDraw(chart) {
+        const { ctx, chartArea: { left, right, top, bottom }, scales: { x, y } } = chart;
+        const xPos = x.getPixelForValue(Q_MID_X);
+        const yPos = y.getPixelForValue(Q_MID_Y);
+        ctx.save();
+        ctx.setLineDash([6, 4]);
+        ctx.lineWidth = 1;
+        ctx.strokeStyle = 'rgba(0,0,0,0.12)';
+        // vertical
+        ctx.beginPath(); ctx.moveTo(xPos, top); ctx.lineTo(xPos, bottom); ctx.stroke();
+        // horizontal
+        ctx.beginPath(); ctx.moveTo(left, yPos); ctx.lineTo(right, yPos); ctx.stroke();
+        ctx.restore();
+
+        // Quadrant labels
+        ctx.save();
+        ctx.font = '500 11px Satoshi, -apple-system, sans-serif';
+        ctx.globalAlpha = 0.35;
+        const pad = 8;
+        // top-right
+        ctx.fillStyle = '#0d9488';
+        ctx.textAlign = 'right';
+        ctx.fillText('High Rated + Good WLB', right - pad, top + 18);
+        // top-left
+        ctx.fillStyle = '#0284c7';
+        ctx.textAlign = 'left';
+        ctx.fillText('Good WLB, Lower Rated', left + pad, top + 18);
+        // bottom-right
+        ctx.fillStyle = '#e8590c';
+        ctx.textAlign = 'right';
+        ctx.fillText('High Rated but Intense', right - pad, bottom - pad);
+        // bottom-left
+        ctx.fillStyle = '#9ca3af';
+        ctx.textAlign = 'left';
+        ctx.fillText('Challenging', left + pad, bottom - pad);
+        ctx.restore();
+    }
+};
+
+// Company name label plugin
+const labelPlugin = {
+    id: 'companyLabels',
+    afterDraw(chart) {
+        const { ctx } = chart;
+        const meta = chart.getDatasetMeta(0);
+        ctx.save();
+        ctx.font = '500 10px Satoshi, -apple-system, sans-serif';
+        ctx.fillStyle = 'rgba(26,26,31,0.55)';
+        ctx.textAlign = 'center';
+        meta.data.forEach((point, i) => {
+            const c = COMPANIES[i];
+            const shortName = c.name.replace(' (Anysphere)','').replace('Google ','');
+            const r = point.options.radius || point.r;
+            ctx.fillText(shortName, point.x, point.y - r - 4);
+        });
+        ctx.restore();
+    }
+};
+
+// Create chart
+const ctx = document.getElementById('cultureChart').getContext('2d');
+const chart = new Chart(ctx, {
+    type: 'bubble',
+    data: {
+        datasets: [{
+            data: chartData,
+            backgroundColor: chartData.map(d => getColor(d.glassdoor, d.wlb).bg),
+            borderColor: chartData.map(d => getColor(d.glassdoor, d.wlb).border),
+            borderWidth: 2,
+            hoverBorderWidth: 3,
+            hoverBackgroundColor: chartData.map(d => {
+                const c = getColor(d.glassdoor, d.wlb);
+                return c.border;
+            }),
+            hoverBorderColor: chartData.map(d => getColor(d.glassdoor, d.wlb).border),
+        }]
+    },
+    options: {
+        responsive: true,
+        maintainAspectRatio: true,
+        aspectRatio: window.innerWidth < 600 ? 1 : 1.5,
+        layout: { padding: { top: 20, right: 20, bottom: 10, left: 10 } },
+        scales: {
+            x: {
+                title: { display: true, text: 'Glassdoor Rating', font: { family: 'Satoshi', size: 13, weight: '600' }, color: '#52525b' },
+                min: 2.5, max: 5.2,
+                ticks: { stepSize: 0.5, font: { family: 'IBM Plex Mono', size: 11 }, color: '#9ca3af' },
+                grid: { color: 'rgba(0,0,0,0.04)' },
+                border: { color: 'rgba(0,0,0,0.08)' }
+            },
+            y: {
+                title: { display: true, text: 'Work-Life Balance', font: { family: 'Satoshi', size: 13, weight: '600' }, color: '#52525b' },
+                min: 2.5, max: 4.8,
+                ticks: { stepSize: 0.5, font: { family: 'IBM Plex Mono', size: 11 }, color: '#9ca3af' },
+                grid: { color: 'rgba(0,0,0,0.04)' },
+                border: { color: 'rgba(0,0,0,0.08)' }
+            }
+        },
+        plugins: {
+            legend: { display: false },
+            tooltip: { enabled: false }
+        },
+        onClick(e, elements) {
+            if (elements.length) {
+                const idx = elements[0].index;
+                window.location.href = '/companies/' + COMPANIES[idx].slug;
+            }
+        },
+        onHover(e, elements) {
+            e.native.target.style.cursor = elements.length ? 'pointer' : 'default';
+        }
+    },
+    plugins: [quadrantPlugin, labelPlugin]
+});
+
+// Custom tooltip on hover
+const tooltip = document.getElementById('chartTooltip');
+const canvas = document.getElementById('cultureChart');
+
+function showTooltip(company, x, y) {
+    document.getElementById('ttLogo').src = company.logo;
+    document.getElementById('ttName').textContent = company.name;
+    document.getElementById('ttGlass').textContent = company.glassdoor.toFixed(1);
+    document.getElementById('ttWlb').textContent = company.wlb.toFixed(1);
+    document.getElementById('ttSize').textContent = company.sizeLabel;
+    document.getElementById('ttJobs').textContent = company.jobs.toLocaleString();
+    document.getElementById('ttValues').textContent = company.values.map(v => VALUE_LABELS[v] || v).join(', ');
+
+    const wrap = canvas.closest('.cm-chart-container');
+    const rect = wrap.getBoundingClientRect();
+    let left = x + 16;
+    let top = y - 20;
+
+    // Keep tooltip in bounds
+    if (left + 280 > rect.width) left = x - 270;
+    if (top + 200 > rect.height) top = Math.max(0, rect.height - 210);
+    if (top < 0) top = 10;
+    if (left < 0) left = 10;
+
+    tooltip.style.left = left + 'px';
+    tooltip.style.top = top + 'px';
+    tooltip.classList.add('visible');
+}
+
+function hideTooltip() { tooltip.classList.remove('visible'); }
+
+canvas.addEventListener('mousemove', function(e) {
+    const points = chart.getElementsAtEventForMode(e, 'nearest', { intersect: true }, false);
+    if (points.length) {
+        const idx = points[0].index;
+        const pos = points[0].element;
+        const wrap = canvas.closest('.cm-chart-container');
+        const canvasRect = canvas.getBoundingClientRect();
+        const wrapRect = wrap.getBoundingClientRect();
+        const x = pos.x;
+        const y = pos.y;
+        showTooltip(COMPANIES[idx], x, y);
+    } else {
+        hideTooltip();
+    }
+});
+canvas.addEventListener('mouseleave', hideTooltip);
+
+// Mobile touch support
+canvas.addEventListener('touchstart', function(e) {
+    const touch = e.touches[0];
+    const rect = canvas.getBoundingClientRect();
+    const x = touch.clientX - rect.left;
+    const y = touch.clientY - rect.top;
+    const points = chart.getElementsAtEventForMode(e, 'nearest', { intersect: true }, false);
+    if (points.length) {
+        const idx = points[0].index;
+        const pos = points[0].element;
+        showTooltip(COMPANIES[idx], pos.x, pos.y);
+        e.preventDefault();
+    } else {
+        hideTooltip();
+    }
+}, { passive: false });
+
+// Build company cards
+const grid = document.getElementById('companyGrid');
+// Sort by Glassdoor desc
+const sorted = [...COMPANIES].sort((a, b) => b.glassdoor - a.glassdoor || b.wlb - a.wlb);
+sorted.forEach(c => {
+    const card = document.createElement('a');
+    card.href = '/companies/' + c.slug;
+    card.className = 'cm-card';
+    card.innerHTML = `
+        <img src="${c.logo}" alt="${c.name}" width="32" height="32">
+        <div class="cm-card-info">
+            <div class="cm-card-name">${c.name}</div>
+            <div class="cm-card-scores">
+                <span>GD <strong>${c.glassdoor}</strong></span>
+                <span>WLB <strong>${c.wlb}</strong></span>
+            </div>
+        </div>
+        <div class="cm-card-jobs">${c.jobs} jobs</div>
+    `;
+    grid.appendChild(card);
+});
+
+// Handle resize for aspect ratio
+window.addEventListener('resize', function() {
+    chart.options.aspectRatio = window.innerWidth < 600 ? 1 : 1.5;
+    chart.update();
+});
+</script>
+
+</body>
+</html>

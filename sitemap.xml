@@ -5080,4 +5080,10 @@
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>  <!-- /Cluster pages -->
+  <url>
+    <loc>https://jobsbyculture.com/culture-map</loc>
+    <lastmod>2026-03-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
 </urlset>
