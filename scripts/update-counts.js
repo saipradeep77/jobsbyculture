@@ -3,10 +3,11 @@
  * Automatically updates ALL job counts, CRC, and CV across the site.
  *
  * What it updates:
- *   index.html     — CRC, CV, hero count, browse-by-value cards, meta tags, CTAs
- *   compare.html   — CRC, syncs COMPANIES + COMPANY_REVIEWS from jobs.html
- *   directory.html — company count in meta tags
- *   llms.txt       — job count, company count
+ *   index.html          — CRC, CV, hero count, browse-by-value cards, meta tags, CTAs
+ *   compare.html        — CRC, syncs COMPANIES + COMPANY_REVIEWS from jobs.html
+ *   directory.html      — company count in meta tags
+ *   llms.txt            — job count, company count
+ *   companies/*.html    — per-company job counts in meta, OG, body text, CTA buttons
  *
  * Zero hardcoded values — everything is computed from jobs-fetched.json
  * and jobs.html COMPANIES{}.
@@ -14,7 +15,7 @@
  * Part of `npm run refresh`. You never need to update counts manually.
  */
 
-import { readFileSync, writeFileSync, readdirSync } from 'fs';
+import { readFileSync, writeFileSync, readdirSync, existsSync } from 'fs';
 import { resolve, dirname } from 'path';
 import { fileURLToPath } from 'url';
 
@@ -464,6 +465,67 @@ for (const [slug, meta] of Object.entries(SENIORITIES)) {
 
 writeFileSync(resolve(ROOT, 'data/og-data.json'), JSON.stringify(ogData, null, 2));
 console.log(`✓ data/og-data.json — ${Object.keys(ogData.companies).length} companies, ${Object.keys(ogData.values).length} values, ${Object.keys(ogData.roles).length} roles, ${Object.keys(ogData.seniorities).length} seniorities`);
+
+// ═══════════════════════════════════════════════════════════════
+// UPDATE company profile pages (companies/*.html)
+// ═══════════════════════════════════════════════════════════════
+
+let companyPagesUpdated = 0;
+const companyPageChanges = [];
+
+for (const [slug, data] of Object.entries(COMPANIES)) {
+    const profilePath = resolve(ROOT, 'companies', `${slug}.html`);
+    if (!existsSync(profilePath)) {
+        continue; // No profile page yet — skip gracefully
+    }
+
+    const newCount = companyTotals[slug] || 0;
+    let html = readFileSync(profilePath, 'utf-8');
+    const original = html;
+
+    // 1. Meta description + OG description + Twitter description
+    //    Pattern: "See N open roles" or "See N open jobs"
+    html = html.replace(
+        /(content="[^"]*See )\d+( open (?:roles|jobs))/g,
+        `$1${fmt(newCount)}$2`
+    );
+
+    // 2. Body text: "browse all N open positions" or "browse all N open roles"
+    html = html.replace(
+        /(browse all )\d+( open (?:positions|roles))/gi,
+        `$1${fmt(newCount)}$2`
+    );
+
+    // 3. Body text: "Explore all N open roles" or "Explore all N open positions"
+    html = html.replace(
+        /(Explore all )\d+( open (?:roles|positions))/g,
+        `$1${fmt(newCount)}$2`
+    );
+
+    // 4. CTA button: "See all N CompanyName jobs"
+    html = html.replace(
+        /(See all )\d+( [^<]+ jobs)/g,
+        `$1${fmt(newCount)}$2`
+    );
+
+    if (html !== original) {
+        // Extract old count from original for logging
+        const oldMatch = original.match(/See all (\d+) /);
+        const oldCount = oldMatch ? oldMatch[1] : '?';
+        writeFileSync(profilePath, html);
+        companyPagesUpdated++;
+        companyPageChanges.push(`${slug}: ${oldCount} → ${fmt(newCount)}`);
+    }
+}
+
+if (companyPagesUpdated > 0) {
+    console.log(`✓ Company profile pages — ${companyPagesUpdated} updated:`);
+    for (const change of companyPageChanges) {
+        console.log(`    ${change}`);
+    }
+} else {
+    console.log(`✓ Company profile pages — all counts already current`);
+}
 
 // ═══════════════════════════════════════════════════════════════
 // SUMMARY
