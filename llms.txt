@@ -107,6 +107,8 @@ Data-driven insights on AI company culture, work-life balance, and what it's act
 - [Working at Google DeepMind in 2026](https://jobsbyculture.com/blog/working-at-deepmind-2026): Culture, compensation ($300k–$500k), Nobel Prize research, and best WLB among frontier labs (4.0)
 - [Best AI Startups to Join in 2026](https://jobsbyculture.com/blog/best-ai-startups-to-join-2026): 11 startups under 500 employees ranked by Glassdoor — 619 open jobs from Vast AI to Cohere
 - [OpenAI vs DeepMind: Culture Compared](https://jobsbyculture.com/blog/openai-vs-deepmind-culture-comparison): Ship-fast vs deep-work cultures — Glassdoor (4.5 vs 4.2), WLB (3.6 vs 4.0), and compensation
+- [Best AI Companies for Work-Life Balance in San Francisco (2026)](https://jobsbyculture.com/blog/best-ai-companies-work-life-balance-san-francisco-2026): 27 companies with SF jobs ranked by WLB score — from Supabase (4.8) to Scale AI (2.7), 1,847 open jobs
+- [Best AI Companies for Work-Life Balance in New York (2026)](https://jobsbyculture.com/blog/best-ai-companies-work-life-balance-new-york-2026): 26 companies with NYC jobs ranked by WLB score — from incident.io (4.5) to Scale AI (2.7), 1,005 open jobs
 
 ## Culture Values We Track
 
