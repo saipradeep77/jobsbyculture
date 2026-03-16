@@ -1,6 +1,6 @@
 # JobsByCulture
 
-> Culture-first job search for AI & tech professionals. Browse 4,873+ jobs filtered by culture values like async-first, work-life balance, remote-friendly, and ethical AI.
+> Culture-first job search for AI & tech professionals. Browse 5,074+ jobs filtered by culture values like async-first, work-life balance, remote-friendly, and ethical AI.
 
 ## About
 
@@ -8,9 +8,9 @@ JobsByCulture helps professionals find jobs at companies whose culture actually 
 
 ## Key Pages
 
-- [Browse Jobs](https://jobsbyculture.com/jobs): 4,873+ AI & tech jobs filtered by 18 culture values, 12 role categories, and 8 locations
+- [Browse Jobs](https://jobsbyculture.com/jobs): 5,074+ AI & tech jobs filtered by 18 culture values, 12 role categories, and 8 locations
 - [Compare Cultures](https://jobsbyculture.com/compare): Side-by-side company culture comparison tool
-- [Company Directory](https://jobsbyculture.com/directory): All 29 profiled companies with ratings, values, and reviews
+- [Company Directory](https://jobsbyculture.com/directory): All 35 profiled companies with ratings, values, and reviews
 - [Culture Map](https://jobsbyculture.com/culture-map): Interactive scatter chart comparing all 29 companies by Glassdoor rating vs work-life balance
 
 ## Company Profiles
@@ -44,6 +44,12 @@ JobsByCulture helps professionals find jobs at companies whose culture actually 
 - [Notion](https://jobsbyculture.com/companies/notion): 4.4 Glassdoor, Productivity Tools, 89% recommend
 - [LangChain](https://jobsbyculture.com/companies/langchain): 4.6 Glassdoor, LLM Framework, N/A recommend
 - [Replit](https://jobsbyculture.com/companies/replit): 4.0 Glassdoor, AI Code Editor, 83% recommend
+- [PostHog](https://jobsbyculture.com/companies/posthog): 4.3 Glassdoor, Open-Source Product Analytics, 75% recommend
+- [Supabase](https://jobsbyculture.com/companies/supabase): 4.8 Glassdoor, Open-Source Firebase Alternative, 100% recommend
+- [Tailscale](https://jobsbyculture.com/companies/tailscale): 4.4 Glassdoor, Zero-Config VPN, 79% recommend
+- [Suno](https://jobsbyculture.com/companies/suno): 4.2 Glassdoor, AI Music Generation, 85% recommend
+- [Pylon](https://jobsbyculture.com/companies/pylon): 3.0 Glassdoor, B2B Customer Support, 50% recommend
+- [incident.io](https://jobsbyculture.com/companies/incidentio): 4.5 Glassdoor, Incident Management, 88% recommend
 
 ## Popular Comparisons
 

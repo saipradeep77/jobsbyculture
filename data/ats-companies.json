@@ -28,6 +28,12 @@
     { "slug": "cursor",    "name": "Cursor",          "ats": "ashby",      "atsSlug": "cursor",       "domain": "cursor.com" },
     { "slug": "figma",     "name": "Figma",           "ats": "greenhouse", "atsSlug": "figma",        "domain": "figma.com" },
     { "slug": "linear",    "name": "Linear",          "ats": "ashby",      "atsSlug": "linear",       "domain": "linear.app" },
-    { "slug": "vercel",    "name": "Vercel",          "ats": "greenhouse", "atsSlug": "vercel",       "domain": "vercel.com" }
+    { "slug": "vercel",    "name": "Vercel",          "ats": "greenhouse", "atsSlug": "vercel",       "domain": "vercel.com" },
+    { "slug": "posthog",     "name": "PostHog",       "ats": "ashby",      "atsSlug": "posthog",      "domain": "posthog.com" },
+    { "slug": "supabase",    "name": "Supabase",      "ats": "ashby",      "atsSlug": "supabase",     "domain": "supabase.com" },
+    { "slug": "tailscale",   "name": "Tailscale",     "ats": "greenhouse", "atsSlug": "tailscale",    "domain": "tailscale.com" },
+    { "slug": "suno",        "name": "Suno",          "ats": "ashby",      "atsSlug": "suno",         "domain": "suno.com" },
+    { "slug": "pylon",       "name": "Pylon",         "ats": "ashby",      "atsSlug": "pylon-labs",   "domain": "usepylon.com" },
+    { "slug": "incidentio",  "name": "incident.io",   "ats": "ashby",      "atsSlug": "incident",     "domain": "incident.io" }
   ]
 }
