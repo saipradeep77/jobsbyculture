@@ -25,7 +25,7 @@
     "databricks": {
       "name": "Databricks",
       "glassdoor": 4.1,
-      "jobCount": 794,
+      "jobCount": 795,
       "values": [
         "eng-driven",
         "learning",
@@ -135,7 +135,7 @@
     "coreweave": {
       "name": "CoreWeave",
       "glassdoor": 3.6,
-      "jobCount": 280,
+      "jobCount": 279,
       "values": [
         "eng-driven",
         "ship-fast",
@@ -380,7 +380,7 @@
       "companyCount": 4
     },
     "transparent": {
-      "name": "Transparent Culture",
+      "name": "Transparent",
       "jobCount": 1163,
       "companyCount": 8
     },
@@ -391,7 +391,7 @@
     },
     "diverse": {
       "name": "Diverse & Inclusive",
-      "jobCount": 1619,
+      "jobCount": 1620,
       "companyCount": 8
     },
     "psych-safety": {
@@ -406,17 +406,17 @@
     },
     "ship-fast": {
       "name": "Ship Fast & Iterate",
-      "jobCount": 2258,
+      "jobCount": 2257,
       "companyCount": 20
     },
     "open-source": {
-      "name": "Open Source Culture",
+      "name": "Open Source",
       "jobCount": 781,
       "companyCount": 11
     },
     "learning": {
       "name": "Learning & Growth",
-      "jobCount": 3907,
+      "jobCount": 3908,
       "companyCount": 19
     },
     "equity": {
@@ -426,12 +426,12 @@
     },
     "product-impact": {
       "name": "Direct Product Impact",
-      "jobCount": 3266,
+      "jobCount": 3267,
       "companyCount": 20
     },
     "many-hats": {
       "name": "Wears Many Hats",
-      "jobCount": 960,
+      "jobCount": 959,
       "companyCount": 13
     },
     "ethical-ai": {
@@ -472,7 +472,7 @@
     },
     "sales": {
       "name": "Sales / GTM",
-      "jobCount": 1179
+      "jobCount": 1180
     },
     "finance": {
       "name": "Finance",
@@ -484,7 +484,7 @@
     },
     "legal": {
       "name": "Legal",
-      "jobCount": 102
+      "jobCount": 101
     },
     "support": {
       "name": "Support",
@@ -516,10 +516,10 @@
     },
     "mid": {
       "name": "Mid-Level",
-      "jobCount": 2527,
+      "jobCount": 2528,
       "roles": {
         "operations": 56,
-        "sales": 771,
+        "sales": 772,
         "other": 284,
         "data": 77,
         "ml-ai": 182,
@@ -570,7 +570,7 @@
     },
     "lead": {
       "name": "Lead / Manager",
-      "jobCount": 1353,
+      "jobCount": 1352,
       "roles": {
         "data": 16,
         "engineering": 214,
@@ -581,7 +581,7 @@
         "product": 294,
         "operations": 61,
         "ml-ai": 18,
-        "legal": 24,
+        "legal": 23,
         "hr-people": 23,
         "design": 8,
         "support": 8

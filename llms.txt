@@ -115,13 +115,13 @@ Data-driven insights on AI company culture, work-life balance, and what it's act
 3. Flexible Hours
 4. Async-First
 5. Deep Work / Low Meetings
-6. Transparent Culture
+6. Transparent
 7. Flat Hierarchy
 8. Diverse & Inclusive
 9. Safe to Fail
 10. Engineering-Driven
 11. Ship Fast & Iterate
-12. Open Source Culture
+12. Open Source
 13. Learning & Growth
 14. Strong Comp & Equity
 15. Direct Product Impact
