@@ -381,6 +381,22 @@ const sharedCSS = `
     </style>`;
 
 // ─── Build job card HTML ───
+
+// ─── Spread jobs so same company doesn't appear consecutively ───
+function spreadByCompany(jobs) {
+    const companies = new Set(jobs.map(j => j.company));
+    if (companies.size <= 1) return jobs;
+    const groups = {};
+    jobs.forEach(j => { if (!groups[j.company]) groups[j.company] = []; groups[j.company].push(j); });
+    const buckets = Object.values(groups).sort((a, b) => b.length - a.length);
+    const result = [];
+    let idx = 0;
+    while (result.length < jobs.length) {
+        for (const g of buckets) { if (idx < g.length) result.push(g[idx]); }
+        idx++;
+    }
+    return result;
+}
 function jobCardHtml(job) {
     const co = COMPANIES[job.company];
     const logo = co ? co.logo : `https://www.google.com/s2/favicons?domain=${job.company}.com&sz=128`;
@@ -443,7 +459,7 @@ function generateValuePage(valueSlug) {
     const title = `${val.name} Jobs at AI & Tech Companies | JobsByCulture`;
     const desc = `Browse ${matchingJobs.length} jobs at ${matchingCompanies.length} companies that value ${val.name.toLowerCase()}. ${VALUE_DESCRIPTIONS[valueSlug] || ''}`.slice(0, 160);
     const canonical = `https://jobsbyculture.com/values/${valueSlug}`;
-    const showJobs = matchingJobs.slice(0, 20);
+    const showJobs = spreadByCompany(matchingJobs).slice(0, 20);
 
     // Related: roles that have jobs with this value
     const relatedRoles = Object.entries(byRole)
@@ -544,7 +560,7 @@ function generateRolePage(roleSlug) {
     const title = `${role.name} Jobs at AI & Tech Companies | JobsByCulture`;
     const desc = `Browse ${matchingJobs.length} ${role.name.toLowerCase()} jobs at ${matchingCompanies.length} AI & tech companies. ${ROLE_DESCRIPTIONS[roleSlug] || ''}`.slice(0, 160);
     const canonical = `https://jobsbyculture.com/roles/${roleSlug}`;
-    const showJobs = matchingJobs.slice(0, 20);
+    const showJobs = spreadByCompany(matchingJobs).slice(0, 20);
 
     // Related: values that these companies have
     const valueCounts = {};
@@ -678,7 +694,7 @@ function generateSeniorityPage(senioritySlug) {
     const title = `${sen.name} Jobs at AI & Tech Companies | JobsByCulture`;
     const metaDesc = `Browse ${matchingJobs.length} ${sen.name.toLowerCase()} jobs at ${matchingCompanies.length} AI & tech companies. ${desc_data.tagline}.`.slice(0, 160);
     const canonical = `https://jobsbyculture.com/seniority/${senioritySlug}`;
-    const showJobs = matchingJobs.slice(0, 20);
+    const showJobs = spreadByCompany(matchingJobs).slice(0, 20);
 
     const relatedRoles = Object.entries(byRole)
         .filter(([r]) => r !== 'other' && ROLES[r])
@@ -783,7 +799,7 @@ function generateSeniorityRolePage(senioritySlug, roleSlug) {
     const title = `${sen.name} ${role.name} Jobs | AI & Tech Companies | JobsByCulture`;
     const metaDesc = `${matchingJobs.length} ${sen.name.toLowerCase()} ${role.name.toLowerCase()} jobs at ${matchingCompanies.length} companies. Find ${sen.name.toLowerCase()} ${role.name.toLowerCase()} roles at culture-first companies.`.slice(0, 160);
     const canonical = `https://jobsbyculture.com/seniority/${senioritySlug}/${roleSlug}`;
-    const showJobs = matchingJobs.slice(0, 20);
+    const showJobs = spreadByCompany(matchingJobs).slice(0, 20);
 
     const ogUrl = `https://jobsbyculture.com/api/og?type=seniority&slug=${senioritySlug}&role=${roleSlug}`;
     let html = headHtml(title, metaDesc, canonical, ogUrl) + sharedCSS + `
@@ -870,7 +886,7 @@ function generateCrossPage(valueSlug, roleSlug) {
     const title = `${val.name} ${role.name} Jobs | AI & Tech Companies | JobsByCulture`;
     const desc = `${matchingJobs.length} ${role.name.toLowerCase()} jobs at ${matchingCompanies.length} companies with ${val.name.toLowerCase()} culture. Find ${role.name.toLowerCase()} roles that match how you work.`.slice(0, 160);
     const canonical = `https://jobsbyculture.com/roles/${valueSlug}/${roleSlug}`;
-    const showJobs = matchingJobs.slice(0, 20);
+    const showJobs = spreadByCompany(matchingJobs).slice(0, 20);
 
     const ogUrl = `https://jobsbyculture.com/api/og?type=value&slug=${valueSlug}`;
     let html = headHtml(title, desc, canonical, ogUrl) + sharedCSS + `

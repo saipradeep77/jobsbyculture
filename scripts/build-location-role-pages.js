@@ -396,6 +396,22 @@ const sharedCSS = `
     </style>`;
 
 // ─── Build job card HTML ───
+
+// ─── Spread jobs so same company doesn't appear consecutively ───
+function spreadByCompany(jobs) {
+    const companies = new Set(jobs.map(j => j.company));
+    if (companies.size <= 1) return jobs;
+    const groups = {};
+    jobs.forEach(j => { if (!groups[j.company]) groups[j.company] = []; groups[j.company].push(j); });
+    const buckets = Object.values(groups).sort((a, b) => b.length - a.length);
+    const result = [];
+    let idx = 0;
+    while (result.length < jobs.length) {
+        for (const g of buckets) { if (idx < g.length) result.push(g[idx]); }
+        idx++;
+    }
+    return result;
+}
 function jobCardHtml(job) {
     const co = COMPANIES[job.company];
     const logo = co ? co.logo : `https://www.google.com/s2/favicons?domain=${job.company}.com&sz=128`;
@@ -480,7 +496,7 @@ function generatePage(locSlug, roleSlug) {
     const title = `${roleName} Jobs in ${locationName} | AI & Tech Companies | JobsByCulture`;
     const desc = `Browse ${matchingJobs.length.toLocaleString()} ${roleName.toLowerCase()} jobs in ${locationName} at ${matchingCompanies.length} culture-rated AI & tech companies. Filter by culture values to find roles that match how you work.`.slice(0, 160);
     const canonical = `https://jobsbyculture.com/locations/${locSlug}/${roleSlug}`;
-    const showJobs = matchingJobs.slice(0, 30);
+    const showJobs = spreadByCompany(matchingJobs).slice(0, 30);
 
     // Other roles in this location (for cross-links)
     const otherRolesInLocation = Object.keys(ROLES).filter(r => {

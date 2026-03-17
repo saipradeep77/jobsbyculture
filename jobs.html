@@ -6385,6 +6385,21 @@ function renderJobs() {
     });
     else if (activeValues.size > 0) filtered.sort((a,b) => matchScore(b.company) - matchScore(a.company));
 
+    // Spread jobs so same company doesn't appear consecutively (skip for single-company view)
+    const uniqueCompanies = new Set(filtered.map(j => j.company));
+    if (uniqueCompanies.size > 1) {
+        const groups = {};
+        filtered.forEach(j => { if (!groups[j.company]) groups[j.company] = []; groups[j.company].push(j); });
+        const buckets = Object.values(groups).sort((a, b) => b.length - a.length);
+        const spread = [];
+        let idx = 0;
+        while (spread.length < filtered.length) {
+            for (const g of buckets) { if (idx < g.length) spread.push(g[idx]); }
+            idx++;
+        }
+        filtered = spread;
+    }
+
     document.getElementById('resultsCount').innerHTML = `<b>${filtered.length}</b> jobs found${activeValues.size ? ` matching <b>${activeValues.size}</b> value${activeValues.size>1?'s':''}` : ''}`;
 
     // Dynamic SEO: update title and meta description based on active filters

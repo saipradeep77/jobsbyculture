@@ -451,6 +451,22 @@ const sharedCSS = `
     </style>`;
 
 // ─── Build job card HTML ───
+
+// ─── Spread jobs so same company doesn't appear consecutively ───
+function spreadByCompany(jobs) {
+    const companies = new Set(jobs.map(j => j.company));
+    if (companies.size <= 1) return jobs;
+    const groups = {};
+    jobs.forEach(j => { if (!groups[j.company]) groups[j.company] = []; groups[j.company].push(j); });
+    const buckets = Object.values(groups).sort((a, b) => b.length - a.length);
+    const result = [];
+    let idx = 0;
+    while (result.length < jobs.length) {
+        for (const g of buckets) { if (idx < g.length) result.push(g[idx]); }
+        idx++;
+    }
+    return result;
+}
 function jobCardHtml(job) {
     const co = COMPANIES[job.company];
     const logo = co ? co.logo : `https://www.google.com/s2/favicons?domain=${job.company}.com&sz=128`;
@@ -515,7 +531,7 @@ function generateLocationPage(locSlug) {
     const title = `AI & Tech Jobs in ${loc.name} | JobsByCulture`;
     const desc = `Browse ${matchingJobs.length.toLocaleString()} AI & tech jobs in ${loc.name} at ${matchingCompanies.length} culture-rated companies. Filter by culture values like remote, work-life balance, and more.`.slice(0, 160);
     const canonical = `https://jobsbyculture.com/locations/${locSlug}`;
-    const showJobs = matchingJobs.slice(0, 25);
+    const showJobs = spreadByCompany(matchingJobs).slice(0, 25);
 
     const ogUrl = `https://jobsbyculture.com/api/og?type=location&slug=${locSlug}`;
     let html = headHtml(title, desc, canonical, ogUrl) + sharedCSS + `
