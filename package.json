@@ -8,6 +8,7 @@
     "build:locations": "node scripts/build-location-pages.js",
     "build:all": "node scripts/build-compare-pages.js && node scripts/build-cluster-pages.js && node scripts/build-location-pages.js",
     "indexnow": "node scripts/indexnow.js",
+    "google-indexing": "node scripts/google-indexing.js",
     "fetch-jobs": "node scripts/fetch-jobs.js",
     "update-jobs": "node scripts/update-jobs-html.js",
     "detect-ats": "node scripts/detect-ats.js",
@@ -17,6 +18,7 @@
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.39.0",
-    "@vercel/og": "^0.11.1"
+    "@vercel/og": "^0.11.1",
+    "google-auth-library": "^10.6.2"
   }
 }
