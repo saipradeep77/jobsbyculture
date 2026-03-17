@@ -12,6 +12,7 @@ JobsByCulture helps professionals find jobs at companies whose culture actually 
 - [Compare Cultures](https://jobsbyculture.com/compare): Side-by-side company culture comparison tool
 - [Company Directory](https://jobsbyculture.com/directory): All 35 profiled companies with ratings, values, and reviews
 - [Culture Map](https://jobsbyculture.com/culture-map): Interactive scatter chart comparing all 29 companies by Glassdoor rating vs work-life balance
+- [Culture Quiz](https://jobsbyculture.com/quiz): "What's Your Work Culture Type?" — 90-second quiz with 6 archetypes (Deep Work Monk, Remote Explorer, Mission Hacker, Startup Sprinter, Culture Architect, Growth Engineer) and matching company recommendations
 
 ## Company Profiles
 

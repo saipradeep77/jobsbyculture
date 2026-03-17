@@ -1,0 +1,916 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>What's Your Work Culture Type? | JobsByCulture</title>
+    <meta name="description" content="Take the 90-second quiz to discover your work culture archetype. Are you a Deep Work Monk, Remote Explorer, or Startup Sprinter? Find companies that match your style.">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="What's Your Work Culture Type? | JobsByCulture">
+    <meta property="og:description" content="Take the 90-second quiz to discover your work culture archetype and find companies that actually match how you work best.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://jobsbyculture.com/quiz">
+    <meta property="og:image" content="https://jobsbyculture.com/api/og?type=quiz">
+    <meta property="og:image:type" content="image/png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="What's Your Work Culture Type? | JobsByCulture">
+    <meta name="twitter:description" content="90-second quiz: discover your work culture archetype and find companies that match how you work best.">
+    <meta name="twitter:image" content="https://jobsbyculture.com/api/og?type=quiz">
+    <link rel="canonical" href="https://jobsbyculture.com/quiz">
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <link rel="icon" type="image/png" sizes="512x512" href="/logo.png">
+    <link rel="apple-touch-icon" href="/logo.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Satoshi:wght@400;500;600;700;900&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Quiz",
+        "name": "What's Your Work Culture Type?",
+        "description": "Discover your work culture archetype in 90 seconds. Find companies that match how you actually work best.",
+        "url": "https://jobsbyculture.com/quiz",
+        "provider": {
+            "@type": "Organization",
+            "name": "JobsByCulture",
+            "url": "https://jobsbyculture.com"
+        }
+    }
+    </script>
+    <style>
+        :root {
+            --bg: #fafaf8; --bg-card: #ffffff; --bg-hover: #f4f3ef;
+            --text: #1a1a1f; --text-2: #52525b; --text-3: #9ca3af;
+            --accent: #e8590c; --accent-hover: #c2410c;
+            --accent-bg: rgba(232,89,12,0.06); --accent-border: rgba(232,89,12,0.2);
+            --teal: #0d9488; --teal-bg: rgba(13,148,136,0.06); --teal-border: rgba(13,148,136,0.2);
+            --violet: #7c3aed; --violet-bg: rgba(124,58,237,0.06); --violet-border: rgba(124,58,237,0.2);
+            --rose: #e11d48; --rose-bg: rgba(225,29,72,0.06); --rose-border: rgba(225,29,72,0.2);
+            --sky: #0284c7; --sky-bg: rgba(2,132,199,0.06); --sky-border: rgba(2,132,199,0.2);
+            --lime: #4d7c0f; --lime-bg: rgba(77,124,15,0.06); --lime-border: rgba(77,124,15,0.2);
+            --amber: #d97706; --amber-bg: rgba(217,119,6,0.06); --amber-border: rgba(217,119,6,0.2);
+            --border: rgba(0,0,0,0.07); --border-2: rgba(0,0,0,0.12); --border-3: rgba(0,0,0,0.18);
+            --radius: 12px; --radius-sm: 8px; --radius-lg: 20px; --radius-full: 100px;
+            --font-display: 'Instrument Serif', Georgia, serif;
+            --font-body: 'Satoshi', -apple-system, sans-serif;
+            --font-mono: 'IBM Plex Mono', monospace;
+            --shadow: 0 4px 24px rgba(0,0,0,0.06), 0 1px 3px rgba(0,0,0,0.04);
+            --shadow-lg: 0 12px 48px rgba(0,0,0,0.08);
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body { font-family: var(--font-body); background: var(--bg); color: var(--text); line-height: 1.6; -webkit-font-smoothing: antialiased; overflow-x: hidden; }
+        .container { max-width: 1140px; margin: 0 auto; padding: 0 24px; }
+
+        /* NAV */
+        nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; background: rgba(250,250,248,0.85); backdrop-filter: blur(24px) saturate(1.4); border-bottom: 1px solid var(--border); }
+        .nav-inner { max-width: 1140px; margin: 0 auto; padding: 14px 24px; display: flex; align-items: center; justify-content: space-between; }
+        .nav-logo { display: flex; align-items: center; gap: 10px; text-decoration: none; color: var(--text); }
+        .nav-mark { width: 30px; height: 30px; position: relative; display: flex; align-items: center; justify-content: center; }
+        .nav-mark .ring { position: absolute; border: 1.5px solid var(--accent); border-radius: 50%; animation: logoPing 2.5s ease-out infinite; }
+        .nav-mark .ring-1 { width: 100%; height: 100%; opacity: 0.2; }
+        .nav-mark .ring-2 { width: 65%; height: 65%; opacity: 0.4; animation-delay: 0.3s; }
+        .nav-mark .nav-dot { width: 7px; height: 7px; background: var(--accent); border-radius: 50%; position: relative; z-index: 1; }
+        @keyframes logoPing { 0% { transform: scale(1); opacity: 0.4; } 100% { transform: scale(1.5); opacity: 0; } }
+        .nav-wordmark { font-weight: 700; font-size: 16px; letter-spacing: -0.03em; }
+        .nav-wordmark span { color: var(--accent); }
+        .nav-links { display: flex; align-items: center; gap: 28px; }
+        .nav-links a { color: var(--text-2); text-decoration: none; font-size: 14px; font-weight: 500; transition: color 0.15s; }
+        .nav-links a:hover { color: var(--text); }
+        .btn-sm { display: inline-flex; align-items: center; gap: 6px; background: var(--accent); color: #fff; padding: 7px 16px; border-radius: var(--radius-sm); font-size: 13px; font-weight: 600; text-decoration: none; transition: all 0.2s; border: none; cursor: pointer; }
+        .btn-sm:hover { background: var(--accent-hover); transform: translateY(-1px); }
+        .hamburger { display: none; background: none; border: none; cursor: pointer; padding: 8px; flex-direction: column; gap: 5px; }
+        .hamburger span { display: block; width: 20px; height: 2px; background: var(--text); border-radius: 2px; transition: all 0.3s; }
+
+        /* HERO */
+        .quiz-hero { padding: 140px 0 60px; text-align: center; position: relative; }
+        .quiz-hero::before {
+            content: ''; position: absolute; top: -100px; left: 50%; transform: translateX(-50%);
+            width: 900px; height: 600px;
+            background: radial-gradient(ellipse, rgba(124,58,237,0.06) 0%, transparent 70%);
+            pointer-events: none;
+        }
+        .quiz-pill {
+            display: inline-flex; align-items: center; gap: 8px;
+            background: var(--violet-bg); border: 1px solid var(--violet-border);
+            padding: 5px 14px 5px 8px; border-radius: var(--radius-full);
+            font-size: 13px; font-weight: 500; color: var(--violet);
+            margin-bottom: 28px; animation: fadeUp 0.5s ease both;
+        }
+        .quiz-pill-dot { width: 7px; height: 7px; border-radius: 50%; background: var(--violet); animation: blink 2s infinite; }
+        @keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: 0.3; } }
+        .quiz-hero h1 {
+            font-family: var(--font-display); font-weight: 400;
+            font-size: clamp(40px, 5vw, 68px); line-height: 1.08;
+            letter-spacing: -0.025em; max-width: 700px; margin: 0 auto 20px;
+            animation: fadeUp 0.5s ease 0.08s both;
+        }
+        .quiz-hero h1 em { font-style: italic; color: var(--violet); }
+        .quiz-hero-sub {
+            font-size: 18px; color: var(--text-2); max-width: 480px; margin: 0 auto 36px;
+            line-height: 1.7; animation: fadeUp 0.5s ease 0.16s both;
+        }
+        .quiz-start-btn {
+            display: inline-flex; align-items: center; gap: 10px;
+            background: var(--violet); color: #fff; padding: 14px 32px;
+            border-radius: var(--radius-full); font-size: 16px; font-weight: 600;
+            text-decoration: none; border: none; cursor: pointer;
+            transition: all 0.2s; font-family: var(--font-body);
+            animation: fadeUp 0.5s ease 0.24s both;
+        }
+        .quiz-start-btn:hover { background: #6d28d9; transform: translateY(-2px); box-shadow: 0 8px 32px rgba(124,58,237,0.3); }
+        .quiz-meta { margin-top: 16px; font-size: 13px; color: var(--text-3); animation: fadeUp 0.5s ease 0.3s both; }
+        @keyframes fadeUp { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: translateY(0); } }
+
+        /* QUIZ CONTAINER */
+        .quiz-container { max-width: 680px; margin: 0 auto; padding: 0 24px 80px; display: none; }
+        .quiz-container.active { display: block; }
+
+        /* PROGRESS BAR */
+        .quiz-progress { margin-bottom: 40px; }
+        .quiz-progress-bar { height: 4px; background: var(--border); border-radius: 4px; overflow: hidden; margin-bottom: 12px; }
+        .quiz-progress-fill { height: 100%; background: var(--violet); border-radius: 4px; transition: width 0.4s cubic-bezier(0.4, 0, 0.2, 1); }
+        .quiz-progress-text { font-size: 13px; color: var(--text-3); font-family: var(--font-mono); }
+
+        /* QUESTION */
+        .quiz-question { animation: fadeUp 0.35s ease both; }
+        .quiz-question-number { font-family: var(--font-mono); font-size: 13px; color: var(--violet); font-weight: 500; margin-bottom: 8px; }
+        .quiz-question h2 {
+            font-family: var(--font-display); font-weight: 400;
+            font-size: clamp(24px, 3.5vw, 32px); line-height: 1.2;
+            letter-spacing: -0.02em; margin-bottom: 28px;
+        }
+        .quiz-options { display: flex; flex-direction: column; gap: 12px; }
+        .quiz-option {
+            display: flex; align-items: flex-start; gap: 14px;
+            padding: 18px 20px; border-radius: var(--radius);
+            border: 1.5px solid var(--border-2); background: var(--bg-card);
+            cursor: pointer; transition: all 0.2s; position: relative;
+        }
+        .quiz-option:hover { border-color: var(--violet-border); background: var(--violet-bg); transform: translateY(-1px); box-shadow: var(--shadow); }
+        .quiz-option-icon { font-size: 22px; line-height: 1; flex-shrink: 0; margin-top: 1px; }
+        .quiz-option-text { flex: 1; }
+        .quiz-option-label { font-weight: 600; font-size: 15px; margin-bottom: 2px; }
+        .quiz-option-desc { font-size: 13px; color: var(--text-2); }
+        .quiz-option.selected { border-color: var(--violet); background: var(--violet-bg); box-shadow: 0 0 0 3px rgba(124,58,237,0.12); }
+        .quiz-option.selected::after {
+            content: '\2713'; position: absolute; top: 14px; right: 16px;
+            width: 24px; height: 24px; border-radius: 50%; background: var(--violet);
+            color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center;
+        }
+
+        /* RESULT */
+        .quiz-result { display: none; max-width: 720px; margin: 0 auto; padding: 140px 24px 80px; }
+        .quiz-result.active { display: block; }
+
+        /* SHARE CARD */
+        .share-card {
+            border-radius: var(--radius-lg); overflow: hidden;
+            box-shadow: var(--shadow-lg); margin-bottom: 40px;
+            animation: fadeUp 0.5s ease both;
+        }
+        .share-card-top {
+            padding: 48px 40px 40px; text-align: center;
+            position: relative; overflow: hidden;
+        }
+        .share-card-top::before {
+            content: ''; position: absolute; inset: 0;
+            opacity: 0.08; pointer-events: none;
+            background-image: radial-gradient(circle at 20% 50%, currentColor 1px, transparent 1px),
+                              radial-gradient(circle at 80% 30%, currentColor 1px, transparent 1px),
+                              radial-gradient(circle at 50% 80%, currentColor 1px, transparent 1px);
+            background-size: 60px 60px, 80px 80px, 40px 40px;
+        }
+        .share-card-avatar {
+            width: 120px; height: 120px; border-radius: 50%;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 56px; margin: 0 auto 20px; position: relative;
+            border: 3px solid rgba(255,255,255,0.4);
+            box-shadow: 0 8px 32px rgba(0,0,0,0.15);
+        }
+        .share-card-avatar::after {
+            content: ''; position: absolute; inset: -6px;
+            border-radius: 50%; border: 2px dashed rgba(255,255,255,0.3);
+            animation: spin 20s linear infinite;
+        }
+        @keyframes spin { to { transform: rotate(360deg); } }
+        .share-card-type { font-family: var(--font-mono); font-size: 12px; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 8px; opacity: 0.7; }
+        .share-card-name {
+            font-family: var(--font-display); font-weight: 400;
+            font-size: clamp(28px, 4vw, 40px); line-height: 1.1;
+            letter-spacing: -0.02em; margin-bottom: 12px;
+        }
+        .share-card-tagline { font-size: 16px; opacity: 0.85; max-width: 400px; margin: 0 auto; line-height: 1.5; }
+        .share-card-bottom { background: var(--bg-card); padding: 28px 40px; }
+        .share-card-traits { display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; margin-bottom: 16px; }
+        .share-card-trait {
+            display: inline-flex; align-items: center; gap: 5px;
+            padding: 5px 12px; border-radius: var(--radius-full);
+            font-size: 12px; font-weight: 600; border: 1px solid;
+        }
+        .share-card-brand { text-align: center; font-size: 12px; color: var(--text-3); font-family: var(--font-mono); }
+
+        /* RESULT DETAILS */
+        .result-section { margin-bottom: 36px; animation: fadeUp 0.5s ease 0.15s both; }
+        .result-section h3 {
+            font-family: var(--font-display); font-weight: 400;
+            font-size: 24px; margin-bottom: 12px; letter-spacing: -0.02em;
+        }
+        .result-section p { color: var(--text-2); line-height: 1.7; }
+        .result-strengths { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 16px; }
+        .result-strength {
+            display: flex; align-items: flex-start; gap: 10px;
+            padding: 14px 16px; border-radius: var(--radius-sm);
+            background: var(--bg-card); border: 1px solid var(--border);
+        }
+        .result-strength-icon { font-size: 18px; flex-shrink: 0; }
+        .result-strength-text { font-size: 14px; font-weight: 500; }
+
+        /* DIMENSION BARS */
+        .result-dimensions { display: flex; flex-direction: column; gap: 16px; margin-top: 16px; }
+        .result-dim { display: flex; align-items: center; gap: 12px; }
+        .result-dim-label { font-size: 12px; font-family: var(--font-mono); color: var(--text-3); width: 90px; text-align: right; flex-shrink: 0; }
+        .result-dim-bar { flex: 1; height: 8px; background: var(--border); border-radius: 4px; overflow: hidden; position: relative; }
+        .result-dim-fill { height: 100%; border-radius: 4px; transition: width 1s cubic-bezier(0.4, 0, 0.2, 1); }
+        .result-dim-end { font-size: 12px; font-family: var(--font-mono); color: var(--text-3); width: 90px; flex-shrink: 0; }
+
+        /* MATCHING COMPANIES */
+        .result-companies { margin-top: 16px; }
+        .result-company-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 12px; margin-top: 16px; }
+        .result-company-card {
+            display: flex; align-items: center; gap: 10px;
+            padding: 14px 16px; border-radius: var(--radius);
+            background: var(--bg-card); border: 1px solid var(--border);
+            text-decoration: none; color: var(--text); transition: all 0.2s;
+        }
+        .result-company-card:hover { border-color: var(--violet-border); transform: translateY(-1px); box-shadow: var(--shadow); }
+        .result-company-card img { width: 28px; height: 28px; border-radius: 6px; }
+        .result-company-card .name { font-weight: 600; font-size: 14px; }
+
+        /* SHARE BUTTONS */
+        .result-share { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 16px; }
+        .share-btn {
+            display: inline-flex; align-items: center; gap: 8px;
+            padding: 10px 20px; border-radius: var(--radius-full);
+            font-size: 14px; font-weight: 600; text-decoration: none;
+            border: 1.5px solid var(--border-2); background: var(--bg-card);
+            color: var(--text); cursor: pointer; transition: all 0.2s;
+            font-family: var(--font-body);
+        }
+        .share-btn:hover { border-color: var(--violet); color: var(--violet); transform: translateY(-1px); }
+        .share-btn.primary { background: var(--violet); color: #fff; border-color: var(--violet); }
+        .share-btn.primary:hover { background: #6d28d9; }
+
+        /* CTA BANNER */
+        .result-cta {
+            background: linear-gradient(135deg, var(--violet-bg), var(--accent-bg));
+            border: 1px solid var(--violet-border);
+            border-radius: var(--radius-lg); padding: 32px;
+            text-align: center; animation: fadeUp 0.5s ease 0.3s both;
+        }
+        .result-cta h3 { font-family: var(--font-display); font-size: 24px; margin-bottom: 8px; }
+        .result-cta p { color: var(--text-2); margin-bottom: 20px; }
+        .result-cta-btn {
+            display: inline-flex; align-items: center; gap: 8px;
+            background: var(--accent); color: #fff; padding: 12px 28px;
+            border-radius: var(--radius-full); font-size: 15px; font-weight: 600;
+            text-decoration: none; transition: all 0.2s;
+        }
+        .result-cta-btn:hover { background: var(--accent-hover); transform: translateY(-1px); }
+
+        /* RETAKE */
+        .retake-link {
+            display: inline-flex; align-items: center; gap: 6px;
+            color: var(--text-3); font-size: 14px; text-decoration: none;
+            margin-top: 32px; transition: color 0.2s; cursor: pointer;
+            background: none; border: none; font-family: var(--font-body);
+        }
+        .retake-link:hover { color: var(--violet); }
+
+        /* FOOTER */
+        footer { border-top: 1px solid var(--border); padding: 64px 0 32px; margin-top: 80px; }
+        .ft-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 32px; margin-bottom: 48px; }
+        .ft-col h4 { font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 16px; color: var(--text); }
+        .ft-col a { display: block; font-size: 14px; color: var(--text-2); text-decoration: none; padding: 3px 0; transition: color 0.15s; }
+        .ft-col a:hover { color: var(--accent); }
+        .ft-bar { display: flex; justify-content: space-between; align-items: center; padding-top: 24px; border-top: 1px solid var(--border); font-size: 13px; color: var(--text-3); }
+
+        /* MOBILE */
+        @media (max-width: 768px) {
+            .nav-links { display: none; position: fixed; top: 57px; left: 0; right: 0; background: var(--bg-card); border-bottom: 1px solid var(--border); flex-direction: column; padding: 20px 24px; gap: 16px; box-shadow: var(--shadow-lg); }
+            .nav-links.open { display: flex; }
+            .hamburger { display: flex; }
+            .quiz-hero { padding: 120px 0 40px; }
+            .share-card-top { padding: 36px 24px 32px; }
+            .share-card-bottom { padding: 20px 24px; }
+            .result-strengths { grid-template-columns: 1fr; }
+            .result-dim-label, .result-dim-end { width: 70px; font-size: 11px; }
+            .result-company-grid { grid-template-columns: 1fr; }
+            .ft-grid { grid-template-columns: repeat(2, 1fr); }
+            .ft-bar { flex-direction: column; gap: 8px; text-align: center; }
+            .result-share { flex-direction: column; }
+            .share-btn { justify-content: center; }
+        }
+
+        /* TOAST */
+        .toast {
+            position: fixed; bottom: 24px; left: 50%; transform: translateX(-50%) translateY(80px);
+            background: var(--text); color: #fff; padding: 12px 24px; border-radius: var(--radius-full);
+            font-size: 14px; font-weight: 500; z-index: 200; transition: transform 0.3s ease;
+            pointer-events: none;
+        }
+        .toast.show { transform: translateX(-50%) translateY(0); }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="nav-inner">
+            <a href="/" class="nav-logo">
+                <div class="nav-mark"><div class="ring ring-1"></div><div class="ring ring-2"></div><div class="nav-dot"></div></div>
+                <div class="nav-wordmark">Jobs<span>By</span>Culture</div>
+            </a>
+            <div class="nav-links">
+                <a href="/jobs">Browse Jobs</a>
+                <a href="/compare">Compare</a>
+                <a href="/directory">Culture Directory</a>
+                <a href="/blog">Blog</a>
+                <a href="/jobs" class="btn-sm" style="background:transparent;border:1px solid #ea580c;color:#ea580c">Browse Jobs</a>
+            </div>
+            <button class="hamburger" onclick="this.classList.toggle('active');this.closest('.nav-inner').querySelector('.nav-links').classList.toggle('open')" aria-label="Menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- HERO / INTRO -->
+    <section class="quiz-hero" id="quizIntro">
+        <div class="container">
+            <div class="quiz-pill"><div class="quiz-pill-dot"></div>90-second culture quiz</div>
+            <h1>What's your <em>work culture</em> type?</h1>
+            <p class="quiz-hero-sub">8 quick questions. Discover your archetype. Find companies that match how you actually work best.</p>
+            <button class="quiz-start-btn" onclick="startQuiz()">Take the Quiz <span style="font-size:20px">&#8594;</span></button>
+            <p class="quiz-meta">11,247 people have taken this quiz</p>
+        </div>
+    </section>
+
+    <!-- QUIZ QUESTIONS -->
+    <div class="quiz-container" id="quizContainer">
+        <div class="quiz-progress">
+            <div class="quiz-progress-bar"><div class="quiz-progress-fill" id="progressFill" style="width:0%"></div></div>
+            <div class="quiz-progress-text" id="progressText">Question 1 of 8</div>
+        </div>
+        <div id="questionArea"></div>
+    </div>
+
+    <!-- RESULT -->
+    <div class="quiz-result" id="quizResult"></div>
+
+    <!-- TOAST -->
+    <div class="toast" id="toast"></div>
+
+    <footer>
+        <div class="container">
+            <div class="ft-grid">
+                <div class="ft-col">
+                    <h4>By Culture</h4>
+                    <a href="/values/remote">Remote-Friendly</a>
+                    <a href="/values/async">Async-First</a>
+                    <a href="/values/deep-work">Deep Work</a>
+                    <a href="/values/wlb">Work-Life Balance</a>
+                    <a href="/values/ethical-ai">Ethical AI</a>
+                    <a href="/values/equity">Strong Comp</a>
+                </div>
+                <div class="ft-col">
+                    <h4>By Role</h4>
+                    <a href="/roles/engineering">Engineering</a>
+                    <a href="/roles/ml-ai">ML / AI</a>
+                    <a href="/roles/design">Design</a>
+                    <a href="/roles/product">Product</a>
+                    <a href="/roles/data">Data</a>
+                    <a href="/roles/marketing">Marketing</a>
+                </div>
+                <div class="ft-col">
+                    <h4>By Seniority</h4>
+                    <a href="/seniority/entry">Entry / Junior</a>
+                    <a href="/seniority/mid">Mid-Level</a>
+                    <a href="/seniority/senior">Senior</a>
+                    <a href="/seniority/staff">Staff / Principal</a>
+                    <a href="/seniority/lead">Lead / Manager</a>
+                    <a href="/seniority/director">Director+</a>
+                </div>
+                <div class="ft-col">
+                    <h4>By Location</h4>
+                    <a href="/locations/san-francisco">San Francisco</a>
+                    <a href="/locations/new-york">New York</a>
+                    <a href="/locations/london">London</a>
+                    <a href="/locations/remote">Remote</a>
+                    <a href="/locations/seattle">Seattle</a>
+                    <a href="/locations/paris">Paris</a>
+                </div>
+                <div class="ft-col">
+                    <h4>Explore</h4>
+                    <a href="/directory">Culture Directory</a>
+                    <a href="/compare">Compare Cultures</a>
+                    <a href="/blog">Blog</a>
+                    <a href="/quiz">Culture Quiz</a>
+                </div>
+            </div>
+            <div style="display:flex;align-items:center;gap:10px;margin-bottom:32px">
+                <a href="/" class="nav-logo" style="margin-bottom:0">
+                    <div class="nav-mark"><div class="ring ring-1"></div><div class="ring ring-2"></div><div class="nav-dot"></div></div>
+                    <div class="nav-wordmark">Jobs<span>By</span>Culture</div>
+                </a>
+                <span style="color:var(--text-3);font-size:14px;margin-left:8px">The culture-first job board. Built for the AI era.</span>
+            </div>
+            <div class="ft-bar">
+                <p>&copy; 2026 JobsByCulture. Built with love for the indie hacker community.</p>
+                <p>Made by <a href="https://x.com/itspradz" target="_blank" style="color:var(--accent);text-decoration:none">@itspradz</a></p>
+            </div>
+        </div>
+    </footer>
+
+<script>
+// ═══ QUIZ DATA ═══
+const QUESTIONS = [
+    {
+        question: "It's Monday morning. What do you reach for first?",
+        options: [
+            { icon: "&#128221;", label: "My personal task list", desc: "I know exactly what I'm building today", scores: { monk: 3, explorer: 1 } },
+            { icon: "&#128172;", label: "Slack to see what's happening", desc: "I want to know what the team's up to", scores: { architect: 3, sprinter: 1 } },
+            { icon: "&#9749;", label: "Coffee first, then deep work", desc: "No interruptions until noon", scores: { monk: 2, engineer: 2 } },
+            { icon: "&#127758;", label: "Whatever, wherever I am", desc: "I might be in Lisbon or my couch", scores: { explorer: 3, hacker: 1 } }
+        ]
+    },
+    {
+        question: "Your dream meeting policy?",
+        options: [
+            { icon: "&#128683;", label: "Zero meetings", desc: "Everything async, always", scores: { monk: 3, explorer: 2 } },
+            { icon: "&#9889;", label: "One daily standup, 15 min max", desc: "Sync fast, then back to building", scores: { sprinter: 3, engineer: 1 } },
+            { icon: "&#128221;", label: "Async updates, meeting only if stuck", desc: "Default to writing, talk when needed", scores: { engineer: 2, monk: 2 } },
+            { icon: "&#129309;", label: "Regular team syncs", desc: "Alignment and connection matter", scores: { architect: 3, hacker: 1 } }
+        ]
+    },
+    {
+        question: "Where do you do your absolute best work?",
+        options: [
+            { icon: "&#127968;", label: "Home office, headphones on", desc: "Noise-canceling is non-negotiable", scores: { monk: 3, engineer: 1 } },
+            { icon: "&#9968;", label: "A cafe or coworking space", desc: "I like ambient energy around me", scores: { explorer: 3, sprinter: 1 } },
+            { icon: "&#127970;", label: "The office with my team", desc: "Whiteboarding and spontaneous convos", scores: { architect: 3, sprinter: 1 } },
+            { icon: "&#9992;", label: "Literally anywhere in the world", desc: "Bali last month, Berlin next week", scores: { explorer: 3, hacker: 1 } }
+        ]
+    },
+    {
+        question: "A Slack message arrives at 9 PM. You...",
+        options: [
+            { icon: "&#128564;", label: "Won't see it — notifications off", desc: "Boundaries are sacred", scores: { monk: 2, explorer: 2 } },
+            { icon: "&#128064;", label: "Glance but reply tomorrow", desc: "I'll triage, not react", scores: { engineer: 3, architect: 1 } },
+            { icon: "&#128293;", label: "Reply if it looks urgent", desc: "Sometimes speed matters", scores: { sprinter: 3 } },
+            { icon: "&#129300;", label: "Depends — is it meaningful?", desc: "Mission-critical gets a response", scores: { hacker: 3, architect: 1 } }
+        ]
+    },
+    {
+        question: "What matters most when choosing a company?",
+        options: [
+            { icon: "&#127757;", label: "Positive impact on the world", desc: "I want my work to mean something", scores: { hacker: 3, architect: 1 } },
+            { icon: "&#128640;", label: "Ship incredible products fast", desc: "I live for launch day", scores: { sprinter: 3, engineer: 1 } },
+            { icon: "&#128218;", label: "Learning and technical growth", desc: "I want to become world-class", scores: { engineer: 3, monk: 1 } },
+            { icon: "&#129303;", label: "Great people and healthy culture", desc: "Who you work with > what you build", scores: { architect: 3, explorer: 1 } }
+        ]
+    },
+    {
+        question: "Pick your ideal team setup:",
+        options: [
+            { icon: "&#129333;", label: "Solo or pair — max autonomy", desc: "I own my domain end-to-end", scores: { monk: 2, explorer: 2, engineer: 1 } },
+            { icon: "&#128101;", label: "Small squad, 3-5 people", desc: "Tight crew, clear mission", scores: { sprinter: 2, hacker: 2 } },
+            { icon: "&#127919;", label: "Cross-functional team", desc: "Design, eng, PM all together", scores: { architect: 2, engineer: 2 } },
+            { icon: "&#127793;", label: "Flat org, no hierarchy", desc: "Everyone's a peer, ideas win", scores: { hacker: 2, sprinter: 2 } }
+        ]
+    },
+    {
+        question: "How should decisions get made?",
+        options: [
+            { icon: "&#128736;", label: "I decide — I know my domain", desc: "Trust the expert, move fast", scores: { monk: 2, sprinter: 2 } },
+            { icon: "&#9889;", label: "Quick discussion, then commit", desc: "Disagree and commit culture", scores: { sprinter: 3, engineer: 1 } },
+            { icon: "&#128202;", label: "Data-driven analysis", desc: "Show me the numbers", scores: { engineer: 3, monk: 1 } },
+            { icon: "&#128483;", label: "Open debate — best idea wins", desc: "Radical transparency", scores: { architect: 2, hacker: 2 } }
+        ]
+    },
+    {
+        question: "Pick your dream perk:",
+        options: [
+            { icon: "&#128218;", label: "Unlimited learning budget", desc: "Conferences, courses, books — all of it", scores: { engineer: 3, monk: 1 } },
+            { icon: "&#127758;", label: "Work from anywhere policy", desc: "True location independence", scores: { explorer: 3, monk: 1 } },
+            { icon: "&#128176;", label: "Meaningful equity stake", desc: "I want skin in the game", scores: { sprinter: 2, hacker: 2 } },
+            { icon: "&#127796;", label: "Four-day work week", desc: "Rest fuels my best work", scores: { explorer: 2, architect: 2 } }
+        ]
+    }
+];
+
+// ═══ ARCHETYPES ═══
+const ARCHETYPES = {
+    monk: {
+        name: "The Deep Work Monk",
+        emoji: "&#129504;",
+        tagline: "You find flow in focused silence. Your best work happens when the world fades away.",
+        color: "#7c3aed",
+        colorBg: "linear-gradient(135deg, #7c3aed 0%, #4c1d95 100%)",
+        description: "You're at your most creative and productive when you can dive deep without interruptions. You prefer async communication, minimal meetings, and carving out long blocks of unbroken focus. You value quality over speed and believe the best work comes from careful, thoughtful craftsmanship.",
+        strengths: [
+            { icon: "&#127911;", text: "Deep concentration" },
+            { icon: "&#9997;", text: "Async communication" },
+            { icon: "&#128161;", text: "Independent thinking" },
+            { icon: "&#127919;", text: "Craft-driven quality" }
+        ],
+        dimensions: { focus: 95, async: 90, freedom: 75, pace: 40, mission: 60 },
+        traits: [
+            { label: "Deep Work", color: "var(--violet)", bg: "var(--violet-bg)", border: "var(--violet-border)" },
+            { label: "Async-First", color: "var(--teal)", bg: "var(--teal-bg)", border: "var(--teal-border)" },
+            { label: "Focus Time", color: "var(--sky)", bg: "var(--sky-bg)", border: "var(--sky-border)" }
+        ],
+        values: ["deep-work", "async"],
+        companies: [
+            { name: "Anthropic", slug: "anthropic", domain: "anthropic.com" },
+            { name: "Linear", slug: "linear", domain: "linear.app" },
+            { name: "Notion", slug: "notion", domain: "notion.so" },
+            { name: "Cursor", slug: "cursor", domain: "cursor.com" }
+        ],
+        jobsLink: "/jobs?value=deep-work"
+    },
+    explorer: {
+        name: "The Remote Explorer",
+        emoji: "&#127758;",
+        tagline: "Your office is wherever you open your laptop. Freedom fuels your best work.",
+        color: "#0d9488",
+        colorBg: "linear-gradient(135deg, #0d9488 0%, #065f5b 100%)",
+        description: "You thrive on flexibility and autonomy. Whether it's a beach in Portugal or your favorite coworking space, you do your best work when you choose your own environment. You value work-life balance, trust-based management, and the freedom to design your days around your energy, not a rigid schedule.",
+        strengths: [
+            { icon: "&#127758;", text: "Location independence" },
+            { icon: "&#9878;", text: "Work-life balance" },
+            { icon: "&#128336;", text: "Flexible schedule" },
+            { icon: "&#127774;", text: "Self-directed work" }
+        ],
+        dimensions: { focus: 65, async: 80, freedom: 95, pace: 45, mission: 55 },
+        traits: [
+            { label: "Remote", color: "var(--teal)", bg: "var(--teal-bg)", border: "var(--teal-border)" },
+            { label: "Flex Hours", color: "var(--sky)", bg: "var(--sky-bg)", border: "var(--sky-border)" },
+            { label: "WLB", color: "var(--lime)", bg: "var(--lime-bg)", border: "var(--lime-border)" }
+        ],
+        values: ["remote", "flex-hours", "wlb"],
+        companies: [
+            { name: "GitLab", slug: "gitlab", domain: "gitlab.com" },
+            { name: "Airbnb", slug: "airbnb", domain: "airbnb.com" },
+            { name: "Notion", slug: "notion", domain: "notion.so" },
+            { name: "Coinbase", slug: "coinbase", domain: "coinbase.com" }
+        ],
+        jobsLink: "/jobs?value=remote"
+    },
+    hacker: {
+        name: "The Mission Hacker",
+        emoji: "&#128640;",
+        tagline: "You're here to change the world. Purpose isn't a perk — it's the job.",
+        color: "#e11d48",
+        colorBg: "linear-gradient(135deg, #e11d48 0%, #9f1239 100%)",
+        description: "You want your work to matter beyond the bottom line. You're drawn to companies tackling big, important problems — AI safety, climate, healthcare, education. You'll work hard because the mission fuels you, but you also want to work alongside people who share that sense of purpose and responsibility.",
+        strengths: [
+            { icon: "&#127757;", text: "Purpose-driven focus" },
+            { icon: "&#129504;", text: "Ethical thinking" },
+            { icon: "&#128161;", text: "Big-picture vision" },
+            { icon: "&#129309;", text: "Values alignment" }
+        ],
+        dimensions: { focus: 60, async: 55, freedom: 60, pace: 65, mission: 95 },
+        traits: [
+            { label: "Ethical AI", color: "var(--rose)", bg: "var(--rose-bg)", border: "var(--rose-border)" },
+            { label: "Social Impact", color: "var(--teal)", bg: "var(--teal-bg)", border: "var(--teal-border)" },
+            { label: "Mission-Led", color: "var(--violet)", bg: "var(--violet-bg)", border: "var(--violet-border)" }
+        ],
+        values: ["ethical-ai", "social-impact"],
+        companies: [
+            { name: "Anthropic", slug: "anthropic", domain: "anthropic.com" },
+            { name: "OpenAI", slug: "openai", domain: "openai.com" },
+            { name: "Cohere", slug: "cohere", domain: "cohere.com" },
+            { name: "Figma", slug: "figma", domain: "figma.com" }
+        ],
+        jobsLink: "/jobs?value=ethical-ai"
+    },
+    sprinter: {
+        name: "The Startup Sprinter",
+        emoji: "&#9889;",
+        tagline: "You move fast and ship faster. Momentum is your oxygen.",
+        color: "#e8590c",
+        colorBg: "linear-gradient(135deg, #e8590c 0%, #c2410c 100%)",
+        description: "You thrive in high-energy, fast-moving environments where you can see the impact of your work immediately. You love wearing multiple hats, making quick decisions, and iterating rapidly. Big company bureaucracy drives you nuts — you want a small, hungry team that ships weekly and celebrates wins together.",
+        strengths: [
+            { icon: "&#9889;", text: "Speed & execution" },
+            { icon: "&#128736;", text: "Wearing many hats" },
+            { icon: "&#128640;", text: "Shipping products" },
+            { icon: "&#128293;", text: "Startup energy" }
+        ],
+        dimensions: { focus: 50, async: 35, freedom: 60, pace: 95, mission: 55 },
+        traits: [
+            { label: "Ship Fast", color: "var(--accent)", bg: "var(--accent-bg)", border: "var(--accent-border)" },
+            { label: "Many Hats", color: "var(--rose)", bg: "var(--rose-bg)", border: "var(--rose-border)" },
+            { label: "Flat Org", color: "var(--violet)", bg: "var(--violet-bg)", border: "var(--violet-border)" }
+        ],
+        values: ["ship-fast", "many-hats", "flat"],
+        companies: [
+            { name: "Cursor", slug: "cursor", domain: "cursor.com" },
+            { name: "Vercel", slug: "vercel", domain: "vercel.com" },
+            { name: "Retool", slug: "retool", domain: "retool.com" },
+            { name: "Ramp", slug: "ramp", domain: "ramp.com" }
+        ],
+        jobsLink: "/jobs?value=ship-fast"
+    },
+    architect: {
+        name: "The Culture Architect",
+        emoji: "&#127963;",
+        tagline: "You build great teams, not just great products. People are the product.",
+        color: "#0284c7",
+        colorBg: "linear-gradient(135deg, #0284c7 0%, #0369a1 100%)",
+        description: "You believe the best companies are built on trust, psychological safety, and genuine care for people. You value diverse perspectives, transparent leadership, and creating an environment where everyone can do their best work. For you, culture isn't a buzzword — it's the foundation everything else is built on.",
+        strengths: [
+            { icon: "&#129309;", text: "Team building" },
+            { icon: "&#127793;", text: "Psychological safety" },
+            { icon: "&#127912;", text: "Diverse perspectives" },
+            { icon: "&#128483;", text: "Transparent communication" }
+        ],
+        dimensions: { focus: 45, async: 45, freedom: 55, pace: 50, mission: 80 },
+        traits: [
+            { label: "Diverse", color: "var(--sky)", bg: "var(--sky-bg)", border: "var(--sky-border)" },
+            { label: "Psych Safety", color: "var(--teal)", bg: "var(--teal-bg)", border: "var(--teal-border)" },
+            { label: "Transparent", color: "var(--lime)", bg: "var(--lime-bg)", border: "var(--lime-border)" }
+        ],
+        values: ["diverse", "psych-safety", "transparent"],
+        companies: [
+            { name: "Airbnb", slug: "airbnb", domain: "airbnb.com" },
+            { name: "Figma", slug: "figma", domain: "figma.com" },
+            { name: "Stripe", slug: "stripe", domain: "stripe.com" },
+            { name: "HubSpot", slug: "hubspot", domain: "hubspot.com" }
+        ],
+        jobsLink: "/jobs?value=diverse"
+    },
+    engineer: {
+        name: "The Growth Engineer",
+        emoji: "&#128300;",
+        tagline: "You're obsessed with mastery. Every day is a chance to level up.",
+        color: "#4d7c0f",
+        colorBg: "linear-gradient(135deg, #4d7c0f 0%, #365314 100%)",
+        description: "You're driven by technical excellence and continuous learning. You want to work at a company that invests in your growth — whether that's conference budgets, mentorship, open source time, or simply working alongside brilliant people. You value engineering culture, code quality, and building things the right way.",
+        strengths: [
+            { icon: "&#128218;", text: "Continuous learning" },
+            { icon: "&#128187;", text: "Technical excellence" },
+            { icon: "&#128268;", text: "Open source mindset" },
+            { icon: "&#127942;", text: "Engineering culture" }
+        ],
+        dimensions: { focus: 75, async: 60, freedom: 65, pace: 60, mission: 65 },
+        traits: [
+            { label: "Learning", color: "var(--lime)", bg: "var(--lime-bg)", border: "var(--lime-border)" },
+            { label: "Open Source", color: "var(--teal)", bg: "var(--teal-bg)", border: "var(--teal-border)" },
+            { label: "Eng-Driven", color: "var(--violet)", bg: "var(--violet-bg)", border: "var(--violet-border)" }
+        ],
+        values: ["learning", "open-source", "eng-driven"],
+        companies: [
+            { name: "Vercel", slug: "vercel", domain: "vercel.com" },
+            { name: "Supabase", slug: "supabase", domain: "supabase.com" },
+            { name: "Databricks", slug: "databricks", domain: "databricks.com" },
+            { name: "Stripe", slug: "stripe", domain: "stripe.com" }
+        ],
+        jobsLink: "/jobs?value=learning"
+    }
+};
+
+// ═══ QUIZ STATE ═══
+let currentQ = 0;
+let scores = {};
+let answers = [];
+
+function startQuiz() {
+    document.getElementById('quizIntro').style.display = 'none';
+    const container = document.getElementById('quizContainer');
+    container.classList.add('active');
+    currentQ = 0;
+    scores = { monk: 0, explorer: 0, hacker: 0, sprinter: 0, architect: 0, engineer: 0 };
+    answers = [];
+    renderQuestion();
+    container.scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
+
+function renderQuestion() {
+    const q = QUESTIONS[currentQ];
+    const area = document.getElementById('questionArea');
+    const pct = ((currentQ) / QUESTIONS.length * 100);
+    document.getElementById('progressFill').style.width = pct + '%';
+    document.getElementById('progressText').textContent = `Question ${currentQ + 1} of ${QUESTIONS.length}`;
+
+    area.innerHTML = `
+        <div class="quiz-question" key="${currentQ}">
+            <div class="quiz-question-number">Q${currentQ + 1}</div>
+            <h2>${q.question}</h2>
+            <div class="quiz-options">
+                ${q.options.map((opt, i) => `
+                    <div class="quiz-option" onclick="selectOption(${i})" role="button" tabindex="0"
+                         onkeydown="if(event.key==='Enter')selectOption(${i})">
+                        <div class="quiz-option-icon">${opt.icon}</div>
+                        <div class="quiz-option-text">
+                            <div class="quiz-option-label">${opt.label}</div>
+                            <div class="quiz-option-desc">${opt.desc}</div>
+                        </div>
+                    </div>
+                `).join('')}
+            </div>
+        </div>
+    `;
+}
+
+function selectOption(idx) {
+    const q = QUESTIONS[currentQ];
+    const opt = q.options[idx];
+    answers.push(idx);
+
+    // Add scores
+    for (const [key, val] of Object.entries(opt.scores)) {
+        scores[key] = (scores[key] || 0) + val;
+    }
+
+    // Visual feedback
+    const options = document.querySelectorAll('.quiz-option');
+    options.forEach((el, i) => {
+        if (i === idx) el.classList.add('selected');
+        el.style.pointerEvents = 'none';
+    });
+
+    // Next question or result
+    setTimeout(() => {
+        currentQ++;
+        if (currentQ < QUESTIONS.length) {
+            renderQuestion();
+        } else {
+            showResult();
+        }
+    }, 400);
+}
+
+function showResult() {
+    document.getElementById('quizContainer').classList.remove('active');
+
+    // Find winner
+    let maxScore = 0, winner = 'monk';
+    for (const [key, val] of Object.entries(scores)) {
+        if (val > maxScore) { maxScore = val; winner = key; }
+    }
+
+    const a = ARCHETYPES[winner];
+    const result = document.getElementById('quizResult');
+
+    // Build dimension bars
+    const dimLabels = { focus: ['Collaborative', 'Deep Focus'], async: ['Sync', 'Async'], freedom: ['Structured', 'Free'], pace: ['Steady', 'Fast'], mission: ['Growth', 'Mission'] };
+    const dimsHTML = Object.entries(a.dimensions).map(([key, val]) => `
+        <div class="result-dim">
+            <div class="result-dim-label">${dimLabels[key][0]}</div>
+            <div class="result-dim-bar"><div class="result-dim-fill" style="width:0%;background:${a.color}" data-width="${val}"></div></div>
+            <div class="result-dim-end">${dimLabels[key][1]}</div>
+        </div>
+    `).join('');
+
+    result.innerHTML = `
+        <!-- SHARE CARD -->
+        <div class="share-card" id="shareCard">
+            <div class="share-card-top" style="background:${a.colorBg};color:#fff">
+                <div class="share-card-avatar" style="background:rgba(255,255,255,0.15)">${a.emoji}</div>
+                <div class="share-card-type">Your culture type</div>
+                <div class="share-card-name">${a.name}</div>
+                <div class="share-card-tagline">${a.tagline}</div>
+            </div>
+            <div class="share-card-bottom">
+                <div class="share-card-traits">
+                    ${a.traits.map(t => `<span class="share-card-trait" style="color:${t.color};background:${t.bg};border-color:${t.border}">${t.label}</span>`).join('')}
+                </div>
+                <div class="share-card-brand">jobsbyculture.com/quiz</div>
+            </div>
+        </div>
+
+        <!-- DESCRIPTION -->
+        <div class="result-section">
+            <h3>About your type</h3>
+            <p>${a.description}</p>
+        </div>
+
+        <!-- STRENGTHS -->
+        <div class="result-section">
+            <h3>Your strengths</h3>
+            <div class="result-strengths">
+                ${a.strengths.map(s => `
+                    <div class="result-strength">
+                        <div class="result-strength-icon">${s.icon}</div>
+                        <div class="result-strength-text">${s.text}</div>
+                    </div>
+                `).join('')}
+            </div>
+        </div>
+
+        <!-- DIMENSIONS -->
+        <div class="result-section">
+            <h3>Your culture profile</h3>
+            <div class="result-dimensions">${dimsHTML}</div>
+        </div>
+
+        <!-- MATCHING COMPANIES -->
+        <div class="result-section">
+            <h3>Companies that match your type</h3>
+            <p>These companies share the culture traits that matter most to you.</p>
+            <div class="result-company-grid">
+                ${a.companies.map(c => `
+                    <a href="/companies/${c.slug}" class="result-company-card">
+                        <img src="https://www.google.com/s2/favicons?domain=${c.domain}&sz=128" alt="${c.name}" width="28" height="28">
+                        <span class="name">${c.name}</span>
+                    </a>
+                `).join('')}
+            </div>
+        </div>
+
+        <!-- SHARE -->
+        <div class="result-section">
+            <h3>Share your result</h3>
+            <div class="result-share">
+                <button class="share-btn primary" onclick="shareTwitter()">Share on X / Twitter</button>
+                <button class="share-btn" onclick="shareLinkedIn()">Share on LinkedIn</button>
+                <button class="share-btn" onclick="copyLink()">Copy Link</button>
+            </div>
+        </div>
+
+        <!-- CTA -->
+        <div class="result-cta">
+            <h3>Find jobs that match your ${a.name.split(' ').pop()} energy</h3>
+            <p>Browse open roles at companies with the culture traits you care about most.</p>
+            <a href="${a.jobsLink}" class="result-cta-btn">Browse Matching Jobs <span>&#8594;</span></a>
+        </div>
+
+        <div style="text-align:center">
+            <button class="retake-link" onclick="retakeQuiz()">&#8634; Retake the quiz</button>
+        </div>
+    `;
+
+    result.classList.add('active');
+    result.scrollIntoView({ behavior: 'smooth', block: 'start' });
+
+    // Animate dimension bars
+    setTimeout(() => {
+        document.querySelectorAll('.result-dim-fill').forEach(bar => {
+            bar.style.width = bar.dataset.width + '%';
+        });
+    }, 200);
+
+    // Update URL for sharing
+    history.replaceState(null, '', '/quiz?result=' + winner);
+}
+
+function retakeQuiz() {
+    document.getElementById('quizResult').classList.remove('active');
+    document.getElementById('quizResult').innerHTML = '';
+    document.getElementById('quizIntro').style.display = '';
+    history.replaceState(null, '', '/quiz');
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+function shareTwitter() {
+    const params = new URLSearchParams(window.location.search);
+    const type = params.get('result');
+    const a = ARCHETYPES[type];
+    if (!a) return;
+    const text = `I'm "${a.name}" \u2014 ${a.tagline}\n\nTake the 90-second Work Culture Quiz to find your type:\njobsbyculture.com/quiz`;
+    window.open('https://twitter.com/intent/tweet?text=' + encodeURIComponent(text), '_blank');
+}
+
+function shareLinkedIn() {
+    window.open('https://www.linkedin.com/sharing/share-offsite/?url=' + encodeURIComponent('https://jobsbyculture.com/quiz'), '_blank');
+}
+
+function copyLink() {
+    navigator.clipboard.writeText(window.location.href).then(() => {
+        showToast('Link copied!');
+    });
+}
+
+function showToast(msg) {
+    const t = document.getElementById('toast');
+    t.textContent = msg;
+    t.classList.add('show');
+    setTimeout(() => t.classList.remove('show'), 2000);
+}
+
+// Check for shared result on load
+(function() {
+    const params = new URLSearchParams(window.location.search);
+    const type = params.get('result');
+    if (type && ARCHETYPES[type]) {
+        // Fake scores to show this result
+        scores = { monk: 0, explorer: 0, hacker: 0, sprinter: 0, architect: 0, engineer: 0 };
+        scores[type] = 99;
+        document.getElementById('quizIntro').style.display = 'none';
+        showResult();
+    }
+})();
+</script>
+</body>
+</html>
