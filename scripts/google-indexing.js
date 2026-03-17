@@ -123,13 +123,16 @@ if (dryRun) {
 
 // ---------------------------------------------------------------------------
 // Check credentials (only needed for actual submissions)
+// Supports: GOOGLE_SERVICE_ACCOUNT_JSON env var (for CI) or file on disk (local dev)
 // ---------------------------------------------------------------------------
-if (!existsSync(CREDENTIALS_PATH)) {
+const envJson = process.env.GOOGLE_SERVICE_ACCOUNT_JSON;
+if (!envJson && !existsSync(CREDENTIALS_PATH)) {
     console.error('Missing service account credentials.\n');
     console.error('Setup steps:');
     console.error('  1. Go to Google Cloud Console → APIs & Services → Enable "Indexing API"');
     console.error('  2. Create a service account → Keys → Add Key → JSON');
     console.error('  3. Save the JSON file as: data/google-service-account.json');
+    console.error('     Or set GOOGLE_SERVICE_ACCOUNT_JSON env var with the JSON contents');
     console.error('  4. In Google Search Console → Settings → Users → add the service');
     console.error('     account email (from the JSON) as "Owner"');
     console.error('  5. Run: npm run google-indexing');
@@ -139,10 +142,15 @@ if (!existsSync(CREDENTIALS_PATH)) {
 // ---------------------------------------------------------------------------
 // Authenticate
 // ---------------------------------------------------------------------------
-const auth = new GoogleAuth({
-    keyFile: CREDENTIALS_PATH,
+const authOptions = {
     scopes: ['https://www.googleapis.com/auth/indexing'],
-});
+};
+if (envJson) {
+    authOptions.credentials = JSON.parse(envJson);
+} else {
+    authOptions.keyFile = CREDENTIALS_PATH;
+}
+const auth = new GoogleAuth(authOptions);
 const client = await auth.getClient();
 
 // ---------------------------------------------------------------------------

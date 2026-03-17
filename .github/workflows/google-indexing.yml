@@ -1,0 +1,121 @@
+name: Google Indexing API
+
+on:
+  schedule:
+    # Daily at 06:00 UTC — submit next batch of unsubmitted URLs
+    - cron: '0 6 * * *'
+
+  push:
+    branches: [main]
+    paths:
+      - '*.html'
+      - 'companies/**'
+      - 'blog/**'
+      - 'compare/**'
+      - 'values/**'
+      - 'roles/**'
+      - 'seniority/**'
+      - 'locations/**'
+      - 'sitemap.xml'
+
+  workflow_dispatch:
+
+concurrency:
+  group: google-indexing
+  cancel-in-progress: false
+
+jobs:
+  submit-urls:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 2  # Need HEAD~1 for push diff
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Install dependencies
+        run: npm ci
+
+      # ── On push: detect changed pages and submit only those URLs ──
+      - name: Detect changed pages
+        if: github.event_name == 'push'
+        id: changed
+        run: |
+          BASE_URL="https://jobsbyculture.com"
+          URLS=""
+
+          # Find added/modified HTML files
+          for file in $(git diff --name-only --diff-filter=AM HEAD~1..HEAD -- '*.html' 'companies/' 'blog/' 'compare/' 'values/' 'roles/' 'seniority/' 'locations/'); do
+            # Skip non-page files
+            case "$file" in
+              node_modules/*|scripts/*|data/*|.github/*) continue ;;
+            esac
+
+            # Convert filename to URL (strip .html for Vercel cleanUrls)
+            path="${file%.html}"
+            if [ "$path" = "index" ]; then
+              path=""
+            fi
+            URLS="${URLS}${BASE_URL}/${path}"$'\n'
+          done
+
+          # Also check sitemap.xml for new <loc> entries
+          if git diff HEAD~1..HEAD -- sitemap.xml | grep -q '^+.*<loc>'; then
+            for url in $(git diff HEAD~1..HEAD -- sitemap.xml | grep '^+.*<loc>' | grep -v '^+++' | sed 's/.*<loc>\(.*\)<\/loc>.*/\1/'); do
+              URLS="${URLS}${url}"$'\n'
+            done
+          fi
+
+          # Deduplicate
+          URLS=$(echo "$URLS" | sort -u | sed '/^$/d')
+          COUNT=$(echo "$URLS" | grep -c . || true)
+
+          echo "count=$COUNT" >> "$GITHUB_OUTPUT"
+
+          if [ "$COUNT" -gt 0 ]; then
+            echo "Found $COUNT changed URLs to submit:"
+            echo "$URLS"
+            # Write URLs as args for the script
+            echo "urls<<EOF" >> "$GITHUB_OUTPUT"
+            echo "$URLS" >> "$GITHUB_OUTPUT"
+            echo "EOF" >> "$GITHUB_OUTPUT"
+          else
+            echo "No page changes detected."
+          fi
+
+      # ── Submit URLs ──
+      - name: Submit to Google Indexing API (push — changed pages only)
+        if: github.event_name == 'push' && steps.changed.outputs.count > 0
+        env:
+          GOOGLE_SERVICE_ACCOUNT_JSON: ${{ secrets.GOOGLE_SERVICE_ACCOUNT_JSON }}
+        run: |
+          # Pass each changed URL as a positional arg
+          ARGS=""
+          while IFS= read -r url; do
+            [ -n "$url" ] && ARGS="$ARGS $url"
+          done <<< "${{ steps.changed.outputs.urls }}"
+          node scripts/google-indexing.js $ARGS
+
+      - name: Submit to Google Indexing API (scheduled — next batch)
+        if: github.event_name == 'schedule' || github.event_name == 'workflow_dispatch'
+        env:
+          GOOGLE_SERVICE_ACCOUNT_JSON: ${{ secrets.GOOGLE_SERVICE_ACCOUNT_JSON }}
+        run: npm run google-indexing
+
+      # ── Commit updated log back to repo ──
+      - name: Commit indexing log
+        if: success()
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/google-indexing-log.json
+          if git diff --cached --quiet; then
+            echo "No log changes to commit."
+          else
+            git pull --rebase origin main
+            git commit -m "[skip ci] Update google-indexing-log.json"
+            git push
+          fi
