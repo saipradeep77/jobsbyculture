@@ -56,9 +56,9 @@ const specificUrls = args.filter(a => a.startsWith('http'));
 // Load sitemap URLs & sort by priority
 // ---------------------------------------------------------------------------
 const sitemap = readFileSync(SITEMAP_PATH, 'utf-8');
-const allUrls = [...sitemap.matchAll(/<loc>([^<]+)<\/loc>/g)]
-    .map(m => m[1])
-    .sort((a, b) => getPriority(a) - getPriority(b));
+const allUrls = [...new Set(
+    [...sitemap.matchAll(/<loc>([^<]+)<\/loc>/g)].map(m => m[1])
+)].sort((a, b) => getPriority(a) - getPriority(b));
 
 console.log(`Found ${allUrls.length} URLs in sitemap.xml\n`);
 
