@@ -1,0 +1,87 @@
+name: Daily Job Refresh
+
+on:
+  schedule:
+    # Every day at 07:00 UTC (before Google Indexing at 06:00 UTC next day)
+    - cron: '0 7 * * *'
+
+  workflow_dispatch:
+
+concurrency:
+  group: daily-refresh
+  cancel-in-progress: false
+
+jobs:
+  refresh-jobs:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Install dependencies
+        run: npm ci
+
+      # ── Fetch jobs from all ATS APIs ──
+      - name: Fetch jobs
+        run: node scripts/fetch-jobs.js
+
+      # ── Update JOBS[] array in jobs.html ──
+      - name: Update jobs.html
+        run: node scripts/update-jobs-html.js
+
+      # ── Rebuild all cluster/SEO pages ──
+      - name: Build cluster pages
+        run: |
+          node scripts/build-cluster-pages.js
+          node scripts/build-location-pages.js
+          node scripts/build-location-role-pages.js
+
+      # ── Update ALL counts site-wide ──
+      # (index.html, compare.html, directory.html, llms.txt, company pages)
+      - name: Update counts
+        run: node scripts/update-counts.js
+
+      # ── Submit to IndexNow (Bing, Yandex, Naver) ──
+      - name: Submit to IndexNow
+        run: node scripts/indexnow.js
+
+      # ── Export social CSV ──
+      - name: Export social
+        run: node scripts/export-social.js
+
+      # ── Commit & push if anything changed ──
+      - name: Commit and push
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          git add -A
+          if git diff --cached --quiet; then
+            echo "No changes to commit."
+            exit 0
+          fi
+
+          JOBS=$(node -e "console.log(JSON.parse(require('fs').readFileSync('data/jobs-fetched.json','utf8')).length)")
+          COMPANIES=$(node -e "
+            const html = require('fs').readFileSync('jobs.html','utf8');
+            const m = html.match(/const COMPANIES = \{[\s\S]*?\n\};/);
+            console.log([...m[0].matchAll(/'([a-z0-9-]+)'\s*:\s*\{/g)].length);
+          ")
+
+          git pull --rebase origin main
+
+          git commit -m "$(cat <<EOF
+          [auto] Daily refresh: ${JOBS} jobs from ${COMPANIES} companies
+
+          - Fetched latest jobs from all ATS APIs
+          - Rebuilt cluster, location & role pages
+          - Updated all counts site-wide
+          - Submitted to IndexNow
+          EOF
+          )"
+
+          git push
