@@ -446,6 +446,11 @@
             .cp-jobs-grid { grid-template-columns: 1fr; }
             .cp-eng-grid { grid-template-columns: 1fr; }
         }
+    
+        .cp-job-highlight { border: 2px solid #e8590c !important; background: rgba(232,89,12,0.03) !important; position: relative; }
+        .cp-job-highlight:hover { border-color: #c2410c !important; }
+        .cp-job-badge { display: inline-block; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: #e8590c; background: rgba(232,89,12,0.08); border: 1px solid rgba(232,89,12,0.2); padding: 3px 10px; border-radius: 100px; margin-bottom: 8px; }
+
     </style>
 <!-- Privacy-friendly analytics by Plausible -->
 <script async src="https://plausible.io/js/pa-qa3pjs5eZbsfBQJMk4hVW.js"></script>
@@ -683,12 +688,14 @@
     <div class="container">
         <span class="s-label">Open Positions</span>
         <h2 class="s-title">Join the <em>Cohere</em> team</h2>
-        <p class="s-desc">Explore featured roles below, or browse all 124 open positions on the full jobs board.</p>
+        <p class="s-desc">Search <span id="jobCount">...</span> open positions.</p>
+
+        <div style="margin-bottom:20px;"><input id="jobSearch" type="text" placeholder="Search by job title, location, or department..." style="width:100%;padding:10px 14px;border-radius:8px;border:1px solid rgba(0,0,0,0.12);font-size:14px;font-family:inherit;outline:none;background:#fff;" onfocus="this.style.borderColor='#e8590c';this.style.boxShadow='0 0 0 3px rgba(232,89,12,0.06)'" onblur="this.style.borderColor='rgba(0,0,0,0.12)';this.style.boxShadow='none'"></div>
 
         <div class="cp-jobs-grid" id="jobsGrid"></div>
 
         <div class="cp-cta-center">
-            <a href="/jobs?company=cohere" class="btn-primary">See all 124 Cohere jobs &rarr;</a>
+            <a href="/jobs?company=cohere" class="btn-primary">Browse all jobs on the board &rarr;</a>
         </div>
     </div>
 </section>
@@ -708,38 +715,98 @@
 </footer>
 
 <script>
-const COMPANY_JOBS = [
-  { title: 'Senior Research Engineer, Model Evaluation', location: 'Toronto', url: 'https://jobs.ashbyhq.com/cohere/cb5d588c-5637-423a-968b-bf637ee2caf9?ref=jobsbyculture.com' },
-  { title: 'Member of Technical Staff, Synthetic Data', location: 'Toronto', url: 'https://jobs.ashbyhq.com/cohere/2df2da3c-fb69-4d4d-b3c9-077b3df2ba3d?ref=jobsbyculture.com' },
-  { title: 'Member of Technical Staff, Pretraining evaluations', location: 'London', url: 'https://jobs.ashbyhq.com/cohere/6f220fba-ebe3-42e5-a8c7-6fb59cc0b1a2?ref=jobsbyculture.com' },
-  { title: 'TPM, AI Delivery for Public Sector & Defence', location: 'Toronto', url: 'https://jobs.ashbyhq.com/cohere/683407cf-f648-4391-84b4-d0c26d9a1327?ref=jobsbyculture.com' },
-  { title: 'Solutions Architect', location: 'Toronto', url: 'https://jobs.ashbyhq.com/cohere/ab11983e-2657-45b4-8f4b-318415e3d0c6?ref=jobsbyculture.com' },
-  { title: 'Audio Inference Engineer, Model Efficiency', location: 'New York', url: 'https://jobs.ashbyhq.com/cohere/e912d84c-8399-422d-8a7d-918422a3e4b1?ref=jobsbyculture.com' },
-  { title: 'Member of Technical Staff, Post-Training', location: 'London', url: 'https://jobs.ashbyhq.com/cohere/554a9380-ab50-4338-88a9-c6b8ab19d92e?ref=jobsbyculture.com' },
-  { title: 'Staff SWE, GPU Infrastructure (HPC)', location: 'Canada', url: 'https://jobs.ashbyhq.com/cohere/ef9b939d-da66-464c-a878-ef45616c0473?ref=jobsbyculture.com' },
-  { title: 'Staff SWE, Inference Infrastructure', location: 'San Francisco', url: 'https://jobs.ashbyhq.com/cohere/41f23dad-9da2-451a-bd1e-a1800437cb64?ref=jobsbyculture.com' },
-  { title: 'Solutions Architect', location: 'San Francisco', url: 'https://jobs.ashbyhq.com/cohere/eb58bff6-645c-4434-9893-b34586d69be7?ref=jobsbyculture.com' },
-];
+var COMPANY_SLUG = 'cohere';
+var ALL_JOBS = [];
+var HIGHLIGHT_JOB_ID = new URLSearchParams(window.location.search).get('job') || '';
 
-function renderJobs() {
+fetch('/data/company-jobs.json')
+  .then(function(r) { return r.json(); })
+  .then(function(data) {
+    ALL_JOBS = data[COMPANY_SLUG] || [];
+    renderJobs('');
+    if (HIGHLIGHT_JOB_ID) {
+        var grid = document.getElementById('jobsGrid');
+        if (grid) grid.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+  })
+  .catch(function() {
+    document.getElementById('jobsGrid').innerHTML = '<p style="color:#9ca3af;font-size:14px;">Unable to load jobs. <a href="/jobs?company=' + COMPANY_SLUG + '" style="color:#e8590c;">Browse all jobs \u2192</a></p>';
+  });
+
+function escHtml(s) {
+    return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+}
+
+function renderJobs(query) {
     var grid = document.getElementById('jobsGrid');
+    var q = (query || '').toLowerCase().trim();
+
+    var filtered = ALL_JOBS;
+    if (q) {
+        filtered = ALL_JOBS.filter(function(job) {
+            return job.title.toLowerCase().indexOf(q) !== -1 ||
+                   job.location.toLowerCase().indexOf(q) !== -1 ||
+                   (job.department && job.department.toLowerCase().indexOf(q) !== -1);
+        });
+    }
+
+    var highlighted = null;
+    var rest = [];
+    for (var i = 0; i < filtered.length; i++) {
+        if (HIGHLIGHT_JOB_ID && filtered[i].id === HIGHLIGHT_JOB_ID) {
+            highlighted = filtered[i];
+        } else {
+            rest.push(filtered[i]);
+        }
+    }
+
     var html = '';
-    COMPANY_JOBS.forEach(function(job) {
-        html += '<a class="cp-job-card" href="' + job.url + '" target="_blank" rel="noopener">' +
+    var jobCount = document.getElementById('jobCount');
+    if (jobCount) jobCount.textContent = filtered.length;
+
+    if (highlighted) {
+        html += '<a class="cp-job-card cp-job-highlight" href="' + highlighted.url + '" target="_blank" rel="noopener">' +
             '<div>' +
-                '<div class="cp-job-title">' + job.title + '</div>' +
+                '<div class="cp-job-badge">Shared Role</div>' +
+                '<div class="cp-job-title">' + escHtml(highlighted.title) + '</div>' +
                 '<div class="cp-job-location">' +
                     '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>' +
-                    job.location +
+                    escHtml(highlighted.location) +
                 '</div>' +
             '</div>' +
             '<div class="cp-job-apply">Apply \u2192</div>' +
         '</a>';
-    });
+    }
+
+    for (var j = 0; j < rest.length; j++) {
+        html += '<a class="cp-job-card" href="' + rest[j].url + '" target="_blank" rel="noopener">' +
+            '<div>' +
+                '<div class="cp-job-title">' + escHtml(rest[j].title) + '</div>' +
+                '<div class="cp-job-location">' +
+                    '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>' +
+                    escHtml(rest[j].location) +
+                '</div>' +
+            '</div>' +
+            '<div class="cp-job-apply">Apply \u2192</div>' +
+        '</a>';
+    }
+
+    if (filtered.length === 0) {
+        html = '<p style="color:#9ca3af;font-size:14px;text-align:center;padding:20px 0;">No jobs match your search.</p>';
+    }
+
     grid.innerHTML = html;
 }
 
-renderJobs();
+var searchInput = document.getElementById('jobSearch');
+if (searchInput) {
+    var debounceTimer;
+    searchInput.addEventListener('input', function() {
+        clearTimeout(debounceTimer);
+        var val = searchInput.value;
+        debounceTimer = setTimeout(function() { renderJobs(val); }, 200);
+    });
+}
 </script>
 
 </body>

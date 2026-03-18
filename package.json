@@ -15,7 +15,9 @@
     "detect-ats": "node scripts/detect-ats.js",
     "export-social": "node scripts/export-social.js",
     "update-counts": "node scripts/update-counts.js",
-    "refresh": "node scripts/fetch-jobs.js && node scripts/update-jobs-html.js && node scripts/build-cluster-pages.js && node scripts/build-location-pages.js && node scripts/build-location-role-pages.js && node scripts/update-counts.js && node scripts/indexnow.js && node scripts/export-social.js"
+    "build:company-jobs": "node scripts/build-company-jobs.js",
+    "build:rss": "node scripts/build-rss.js",
+    "refresh": "node scripts/fetch-jobs.js && node scripts/update-jobs-html.js && node scripts/build-cluster-pages.js && node scripts/build-location-pages.js && node scripts/build-location-role-pages.js && node scripts/update-counts.js && node scripts/build-company-jobs.js && node scripts/build-rss.js && node scripts/indexnow.js && node scripts/export-social.js"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.39.0",

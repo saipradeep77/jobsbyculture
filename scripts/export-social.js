@@ -208,7 +208,31 @@ if (existsSync(csvPath)) {
 const freshUrls = new Set(knownJobs.map(j => j.url));
 
 // 5. Build rows for active jobs
-const HEADER = 'id,title,company,company_slug,location,type,posted,role_category,seniority,culture_values,glassdoor_rating,apply_url,profile_url,jobs_filter_url,post_count,last_posted,status,og_image';
+// ── Extract unique job ID from ATS URL ──
+function extractJobId(url) {
+    // Greenhouse: gh_jid=8441867002 or /jobs/8441867002
+    let m = url.match(/gh_jid=(\d+)/);
+    if (m) return m[1];
+    m = url.match(/\/jobs\/(\d+)/);
+    if (m) return m[1];
+    // Ashby: UUID in path like /openai/8fb1615c-34bf-47c4-a1d1-b7b2f836bbd3
+    m = url.match(/\/([0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12})/i);
+    if (m) return m[1];
+    // Lever: UUID-like at end of path
+    m = url.match(/lever\.co\/[^/]+\/([0-9a-f-]{36})/i);
+    if (m) return m[1];
+    // Workable: /j/ followed by ID
+    m = url.match(/\/j\/([A-Za-z0-9]+)/);
+    if (m) return m[1];
+    // Fallback: hash the URL for uniqueness
+    let hash = 0;
+    for (let i = 0; i < url.length; i++) {
+        hash = ((hash << 5) - hash + url.charCodeAt(i)) | 0;
+    }
+    return 'h' + Math.abs(hash).toString(36);
+}
+
+const HEADER = 'id,title,company,company_slug,location,type,posted,role_category,seniority,culture_values,glassdoor_rating,apply_url,profile_url,jobs_filter_url,post_count,last_posted,status,og_image,job_id,highlight_url';
 
 const rows = [];
 let newCount = 0;
@@ -231,6 +255,7 @@ for (const j of knownJobs) {
         newCount++;
     }
 
+    const jobId = extractJobId(j.url);
     rows.push([
         j.id,
         escapeCSV(j.title),
@@ -249,7 +274,9 @@ for (const j of knownJobs) {
         escapeCSV(postCount),
         escapeCSV(lastPosted),
         status,
-        `https://jobsbyculture.com/api/og?type=company&slug=${j.company}`
+        `https://jobsbyculture.com/api/og?type=company&slug=${j.company}`,
+        jobId,
+        `https://jobsbyculture.com/companies/${j.company}?job=${jobId}`
     ].join(','));
 }
 
@@ -280,6 +307,7 @@ if (prevStatuses.size > 0) {
             const lastPostedIdx = headerFields.indexOf('last_posted');
 
             const companySlug = fields[headerFields.indexOf('company_slug')];
+            const expJobId = extractJobId(url);
             rows.push([
                 fields[headerFields.indexOf('id')],
                 escapeCSV(fields[headerFields.indexOf('title')]),
@@ -298,7 +326,9 @@ if (prevStatuses.size > 0) {
                 escapeCSV(postCountIdx >= 0 ? fields[postCountIdx] : ''),
                 escapeCSV(lastPostedIdx >= 0 ? fields[lastPostedIdx] : ''),
                 'expired',
-                `https://jobsbyculture.com/api/og?type=company&slug=${companySlug}`
+                `https://jobsbyculture.com/api/og?type=company&slug=${companySlug}`,
+                expJobId,
+                `https://jobsbyculture.com/companies/${companySlug}?job=${expJobId}`
             ].join(','));
         }
     }

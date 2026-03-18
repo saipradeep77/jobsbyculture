@@ -445,6 +445,11 @@
             .cp-jobs-grid { grid-template-columns: 1fr; }
             .cp-eng-grid { grid-template-columns: 1fr; }
         }
+    
+        .cp-job-highlight { border: 2px solid #e8590c !important; background: rgba(232,89,12,0.03) !important; position: relative; }
+        .cp-job-highlight:hover { border-color: #c2410c !important; }
+        .cp-job-badge { display: inline-block; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: #e8590c; background: rgba(232,89,12,0.08); border: 1px solid rgba(232,89,12,0.2); padding: 3px 10px; border-radius: 100px; margin-bottom: 8px; }
+
     </style>
 <!-- Privacy-friendly analytics by Plausible -->
 <script async src="https://plausible.io/js/pa-qa3pjs5eZbsfBQJMk4hVW.js"></script>
@@ -692,7 +697,7 @@
         <div class="cp-jobs-grid" id="jobsGrid"></div>
 
         <div class="cp-cta-center">
-            <a href="/jobs?company=runway" class="btn-primary">See all 35 Runway jobs &rarr;</a>
+            <a href="/jobs?company=runway" class="btn-primary">Browse all jobs on the board &rarr;</a>
         </div>
     </div>
 </section>
@@ -712,38 +717,98 @@
 </footer>
 
 <script>
-const COMPANY_JOBS = [
-    { title: 'AI Engagement Manager', location: 'New York | Remote | San Francisco', url: 'https://job-boards.greenhouse.io/runwayml/jobs/4578364005?ref=jobsbyculture.com' },
-    { title: 'API Deployment Manager', location: 'New York | San Francisco', url: 'https://job-boards.greenhouse.io/runwayml/jobs/4646488005?ref=jobsbyculture.com' },
-    { title: 'Applied Research Lead, Generative Audio', location: 'Remote', url: 'https://job-boards.greenhouse.io/runwayml/jobs/4226014005?ref=jobsbyculture.com' },
-    { title: 'Applied Research Lead, Language', location: 'Remote', url: 'https://job-boards.greenhouse.io/runwayml/jobs/4575658005?ref=jobsbyculture.com' },
-    { title: 'Applied Research Lead, Model Scaling', location: 'Remote', url: 'https://job-boards.greenhouse.io/runwayml/jobs/4575659005?ref=jobsbyculture.com' },
-    { title: 'Applied Research Lead, Reinforcement Learning', location: 'Remote', url: 'https://job-boards.greenhouse.io/runwayml/jobs/4575662005?ref=jobsbyculture.com' },
-    { title: 'Art Director', location: 'Remote', url: 'https://job-boards.greenhouse.io/runwayml/jobs/4648129005?ref=jobsbyculture.com' },
-    { title: 'Creative Support Specialist (contract)', location: 'Remote', url: 'https://job-boards.greenhouse.io/runwayml/jobs/4553149005?ref=jobsbyculture.com' },
-    { title: 'Director, Creative Tools', location: 'Remote', url: 'https://job-boards.greenhouse.io/runwayml/jobs/4653419005?ref=jobsbyculture.com' },
-    { title: 'Director of Growth Marketing', location: 'Remote', url: 'https://job-boards.greenhouse.io/runwayml/jobs/4648152005?ref=jobsbyculture.com' }
-];
+var COMPANY_SLUG = 'runway';
+var ALL_JOBS = [];
+var HIGHLIGHT_JOB_ID = new URLSearchParams(window.location.search).get('job') || '';
 
-function renderJobs() {
+fetch('/data/company-jobs.json')
+  .then(function(r) { return r.json(); })
+  .then(function(data) {
+    ALL_JOBS = data[COMPANY_SLUG] || [];
+    renderJobs('');
+    if (HIGHLIGHT_JOB_ID) {
+        var grid = document.getElementById('jobsGrid');
+        if (grid) grid.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+  })
+  .catch(function() {
+    document.getElementById('jobsGrid').innerHTML = '<p style="color:#9ca3af;font-size:14px;">Unable to load jobs. <a href="/jobs?company=' + COMPANY_SLUG + '" style="color:#e8590c;">Browse all jobs \u2192</a></p>';
+  });
+
+function escHtml(s) {
+    return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+}
+
+function renderJobs(query) {
     var grid = document.getElementById('jobsGrid');
+    var q = (query || '').toLowerCase().trim();
+
+    var filtered = ALL_JOBS;
+    if (q) {
+        filtered = ALL_JOBS.filter(function(job) {
+            return job.title.toLowerCase().indexOf(q) !== -1 ||
+                   job.location.toLowerCase().indexOf(q) !== -1 ||
+                   (job.department && job.department.toLowerCase().indexOf(q) !== -1);
+        });
+    }
+
+    var highlighted = null;
+    var rest = [];
+    for (var i = 0; i < filtered.length; i++) {
+        if (HIGHLIGHT_JOB_ID && filtered[i].id === HIGHLIGHT_JOB_ID) {
+            highlighted = filtered[i];
+        } else {
+            rest.push(filtered[i]);
+        }
+    }
+
     var html = '';
-    COMPANY_JOBS.forEach(function(job) {
-        html += '<a class="cp-job-card" href="' + job.url + '" target="_blank" rel="noopener">' +
+    var jobCount = document.getElementById('jobCount');
+    if (jobCount) jobCount.textContent = filtered.length;
+
+    if (highlighted) {
+        html += '<a class="cp-job-card cp-job-highlight" href="' + highlighted.url + '" target="_blank" rel="noopener">' +
             '<div>' +
-                '<div class="cp-job-title">' + job.title + '</div>' +
+                '<div class="cp-job-badge">Shared Role</div>' +
+                '<div class="cp-job-title">' + escHtml(highlighted.title) + '</div>' +
                 '<div class="cp-job-location">' +
                     '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>' +
-                    job.location +
+                    escHtml(highlighted.location) +
                 '</div>' +
             '</div>' +
             '<div class="cp-job-apply">Apply \u2192</div>' +
         '</a>';
-    });
+    }
+
+    for (var j = 0; j < rest.length; j++) {
+        html += '<a class="cp-job-card" href="' + rest[j].url + '" target="_blank" rel="noopener">' +
+            '<div>' +
+                '<div class="cp-job-title">' + escHtml(rest[j].title) + '</div>' +
+                '<div class="cp-job-location">' +
+                    '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>' +
+                    escHtml(rest[j].location) +
+                '</div>' +
+            '</div>' +
+            '<div class="cp-job-apply">Apply \u2192</div>' +
+        '</a>';
+    }
+
+    if (filtered.length === 0) {
+        html = '<p style="color:#9ca3af;font-size:14px;text-align:center;padding:20px 0;">No jobs match your search.</p>';
+    }
+
     grid.innerHTML = html;
 }
 
-renderJobs();
+var searchInput = document.getElementById('jobSearch');
+if (searchInput) {
+    var debounceTimer;
+    searchInput.addEventListener('input', function() {
+        clearTimeout(debounceTimer);
+        var val = searchInput.value;
+        debounceTimer = setTimeout(function() { renderJobs(val); }, 200);
+    });
+}
 </script>
 
 </body>
