@@ -447,6 +447,28 @@ function renderCompareTool() {
   );
 }
 
+function renderBlog(title, description) {
+  const displayTitle = title
+    ? title.replace(/\s*\|\s*JobsByCulture$/, '').replace(/&amp;/g, '&')
+    : 'The Culture Report';
+  const desc = description
+    ? description.replace(/&amp;/g, '&').slice(0, 140) + (description.length > 140 ? '...' : '')
+    : 'Data-driven insights on AI company culture';
+  return wrapper(
+    brand('The Culture Report'),
+    h('div', { style: { display: 'flex', flexDirection: 'column', flex: 1, justifyContent: 'center' } },
+      h('div', { style: {
+        fontSize: displayTitle.length > 60 ? 36 : 44, fontWeight: 700, color: TEXT,
+        lineHeight: 1.18, marginBottom: 20, maxWidth: 900,
+      }}, displayTitle),
+      h('div', { style: {
+        fontSize: 19, color: TEXT_SEC, lineHeight: 1.55, fontWeight: 400, maxWidth: 800,
+      }}, desc)
+    ),
+    footer('jobsbyculture.com/blog')
+  );
+}
+
 // --- Handler ---
 export default async function handler(request) {
   const [boldFont, regularFont] = await Promise.all([interBoldData, interRegularData]);
@@ -468,6 +490,7 @@ export default async function handler(request) {
     case 'seniority': element = renderSeniority(slug, role); break;
     case 'directory': element = renderDirectory(); break;
     case 'compare-tool': element = renderCompareTool(); break;
+    case 'blog': element = renderBlog(searchParams.get('title') || '', searchParams.get('desc') || ''); break;
     default: element = renderHome();
   }
 
