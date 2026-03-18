@@ -16,6 +16,10 @@ function escXml(s) {
   return s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
 }
 
+function decodeHtmlEntities(s) {
+  return s.replace(/&amp;/g, '&').replace(/&lt;/g, '<').replace(/&gt;/g, '>').replace(/&quot;/g, '"').replace(/&#39;/g, "'").replace(/&mdash;/g, '—').replace(/&ndash;/g, '–');
+}
+
 function toRfc822(d) {
   return new Date(d).toUTCString();
 }
@@ -27,26 +31,31 @@ const posts = files.map(file => {
   const titleMatch = html.match(/<title>([^<]+)<\/title>/);
   const descMatch = html.match(/<meta\s+name="description"\s+content="([^"]+)"/);
 
-  const rawTitle = titleMatch ? titleMatch[1] : file.replace('.html', '');
+  const rawTitle = titleMatch ? decodeHtmlEntities(titleMatch[1]) : file.replace('.html', '');
   const title = rawTitle.replace(/\s*\|\s*JobsByCulture$/, '');
-  const description = descMatch ? descMatch[1] : '';
+  const description = descMatch ? decodeHtmlEntities(descMatch[1]) : '';
   const slug = file.replace('.html', '');
   const link = `${SITE}/blog/${slug}`;
   const pubDate = stat.mtime;
 
-  return { title, description, link, pubDate, slug };
+  // Build OG image URL (same as what's in the HTML og:image tag)
+  const ogImage = `${SITE}/api/og?type=blog&title=${encodeURIComponent(title)}&desc=${encodeURIComponent(description.slice(0, 140))}`;
+
+  return { title, description, link, pubDate, slug, ogImage };
 }).sort((a, b) => b.pubDate - a.pubDate);
 
 const items = posts.map(p => `    <item>
       <title>${escXml(p.title)}</title>
       <link>${p.link}</link>
       <description>${escXml(p.description)}</description>
+      <enclosure url="${escXml(p.ogImage)}" type="image/png" length="0"/>
+      <media:content url="${escXml(p.ogImage)}" type="image/png" medium="image" width="1200" height="630"/>
       <pubDate>${toRfc822(p.pubDate)}</pubDate>
       <guid isPermaLink="true">${p.link}</guid>
     </item>`).join('\n');
 
 const rss = `<?xml version="1.0" encoding="UTF-8"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/">
   <channel>
     <title>JobsByCulture — The Culture Report</title>
     <link>${SITE}/blog</link>

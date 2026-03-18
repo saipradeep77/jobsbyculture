@@ -1,157 +1,199 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/">
   <channel>
     <title>JobsByCulture — The Culture Report</title>
     <link>https://jobsbyculture.com/blog</link>
     <description>Data-driven insights on AI company culture, work-life balance, and what it's actually like to work at top tech companies.</description>
     <language>en-us</language>
-    <lastBuildDate>Wed, 18 Mar 2026 06:53:15 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 18 Mar 2026 07:28:03 GMT</lastBuildDate>
     <atom:link href="https://jobsbyculture.com/feed.xml" rel="self" type="application/rss+xml"/>
     <item>
       <title>Working at Databricks in 2026: Culture, Compensation &amp; What Employees Say</title>
       <link>https://jobsbyculture.com/blog/working-at-databricks-2026</link>
       <description>What's it really like working at Databricks in 2026? We break down the 4.1 Glassdoor rating, $280k-$450k engineer comp, 791 open jobs, and real employee reviews.</description>
-      <pubDate>Wed, 18 Mar 2026 06:38:12 GMT</pubDate>
+      <enclosure url="https://jobsbyculture.com/api/og?type=blog&amp;title=Working%20at%20Databricks%20in%202026%3A%20Culture%2C%20Compensation%20%26%20What%20Employees%20Say&amp;desc=What's%20it%20really%20like%20working%20at%20Databricks%20in%202026%3F%20We%20break%20down%20the%204.1%20Glassdoor%20rating%2C%20%24280k-%24450k%20engineer%20comp%2C%20791%20open%20jobs%2C%20and%20r" type="image/png" length="0"/>
+      <media:content url="https://jobsbyculture.com/api/og?type=blog&amp;title=Working%20at%20Databricks%20in%202026%3A%20Culture%2C%20Compensation%20%26%20What%20Employees%20Say&amp;desc=What's%20it%20really%20like%20working%20at%20Databricks%20in%202026%3F%20We%20break%20down%20the%204.1%20Glassdoor%20rating%2C%20%24280k-%24450k%20engineer%20comp%2C%20791%20open%20jobs%2C%20and%20r" type="image/png" medium="image" width="1200" height="630"/>
+      <pubDate>Wed, 18 Mar 2026 07:20:28 GMT</pubDate>
       <guid isPermaLink="true">https://jobsbyculture.com/blog/working-at-databricks-2026</guid>
     </item>
     <item>
-      <title>Working at Stripe in 2026: Culture, Compensation &amp;amp; What Employees Say</title>
+      <title>Working at Stripe in 2026: Culture, Compensation &amp; What Employees Say</title>
       <link>https://jobsbyculture.com/blog/working-at-stripe-2026</link>
       <description>Inside Stripe's elite engineering culture in 2026 — 4.0 Glassdoor rating, writing-first communication, top-tier comp, and what 8,000 employees actually say about working there.</description>
-      <pubDate>Wed, 18 Mar 2026 06:38:11 GMT</pubDate>
+      <enclosure url="https://jobsbyculture.com/api/og?type=blog&amp;title=Working%20at%20Stripe%20in%202026%3A%20Culture%2C%20Compensation%20%26%20What%20Employees%20Say&amp;desc=Inside%20Stripe's%20elite%20engineering%20culture%20in%202026%20%E2%80%94%204.0%20Glassdoor%20rating%2C%20writing-first%20communication%2C%20top-tier%20comp%2C%20and%20what%208%2C000%20employe" type="image/png" length="0"/>
+      <media:content url="https://jobsbyculture.com/api/og?type=blog&amp;title=Working%20at%20Stripe%20in%202026%3A%20Culture%2C%20Compensation%20%26%20What%20Employees%20Say&amp;desc=Inside%20Stripe's%20elite%20engineering%20culture%20in%202026%20%E2%80%94%204.0%20Glassdoor%20rating%2C%20writing-first%20communication%2C%20top-tier%20comp%2C%20and%20what%208%2C000%20employe" type="image/png" medium="image" width="1200" height="630"/>
+      <pubDate>Wed, 18 Mar 2026 07:20:24 GMT</pubDate>
       <guid isPermaLink="true">https://jobsbyculture.com/blog/working-at-stripe-2026</guid>
     </item>
     <item>
       <title>Best AI &amp; Tech Companies for Engineers in 2026</title>
       <link>https://jobsbyculture.com/blog/best-ai-companies-for-engineers-2026</link>
       <description>We ranked 35 AI &amp; tech companies by what engineers care about most. See who leads in technical culture, compensation, autonomy, and open source — plus 1,644 live engineering jobs.</description>
-      <pubDate>Tue, 17 Mar 2026 09:44:54 GMT</pubDate>
+      <enclosure url="https://jobsbyculture.com/api/og?type=blog&amp;title=Best%20AI%20%26%20Tech%20Companies%20for%20Engineers%20in%202026&amp;desc=We%20ranked%2035%20AI%20%26%20tech%20companies%20by%20what%20engineers%20care%20about%20most.%20See%20who%20leads%20in%20technical%20culture%2C%20compensation%2C%20autonomy%2C%20and%20open%20sou" type="image/png" length="0"/>
+      <media:content url="https://jobsbyculture.com/api/og?type=blog&amp;title=Best%20AI%20%26%20Tech%20Companies%20for%20Engineers%20in%202026&amp;desc=We%20ranked%2035%20AI%20%26%20tech%20companies%20by%20what%20engineers%20care%20about%20most.%20See%20who%20leads%20in%20technical%20culture%2C%20compensation%2C%20autonomy%2C%20and%20open%20sou" type="image/png" medium="image" width="1200" height="630"/>
+      <pubDate>Wed, 18 Mar 2026 07:20:17 GMT</pubDate>
       <guid isPermaLink="true">https://jobsbyculture.com/blog/best-ai-companies-for-engineers-2026</guid>
     </item>
     <item>
       <title>Working at Airbnb in 2026: Culture, Compensation &amp; What Employees Say</title>
       <link>https://jobsbyculture.com/blog/working-at-airbnb-2026</link>
       <description>What's it really like working at Airbnb in 2026? We break down the 4.1 Glassdoor rating, $180k-$350k engineer comp, Live and Work Anywhere policy, and real employee reviews.</description>
-      <pubDate>Tue, 17 Mar 2026 09:42:22 GMT</pubDate>
+      <enclosure url="https://jobsbyculture.com/api/og?type=blog&amp;title=Working%20at%20Airbnb%20in%202026%3A%20Culture%2C%20Compensation%20%26%20What%20Employees%20Say&amp;desc=What's%20it%20really%20like%20working%20at%20Airbnb%20in%202026%3F%20We%20break%20down%20the%204.1%20Glassdoor%20rating%2C%20%24180k-%24350k%20engineer%20comp%2C%20Live%20and%20Work%20Anywhere%20p" type="image/png" length="0"/>
+      <media:content url="https://jobsbyculture.com/api/og?type=blog&amp;title=Working%20at%20Airbnb%20in%202026%3A%20Culture%2C%20Compensation%20%26%20What%20Employees%20Say&amp;desc=What's%20it%20really%20like%20working%20at%20Airbnb%20in%202026%3F%20We%20break%20down%20the%204.1%20Glassdoor%20rating%2C%20%24180k-%24350k%20engineer%20comp%2C%20Live%20and%20Work%20Anywhere%20p" type="image/png" medium="image" width="1200" height="630"/>
+      <pubDate>Wed, 18 Mar 2026 07:20:12 GMT</pubDate>
       <guid isPermaLink="true">https://jobsbyculture.com/blog/working-at-airbnb-2026</guid>
     </item>
     <item>
       <title>Working at Cursor in 2026: Culture, Compensation &amp; What Employees Say</title>
       <link>https://jobsbyculture.com/blog/working-at-cursor-2026</link>
       <description>What's it really like working at Cursor (Anysphere) in 2026? We break down the 4.0 Glassdoor rating, $200k-$400k engineer comp, ship-fast culture, and real employee reviews.</description>
-      <pubDate>Tue, 17 Mar 2026 09:42:18 GMT</pubDate>
+      <enclosure url="https://jobsbyculture.com/api/og?type=blog&amp;title=Working%20at%20Cursor%20in%202026%3A%20Culture%2C%20Compensation%20%26%20What%20Employees%20Say&amp;desc=What's%20it%20really%20like%20working%20at%20Cursor%20(Anysphere)%20in%202026%3F%20We%20break%20down%20the%204.0%20Glassdoor%20rating%2C%20%24200k-%24400k%20engineer%20comp%2C%20ship-fast%20cu" type="image/png" length="0"/>
+      <media:content url="https://jobsbyculture.com/api/og?type=blog&amp;title=Working%20at%20Cursor%20in%202026%3A%20Culture%2C%20Compensation%20%26%20What%20Employees%20Say&amp;desc=What's%20it%20really%20like%20working%20at%20Cursor%20(Anysphere)%20in%202026%3F%20We%20break%20down%20the%204.0%20Glassdoor%20rating%2C%20%24200k-%24400k%20engineer%20comp%2C%20ship-fast%20cu" type="image/png" medium="image" width="1200" height="630"/>
+      <pubDate>Wed, 18 Mar 2026 07:20:06 GMT</pubDate>
       <guid isPermaLink="true">https://jobsbyculture.com/blog/working-at-cursor-2026</guid>
     </item>
     <item>
-      <title>Working at CoreWeave in 2026: Culture, Compensation &amp;amp; What Employees Say</title>
+      <title>Working at CoreWeave in 2026: Culture, Compensation &amp; What Employees Say</title>
       <link>https://jobsbyculture.com/blog/working-at-coreweave-2026</link>
       <description>Deep-dive into working at CoreWeave in 2026. Glassdoor 3.6/5, WLB 3.2/5, NVIDIA-backed GPU cloud, ~1,800 employees. Real employee reviews on culture, compensation, and engineering.</description>
-      <pubDate>Tue, 17 Mar 2026 05:37:07 GMT</pubDate>
+      <enclosure url="https://jobsbyculture.com/api/og?type=blog&amp;title=Working%20at%20CoreWeave%20in%202026%3A%20Culture%2C%20Compensation%20%26%20What%20Employees%20Say&amp;desc=Deep-dive%20into%20working%20at%20CoreWeave%20in%202026.%20Glassdoor%203.6%2F5%2C%20WLB%203.2%2F5%2C%20NVIDIA-backed%20GPU%20cloud%2C%20~1%2C800%20employees.%20Real%20employee%20reviews%20on" type="image/png" length="0"/>
+      <media:content url="https://jobsbyculture.com/api/og?type=blog&amp;title=Working%20at%20CoreWeave%20in%202026%3A%20Culture%2C%20Compensation%20%26%20What%20Employees%20Say&amp;desc=Deep-dive%20into%20working%20at%20CoreWeave%20in%202026.%20Glassdoor%203.6%2F5%2C%20WLB%203.2%2F5%2C%20NVIDIA-backed%20GPU%20cloud%2C%20~1%2C800%20employees.%20Real%20employee%20reviews%20on" type="image/png" medium="image" width="1200" height="630"/>
+      <pubDate>Wed, 18 Mar 2026 07:20:01 GMT</pubDate>
       <guid isPermaLink="true">https://jobsbyculture.com/blog/working-at-coreweave-2026</guid>
     </item>
     <item>
       <title>Working at Anthropic in 2026: Culture, Compensation &amp; What Employees Say</title>
       <link>https://jobsbyculture.com/blog/working-at-anthropic-2026</link>
       <description>What's it really like working at Anthropic in 2026? We break down the 4.4 Glassdoor rating, $300k-$490k engineer comp, AI safety culture, and real employee reviews.</description>
-      <pubDate>Tue, 17 Mar 2026 05:36:42 GMT</pubDate>
+      <enclosure url="https://jobsbyculture.com/api/og?type=blog&amp;title=Working%20at%20Anthropic%20in%202026%3A%20Culture%2C%20Compensation%20%26%20What%20Employees%20Say&amp;desc=What's%20it%20really%20like%20working%20at%20Anthropic%20in%202026%3F%20We%20break%20down%20the%204.4%20Glassdoor%20rating%2C%20%24300k-%24490k%20engineer%20comp%2C%20AI%20safety%20culture%2C%20an" type="image/png" length="0"/>
+      <media:content url="https://jobsbyculture.com/api/og?type=blog&amp;title=Working%20at%20Anthropic%20in%202026%3A%20Culture%2C%20Compensation%20%26%20What%20Employees%20Say&amp;desc=What's%20it%20really%20like%20working%20at%20Anthropic%20in%202026%3F%20We%20break%20down%20the%204.4%20Glassdoor%20rating%2C%20%24300k-%24490k%20engineer%20comp%2C%20AI%20safety%20culture%2C%20an" type="image/png" medium="image" width="1200" height="630"/>
+      <pubDate>Wed, 18 Mar 2026 07:19:54 GMT</pubDate>
       <guid isPermaLink="true">https://jobsbyculture.com/blog/working-at-anthropic-2026</guid>
     </item>
     <item>
       <title>Working at OpenAI in 2026: Culture, Compensation &amp; What Employees Say</title>
       <link>https://jobsbyculture.com/blog/working-at-openai-2026</link>
       <description>What's it really like working at OpenAI in 2026? We break down the 4.5 Glassdoor rating, $350k-$550k engineer comp, mission-driven culture, and real employee reviews.</description>
-      <pubDate>Tue, 17 Mar 2026 05:36:41 GMT</pubDate>
+      <enclosure url="https://jobsbyculture.com/api/og?type=blog&amp;title=Working%20at%20OpenAI%20in%202026%3A%20Culture%2C%20Compensation%20%26%20What%20Employees%20Say&amp;desc=What's%20it%20really%20like%20working%20at%20OpenAI%20in%202026%3F%20We%20break%20down%20the%204.5%20Glassdoor%20rating%2C%20%24350k-%24550k%20engineer%20comp%2C%20mission-driven%20culture%2C%20" type="image/png" length="0"/>
+      <media:content url="https://jobsbyculture.com/api/og?type=blog&amp;title=Working%20at%20OpenAI%20in%202026%3A%20Culture%2C%20Compensation%20%26%20What%20Employees%20Say&amp;desc=What's%20it%20really%20like%20working%20at%20OpenAI%20in%202026%3F%20We%20break%20down%20the%204.5%20Glassdoor%20rating%2C%20%24350k-%24550k%20engineer%20comp%2C%20mission-driven%20culture%2C%20" type="image/png" medium="image" width="1200" height="630"/>
+      <pubDate>Wed, 18 Mar 2026 07:19:46 GMT</pubDate>
       <guid isPermaLink="true">https://jobsbyculture.com/blog/working-at-openai-2026</guid>
     </item>
     <item>
       <title>Best AI Companies for Work-Life Balance in 2026</title>
       <link>https://jobsbyculture.com/blog/best-ai-companies-work-life-balance-2026</link>
       <description>We ranked all 35 AI &amp; tech companies by work-life balance score using Glassdoor data. See who leads (Vast AI at 4.5) and who trails (Scale AI at 2.7).</description>
-      <pubDate>Tue, 17 Mar 2026 05:35:32 GMT</pubDate>
+      <enclosure url="https://jobsbyculture.com/api/og?type=blog&amp;title=Best%20AI%20Companies%20for%20Work-Life%20Balance%20in%202026&amp;desc=We%20ranked%20all%2035%20AI%20%26%20tech%20companies%20by%20work-life%20balance%20score%20using%20Glassdoor%20data.%20See%20who%20leads%20(Vast%20AI%20at%204.5)%20and%20who%20trails%20(Scale%20A" type="image/png" length="0"/>
+      <media:content url="https://jobsbyculture.com/api/og?type=blog&amp;title=Best%20AI%20Companies%20for%20Work-Life%20Balance%20in%202026&amp;desc=We%20ranked%20all%2035%20AI%20%26%20tech%20companies%20by%20work-life%20balance%20score%20using%20Glassdoor%20data.%20See%20who%20leads%20(Vast%20AI%20at%204.5)%20and%20who%20trails%20(Scale%20A" type="image/png" medium="image" width="1200" height="630"/>
+      <pubDate>Wed, 18 Mar 2026 07:19:41 GMT</pubDate>
       <guid isPermaLink="true">https://jobsbyculture.com/blog/best-ai-companies-work-life-balance-2026</guid>
     </item>
     <item>
       <title>Best AI Companies for Work-Life Balance in San Francisco (2026)</title>
       <link>https://jobsbyculture.com/blog/best-ai-companies-work-life-balance-san-francisco-2026</link>
       <description>We ranked 27 AI &amp; tech companies with jobs in San Francisco by work-life balance score. Notion leads at 4.2 — Scale AI trails at 2.7. 1,847 open SF jobs.</description>
-      <pubDate>Mon, 16 Mar 2026 20:36:11 GMT</pubDate>
+      <enclosure url="https://jobsbyculture.com/api/og?type=blog&amp;title=Best%20AI%20Companies%20for%20Work-Life%20Balance%20in%20San%20Francisco%20(2026)&amp;desc=We%20ranked%2027%20AI%20%26%20tech%20companies%20with%20jobs%20in%20San%20Francisco%20by%20work-life%20balance%20score.%20Notion%20leads%20at%204.2%20%E2%80%94%20Scale%20AI%20trails%20at%202.7.%201%2C847%20" type="image/png" length="0"/>
+      <media:content url="https://jobsbyculture.com/api/og?type=blog&amp;title=Best%20AI%20Companies%20for%20Work-Life%20Balance%20in%20San%20Francisco%20(2026)&amp;desc=We%20ranked%2027%20AI%20%26%20tech%20companies%20with%20jobs%20in%20San%20Francisco%20by%20work-life%20balance%20score.%20Notion%20leads%20at%204.2%20%E2%80%94%20Scale%20AI%20trails%20at%202.7.%201%2C847%20" type="image/png" medium="image" width="1200" height="630"/>
+      <pubDate>Wed, 18 Mar 2026 07:19:37 GMT</pubDate>
       <guid isPermaLink="true">https://jobsbyculture.com/blog/best-ai-companies-work-life-balance-san-francisco-2026</guid>
     </item>
     <item>
       <title>Best AI Companies for Work-Life Balance in New York (2026)</title>
       <link>https://jobsbyculture.com/blog/best-ai-companies-work-life-balance-new-york-2026</link>
       <description>We ranked 26 AI &amp; tech companies with jobs in New York by work-life balance score. Hugging Face leads at 4.1 among major employers — Scale AI trails at 2.7. 1,005 open NYC jobs.</description>
-      <pubDate>Mon, 16 Mar 2026 20:35:59 GMT</pubDate>
+      <enclosure url="https://jobsbyculture.com/api/og?type=blog&amp;title=Best%20AI%20Companies%20for%20Work-Life%20Balance%20in%20New%20York%20(2026)&amp;desc=We%20ranked%2026%20AI%20%26%20tech%20companies%20with%20jobs%20in%20New%20York%20by%20work-life%20balance%20score.%20Hugging%20Face%20leads%20at%204.1%20among%20major%20employers%20%E2%80%94%20Scale%20A" type="image/png" length="0"/>
+      <media:content url="https://jobsbyculture.com/api/og?type=blog&amp;title=Best%20AI%20Companies%20for%20Work-Life%20Balance%20in%20New%20York%20(2026)&amp;desc=We%20ranked%2026%20AI%20%26%20tech%20companies%20with%20jobs%20in%20New%20York%20by%20work-life%20balance%20score.%20Hugging%20Face%20leads%20at%204.1%20among%20major%20employers%20%E2%80%94%20Scale%20A" type="image/png" medium="image" width="1200" height="630"/>
+      <pubDate>Wed, 18 Mar 2026 07:19:32 GMT</pubDate>
       <guid isPermaLink="true">https://jobsbyculture.com/blog/best-ai-companies-work-life-balance-new-york-2026</guid>
     </item>
     <item>
       <title>Best AI Companies to Work For in 2026</title>
       <link>https://jobsbyculture.com/blog/best-ai-companies-to-work-for-2026</link>
       <description>We ranked all 35 AI &amp; tech companies by Glassdoor rating. Vast AI leads at 5.0, Cohere trails at 2.9. See the full rankings with employee reviews.</description>
-      <pubDate>Mon, 16 Mar 2026 12:53:03 GMT</pubDate>
+      <enclosure url="https://jobsbyculture.com/api/og?type=blog&amp;title=Best%20AI%20Companies%20to%20Work%20For%20in%202026&amp;desc=We%20ranked%20all%2035%20AI%20%26%20tech%20companies%20by%20Glassdoor%20rating.%20Vast%20AI%20leads%20at%205.0%2C%20Cohere%20trails%20at%202.9.%20See%20the%20full%20rankings%20with%20employee%20re" type="image/png" length="0"/>
+      <media:content url="https://jobsbyculture.com/api/og?type=blog&amp;title=Best%20AI%20Companies%20to%20Work%20For%20in%202026&amp;desc=We%20ranked%20all%2035%20AI%20%26%20tech%20companies%20by%20Glassdoor%20rating.%20Vast%20AI%20leads%20at%205.0%2C%20Cohere%20trails%20at%202.9.%20See%20the%20full%20rankings%20with%20employee%20re" type="image/png" medium="image" width="1200" height="630"/>
+      <pubDate>Wed, 18 Mar 2026 07:19:25 GMT</pubDate>
       <guid isPermaLink="true">https://jobsbyculture.com/blog/best-ai-companies-to-work-for-2026</guid>
     </item>
     <item>
       <title>Working at Google DeepMind in 2026: Culture, Compensation &amp; What Employees Say</title>
       <link>https://jobsbyculture.com/blog/working-at-deepmind-2026</link>
       <description>What's it really like working at Google DeepMind in 2026? We break down the 4.2 Glassdoor rating, $300k–$500k comp, Nobel Prize research, and real employee reviews.</description>
-      <pubDate>Mon, 16 Mar 2026 12:52:25 GMT</pubDate>
+      <enclosure url="https://jobsbyculture.com/api/og?type=blog&amp;title=Working%20at%20Google%20DeepMind%20in%202026%3A%20Culture%2C%20Compensation%20%26%20What%20Employees%20Say&amp;desc=What's%20it%20really%20like%20working%20at%20Google%20DeepMind%20in%202026%3F%20We%20break%20down%20the%204.2%20Glassdoor%20rating%2C%20%24300k%E2%80%93%24500k%20comp%2C%20Nobel%20Prize%20research%2C%20an" type="image/png" length="0"/>
+      <media:content url="https://jobsbyculture.com/api/og?type=blog&amp;title=Working%20at%20Google%20DeepMind%20in%202026%3A%20Culture%2C%20Compensation%20%26%20What%20Employees%20Say&amp;desc=What's%20it%20really%20like%20working%20at%20Google%20DeepMind%20in%202026%3F%20We%20break%20down%20the%204.2%20Glassdoor%20rating%2C%20%24300k%E2%80%93%24500k%20comp%2C%20Nobel%20Prize%20research%2C%20an" type="image/png" medium="image" width="1200" height="630"/>
+      <pubDate>Wed, 18 Mar 2026 07:19:21 GMT</pubDate>
       <guid isPermaLink="true">https://jobsbyculture.com/blog/working-at-deepmind-2026</guid>
     </item>
     <item>
       <title>Highest Paying AI Companies in 2026: Total Compensation Ranked</title>
       <link>https://jobsbyculture.com/blog/highest-paying-ai-companies-2026</link>
       <description>We ranked 29 AI &amp; tech companies by estimated total compensation. OpenAI leads at $350k–$550k, followed by Anthropic ($300k–$490k) and DeepMind ($300k–$500k).</description>
-      <pubDate>Mon, 16 Mar 2026 12:52:25 GMT</pubDate>
+      <enclosure url="https://jobsbyculture.com/api/og?type=blog&amp;title=Highest%20Paying%20AI%20Companies%20in%202026%3A%20Total%20Compensation%20Ranked&amp;desc=We%20ranked%2029%20AI%20%26%20tech%20companies%20by%20estimated%20total%20compensation.%20OpenAI%20leads%20at%20%24350k%E2%80%93%24550k%2C%20followed%20by%20Anthropic%20(%24300k%E2%80%93%24490k)%20and%20DeepM" type="image/png" length="0"/>
+      <media:content url="https://jobsbyculture.com/api/og?type=blog&amp;title=Highest%20Paying%20AI%20Companies%20in%202026%3A%20Total%20Compensation%20Ranked&amp;desc=We%20ranked%2029%20AI%20%26%20tech%20companies%20by%20estimated%20total%20compensation.%20OpenAI%20leads%20at%20%24350k%E2%80%93%24550k%2C%20followed%20by%20Anthropic%20(%24300k%E2%80%93%24490k)%20and%20DeepM" type="image/png" medium="image" width="1200" height="630"/>
+      <pubDate>Wed, 18 Mar 2026 07:19:15 GMT</pubDate>
       <guid isPermaLink="true">https://jobsbyculture.com/blog/highest-paying-ai-companies-2026</guid>
     </item>
     <item>
-      <title>Working at Perplexity AI in 2026: Culture, Compensation &amp;amp; What Employees Say</title>
+      <title>Working at Perplexity AI in 2026: Culture, Compensation &amp; What Employees Say</title>
       <link>https://jobsbyculture.com/blog/working-at-perplexity-2026</link>
       <description>Inside Perplexity AI's culture in 2026 — highest Glassdoor in our database (4.7/5) but WLB of 3.3. Real employee reviews, comp data, and who thrives there.</description>
-      <pubDate>Mon, 16 Mar 2026 12:52:10 GMT</pubDate>
+      <enclosure url="https://jobsbyculture.com/api/og?type=blog&amp;title=Working%20at%20Perplexity%20AI%20in%202026%3A%20Culture%2C%20Compensation%20%26%20What%20Employees%20Say&amp;desc=Inside%20Perplexity%20AI's%20culture%20in%202026%20%E2%80%94%20highest%20Glassdoor%20in%20our%20database%20(4.7%2F5)%20but%20WLB%20of%203.3.%20Real%20employee%20reviews%2C%20comp%20data%2C%20and%20who" type="image/png" length="0"/>
+      <media:content url="https://jobsbyculture.com/api/og?type=blog&amp;title=Working%20at%20Perplexity%20AI%20in%202026%3A%20Culture%2C%20Compensation%20%26%20What%20Employees%20Say&amp;desc=Inside%20Perplexity%20AI's%20culture%20in%202026%20%E2%80%94%20highest%20Glassdoor%20in%20our%20database%20(4.7%2F5)%20but%20WLB%20of%203.3.%20Real%20employee%20reviews%2C%20comp%20data%2C%20and%20who" type="image/png" medium="image" width="1200" height="630"/>
+      <pubDate>Wed, 18 Mar 2026 07:19:04 GMT</pubDate>
       <guid isPermaLink="true">https://jobsbyculture.com/blog/working-at-perplexity-2026</guid>
     </item>
     <item>
       <title>Flat Hierarchy in Tech: Companies Where Engineers Talk to Leadership</title>
       <link>https://jobsbyculture.com/blog/flat-hierarchy-tech-companies</link>
       <description>8 AI &amp; tech companies where flat hierarchy is real — not just a buzzword. Glassdoor data, employee reviews, and open roles at companies like Anthropic, LangChain, and Weaviate.</description>
-      <pubDate>Mon, 16 Mar 2026 12:51:28 GMT</pubDate>
+      <enclosure url="https://jobsbyculture.com/api/og?type=blog&amp;title=Flat%20Hierarchy%20in%20Tech%3A%20Companies%20Where%20Engineers%20Talk%20to%20Leadership&amp;desc=8%20AI%20%26%20tech%20companies%20where%20flat%20hierarchy%20is%20real%20%E2%80%94%20not%20just%20a%20buzzword.%20Glassdoor%20data%2C%20employee%20reviews%2C%20and%20open%20roles%20at%20companies%20like" type="image/png" length="0"/>
+      <media:content url="https://jobsbyculture.com/api/og?type=blog&amp;title=Flat%20Hierarchy%20in%20Tech%3A%20Companies%20Where%20Engineers%20Talk%20to%20Leadership&amp;desc=8%20AI%20%26%20tech%20companies%20where%20flat%20hierarchy%20is%20real%20%E2%80%94%20not%20just%20a%20buzzword.%20Glassdoor%20data%2C%20employee%20reviews%2C%20and%20open%20roles%20at%20companies%20like" type="image/png" medium="image" width="1200" height="630"/>
+      <pubDate>Wed, 18 Mar 2026 07:18:58 GMT</pubDate>
       <guid isPermaLink="true">https://jobsbyculture.com/blog/flat-hierarchy-tech-companies</guid>
     </item>
     <item>
       <title>Best AI Startups to Join in 2026: Small Teams, Big Impact</title>
       <link>https://jobsbyculture.com/blog/best-ai-startups-to-join-2026</link>
       <description>11 AI startups under 500 employees ranked by Glassdoor rating. Vast AI leads at 5.0, Linear at 4.6, and LangChain at 4.6. 619 open jobs across all startups.</description>
-      <pubDate>Mon, 16 Mar 2026 12:51:28 GMT</pubDate>
+      <enclosure url="https://jobsbyculture.com/api/og?type=blog&amp;title=Best%20AI%20Startups%20to%20Join%20in%202026%3A%20Small%20Teams%2C%20Big%20Impact&amp;desc=11%20AI%20startups%20under%20500%20employees%20ranked%20by%20Glassdoor%20rating.%20Vast%20AI%20leads%20at%205.0%2C%20Linear%20at%204.6%2C%20and%20LangChain%20at%204.6.%20619%20open%20jobs%20acro" type="image/png" length="0"/>
+      <media:content url="https://jobsbyculture.com/api/og?type=blog&amp;title=Best%20AI%20Startups%20to%20Join%20in%202026%3A%20Small%20Teams%2C%20Big%20Impact&amp;desc=11%20AI%20startups%20under%20500%20employees%20ranked%20by%20Glassdoor%20rating.%20Vast%20AI%20leads%20at%205.0%2C%20Linear%20at%204.6%2C%20and%20LangChain%20at%204.6.%20619%20open%20jobs%20acro" type="image/png" medium="image" width="1200" height="630"/>
+      <pubDate>Wed, 18 Mar 2026 07:18:54 GMT</pubDate>
       <guid isPermaLink="true">https://jobsbyculture.com/blog/best-ai-startups-to-join-2026</guid>
     </item>
     <item>
-      <title>OpenAI vs DeepMind: Culture, Compensation &amp;amp; Work-Life Balance Compared</title>
+      <title>OpenAI vs DeepMind: Culture, Compensation &amp; Work-Life Balance Compared</title>
       <link>https://jobsbyculture.com/blog/openai-vs-deepmind-culture-comparison</link>
       <description>Side-by-side comparison of OpenAI and Google DeepMind — Glassdoor ratings (4.5 vs 4.2), work-life balance (3.6 vs 4.0), culture values, compensation, and real employee reviews.</description>
-      <pubDate>Mon, 16 Mar 2026 05:56:28 GMT</pubDate>
+      <enclosure url="https://jobsbyculture.com/api/og?type=blog&amp;title=OpenAI%20vs%20DeepMind%3A%20Culture%2C%20Compensation%20%26%20Work-Life%20Balance%20Compared&amp;desc=Side-by-side%20comparison%20of%20OpenAI%20and%20Google%20DeepMind%20%E2%80%94%20Glassdoor%20ratings%20(4.5%20vs%204.2)%2C%20work-life%20balance%20(3.6%20vs%204.0)%2C%20culture%20values%2C%20comp" type="image/png" length="0"/>
+      <media:content url="https://jobsbyculture.com/api/og?type=blog&amp;title=OpenAI%20vs%20DeepMind%3A%20Culture%2C%20Compensation%20%26%20Work-Life%20Balance%20Compared&amp;desc=Side-by-side%20comparison%20of%20OpenAI%20and%20Google%20DeepMind%20%E2%80%94%20Glassdoor%20ratings%20(4.5%20vs%204.2)%2C%20work-life%20balance%20(3.6%20vs%204.0)%2C%20culture%20values%2C%20comp" type="image/png" medium="image" width="1200" height="630"/>
+      <pubDate>Wed, 18 Mar 2026 07:18:49 GMT</pubDate>
       <guid isPermaLink="true">https://jobsbyculture.com/blog/openai-vs-deepmind-culture-comparison</guid>
     </item>
     <item>
       <title>Open Source AI Companies Hiring in 2026</title>
       <link>https://jobsbyculture.com/blog/open-source-ai-companies-hiring-2026</link>
       <description>9 open source AI companies actively hiring in 2026 — 729 open jobs from Hugging Face, LangChain, Vercel, Airbnb, and more. Real Glassdoor data and employee reviews.</description>
-      <pubDate>Sun, 15 Mar 2026 11:00:10 GMT</pubDate>
+      <enclosure url="https://jobsbyculture.com/api/og?type=blog&amp;title=Open%20Source%20AI%20Companies%20Hiring%20in%202026&amp;desc=9%20open%20source%20AI%20companies%20actively%20hiring%20in%202026%20%E2%80%94%20729%20open%20jobs%20from%20Hugging%20Face%2C%20LangChain%2C%20Vercel%2C%20Airbnb%2C%20and%20more.%20Real%20Glassdoor%20da" type="image/png" length="0"/>
+      <media:content url="https://jobsbyculture.com/api/og?type=blog&amp;title=Open%20Source%20AI%20Companies%20Hiring%20in%202026&amp;desc=9%20open%20source%20AI%20companies%20actively%20hiring%20in%202026%20%E2%80%94%20729%20open%20jobs%20from%20Hugging%20Face%2C%20LangChain%2C%20Vercel%2C%20Airbnb%2C%20and%20more.%20Real%20Glassdoor%20da" type="image/png" medium="image" width="1200" height="630"/>
+      <pubDate>Wed, 18 Mar 2026 07:18:44 GMT</pubDate>
       <guid isPermaLink="true">https://jobsbyculture.com/blog/open-source-ai-companies-hiring-2026</guid>
     </item>
     <item>
       <title>Remote-Friendly AI Companies Actually Hiring in 2026</title>
       <link>https://jobsbyculture.com/blog/remote-friendly-ai-companies-hiring-2026</link>
       <description>11 AI &amp; tech companies with genuine remote culture and real open roles. Data-backed with Glassdoor ratings, WLB scores, and employee reviews on remote work.</description>
-      <pubDate>Sun, 15 Mar 2026 10:12:43 GMT</pubDate>
+      <enclosure url="https://jobsbyculture.com/api/og?type=blog&amp;title=Remote-Friendly%20AI%20Companies%20Actually%20Hiring%20in%202026&amp;desc=11%20AI%20%26%20tech%20companies%20with%20genuine%20remote%20culture%20and%20real%20open%20roles.%20Data-backed%20with%20Glassdoor%20ratings%2C%20WLB%20scores%2C%20and%20employee%20reviews" type="image/png" length="0"/>
+      <media:content url="https://jobsbyculture.com/api/og?type=blog&amp;title=Remote-Friendly%20AI%20Companies%20Actually%20Hiring%20in%202026&amp;desc=11%20AI%20%26%20tech%20companies%20with%20genuine%20remote%20culture%20and%20real%20open%20roles.%20Data-backed%20with%20Glassdoor%20ratings%2C%20WLB%20scores%2C%20and%20employee%20reviews" type="image/png" medium="image" width="1200" height="630"/>
+      <pubDate>Wed, 18 Mar 2026 07:18:40 GMT</pubDate>
       <guid isPermaLink="true">https://jobsbyculture.com/blog/remote-friendly-ai-companies-hiring-2026</guid>
     </item>
     <item>
-      <title>Anthropic vs OpenAI: Culture, Compensation &amp;amp; Work-Life Balance Compared</title>
+      <title>Anthropic vs OpenAI: Culture, Compensation &amp; Work-Life Balance Compared</title>
       <link>https://jobsbyculture.com/blog/anthropic-vs-openai-culture-comparison</link>
       <description>Side-by-side comparison of Anthropic and OpenAI — Glassdoor ratings (4.4 vs 4.5), work-life balance (3.7 vs 3.6), culture values, compensation, and real employee reviews.</description>
-      <pubDate>Sun, 15 Mar 2026 10:12:38 GMT</pubDate>
+      <enclosure url="https://jobsbyculture.com/api/og?type=blog&amp;title=Anthropic%20vs%20OpenAI%3A%20Culture%2C%20Compensation%20%26%20Work-Life%20Balance%20Compared&amp;desc=Side-by-side%20comparison%20of%20Anthropic%20and%20OpenAI%20%E2%80%94%20Glassdoor%20ratings%20(4.4%20vs%204.5)%2C%20work-life%20balance%20(3.7%20vs%203.6)%2C%20culture%20values%2C%20compensati" type="image/png" length="0"/>
+      <media:content url="https://jobsbyculture.com/api/og?type=blog&amp;title=Anthropic%20vs%20OpenAI%3A%20Culture%2C%20Compensation%20%26%20Work-Life%20Balance%20Compared&amp;desc=Side-by-side%20comparison%20of%20Anthropic%20and%20OpenAI%20%E2%80%94%20Glassdoor%20ratings%20(4.4%20vs%204.5)%2C%20work-life%20balance%20(3.7%20vs%203.6)%2C%20culture%20values%2C%20compensati" type="image/png" medium="image" width="1200" height="630"/>
+      <pubDate>Wed, 18 Mar 2026 07:18:36 GMT</pubDate>
       <guid isPermaLink="true">https://jobsbyculture.com/blog/anthropic-vs-openai-culture-comparison</guid>
     </item>
   </channel>
