@@ -377,4 +377,16 @@ console.log(`\n✓ Exported ${rows.length} total rows to ${csvPath}`);
 console.log(`  ${newCount} new (status: pending)`);
 console.log(`  ${keptCount} existing (status preserved)`);
 console.log(`  ${expiredCount} newly expired (status: expired)`);
-console.log(`\nUpload data/jobs-export.csv to Google Sheets. Zapier will pick up "pending" jobs.`);
+
+// 9. Generate pending-only CSV for Zapier (exclude posted/expired)
+const pendingPath = resolve(ROOT, 'data/jobs-pending.csv');
+const pendingRows = finalRows.filter(row => {
+    const fields = parseCSVLine(row);
+    const statusIdx2 = HEADER.split(',').indexOf('status');
+    return fields[statusIdx2] === 'pending';
+});
+const pendingOutput = HEADER + '\n' + pendingRows.join('\n') + '\n';
+writeFileSync(pendingPath, pendingOutput);
+
+console.log(`✓ Exported ${pendingRows.length} pending jobs to data/jobs-pending.csv (for Zapier)`);
+console.log(`\nUpload data/jobs-pending.csv to Google Sheets. Only new/unposted jobs included.`);
