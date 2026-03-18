@@ -450,6 +450,26 @@
         .cp-job-highlight:hover { border-color: #c2410c !important; }
         .cp-job-badge { display: inline-block; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: #e8590c; background: rgba(232,89,12,0.08); border: 1px solid rgba(232,89,12,0.2); padding: 3px 10px; border-radius: 100px; margin-bottom: 8px; }
 
+    
+        /* ═══ RELATED SECTION ═══ */
+        .cp-related { padding: 56px 0; border-top: 1px solid var(--border); }
+        .cp-related-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; }
+        .cp-related-col h3 { font-size: 16px; font-weight: 600; margin-bottom: 16px; color: var(--text); }
+        .cp-related-list { list-style: none; display: flex; flex-direction: column; gap: 8px; }
+        .cp-related-list li a {
+            font-size: 14px; color: var(--text-2); text-decoration: none;
+            display: flex; align-items: center; gap: 6px; padding: 8px 12px;
+            border-radius: var(--radius-sm); transition: all 0.15s;
+        }
+        .cp-related-list li a:hover { background: var(--bg-hover); color: var(--accent); }
+        .cp-related-list li a .arrow { color: var(--text-3); font-size: 12px; }
+        .cp-related-more {
+            display: inline-block; margin-top: 12px; font-size: 13px; font-weight: 600;
+            color: var(--accent); text-decoration: none;
+        }
+        .cp-related-more:hover { text-decoration: underline; }
+        @media (max-width: 768px) { .cp-related-grid { grid-template-columns: 1fr; } }
+
     </style>
 <!-- Privacy-friendly analytics by Plausible -->
 <script async src="https://plausible.io/js/pa-qa3pjs5eZbsfBQJMk4hVW.js"></script>
@@ -705,6 +725,41 @@
         </div>
     </div>
 </section>
+
+<!-- ═══ RELATED ═══ -->
+<section class="cp-related">
+    <div class="container">
+        <span class="s-label">Explore More</span>
+        <h2 class="s-title">Related <em>content</em></h2>
+        <div class="cp-related-grid">
+            <div class="cp-related-col">
+                <h3>Blog Posts</h3>
+                <ul class="cp-related-list">
+                    <li><a href="/blog/best-ai-companies-to-work-for-2026"><span class="arrow">&rarr;</span> Best AI Companies to Work For in 2026</a></li>
+                    <li><a href="/blog/best-ai-companies-work-life-balance-2026"><span class="arrow">&rarr;</span> Best AI Companies for Work-Life Balance in 2026</a></li>
+                    <li><a href="/blog/best-ai-companies-work-life-balance-new-york-2026"><span class="arrow">&rarr;</span> Best AI Companies for Work-Life Balance in New York (2026)</a></li>
+                    <li><a href="/blog/best-ai-companies-work-life-balance-san-francisco-2026"><span class="arrow">&rarr;</span> Best AI Companies for Work-Life Balance in San Francisco (2026)</a></li>
+                    <li><a href="/blog/culture-fit-interview-questions"><span class="arrow">&rarr;</span> Culture Fit Interview Questions: 50+ Questions Organized by Company Value [2026 Guide]</a></li>
+                </ul>
+            </div>
+            <div class="cp-related-col">
+                <h3>Compare DeepMind</h3>
+                <ul class="cp-related-list">
+                    <li><a href="/compare/airbnb-vs-deepmind"><span class="arrow">&rarr;</span> DeepMind vs Airbnb</a></li>
+                    <li><a href="/compare/anthropic-vs-deepmind"><span class="arrow">&rarr;</span> DeepMind vs Anthropic</a></li>
+                    <li><a href="/compare/apollo-vs-deepmind"><span class="arrow">&rarr;</span> DeepMind vs Apollo.io</a></li>
+                    <li><a href="/compare/cohere-vs-deepmind"><span class="arrow">&rarr;</span> DeepMind vs Cohere</a></li>
+                    <li><a href="/compare/coreweave-vs-deepmind"><span class="arrow">&rarr;</span> DeepMind vs CoreWeave</a></li>
+                    <li><a href="/compare/cursor-vs-deepmind"><span class="arrow">&rarr;</span> DeepMind vs Cursor</a></li>
+                    <li><a href="/compare/databricks-vs-deepmind"><span class="arrow">&rarr;</span> DeepMind vs Databricks</a></li>
+                    <li><a href="/compare/deepmind-vs-elevenlabs"><span class="arrow">&rarr;</span> DeepMind vs ElevenLabs</a></li>
+                </ul>
+                <a href="/compare?a=deepmind" class="cp-related-more">See all comparisons &rarr;</a>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- ═══ /RELATED ═══ -->
 
 <!-- ═══ FOOTER ═══ -->
 <footer class="cp-footer">
