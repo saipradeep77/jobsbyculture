@@ -52,6 +52,8 @@ const posts = files.map(file => {
     image_quality: '80',
     viewport_width: '1200',
     viewport_height: '630',
+    cache: 'true',
+    cache_ttl: '86400',
   });
   const ogImage = `https://api.screenshotone.com/take?${screenshotParams.toString()}`;
 
