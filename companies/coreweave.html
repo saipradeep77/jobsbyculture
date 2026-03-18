@@ -693,13 +693,11 @@
         <h2 class="s-title">Join the <em>CoreWeave</em> team</h2>
         <p class="s-desc"><span id="jobCount">...</span> open positions.</p>
 
-        <div id="expandJobsBtn" style="display:none;margin-bottom:20px;text-align:center;"><button onclick="showAllJobs()" style="display:inline-flex;align-items:center;gap:8px;background:#fff;color:#e8590c;border:2px solid #e8590c;padding:12px 28px;border-radius:100px;font-size:15px;font-weight:700;cursor:pointer;font-family:inherit;transition:all 0.2s;" onmouseover="this.style.background='rgba(232,89,12,0.05)'" onmouseout="this.style.background='#fff'">Show all <span id="jobCount2">...</span> jobs + search</button></div>
-
         <div id="jobSearchWrap" style="margin-bottom:20px;"><input id="jobSearch" type="text" placeholder="Search by job title, location, or department..." style="width:100%;padding:10px 14px;border-radius:8px;border:1px solid rgba(0,0,0,0.12);font-size:14px;font-family:inherit;outline:none;background:#fff;" onfocus="this.style.borderColor='#e8590c';this.style.boxShadow='0 0 0 3px rgba(232,89,12,0.06)'" onblur="this.style.borderColor='rgba(0,0,0,0.12)';this.style.boxShadow='none'"></div>
 
         <div class="cp-jobs-grid" id="jobsGrid"></div>
 
-        <div class="cp-cta-center">
+        <div class="cp-cta-center" id="jobsCta">
             <a href="/jobs?company=coreweave" class="btn-primary">Browse all jobs on the board &rarr;</a>
         </div>
     </div>
@@ -721,9 +719,9 @@
 
 <script>
 var COMPANY_SLUG = 'coreweave';
+var COMPANY_NAME = document.querySelector('.cp-hero h1') ? document.querySelector('.cp-hero h1').textContent : 'coreweave';
 var ALL_JOBS = [];
 var HIGHLIGHT_JOB_ID = new URLSearchParams(window.location.search).get('job') || '';
-var SHOW_ALL = false;
 
 fetch('/data/company-jobs.json')
   .then(function(r) { return r.json(); })
@@ -742,7 +740,6 @@ function escHtml(s) {
 function jobCard(job, isHighlight) {
     return '<a class="cp-job-card' + (isHighlight ? ' cp-job-highlight' : '') + '" href="' + job.url + '" target="_blank" rel="noopener">' +
         '<div>' +
-            (isHighlight ? '<div class="cp-job-badge">Shared Role</div>' : '') +
             '<div class="cp-job-title">' + escHtml(job.title) + '</div>' +
             '<div class="cp-job-location">' +
                 '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>' +
@@ -758,7 +755,7 @@ function renderJobs(query) {
     var q = (query || '').toLowerCase().trim();
     var searchBox = document.getElementById('jobSearchWrap');
     var jobCount = document.getElementById('jobCount');
-    var expandBtn = document.getElementById('expandJobsBtn');
+    var ctaCenter = document.getElementById('jobsCta');
 
     var filtered = ALL_JOBS;
     if (q) {
@@ -782,27 +779,30 @@ function renderJobs(query) {
 
     var html = '';
 
-    // Mode 1: Highlight mode — show only the shared job + expand button
-    if (HIGHLIGHT_JOB_ID && highlighted && !SHOW_ALL) {
+    // Mode 1: Highlight mode — highlighted job + 10 more + browse all CTA
+    if (HIGHLIGHT_JOB_ID && highlighted) {
         if (jobCount) jobCount.textContent = ALL_JOBS.length;
-        var jobCount2 = document.getElementById('jobCount2');
-        if (jobCount2) jobCount2.textContent = ALL_JOBS.length;
         if (searchBox) searchBox.style.display = 'none';
-        if (expandBtn) expandBtn.style.display = 'block';
 
         html = jobCard(highlighted, true);
+        var showCount = Math.min(rest.length, 10);
+        for (var k = 0; k < showCount; k++) {
+            html += jobCard(rest[k], false);
+        }
         grid.innerHTML = html;
+
+        if (ctaCenter) {
+            ctaCenter.innerHTML = '<a href="/jobs?company=' + COMPANY_SLUG + '" class="btn-primary">Browse all ' + ALL_JOBS.length + ' ' + COMPANY_NAME + ' jobs \u2192</a>';
+        }
         return;
     }
 
-    // Mode 2: Show all jobs (default, or after expand)
+    // Mode 2: Normal mode — all jobs with search
     if (jobCount) jobCount.textContent = filtered.length;
     if (searchBox) searchBox.style.display = 'block';
-    if (expandBtn) expandBtn.style.display = 'none';
 
-    if (highlighted) html += jobCard(highlighted, true);
-    for (var j = 0; j < rest.length; j++) {
-        html += jobCard(rest[j], false);
+    for (var j = 0; j < filtered.length; j++) {
+        html += jobCard(filtered[j], false);
     }
 
     if (filtered.length === 0) {
@@ -810,11 +810,10 @@ function renderJobs(query) {
     }
 
     grid.innerHTML = html;
-}
 
-function showAllJobs() {
-    SHOW_ALL = true;
-    renderJobs('');
+    if (ctaCenter) {
+        ctaCenter.innerHTML = '<a href="/jobs?company=' + COMPANY_SLUG + '" class="btn-primary">Browse all ' + ALL_JOBS.length + ' ' + COMPANY_NAME + ' jobs \u2192</a>';
+    }
 }
 
 var searchInput = document.getElementById('jobSearch');
