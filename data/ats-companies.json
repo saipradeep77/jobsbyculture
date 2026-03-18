@@ -34,6 +34,11 @@
     { "slug": "tailscale",   "name": "Tailscale",     "ats": "greenhouse", "atsSlug": "tailscale",    "domain": "tailscale.com" },
     { "slug": "suno",        "name": "Suno",          "ats": "ashby",      "atsSlug": "suno",         "domain": "suno.com" },
     { "slug": "pylon",       "name": "Pylon",         "ats": "ashby",      "atsSlug": "pylon-labs",   "domain": "usepylon.com" },
-    { "slug": "incidentio",  "name": "incident.io",   "ats": "ashby",      "atsSlug": "incident",     "domain": "incident.io" }
+    { "slug": "incidentio",  "name": "incident.io",   "ats": "ashby",      "atsSlug": "incident",     "domain": "incident.io" },
+    { "slug": "grafanalabs", "name": "Grafana Labs",  "ats": "greenhouse", "atsSlug": "grafanalabs",  "domain": "grafana.com" },
+    { "slug": "plaid",       "name": "Plaid",         "ats": "ashby",      "atsSlug": "plaid",        "domain": "plaid.com" },
+    { "slug": "mercury",     "name": "Mercury",       "ats": "greenhouse", "atsSlug": "mercury",      "domain": "mercury.com" },
+    { "slug": "airtable",    "name": "Airtable",      "ats": "greenhouse", "atsSlug": "airtable",     "domain": "airtable.com" },
+    { "slug": "brex",        "name": "Brex",          "ats": "greenhouse", "atsSlug": "brex",         "domain": "brex.com" }
   ]
 }
