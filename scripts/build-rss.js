@@ -38,8 +38,22 @@ const posts = files.map(file => {
   const link = `${SITE}/blog/${slug}`;
   const pubDate = stat.mtime;
 
-  // Build OG image URL (same as what's in the HTML og:image tag)
-  const ogImage = `${SITE}/api/og?type=blog&title=${encodeURIComponent(title)}&desc=${encodeURIComponent(description.slice(0, 140))}`;
+  // ScreenshotOne API for blog post screenshot
+  const screenshotParams = new URLSearchParams({
+    access_key: '1Z7jgqp5isxeVw',
+    url: link,
+    format: 'jpg',
+    block_ads: 'true',
+    block_cookie_banners: 'true',
+    block_trackers: 'true',
+    delay: '0',
+    timeout: '60',
+    response_type: 'by_format',
+    image_quality: '80',
+    viewport_width: '1200',
+    viewport_height: '630',
+  });
+  const ogImage = `https://api.screenshotone.com/take?${screenshotParams.toString()}`;
 
   return { title, description, link, pubDate, slug, ogImage };
 }).sort((a, b) => b.pubDate - a.pubDate);
@@ -48,8 +62,8 @@ const items = posts.map(p => `    <item>
       <title>${escXml(p.title)}</title>
       <link>${p.link}</link>
       <description>${escXml(p.description)}</description>
-      <enclosure url="${escXml(p.ogImage)}" type="image/png" length="0"/>
-      <media:content url="${escXml(p.ogImage)}" type="image/png" medium="image" width="1200" height="630"/>
+      <enclosure url="${escXml(p.ogImage)}" type="image/jpeg" length="0"/>
+      <media:content url="${escXml(p.ogImage)}" type="image/jpeg" medium="image" width="1200" height="630"/>
       <pubDate>${toRfc822(p.pubDate)}</pubDate>
       <guid isPermaLink="true">${p.link}</guid>
     </item>`).join('\n');
