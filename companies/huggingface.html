@@ -471,6 +471,32 @@
         .cp-related-more:hover { text-decoration: underline; }
         @media (max-width: 768px) { .cp-related-grid { grid-template-columns: 1fr; } }
 
+    
+        /* ═══ COMMUNITY SENTIMENT ═══ */
+        .cs-section { padding: 56px 0; border-top: 1px solid var(--border); }
+        .cs-overall { display: flex; align-items: center; gap: 16px; margin-bottom: 28px; }
+        .cs-badge { display: inline-flex; align-items: center; gap: 8px; padding: 8px 18px; border-radius: var(--radius-full); font-size: 14px; font-weight: 700; }
+        .cs-badge.positive { background: rgba(22,163,74,0.08); color: #16a34a; border: 1.5px solid rgba(22,163,74,0.2); }
+        .cs-badge.negative { background: rgba(220,38,38,0.08); color: #dc2626; border: 1.5px solid rgba(220,38,38,0.2); }
+        .cs-badge.mixed { background: rgba(217,119,6,0.08); color: #d97706; border: 1.5px solid rgba(217,119,6,0.2); }
+        .cs-badge.neutral { background: rgba(156,163,175,0.08); color: #6b7280; border: 1.5px solid rgba(156,163,175,0.2); }
+        .cs-stats { font-size: 13px; color: var(--text-3); }
+        .cs-quotes { display: flex; flex-direction: column; gap: 16px; }
+        .cs-quote { background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius); padding: 18px 22px; }
+        .cs-quote-text { font-size: 15px; color: var(--text-2); line-height: 1.7; margin-bottom: 10px; font-style: italic; }
+        .cs-quote-meta { display: flex; align-items: center; gap: 12px; font-size: 12px; color: var(--text-3); }
+        .cs-quote-source { font-weight: 600; text-transform: uppercase; letter-spacing: 0.06em; }
+        .cs-quote-source.hn { color: #ff6600; }
+        .cs-quote-source.reddit { color: #ff4500; }
+        .cs-quote-link { color: var(--accent); text-decoration: none; font-size: 12px; font-weight: 500; }
+        .cs-quote-link:hover { text-decoration: underline; }
+        .cs-updated { font-size: 12px; color: var(--text-3); margin-top: 20px; font-style: italic; }
+        .cs-tabs { display: flex; gap: 8px; margin-bottom: 20px; }
+        .cs-tab { padding: 6px 16px; border-radius: var(--radius-full); font-size: 13px; font-weight: 600; cursor: pointer; border: 1.5px solid var(--border); background: transparent; color: var(--text-2); font-family: var(--font-body); }
+        .cs-tab.active { border-color: var(--accent); color: var(--accent); background: var(--accent-bg); }
+        .cs-tab:hover { border-color: var(--accent); }
+        @media (max-width: 768px) { .cs-quotes { gap: 12px; } .cs-quote { padding: 14px 16px; } }
+
     </style>
 <!-- Privacy-friendly analytics by Plausible -->
 <script async src="https://plausible.io/js/pa-qa3pjs5eZbsfBQJMk4hVW.js"></script>
@@ -728,6 +754,83 @@
 
 
 
+
+<!-- ═══ COMMUNITY SENTIMENT ═══ -->
+<section class="cs-section">
+    <div class="container">
+        <span class="s-label">Community Sentiment</span>
+        <h2 class="s-title">What the <em>community</em> says about Hugging Face</h2>
+        <div class="cs-overall">
+            <span class="cs-badge mixed">Mixed Sentiment</span>
+            <span class="cs-stats">13 mentions from Hacker News &amp; Reddit &middot; Updated 2026-03-19</span>
+        </div>
+        <div class="cs-tabs">
+            <button class="cs-tab active" onclick="showSentiment('all',this)">All</button>
+            <button class="cs-tab" onclick="showSentiment('hn',this)">Hacker News</button>
+            <button class="cs-tab" onclick="showSentiment('reddit',this)">Reddit</button>
+        </div>
+        <div class="cs-quotes" id="csQuotes">
+            <div class="cs-quote" data-source="hn">
+                <div class="cs-quote-text">&ldquo;Yann LeCun has long argued that current LLM-centric approaches are a dead end for AGI, advocating instead for world models grounded in richer representations of reality.&rdquo;</div>
+                <div class="cs-quote-meta">
+                    <span class="cs-quote-source hn">Hacker News</span>
+                    <span>ju2ez &middot; 2025-12-23</span>
+                    <a href="https://news.ycombinator.com/item?id=46364184" target="_blank" rel="noopener" class="cs-quote-link">View thread &rarr;</a>
+                </div>
+            </div>
+            <div class="cs-quote" data-source="hn">
+                <div class="cs-quote-text">&ldquo;I built Allplix, a suite of 30+ free AI-powered tools (image compression, background removal, video compression, file conversion, image enhancement...) that run entirely in your browser.&rdquo;</div>
+                <div class="cs-quote-meta">
+                    <span class="cs-quote-source hn">Hacker News</span>
+                    <span>Allplix &middot; 2026-03-12</span>
+                    <a href="https://news.ycombinator.com/item?id=47354562" target="_blank" rel="noopener" class="cs-quote-link">View thread &rarr;</a>
+                </div>
+            </div>
+            <div class="cs-quote" data-source="hn">
+                <div class="cs-quote-text">&ldquo;I&amp;#x27;m having trouble running this on my Mac - I&amp;#x27;ve tried Ollama and llama.cpp llama-server so far, both using GGUFs from Hugging Face, but neither worked.&rdquo;</div>
+                <div class="cs-quote-meta">
+                    <span class="cs-quote-source hn">Hacker News</span>
+                    <span>simonw &middot; 2025-07-09</span>
+                    <a href="https://news.ycombinator.com/item?id=44505302" target="_blank" rel="noopener" class="cs-quote-link">View thread &rarr;</a>
+                </div>
+            </div>
+            <div class="cs-quote" data-source="hn">
+                <div class="cs-quote-text">&ldquo;I built this same solution for myself last year, used Hugging Face&amp;#x27;s &amp;quot;SmolVLM&amp;quot;. It works surprisingly well.&rdquo;</div>
+                <div class="cs-quote-meta">
+                    <span class="cs-quote-source hn">Hacker News</span>
+                    <span>spacecadet &middot; 2025-06-30</span>
+                    <a href="https://news.ycombinator.com/item?id=44427497" target="_blank" rel="noopener" class="cs-quote-link">View thread &rarr;</a>
+                </div>
+            </div>
+            <div class="cs-quote" data-source="reddit">
+                <div class="cs-quote-text">&ldquo;So I applied for a job at the place where I did my internship, and my performance review during this intership was &quot;excellent&quot;. I have to admit that socially the mood felt off sometimes.&rdquo;</div>
+                <div class="cs-quote-meta">
+                    <span class="cs-quote-source reddit">Reddit</span>
+                    <span>r/TwoXChromosomes &middot; 2124 upvotes &middot; 2025-05-23</span>
+                    <a href="https://reddit.com/r/TwoXChromosomes/comments/1ktlsko/i_just_got_rejected_for_a_job_i_applied_to/" target="_blank" rel="noopener" class="cs-quote-link">View thread &rarr;</a>
+                </div>
+            </div>
+            <div class="cs-quote" data-source="reddit">
+                <div class="cs-quote-text">&ldquo;**I am not The OOP, OOP is u/ughhhelpmepleaseee** **My Roommate's(21F) Parents keep letting themselves into my (21 F) apartment with the spare key my roommate gave them.&rdquo;</div>
+                <div class="cs-quote-meta">
+                    <span class="cs-quote-source reddit">Reddit</span>
+                    <span>r/BestofRedditorUpdates &middot; 7523 upvotes &middot; 2026-01-30</span>
+                    <a href="https://reddit.com/r/BestofRedditorUpdates/comments/1qqw5w3/my_roommates21f_parents_keep_letting_themselves/" target="_blank" rel="noopener" class="cs-quote-link">View thread &rarr;</a>
+                </div>
+            </div>
+            <div class="cs-quote" data-source="reddit">
+                <div class="cs-quote-text">&ldquo;**I am NOT OOP, OOP is u/greygreythrowaway** **My mother-in-law (57f) doesn't believe that my husband (30m) is the father of our baby. I (32f) don't know what to do.** **Trigger Warnings:** &amp;gt;!&rdquo;</div>
+                <div class="cs-quote-meta">
+                    <span class="cs-quote-source reddit">Reddit</span>
+                    <span>r/BestofRedditorUpdates &middot; 5312 upvotes &middot; 2025-11-19</span>
+                    <a href="https://reddit.com/r/BestofRedditorUpdates/comments/1p1d589/my_motherinlaw_57f_doesnt_believe_that_my_husband/" target="_blank" rel="noopener" class="cs-quote-link">View thread &rarr;</a>
+                </div>
+            </div>
+        </div>
+        <p class="cs-updated">Sentiment data refreshed daily from public Hacker News and Reddit discussions. <a href="/directory" style="color:var(--accent);text-decoration:none;">See all company profiles &rarr;</a></p>
+    </div>
+</section>
+<!-- ═══ /COMMUNITY SENTIMENT ═══ -->
 
 <!-- ═══ RELATED ═══ -->
 <section class="cp-related">

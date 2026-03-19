@@ -470,6 +470,32 @@
         .cp-related-more:hover { text-decoration: underline; }
         @media (max-width: 768px) { .cp-related-grid { grid-template-columns: 1fr; } }
 
+    
+        /* ═══ COMMUNITY SENTIMENT ═══ */
+        .cs-section { padding: 56px 0; border-top: 1px solid var(--border); }
+        .cs-overall { display: flex; align-items: center; gap: 16px; margin-bottom: 28px; }
+        .cs-badge { display: inline-flex; align-items: center; gap: 8px; padding: 8px 18px; border-radius: var(--radius-full); font-size: 14px; font-weight: 700; }
+        .cs-badge.positive { background: rgba(22,163,74,0.08); color: #16a34a; border: 1.5px solid rgba(22,163,74,0.2); }
+        .cs-badge.negative { background: rgba(220,38,38,0.08); color: #dc2626; border: 1.5px solid rgba(220,38,38,0.2); }
+        .cs-badge.mixed { background: rgba(217,119,6,0.08); color: #d97706; border: 1.5px solid rgba(217,119,6,0.2); }
+        .cs-badge.neutral { background: rgba(156,163,175,0.08); color: #6b7280; border: 1.5px solid rgba(156,163,175,0.2); }
+        .cs-stats { font-size: 13px; color: var(--text-3); }
+        .cs-quotes { display: flex; flex-direction: column; gap: 16px; }
+        .cs-quote { background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius); padding: 18px 22px; }
+        .cs-quote-text { font-size: 15px; color: var(--text-2); line-height: 1.7; margin-bottom: 10px; font-style: italic; }
+        .cs-quote-meta { display: flex; align-items: center; gap: 12px; font-size: 12px; color: var(--text-3); }
+        .cs-quote-source { font-weight: 600; text-transform: uppercase; letter-spacing: 0.06em; }
+        .cs-quote-source.hn { color: #ff6600; }
+        .cs-quote-source.reddit { color: #ff4500; }
+        .cs-quote-link { color: var(--accent); text-decoration: none; font-size: 12px; font-weight: 500; }
+        .cs-quote-link:hover { text-decoration: underline; }
+        .cs-updated { font-size: 12px; color: var(--text-3); margin-top: 20px; font-style: italic; }
+        .cs-tabs { display: flex; gap: 8px; margin-bottom: 20px; }
+        .cs-tab { padding: 6px 16px; border-radius: var(--radius-full); font-size: 13px; font-weight: 600; cursor: pointer; border: 1.5px solid var(--border); background: transparent; color: var(--text-2); font-family: var(--font-body); }
+        .cs-tab.active { border-color: var(--accent); color: var(--accent); background: var(--accent-bg); }
+        .cs-tab:hover { border-color: var(--accent); }
+        @media (max-width: 768px) { .cs-quotes { gap: 12px; } .cs-quote { padding: 14px 16px; } }
+
     </style>
 <!-- Privacy-friendly analytics by Plausible -->
 <script async src="https://plausible.io/js/pa-qa3pjs5eZbsfBQJMk4hVW.js"></script>
@@ -727,6 +753,83 @@
 
 
 
+
+<!-- ═══ COMMUNITY SENTIMENT ═══ -->
+<section class="cs-section">
+    <div class="container">
+        <span class="s-label">Community Sentiment</span>
+        <h2 class="s-title">What the <em>community</em> says about Runway</h2>
+        <div class="cs-overall">
+            <span class="cs-badge positive">Mostly Positive</span>
+            <span class="cs-stats">13 mentions from Hacker News &amp; Reddit &middot; Updated 2026-03-19</span>
+        </div>
+        <div class="cs-tabs">
+            <button class="cs-tab active" onclick="showSentiment('all',this)">All</button>
+            <button class="cs-tab" onclick="showSentiment('hn',this)">Hacker News</button>
+            <button class="cs-tab" onclick="showSentiment('reddit',this)">Reddit</button>
+        </div>
+        <div class="cs-quotes" id="csQuotes">
+            <div class="cs-quote" data-source="hn">
+                <div class="cs-quote-text">&ldquo;I&amp;#x27;m not sure if that&amp;#x27;s a sarcastic pitch for SLS or shuttle, but both of those have been proven dead ends.&rdquo;</div>
+                <div class="cs-quote-meta">
+                    <span class="cs-quote-source hn">Hacker News</span>
+                    <span>aerospades &middot; 2025-06-02</span>
+                    <a href="https://news.ycombinator.com/item?id=44155173" target="_blank" rel="noopener" class="cs-quote-link">View thread &rarr;</a>
+                </div>
+            </div>
+            <div class="cs-quote" data-source="hn">
+                <div class="cs-quote-text">&ldquo;Di Rezze Family Office | AI-Native Technical Operations Lead | Miami, FL (ONSITE) | $130K-$200K + Early Equity | Full-TimeWe&amp;#x27;re building an AI-native clinical data platform from the ground up,...&rdquo;</div>
+                <div class="cs-quote-meta">
+                    <span class="cs-quote-source hn">Hacker News</span>
+                    <span>dfo01 &middot; 2026-03-03</span>
+                    <a href="https://news.ycombinator.com/item?id=47237652" target="_blank" rel="noopener" class="cs-quote-link">View thread &rarr;</a>
+                </div>
+            </div>
+            <div class="cs-quote" data-source="hn">
+                <div class="cs-quote-text">&ldquo;&amp;gt; Your appetite for novelty and your fear of missing out sucks the joy out of you—the more you eat, the hungrier you are.&rdquo;</div>
+                <div class="cs-quote-meta">
+                    <span class="cs-quote-source hn">Hacker News</span>
+                    <span>komali2 &middot; 2025-12-16</span>
+                    <a href="https://news.ycombinator.com/item?id=46289650" target="_blank" rel="noopener" class="cs-quote-link">View thread &rarr;</a>
+                </div>
+            </div>
+            <div class="cs-quote" data-source="hn">
+                <div class="cs-quote-text">&ldquo;For today&amp;#x27;s 10,000: https:&amp;#x2F;&amp;#x2F;www.righto.com&amp;#x2F;2025&amp;#x2F;01&amp;#x2F;its-time-to-abandon-cargo-cul...&rdquo;</div>
+                <div class="cs-quote-meta">
+                    <span class="cs-quote-source hn">Hacker News</span>
+                    <span>01HNNWZ0MV43FF &middot; 2025-12-11</span>
+                    <a href="https://news.ycombinator.com/item?id=46232733" target="_blank" rel="noopener" class="cs-quote-link">View thread &rarr;</a>
+                </div>
+            </div>
+            <div class="cs-quote" data-source="reddit">
+                <div class="cs-quote-text">&ldquo;Curious about the culture, benefits, how people enjoy it, like the people etc.&rdquo;</div>
+                <div class="cs-quote-meta">
+                    <span class="cs-quote-source reddit">Reddit</span>
+                    <span>r/RentTheRunway &middot; 3 upvotes &middot; 2026-03-02</span>
+                    <a href="https://reddit.com/r/RentTheRunway/comments/1rj3w1h/does_anyone_work_at_rent_the_runwaynow_or_in_the/" target="_blank" rel="noopener" class="cs-quote-link">View thread &rarr;</a>
+                </div>
+            </div>
+            <div class="cs-quote" data-source="reddit">
+                <div class="cs-quote-text">&ldquo;She has modelled for the likes of Dior, Hermès, Rahul Mishra, Bulgari, Gaurav Gupta, Dries van Noten, Tarun Tahiliani, Sabyasachi, Manish Malhotra.&rdquo;</div>
+                <div class="cs-quote-meta">
+                    <span class="cs-quote-source reddit">Reddit</span>
+                    <span>r/BollywoodFashion &middot; 137 upvotes &middot; 2025-08-26</span>
+                    <a href="https://reddit.com/r/BollywoodFashion/comments/1n0jg78/kirandeep_chahal_takes_a_stand_against/" target="_blank" rel="noopener" class="cs-quote-link">View thread &rarr;</a>
+                </div>
+            </div>
+            <div class="cs-quote" data-source="reddit">
+                <div class="cs-quote-text">&ldquo;found this article; i think you guys will like it. Why Authoritarianism Keeps Failing in America 1. A New Kind of Threat Yes, authoritarianism is rising. No, you’re not being dramatic.&rdquo;</div>
+                <div class="cs-quote-meta">
+                    <span class="cs-quote-source reddit">Reddit</span>
+                    <span>r/50501 &middot; 1564 upvotes &middot; 2025-04-02</span>
+                    <a href="https://reddit.com/r/50501/comments/1jpxkul/why_authoritarianism_keeps_failing_in_america/" target="_blank" rel="noopener" class="cs-quote-link">View thread &rarr;</a>
+                </div>
+            </div>
+        </div>
+        <p class="cs-updated">Sentiment data refreshed daily from public Hacker News and Reddit discussions. <a href="/directory" style="color:var(--accent);text-decoration:none;">See all company profiles &rarr;</a></p>
+    </div>
+</section>
+<!-- ═══ /COMMUNITY SENTIMENT ═══ -->
 
 <!-- ═══ RELATED ═══ -->
 <section class="cp-related">

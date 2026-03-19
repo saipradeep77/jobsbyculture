@@ -470,6 +470,32 @@
         .cp-related-more:hover { text-decoration: underline; }
         @media (max-width: 768px) { .cp-related-grid { grid-template-columns: 1fr; } }
 
+    
+        /* ═══ COMMUNITY SENTIMENT ═══ */
+        .cs-section { padding: 56px 0; border-top: 1px solid var(--border); }
+        .cs-overall { display: flex; align-items: center; gap: 16px; margin-bottom: 28px; }
+        .cs-badge { display: inline-flex; align-items: center; gap: 8px; padding: 8px 18px; border-radius: var(--radius-full); font-size: 14px; font-weight: 700; }
+        .cs-badge.positive { background: rgba(22,163,74,0.08); color: #16a34a; border: 1.5px solid rgba(22,163,74,0.2); }
+        .cs-badge.negative { background: rgba(220,38,38,0.08); color: #dc2626; border: 1.5px solid rgba(220,38,38,0.2); }
+        .cs-badge.mixed { background: rgba(217,119,6,0.08); color: #d97706; border: 1.5px solid rgba(217,119,6,0.2); }
+        .cs-badge.neutral { background: rgba(156,163,175,0.08); color: #6b7280; border: 1.5px solid rgba(156,163,175,0.2); }
+        .cs-stats { font-size: 13px; color: var(--text-3); }
+        .cs-quotes { display: flex; flex-direction: column; gap: 16px; }
+        .cs-quote { background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius); padding: 18px 22px; }
+        .cs-quote-text { font-size: 15px; color: var(--text-2); line-height: 1.7; margin-bottom: 10px; font-style: italic; }
+        .cs-quote-meta { display: flex; align-items: center; gap: 12px; font-size: 12px; color: var(--text-3); }
+        .cs-quote-source { font-weight: 600; text-transform: uppercase; letter-spacing: 0.06em; }
+        .cs-quote-source.hn { color: #ff6600; }
+        .cs-quote-source.reddit { color: #ff4500; }
+        .cs-quote-link { color: var(--accent); text-decoration: none; font-size: 12px; font-weight: 500; }
+        .cs-quote-link:hover { text-decoration: underline; }
+        .cs-updated { font-size: 12px; color: var(--text-3); margin-top: 20px; font-style: italic; }
+        .cs-tabs { display: flex; gap: 8px; margin-bottom: 20px; }
+        .cs-tab { padding: 6px 16px; border-radius: var(--radius-full); font-size: 13px; font-weight: 600; cursor: pointer; border: 1.5px solid var(--border); background: transparent; color: var(--text-2); font-family: var(--font-body); }
+        .cs-tab.active { border-color: var(--accent); color: var(--accent); background: var(--accent-bg); }
+        .cs-tab:hover { border-color: var(--accent); }
+        @media (max-width: 768px) { .cs-quotes { gap: 12px; } .cs-quote { padding: 14px 16px; } }
+
     </style>
 <!-- Privacy-friendly analytics by Plausible -->
 <script async src="https://plausible.io/js/pa-qa3pjs5eZbsfBQJMk4hVW.js"></script>
@@ -730,6 +756,83 @@
 
 
 
+
+<!-- ═══ COMMUNITY SENTIMENT ═══ -->
+<section class="cs-section">
+    <div class="container">
+        <span class="s-label">Community Sentiment</span>
+        <h2 class="s-title">What the <em>community</em> says about OpenAI</h2>
+        <div class="cs-overall">
+            <span class="cs-badge mixed">Mixed Sentiment</span>
+            <span class="cs-stats">13 mentions from Hacker News &amp; Reddit &middot; Updated 2026-03-19</span>
+        </div>
+        <div class="cs-tabs">
+            <button class="cs-tab active" onclick="showSentiment('all',this)">All</button>
+            <button class="cs-tab" onclick="showSentiment('hn',this)">Hacker News</button>
+            <button class="cs-tab" onclick="showSentiment('reddit',this)">Reddit</button>
+        </div>
+        <div class="cs-quotes" id="csQuotes">
+            <div class="cs-quote" data-source="hn">
+                <div class="cs-quote-text">&ldquo;Based on what I know of OpenAI&amp;#x27;s culture, certainly permanent.&rdquo;</div>
+                <div class="cs-quote-meta">
+                    <span class="cs-quote-source hn">Hacker News</span>
+                    <span>stuartjohnson12 &middot; 2025-11-28</span>
+                    <a href="https://news.ycombinator.com/item?id=46074604" target="_blank" rel="noopener" class="cs-quote-link">View thread &rarr;</a>
+                </div>
+            </div>
+            <div class="cs-quote" data-source="hn">
+                <div class="cs-quote-text">&ldquo;It illustrates that there is a real risk to lying about research results: if you get caught it&amp;#x27;s embarrassing.It&amp;#x27;s also worth taking professional integrity into account.&rdquo;</div>
+                <div class="cs-quote-meta">
+                    <span class="cs-quote-source hn">Hacker News</span>
+                    <span>simonw &middot; 2025-10-23</span>
+                    <a href="https://news.ycombinator.com/item?id=45687806" target="_blank" rel="noopener" class="cs-quote-link">View thread &rarr;</a>
+                </div>
+            </div>
+            <div class="cs-quote" data-source="hn">
+                <div class="cs-quote-text">&ldquo;&amp;gt;Thanks to this bottoms-up culture, OpenAI is also very meritocratic. Historically, leaders in the company are promoted primarily based upon their ability to have good ideas and then execute upon...&rdquo;</div>
+                <div class="cs-quote-meta">
+                    <span class="cs-quote-source hn">Hacker News</span>
+                    <span>a_bonobo &middot; 2025-07-16</span>
+                    <a href="https://news.ycombinator.com/item?id=44578951" target="_blank" rel="noopener" class="cs-quote-link">View thread &rarr;</a>
+                </div>
+            </div>
+            <div class="cs-quote" data-source="hn">
+                <div class="cs-quote-text">&ldquo;Fascinating that you chose to compare OpenAI&amp;#x27;s culture to Los Alamos. I can&amp;#x27;t tell if you&amp;#x27;re hinting AI is as world ending as nuclear weapons or not.&rdquo;</div>
+                <div class="cs-quote-meta">
+                    <span class="cs-quote-source hn">Hacker News</span>
+                    <span>JonathanRaines &middot; 2025-07-15</span>
+                    <a href="https://news.ycombinator.com/item?id=44575258" target="_blank" rel="noopener" class="cs-quote-link">View thread &rarr;</a>
+                </div>
+            </div>
+            <div class="cs-quote" data-source="reddit">
+                <div class="cs-quote-text">&ldquo;I recently left Google after nearly four years. I wish I could say it lives up to all the hype, but it didn't. I honestly felt like I did some of the worst work of my career there.&rdquo;</div>
+                <div class="cs-quote-meta">
+                    <span class="cs-quote-source reddit">Reddit</span>
+                    <span>r/cscareerquestions &middot; 2423 upvotes &middot; 2025-05-22</span>
+                    <a href="https://reddit.com/r/cscareerquestions/comments/1kslf3b/after_4_years_at_google_heres_my_honest_take_on/" target="_blank" rel="noopener" class="cs-quote-link">View thread &rarr;</a>
+                </div>
+            </div>
+            <div class="cs-quote" data-source="reddit">
+                <div class="cs-quote-text">&ldquo;Article: Greg Saunier already had reasons to be wary of Spotify. The founder of the acclaimed Bay Area band Deerhoof was well acquainted with the service’s meager payouts to artists and songwriters,...&rdquo;</div>
+                <div class="cs-quote-meta">
+                    <span class="cs-quote-source reddit">Reddit</span>
+                    <span>r/popculturechat &middot; 7071 upvotes &middot; 2025-11-30</span>
+                    <a href="https://reddit.com/r/popculturechat/comments/1pa4sni/spotify_boycott_artists_leave_garbage_hole/" target="_blank" rel="noopener" class="cs-quote-link">View thread &rarr;</a>
+                </div>
+            </div>
+            <div class="cs-quote" data-source="reddit">
+                <div class="cs-quote-text">&ldquo;Around 8 months ago, I joined a US-based HR Tech MNC (a so-called product company) as an SDE-2. Before this, I had spent over 6 years at a major startup, so I’ve had exposure to both worlds.&rdquo;</div>
+                <div class="cs-quote-meta">
+                    <span class="cs-quote-source reddit">Reddit</span>
+                    <span>r/developersIndia &middot; 456 upvotes &middot; 2025-09-01</span>
+                    <a href="https://reddit.com/r/developersIndia/comments/1n5vjip/resigned_due_to_bad_work_culture_toxic_management/" target="_blank" rel="noopener" class="cs-quote-link">View thread &rarr;</a>
+                </div>
+            </div>
+        </div>
+        <p class="cs-updated">Sentiment data refreshed daily from public Hacker News and Reddit discussions. <a href="/directory" style="color:var(--accent);text-decoration:none;">See all company profiles &rarr;</a></p>
+    </div>
+</section>
+<!-- ═══ /COMMUNITY SENTIMENT ═══ -->
 
 <!-- ═══ RELATED ═══ -->
 <section class="cp-related">

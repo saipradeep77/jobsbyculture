@@ -470,6 +470,32 @@
         .cp-related-more:hover { text-decoration: underline; }
         @media (max-width: 768px) { .cp-related-grid { grid-template-columns: 1fr; } }
 
+    
+        /* ═══ COMMUNITY SENTIMENT ═══ */
+        .cs-section { padding: 56px 0; border-top: 1px solid var(--border); }
+        .cs-overall { display: flex; align-items: center; gap: 16px; margin-bottom: 28px; }
+        .cs-badge { display: inline-flex; align-items: center; gap: 8px; padding: 8px 18px; border-radius: var(--radius-full); font-size: 14px; font-weight: 700; }
+        .cs-badge.positive { background: rgba(22,163,74,0.08); color: #16a34a; border: 1.5px solid rgba(22,163,74,0.2); }
+        .cs-badge.negative { background: rgba(220,38,38,0.08); color: #dc2626; border: 1.5px solid rgba(220,38,38,0.2); }
+        .cs-badge.mixed { background: rgba(217,119,6,0.08); color: #d97706; border: 1.5px solid rgba(217,119,6,0.2); }
+        .cs-badge.neutral { background: rgba(156,163,175,0.08); color: #6b7280; border: 1.5px solid rgba(156,163,175,0.2); }
+        .cs-stats { font-size: 13px; color: var(--text-3); }
+        .cs-quotes { display: flex; flex-direction: column; gap: 16px; }
+        .cs-quote { background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius); padding: 18px 22px; }
+        .cs-quote-text { font-size: 15px; color: var(--text-2); line-height: 1.7; margin-bottom: 10px; font-style: italic; }
+        .cs-quote-meta { display: flex; align-items: center; gap: 12px; font-size: 12px; color: var(--text-3); }
+        .cs-quote-source { font-weight: 600; text-transform: uppercase; letter-spacing: 0.06em; }
+        .cs-quote-source.hn { color: #ff6600; }
+        .cs-quote-source.reddit { color: #ff4500; }
+        .cs-quote-link { color: var(--accent); text-decoration: none; font-size: 12px; font-weight: 500; }
+        .cs-quote-link:hover { text-decoration: underline; }
+        .cs-updated { font-size: 12px; color: var(--text-3); margin-top: 20px; font-style: italic; }
+        .cs-tabs { display: flex; gap: 8px; margin-bottom: 20px; }
+        .cs-tab { padding: 6px 16px; border-radius: var(--radius-full); font-size: 13px; font-weight: 600; cursor: pointer; border: 1.5px solid var(--border); background: transparent; color: var(--text-2); font-family: var(--font-body); }
+        .cs-tab.active { border-color: var(--accent); color: var(--accent); background: var(--accent-bg); }
+        .cs-tab:hover { border-color: var(--accent); }
+        @media (max-width: 768px) { .cs-quotes { gap: 12px; } .cs-quote { padding: 14px 16px; } }
+
     </style>
 <!-- Privacy-friendly analytics by Plausible -->
 <script async src="https://plausible.io/js/pa-qa3pjs5eZbsfBQJMk4hVW.js"></script>
@@ -732,6 +758,83 @@
 
 
 
+
+<!-- ═══ COMMUNITY SENTIMENT ═══ -->
+<section class="cs-section">
+    <div class="container">
+        <span class="s-label">Community Sentiment</span>
+        <h2 class="s-title">What the <em>community</em> says about Grafana Labs</h2>
+        <div class="cs-overall">
+            <span class="cs-badge mixed">Mixed Sentiment</span>
+            <span class="cs-stats">10 mentions from Hacker News &amp; Reddit &middot; Updated 2026-03-19</span>
+        </div>
+        <div class="cs-tabs">
+            <button class="cs-tab active" onclick="showSentiment('all',this)">All</button>
+            <button class="cs-tab" onclick="showSentiment('hn',this)">Hacker News</button>
+            <button class="cs-tab" onclick="showSentiment('reddit',this)">Reddit</button>
+        </div>
+        <div class="cs-quotes" id="csQuotes">
+            <div class="cs-quote" data-source="hn">
+                <div class="cs-quote-text">&ldquo;A reply of sorts, and a standard disclaimer that I work at Grafana Labs.&amp;gt; career-driven developmentwe don&amp;#x27;t have this and promote and reward as frequently for &amp;quot;I&amp;#x27;ve done solid...&rdquo;</div>
+                <div class="cs-quote-meta">
+                    <span class="cs-quote-source hn">Hacker News</span>
+                    <span>buro9 &middot; 2025-11-18</span>
+                    <a href="https://news.ycombinator.com/item?id=45963212" target="_blank" rel="noopener" class="cs-quote-link">View thread &rarr;</a>
+                </div>
+            </div>
+            <div class="cs-quote" data-source="hn">
+                <div class="cs-quote-text">&ldquo;Building AI coding tools, there are two common options.The AI suggests code and you run it. Or the AI runs code on your actual machine.&rdquo;</div>
+                <div class="cs-quote-meta">
+                    <span class="cs-quote-source hn">Hacker News</span>
+                    <span>intheleantime &middot; 2026-02-27</span>
+                    <a href="https://news.ycombinator.com/item?id=47181309" target="_blank" rel="noopener" class="cs-quote-link">View thread &rarr;</a>
+                </div>
+            </div>
+            <div class="cs-quote" data-source="hn">
+                <div class="cs-quote-text">&ldquo;&amp;gt; Mimir in version 3.0 needs Apache Kafka to work.I’d like to adjust this understanding. Kafka is the big new thing, but it’s optional. The previous way using gRPC still works.&rdquo;</div>
+                <div class="cs-quote-meta">
+                    <span class="cs-quote-source hn">Hacker News</span>
+                    <span>bboreham &middot; 2025-11-15</span>
+                    <a href="https://news.ycombinator.com/item?id=45936148" target="_blank" rel="noopener" class="cs-quote-link">View thread &rarr;</a>
+                </div>
+            </div>
+            <div class="cs-quote" data-source="hn">
+                <div class="cs-quote-text">&ldquo;Grafana Labs | Remote-first (and-only) | Senior &amp;#x2F; Staff Software Engineer | Full-timeI am looking for someone with a lot of experience with SaaS platforms at scale.&rdquo;</div>
+                <div class="cs-quote-meta">
+                    <span class="cs-quote-source hn">Hacker News</span>
+                    <span>arturw8i &middot; 2025-08-01</span>
+                    <a href="https://news.ycombinator.com/item?id=44757803" target="_blank" rel="noopener" class="cs-quote-link">View thread &rarr;</a>
+                </div>
+            </div>
+            <div class="cs-quote" data-source="reddit">
+                <div class="cs-quote-text">&ldquo;Hey everyone I am thinking about applying to Grafana Labs for a software engineering role and wanted to get a better sense of the company culture.&rdquo;</div>
+                <div class="cs-quote-meta">
+                    <span class="cs-quote-source reddit">Reddit</span>
+                    <span>r/cscareerquestionsEU &middot; 7 upvotes &middot; 2026-03-02</span>
+                    <a href="https://reddit.com/r/cscareerquestionsEU/comments/1rj12rb/how_demanding_is_grafana_labs_for_software/" target="_blank" rel="noopener" class="cs-quote-link">View thread &rarr;</a>
+                </div>
+            </div>
+            <div class="cs-quote" data-source="reddit">
+                <div class="cs-quote-text">&ldquo;**S+ tier (basically mythic status)** * Renaissance Technologies — Medallion Fund * NSA, pure research side * OpenAI (core research / superalignment types) * SpaceX (Starship + propulsion...&rdquo;</div>
+                <div class="cs-quote-meta">
+                    <span class="cs-quote-source reddit">Reddit</span>
+                    <span>r/csMajors &middot; 0 upvotes &middot; 2025-12-13</span>
+                    <a href="https://reddit.com/r/csMajors/comments/1plnso3/tech_tier_list/" target="_blank" rel="noopener" class="cs-quote-link">View thread &rarr;</a>
+                </div>
+            </div>
+            <div class="cs-quote" data-source="reddit">
+                <div class="cs-quote-text">&ldquo;Hi everyone, I was recently approached by a Google HR for a SRE position in Google India (Google Cloud to be precise). I have 2.5years of experience in building backend systems for a bank.&rdquo;</div>
+                <div class="cs-quote-meta">
+                    <span class="cs-quote-source reddit">Reddit</span>
+                    <span>r/leetcode &middot; 1 upvotes &middot; 2026-02-07</span>
+                    <a href="https://reddit.com/r/leetcode/comments/1qyg9oy/google_sre_interviews_preparation_tips/" target="_blank" rel="noopener" class="cs-quote-link">View thread &rarr;</a>
+                </div>
+            </div>
+        </div>
+        <p class="cs-updated">Sentiment data refreshed daily from public Hacker News and Reddit discussions. <a href="/directory" style="color:var(--accent);text-decoration:none;">See all company profiles &rarr;</a></p>
+    </div>
+</section>
+<!-- ═══ /COMMUNITY SENTIMENT ═══ -->
 
 <!-- ═══ RELATED ═══ -->
 <section class="cp-related">

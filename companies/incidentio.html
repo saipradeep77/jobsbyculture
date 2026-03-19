@@ -470,6 +470,32 @@
         .cp-related-more:hover { text-decoration: underline; }
         @media (max-width: 768px) { .cp-related-grid { grid-template-columns: 1fr; } }
 
+    
+        /* ═══ COMMUNITY SENTIMENT ═══ */
+        .cs-section { padding: 56px 0; border-top: 1px solid var(--border); }
+        .cs-overall { display: flex; align-items: center; gap: 16px; margin-bottom: 28px; }
+        .cs-badge { display: inline-flex; align-items: center; gap: 8px; padding: 8px 18px; border-radius: var(--radius-full); font-size: 14px; font-weight: 700; }
+        .cs-badge.positive { background: rgba(22,163,74,0.08); color: #16a34a; border: 1.5px solid rgba(22,163,74,0.2); }
+        .cs-badge.negative { background: rgba(220,38,38,0.08); color: #dc2626; border: 1.5px solid rgba(220,38,38,0.2); }
+        .cs-badge.mixed { background: rgba(217,119,6,0.08); color: #d97706; border: 1.5px solid rgba(217,119,6,0.2); }
+        .cs-badge.neutral { background: rgba(156,163,175,0.08); color: #6b7280; border: 1.5px solid rgba(156,163,175,0.2); }
+        .cs-stats { font-size: 13px; color: var(--text-3); }
+        .cs-quotes { display: flex; flex-direction: column; gap: 16px; }
+        .cs-quote { background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius); padding: 18px 22px; }
+        .cs-quote-text { font-size: 15px; color: var(--text-2); line-height: 1.7; margin-bottom: 10px; font-style: italic; }
+        .cs-quote-meta { display: flex; align-items: center; gap: 12px; font-size: 12px; color: var(--text-3); }
+        .cs-quote-source { font-weight: 600; text-transform: uppercase; letter-spacing: 0.06em; }
+        .cs-quote-source.hn { color: #ff6600; }
+        .cs-quote-source.reddit { color: #ff4500; }
+        .cs-quote-link { color: var(--accent); text-decoration: none; font-size: 12px; font-weight: 500; }
+        .cs-quote-link:hover { text-decoration: underline; }
+        .cs-updated { font-size: 12px; color: var(--text-3); margin-top: 20px; font-style: italic; }
+        .cs-tabs { display: flex; gap: 8px; margin-bottom: 20px; }
+        .cs-tab { padding: 6px 16px; border-radius: var(--radius-full); font-size: 13px; font-weight: 600; cursor: pointer; border: 1.5px solid var(--border); background: transparent; color: var(--text-2); font-family: var(--font-body); }
+        .cs-tab.active { border-color: var(--accent); color: var(--accent); background: var(--accent-bg); }
+        .cs-tab:hover { border-color: var(--accent); }
+        @media (max-width: 768px) { .cs-quotes { gap: 12px; } .cs-quote { padding: 14px 16px; } }
+
     </style>
 <!-- Privacy-friendly analytics by Plausible -->
 <script async src="https://plausible.io/js/pa-qa3pjs5eZbsfBQJMk4hVW.js"></script>
@@ -731,6 +757,83 @@
 
 
 
+
+<!-- ═══ COMMUNITY SENTIMENT ═══ -->
+<section class="cs-section">
+    <div class="container">
+        <span class="s-label">Community Sentiment</span>
+        <h2 class="s-title">What the <em>community</em> says about incident.io</h2>
+        <div class="cs-overall">
+            <span class="cs-badge mixed">Mixed Sentiment</span>
+            <span class="cs-stats">10 mentions from Hacker News &amp; Reddit &middot; Updated 2026-03-19</span>
+        </div>
+        <div class="cs-tabs">
+            <button class="cs-tab active" onclick="showSentiment('all',this)">All</button>
+            <button class="cs-tab" onclick="showSentiment('hn',this)">Hacker News</button>
+            <button class="cs-tab" onclick="showSentiment('reddit',this)">Reddit</button>
+        </div>
+        <div class="cs-quotes" id="csQuotes">
+            <div class="cs-quote" data-source="hn">
+                <div class="cs-quote-text">&ldquo;Always makes me laugh when people pick company names that are domains and spend their life fighting incorrect capitalisation.I work at incident.io it&amp;#x27;s a daily struggle.&rdquo;</div>
+                <div class="cs-quote-meta">
+                    <span class="cs-quote-source hn">Hacker News</span>
+                    <span>lawrjone &middot; 2025-04-10</span>
+                    <a href="https://news.ycombinator.com/item?id=43645430" target="_blank" rel="noopener" class="cs-quote-link">View thread &rarr;</a>
+                </div>
+            </div>
+            <div class="cs-quote" data-source="hn">
+                <div class="cs-quote-text">&ldquo;I&amp;#x27;m one of the engineers at incident.io, so thanks for the mention! But yes, when we first started the majority of our customers bought us for incident management and used PagerDuty as their...&rdquo;</div>
+                <div class="cs-quote-meta">
+                    <span class="cs-quote-source hn">Hacker News</span>
+                    <span>lawrjone &middot; 2025-05-17</span>
+                    <a href="https://news.ycombinator.com/item?id=44013354" target="_blank" rel="noopener" class="cs-quote-link">View thread &rarr;</a>
+                </div>
+            </div>
+            <div class="cs-quote" data-source="hn">
+                <div class="cs-quote-text">&ldquo;But you still have to carry two phones, or using work phone during personal time (as part of on-call).How is this better than just having PagerDuty&amp;#x2F;Incident.&rdquo;</div>
+                <div class="cs-quote-meta">
+                    <span class="cs-quote-source hn">Hacker News</span>
+                    <span>elAhmo &middot; 2025-09-11</span>
+                    <a href="https://news.ycombinator.com/item?id=45209938" target="_blank" rel="noopener" class="cs-quote-link">View thread &rarr;</a>
+                </div>
+            </div>
+            <div class="cs-quote" data-source="hn">
+                <div class="cs-quote-text">&ldquo;Biased as I work for them but I think https:&amp;#x2F;&amp;#x2F;incident.io&amp;#x2F;blog&amp;#x2F;engineering is definitely worth adding.&rdquo;</div>
+                <div class="cs-quote-meta">
+                    <span class="cs-quote-source hn">Hacker News</span>
+                    <span>shelika &middot; 2025-08-10</span>
+                    <a href="https://news.ycombinator.com/item?id=44855256" target="_blank" rel="noopener" class="cs-quote-link">View thread &rarr;</a>
+                </div>
+            </div>
+            <div class="cs-quote" data-source="reddit">
+                <div class="cs-quote-text">&ldquo;**I am not the OOP. The OOP is** u/kitsuponyo **posting in** r/TrueOffMyChest **Ongoing as per OOP** **Content Warning -** &amp;gt;!domestic violence, possible grooming, CP!&rdquo;</div>
+                <div class="cs-quote-meta">
+                    <span class="cs-quote-source reddit">Reddit</span>
+                    <span>r/BORUpdates &middot; 1658 upvotes &middot; 2025-05-11</span>
+                    <a href="https://reddit.com/r/BORUpdates/comments/1kju4lb/my_fiancé_shattered_my_orbital_bone_and_i_almost/" target="_blank" rel="noopener" class="cs-quote-link">View thread &rarr;</a>
+                </div>
+            </div>
+            <div class="cs-quote" data-source="reddit">
+                <div class="cs-quote-text">&ldquo;The final insult to our state.&rdquo;</div>
+                <div class="cs-quote-meta">
+                    <span class="cs-quote-source reddit">Reddit</span>
+                    <span>r/minnesota &middot; 791 upvotes &middot; 2026-03-02</span>
+                    <a href="https://reddit.com/r/minnesota/comments/1rif8u0/the_final_insult_to_our_state/" target="_blank" rel="noopener" class="cs-quote-link">View thread &rarr;</a>
+                </div>
+            </div>
+            <div class="cs-quote" data-source="reddit">
+                <div class="cs-quote-text">&ldquo;[thumbnail](https://i.redd.it/7w6xvy8avr9f1.jpeg) *This drama is a week old as of now.* u/avgDrStonelover was a 16 year old from Odisha who frequently made posts on r/atheismindia: [**Archive of...&rdquo;</div>
+                <div class="cs-quote-meta">
+                    <span class="cs-quote-source reddit">Reddit</span>
+                    <span>r/SubredditDrama &middot; 306 upvotes &middot; 2025-07-04</span>
+                    <a href="https://reddit.com/r/SubredditDrama/comments/1lru2jq/16_year_old_comparing_religious_figure_with_anime/" target="_blank" rel="noopener" class="cs-quote-link">View thread &rarr;</a>
+                </div>
+            </div>
+        </div>
+        <p class="cs-updated">Sentiment data refreshed daily from public Hacker News and Reddit discussions. <a href="/directory" style="color:var(--accent);text-decoration:none;">See all company profiles &rarr;</a></p>
+    </div>
+</section>
+<!-- ═══ /COMMUNITY SENTIMENT ═══ -->
 
 <!-- ═══ RELATED ═══ -->
 <section class="cp-related">
