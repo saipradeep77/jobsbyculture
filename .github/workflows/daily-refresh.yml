@@ -45,6 +45,25 @@ jobs:
       - name: Update counts
         run: node scripts/update-counts.js
 
+      # ── Build company jobs JSON ──
+      - name: Build company jobs
+        run: node scripts/build-company-jobs.js
+
+      # ── Community Sentiment (HN + Reddit) ──
+      - name: Build community sentiment
+        run: node scripts/build-community-sentiment.js
+
+      # ── Inject dynamic sections into company pages ──
+      - name: Inject community sentiment
+        run: node scripts/inject-community-sentiment.js
+
+      - name: Inject related sections
+        run: node scripts/inject-related-section.js
+
+      # ── Build RSS feed ──
+      - name: Build RSS feed
+        run: node scripts/build-rss.js
+
       # ── Submit to IndexNow (Bing, Yandex, Naver) ──
       - name: Submit to IndexNow
         run: node scripts/indexnow.js
@@ -72,8 +91,6 @@ jobs:
             console.log([...m[0].matchAll(/'([a-z0-9-]+)'\s*:\s*\{/g)].length);
           ")
 
-          git pull --rebase origin main
-
           git commit -m "$(cat <<EOF
           [auto] Daily refresh: ${JOBS} jobs from ${COMPANIES} companies
 
@@ -84,4 +101,5 @@ jobs:
           EOF
           )"
 
-          git push
+          git pull --rebase origin main || true
+          git push || echo "Push failed — will retry on next run"
