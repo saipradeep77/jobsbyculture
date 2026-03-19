@@ -86,8 +86,9 @@ for (const file of companyFiles) {
     const fp = path.join(COMPANIES_DIR, file);
     let html = fs.readFileSync(fp, 'utf8');
 
-    const compares = (compareByCompany[slug] || []).slice(0, 8); // Show max 8
+    const allCompares = compareByCompany[slug] || [];
     const blogs = (blogByCompany[slug] || []).slice(0, 5); // Show max 5
+    const compares = allCompares; // Show ALL compare links — no cap, to fix orphan pages
 
     if (compares.length === 0 && blogs.length === 0) {
         console.log('SKIP (no related content): ' + file);
@@ -125,9 +126,7 @@ for (const file of companyFiles) {
             relatedHtml += `                    <li><a href="/compare/${c.slug}"><span class="arrow">&rarr;</span> ${escHtml(coName)} vs ${escHtml(c.otherName)}</a></li>\n`;
         }
         relatedHtml += '                </ul>\n';
-        if ((compareByCompany[slug] || []).length > 8) {
-            relatedHtml += `                <a href="/compare?a=${slug}" class="cp-related-more">See all comparisons &rarr;</a>\n`;
-        }
+        // All compare links are shown — no "see all" needed
         relatedHtml += '            </div>\n';
     }
 
@@ -139,8 +138,15 @@ for (const file of companyFiles) {
         html = html.replace('</style>', relatedCSS + '\n    </style>');
     }
 
-    // Inject related section before the footer
-    html = html.replace('<!-- ═══ FOOTER ═══ -->', relatedHtml + '<!-- ═══ FOOTER ═══ -->');
+    // Inject related section before the footer (handle different comment styles)
+    if (html.includes('<!-- ═══ FOOTER ═══ -->')) {
+        html = html.replace('<!-- ═══ FOOTER ═══ -->', relatedHtml + '<!-- ═══ FOOTER ═══ -->');
+    } else if (html.includes('<!-- FOOTER -->')) {
+        html = html.replace('<!-- FOOTER -->', relatedHtml + '<!-- FOOTER -->');
+    } else {
+        // Fallback: inject before <footer
+        html = html.replace('<footer', relatedHtml + '<footer');
+    }
 
     fs.writeFileSync(fp, html);
     count++;
