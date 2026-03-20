@@ -258,6 +258,25 @@
         .hero-match-btn:hover { background: var(--accent-hover); transform: translateY(-2px); box-shadow: 0 6px 24px rgba(232,89,12,0.2); }
         .hero-match-btn .count { font-family: var(--font-mono); }
 
+        /* Sticky CTA bar */
+        .sticky-cta {
+            position: fixed; bottom: 0; left: 0; right: 0; z-index: 99;
+            background: rgba(250,250,248,0.95); backdrop-filter: blur(16px);
+            border-top: 1px solid var(--border);
+            padding: 12px 24px; text-align: center;
+            transform: translateY(100%); transition: transform 0.3s ease;
+        }
+        .sticky-cta.show { transform: translateY(0); }
+        .sticky-cta button {
+            display: inline-flex; align-items: center; gap: 8px;
+            background: var(--accent); color: #fff; padding: 12px 28px;
+            border-radius: var(--radius); font-size: 15px; font-weight: 700;
+            border: none; cursor: pointer; font-family: var(--font-body);
+            transition: background 0.2s;
+        }
+        .sticky-cta button:hover { background: var(--accent-hover); }
+        .sticky-cta .count { font-family: var(--font-mono); }
+
         .hero-metrics {
             display: flex; gap: 48px;
             animation: fadeUp 0.5s ease 0.3s both;
@@ -2918,6 +2937,11 @@
     </div>
 </section>
 
+<!-- ═══ STICKY CTA ═══ -->
+<div class="sticky-cta" id="stickyCta">
+    <button onclick="goHeroMatch()">Show me <span class="count" id="stickyCount">5,668</span> matches &rarr;</button>
+</div>
+
 <!-- ═══ FOOTER ═══ -->
 <footer>
     <div class="container">
@@ -3205,7 +3229,7 @@ function twErase(el, text, cb) {
 }
 function twType(el, text, cb) {
     var i = 0;
-    (function step() { if (twPaused || i >= text.length) { if(!twPaused) cb(); return; } el.textContent = text.substring(0, ++i); twTimer = setTimeout(step, 35); })();
+    (function step() { if (twPaused || i >= text.length) { if(!twPaused) cb(); return; } el.textContent = text.substring(0, ++i); twTimer = setTimeout(step, 55); })();
 }
 
 function twRun() {
@@ -3219,7 +3243,7 @@ function twRun() {
             heroRoleSlug = slug;
             document.querySelectorAll('#heroRoleMenu .hero-dd-opt').forEach(function(b) { b.classList.toggle('active', b.dataset.slug === slug); });
             updateHeroCount();
-            twTimer = setTimeout(twRun, 1800);
+            twTimer = setTimeout(twRun, 3000);
         });
     });
 }
@@ -3231,6 +3255,37 @@ buildRoleDD();
 buildValueChips();
 updateHeroCount();
 twTimer = setTimeout(twRun, 2200);
+
+// Sticky CTA — show when hero button scrolls out of view
+(function() {
+    var heroBtn = document.getElementById('heroMatchBtn');
+    var stickyCta = document.getElementById('stickyCta');
+    var stickyCount = document.getElementById('stickyCount');
+    if (!heroBtn || !stickyCta) return;
+
+    // Keep sticky count in sync with hero count
+    var origUpdateHeroCount = updateHeroCount;
+    updateHeroCount = function() {
+        origUpdateHeroCount();
+        if (stickyCount) stickyCount.textContent = document.getElementById('heroCount').textContent;
+    };
+
+    var ticking = false;
+    window.addEventListener('scroll', function() {
+        if (!ticking) {
+            requestAnimationFrame(function() {
+                var rect = heroBtn.getBoundingClientRect();
+                if (rect.bottom < 0) {
+                    stickyCta.classList.add('show');
+                } else {
+                    stickyCta.classList.remove('show');
+                }
+                ticking = false;
+            });
+            ticking = true;
+        }
+    });
+})();
 
 function scrollToCompanies() {
     document.getElementById('companies').scrollIntoView({ behavior: 'smooth' });
