@@ -7160,10 +7160,10 @@ buildFilters();
     if (vals) {
         vals.split(',').forEach(v => { if (VALUES[v]) activeValues.add(v); });
     }
-    // Support ?value=ethical-ai (from homepage "Explore" cards)
+    // Support ?value=ethical-ai or ?value=wlb,async,open-source (comma-separated)
     const single = params.get('value');
-    if (single && VALUES[single]) {
-        activeValues.add(single);
+    if (single) {
+        single.split(',').forEach(v => { if (VALUES[v.trim()]) activeValues.add(v.trim()); });
     }
     // Support ?company=anthropic (from homepage company cards)
     const company = params.get('company');
