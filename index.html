@@ -3139,6 +3139,7 @@ const CV = {
 
 let heroRoleSlug = 'engineering';
 let heroSelectedValues = new Set();
+let heroRoleManuallySelected = false;
 let twTimer = null;
 let twPaused = false;
 
@@ -3146,10 +3147,18 @@ function computeCount() {
     const selVals = Array.from(heroSelectedValues);
     let total = 0;
     for (const [co, vals] of Object.entries(CV)) {
-        // If no values selected, count all jobs for this role; otherwise only from matching companies
+        // If no values selected, match all companies; otherwise only matching companies
         const match = selVals.length === 0 || selVals.some(v => vals.includes(v));
         if (match && CRC[co]) {
-            total += (CRC[co][heroRoleSlug] || 0);
+            if (heroRoleManuallySelected) {
+                // User picked a specific role — filter by it
+                total += (CRC[co][heroRoleSlug] || 0);
+            } else {
+                // No role manually selected — count ALL jobs for matching companies
+                for (const count of Object.values(CRC[co])) {
+                    total += count;
+                }
+            }
         }
     }
     return total;
@@ -3179,6 +3188,7 @@ function toggleRoleDD() {
 
 function pickRole(slug) {
     heroRoleSlug = slug;
+    heroRoleManuallySelected = true;
     var r = HERO_ROLES.find(function(x){ return x.slug === slug; });
     document.getElementById('heroRoleText').textContent = r.label;
     updateArticle(r.label);
@@ -3208,9 +3218,10 @@ function toggleChip(slug) {
 }
 
 function goHeroMatch() {
-    var params = 'role=' + heroRoleSlug;
-    if (heroSelectedValues.size > 0) params += '&values=' + Array.from(heroSelectedValues).join(',');
-    window.location.href = '/jobs?' + params;
+    var params = [];
+    if (heroRoleManuallySelected) params.push('role=' + heroRoleSlug);
+    if (heroSelectedValues.size > 0) params.push('value=' + Array.from(heroSelectedValues).join(','));
+    window.location.href = '/jobs' + (params.length > 0 ? '?' + params.join('&') : '');
 }
 
 // Close dropdown on outside click
