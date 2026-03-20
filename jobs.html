@@ -7032,10 +7032,34 @@ function renderJobs() {
     }
 
     // Spread jobs so same company doesn't appear consecutively
-    // BUT only when no culture-based sort is active (to preserve match order)
-    if (!userSorted) {
-        const uniqueCompanies = new Set(filtered.map(j => j.company));
-        if (uniqueCompanies.size > 1) {
+    const uniqueCompanies = new Set(filtered.map(j => j.company));
+    if (uniqueCompanies.size > 1) {
+        if (activeValues.size > 0 && sort === 'relevance') {
+            // Group by match score tier, then interleave within each tier
+            const tiers = {};
+            filtered.forEach(j => {
+                const score = Math.round(matchScore(j.company) * 100);
+                if (!tiers[score]) tiers[score] = [];
+                tiers[score].push(j);
+            });
+            const result = [];
+            // Process tiers from highest to lowest
+            Object.keys(tiers).sort((a, b) => b - a).forEach(score => {
+                const tierJobs = tiers[score];
+                const groups = {};
+                tierJobs.forEach(j => { if (!groups[j.company]) groups[j.company] = []; groups[j.company].push(j); });
+                const buckets = Object.values(groups).sort((a, b) => b.length - a.length);
+                const tierSpread = [];
+                let idx = 0;
+                while (tierSpread.length < tierJobs.length) {
+                    for (const g of buckets) { if (idx < g.length) tierSpread.push(g[idx]); }
+                    idx++;
+                }
+                tierSpread.forEach(j => result.push(j));
+            });
+            filtered = result;
+        } else {
+            // Default: simple interleave across all companies
             const groups = {};
             filtered.forEach(j => { if (!groups[j.company]) groups[j.company] = []; groups[j.company].push(j); });
             const buckets = Object.values(groups).sort((a, b) => b.length - a.length);
