@@ -448,9 +448,8 @@
             <div class="results-head">
                 <div class="results-count" id="resultsCount">Loading...</div>
                 <select class="sort-select" id="sortSelect" onchange="renderJobs()">
-                    <option value="relevance">Sort: Best Match</option>
-                    <option value="salary">Sort: Salary (High→Low)</option>
-                    <option value="culture">Sort: Culture Score</option>
+                    <option value="relevance">Sort: Best Culture Match</option>
+                    <option value="glassdoor">Sort: Glassdoor Rating</option>
                     <option value="recent">Sort: Most Recent</option>
                 </select>
             </div>
@@ -7017,31 +7016,37 @@ function renderJobs() {
 
     // Sort
     const sort = document.getElementById('sortSelect').value;
-    if (sort === 'salary') filtered.sort((a,b) => parseSalaryMid(b.salary||'0') - parseSalaryMid(a.salary||'0'));
-    else if (sort === 'culture') filtered.sort((a,b) => {
-        const sa = getCultureScore(a.company), sb = getCultureScore(b.company);
-        if (sa && sb) return sb.pct - sa.pct;
-        return COMPANIES[b.company].glassdoor - COMPANIES[a.company].glassdoor;
-    });
-    else if (sort === 'recent') filtered.sort((a,b) => { 
-        const order = {'1d':1,'2d':2,'3d':3,'4d':4,'5d':5,'6d':6,'1w':7};
-        return (order[a.posted.replace(' ago','')]||10) - (order[b.posted.replace(' ago','')]||10);
-    });
-    else if (activeValues.size > 0) filtered.sort((a,b) => matchScore(b.company) - matchScore(a.company));
+    let userSorted = false;
 
-    // Spread jobs so same company doesn't appear consecutively (skip for single-company view)
-    const uniqueCompanies = new Set(filtered.map(j => j.company));
-    if (uniqueCompanies.size > 1) {
-        const groups = {};
-        filtered.forEach(j => { if (!groups[j.company]) groups[j.company] = []; groups[j.company].push(j); });
-        const buckets = Object.values(groups).sort((a, b) => b.length - a.length);
-        const spread = [];
-        let idx = 0;
-        while (spread.length < filtered.length) {
-            for (const g of buckets) { if (idx < g.length) spread.push(g[idx]); }
-            idx++;
+    if (sort === 'glassdoor') {
+        filtered.sort((a,b) => COMPANIES[b.company].glassdoor - COMPANIES[a.company].glassdoor);
+        userSorted = true;
+    } else if (sort === 'recent') {
+        const order = {'1d':1,'2d':2,'3d':3,'4d':4,'5d':5,'6d':6,'1w':7};
+        filtered.sort((a,b) => (order[a.posted.replace(' ago','')]||10) - (order[b.posted.replace(' ago','')]||10));
+        userSorted = true;
+    } else if (activeValues.size > 0) {
+        // Best Culture Match: sort by % of selected values matched (highest first)
+        filtered.sort((a,b) => matchScore(b.company) - matchScore(a.company));
+        userSorted = true;
+    }
+
+    // Spread jobs so same company doesn't appear consecutively
+    // BUT only when no culture-based sort is active (to preserve match order)
+    if (!userSorted) {
+        const uniqueCompanies = new Set(filtered.map(j => j.company));
+        if (uniqueCompanies.size > 1) {
+            const groups = {};
+            filtered.forEach(j => { if (!groups[j.company]) groups[j.company] = []; groups[j.company].push(j); });
+            const buckets = Object.values(groups).sort((a, b) => b.length - a.length);
+            const spread = [];
+            let idx = 0;
+            while (spread.length < filtered.length) {
+                for (const g of buckets) { if (idx < g.length) spread.push(g[idx]); }
+                idx++;
+            }
+            filtered = spread;
         }
-        filtered = spread;
     }
 
     document.getElementById('resultsCount').innerHTML = `<b>${filtered.length}</b> jobs found${activeValues.size ? ` matching <b>${activeValues.size}</b> value${activeValues.size>1?'s':''}` : ''}`;
