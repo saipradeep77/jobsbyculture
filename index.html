@@ -205,11 +205,27 @@
         .hero-dd-trigger {
             color: var(--accent); font-style: italic; font-family: var(--font-display);
             cursor: pointer; white-space: nowrap;
-            border-bottom: 2.5px solid var(--accent-border);
-            transition: border-color 0.2s;
+            border-bottom: 2.5px solid var(--accent);
+            transition: all 0.2s;
+            padding: 2px 8px 4px;
+            border-radius: 4px;
+            background: var(--accent-bg);
+            animation: pulseGlow 2s ease-in-out infinite;
         }
-        .hero-dd-trigger:hover { border-bottom-color: var(--accent); }
-        .hero-dd-trigger .arrow { font-size: 0.55em; margin-left: 3px; font-style: normal; opacity: 0.5; vertical-align: middle; }
+        .hero-dd-trigger:hover { background: rgba(232,89,12,0.12); }
+        .hero-dd-trigger .arrow { font-size: 0.55em; margin-left: 3px; font-style: normal; opacity: 0.7; vertical-align: middle; }
+        .hero-dd-trigger.user-picked { animation: none; background: var(--accent-bg); }
+        @keyframes pulseGlow {
+            0%, 100% { box-shadow: 0 0 0 0 rgba(232,89,12,0); }
+            50% { box-shadow: 0 0 0 6px rgba(232,89,12,0.1); }
+        }
+        .hero-dd-hint {
+            font-size: 12px; color: var(--accent); font-family: var(--font-body);
+            font-style: normal; font-weight: 500; letter-spacing: 0.02em;
+            margin-top: 6px; opacity: 0.8;
+            animation: fadeUp 0.5s ease 0.5s both;
+        }
+        .hero-dd-hint.hidden { display: none; }
         .hero-dd-menu {
             display: none; position: absolute; top: calc(100% + 10px); left: 0;
             background: var(--bg-raised); border: 1px solid var(--border-2);
@@ -236,15 +252,26 @@
         }
         .hero-chip {
             padding: 8px 16px; border-radius: var(--radius-full);
-            background: var(--bg-raised); border: 1.5px solid var(--border);
+            background: var(--bg-raised); border: 1.5px solid var(--border-2);
             color: var(--text-2); font-size: 14px; font-weight: 500;
             cursor: pointer; transition: all 0.2s; user-select: none;
             font-family: var(--font-body);
+            display: inline-flex; align-items: center; gap: 4px;
         }
-        .hero-chip:hover { border-color: var(--border-3); color: var(--text); transform: translateY(-1px); }
-        .hero-chip .chip-ico { margin-right: 4px; }
+        .hero-chip:hover { border-color: var(--accent); color: var(--accent); transform: translateY(-1px); box-shadow: 0 2px 8px rgba(232,89,12,0.08); }
+        .hero-chip .chip-ico { margin-right: 2px; }
+        .hero-chip .chip-action { font-size: 12px; opacity: 0.5; margin-left: 2px; }
         .hero-chip.on { background: var(--accent); border-color: var(--accent); color: #fff; font-weight: 600; box-shadow: 0 2px 10px rgba(232,89,12,0.2); }
         .hero-chip.on:hover { background: var(--accent-hover); border-color: var(--accent-hover); }
+        .hero-chip.on .chip-action { opacity: 1; }
+        .hero-values-header {
+            display: flex; align-items: center; justify-content: space-between;
+            width: 100%; max-width: 780px; margin-bottom: 10px;
+        }
+        .hero-values-label { font-size: 13px; color: var(--text-3); font-weight: 500; }
+        .hero-clear { font-size: 12px; color: var(--accent); cursor: pointer; font-weight: 600; background: none; border: none; font-family: var(--font-body); display: none; }
+        .hero-clear:hover { text-decoration: underline; }
+        .hero-clear.show { display: inline; }
 
         /* Match button */
         .hero-match-btn {
@@ -563,11 +590,16 @@
         <h1 class="hero-cta-line">
             I'm <span id="heroArticle">a</span>
             <span class="hero-dd" id="heroRoleDD">
-                <span class="hero-dd-trigger" onclick="toggleRoleDD()"><span id="heroRoleText">Software Engineer</span><span class="arrow">&#9662;</span></span>
+                <span class="hero-dd-trigger" id="heroTrigger" onclick="toggleRoleDD()"><span id="heroRoleText">Software Engineer</span><span class="arrow">&#9662;</span></span>
                 <div class="hero-dd-menu" id="heroRoleMenu"></div>
             </span>
             who cares about&hellip;
         </h1>
+        <p class="hero-dd-hint" id="heroHint">Click the role above to pick yours</p>
+        <div class="hero-values-header">
+            <span class="hero-values-label">Select what matters to you:</span>
+            <button class="hero-clear" id="heroClear" onclick="clearAllChips()">Clear all</button>
+        </div>
         <div class="hero-values" id="heroValues"></div>
         <button class="hero-match-btn" id="heroMatchBtn" onclick="goHeroMatch()">Show me <span class="count" id="heroCount">5,668</span> matches &rarr;</button>
         <p class="hero-trust">Built on<strong> real employee reviews</strong>, not marketing fluff.</p>
@@ -3196,6 +3228,11 @@ function pickRole(slug) {
     document.querySelectorAll('#heroRoleMenu .hero-dd-opt').forEach(function(el) {
         el.classList.toggle('active', el.dataset.slug === slug);
     });
+    // Stop the pulse animation and hide hint
+    var trigger = document.getElementById('heroTrigger');
+    if (trigger) trigger.classList.add('user-picked');
+    var hint = document.getElementById('heroHint');
+    if (hint) hint.classList.add('hidden');
     updateHeroCount();
     pauseTW();          // user made a deliberate choice — stop rotating
 }
@@ -3204,7 +3241,8 @@ function pickRole(slug) {
 function buildValueChips() {
     document.getElementById('heroValues').innerHTML = HERO_VALUES.map(v =>
         '<span class="hero-chip" data-v="' + v.slug + '" onclick="toggleChip(\'' + v.slug + '\')">' +
-        '<span class="chip-ico">' + v.ico + '</span>' + v.label + '</span>'
+        '<span class="chip-ico">' + v.ico + '</span>' + v.label +
+        '<span class="chip-action">+</span></span>'
     ).join('');
 }
 
@@ -3212,8 +3250,25 @@ function toggleChip(slug) {
     if (heroSelectedValues.has(slug)) heroSelectedValues.delete(slug);
     else heroSelectedValues.add(slug);
     document.querySelectorAll('.hero-chip').forEach(function(el) {
-        el.classList.toggle('on', heroSelectedValues.has(el.dataset.v));
+        var isOn = heroSelectedValues.has(el.dataset.v);
+        el.classList.toggle('on', isOn);
+        var action = el.querySelector('.chip-action');
+        if (action) action.textContent = isOn ? '\u2713' : '+';
     });
+    var clearBtn = document.getElementById('heroClear');
+    if (clearBtn) clearBtn.classList.toggle('show', heroSelectedValues.size > 0);
+    updateHeroCount();
+}
+
+function clearAllChips() {
+    heroSelectedValues.clear();
+    document.querySelectorAll('.hero-chip').forEach(function(el) {
+        el.classList.remove('on');
+        var action = el.querySelector('.chip-action');
+        if (action) action.textContent = '+';
+    });
+    var clearBtn = document.getElementById('heroClear');
+    if (clearBtn) clearBtn.classList.remove('show');
     updateHeroCount();
 }
 
