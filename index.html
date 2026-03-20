@@ -141,7 +141,7 @@
         .btn-sm:hover { background: var(--accent-hover); transform: translateY(-1px); }
 
         /* ═══ HERO ═══ */
-        .hero { padding: 110px 0 60px; position: relative; text-align: center; }
+        .hero { padding: 110px 0 60px; position: relative; }
         .hero::before {
             content: ''; position: absolute; top: -100px; left: 50%; transform: translateX(-50%);
             width: 900px; height: 600px;
@@ -246,17 +246,18 @@
 
         /* Value chips */
         .hero-values {
-            display: flex; flex-wrap: wrap; gap: 10px; max-width: 100%;
-            margin-bottom: 28px; justify-content: center;
+            display: grid; grid-template-columns: repeat(9, 1fr); gap: 8px;
+            max-width: 100%; margin-bottom: 28px;
             animation: fadeUp 0.5s ease 0.16s both;
         }
         .hero-chip {
-            padding: 8px 16px; border-radius: var(--radius-full);
+            padding: 8px 10px; border-radius: var(--radius-full);
             background: var(--bg-raised); border: 1.5px solid var(--border-2);
-            color: var(--text-2); font-size: 14px; font-weight: 500;
+            color: var(--text-2); font-size: 13px; font-weight: 500;
             cursor: pointer; transition: all 0.2s; user-select: none;
             font-family: var(--font-body);
-            display: inline-flex; align-items: center; gap: 4px;
+            display: flex; align-items: center; justify-content: center; gap: 3px;
+            white-space: nowrap; text-align: center;
         }
         .hero-chip:hover { border-color: var(--accent); color: var(--accent); transform: translateY(-1px); box-shadow: 0 2px 8px rgba(232,89,12,0.08); }
         .hero-chip .chip-ico { margin-right: 2px; }
@@ -265,7 +266,7 @@
         .hero-chip.on:hover { background: var(--accent-hover); border-color: var(--accent-hover); }
         .hero-chip.on .chip-action { opacity: 1; }
         .hero-values-header {
-            display: flex; align-items: center; justify-content: center; gap: 16px;
+            display: flex; align-items: center; justify-content: space-between;
             width: 100%; margin-bottom: 10px;
         }
         .hero-values-label { font-size: 13px; color: var(--text-3); font-weight: 500; }
@@ -305,7 +306,7 @@
         .sticky-cta .count { font-family: var(--font-mono); }
 
         .hero-metrics {
-            display: flex; gap: 40px; justify-content: center;
+            display: flex; gap: 40px;
             animation: fadeUp 0.5s ease 0.3s both;
         }
         .metric-val { font-family: var(--font-mono); font-size: 26px; font-weight: 500; letter-spacing: -0.02em; }
@@ -532,8 +533,8 @@
             .nav-links.open { display: flex; }
             .hero { padding: 90px 0 40px; }
             .hero-cta-line { font-size: clamp(26px, 6vw, 40px); }
-            .hero-values { gap: 6px; }
-            .hero-chip { padding: 6px 12px; font-size: 13px; }
+            .hero-values { grid-template-columns: repeat(3, 1fr); gap: 6px; }
+            .hero-chip { padding: 6px 8px; font-size: 12px; }
             .hero-metrics { gap: 28px; flex-wrap: wrap; }
             .co-grid { grid-template-columns: 1fr; }
             .ex-grid { grid-template-columns: 1fr 1fr; }
