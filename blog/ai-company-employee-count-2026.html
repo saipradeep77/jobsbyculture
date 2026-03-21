@@ -307,15 +307,19 @@
         .ranking-table-wrapper {
             overflow-x: auto;
             -webkit-overflow-scrolling: touch;
-            margin: 24px 0 32px;
+            margin: 24px -120px 32px;
             border: 1px solid var(--border);
             border-radius: var(--radius);
+            width: calc(100% + 240px);
+        }
+        @media (max-width: 960px) {
+            .ranking-table-wrapper { margin: 24px 0 32px; width: 100%; }
         }
         .ranking-table {
             width: 100%;
             border-collapse: collapse;
             font-size: 14px;
-            min-width: 700px;
+            min-width: 900px;
         }
         .ranking-table thead {
             position: sticky;
