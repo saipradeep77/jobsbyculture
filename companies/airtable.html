@@ -494,6 +494,9 @@
         .cs-tab.active { border-color: var(--accent); color: var(--accent); background: var(--accent-bg); }
         .cs-tab:hover { border-color: var(--accent); }
         @media (max-width: 768px) { .cs-quotes { gap: 12px; } .cs-quote { padding: 14px 16px; } }
+            .claim-modal { padding: 28px 24px; }
+            .claim-modal-row { grid-template-columns: 1fr; }
+        }
 
     
         /* ═══ CLAIM PROFILE BANNER ═══ */
@@ -506,14 +509,18 @@
             gap: 16px; max-width: 800px; margin: -20px auto 40px;
             animation: fadeUp 0.5s ease 0.3s both;
         }
-        .claim-banner-text { display: flex; align-items: center; gap: 8px; }
-        .claim-banner-text .badge {
+        .claim-banner-text { display: flex; flex-direction: column; gap: 4px; }
+        .claim-banner-title {
+            font-size: 15px; font-weight: 700; color: var(--text);
+            display: flex; align-items: center; gap: 8px;
+        }
+        .claim-banner-title .badge {
             font-size: 10px; font-weight: 700; text-transform: uppercase;
             letter-spacing: 0.08em; color: #fff; background: var(--teal);
             padding: 2px 8px; border-radius: var(--radius-full); flex-shrink: 0;
         }
-        .claim-banner-text span:last-child {
-            font-size: 14px; color: var(--text-2);
+        .claim-banner-desc {
+            font-size: 13px; color: var(--text-2); line-height: 1.5;
         }
         .claim-banner-btn {
             flex-shrink: 0; background: var(--teal); color: #fff;
@@ -670,8 +677,8 @@
 <!-- ═══ CLAIM BANNER ═══ -->
 <div class="claim-banner">
     <div class="claim-banner-text">
-        <span class="badge">Free</span>
-        <span>Work at Airtable? <strong>Claim this profile</strong></span>
+        <div class="claim-banner-title"><span class="badge">Free</span> Work at Airtable? Claim this profile</div>
+        <div class="claim-banner-desc">Update your company's culture data, respond to reviews, and feature your open roles prominently.</div>
     </div>
     <button class="claim-banner-btn" onclick="document.getElementById('claimOverlayairtable').classList.add('open')">Claim Profile &rarr;</button>
 </div>
