@@ -599,12 +599,38 @@
 </section>
 
 <!-- ═══ CLAIM BANNER ═══ -->
-<div class="claim-banner">
-    <div class="claim-banner-text">
-        <div class="claim-banner-title"><span class="badge">Free</span> Work at Mercury? Claim this profile</div>
-        <div class="claim-banner-desc">Update your company's culture data, respond to reviews, and feature your open roles prominently.</div>
+<div class="claim-banner" id="claimBanner">
+    <div class="claim-banner-header" onclick="document.getElementById('claimFormmercury').classList.toggle('open')">
+        <div class="claim-banner-text">
+            <div class="claim-banner-title"><span class="badge">Free</span> Work at Mercury? Claim this profile</div>
+            <div class="claim-banner-desc">Update your culture data, respond to reviews, and feature your open roles prominently.</div>
+        </div>
+        <button class="claim-banner-toggle" type="button">Claim Profile &darr;</button>
     </div>
-    <a href="mailto:hello@jobsbyculture.com?subject=Claim%20Mercury's%20profile%20on%20JobsByCulture&body=Hi%20JobsByCulture%20team%2C%0A%0AI%20work%20at%20Mercury%20and%20would%20like%20to%20claim%20our%20company%20profile%20on%20jobsbyculture.com%2Fcompanies%2Fmercury.%0A%0APlease%20let%20me%20know%20the%20next%20steps.%0A%0AThanks" class="claim-banner-btn">Claim Profile &rarr;</a>
+    <div class="claim-form" id="claimFormmercury">
+        <form action="https://formspree.io/f/xbdapzke" method="POST" onsubmit="this.style.display='none';this.nextElementSibling.style.display='block';return true;">
+            <input type="hidden" name="_subject" value="Profile Claim: Mercury">
+            <input type="hidden" name="company" value="Mercury">
+            <input type="hidden" name="profile_url" value="https://jobsbyculture.com/companies/mercury">
+            <div class="claim-form-row">
+                <input type="text" name="name" placeholder="Your name" required>
+                <input type="email" name="email" placeholder="Work email" required>
+            </div>
+            <div class="claim-form-row">
+                <input type="text" name="role" placeholder="Your role (e.g., Head of Talent)">
+                <select name="interest">
+                    <option value="" disabled selected>What are you interested in?</option>
+                    <option value="claim">Claim &amp; update our profile</option>
+                    <option value="feature-jobs">Feature our open roles</option>
+                    <option value="respond-reviews">Respond to reviews</option>
+                    <option value="employer-brand">Employer branding partnership</option>
+                    <option value="other">Something else</option>
+                </select>
+            </div>
+            <button type="submit" class="claim-form-submit">Submit &rarr;</button>
+        </form>
+        <div class="claim-form-success">Thanks! We'll be in touch within 24 hours.</div>
+    </div>
 </div>
 <!-- ═══ /CLAIM BANNER ═══ -->
 
