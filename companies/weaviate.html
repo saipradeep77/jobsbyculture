@@ -108,6 +108,49 @@
         .cs-tab:hover { border-color: var(--accent); }
         @media (max-width: 768px) { .cs-quotes { gap: 12px; } .cs-quote { padding: 14px 16px; } }
 
+    
+        /* ═══ CLAIM PROFILE BANNER ═══ */
+        .claim-banner {
+            background: linear-gradient(135deg, rgba(13,148,136,0.06) 0%, rgba(232,89,12,0.06) 100%);
+            border: 1.5px solid rgba(13,148,136,0.2);
+            border-radius: var(--radius);
+            padding: 20px 28px;
+            display: flex; align-items: center; justify-content: space-between;
+            gap: 20px; max-width: 800px; margin: -20px auto 40px;
+            animation: fadeUp 0.5s ease 0.3s both;
+        }
+        .claim-banner-text {
+            display: flex; flex-direction: column; gap: 4px;
+        }
+        .claim-banner-title {
+            font-size: 15px; font-weight: 700; color: var(--text);
+            display: flex; align-items: center; gap: 8px;
+        }
+        .claim-banner-title .badge {
+            font-size: 10px; font-weight: 700; text-transform: uppercase;
+            letter-spacing: 0.08em; color: #fff; background: var(--teal);
+            padding: 2px 8px; border-radius: var(--radius-full);
+        }
+        .claim-banner-desc {
+            font-size: 13px; color: var(--text-2); line-height: 1.5;
+        }
+        .claim-banner-btn {
+            flex-shrink: 0; display: inline-flex; align-items: center; gap: 6px;
+            background: var(--teal); color: #fff;
+            padding: 10px 22px; border-radius: var(--radius-full);
+            font-size: 14px; font-weight: 700; text-decoration: none;
+            font-family: var(--font-body); transition: all 0.2s;
+            white-space: nowrap;
+        }
+        .claim-banner-btn:hover {
+            background: #0b8278; transform: translateY(-1px);
+            box-shadow: 0 4px 16px rgba(13,148,136,0.2);
+        }
+        @media (max-width: 768px) {
+            .claim-banner { flex-direction: column; text-align: center; padding: 16px 20px; }
+            .claim-banner-btn { width: 100%; justify-content: center; }
+        }
+
     </style>
 <script async src="https://plausible.io/js/pa-qa3pjs5eZbsfBQJMk4hVW.js"></script>
 <script> window.plausible=window.plausible||function(){(plausible.q=plausible.q||[]).push(arguments)},plausible.init=plausible.init||function(i){plausible.o=i||{}}; plausible.init() </script>
@@ -130,6 +173,18 @@
         </div>
     </div>
 </section>
+
+<!-- ═══ CLAIM BANNER ═══ -->
+<div class="claim-banner">
+    <div class="claim-banner-text">
+        <div class="claim-banner-title"><span class="badge">Free</span> Work at Weaviate? Claim this profile</div>
+        <div class="claim-banner-desc">Update your company's culture data, respond to reviews, and feature your open roles prominently.</div>
+    </div>
+    <a href="mailto:hello@jobsbyculture.com?subject=Claim%20Weaviate's%20profile%20on%20JobsByCulture&body=Hi%20JobsByCulture%20team%2C%0A%0AI%20work%20at%20Weaviate%20and%20would%20like%20to%20claim%20our%20company%20profile%20on%20jobsbyculture.com%2Fcompanies%2Fweaviate.%0A%0APlease%20let%20me%20know%20the%20next%20steps.%0A%0AThanks" class="claim-banner-btn">Claim Profile &rarr;</a>
+</div>
+<!-- ═══ /CLAIM BANNER ═══ -->
+
+
 
 <section class="cp-section cp-section-alt"><div class="container">
     <span class="s-label">Culture Overview</span>

@@ -19,9 +19,10 @@
     "build:rss": "node scripts/build-rss.js",
     "build:sentiment": "node scripts/build-community-sentiment.js",
     "inject:sentiment": "node scripts/inject-community-sentiment.js",
+    "inject:claim": "node scripts/inject-claim-banner.js",
     "inject:related": "node scripts/inject-related-section.js",
     "add-refs": "node scripts/add-ref-to-links.js",
-    "refresh": "node scripts/fetch-jobs.js && node scripts/update-jobs-html.js && node scripts/build-cluster-pages.js && node scripts/build-location-pages.js && node scripts/build-location-role-pages.js && node scripts/update-counts.js && node scripts/build-company-jobs.js && node scripts/build-community-sentiment.js && node scripts/inject-community-sentiment.js && node scripts/inject-related-section.js && node scripts/add-ref-to-links.js && node scripts/build-rss.js && node scripts/indexnow.js && node scripts/export-social.js"
+    "refresh": "node scripts/fetch-jobs.js && node scripts/update-jobs-html.js && node scripts/build-cluster-pages.js && node scripts/build-location-pages.js && node scripts/build-location-role-pages.js && node scripts/update-counts.js && node scripts/build-company-jobs.js && node scripts/build-community-sentiment.js && node scripts/inject-community-sentiment.js && node scripts/inject-related-section.js && node scripts/inject-claim-banner.js && node scripts/add-ref-to-links.js && node scripts/build-rss.js && node scripts/indexnow.js && node scripts/export-social.js"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.39.0",
