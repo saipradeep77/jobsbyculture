@@ -435,38 +435,12 @@
 </section>
 
 <!-- ═══ CLAIM BANNER ═══ -->
-<div class="claim-banner" id="claimBanner">
-    <div class="claim-banner-header" onclick="document.getElementById('claimForm15five').classList.toggle('open')">
-        <div class="claim-banner-text">
-            <div class="claim-banner-title"><span class="badge">Free</span> Work at 15five? Claim this profile</div>
-            <div class="claim-banner-desc">Update your culture data, respond to reviews, and feature your open roles prominently.</div>
-        </div>
-        <button class="claim-banner-toggle" type="button">Claim Profile &darr;</button>
+<div class="claim-banner">
+    <div class="claim-banner-text">
+        <span class="badge">Free</span>
+        <span>Work at 15five? <strong>Claim this profile</strong></span>
     </div>
-    <div class="claim-form" id="claimForm15five">
-        <form action="https://formspree.io/f/xbdapzke" method="POST" onsubmit="this.style.display='none';this.nextElementSibling.style.display='block';return true;">
-            <input type="hidden" name="_subject" value="Profile Claim: 15five">
-            <input type="hidden" name="company" value="15five">
-            <input type="hidden" name="profile_url" value="https://jobsbyculture.com/companies/15five">
-            <div class="claim-form-row">
-                <input type="text" name="name" placeholder="Your name" required>
-                <input type="email" name="email" placeholder="Work email" required>
-            </div>
-            <div class="claim-form-row">
-                <input type="text" name="role" placeholder="Your role (e.g., Head of Talent)">
-                <select name="interest">
-                    <option value="" disabled selected>What are you interested in?</option>
-                    <option value="claim">Claim &amp; update our profile</option>
-                    <option value="feature-jobs">Feature our open roles</option>
-                    <option value="respond-reviews">Respond to reviews</option>
-                    <option value="employer-brand">Employer branding partnership</option>
-                    <option value="other">Something else</option>
-                </select>
-            </div>
-            <button type="submit" class="claim-form-submit">Submit &rarr;</button>
-        </form>
-        <div class="claim-form-success">Thanks! We'll be in touch within 24 hours.</div>
-    </div>
+    <button class="claim-banner-btn" onclick="document.getElementById('claimOverlay15five').classList.add('open')">Claim Profile &rarr;</button>
 </div>
 <!-- ═══ /CLAIM BANNER ═══ -->
 
@@ -794,6 +768,44 @@ if (searchInput) {
 }
 </script>
 
+
+<!-- ═══ CLAIM MODAL ═══ -->
+<div class="claim-overlay" id="claimOverlay15five" onclick="if(event.target===this)this.classList.remove('open')">
+    <div class="claim-modal">
+        <button class="claim-modal-close" onclick="this.closest('.claim-overlay').classList.remove('open')">&times;</button>
+        <div id="claimFormWrap15five">
+            <div class="claim-modal-icon">🏢</div>
+            <h3>Claim <em>15five</em></h3>
+            <p class="claim-modal-sub">Take ownership of your company's culture profile. Update your data, respond to community sentiment, and feature your open roles to candidates who care about culture.</p>
+            <form class="claim-modal-form" action="https://formspree.io/f/xbdapzke" method="POST" onsubmit="var w=document.getElementById('claimFormWrap15five');var s=document.getElementById('claimSuccess15five');w.style.display='none';s.style.display='block';return true;">
+                <input type="hidden" name="_subject" value="Profile Claim: 15five">
+                <input type="hidden" name="company" value="15five">
+                <input type="hidden" name="profile_url" value="https://jobsbyculture.com/companies/15five">
+                <div class="claim-modal-row">
+                    <input type="text" name="name" placeholder="Your name" required>
+                    <input type="email" name="email" placeholder="Work email" required>
+                </div>
+                <input type="text" name="role" placeholder="Your role (e.g., Head of Talent, HR Director)">
+                <select name="interest" required>
+                    <option value="" disabled selected>What are you interested in?</option>
+                    <option value="claim">Claim &amp; update our profile</option>
+                    <option value="feature-jobs">Feature our open roles</option>
+                    <option value="respond-reviews">Respond to community sentiment</option>
+                    <option value="employer-brand">Employer branding partnership</option>
+                    <option value="other">Something else</option>
+                </select>
+                <button type="submit" class="claim-modal-submit">Submit Request &rarr;</button>
+            </form>
+            <p class="claim-modal-footer">We'll respond within 24 hours. No spam, ever.</p>
+        </div>
+        <div class="claim-modal-success" id="claimSuccess15five">
+            <div class="check">&#10003;</div>
+            <h3>Request received!</h3>
+            <p>We'll review your request and get back to you within 24 hours at the email you provided.</p>
+        </div>
+    </div>
+</div>
+<!-- ═══ /CLAIM MODAL ═══ -->
 
 </body>
 </html>
