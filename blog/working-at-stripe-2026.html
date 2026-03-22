@@ -49,6 +49,20 @@
         "image": "https://jobsbyculture.com/og-image.png"
     }
     </script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {"@type": "Question", "name": "How many employees does Stripe have in 2026?", "acceptedAnswer": {"@type": "Answer", "text": "Stripe has approximately 8,000 employees as of 2026. The company peaked at about 8,600 before laying off 14% in late 2022. They have since stabilized and are hiring again with 527 open roles."}},
+            {"@type": "Question", "name": "Did Stripe have layoffs in 2026?", "acceptedAnswer": {"@type": "Answer", "text": "Stripe's major layoff was in November 2022, when they cut 14% of staff (about 1,100 people). As of 2026, there have been no additional large-scale layoffs. The company has 527 open roles, indicating active hiring."}},
+            {"@type": "Question", "name": "What is Stripe's Glassdoor rating?", "acceptedAnswer": {"@type": "Answer", "text": "Stripe has a 4.0 out of 5.0 Glassdoor rating. Software engineers specifically rate it lower for work-life balance (2.9/5). Compensation is rated 4.3/5 and 80% of employees recommend working there."}},
+            {"@type": "Question", "name": "What is the average employee tenure at Stripe?", "acceptedAnswer": {"@type": "Answer", "text": "Average employee tenure at Stripe is approximately 2-3 years. The writing-intensive culture and high-performance expectations mean Stripe tends to attract ambitious engineers who stay long enough to build significant projects before moving on."}},
+            {"@type": "Question", "name": "What is Stripe's engineering culture like?", "acceptedAnswer": {"@type": "Answer", "text": "Stripe's engineering culture is built around writing. Engineers are expected to write clear design docs and memos before building. The company runs the world's largest Ruby codebase (20M+ lines) and runs 6 billion tests per day. It's rigorous, intellectual, and high-bar — but work-life balance for engineers is only 2.9/5."}},
+            {"@type": "Question", "name": "What is Stripe's compensation for engineers?", "acceptedAnswer": {"@type": "Answer", "text": "Total compensation for software engineers at Stripe typically ranges from $280k to $400k+ depending on level, including base salary, equity, and bonus. Compensation is rated 4.3/5 on Glassdoor — competitive but slightly below frontier AI labs like Anthropic ($300k-$490k) and OpenAI ($350k-$550k)."}}
+        ]
+    }
+    </script>
 
     <style>
         *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
@@ -612,7 +626,22 @@
             .cta-box { padding: 24px 20px; }
             .cta-box .btn-primary { margin-right: 0; margin-bottom: 12px; display: flex; justify-content: center; }
             .glance-table td:first-child { width: 140px; }
+            .faq-item { padding: 16px 20px; }
         }
+
+        /* ══ FAQ Section ══ */
+        .faq-section { margin: 48px 0; }
+        .faq-section h2 { margin-bottom: 24px; }
+        .faq-list { display: flex; flex-direction: column; gap: 0; }
+        .faq-item { border: 1px solid var(--border); border-bottom: none; padding: 20px 24px; background: var(--bg-card); }
+        .faq-item:first-child { border-radius: var(--radius) var(--radius) 0 0; }
+        .faq-item:last-child { border-bottom: 1px solid var(--border); border-radius: 0 0 var(--radius) var(--radius); }
+        .faq-q { font-size: 16px; font-weight: 600; color: var(--text); cursor: pointer; display: flex; justify-content: space-between; align-items: center; gap: 16px; }
+        .faq-q:hover { color: var(--accent); }
+        .faq-q .faq-toggle { font-size: 20px; color: var(--text-3); transition: transform 0.2s; flex-shrink: 0; }
+        .faq-item.open .faq-toggle { transform: rotate(45deg); }
+        .faq-a { display: none; margin-top: 12px; font-size: 15px; color: var(--text-2); line-height: 1.8; }
+        .faq-item.open .faq-a { display: block; }
 
         /* ══ Footer ══ */
         footer {
@@ -928,6 +957,41 @@
         <p>Stripe currently has <strong>526 open positions</strong> listed on our platform, spanning engineering, infrastructure, and product roles across San Francisco, Toronto, Singapore, Barcelona, and remote locations. If the culture and technical challenges described in this post resonate with you, now is a strong time to apply &mdash; the company has stabilized after the 2022&ndash;23 restructuring and is actively investing in growth again.</p>
 
         <p>For full details on Stripe's open roles, culture values, and side-by-side comparisons with other companies, visit the <a href="/companies/stripe">Stripe culture profile page</a>.</p>
+
+        <!-- FAQ Section -->
+        <div class="faq-section">
+            <h2>Frequently Asked Questions About Working at Stripe</h2>
+            <div class="faq-list">
+                <div class="faq-item" onclick="this.classList.toggle('open')">
+                    <div class="faq-q">How many employees does Stripe have in 2026?<span class="faq-toggle">+</span></div>
+                    <div class="faq-a">Stripe has approximately 8,000 employees as of 2026. The company peaked at about 8,600 before laying off 14% (roughly 1,100 people) in November 2022. They have since stabilized and are actively hiring again with 527 open roles across engineering, product, sales, and operations. For comparison across AI &amp; tech companies, see our <a href="/blog/ai-company-employee-count-2026">employee count rankings</a>.</div>
+                </div>
+                <div class="faq-item" onclick="this.classList.toggle('open')">
+                    <div class="faq-q">Did Stripe have layoffs in 2026?<span class="faq-toggle">+</span></div>
+                    <div class="faq-a">Stripe's major layoff was in November 2022, when they cut 14% of staff. As of 2026, there have been no additional large-scale layoffs. The company has 527 open roles, indicating active hiring and recovery. CEO Patrick Collison publicly took responsibility for the 2022 cuts, citing over-hiring during the pandemic growth period. The company has since focused on more disciplined growth.</div>
+                </div>
+                <div class="faq-item" onclick="this.classList.toggle('open')">
+                    <div class="faq-q">What is Stripe's Glassdoor rating in 2026?<span class="faq-toggle">+</span></div>
+                    <div class="faq-a">Stripe has a 4.0 out of 5.0 overall Glassdoor rating. However, software engineers specifically rate work-life balance at just 2.9/5 &mdash; one of the lowest engineer WLB scores across all 40 companies in our <a href="/directory">directory</a>. Compensation is rated 4.3/5 and 80% of employees recommend working there. See our <a href="/companies/stripe">full Stripe culture profile</a> for the complete breakdown.</div>
+                </div>
+                <div class="faq-item" onclick="this.classList.toggle('open')">
+                    <div class="faq-q">What is the average employee tenure at Stripe?<span class="faq-toggle">+</span></div>
+                    <div class="faq-a">Average employee tenure at Stripe is approximately 2&ndash;3 years. The writing-intensive culture and high-performance expectations mean Stripe tends to attract ambitious engineers who stay long enough to build significant projects, develop their skills, and then move on to leadership roles elsewhere. The Stripe "stamp" on a resume is widely respected in the industry, similar to ex-Google or ex-Meta credibility.</div>
+                </div>
+                <div class="faq-item" onclick="this.classList.toggle('open')">
+                    <div class="faq-q">What is Stripe's engineering culture like?<span class="faq-toggle">+</span></div>
+                    <div class="faq-a">Stripe's engineering culture is built around writing. Engineers are expected to write clear design docs and memos before building &mdash; carefully reasoned, well-expressed ideas reach a broad audience quickly. The company runs the world's largest Ruby codebase (20M+ lines of code) and runs 6 billion tests per day on code changes. It's rigorous, intellectual, and high-bar. The tech stack also includes Java, Go, and heavy ML/AI investment. Work-life balance for engineers is 2.9/5, reflecting the demanding standards.</div>
+                </div>
+                <div class="faq-item" onclick="this.classList.toggle('open')">
+                    <div class="faq-q">What is Stripe's compensation for engineers?<span class="faq-toggle">+</span></div>
+                    <div class="faq-a">Total compensation for software engineers at Stripe typically ranges from $280k to $400k+ depending on level, including base salary, equity, and bonus. Compensation is rated 4.3/5 on Glassdoor &mdash; competitive but slightly below frontier AI labs like <a href="/companies/anthropic">Anthropic</a> ($300k&ndash;$490k) and <a href="/companies/openai">OpenAI</a> ($350k&ndash;$550k). Stripe's equity is meaningful given the company's valuation and path toward a potential IPO. See our <a href="/blog/highest-paying-ai-companies-2026">compensation rankings</a>.</div>
+                </div>
+                <div class="faq-item" onclick="this.classList.toggle('open')">
+                    <div class="faq-q">What is Stripe's culture like?<span class="faq-toggle">+</span></div>
+                    <div class="faq-a">Stripe's culture values include <a href="/values/eng-driven">Engineering-Driven</a>, <a href="/values/learning">Learning &amp; Growth</a>, <a href="/values/equity">Strong Comp &amp; Equity</a>, <a href="/values/product-impact">Product Impact</a>, and <a href="/values/transparent">Transparency</a>. The writing culture is the defining feature &mdash; decisions are driven by written memos, not meetings. It attracts people who are rigorous thinkers and clear communicators. The pace is demanding but the impact is real &mdash; Stripe processes hundreds of billions of dollars annually.</div>
+                </div>
+            </div>
+        </div>
 
         <!-- CTA Box -->
         <div class="cta-box">

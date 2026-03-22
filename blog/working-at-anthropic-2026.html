@@ -49,6 +49,20 @@
         "image": "https://jobsbyculture.com/og-image.png"
     }
     </script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {"@type": "Question", "name": "What is Anthropic's Glassdoor rating in 2026?", "acceptedAnswer": {"@type": "Answer", "text": "Anthropic has a 4.4 out of 5.0 Glassdoor rating based on 222 reviews. 95% of employees recommend working there. Compensation is rated highest at 4.8/5, while work-life balance is the lowest at 3.7/5."}},
+            {"@type": "Question", "name": "What is the work-life balance at Anthropic?", "acceptedAnswer": {"@type": "Answer", "text": "Work-life balance at Anthropic is rated 3.7 out of 5.0 on Glassdoor. Employees report extended work hours during peak periods, with some describing 60+ hour weeks. The intensity reflects the urgency of building safe AI, not poor management."}},
+            {"@type": "Question", "name": "How many employees does Anthropic have in 2026?", "acceptedAnswer": {"@type": "Answer", "text": "Anthropic has approximately 1,500 employees as of early 2026. The company has grown rapidly from a small research lab founded in 2021 to its current size, with 443 open roles indicating continued aggressive hiring."}},
+            {"@type": "Question", "name": "Is Anthropic remote friendly?", "acceptedAnswer": {"@type": "Answer", "text": "Anthropic describes itself as remote-friendly, but San Francisco is the center of gravity. Some roles are fully remote, but career advancement may skew toward in-office employees. For truly remote-first companies, consider Grafana Labs, PostHog, or Supabase."}},
+            {"@type": "Question", "name": "What is Anthropic's compensation for engineers?", "acceptedAnswer": {"@type": "Answer", "text": "Total compensation for software engineers and research scientists at Anthropic typically falls in the $300k-$490k range, including base salary, equity, and bonus. This makes Anthropic one of the highest-paying AI companies, rated 4.8/5 on Glassdoor for compensation."}},
+            {"@type": "Question", "name": "What is Anthropic's culture like?", "acceptedAnswer": {"@type": "Answer", "text": "Anthropic operates more like a research lab than a traditional tech company. The culture is mission-driven around AI safety, with a flat hierarchy where engineers have significant autonomy. Employees describe smart, humble, low-ego coworkers. The pace is intense but the mission is genuine."}}
+        ]
+    }
+    </script>
 
     <style>
         *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
@@ -585,7 +599,22 @@
             .cta-box .btn-primary { margin-right: 0; margin-bottom: 12px; display: flex; justify-content: center; }
             .rating-label { min-width: 120px; font-size: 13px; }
             .glance-table th, .glance-table td { padding: 10px 12px; font-size: 14px; }
+            .faq-item { padding: 16px 20px; }
         }
+
+        /* ══ FAQ Section ══ */
+        .faq-section { margin: 48px 0; }
+        .faq-section h2 { margin-bottom: 24px; }
+        .faq-list { display: flex; flex-direction: column; gap: 0; }
+        .faq-item { border: 1px solid var(--border); border-bottom: none; padding: 20px 24px; background: var(--bg-card); }
+        .faq-item:first-child { border-radius: var(--radius) var(--radius) 0 0; }
+        .faq-item:last-child { border-bottom: 1px solid var(--border); border-radius: 0 0 var(--radius) var(--radius); }
+        .faq-q { font-size: 16px; font-weight: 600; color: var(--text); cursor: pointer; display: flex; justify-content: space-between; align-items: center; gap: 16px; }
+        .faq-q:hover { color: var(--accent); }
+        .faq-q .faq-toggle { font-size: 20px; color: var(--text-3); transition: transform 0.2s; flex-shrink: 0; }
+        .faq-item.open .faq-toggle { transform: rotate(45deg); }
+        .faq-a { display: none; margin-top: 12px; font-size: 15px; color: var(--text-2); line-height: 1.8; }
+        .faq-item.open .faq-a { display: block; }
 
         /* ══ Footer ══ */
         footer {
@@ -926,6 +955,41 @@
         </ul>
 
         <p>For the full list of live openings with location filters, visit the <a href="/jobs?company=anthropic">Anthropic jobs page</a> or explore all roles on the <a href="/companies/anthropic">Anthropic culture profile</a>.</p>
+
+        <!-- FAQ Section -->
+        <div class="faq-section">
+            <h2>Frequently Asked Questions About Working at Anthropic</h2>
+            <div class="faq-list">
+                <div class="faq-item" onclick="this.classList.toggle('open')">
+                    <div class="faq-q">What is Anthropic's Glassdoor rating in 2026?<span class="faq-toggle">+</span></div>
+                    <div class="faq-a">Anthropic has a 4.4 out of 5.0 Glassdoor rating based on 222 employee reviews. 95% of employees recommend working there, and CEO Dario Amodei has a 93% approval rating. Compensation is rated highest at 4.8/5 ($300k&ndash;$490k TC for engineers), while work-life balance is the lowest sub-score at 3.7/5. For context, this places Anthropic above OpenAI (4.5 overall but 72% CEO approval) on employee satisfaction. See our full <a href="/companies/anthropic">Anthropic culture profile</a>.</div>
+                </div>
+                <div class="faq-item" onclick="this.classList.toggle('open')">
+                    <div class="faq-q">What is the work-life balance at Anthropic?<span class="faq-toggle">+</span></div>
+                    <div class="faq-a">Work-life balance at Anthropic is rated 3.7 out of 5.0 on Glassdoor. Employees report extended work hours during peak periods, with some describing 60+ hour weeks during critical research sprints. The intensity reflects the urgency of building safe AI &mdash; not poor management. For comparison, <a href="/companies/posthog">PostHog</a> scores 4.5 WLB, <a href="/companies/tailscale">Tailscale</a> scores 4.5, and <a href="/companies/grafanalabs">Grafana Labs</a> scores 4.3. If WLB is your top priority, see our <a href="/blog/best-ai-companies-work-life-balance-2026">best AI companies for WLB rankings</a>.</div>
+                </div>
+                <div class="faq-item" onclick="this.classList.toggle('open')">
+                    <div class="faq-q">How many employees does Anthropic have in 2026?<span class="faq-toggle">+</span></div>
+                    <div class="faq-a">Anthropic has approximately 1,500 employees as of early 2026. The company has grown rapidly from a small research lab founded in 2021 to its current size, with 443 open roles indicating continued aggressive hiring. This makes Anthropic smaller than OpenAI (~3,500) but larger than most AI startups. See our <a href="/blog/ai-company-employee-count-2026">full AI company employee count rankings</a> for how all 40 companies compare.</div>
+                </div>
+                <div class="faq-item" onclick="this.classList.toggle('open')">
+                    <div class="faq-q">Is Anthropic remote friendly?<span class="faq-toggle">+</span></div>
+                    <div class="faq-a">Anthropic describes itself as "remote-friendly" but the reality is nuanced. San Francisco is the center of gravity &mdash; most key meetings, decisions, and leadership are SF-based. Some roles are fully remote, but career advancement and inclusion in key decisions may skew toward in-office employees. If you want genuinely remote-first companies, consider <a href="/companies/grafanalabs">Grafana Labs</a> (100% remote, no offices, 40+ countries), <a href="/companies/posthog">PostHog</a> (fully remote, 30+ countries), or <a href="/companies/supabase">Supabase</a> (fully remote, same pay worldwide). See our <a href="/blog/remote-friendly-ai-companies-hiring-2026">remote-friendly AI companies guide</a>.</div>
+                </div>
+                <div class="faq-item" onclick="this.classList.toggle('open')">
+                    <div class="faq-q">What is Anthropic's compensation for engineers?<span class="faq-toggle">+</span></div>
+                    <div class="faq-a">Total compensation for software engineers and research scientists at Anthropic typically falls in the $300k&ndash;$490k range, including base salary, equity, and bonus. Compensation is rated 4.8/5 on Glassdoor &mdash; the highest sub-score and one of the best across all 40 companies in our <a href="/directory">directory</a>. For comparison, OpenAI offers $350k&ndash;$550k and Databricks offers $280k&ndash;$450k. See our <a href="/blog/highest-paying-ai-companies-2026">highest-paying AI companies rankings</a>.</div>
+                </div>
+                <div class="faq-item" onclick="this.classList.toggle('open')">
+                    <div class="faq-q">What is Anthropic's culture like?<span class="faq-toggle">+</span></div>
+                    <div class="faq-a">Anthropic operates more like a research lab than a traditional tech company. The culture is genuinely mission-driven around AI safety &mdash; this isn't marketing, it's the reason the company was founded by Dario and Daniela Amodei (ex-OpenAI). Engineers have significant autonomy with small teams owning projects end-to-end. Employees describe smart, humble, low-ego coworkers. The pace is intense but the safety mission is real. Culture values include <a href="/values/ethical-ai">Ethical AI</a>, <a href="/values/eng-driven">Engineering-Driven</a>, <a href="/values/flat">Flat Hierarchy</a>, and <a href="/values/learning">Learning & Growth</a>.</div>
+                </div>
+                <div class="faq-item" onclick="this.classList.toggle('open')">
+                    <div class="faq-q">What is it like to work as a software engineer at Anthropic?<span class="faq-toggle">+</span></div>
+                    <div class="faq-a">Software engineers at Anthropic work on cutting-edge AI systems including Claude, Constitutional AI, and interpretability research. The tech stack includes Python, Rust, JAX, and PyTorch. Engineers have high autonomy and own projects end-to-end in a flat, research-lab-style organization. The work is intellectually demanding and the pace is fast. Compensation is top-tier ($300k&ndash;$490k TC). The trade-off is intensity &mdash; WLB is 3.7/5 and extended hours are common during research sprints.</div>
+                </div>
+            </div>
+        </div>
 
         <!-- CTA Box -->
         <div class="cta-box">
