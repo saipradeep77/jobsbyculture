@@ -107,6 +107,9 @@
         .cs-tab.active { border-color: var(--accent); color: var(--accent); background: var(--accent-bg); }
         .cs-tab:hover { border-color: var(--accent); }
         @media (max-width: 768px) { .cs-quotes { gap: 12px; } .cs-quote { padding: 14px 16px; } }
+            .claim-modal { padding: 28px 24px; }
+            .claim-modal-row { grid-template-columns: 1fr; }
+        }
 
     
         /* ═══ CLAIM PROFILE BANNER ═══ */
@@ -599,7 +602,7 @@ if (searchInput) {
             <div class="claim-modal-icon">🏢</div>
             <h3>Claim <em>Weaviate</em></h3>
             <p class="claim-modal-sub">Take ownership of your company's culture profile. Update your data, respond to community sentiment, and feature your open roles to candidates who care about culture.</p>
-            <form class="claim-modal-form" action="https://formspree.io/f/xbdapzke" method="POST" onsubmit="var w=document.getElementById('claimFormWrapweaviate');var s=document.getElementById('claimSuccessweaviate');w.style.display='none';s.style.display='block';return true;">
+            <form class="claim-modal-form" onsubmit="event.preventDefault();var f=this;var w=document.getElementById('claimFormWrapweaviate');var s=document.getElementById('claimSuccessweaviate');fetch('https://formspree.io/f/xbdapzke',{method:'POST',body:new FormData(f),headers:{'Accept':'application/json'}}).then(function(){w.style.display='none';s.style.display='block';}).catch(function(){w.style.display='none';s.style.display='block';});">
                 <input type="hidden" name="_subject" value="Profile Claim: Weaviate">
                 <input type="hidden" name="company" value="Weaviate">
                 <input type="hidden" name="profile_url" value="https://jobsbyculture.com/companies/weaviate">

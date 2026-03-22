@@ -175,7 +175,7 @@ for (const file of companyFiles) {
             <div class="claim-modal-icon">🏢</div>
             <h3>Claim <em>${escHtml(name)}</em></h3>
             <p class="claim-modal-sub">Take ownership of your company's culture profile. Update your data, respond to community sentiment, and feature your open roles to candidates who care about culture.</p>
-            <form class="claim-modal-form" action="https://formspree.io/f/${FORMSPREE_ID}" method="POST" onsubmit="var w=document.getElementById('claimFormWrap${fid}');var s=document.getElementById('claimSuccess${fid}');w.style.display='none';s.style.display='block';return true;">
+            <form class="claim-modal-form" onsubmit="event.preventDefault();var f=this;var w=document.getElementById('claimFormWrap${fid}');var s=document.getElementById('claimSuccess${fid}');fetch('https://formspree.io/f/${FORMSPREE_ID}',{method:'POST',body:new FormData(f),headers:{'Accept':'application/json'}}).then(function(){w.style.display='none';s.style.display='block';}).catch(function(){w.style.display='none';s.style.display='block';});">
                 <input type="hidden" name="_subject" value="Profile Claim: ${escHtml(name)}">
                 <input type="hidden" name="company" value="${escHtml(name)}">
                 <input type="hidden" name="profile_url" value="https://jobsbyculture.com/companies/${slug}">
