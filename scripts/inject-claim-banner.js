@@ -152,8 +152,12 @@ for (const file of companyFiles) {
     html = html.replace(/<!-- ═══ CLAIM BANNER ═══ -->[\s\S]*?<!-- ═══ \/CLAIM BANNER ═══ -->\n*/g, '');
     html = html.replace(/<!-- ═══ CLAIM MODAL ═══ -->[\s\S]*?<!-- ═══ \/CLAIM MODAL ═══ -->\n*/g, '');
 
-    // Remove old CSS
-    html = html.replace(/\n\s*\/\* ═══ CLAIM PROFILE BANNER ═══ \*\/[\s\S]*?@media \(max-width: 768px\) \{[^}]*claim[^}]*\}[^}]*\}/g, '');
+    // Remove old CSS — match everything from CLAIM PROFILE BANNER comment to its closing @media block
+    html = html.replace(/\n\s*\/\* ═══ CLAIM PROFILE BANNER ═══ \*\/[\s\S]*?\.claim-modal-row \{ grid-template-columns: 1fr; \}\s*\}/g, '');
+    // Also remove CLAIM MODAL CSS block
+    html = html.replace(/\n\s*\/\* ═══ CLAIM MODAL ═══ \*\/[\s\S]*?\.claim-modal-row \{ grid-template-columns: 1fr; \}\s*\}/g, '');
+    // Clean any orphaned claim-modal lines between CS and Claim sections
+    html = html.replace(/(\.cs-quote \{ padding: 14px 16px; \} \})\s+\.claim-modal \{[^}]+\}\s+\.claim-modal-row \{[^}]+\}\s+\}/g, '$1');
 
     const bannerHtml = `<!-- ═══ CLAIM BANNER ═══ -->
 <div class="claim-banner">
