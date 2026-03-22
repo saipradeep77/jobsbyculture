@@ -49,6 +49,62 @@
         "image": "https://jobsbyculture.com/og-image.png"
     }
     </script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "What is Cursor's Glassdoor rating in 2026?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Cursor (Anysphere) has a Glassdoor rating of approximately 4.0 out of 5.0. The company is small (~50 employees), so the review sample is limited. This puts Cursor in the middle of AI companies — above Scale AI (3.5) but below Anthropic (4.4) and OpenAI (4.5)."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "How many employees does Cursor have in 2026?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Cursor (Anysphere) has approximately 50 employees as of early 2026, with 58 open roles — meaning they plan to more than double in size. This makes Cursor one of the smallest companies building a product used by millions of developers."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "What is the work-life balance like at Cursor?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Work-life balance at Cursor is challenging. The company ships at a relentless pace, releasing updates multiple times per week and competing directly with GitHub Copilot. This is not a 9-to-5 environment. Employees describe the pace as intense but rewarding."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "What is Cursor's salary and compensation?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Estimated total compensation for software engineers at Cursor ranges from $200k to $400k+ depending on level, including base salary and equity. The equity component is significant given Cursor's rapid growth and strong product-market fit."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Is Cursor a good place to work in 2026?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Cursor is an excellent place to work if you want extreme ownership over a product millions of developers use, thrive in a fast-paced environment with a small team, and are comfortable with intensity. However, it's not ideal for those seeking work-life balance or clear career ladders."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Is Anthropic remote friendly?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Anthropic describes itself as remote-friendly but San Francisco is the center of gravity. Some roles are fully remote, but career advancement may skew toward in-office employees. For truly remote-first companies, consider Grafana Labs (100% remote), PostHog, or Supabase (same pay worldwide)."
+                }
+            }
+        ]
+    }
+    </script>
 
     <style>
         *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
@@ -585,7 +641,32 @@
             .cta-box .btn-primary { margin-right: 0; margin-bottom: 12px; display: flex; justify-content: center; }
             .rating-label { min-width: 120px; font-size: 13px; }
             .glance-table th, .glance-table td { padding: 10px 12px; font-size: 14px; }
+            .faq-item { padding: 16px 20px; }
         }
+
+        /* ══ FAQ Section ══ */
+        .faq-section { margin: 48px 0; }
+        .faq-section h2 { margin-bottom: 24px; }
+        .faq-list { display: flex; flex-direction: column; gap: 0; }
+        .faq-item {
+            border: 1px solid var(--border); border-bottom: none;
+            padding: 20px 24px; background: var(--bg-card);
+        }
+        .faq-item:first-child { border-radius: var(--radius) var(--radius) 0 0; }
+        .faq-item:last-child { border-bottom: 1px solid var(--border); border-radius: 0 0 var(--radius) var(--radius); }
+        .faq-q {
+            font-size: 16px; font-weight: 600; color: var(--text);
+            cursor: pointer; display: flex; justify-content: space-between;
+            align-items: center; gap: 16px;
+        }
+        .faq-q:hover { color: var(--accent); }
+        .faq-q .faq-toggle { font-size: 20px; color: var(--text-3); transition: transform 0.2s; flex-shrink: 0; }
+        .faq-item.open .faq-toggle { transform: rotate(45deg); }
+        .faq-a {
+            display: none; margin-top: 12px; font-size: 15px;
+            color: var(--text-2); line-height: 1.8;
+        }
+        .faq-item.open .faq-a { display: block; }
 
         /* ══ Footer ══ */
         footer {
@@ -926,6 +1007,53 @@
         </ul>
 
         <p>For the full list of live openings, visit the <a href="/jobs?company=cursor">Cursor jobs page</a> or explore the <a href="/companies/cursor">Cursor culture profile</a>.</p>
+
+        <!-- FAQ Section -->
+        <div class="faq-section">
+            <h2>Frequently Asked Questions About Working at Cursor</h2>
+
+            <div class="faq-list">
+                <div class="faq-item" onclick="this.classList.toggle('open')">
+                    <div class="faq-q">What is Cursor's Glassdoor rating in 2026?<span class="faq-toggle">+</span></div>
+                    <div class="faq-a">Cursor (Anysphere) has a Glassdoor rating of approximately 4.0 out of 5.0. The company is small (~50 employees), so the review sample is limited. However, among those who have reviewed, the consensus is that it's a high-intensity, high-ownership environment with smart colleagues. The culture and values score is strong, while work-life balance is more challenging due to the fast shipping pace. For context, this puts Cursor in the middle of AI companies — above Scale AI (3.5) but below Anthropic (4.4) and OpenAI (4.5).</div>
+                </div>
+
+                <div class="faq-item" onclick="this.classList.toggle('open')">
+                    <div class="faq-q">What is Anysphere's Glassdoor rating?<span class="faq-toggle">+</span></div>
+                    <div class="faq-a">Anysphere is the parent company behind Cursor. Their Glassdoor rating is approximately 4.0/5.0. Since Cursor is the product and Anysphere is the legal entity, reviews may appear under either name on Glassdoor. The small team size (~50 people) means only a handful of reviews exist, but they consistently highlight the quality of the team and the intensity of the work. See our full <a href="/companies/cursor">Cursor culture profile</a> for detailed ratings breakdown.</div>
+                </div>
+
+                <div class="faq-item" onclick="this.classList.toggle('open')">
+                    <div class="faq-q">How many employees does Cursor have in 2026?<span class="faq-toggle">+</span></div>
+                    <div class="faq-a">Cursor (Anysphere) has approximately 50 employees as of early 2026. Despite this tiny team, they have 58 open roles — meaning they're planning to more than double in size. This makes Cursor one of the smallest companies building a product used by millions of developers. For comparison, Anthropic has ~1,500 employees and OpenAI has ~3,500. The small team means extreme ownership — every person directly shapes the product. See our <a href="/blog/ai-company-employee-count-2026">AI company employee count rankings</a> for how Cursor compares.</div>
+                </div>
+
+                <div class="faq-item" onclick="this.classList.toggle('open')">
+                    <div class="faq-q">What is the work-life balance like at Cursor?<span class="faq-toggle">+</span></div>
+                    <div class="faq-a">Work-life balance at Cursor is challenging. The company ships at a relentless pace — they release updates multiple times per week and compete directly with GitHub Copilot, a Microsoft-backed product. Employees describe the pace as intense but rewarding. This is not a 9-to-5 environment. If you value predictable hours, Cursor is likely not the right fit. Companies like <a href="/companies/posthog">PostHog</a> (WLB 4.5) or <a href="/companies/tailscale">Tailscale</a> (WLB 4.5) offer much better balance. But if you thrive on intensity and want to build the most-loved AI code editor, the tradeoff may be worth it.</div>
+                </div>
+
+                <div class="faq-item" onclick="this.classList.toggle('open')">
+                    <div class="faq-q">What is Cursor's company culture like?<span class="faq-toggle">+</span></div>
+                    <div class="faq-a">Cursor's culture is defined by extreme ownership, fast shipping, and deep technical talent. The team is tiny (~50 people) which means no hiding — every engineer's work is visible and impactful. The founders (Michael Truell, Sualeh Asif, Arvid Lunnemark, Aman Sanger) are deeply technical and set a high bar. There's minimal hierarchy, no bureaucratic processes, and decisions are made quickly. The downside: it can feel relentless, and there are few specialists — everyone does everything. Culture values include: <a href="/values/ship-fast">Ship Fast</a>, <a href="/values/eng-driven">Engineering-Driven</a>, <a href="/values/product-impact">Product Impact</a>, <a href="/values/flat">Flat Hierarchy</a>, <a href="/values/many-hats">Many Hats</a>.</div>
+                </div>
+
+                <div class="faq-item" onclick="this.classList.toggle('open')">
+                    <div class="faq-q">What is Cursor's salary and compensation?<span class="faq-toggle">+</span></div>
+                    <div class="faq-a">Cursor (Anysphere) offers competitive compensation for a startup of its size. Estimated total compensation for software engineers ranges from $200k to $400k+ depending on level, including base salary and equity. The equity component is particularly significant given Cursor's rapid growth and strong product-market fit — the company has been valued in the billions. Compensation is competitive with other top AI startups but may not match the absolute top tier of Anthropic ($300k-$490k) or OpenAI ($350k-$550k). For more comp data, see <a href="/blog/highest-paying-ai-companies-2026">our AI compensation rankings</a>.</div>
+                </div>
+
+                <div class="faq-item" onclick="this.classList.toggle('open')">
+                    <div class="faq-q">Is Cursor a good place to work in 2026?<span class="faq-toggle">+</span></div>
+                    <div class="faq-a">Cursor is an excellent place to work if you're the right fit. The "right fit" means: you want extreme ownership over a product millions of developers use, you thrive in a fast-paced environment with a small team, and you're comfortable with intensity. Employees who match this profile report very high satisfaction — they describe it as the most impactful work of their careers. However, if you're looking for work-life balance, clear career ladders, or a large support structure, Cursor isn't the right choice. Check our <a href="/companies/cursor">full Cursor culture profile</a> for detailed ratings, pros, and cons.</div>
+                </div>
+
+                <div class="faq-item" onclick="this.classList.toggle('open')">
+                    <div class="faq-q">Is Anthropic remote friendly?<span class="faq-toggle">+</span></div>
+                    <div class="faq-a">Anthropic describes itself as "remote-friendly" but the reality is more nuanced. San Francisco is the center of gravity — most key meetings, decisions, and leadership are SF-based. Some roles are fully remote, but career advancement and inclusion in key decisions may skew toward in-office employees. WLB is 3.7/5. If you want truly remote-first companies, consider <a href="/companies/grafanalabs">Grafana Labs</a> (100% remote, no offices), <a href="/companies/posthog">PostHog</a> (fully remote, 30+ countries), or <a href="/companies/supabase">Supabase</a> (fully remote, same pay worldwide). See our <a href="/blog/remote-friendly-ai-companies-hiring-2026">remote-friendly AI companies guide</a> for the full list.</div>
+                </div>
+            </div>
+        </div>
 
         <!-- CTA Box -->
         <div class="cta-box">
