@@ -50,6 +50,64 @@
     }
     </script>
 
+    <!-- FAQPage Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "What is the culture at Google DeepMind?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Google DeepMind operates more like an elite research institution than a traditional tech company. The culture is research-first — scientists propose projects, run experiments over months or years, and publish at top venues like NeurIPS and Nature. Small research groups focus on specific domains including reinforcement learning, protein structure prediction (AlphaFold), language models (Gemini), and AI safety. Culture values include Deep Work, Learning, Engineering-Driven, Ethical AI, and Diversity. The intellectual freedom is genuine, but you're still inside Google — performance reviews, leveling (L5–L7), and some corporate processes come with the territory."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "What is Google DeepMind's Glassdoor rating in 2026?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Google DeepMind has a 4.2 out of 5.0 Glassdoor rating. Sub-scores: Compensation & Benefits 4.5, Culture & Values 4.3, Work-Life Balance 4.0, Senior Management 4.0, and Career Opportunities 3.8. CEO Demis Hassabis has an 88% approval rating and 85% of employees recommend working there."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "What is the work-life balance at Google DeepMind?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Work-life balance at Google DeepMind is rated 4.0 out of 5.0 on Glassdoor — the best among all frontier AI labs. For comparison, Anthropic scores 3.7, OpenAI 3.6, and Perplexity 3.3. The London headquarters brings European work culture norms: generous holiday allowances, reasonable working hours, and genuine respect for personal time."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "How much do Google DeepMind engineers get paid?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Total compensation for research scientists and software engineers at Google DeepMind ranges from $300k to $500k (Google levels L5–L7). This includes base salary at or above 90th percentile, Google RSUs that vest monthly, 20+ PTO days, parental leave, 401(k) matching (US) or pension contributions (UK), on-site meals, and a generous learning stipend. Senior research scientists and principal engineers can exceed this range."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "How many employees does Google DeepMind have in 2026?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Google DeepMind has approximately 7,000 employees as of 2026. The organization was formed from the 2023 merger of DeepMind (founded 2010) and Google Brain. The team is distributed across London (HQ), Mountain View, New York, Paris, and Zurich, with 105 open positions."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Is Google DeepMind a good place to work for AI researchers?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Google DeepMind is widely considered the top destination for AI researchers who want to work on fundamental, long-horizon problems. The team won the 2024 Nobel Prize in Chemistry for AlphaFold, and CEO Demis Hassabis is a Nobel laureate. You get the intellectual freedom of an elite research lab combined with Google's compute, data, and financial resources. The trade-offs: career progression is tied to Google's leveling system, publication goes through internal review, and some teams still have cultural friction from the 2023 Brain merger."
+                }
+            }
+        ]
+    }
+    </script>
+
     <style>
         *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
         html { scroll-behavior: smooth; }
@@ -624,6 +682,20 @@
         .fade-up-d2 { animation-delay: 0.1s; }
         .fade-up-d3 { animation-delay: 0.15s; }
         .fade-up-d4 { animation-delay: 0.2s; }
+
+        /* ══ FAQ Section ══ */
+        .faq-section { margin: 48px 0; }
+        .faq-section h2 { margin-bottom: 24px; }
+        .faq-list { display: flex; flex-direction: column; gap: 0; }
+        .faq-item { border: 1px solid var(--border); border-bottom: none; padding: 20px 24px; background: var(--bg-card); }
+        .faq-item:first-child { border-radius: var(--radius) var(--radius) 0 0; }
+        .faq-item:last-child { border-bottom: 1px solid var(--border); border-radius: 0 0 var(--radius) var(--radius); }
+        .faq-q { font-size: 16px; font-weight: 600; color: var(--text); cursor: pointer; display: flex; justify-content: space-between; align-items: center; gap: 16px; }
+        .faq-q:hover { color: var(--accent); }
+        .faq-q .faq-toggle { font-size: 20px; color: var(--text-3); transition: transform 0.2s; flex-shrink: 0; }
+        .faq-item.open .faq-toggle { transform: rotate(45deg); }
+        .faq-a { display: none; margin-top: 12px; font-size: 15px; color: var(--text-2); line-height: 1.8; }
+        .faq-item.open .faq-a { display: block; }
     </style>
 </head>
 <body>
@@ -847,7 +919,7 @@
         <!-- Section 5: Compensation -->
         <h2>Compensation &amp; Benefits</h2>
 
-        <p>Compensation is one of DeepMind's strongest selling points, thanks to its integration into Google's pay structure. The 4.5 Glassdoor rating for comp and benefits places it among the top-paying companies in our <a href="/directory">directory of 35 companies</a>.</p>
+        <p>Compensation is one of DeepMind's strongest selling points, thanks to its integration into Google's pay structure. The 4.5 Glassdoor rating for comp and benefits places it among the top-paying companies in our <a href="/directory">directory of 40 companies</a>.</p>
 
         <div class="stat-callout">
             <div class="stat-number">$300k&ndash;$500k</div>
@@ -921,7 +993,7 @@
         <!-- Section 8: Open Positions -->
         <h2>Open Positions at Google DeepMind</h2>
 
-        <p>Google DeepMind currently has <strong>112 open positions</strong> across research, engineering, and operations. Roles span London (the majority), Mountain View, New York, Paris, and Zurich.</p>
+        <p>Google DeepMind currently has <strong>105 open positions</strong> across research, engineering, and operations. Roles span London (the majority), Mountain View, New York, Paris, and Zurich.</p>
 
         <p>Popular role categories include:</p>
 
@@ -935,10 +1007,41 @@
 
         <p>For the full list of live openings with location filters, visit the <a href="/jobs?company=deepmind">DeepMind jobs page</a> or explore all roles on the <a href="/companies/deepmind">DeepMind culture profile</a>.</p>
 
+        <!-- FAQ Section -->
+        <div class="faq-section">
+            <h2>Frequently Asked Questions About Working at Google DeepMind</h2>
+            <div class="faq-list">
+                <div class="faq-item" onclick="this.classList.toggle('open')">
+                    <div class="faq-q">What is the culture at Google DeepMind?<span class="faq-toggle">+</span></div>
+                    <div class="faq-a">Google DeepMind operates more like an elite research institution than a traditional tech company. The culture is research-first &mdash; scientists propose projects, run experiments over months or years, and publish at top venues like NeurIPS and Nature. Small research groups focus on specific domains including reinforcement learning, protein structure prediction (AlphaFold), language models (Gemini), and AI safety. Culture values include Deep Work, Learning, Engineering-Driven, Ethical AI, and Diversity. The intellectual freedom is genuine, but you&rsquo;re still inside Google &mdash; performance reviews, leveling (L5&ndash;L7), and some corporate processes come with the territory. See our full <a href="/companies/deepmind">DeepMind culture profile</a>.</div>
+                </div>
+                <div class="faq-item" onclick="this.classList.toggle('open')">
+                    <div class="faq-q">What is Google DeepMind's Glassdoor rating in 2026?<span class="faq-toggle">+</span></div>
+                    <div class="faq-a">Google DeepMind has a <strong>4.2 out of 5.0</strong> Glassdoor rating. Sub-scores: Compensation &amp; Benefits 4.5, Culture &amp; Values 4.3, Work-Life Balance 4.0, Senior Management 4.0, and Career Opportunities 3.8. CEO Demis Hassabis has an 88% approval rating and 85% of employees recommend working there. For comparison, OpenAI has a 4.5 overall and Anthropic has a 4.4. See how all companies compare in our <a href="/directory">culture directory</a>.</div>
+                </div>
+                <div class="faq-item" onclick="this.classList.toggle('open')">
+                    <div class="faq-q">What is the work-life balance at Google DeepMind?<span class="faq-toggle">+</span></div>
+                    <div class="faq-a">Work-life balance at Google DeepMind is rated <strong>4.0 out of 5.0</strong> on Glassdoor &mdash; the best among all frontier AI labs. For comparison, Anthropic scores 3.7, OpenAI 3.6, and Perplexity 3.3. The London headquarters brings European work culture norms: generous holiday allowances, reasonable working hours, and genuine respect for personal time. If WLB is your top priority, see our <a href="/blog/best-ai-companies-work-life-balance-2026">best AI companies for WLB rankings</a>.</div>
+                </div>
+                <div class="faq-item" onclick="this.classList.toggle('open')">
+                    <div class="faq-q">How much do Google DeepMind engineers get paid?<span class="faq-toggle">+</span></div>
+                    <div class="faq-a">Total compensation for research scientists and software engineers at Google DeepMind ranges from <strong>$300k to $500k</strong> (Google levels L5&ndash;L7). This includes base salary at or above 90th percentile, Google RSUs that vest monthly, 20+ PTO days, parental leave, 401(k) matching (US) or pension contributions (UK), on-site meals, and a generous learning stipend. Senior research scientists and principal engineers can exceed this range. See our <a href="/blog/highest-paying-ai-companies-2026">highest-paying AI companies rankings</a>.</div>
+                </div>
+                <div class="faq-item" onclick="this.classList.toggle('open')">
+                    <div class="faq-q">How many employees does Google DeepMind have in 2026?<span class="faq-toggle">+</span></div>
+                    <div class="faq-a">Google DeepMind has approximately <strong>7,000 employees</strong> as of 2026. The organization was formed from the 2023 merger of DeepMind (founded 2010) and Google Brain. The team is distributed across London (HQ), Mountain View, New York, Paris, and Zurich, with 105 open positions. See our <a href="/blog/ai-company-employee-count-2026">full AI company employee count rankings</a>.</div>
+                </div>
+                <div class="faq-item" onclick="this.classList.toggle('open')">
+                    <div class="faq-q">Is Google DeepMind a good place to work for AI researchers?<span class="faq-toggle">+</span></div>
+                    <div class="faq-a">Google DeepMind is widely considered the top destination for AI researchers who want to work on fundamental, long-horizon problems. The team won the 2024 Nobel Prize in Chemistry for AlphaFold, and CEO Demis Hassabis is a Nobel laureate. You get the intellectual freedom of an elite research lab combined with Google&rsquo;s compute, data, and financial resources. The trade-offs: career progression is tied to Google&rsquo;s leveling system, publication goes through internal review, and some teams still have cultural friction from the 2023 Brain merger.</div>
+                </div>
+            </div>
+        </div>
+
         <!-- CTA Box -->
         <div class="cta-box">
-            <h3>Browse all 5,074 jobs from 35 companies</h3>
-            <p>Find your next role at Google DeepMind or any of the 29 AI &amp; tech companies in our culture directory.</p>
+            <h3>Browse all 5,674 jobs from 40 companies</h3>
+            <p>Find your next role at Google DeepMind or any of the 40 AI &amp; tech companies in our culture directory.</p>
             <a href="/jobs?company=deepmind" class="btn-primary">See DeepMind Jobs &rarr;</a>
             <a href="/jobs" class="btn-secondary">Browse All Jobs &rarr;</a>
         </div>

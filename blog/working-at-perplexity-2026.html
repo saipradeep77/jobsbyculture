@@ -50,6 +50,64 @@
     }
     </script>
 
+    <!-- FAQPage Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "What is Perplexity AI's company culture like?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Perplexity AI has an engineering-driven, ship-fast startup culture. Features go from idea to production in days, not quarters. The environment is flat and meritocratic — the best ideas win regardless of who proposes them. Employees describe very little corporate politics and a lot of building. CEO Aravind Srinivas (ex-Google, ex-DeepMind) is deeply technical and highly accessible with a 95% approval rating. The trade-off is intensity: the 3.3/5 work-life balance score reflects genuinely long hours and an unrelenting pace with no recovery cycles."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "What is Perplexity AI's Glassdoor rating in 2026?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Perplexity AI has a 4.7 out of 5.0 Glassdoor rating — the highest in our database of 40+ AI and tech companies. Sub-scores: Culture & Values 4.8, Compensation & Benefits 4.5, Senior Management 4.5, Career Opportunities 4.2, and Work-Life Balance 3.3. 92% of employees recommend working there and CEO Aravind Srinivas has a 95% approval rating."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "What is the work-life balance at Perplexity AI?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Work-life balance at Perplexity AI is rated 3.3 out of 5.0 on Glassdoor, ranking 26th of 40 companies in our database. Employees describe long hours, high expectations, and a relentless pace with limited downtime. This creates the widest gap in our database between 'employees love working here' (4.7 overall) and 'employees work really hard' (3.3 WLB). If WLB is a priority, consider Linear (4.4), Pinecone (4.3), or Notion (4.2)."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "How many employees does Perplexity AI have in 2026?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Perplexity AI has approximately 500 employees as of 2026. The company was founded in 2022, is valued at approximately $20B, and is actively hiring with 81 open positions across engineering, research, product, and business roles. The team includes alumni from Google Search, Meta AI, and OpenAI."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Is Perplexity AI remote friendly?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Perplexity AI is not remote-first. The company is headquartered in San Francisco and values in-person collaboration. Some positions are available in Belgrade (Serbia) for search infrastructure work and select roles in London, but the core team is SF-based. If you want genuinely remote-first companies, consider Grafana Labs (100% remote, 40+ countries), PostHog (fully remote), or Supabase (fully remote, same pay worldwide)."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "What does Perplexity AI pay engineers?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Perplexity AI offers competitive Bay Area compensation with base salary, equity, and standard startup benefits (health, dental, vision, office meals, equipment budgets, professional development stipends). The equity component is the headline draw — at a ~$20B valuation, early and mid-stage employees have significant wealth-creation potential. Specific salary ranges are not publicly disclosed but are competitive for the Bay Area AI market."
+                }
+            }
+        ]
+    }
+    </script>
+
     <style>
         *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
         html { scroll-behavior: smooth; }
@@ -618,6 +676,20 @@
         .fade-up-d2 { animation-delay: 0.1s; }
         .fade-up-d3 { animation-delay: 0.15s; }
         .fade-up-d4 { animation-delay: 0.2s; }
+
+        /* ══ FAQ Section ══ */
+        .faq-section { margin: 48px 0; }
+        .faq-section h2 { margin-bottom: 24px; }
+        .faq-list { display: flex; flex-direction: column; gap: 0; }
+        .faq-item { border: 1px solid var(--border); border-bottom: none; padding: 20px 24px; background: var(--bg-card); }
+        .faq-item:first-child { border-radius: var(--radius) var(--radius) 0 0; }
+        .faq-item:last-child { border-bottom: 1px solid var(--border); border-radius: 0 0 var(--radius) var(--radius); }
+        .faq-q { font-size: 16px; font-weight: 600; color: var(--text); cursor: pointer; display: flex; justify-content: space-between; align-items: center; gap: 16px; }
+        .faq-q:hover { color: var(--accent); }
+        .faq-q .faq-toggle { font-size: 20px; color: var(--text-3); transition: transform 0.2s; flex-shrink: 0; }
+        .faq-item.open .faq-toggle { transform: rotate(45deg); }
+        .faq-a { display: none; margin-top: 12px; font-size: 15px; color: var(--text-2); line-height: 1.8; }
+        .faq-item.open .faq-a { display: block; }
     </style>
 </head>
 <body>
@@ -797,7 +869,7 @@
 
         <p>The 4.5 Compensation &amp; Benefits score confirms that Perplexity is paying competitively in a market where AI talent commands premium rates. Career Opportunities at 4.2 is strong for a company this size &mdash; though some of that reflects the reality that rapid growth creates opportunities naturally.</p>
 
-        <p>And then there's Work-Life Balance at 3.3 &mdash; the clear outlier. For context, that ranks 26th out of <a href="/blog/best-ai-companies-work-life-balance-2026">35 companies in our WLB rankings</a>. Only <a href="/companies/coreweave">CoreWeave</a> (3.2), <a href="/companies/figma">Figma</a> (3.1), and <a href="/companies/scale">Scale AI</a> (2.7) score worse. The difference is that those companies also have lower overall ratings. Perplexity's people work just as hard &mdash; but they're much happier about it.</p>
+        <p>And then there's Work-Life Balance at 3.3 &mdash; the clear outlier. For context, that ranks 26th out of <a href="/blog/best-ai-companies-work-life-balance-2026">40 companies in our WLB rankings</a>. Only <a href="/companies/coreweave">CoreWeave</a> (3.2), <a href="/companies/figma">Figma</a> (3.1), and <a href="/companies/scale">Scale AI</a> (2.7) score worse. The difference is that those companies also have lower overall ratings. Perplexity's people work just as hard &mdash; but they're much happier about it.</p>
 
         <h2>What Employees Actually Say</h2>
 
@@ -912,10 +984,41 @@
 
         <p>For a full list of open roles with direct application links, visit the <a href="/companies/perplexity">Perplexity company profile</a> or browse all positions on our <a href="/jobs">jobs board</a>.</p>
 
+        <!-- FAQ Section -->
+        <div class="faq-section">
+            <h2>Frequently Asked Questions About Working at Perplexity AI</h2>
+            <div class="faq-list">
+                <div class="faq-item" onclick="this.classList.toggle('open')">
+                    <div class="faq-q">What is Perplexity AI's company culture like?<span class="faq-toggle">+</span></div>
+                    <div class="faq-a">Perplexity AI has an engineering-driven, ship-fast startup culture. Features go from idea to production in days, not quarters. The environment is flat and meritocratic &mdash; the best ideas win regardless of who proposes them. Employees describe &ldquo;very little corporate politics&rdquo; and &ldquo;a lot of building.&rdquo; CEO Aravind Srinivas (ex-Google, ex-DeepMind) is deeply technical and highly accessible with a 95% approval rating. The trade-off is intensity: the 3.3/5 work-life balance score reflects genuinely long hours and an unrelenting pace. See our full <a href="/companies/perplexity">Perplexity culture profile</a>.</div>
+                </div>
+                <div class="faq-item" onclick="this.classList.toggle('open')">
+                    <div class="faq-q">What is Perplexity AI's Glassdoor rating in 2026?<span class="faq-toggle">+</span></div>
+                    <div class="faq-a">Perplexity AI has a <strong>4.7 out of 5.0</strong> Glassdoor rating &mdash; the highest in our database of 40+ AI and tech companies. Sub-scores: Culture &amp; Values 4.8, Compensation &amp; Benefits 4.5, Senior Management 4.5, Career Opportunities 4.2, and Work-Life Balance 3.3. 92% of employees recommend working there and CEO Aravind Srinivas has a 95% approval rating. See how all companies compare in our <a href="/directory">culture directory</a>.</div>
+                </div>
+                <div class="faq-item" onclick="this.classList.toggle('open')">
+                    <div class="faq-q">What is the work-life balance at Perplexity AI?<span class="faq-toggle">+</span></div>
+                    <div class="faq-a">Work-life balance at Perplexity AI is rated <strong>3.3 out of 5.0</strong> on Glassdoor, ranking 26th of 40 companies in our database. Employees describe long hours, high expectations, and a relentless pace with limited downtime. This creates the widest gap in our database between &ldquo;employees love working here&rdquo; (4.7 overall) and &ldquo;employees work really hard&rdquo; (3.3 WLB). If WLB is a priority, consider <a href="/companies/linear">Linear</a> (4.4), <a href="/companies/pinecone">Pinecone</a> (4.3), or <a href="/companies/notion">Notion</a> (4.2). See our <a href="/blog/best-ai-companies-work-life-balance-2026">WLB rankings</a>.</div>
+                </div>
+                <div class="faq-item" onclick="this.classList.toggle('open')">
+                    <div class="faq-q">How many employees does Perplexity AI have in 2026?<span class="faq-toggle">+</span></div>
+                    <div class="faq-a">Perplexity AI has approximately <strong>500 employees</strong> as of 2026. The company was founded in 2022, is valued at approximately $20B, and is actively hiring with 81 open positions across engineering, research, product, and business roles. The team includes alumni from Google Search, Meta AI, and OpenAI. See our <a href="/blog/ai-company-employee-count-2026">full employee count rankings</a>.</div>
+                </div>
+                <div class="faq-item" onclick="this.classList.toggle('open')">
+                    <div class="faq-q">Is Perplexity AI remote friendly?<span class="faq-toggle">+</span></div>
+                    <div class="faq-a">Perplexity AI is not remote-first. The company is headquartered in San Francisco and values in-person collaboration. Some positions are available in Belgrade (Serbia) for search infrastructure work and select roles in London, but the core team is SF-based. If you want genuinely remote-first companies, consider <a href="/companies/grafanalabs">Grafana Labs</a> (100% remote, 40+ countries), <a href="/companies/posthog">PostHog</a> (fully remote), or <a href="/companies/supabase">Supabase</a> (fully remote, same pay worldwide). See our <a href="/blog/remote-friendly-ai-companies-hiring-2026">remote-friendly AI companies guide</a>.</div>
+                </div>
+                <div class="faq-item" onclick="this.classList.toggle('open')">
+                    <div class="faq-q">What does Perplexity AI pay engineers?<span class="faq-toggle">+</span></div>
+                    <div class="faq-a">Perplexity AI offers competitive Bay Area compensation with base salary, equity, and standard startup benefits (health, dental, vision, office meals, equipment budgets, professional development stipends). The equity component is the headline draw &mdash; at a ~$20B valuation, early and mid-stage employees have significant wealth-creation potential. For how Perplexity compares to other AI companies on compensation, see our <a href="/blog/highest-paying-ai-companies-2026">highest-paying AI companies rankings</a>.</div>
+                </div>
+            </div>
+        </div>
+
         <!-- CTA Box -->
         <div class="cta-box">
-            <h3>Browse all 5,074 jobs from 35 companies</h3>
-            <p>Explore open roles at Perplexity and 28 other AI &amp; tech companies &mdash; filtered by culture, role, and location.</p>
+            <h3>Browse all 5,674 jobs from 40 companies</h3>
+            <p>Explore open roles at Perplexity and 39 other AI &amp; tech companies &mdash; filtered by culture, role, and location.</p>
             <a href="/companies/perplexity" class="btn-primary">See Perplexity Jobs &rarr;</a>
             <a href="/jobs" class="btn-secondary">Browse All Jobs &rarr;</a>
         </div>

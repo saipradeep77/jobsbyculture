@@ -180,8 +180,12 @@ function generatePage(a, b) {
     const slugA = a.slug || a.name.toLowerCase().replace(/[^a-z0-9]+/g, '-');
     const slugB = b.slug || b.name.toLowerCase().replace(/[^a-z0-9]+/g, '-');
     const pageSlug = `${slugA}-vs-${slugB}`;
-    const title = `${a.name} vs ${b.name} Culture Comparison | JobsByCulture`;
-    const desc = `Compare ${a.name} and ${b.name} company cultures side-by-side. See Glassdoor ratings, work-life balance, values, pros & cons, and career opportunities.`;
+    const title = `${a.name} vs ${b.name}: Culture, Glassdoor & Work-Life Balance Compared | JobsByCulture`;
+    const glA = Number(a.glassdoor) || 0;
+    const glB = Number(b.glassdoor) || 0;
+    const wlbA = Number(a.wlb_score) || 0;
+    const wlbB = Number(b.wlb_score) || 0;
+    const desc = `${a.name} (${glA.toFixed(1)} Glassdoor, ${wlbA.toFixed(1)} WLB) vs ${b.name} (${glB.toFixed(1)} Glassdoor, ${wlbB.toFixed(1)} WLB). Side-by-side comparison of culture values, compensation, pros & cons, and open roles.`;
     const url = `https://jobsbyculture.com/compare/${pageSlug}`;
     const today = new Date().toISOString().split('T')[0];
 
@@ -303,7 +307,7 @@ function generatePage(a, b) {
         </div>`;
     }
 
-    // JSON-LD
+    // JSON-LD WebPage
     const jsonLd = {
         "@context": "https://schema.org",
         "@type": "WebPage",
@@ -316,6 +320,80 @@ function generatePage(a, b) {
             "url": "https://jobsbyculture.com"
         }
     };
+
+    // JSON-LD FAQPage
+    const wlbWinner = wlbA >= wlbB ? a : b;
+    const wlbLoser = wlbA >= wlbB ? b : a;
+    const glWinner = glA >= glB ? a : b;
+    const glLoser = glA >= glB ? b : a;
+    const totalJobsA = a.roleCounts ? Object.values(a.roleCounts).reduce((s, n) => s + n, 0) : 0;
+    const totalJobsB = b.roleCounts ? Object.values(b.roleCounts).reduce((s, n) => s + n, 0) : 0;
+
+    const faqLd = {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": `Is ${a.name} or ${b.name} better to work at?`,
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": `It depends on your priorities. ${glWinner.name} has a higher Glassdoor rating (${(Number(glWinner.glassdoor)||0).toFixed(1)} vs ${(Number(glLoser.glassdoor)||0).toFixed(1)}). ${wlbWinner.name} scores better on work-life balance (${(Number(wlbWinner.wlb_score)||0).toFixed(1)} vs ${(Number(wlbLoser.wlb_score)||0).toFixed(1)}). ${a.bestFor ? a.name + ' is best for: ' + a.bestFor + '.' : ''} ${b.bestFor ? b.name + ' is best for: ' + b.bestFor + '.' : ''}`
+                }
+            },
+            {
+                "@type": "Question",
+                "name": `What is the Glassdoor rating for ${a.name} vs ${b.name}?`,
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": `${a.name} has a ${glA.toFixed(1)}/5.0 Glassdoor rating and ${b.name} has a ${glB.toFixed(1)}/5.0 rating. ${a.name} scores ${wlbA.toFixed(1)} on work-life balance while ${b.name} scores ${wlbB.toFixed(1)}.`
+                }
+            },
+            {
+                "@type": "Question",
+                "name": `Which company has better work-life balance: ${a.name} or ${b.name}?`,
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": `${wlbWinner.name} has better work-life balance with a score of ${(Number(wlbWinner.wlb_score)||0).toFixed(1)}/5.0 compared to ${wlbLoser.name}'s ${(Number(wlbLoser.wlb_score)||0).toFixed(1)}/5.0 on Glassdoor.`
+                }
+            }
+        ]
+    };
+
+    // Add hiring question if either has jobs
+    if (totalJobsA > 0 || totalJobsB > 0) {
+        faqLd.mainEntity.push({
+            "@type": "Question",
+            "name": `How many open roles do ${a.name} and ${b.name} have?`,
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": `${a.name} has ${totalJobsA} open roles and ${b.name} has ${totalJobsB} open roles as of ${today}.`
+            }
+        });
+    }
+
+    // Prose summary section
+    const glDiff = Math.abs(glA - glB).toFixed(1);
+    const wlbDiff = Math.abs(wlbA - wlbB).toFixed(1);
+    const sharedStr = shared.length ? shared.map(v => VALUES_META[v]?.name || v).join(', ') : 'none';
+
+    let summaryHtml = `<div class="cmp-section cmp-summary">
+        <div class="cmp-section-label">Summary</div>
+        <div class="cmp-summary-text">
+            <p><strong>${esc(a.name)}</strong> scores <strong>${glA.toFixed(1)}/5.0</strong> on Glassdoor with a <strong>${wlbA.toFixed(1)}</strong> work-life balance rating. <strong>${esc(b.name)}</strong> scores <strong>${glB.toFixed(1)}/5.0</strong> overall with a <strong>${wlbB.toFixed(1)}</strong> WLB.${glDiff > 0 ? ` That\u2019s a ${glDiff}-point gap on overall satisfaction.` : ' They\u2019re tied on overall satisfaction.'}</p>`;
+
+    if (shared.length > 0) {
+        summaryHtml += `<p>Both companies share these culture values: <strong>${sharedStr}</strong>.`;
+        if (uniqueA.length) summaryHtml += ` ${esc(a.name)} also emphasizes ${uniqueA.map(v => VALUES_META[v]?.name || v).join(', ')}.`;
+        if (uniqueB.length) summaryHtml += ` ${esc(b.name)} also emphasizes ${uniqueB.map(v => VALUES_META[v]?.name || v).join(', ')}.`;
+        summaryHtml += `</p>`;
+    }
+
+    if (totalJobsA > 0 || totalJobsB > 0) {
+        summaryHtml += `<p>On the hiring front, ${esc(a.name)} has <strong>${totalJobsA} open roles</strong> and ${esc(b.name)} has <strong>${totalJobsB} open roles</strong>.</p>`;
+    }
+
+    summaryHtml += `</div></div>`;
 
     // Read the CSS from compare.html (everything inside <style>...</style>)
     const cssMatch = compareHtml.match(/<style>([\s\S]*?)<\/style>/);
@@ -330,7 +408,7 @@ function generatePage(a, b) {
     <meta name="description" content="${esc(desc)}">
     <meta name="robots" content="index, follow">
     <meta name="author" content="JobsByCulture">
-    <meta property="og:title" content="${esc(a.name)} vs ${esc(b.name)} Culture Comparison | JobsByCulture">
+    <meta property="og:title" content="${esc(a.name)} vs ${esc(b.name)}: Culture, Glassdoor &amp; Work-Life Balance Compared | JobsByCulture">
     <meta property="og:description" content="${esc(desc)}">
     <meta property="og:type" content="website">
     <meta property="og:url" content="${url}">
@@ -339,7 +417,7 @@ function generatePage(a, b) {
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="${esc(a.name)} vs ${esc(b.name)} Culture Comparison">
+    <meta name="twitter:title" content="${esc(a.name)} vs ${esc(b.name)}: Culture, Glassdoor &amp; Work-Life Balance Compared">
     <meta name="twitter:description" content="${esc(desc)}">
     <meta name="twitter:image" content="https://jobsbyculture.com/api/og?type=compare&amp;a=${slugA}&amp;b=${slugB}">
     <link rel="canonical" href="${url}">
@@ -350,6 +428,7 @@ function generatePage(a, b) {
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Satoshi:wght@400;500;600;700;900&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
     <script type="application/ld+json">${JSON.stringify(jsonLd)}</script>
+    <script type="application/ld+json">${JSON.stringify(faqLd)}</script>
     <style>${css}</style>
 </head>
 <body>
@@ -381,8 +460,8 @@ function generatePage(a, b) {
             <span class="cmp-hero-pill-dot"></span>
             ${esc(a.name)} vs ${esc(b.name)}
         </div>
-        <h1>${esc(a.name)} vs ${esc(b.name)} <em>Culture</em></h1>
-        <p class="cmp-hero-sub">Side-by-side culture comparison. See ratings, values, pros &amp; cons, and open roles to find your best fit.</p>
+        <h1>${esc(a.name)} vs ${esc(b.name)}: <em>Culture Compared</em></h1>
+        <p class="cmp-hero-sub">${esc(a.name)} (${glA.toFixed(1)} Glassdoor) vs ${esc(b.name)} (${glB.toFixed(1)} Glassdoor) &mdash; side-by-side on culture values, work-life balance, compensation, and open roles.</p>
 
         <div class="cmp-selector">
             <a href="/compare" class="cmp-go" style="text-decoration:none">Compare Different Companies</a>
@@ -462,6 +541,9 @@ function generatePage(a, b) {
             <div class="cmp-section-label">Open Roles</div>
             <div class="cmp-jobs-grid">${jobCard(a, 'a')}${jobCard(b, 'b')}</div>
         </div>`}
+
+        <!-- Summary -->
+        ${summaryHtml}
 
         <!-- CTAs -->
         <div class="cmp-ctas">${ctaCol(a, false)}${ctaCol(b, true)}</div>
