@@ -6,7 +6,7 @@
     "positive": 4,
     "negative": 1,
     "mixed": 8,
-    "lastUpdated": "2026-03-19",
+    "lastUpdated": "2026-03-25",
     "hackernews": [
       {
         "source": "hackernews",
@@ -55,7 +55,7 @@
         "title": "Inside the Culture Clash That Tore Apart the Pentagon’s Anthropic Deal",
         "quote": "When Emil Michael (@USWREMichael) took over the Department of War’s AI portfolio last August, he discovered the Biden admin had been “asleep at the wheel” when it came to top military contracts.",
         "subreddit": "slatestarcodex",
-        "score": 19,
+        "score": 21,
         "comments": 83,
         "date": "2026-03-07",
         "url": "https://reddit.com/r/slatestarcodex/comments/1rnb7pc/inside_the_culture_clash_that_tore_apart_the/",
@@ -66,7 +66,7 @@
         "title": "BREAKING: Anthropic's CEO Spends 40% Of His Time On Company Culture And Warns That \"YOLOing\" On AI Spending Could Cause Bankruptcy 🤖🔥",
         "quote": "Anthropic CEO Dario Amodei has revealed in a rare long-form interview on the Dwarkesh Podcast that he dedicates nearly 40% of his working time not to building AI models or shipping products, but to...",
         "subreddit": "InterstellarKinetics",
-        "score": 308,
+        "score": 313,
         "comments": 13,
         "date": "2026-02-28",
         "url": "https://reddit.com/r/InterstellarKinetics/comments/1rgqz0u/breaking_anthropics_ceo_spends_40_of_his_time_on/",
@@ -77,7 +77,7 @@
         "title": "Aussie corporate AI bloodbath is on the horizon",
         "quote": "I apologise for the long post incoming, but I feel it's a discussion that needs to be had properly. I use voice-to-text a lot, which might make my writing come across as AI-ish, it's not - these are...",
         "subreddit": "auscorp",
-        "score": 790,
+        "score": 787,
         "comments": 708,
         "date": "2026-02-21",
         "url": "https://reddit.com/r/auscorp/comments/1ranuju/aussie_corporate_ai_bloodbath_is_on_the_horizon/",
@@ -92,7 +92,7 @@
     "positive": 3,
     "negative": 1,
     "mixed": 9,
-    "lastUpdated": "2026-03-19",
+    "lastUpdated": "2026-03-25",
     "hackernews": [
       {
         "source": "hackernews",
@@ -141,8 +141,8 @@
         "title": "Singaporeans don't want a Nordic model. We want to keep winning.",
         "quote": "In December, a former student of an elite Singapore primary school posted a video recalling how her classmates were genuinely shocked to discover - from a textbook - that most Singaporeans live in...",
         "subreddit": "singapore",
-        "score": 2662,
-        "comments": 362,
+        "score": 2679,
+        "comments": 364,
         "date": "2026-02-26",
         "url": "https://reddit.com/r/singapore/comments/1rfqh4z/singaporeans_dont_want_a_nordic_model_we_want_to/",
         "sentiment": "positive"
@@ -152,8 +152,8 @@
         "title": "Why Modern Star Trek Feels Off and Why That Gets Dismissed",
         "quote": "What frustrates me about the Alex Kurtzman era of Star Trek is not that it’s “different,” and not that it supposedly isn’t “for me.” That response is a deflection.",
         "subreddit": "startrek",
-        "score": 1874,
-        "comments": 810,
+        "score": 1883,
+        "comments": 812,
         "date": "2026-01-22",
         "url": "https://reddit.com/r/startrek/comments/1qjkjtl/why_modern_star_trek_feels_off_and_why_that_gets/",
         "sentiment": "negative"
@@ -178,7 +178,7 @@
     "positive": 5,
     "negative": 1,
     "mixed": 4,
-    "lastUpdated": "2026-03-19",
+    "lastUpdated": "2026-03-25",
     "hackernews": [
       {
         "source": "hackernews",
@@ -227,7 +227,7 @@
         "title": "Interdimensionals, DMT-entities, angels. Garry Nolan said the intelligence community thinks the greys are avatars, intermediaries. He was threatened with death. Eric Davis: \"these craft behave like a spiritual entity\". Vallee: \"there are undisclosed experiments on how to communicate with aliens\"",
         "quote": "# Whats in this post This post explores the idea that some (not all) UAP come from beyond the physical universe, from places such as the \"DMT realm\" or \"the afterlife\".",
         "subreddit": "UFOs",
-        "score": 1016,
+        "score": 1020,
         "comments": 238,
         "date": "2025-12-23",
         "url": "https://reddit.com/r/UFOs/comments/1pu06cw/interdimensionals_dmtentities_angels_garry_nolan/",
@@ -238,7 +238,7 @@
         "title": "Wikipedia is now getting paid by Meta, Microsoft, Perplexity, and other AI companies",
         "quote": "# The internet's largest free encyclopedia is adapting to the AI era As generative AI companies search for cleaner training data, one of the internet's oldest institutions is quietly changing its...",
         "subreddit": "indotech",
-        "score": 37,
+        "score": 36,
         "comments": 3,
         "date": "2026-01-18",
         "url": "https://reddit.com/r/indotech/comments/1qfwj22/wikipedia_is_now_getting_paid_by_meta_microsoft/",
@@ -249,7 +249,7 @@
         "title": "[Guide] I Compiled 50+ Cheat Code Prompts to Force ChatGPT, Gemini, Claude, Perplexity and Grok into Giving Deeper, Non-Obvious Answers.  Here is how to make AI think like a philosopher, economist, psychologist, and historian simultaneously",
         "quote": "How to Write Prompts That Unlock Deeper Insights **TL;DR** Most prompts stay on the surface. These ones dig into the hidden architecture of reality—power dynamics, psychology, systems, and myths.",
         "subreddit": "ThinkingDeeplyAI",
-        "score": 26,
+        "score": 27,
         "comments": 11,
         "date": "2025-11-06",
         "url": "https://reddit.com/r/ThinkingDeeplyAI/comments/1opqas5/guide_i_compiled_50_cheat_code_prompts_to_force/",
@@ -260,18 +260,18 @@
   "mistral": {
     "name": "Mistral AI",
     "overallSentiment": "mixed",
-    "totalMentions": 12,
+    "totalMentions": 11,
     "positive": 5,
     "negative": 2,
-    "mixed": 5,
-    "lastUpdated": "2026-03-19",
+    "mixed": 4,
+    "lastUpdated": "2026-03-25",
     "hackernews": [
       {
         "source": "hackernews",
-        "quote": "lol&gt; Mistral AI has already partnered with world-leading organizations, like ASML, DSO National Laboratories Singapore, Ericsson, European Space Agency, Home Team Science and Technology Agency...",
-        "author": "troyvit",
-        "date": "2026-03-18",
-        "url": "https://news.ycombinator.com/item?id=47427055",
+        "quote": "Full End-to-End Mistral&#x2F;EU AI Workflow Builder! (works on Windows too via Docker Desktop, open-source, exclusively uses Mistral AI)https:&#x2F;&#x2F;nyno.",
+        "author": "theyogadev",
+        "date": "2026-03-25",
+        "url": "https://news.ycombinator.com/item?id=47515885",
         "sentiment": "neutral"
       },
       {
@@ -310,24 +310,24 @@
     "reddit": [
       {
         "source": "reddit",
-        "title": "Stay at stable senior role or join high-risk AI startup (Mistral)?",
-        "quote": "I’m a senior engineer in France at a large and stable tech company. I’ve been approached by Mistral (context: an AI startup making a lot of noise in Europe as an alternative to OpenAI).",
-        "subreddit": "cscareerquestions",
-        "score": 11,
-        "comments": 33,
-        "date": "2025-07-19",
-        "url": "https://reddit.com/r/cscareerquestions/comments/1m45sq9/stay_at_stable_senior_role_or_join_highrisk_ai/",
+        "title": "Mistral CEO: AI companies should pay a content levy in Europe",
+        "quote": "MistralAI CEO Arthur Mensch has submitted an interesting article/opinion piece to the _Financial Times_.",
+        "subreddit": "LocalLLaMA",
+        "score": 146,
+        "comments": 160,
+        "date": "2026-03-21",
+        "url": "https://reddit.com/r/LocalLLaMA/comments/1rzds1b/mistral_ceo_ai_companies_should_pay_a_content/",
         "sentiment": "positive"
       },
       {
         "source": "reddit",
-        "title": "AI Daily News Aug 26 2025: 🤔Apple reportedly discussed buying Mistral and Perplexity 🧠Nvidia’s releases a new 'robot brain' 🍌Google Gemini’s AI image model gets a ‘bananas’ upgrade 💰 Perplexity’s $42.5M publisher revenue program 🎙️ Microsoft’s SOTA text-to-speech model &amp; more",
-        "quote": "# A daily Chronicle of AI Innovations August 26 2025: Listen at [https://podcasts.apple.com/us/podcast/ai-daily-news-aug-26-2025-apple-reportedly-discussed/id1684415169?",
-        "subreddit": "deeplearning",
-        "score": 0,
-        "comments": 2,
-        "date": "2025-08-26",
-        "url": "https://reddit.com/r/deeplearning/comments/1n104ya/ai_daily_news_aug_26_2025_apple_reportedly/",
+        "title": "Stay at stable senior role or join high-risk AI startup (Mistral)?",
+        "quote": "I’m a senior engineer in France at a large and stable tech company. I’ve been approached by Mistral (context: an AI startup making a lot of noise in Europe as an alternative to OpenAI).",
+        "subreddit": "cscareerquestions",
+        "score": 10,
+        "comments": 33,
+        "date": "2025-07-19",
+        "url": "https://reddit.com/r/cscareerquestions/comments/1m45sq9/stay_at_stable_senior_role_or_join_highrisk_ai/",
         "sentiment": "positive"
       },
       {
@@ -350,7 +350,7 @@
     "positive": 8,
     "negative": 2,
     "mixed": 3,
-    "lastUpdated": "2026-03-19",
+    "lastUpdated": "2026-03-25",
     "hackernews": [
       {
         "source": "hackernews",
@@ -410,7 +410,7 @@
         "title": "Looking for Product Companies with Strong Databricks/Spark Work",
         "quote": "Hey folks, Need some genuine advice 🙏 I’ve got 4.6 years of experience as an Azure Data Engineer, currently in Bangalore.",
         "subreddit": "dataengineersindia",
-        "score": 23,
+        "score": 24,
         "comments": 1,
         "date": "2026-01-20",
         "url": "https://reddit.com/r/dataengineersindia/comments/1qi14xt/looking_for_product_companies_with_strong/",
@@ -421,7 +421,7 @@
         "title": "Anyone interviewed/worked at Kyndryl as a azure Data Engineer (databricks ) ? Need prep advice",
         "quote": "Hey folks, I have an upcoming Azure Data Engineer (databricks ) interview with **Kyndryl** and wanted to understand the interview pattern and role expectations better.",
         "subreddit": "dataengineersindia",
-        "score": 9,
+        "score": 11,
         "comments": 0,
         "date": "2026-02-08",
         "url": "https://reddit.com/r/dataengineersindia/comments/1qzf115/anyone_interviewedworked_at_kyndryl_as_a_azure/",
@@ -436,7 +436,7 @@
     "positive": 9,
     "negative": 1,
     "mixed": 3,
-    "lastUpdated": "2026-03-19",
+    "lastUpdated": "2026-03-25",
     "hackernews": [
       {
         "source": "hackernews",
@@ -485,7 +485,7 @@
         "title": "Comparing Tourism in India vs Sri Lanka: As an Indian, I Was Shocked Last Week",
         "quote": "So we just did a 4-day trip across Sri Lanka’s southern and western coast last week- small towns, villages, beaches, hill areas and honestly, we came back astonished.",
         "subreddit": "india",
-        "score": 2006,
+        "score": 2008,
         "comments": 331,
         "date": "2026-02-26",
         "url": "https://reddit.com/r/india/comments/1rf0fvu/comparing_tourism_in_india_vs_sri_lanka_as_an/",
@@ -496,7 +496,7 @@
         "title": "Sagada Ultimate Guide: I am a female solo traveller who stayed in Sagada for 10 nights and tried almost everything (so you dont have to)",
         "quote": "Hi mods, sorry nadelete. Ulit :( # Reminder before going to Sagada: 1. Be respectful. Ik sometimes we could be really excited and be really loud unintentionally but please tone it down. 2.",
         "subreddit": "phtravel",
-        "score": 1618,
+        "score": 1614,
         "comments": 129,
         "date": "2026-02-08",
         "url": "https://reddit.com/r/phtravel/comments/1qz35ji/sagada_ultimate_guide_i_am_a_female_solo/",
@@ -507,7 +507,7 @@
         "title": "[Discussion]It’s time to admit the Guild Trader system is a barrier to entry, not a \"unique\" feature.",
         "quote": "Recently I've purchased the game, (thanks to the sale, for 10 of my friends! All but 3 have left. They went back to POE2.",
         "subreddit": "elderscrollsonline",
-        "score": 615,
+        "score": 606,
         "comments": 298,
         "date": "2025-12-27",
         "url": "https://reddit.com/r/elderscrollsonline/comments/1pxb6k2/discussionits_time_to_admit_the_guild_trader/",
@@ -520,9 +520,9 @@
     "overallSentiment": "positive",
     "totalMentions": 13,
     "positive": 9,
-    "negative": 0,
-    "mixed": 4,
-    "lastUpdated": "2026-03-19",
+    "negative": 1,
+    "mixed": 3,
+    "lastUpdated": "2026-03-25",
     "hackernews": [
       {
         "source": "hackernews",
@@ -572,28 +572,28 @@
         "quote": "I unfortunately won’t be verifying my identity or employment for some protection of my privacy. I’ve worked for Stripe for over four years and am parting on good terms for my next adventure.",
         "subreddit": "stripe",
         "score": 29,
-        "comments": 105,
+        "comments": 107,
         "date": "2026-03-04",
         "url": "https://reddit.com/r/stripe/comments/1rkxa9u/yesterday_was_my_last_day_working_at_stripe_ama/",
         "sentiment": "positive"
       },
       {
         "source": "reddit",
-        "title": "Stripe Work Culture Advice and Offer Rollout Process",
-        "quote": "Recently gave interviews for Stripe SE-2 role based out of Bengaluru for Operations Platform team. Wanted to understand how’s the culture in org overall and the team?",
-        "subreddit": "developersIndia",
-        "score": 2,
-        "comments": 7,
-        "date": "2026-02-07",
-        "url": "https://reddit.com/r/developersIndia/comments/1qynb6e/stripe_work_culture_advice_and_offer_rollout/",
-        "sentiment": "neutral"
+        "title": "How is the culture at Stripe?",
+        "quote": "Planning to join Stripe in EU as a SWE but found some worrying reviews about toxic culture, overtiming, etc Obviously not all reviews are like that but curious to hear an insiders’ point view on the...",
+        "subreddit": "cscareerquestionsEU",
+        "score": 21,
+        "comments": 6,
+        "date": "2025-11-17",
+        "url": "https://reddit.com/r/cscareerquestionsEU/comments/1ozcqo7/how_is_the_culture_at_stripe/",
+        "sentiment": "negative"
       },
       {
         "source": "reddit",
         "title": "Should I leave my decent, remote job for hybrid work @ Stripe?",
         "quote": "Some background: \\- I currently work remotely as a SWE3 for a Series A fintech startup. \\- I really enjoy my job... \\-- Work-life balance is solid..",
         "subreddit": "cscareerquestions",
-        "score": 93,
+        "score": 100,
         "comments": 119,
         "date": "2025-10-30",
         "url": "https://reddit.com/r/cscareerquestions/comments/1okbrmg/should_i_leave_my_decent_remote_job_for_hybrid/",
@@ -608,7 +608,7 @@
     "positive": 1,
     "negative": 2,
     "mixed": 10,
-    "lastUpdated": "2026-03-19",
+    "lastUpdated": "2026-03-25",
     "hackernews": [
       {
         "source": "hackernews",
@@ -657,7 +657,7 @@
         "title": "After 4 years at Google, here's my honest take on why their work culture and processes didn't work for me.",
         "quote": "I recently left Google after nearly four years. I wish I could say it lives up to all the hype, but it didn't. I honestly felt like I did some of the worst work of my career there.",
         "subreddit": "cscareerquestions",
-        "score": 2429,
+        "score": 2428,
         "comments": 412,
         "date": "2025-05-22",
         "url": "https://reddit.com/r/cscareerquestions/comments/1kslf3b/after_4_years_at_google_heres_my_honest_take_on/",
@@ -665,25 +665,25 @@
       },
       {
         "source": "reddit",
+        "title": "What’s your honest experience of working at one of Sweden’s bigger AI companies?",
+        "quote": "Lovable, Sana, Legora… Many of these companies boast a 9-9-6 culture. I have a hard time believing this applies to 50-100 employees. Is it actually true?",
+        "subreddit": "stockholm",
+        "score": 81,
+        "comments": 107,
+        "date": "2026-03-23",
+        "url": "https://reddit.com/r/stockholm/comments/1s1s6mh/whats_your_honest_experience_of_working_at_one_of/",
+        "sentiment": "neutral"
+      },
+      {
+        "source": "reddit",
         "title": "EU5’s Framework Is Insane - Stop Calling It ‘Unplayable",
         "quote": "I honestly don’t get the “EU5 is unplayable” crowd. People see something like the Golden Horde not imploding on cue and immediately jump into a rant about Paradox being lazy or greedy.",
         "subreddit": "EU5",
-        "score": 2893,
+        "score": 2887,
         "comments": 528,
         "date": "2025-11-24",
         "url": "https://reddit.com/r/EU5/comments/1p5fpb7/eu5s_framework_is_insane_stop_calling_it/",
         "sentiment": "negative"
-      },
-      {
-        "source": "reddit",
-        "title": "There are a dire warnings from Nvidia CEO.",
-        "quote": "Jensen breaks down AI into five layers: energy, chips, infrastructure, models, and applications. And honestly, China's position is stronger than most people realize. Start with energy.",
-        "subreddit": "StockMarket",
-        "score": 2235,
-        "comments": 625,
-        "date": "2025-12-07",
-        "url": "https://reddit.com/r/StockMarket/comments/1pga3c0/there_are_a_dire_warnings_from_nvidia_ceo/",
-        "sentiment": "positive"
       }
     ]
   },
@@ -691,10 +691,10 @@
     "name": "Together AI",
     "overallSentiment": "mixed",
     "totalMentions": 11,
-    "positive": 4,
+    "positive": 3,
     "negative": 0,
-    "mixed": 7,
-    "lastUpdated": "2026-03-19",
+    "mixed": 8,
+    "lastUpdated": "2026-03-25",
     "hackernews": [
       {
         "source": "hackernews",
@@ -743,7 +743,7 @@
         "title": "After 4 years at Google, here's my honest take on why their work culture and processes didn't work for me.",
         "quote": "I recently left Google after nearly four years. I wish I could say it lives up to all the hype, but it didn't. I honestly felt like I did some of the worst work of my career there.",
         "subreddit": "cscareerquestions",
-        "score": 2425,
+        "score": 2427,
         "comments": 412,
         "date": "2025-05-22",
         "url": "https://reddit.com/r/cscareerquestions/comments/1kslf3b/after_4_years_at_google_heres_my_honest_take_on/",
@@ -751,25 +751,25 @@
       },
       {
         "source": "reddit",
+        "title": "Work on Saturday or Lose 3 Days Salary — Indian Corporate Culture 2026?",
+        "quote": "LaLa company announced a mandatory AI hackathon on a Saturday (8 AM – 8 PM). \\- Attend → get 1.5 extra leave \\- Skip → 3 days salary (LWP) deducted It’s being called “upskilling,” but feels more like...",
+        "subreddit": "IndianWorkplace",
+        "score": 530,
+        "comments": 49,
+        "date": "2026-03-21",
+        "url": "https://reddit.com/r/IndianWorkplace/comments/1rzxmv9/work_on_saturday_or_lose_3_days_salary_indian/",
+        "sentiment": "neutral"
+      },
+      {
+        "source": "reddit",
         "title": "Spotify boycott: Artists leave 'garbage hole' platform after CEO invests in AI weapons",
         "quote": "Article: Greg Saunier already had reasons to be wary of Spotify. The founder of the acclaimed Bay Area band Deerhoof was well acquainted with the service’s meager payouts to artists and songwriters,...",
         "subreddit": "popculturechat",
-        "score": 7064,
+        "score": 7063,
         "comments": 400,
         "date": "2025-11-30",
         "url": "https://reddit.com/r/popculturechat/comments/1pa4sni/spotify_boycott_artists_leave_garbage_hole/",
         "sentiment": "mixed"
-      },
-      {
-        "source": "reddit",
-        "title": "Am I being too high standard ?(Please read fully)",
-        "quote": "(I study in Bhubaneswar) I'm the only single left in my college group which I have abso-fucking-lutely no problem with.",
-        "subreddit": "TeenIndia",
-        "score": 1471,
-        "comments": 883,
-        "date": "2026-01-10",
-        "url": "https://reddit.com/r/TeenIndia/comments/1q92egr/am_i_being_too_high_standard_please_read_fully/",
-        "sentiment": "positive"
       }
     ]
   },
@@ -780,7 +780,7 @@
     "positive": 5,
     "negative": 0,
     "mixed": 6,
-    "lastUpdated": "2026-03-19",
+    "lastUpdated": "2026-03-25",
     "hackernews": [
       {
         "source": "hackernews",
@@ -829,7 +829,7 @@
         "title": "I applied to +60 Jobs, What’s Wrong with my Resume?",
         "quote": "I applied to +60 Jobs, What’s Wrong with my Resume?",
         "subreddit": "ResumeCoverLetterTips",
-        "score": 19,
+        "score": 20,
         "comments": 45,
         "date": "2026-03-13",
         "url": "https://reddit.com/r/ResumeCoverLetterTips/comments/1rsac96/i_applied_to_60_jobs_whats_wrong_with_my_resume/",
@@ -840,7 +840,7 @@
         "title": "Gen Z fixing pathetic work culture!",
         "quote": "Image credit: r/30daysnewjob. Saw this shared there during my job search and it stuck with me.",
         "subreddit": "jobsearchhacks",
-        "score": 25694,
+        "score": 25703,
         "comments": 532,
         "date": "2026-02-05",
         "url": "https://reddit.com/r/jobsearchhacks/comments/1qwoi6a/gen_z_fixing_pathetic_work_culture/",
@@ -851,8 +851,8 @@
         "title": "Gen Z fixing pathetic work culture!",
         "quote": "Gen Z fixing pathetic work culture!",
         "subreddit": "remoteworks",
-        "score": 4769,
-        "comments": 706,
+        "score": 4770,
+        "comments": 707,
         "date": "2026-03-01",
         "url": "https://reddit.com/r/remoteworks/comments/1rhtu0m/gen_z_fixing_pathetic_work_culture/",
         "sentiment": "neutral"
@@ -866,7 +866,7 @@
     "positive": 7,
     "negative": 1,
     "mixed": 5,
-    "lastUpdated": "2026-03-19",
+    "lastUpdated": "2026-03-25",
     "hackernews": [
       {
         "source": "hackernews",
@@ -915,7 +915,7 @@
         "title": "Does anyone work at rent the runway(now or in the past)? Interested in a role there and wondering what it's like to work there!",
         "quote": "Curious about the culture, benefits, how people enjoy it, like the people etc.",
         "subreddit": "RentTheRunway",
-        "score": 3,
+        "score": 2,
         "comments": 9,
         "date": "2026-03-02",
         "url": "https://reddit.com/r/RentTheRunway/comments/1rj3w1h/does_anyone_work_at_rent_the_runwaynow_or_in_the/",
@@ -926,7 +926,7 @@
         "title": "Kirandeep Chahal takes a stand against disrespectful Indian runway work culture",
         "quote": "She has modelled for the likes of Dior, Hermès, Rahul Mishra, Bulgari, Gaurav Gupta, Dries van Noten, Tarun Tahiliani, Sabyasachi, Manish Malhotra.",
         "subreddit": "BollywoodFashion",
-        "score": 137,
+        "score": 135,
         "comments": 12,
         "date": "2025-08-26",
         "url": "https://reddit.com/r/BollywoodFashion/comments/1n0jg78/kirandeep_chahal_takes_a_stand_against/",
@@ -937,7 +937,7 @@
         "title": "Why authoritarianism keeps failing in America.",
         "quote": "found this article; i think you guys will like it. Why Authoritarianism Keeps Failing in America 1. A New Kind of Threat Yes, authoritarianism is rising. No, you’re not being dramatic.",
         "subreddit": "50501",
-        "score": 1564,
+        "score": 1561,
         "comments": 165,
         "date": "2025-04-02",
         "url": "https://reddit.com/r/50501/comments/1jpxkul/why_authoritarianism_keeps_failing_in_america/",
@@ -952,7 +952,7 @@
     "positive": 5,
     "negative": 0,
     "mixed": 1,
-    "lastUpdated": "2026-03-19",
+    "lastUpdated": "2026-03-25",
     "hackernews": [
       {
         "source": "hackernews",
@@ -980,7 +980,7 @@
         "title": "Ghost of Yotei | Review Megathread",
         "quote": "Game Information -------------------- **Game Title**: Ghost of Yotei **Platforms**: - PlayStation 5 (Oct 2, 2025) **Trailer**: **Review Aggregator**: **[OpenCritic - 89 average - 96% recommended - 67...",
         "subreddit": "PS5",
-        "score": 1717,
+        "score": 1714,
         "comments": 801,
         "date": "2025-09-25",
         "url": "https://reddit.com/r/PS5/comments/1nq65jb/ghost_of_yotei_review_megathread/",
@@ -991,7 +991,7 @@
         "title": "Ghost of Yotei Review Thread",
         "quote": "Game Information -------------------- **Game Title**: Ghost of Yotei **Platforms**: - PlayStation 5 (Oct 2, 2025) **Trailer**: **Review Aggregator**: **[OpenCritic - 89 average - 96% recommended - 67...",
         "subreddit": "Games",
-        "score": 1439,
+        "score": 1443,
         "comments": 942,
         "date": "2025-09-25",
         "url": "https://reddit.com/r/Games/comments/1nq64yz/ghost_of_yotei_review_thread/",
@@ -1006,7 +1006,7 @@
     "positive": 4,
     "negative": 2,
     "mixed": 7,
-    "lastUpdated": "2026-03-19",
+    "lastUpdated": "2026-03-25",
     "hackernews": [
       {
         "source": "hackernews",
@@ -1055,7 +1055,7 @@
         "title": "I just got rejected for a job I applied to because  \"the male intern fits better within the work culture\": a rant",
         "quote": "So I applied for a job at the place where I did my internship, and my performance review during this intership was \"excellent\". I have to admit that socially the mood felt off sometimes.",
         "subreddit": "TwoXChromosomes",
-        "score": 2124,
+        "score": 2125,
         "comments": 71,
         "date": "2025-05-23",
         "url": "https://reddit.com/r/TwoXChromosomes/comments/1ktlsko/i_just_got_rejected_for_a_job_i_applied_to/",
@@ -1066,7 +1066,7 @@
         "title": "My Roommate's(21F) Parents keep letting themselves into my (21 F) apartment with the spare key my roommate gave them",
         "quote": "**I am not The OOP, OOP is u/ughhhelpmepleaseee** **My Roommate's(21F) Parents keep letting themselves into my (21 F) apartment with the spare key my roommate gave them.",
         "subreddit": "BestofRedditorUpdates",
-        "score": 7523,
+        "score": 7528,
         "comments": 342,
         "date": "2026-01-30",
         "url": "https://reddit.com/r/BestofRedditorUpdates/comments/1qqw5w3/my_roommates21f_parents_keep_letting_themselves/",
@@ -1077,7 +1077,7 @@
         "title": "My mother-in-law (57f) doesn't believe that my husband (30m) is the father of our baby. I (32f) don't know what to do.",
         "quote": "**I am NOT OOP, OOP is u/greygreythrowaway** **My mother-in-law (57f) doesn't believe that my husband (30m) is the father of our baby. I (32f) don't know what to do.** **Trigger Warnings:** &gt;!",
         "subreddit": "BestofRedditorUpdates",
-        "score": 5312,
+        "score": 5309,
         "comments": 771,
         "date": "2025-11-19",
         "url": "https://reddit.com/r/BestofRedditorUpdates/comments/1p1d589/my_motherinlaw_57f_doesnt_believe_that_my_husband/",
@@ -1092,7 +1092,7 @@
     "positive": 3,
     "negative": 0,
     "mixed": 10,
-    "lastUpdated": "2026-03-19",
+    "lastUpdated": "2026-03-25",
     "hackernews": [
       {
         "source": "hackernews",
@@ -1141,7 +1141,7 @@
         "title": "After 4 years at Google, here's my honest take on why their work culture and processes didn't work for me.",
         "quote": "I recently left Google after nearly four years. I wish I could say it lives up to all the hype, but it didn't. I honestly felt like I did some of the worst work of my career there.",
         "subreddit": "cscareerquestions",
-        "score": 2423,
+        "score": 2427,
         "comments": 412,
         "date": "2025-05-22",
         "url": "https://reddit.com/r/cscareerquestions/comments/1kslf3b/after_4_years_at_google_heres_my_honest_take_on/",
@@ -1152,7 +1152,7 @@
         "title": "Spotify boycott: Artists leave 'garbage hole' platform after CEO invests in AI weapons",
         "quote": "Article: Greg Saunier already had reasons to be wary of Spotify. The founder of the acclaimed Bay Area band Deerhoof was well acquainted with the service’s meager payouts to artists and songwriters,...",
         "subreddit": "popculturechat",
-        "score": 7071,
+        "score": 7064,
         "comments": 400,
         "date": "2025-11-30",
         "url": "https://reddit.com/r/popculturechat/comments/1pa4sni/spotify_boycott_artists_leave_garbage_hole/",
@@ -1163,7 +1163,7 @@
         "title": "Resigned Due To Bad Work Culture, Toxic Management.",
         "quote": "Around 8 months ago, I joined a US-based HR Tech MNC (a so-called product company) as an SDE-2. Before this, I had spent over 6 years at a major startup, so I’ve had exposure to both worlds.",
         "subreddit": "developersIndia",
-        "score": 456,
+        "score": 459,
         "comments": 74,
         "date": "2025-09-01",
         "url": "https://reddit.com/r/developersIndia/comments/1n5vjip/resigned_due_to_bad_work_culture_toxic_management/",
@@ -1178,7 +1178,7 @@
     "positive": 4,
     "negative": 4,
     "mixed": 5,
-    "lastUpdated": "2026-03-19",
+    "lastUpdated": "2026-03-25",
     "hackernews": [
       {
         "source": "hackernews",
@@ -1227,7 +1227,7 @@
         "title": "The beach is the biggest gaslight of the fucking millennium",
         "quote": "Im convinced no one on earth actually enjoys going to the beach, aside from maybe water-sport and boat people.",
         "subreddit": "rant",
-        "score": 20324,
+        "score": 20326,
         "comments": 5232,
         "date": "2025-04-22",
         "url": "https://reddit.com/r/rant/comments/1k4v6jl/the_beach_is_the_biggest_gaslight_of_the_fucking/",
@@ -1238,8 +1238,8 @@
         "title": "[Hated Trope] Villains who are utterly irredeemable, yet are whitewashed by the fandom for being \"technically right\" about one (usually insignificant) thing.",
         "quote": "This is an enormous issue with the Far Cry fandom, and I'm curious to see if it applies to any others I can't think of.",
         "subreddit": "TopCharacterTropes",
-        "score": 5102,
-        "comments": 1668,
+        "score": 5110,
+        "comments": 1667,
         "date": "2025-09-22",
         "url": "https://reddit.com/r/TopCharacterTropes/comments/1nnsmk4/hated_trope_villains_who_are_utterly_irredeemable/",
         "sentiment": "negative"
@@ -1249,8 +1249,8 @@
         "title": "Watching my casual gamer friend play made me realize how disconnected we are as regular gamers.",
         "quote": "Last weekend I finally understood the massive gap between seasoned gamers and the average casual player. And I mean, true casual.",
         "subreddit": "truegaming",
-        "score": 6248,
-        "comments": 552,
+        "score": 6251,
+        "comments": 553,
         "date": "2025-10-07",
         "url": "https://reddit.com/r/truegaming/comments/1o01x1p/watching_my_casual_gamer_friend_play_made_me/",
         "sentiment": "positive"
@@ -1261,10 +1261,10 @@
     "name": "Notion",
     "overallSentiment": "mixed",
     "totalMentions": 13,
-    "positive": 5,
+    "positive": 4,
     "negative": 1,
-    "mixed": 7,
-    "lastUpdated": "2026-03-19",
+    "mixed": 8,
+    "lastUpdated": "2026-03-25",
     "hackernews": [
       {
         "source": "hackernews",
@@ -1273,14 +1273,6 @@
         "date": "2025-06-19",
         "url": "https://news.ycombinator.com/item?id=44319694",
         "sentiment": "neutral"
-      },
-      {
-        "source": "hackernews",
-        "quote": "I am really receptive of transhumanist goals. I think it’d be cool as shit to upload my consciousness into the internet and download it into a robot.",
-        "author": "dcow",
-        "date": "2025-03-25",
-        "url": "https://news.ycombinator.com/item?id=43471982",
-        "sentiment": "positive"
       },
       {
         "source": "hackernews",
@@ -1305,6 +1297,14 @@
         "date": "2026-02-26",
         "url": "https://news.ycombinator.com/item?id=47163921",
         "sentiment": "positive"
+      },
+      {
+        "source": "hackernews",
+        "quote": "I have no idea what your culture is, but the entire notion that domestic violence is something to be monitored and prevented by outsiders was invented very recently in most cultures.",
+        "author": "matthewdgreen",
+        "date": "2025-09-20",
+        "url": "https://news.ycombinator.com/item?id=45316508",
+        "sentiment": "neutral"
       }
     ],
     "reddit": [
@@ -1313,7 +1313,7 @@
         "title": "CMV: The current Republican strategy is a rational, winning formula because their base actively enjoys the cruelty, and all institutional checks have failed",
         "quote": "My view, in its most blunt form, is this: The Republican party, led by Trump, has zero incentive to change course, moderate, or adhere to democratic norms because the entire system is functionally...",
         "subreddit": "changemyview",
-        "score": 5528,
+        "score": 5521,
         "comments": 1190,
         "date": "2025-09-09",
         "url": "https://reddit.com/r/changemyview/comments/1nc5cq7/cmv_the_current_republican_strategy_is_a_rational/",
@@ -1324,7 +1324,7 @@
         "title": "Brilliant piece in AFR by French economist on using integration policies to squash illiberal ideologies",
         "quote": "The Bondi Beach attack has produced a familiar reflex: we reach for the fastest levers – tighten speech, narrow protest, expand bans.",
         "subreddit": "aussie",
-        "score": 1923,
+        "score": 1921,
         "comments": 1078,
         "date": "2025-12-24",
         "url": "https://reddit.com/r/aussie/comments/1pukqpo/brilliant_piece_in_afr_by_french_economist_on/",
@@ -1350,7 +1350,7 @@
     "positive": 8,
     "negative": 0,
     "mixed": 5,
-    "lastUpdated": "2026-03-19",
+    "lastUpdated": "2026-03-25",
     "hackernews": [
       {
         "source": "hackernews",
@@ -1399,7 +1399,7 @@
         "title": "The Iron Age Was an Accident: How a Copper Waste Product Conquered the World",
         "quote": "The Iron Age in the Middle East and eastern Mediterranean didn't begin with a discovery, but with a waste product.",
         "subreddit": "AncientCivilizations",
-        "score": 912,
+        "score": 909,
         "comments": 150,
         "date": "2026-01-09",
         "url": "https://reddit.com/r/AncientCivilizations/comments/1q80m92/the_iron_age_was_an_accident_how_a_copper_waste/",
@@ -1410,7 +1410,7 @@
         "title": "AMA - I’m the author of China’s Backstory: The History Beijing Doesn’t Want You to Read. Ask Me Anything!",
         "quote": "https://preview.redd.it/x6yps4eyvyfg1.jpg?width=3648&amp;format=pjpg&amp;auto=webp&amp;s=5950188b9ce6c11849269623d1f1ae7c92cb64a4 tl;dr - I just published a book, looking at the history behind the...",
         "subreddit": "IAmA",
-        "score": 93,
+        "score": 96,
         "comments": 158,
         "date": "2026-01-27",
         "url": "https://reddit.com/r/IAmA/comments/1qospp6/ama_im_the_author_of_chinas_backstory_the_history/",
@@ -1421,8 +1421,8 @@
         "title": "15 AI Development Companies Dominating 2026 (I Tested Them All So You Don't Have To)",
         "quote": "After two decades of watching the technology landscape evolve from the dot-com boom to the AI revolution, I've learned one critical truth: choosing the right development partner can make or break...",
         "subreddit": "SaaS",
-        "score": 13,
-        "comments": 64,
+        "score": 14,
+        "comments": 67,
         "date": "2026-02-04",
         "url": "https://reddit.com/r/SaaS/comments/1qvhr5y/15_ai_development_companies_dominating_2026_i/",
         "sentiment": "positive"
@@ -1436,7 +1436,7 @@
     "positive": 4,
     "negative": 0,
     "mixed": 9,
-    "lastUpdated": "2026-03-19",
+    "lastUpdated": "2026-03-25",
     "hackernews": [
       {
         "source": "hackernews",
@@ -1485,7 +1485,7 @@
         "title": "I spent $104,184.66 to run my Notion Consultancy in 2025 (AMA)",
         "quote": "Hey everyone, It's become a bit of a tradition - once a year, I tally up all the expenses in my Notion Consultancy and share them here in case anyone is curious to see how things run behind the...",
         "subreddit": "Notion",
-        "score": 152,
+        "score": 151,
         "comments": 99,
         "date": "2025-12-15",
         "url": "https://reddit.com/r/Notion/comments/1pn6ipj/i_spent_10418466_to_run_my_notion_consultancy_in/",
@@ -1496,7 +1496,7 @@
         "title": "Gen Z fixing pathetic work culture!",
         "quote": "Image credit: r/30daysnewjob. Saw this shared there during my job search and it stuck with me.",
         "subreddit": "jobsearchhacks",
-        "score": 25700,
+        "score": 25704,
         "comments": 532,
         "date": "2026-02-05",
         "url": "https://reddit.com/r/jobsearchhacks/comments/1qwoi6a/gen_z_fixing_pathetic_work_culture/",
@@ -1507,8 +1507,8 @@
         "title": "Gen Z fixing pathetic work culture!",
         "quote": "Gen Z fixing pathetic work culture!",
         "subreddit": "remoteworks",
-        "score": 4781,
-        "comments": 706,
+        "score": 4775,
+        "comments": 707,
         "date": "2026-03-01",
         "url": "https://reddit.com/r/remoteworks/comments/1rhtu0m/gen_z_fixing_pathetic_work_culture/",
         "sentiment": "neutral"
@@ -1519,10 +1519,10 @@
     "name": "ElevenLabs",
     "overallSentiment": "mixed",
     "totalMentions": 13,
-    "positive": 6,
+    "positive": 5,
     "negative": 0,
-    "mixed": 7,
-    "lastUpdated": "2026-03-19",
+    "mixed": 8,
+    "lastUpdated": "2026-03-25",
     "hackernews": [
       {
         "source": "hackernews",
@@ -1571,8 +1571,8 @@
         "title": "Megathread 24: HYBE / ADOR / MHJ - Court rules in favor of ADOR, NewJeans' Contract remains Valid, further hearings for Source, Belift, and HYBE against Min Hee Jin to come, and More",
         "quote": "This [megathread](https://i.imgur.com/CuuqLsG.png) is about the ongoing dispute within HYBE and the management of sub-label ADOR.",
         "subreddit": "kpop",
-        "score": 916,
-        "comments": 12357,
+        "score": 915,
+        "comments": 12354,
         "date": "2025-10-30",
         "url": "https://reddit.com/r/kpop/comments/1ojnnsn/megathread_24_hybe_ador_mhj_court_rules_in_favor/",
         "sentiment": "mixed"
@@ -1582,7 +1582,7 @@
         "title": "OOPS",
         "quote": "The Krethian war fleet had been sitting outside Earth's orbit for six days. 212 ships. Enough firepower to flatten a continent. Admiral Vorn-Ka was starting to sweat. Standard procedure was simple.",
         "subreddit": "HFY",
-        "score": 935,
+        "score": 1014,
         "comments": 67,
         "date": "2026-03-15",
         "url": "https://reddit.com/r/HFY/comments/1rtze2j/oops/",
@@ -1593,8 +1593,8 @@
         "title": "We Are Not The Prize",
         "quote": "We Are Not The Prize From an experiencer. \\--- I've been an experiencer for years. Won't go into detail. What I'll say is the thing I remember most clearly about contact is this: they were bored.",
         "subreddit": "ufo",
-        "score": 0,
-        "comments": 146,
+        "score": 5,
+        "comments": 158,
         "date": "2026-03-18",
         "url": "https://reddit.com/r/ufo/comments/1rx1u5t/we_are_not_the_prize/",
         "sentiment": "mixed"
@@ -1608,7 +1608,7 @@
     "positive": 7,
     "negative": 0,
     "mixed": 6,
-    "lastUpdated": "2026-03-19",
+    "lastUpdated": "2026-03-25",
     "hackernews": [
       {
         "source": "hackernews",
@@ -1657,8 +1657,8 @@
         "title": "#Beermoney for Busy People! (2026) - Programs Without Disqualifications!",
         "quote": "#Beermoney for Busy People! (2026) - Programs Without Disqualifications! Hi all! I haven’t updated this post since 2024 so I thought it was time.",
         "subreddit": "beermoney",
-        "score": 465,
-        "comments": 95,
+        "score": 513,
+        "comments": 102,
         "date": "2026-03-06",
         "url": "https://reddit.com/r/beermoney/comments/1rmigwd/beermoney_for_busy_people_2026_programs_without/",
         "sentiment": "positive"
@@ -1668,7 +1668,7 @@
         "title": "🌲🕯️🌲 Yule &amp; Winter Solstice - 21 Dec 2025 🌲🕯️🌲",
         "quote": "# Yule Welcome to the latest sabbat informational post! Throughout the year, we post threads to share general information about the next upcoming event so WvP's witches, new and old, can prepare for...",
         "subreddit": "WitchesVsPatriarchy",
-        "score": 425,
+        "score": 421,
         "comments": 23,
         "date": "2025-12-21",
         "url": "https://reddit.com/r/WitchesVsPatriarchy/comments/1prv2zk/yule_winter_solstice_21_dec_2025/",
@@ -1694,8 +1694,16 @@
     "positive": 4,
     "negative": 1,
     "mixed": 8,
-    "lastUpdated": "2026-03-19",
+    "lastUpdated": "2026-03-25",
     "hackernews": [
+      {
+        "source": "hackernews",
+        "quote": "&gt; the discussion will vary by communityIt seems like the culture and audience of each social media service is fairly unique. Is crossposting worth while for you?",
+        "author": "criddell",
+        "date": "2026-03-23",
+        "url": "https://news.ycombinator.com/item?id=47490318",
+        "sentiment": "neutral"
+      },
       {
         "source": "hackernews",
         "quote": "I have a tentative take, and I kind of feel stupid for even claiming this, since I don&#x27;t work in Cloud-ops, or whatever, but it&#x27;s fun to try to participate, and I spent some time...",
@@ -1727,14 +1735,6 @@
         "date": "2025-10-06",
         "url": "https://news.ycombinator.com/item?id=45495703",
         "sentiment": "neutral"
-      },
-      {
-        "source": "hackernews",
-        "quote": "My big gripe with Music is that big butt-ugly modal ad they prompt you with if you&#x27;re one of the billions of humans that don&#x27;t pay for Apple Music: https:&#x2F;&#x2F;discussions.apple.",
-        "author": "bigyabai",
-        "date": "2025-07-10",
-        "url": "https://news.ycombinator.com/item?id=44518195",
-        "sentiment": "neutral"
       }
     ],
     "reddit": [
@@ -1743,7 +1743,7 @@
         "title": "As many of us have been seeing FBI/Cult Specialist \"FriendlyHoneyBadger\" call the stages of continuing Trump admin implosion w/continually uncanny studied accuracy, she's recognizing the vivid behavioral markers of his approaching inevitability &amp; what his next psychological state is about to become.",
         "quote": "Original link to FBI Profiler/Cult Specialist \"FriendlyHoneyBadger\" maybe found on TikTok here: https://www.tiktok.",
         "subreddit": "50501",
-        "score": 2671,
+        "score": 2677,
         "comments": 177,
         "date": "2025-07-14",
         "url": "https://reddit.com/r/50501/comments/1lzdkr5/as_many_of_us_have_been_seeing_fbicult_specialist/",
@@ -1780,7 +1780,7 @@
     "positive": 7,
     "negative": 3,
     "mixed": 3,
-    "lastUpdated": "2026-03-19",
+    "lastUpdated": "2026-03-25",
     "hackernews": [
       {
         "source": "hackernews",
@@ -1829,7 +1829,7 @@
         "title": "I now manage the guy who hired me — and I’m afraid he might quit over it",
         "quote": "**I now manage the guy who hired me — and I’m afraid he might quit over it** **Originally posted to Ask A Manager** [Original Post](https://www.askamanager.",
         "subreddit": "BestofRedditorUpdates",
-        "score": 13207,
+        "score": 13216,
         "comments": 555,
         "date": "2025-09-27",
         "url": "https://reddit.com/r/BestofRedditorUpdates/comments/1nrljzd/i_now_manage_the_guy_who_hired_me_and_im_afraid/",
@@ -1840,7 +1840,7 @@
         "title": "I’m Ara Kharazian, Economist at Ramp. Ask Me Anything about the economics of AI, business spend trends, and what the data says about how work Is changing!",
         "quote": "Hi Reddit! I’m Ara Kharazian, Economist at Ramp. I lead Ramp’s research into business spending, economic trends, and how technology is reshaping how companies operate.",
         "subreddit": "Ramp",
-        "score": 108,
+        "score": 112,
         "comments": 133,
         "date": "2025-11-17",
         "url": "https://reddit.com/r/Ramp/comments/1ozouuy/im_ara_kharazian_economist_at_ramp_ask_me/",
@@ -1851,7 +1851,7 @@
         "title": "This is what political and societal collapse feels like.",
         "quote": "I’m not advocating violence. I’m saying I don’t see how this ends without it. Fuck Donald Trump for turning rage into a personality cult. Fuck U.S.",
         "subreddit": "collapse",
-        "score": 3325,
+        "score": 3313,
         "comments": 481,
         "date": "2026-01-09",
         "url": "https://reddit.com/r/collapse/comments/1q8o92e/this_is_what_political_and_societal_collapse/",
@@ -1866,7 +1866,7 @@
     "positive": 5,
     "negative": 0,
     "mixed": 7,
-    "lastUpdated": "2026-03-19",
+    "lastUpdated": "2026-03-25",
     "hackernews": [
       {
         "source": "hackernews",
@@ -1915,7 +1915,7 @@
         "title": "Gen Z fixing pathetic work culture!",
         "quote": "Image credit: r/30daysnewjob. Saw this shared there during my job search and it stuck with me.",
         "subreddit": "jobsearchhacks",
-        "score": 25695,
+        "score": 25702,
         "comments": 532,
         "date": "2026-02-05",
         "url": "https://reddit.com/r/jobsearchhacks/comments/1qwoi6a/gen_z_fixing_pathetic_work_culture/",
@@ -1926,8 +1926,8 @@
         "title": "Gen Z fixing pathetic work culture!",
         "quote": "Gen Z fixing pathetic work culture!",
         "subreddit": "remoteworks",
-        "score": 4779,
-        "comments": 706,
+        "score": 4775,
+        "comments": 707,
         "date": "2026-03-01",
         "url": "https://reddit.com/r/remoteworks/comments/1rhtu0m/gen_z_fixing_pathetic_work_culture/",
         "sentiment": "neutral"
@@ -1937,7 +1937,7 @@
         "title": "Japan PM Says She Sleeps Just 2–4 Hours A Night Amid Criticism Over Work Culture",
         "quote": "Japan PM Says She Sleeps Just 2–4 Hours A Night Amid Criticism Over Work Culture",
         "subreddit": "nottheonion",
-        "score": 11404,
+        "score": 11408,
         "comments": 849,
         "date": "2025-11-14",
         "url": "https://reddit.com/r/nottheonion/comments/1oxaudb/japan_pm_says_she_sleeps_just_24_hours_a_night/",
@@ -1952,7 +1952,7 @@
     "positive": 8,
     "negative": 1,
     "mixed": 4,
-    "lastUpdated": "2026-03-19",
+    "lastUpdated": "2026-03-25",
     "hackernews": [
       {
         "source": "hackernews",
@@ -2001,7 +2001,7 @@
         "title": "AITAH for asking for $30,000 from my parents as a house payment?",
         "quote": "A year ago, my parents gifted my older brother $30,000 so he could buy a house. My brother is 30 years old, with a very low-paying unstable job, but in our culture, it's difficult to get married if...",
         "subreddit": "TwoHotTakes",
-        "score": 2835,
+        "score": 2831,
         "comments": 885,
         "date": "2026-01-05",
         "url": "https://reddit.com/r/TwoHotTakes/comments/1q516uv/aitah_for_asking_for_30000_from_my_parents_as_a/",
@@ -2013,7 +2013,7 @@
         "quote": "Hey everyone, Would really appreciate if people can guide me over here. You can scold me as well but please give this post a readout.",
         "subreddit": "cscareerquestionsuk",
         "score": 0,
-        "comments": 65,
+        "comments": 66,
         "date": "2026-01-03",
         "url": "https://reddit.com/r/cscareerquestionsuk/comments/1q2r4py/currently_a_software_engineer_working_at_airbnb/",
         "sentiment": "positive"
@@ -2023,7 +2023,7 @@
         "title": "Moved to Australia from the US. This is what it's like...",
         "quote": "We moved to Australia about 2 years ago through the skilled occupation pathway. The process took us nearly 3 years from the time we got in touch with a visa agency to the time we actually stepped...",
         "subreddit": "AmerExit",
-        "score": 2231,
+        "score": 2230,
         "comments": 282,
         "date": "2025-03-31",
         "url": "https://reddit.com/r/AmerExit/comments/1jo14ws/moved_to_australia_from_the_us_this_is_what_its/",
@@ -2035,10 +2035,10 @@
     "name": "CoreWeave",
     "overallSentiment": "positive",
     "totalMentions": 11,
-    "positive": 8,
+    "positive": 7,
     "negative": 1,
-    "mixed": 2,
-    "lastUpdated": "2026-03-19",
+    "mixed": 3,
+    "lastUpdated": "2026-03-25",
     "hackernews": [
       {
         "source": "hackernews",
@@ -2084,10 +2084,21 @@
     "reddit": [
       {
         "source": "reddit",
+        "title": "[Part 1 of 3] I grew up in China on wuxia novels and web fiction. Here's everything I wish Western readers knew about Xianxia, Xuanhuan, and why half the \"cultivation novels\" you've read aren't what you think",
+        "quote": "&gt; Open Use Notice: Everything in this guide is free to use, share, adapt, or build on in any way you like.",
+        "subreddit": "ProgressionFantasy",
+        "score": 1426,
+        "comments": 277,
+        "date": "2026-03-21",
+        "url": "https://reddit.com/r/ProgressionFantasy/comments/1rzpm3n/part_1_of_3_i_grew_up_in_china_on_wuxia_novels/",
+        "sentiment": "mixed"
+      },
+      {
+        "source": "reddit",
         "title": "South of Midnight Review Thread",
         "quote": "Game Information -------------------- **Game Title**: South of Midnight **Platforms**: - Xbox Series X/S (Apr 8, 2025) - PC (Apr 8, 2025) **Trailers**: - [Weaving Hazel's Journey - A South of...",
         "subreddit": "Games",
-        "score": 672,
+        "score": 673,
         "comments": 514,
         "date": "2025-04-03",
         "url": "https://reddit.com/r/Games/comments/1jqm9cj/south_of_midnight_review_thread/",
@@ -2098,21 +2109,10 @@
         "title": "RTD's return was heralded as the one to save Doctor Who, but RTD is now so out of touch.",
         "quote": "I think the problem is that RTD is still writing like it's 2006, and Doctor Who, and its audience, just isn't in that place anymore.",
         "subreddit": "gallifrey",
-        "score": 318,
+        "score": 314,
         "comments": 275,
         "date": "2025-09-30",
         "url": "https://reddit.com/r/gallifrey/comments/1nul4rs/rtds_return_was_heralded_as_the_one_to_save/",
-        "sentiment": "positive"
-      },
-      {
-        "source": "reddit",
-        "title": "I made the mistake of reading Wizards official style guide to Forgotten Realms.",
-        "quote": "So I just read the official style guide Wizards gives its writers. I wanted to get a sense of how they define Forgotten Realms before publishing my own unofficial adventure. And… wow.",
-        "subreddit": "Forgotten_Realms",
-        "score": 401,
-        "comments": 171,
-        "date": "2025-11-12",
-        "url": "https://reddit.com/r/Forgotten_Realms/comments/1ouz2g1/i_made_the_mistake_of_reading_wizards_official/",
         "sentiment": "positive"
       }
     ]
@@ -2124,7 +2124,7 @@
     "positive": 5,
     "negative": 1,
     "mixed": 7,
-    "lastUpdated": "2026-03-19",
+    "lastUpdated": "2026-03-25",
     "hackernews": [
       {
         "source": "hackernews",
@@ -2173,7 +2173,7 @@
         "title": "MakeMyTrip Flights Team A Honest Reality Check Before Joining: Work-Culture,Management, and Expectations",
         "quote": "If it’s the Flights team, be prepared for an extremely toxic phase of your life. The upper management believes that everyone working under them should operate without boundaries, and they treat...",
         "subreddit": "developersIndia",
-        "score": 448,
+        "score": 451,
         "comments": 51,
         "date": "2025-12-12",
         "url": "https://reddit.com/r/developersIndia/comments/1pl4oxh/makemytrip_flights_team_a_honest_reality_check/",
@@ -2184,7 +2184,7 @@
         "title": "Exploitative Unpaid \"Work Trials\" in Tech - My Experience Interviewing at Cursor (I will not promote)",
         "quote": "I recently interviewed with Cursor (Anysphere), and as part of the process they required me to do a 2-day unpaid \"work trial\". I found this to be an exploitative and unethical hiring practice.",
         "subreddit": "startups",
-        "score": 41,
+        "score": 40,
         "comments": 33,
         "date": "2025-10-01",
         "url": "https://reddit.com/r/startups/comments/1nuu67a/exploitative_unpaid_work_trials_in_tech_my/",
@@ -2195,7 +2195,7 @@
         "title": "let’s start a PvP culture at work",
         "quote": "and quantify productivity by cursor and git commits",
         "subreddit": "LinkedInLunatics",
-        "score": 21,
+        "score": 23,
         "comments": 25,
         "date": "2025-11-12",
         "url": "https://reddit.com/r/LinkedInLunatics/comments/1ov1otj/lets_start_a_pvp_culture_at_work/",
@@ -2210,7 +2210,7 @@
     "positive": 6,
     "negative": 2,
     "mixed": 5,
-    "lastUpdated": "2026-03-19",
+    "lastUpdated": "2026-03-25",
     "hackernews": [
       {
         "source": "hackernews",
@@ -2270,7 +2270,7 @@
         "title": "The Frustrating Reality of Hiring WordPress Developers That No One Talks About",
         "quote": "Disclaimer: This post is meant to share my experience and highlight a reality I have faced. It is not meant to create hate or division.",
         "subreddit": "Wordpress",
-        "score": 116,
+        "score": 115,
         "comments": 277,
         "date": "2026-03-01",
         "url": "https://reddit.com/r/Wordpress/comments/1rhyj31/the_frustrating_reality_of_hiring_wordpress/",
@@ -2281,8 +2281,8 @@
         "title": "Thoughts? Made it with some JS &amp; CSS",
         "quote": "Tried to make some sort of \"Zen Library\" where you can manage Spaces, etc. right now only the Spaces section work, because accessing downloads using JS is not safe and allowed by firefox.",
         "subreddit": "zen_browser",
-        "score": 658,
-        "comments": 58,
+        "score": 660,
+        "comments": 59,
         "date": "2026-01-10",
         "url": "https://reddit.com/r/zen_browser/comments/1q98363/thoughts_made_it_with_some_js_css/",
         "sentiment": "positive"
@@ -2296,7 +2296,7 @@
     "positive": 5,
     "negative": 1,
     "mixed": 7,
-    "lastUpdated": "2026-03-19",
+    "lastUpdated": "2026-03-25",
     "hackernews": [
       {
         "source": "hackernews",
@@ -2356,7 +2356,7 @@
         "title": "Pregnant working in Cell Culture",
         "quote": "Hi! I have just found out I am happily pregnant. We are over the moon excited but I want to be super careful at work and not sure what to do.",
         "subreddit": "LadiesofScience",
-        "score": 34,
+        "score": 33,
         "comments": 20,
         "date": "2025-10-21",
         "url": "https://reddit.com/r/LadiesofScience/comments/1ocif6d/pregnant_working_in_cell_culture/",
@@ -2367,7 +2367,7 @@
         "title": "\"Aspects &amp; Assumptions of Whiteness &amp; White Culture in the United States\" Chart created by the National Museum of African American History and Culture, 2020.",
         "quote": "\"Aspects &amp; Assumptions of Whiteness &amp; White Culture in the United States\" Chart created by the National Museum of African American History and Culture, 2020.",
         "subreddit": "PropagandaPosters",
-        "score": 405,
+        "score": 408,
         "comments": 251,
         "date": "2026-02-16",
         "url": "https://reddit.com/r/PropagandaPosters/comments/1r5xu3m/aspects_assumptions_of_whiteness_white_culture_in/",
@@ -2379,11 +2379,19 @@
     "name": "Vercel",
     "overallSentiment": "mixed",
     "totalMentions": 13,
-    "positive": 5,
+    "positive": 6,
     "negative": 0,
-    "mixed": 8,
-    "lastUpdated": "2026-03-19",
+    "mixed": 7,
+    "lastUpdated": "2026-03-25",
     "hackernews": [
+      {
+        "source": "hackernews",
+        "quote": "It&#x27;s easy to be critical in hindsight but honestly when Deno first came out it was pretty incredible.",
+        "author": "thinkingkong",
+        "date": "2026-03-21",
+        "url": "https://news.ycombinator.com/item?id=47468831",
+        "sentiment": "positive"
+      },
       {
         "source": "hackernews",
         "quote": "&gt; Ronacher notes this as an irony and moves on. But the irony cuts deeper than he lets on. Next.js is MIT licensed.",
@@ -2415,14 +2423,6 @@
         "date": "2026-02-26",
         "url": "https://news.ycombinator.com/item?id=47173493",
         "sentiment": "neutral"
-      },
-      {
-        "source": "hackernews",
-        "quote": "&quot; I think people stopped talking about it because the &#x27;how-to&#x27; got buried under &#x27;hustle culture&#x27; noise.",
-        "author": "Dollarland",
-        "date": "2026-02-19",
-        "url": "https://news.ycombinator.com/item?id=47080519",
-        "sentiment": "neutral"
       }
     ],
     "reddit": [
@@ -2453,7 +2453,7 @@
         "title": "I can't stop \"doomscrolling\" Google maps so I built an AI that researches everywhere on Earth",
         "quote": "\\[100% open-source!\\] I have a problem. And having shown this to a few people, I know I'm not alone. I open Google Maps in satellite view at 2am and just click random shit.",
         "subreddit": "LLMDevs",
-        "score": 237,
+        "score": 235,
         "comments": 50,
         "date": "2025-11-24",
         "url": "https://reddit.com/r/LLMDevs/comments/1p5fy8n/i_cant_stop_doomscrolling_google_maps_so_i_built/",
@@ -2468,7 +2468,7 @@
     "positive": 8,
     "negative": 0,
     "mixed": 5,
-    "lastUpdated": "2026-03-19",
+    "lastUpdated": "2026-03-25",
     "hackernews": [
       {
         "source": "hackernews",
@@ -2517,8 +2517,8 @@
         "title": "Me [29f] with my neighbors [34-50f/m] Want me to take down my fence",
         "quote": "**I am not The OOP, OOP is u/MarshmellowDuck** **Me [29f] with my neighbors [34-50f/m] Want me to take down my fence** [Original Post - wayback](https://web.archive.org/web/20140916070304/https://www.",
         "subreddit": "BestofRedditorUpdates",
-        "score": 3581,
-        "comments": 474,
+        "score": 3596,
+        "comments": 473,
         "date": "2026-02-22",
         "url": "https://reddit.com/r/BestofRedditorUpdates/comments/1rbrx0u/me_29f_with_my_neighbors_3450fm_want_me_to_take/",
         "sentiment": "positive"
@@ -2528,8 +2528,8 @@
         "title": "'Anaconda' (2025) Review Thread",
         "quote": "[Rotten Tomatoes](https://www.rottentomatoes.com/m/anaconda_2025): 46% (61 reviews) with 5.40 in average rating [Metacritic](https://www.metacritic.",
         "subreddit": "movies",
-        "score": 1555,
-        "comments": 547,
+        "score": 1557,
+        "comments": 548,
         "date": "2025-12-23",
         "url": "https://reddit.com/r/movies/comments/1ptz83g/anaconda_2025_review_thread/",
         "sentiment": "positive"
@@ -2539,7 +2539,7 @@
         "title": "One Year in Melbourne (from Brisbane) - A Review",
         "quote": "I have now lived in Melbourne (Malbn) for the past 12 months after having lived in Brisbane and surrounds for most of my life.",
         "subreddit": "melbourne",
-        "score": 928,
+        "score": 925,
         "comments": 205,
         "date": "2026-01-05",
         "url": "https://reddit.com/r/melbourne/comments/1q4cgzx/one_year_in_melbourne_from_brisbane_a_review/",
@@ -2554,7 +2554,7 @@
     "positive": 7,
     "negative": 0,
     "mixed": 6,
-    "lastUpdated": "2026-03-19",
+    "lastUpdated": "2026-03-25",
     "hackernews": [
       {
         "source": "hackernews",
@@ -2603,7 +2603,7 @@
         "title": "Paul Copplestone (Supabase CEO) on company culture and why Open Source is a principle not a business model",
         "quote": "I know a lot of Supabase users are startup people so thought this would be doubly interesting. My takeaways: 1) Don't kill your marketing channel. E.g.",
         "subreddit": "Supabase",
-        "score": 5,
+        "score": 4,
         "comments": 0,
         "date": "2025-07-19",
         "url": "https://reddit.com/r/Supabase/comments/1m43p02/paul_copplestone_supabase_ceo_on_company_culture/",
@@ -2614,7 +2614,7 @@
         "title": "I can't stop \"doomscrolling\" Google maps so I built an AI that researches everywhere on Earth",
         "quote": "\\[100% open-source!\\] I have a problem. And having shown this to a few people, I know I'm not alone. I open Google Maps in satellite view at 2am and just click random shit.",
         "subreddit": "LLMDevs",
-        "score": 238,
+        "score": 239,
         "comments": 50,
         "date": "2025-11-24",
         "url": "https://reddit.com/r/LLMDevs/comments/1p5fy8n/i_cant_stop_doomscrolling_google_maps_so_i_built/",
@@ -2625,7 +2625,7 @@
         "title": "I built an open-source Google Earth meets Deep research",
         "quote": "\\[100% open-source\\] google earth + deepresearch I have a problem. And having shown this to a few people, I know I'm not alone. I open Google Maps in satellite view at 2am and just click random shit.",
         "subreddit": "GoogleGeminiAI",
-        "score": 262,
+        "score": 259,
         "comments": 25,
         "date": "2025-11-24",
         "url": "https://reddit.com/r/GoogleGeminiAI/comments/1p5llgf/i_built_an_opensource_google_earth_meets_deep/",
@@ -2637,10 +2637,10 @@
     "name": "Tailscale",
     "overallSentiment": "mixed",
     "totalMentions": 13,
-    "positive": 3,
+    "positive": 4,
     "negative": 0,
-    "mixed": 10,
-    "lastUpdated": "2026-03-19",
+    "mixed": 9,
+    "lastUpdated": "2026-03-25",
     "hackernews": [
       {
         "source": "hackernews",
@@ -2689,7 +2689,7 @@
         "title": "Anyone here working at Tailscale?",
         "quote": "I found tailscale as a company very interesting, the problem they are solving, people and product. I am a software engineer by profession and wanting to work in a company like Tailscale.",
         "subreddit": "Tailscale",
-        "score": 22,
+        "score": 20,
         "comments": 13,
         "date": "2025-07-12",
         "url": "https://reddit.com/r/Tailscale/comments/1lxuhlw/anyone_here_working_at_tailscale/",
@@ -2700,7 +2700,7 @@
         "title": "The guy that won the NVIDIA Hackathon and an NVIDIA DGX Spark GB10 has won another hackathon with it!",
         "quote": "Hey everyone, I promised that I would update you all with what I was going to do next with the DGX Spark GB10 that I won.",
         "subreddit": "LocalLLaMA",
-        "score": 333,
+        "score": 335,
         "comments": 53,
         "date": "2026-02-17",
         "url": "https://reddit.com/r/LocalLLaMA/comments/1r7j7kb/the_guy_that_won_the_nvidia_hackathon_and_an/",
@@ -2708,14 +2708,14 @@
       },
       {
         "source": "reddit",
-        "title": "Gen Z fixing pathetic work culture!",
-        "quote": "Image credit: r/30daysnewjob. Saw this shared there during my job search and it stuck with me.",
-        "subreddit": "jobsearchhacks",
-        "score": 25702,
-        "comments": 532,
-        "date": "2026-02-05",
-        "url": "https://reddit.com/r/jobsearchhacks/comments/1qwoi6a/gen_z_fixing_pathetic_work_culture/",
-        "sentiment": "neutral"
+        "title": "In light of all the negative posts against passport bros, I have a wholesome success story.",
+        "quote": "Hey everyone. It’s quite clear there is a large audience of anti-passport bro users on this sub, and in order to make this shared space a bit more male-positive, I’d like to share my success having...",
+        "subreddit": "thepassportbros",
+        "score": 54,
+        "comments": 26,
+        "date": "2026-03-20",
+        "url": "https://reddit.com/r/thepassportbros/comments/1ryusap/in_light_of_all_the_negative_posts_against/",
+        "sentiment": "positive"
       }
     ]
   },
@@ -2726,7 +2726,7 @@
     "positive": 8,
     "negative": 0,
     "mixed": 5,
-    "lastUpdated": "2026-03-19",
+    "lastUpdated": "2026-03-25",
     "hackernews": [
       {
         "source": "hackernews",
@@ -2735,6 +2735,22 @@
         "date": "2025-04-04",
         "url": "https://news.ycombinator.com/item?id=43577508",
         "sentiment": "neutral"
+      },
+      {
+        "source": "hackernews",
+        "quote": "&gt; Big IP is strong arming OpenAI, Suno, and all the rest.&gt; It&#x27;ll be interesting to see whether creators at the bottom of the pyramid can effectively create new brandsThe problem is, to...",
+        "author": "KaiserPro",
+        "date": "2026-03-25",
+        "url": "https://news.ycombinator.com/item?id=47515069",
+        "sentiment": "positive"
+      },
+      {
+        "source": "hackernews",
+        "quote": "We can have that discussion, or we can have the more interesting discussion of just how much big corporate intellectual property, franchises, and brands have their hooks in pop culture.",
+        "author": "echelon",
+        "date": "2026-03-24",
+        "url": "https://news.ycombinator.com/item?id=47510632",
+        "sentiment": "positive"
       },
       {
         "source": "hackernews",
@@ -2751,22 +2767,6 @@
         "date": "2025-11-14",
         "url": "https://news.ycombinator.com/item?id=45922798",
         "sentiment": "neutral"
-      },
-      {
-        "source": "hackernews",
-        "quote": "The article criticizes AI-generated music and argues the music industry is legitimizing artificial content at the expense of real artists.But who and what are &quot;real artists&quot;?",
-        "author": "Rochus",
-        "date": "2025-11-11",
-        "url": "https://news.ycombinator.com/item?id=45887022",
-        "sentiment": "positive"
-      },
-      {
-        "source": "hackernews",
-        "quote": "The article criticizes AI-generated music and argues the music industry is legitimizing artificial content at the expense of real artists.But who and what are &quot;real artists&quot;?",
-        "author": "Rochus",
-        "date": "2025-11-10",
-        "url": "https://news.ycombinator.com/item?id=45876674",
-        "sentiment": "positive"
       }
     ],
     "reddit": [
@@ -2775,7 +2775,7 @@
         "title": "Udio's dead. No doubt, Suno's next.",
         "quote": "**TL;DR:** Udio [**announced yesterday**,](https://www.udio.com/blog/a-new-era) with no warning, that they have partnered with UMG (pretty much a well-hated corporation, who came down on Twitch...",
         "subreddit": "SunoAI",
-        "score": 308,
+        "score": 307,
         "comments": 722,
         "date": "2025-10-30",
         "url": "https://reddit.com/r/SunoAI/comments/1ojuonm/udios_dead_no_doubt_sunos_next/",
@@ -2786,7 +2786,7 @@
         "title": "Why I am leaving Suno",
         "quote": "Update: This was an initial attempt, and it does seem that while I tried to be careful I did rush some conclusions.",
         "subreddit": "SunoAI",
-        "score": 120,
+        "score": 122,
         "comments": 135,
         "date": "2025-12-23",
         "url": "https://reddit.com/r/SunoAI/comments/1pu0we6/why_i_am_leaving_suno/",
@@ -2797,7 +2797,7 @@
         "title": "Why AI Music Is Inevitable: A Historical Perspective on Artistic Evolution",
         "quote": "Every generation of artists faces the same moral panic about technology \"killing\" their craft. Every generation of gatekeepers draws the same arbitrary line in the sand.",
         "subreddit": "SunoAI",
-        "score": 39,
+        "score": 40,
         "comments": 119,
         "date": "2026-01-19",
         "url": "https://reddit.com/r/SunoAI/comments/1qhfxmq/why_ai_music_is_inevitable_a_historical/",
@@ -2808,11 +2808,11 @@
   "pylon": {
     "name": "Pylon",
     "overallSentiment": "mixed",
-    "totalMentions": 13,
+    "totalMentions": 12,
     "positive": 2,
     "negative": 0,
-    "mixed": 11,
-    "lastUpdated": "2026-03-19",
+    "mixed": 10,
+    "lastUpdated": "2026-03-25",
     "hackernews": [
       {
         "source": "hackernews",
@@ -2861,7 +2861,7 @@
         "title": "Just thinking about how the design philosophy of Starfleet ships is \"put that crap as far away from the people as possible\"",
         "quote": "The way the saucer section, where most people live and work, of most Starfleet ships sits way up on a long pylon off the front of the drive section where the warp core is, with the nacelles each on...",
         "subreddit": "startrek",
-        "score": 170,
+        "score": 166,
         "comments": 94,
         "date": "2025-11-22",
         "url": "https://reddit.com/r/startrek/comments/1p3lv6p/just_thinking_about_how_the_design_philosophy_of/",
@@ -2883,7 +2883,7 @@
         "title": "Gen Z fixing pathetic work culture!",
         "quote": "Image credit: r/30daysnewjob. Saw this shared there during my job search and it stuck with me.",
         "subreddit": "jobsearchhacks",
-        "score": 25695,
+        "score": 25702,
         "comments": 532,
         "date": "2026-02-05",
         "url": "https://reddit.com/r/jobsearchhacks/comments/1qwoi6a/gen_z_fixing_pathetic_work_culture/",
@@ -2898,7 +2898,7 @@
     "positive": 2,
     "negative": 1,
     "mixed": 7,
-    "lastUpdated": "2026-03-19",
+    "lastUpdated": "2026-03-25",
     "hackernews": [
       {
         "source": "hackernews",
@@ -2947,7 +2947,7 @@
         "title": "My fiancé shattered my orbital bone and I almost lost my left eye.",
         "quote": "**I am not the OOP. The OOP is** u/kitsuponyo **posting in** r/TrueOffMyChest **Ongoing as per OOP** **Content Warning -** &gt;!domestic violence, possible grooming, CP!",
         "subreddit": "BORUpdates",
-        "score": 1658,
+        "score": 1653,
         "comments": 128,
         "date": "2025-05-11",
         "url": "https://reddit.com/r/BORUpdates/comments/1kju4lb/my_fiancé_shattered_my_orbital_bone_and_i_almost/",
@@ -2958,7 +2958,7 @@
         "title": "The final insult to our state.",
         "quote": "The final insult to our state.",
         "subreddit": "minnesota",
-        "score": 791,
+        "score": 783,
         "comments": 17,
         "date": "2026-03-02",
         "url": "https://reddit.com/r/minnesota/comments/1rif8u0/the_final_insult_to_our_state/",
@@ -2984,7 +2984,7 @@
     "positive": 2,
     "negative": 0,
     "mixed": 8,
-    "lastUpdated": "2026-03-19",
+    "lastUpdated": "2026-03-25",
     "hackernews": [
       {
         "source": "hackernews",
@@ -3033,7 +3033,7 @@
         "title": "How Demanding Is Grafana Labs for Software Engineers?",
         "quote": "Hey everyone I am thinking about applying to Grafana Labs for a software engineering role and wanted to get a better sense of the company culture.",
         "subreddit": "cscareerquestionsEU",
-        "score": 7,
+        "score": 8,
         "comments": 16,
         "date": "2026-03-02",
         "url": "https://reddit.com/r/cscareerquestionsEU/comments/1rj12rb/how_demanding_is_grafana_labs_for_software/",
@@ -3070,7 +3070,7 @@
     "positive": 7,
     "negative": 0,
     "mixed": 6,
-    "lastUpdated": "2026-03-19",
+    "lastUpdated": "2026-03-25",
     "hackernews": [
       {
         "source": "hackernews",
@@ -3098,42 +3098,42 @@
       },
       {
         "source": "hackernews",
-        "quote": "How are you getting the bank feeds? Plaid? What if Plaid doesn&#x27;t work with my bank, can I import CSVs manually?Also the front-end looks very polished, wondering what your tech stack looks like.",
-        "author": "_1tem",
-        "date": "2025-03-20",
-        "url": "https://news.ycombinator.com/item?id=43423761",
-        "sentiment": "neutral"
-      },
-      {
-        "source": "hackernews",
         "quote": "If I were the CEO of a place like Plaid, I&#x27;d be working night and day expanding my offerings to include a safe, policy-driven API layer between the client and financial services.",
         "author": "sowbug",
         "date": "2026-02-21",
         "url": "https://news.ycombinator.com/item?id=47104193",
+        "sentiment": "neutral"
+      },
+      {
+        "source": "hackernews",
+        "quote": "it isn&#x27;t that hard to just buy a bunch of sim cards and put them in a modem and use that. it&#x27;s good enough as a residential proxy.",
+        "author": "karel-3d",
+        "date": "2026-02-11",
+        "url": "https://news.ycombinator.com/item?id=46979813",
         "sentiment": "neutral"
       }
     ],
     "reddit": [
       {
         "source": "reddit",
-        "title": "Some thoughts on the Wexstein files",
-        "quote": "As a millennial woman born and raised in Columbus, Ohio, where Les Werner is king, I can’t stop thinking about my coming of age and the degree of influence this man had on my relationship with my...",
-        "subreddit": "Columbus",
-        "score": 500,
-        "comments": 101,
-        "date": "2026-02-19",
-        "url": "https://reddit.com/r/Columbus/comments/1r8oh5l/some_thoughts_on_the_wexstein_files/",
+        "title": "#Beermoney for Busy People! (2026) - Programs Without Disqualifications!",
+        "quote": "#Beermoney for Busy People! (2026) - Programs Without Disqualifications! Hi all! I haven’t updated this post since 2024 so I thought it was time.",
+        "subreddit": "beermoney",
+        "score": 510,
+        "comments": 102,
+        "date": "2026-03-06",
+        "url": "https://reddit.com/r/beermoney/comments/1rmigwd/beermoney_for_busy_people_2026_programs_without/",
         "sentiment": "positive"
       },
       {
         "source": "reddit",
-        "title": "#Beermoney for Busy People! (2026) - Programs Without Disqualifications!",
-        "quote": "#Beermoney for Busy People! (2026) - Programs Without Disqualifications! Hi all! I haven’t updated this post since 2024 so I thought it was time.",
-        "subreddit": "beermoney",
-        "score": 467,
-        "comments": 95,
-        "date": "2026-03-06",
-        "url": "https://reddit.com/r/beermoney/comments/1rmigwd/beermoney_for_busy_people_2026_programs_without/",
+        "title": "Some thoughts on the Wexstein files",
+        "quote": "As a millennial woman born and raised in Columbus, Ohio, where Les Werner is king, I can’t stop thinking about my coming of age and the degree of influence this man had on my relationship with my...",
+        "subreddit": "Columbus",
+        "score": 501,
+        "comments": 100,
+        "date": "2026-02-19",
+        "url": "https://reddit.com/r/Columbus/comments/1r8oh5l/some_thoughts_on_the_wexstein_files/",
         "sentiment": "positive"
       },
       {
@@ -3156,7 +3156,7 @@
     "positive": 5,
     "negative": 1,
     "mixed": 7,
-    "lastUpdated": "2026-03-19",
+    "lastUpdated": "2026-03-25",
     "hackernews": [
       {
         "source": "hackernews",
@@ -3205,7 +3205,7 @@
         "title": "Spotify boycott: Artists leave 'garbage hole' platform after CEO invests in AI weapons",
         "quote": "Article: Greg Saunier already had reasons to be wary of Spotify. The founder of the acclaimed Bay Area band Deerhoof was well acquainted with the service’s meager payouts to artists and songwriters,...",
         "subreddit": "popculturechat",
-        "score": 7070,
+        "score": 7065,
         "comments": 400,
         "date": "2025-11-30",
         "url": "https://reddit.com/r/popculturechat/comments/1pa4sni/spotify_boycott_artists_leave_garbage_hole/",
@@ -3216,7 +3216,7 @@
         "title": "All my data regarding that celestial object heading to earth",
         "quote": "# Intro **Hypothesis**: A large artificial object is en route to Earth and has been detected by the James Webb Space Telescope (JWST); its origin and intent are unknown. The U.S.",
         "subreddit": "aliens",
-        "score": 2230,
+        "score": 2235,
         "comments": 531,
         "date": "2025-06-18",
         "url": "https://reddit.com/r/aliens/comments/1le8sbd/all_my_data_regarding_that_celestial_object/",
@@ -3227,7 +3227,7 @@
         "title": "Sling Blade (1996)",
         "quote": "Billy Bob Thornton's breakout as writer, director and star. He portrays Karl Childers, an intellectually challenged man and one of the unforgettable characters in modern American cinema.",
         "subreddit": "iwatchedanoldmovie",
-        "score": 1249,
+        "score": 1250,
         "comments": 248,
         "date": "2025-12-13",
         "url": "https://reddit.com/r/iwatchedanoldmovie/comments/1plznbf/sling_blade_1996/",
@@ -3242,7 +3242,7 @@
     "positive": 8,
     "negative": 2,
     "mixed": 3,
-    "lastUpdated": "2026-03-19",
+    "lastUpdated": "2026-03-25",
     "hackernews": [
       {
         "source": "hackernews",
@@ -3291,7 +3291,7 @@
         "title": "Joint Subreddit Statement: The Attack on U.S. Research Infrastructure",
         "quote": "Many of you are likely familiar with the news of the Trump Administration and the Department of Government Efficiency (DOGE) terminating grants and budgets at the [National Institutes of...",
         "subreddit": "AskHistorians",
-        "score": 12084,
+        "score": 12080,
         "comments": 514,
         "date": "2025-04-29",
         "url": "https://reddit.com/r/AskHistorians/comments/1kandgx/joint_subreddit_statement_the_attack_on_us/",
@@ -3302,7 +3302,7 @@
         "title": "Experienced Airtable / low-code consultant looking for work",
         "quote": "Hi everyone! I have been independently consulting and building Airtable/low-code solutions for businesses over the last few years. Right now, I’m searching for more opportunities.",
         "subreddit": "Airtable",
-        "score": 15,
+        "score": 16,
         "comments": 25,
         "date": "2025-05-01",
         "url": "https://reddit.com/r/Airtable/comments/1kc6ojz/experienced_airtable_lowcode_consultant_looking/",
@@ -3313,7 +3313,7 @@
         "title": "I'm a former central committee member of Class Unity DSA. Here is my very late retrospective on a doomed rearguard action.",
         "quote": "For those who don't know Class Unity was a national caucus in the DSA formed in late 2019 by stupidpol moderators who had grown disgusted with what they saw as the rising dominance of...",
         "subreddit": "stupidpol",
-        "score": 179,
+        "score": 182,
         "comments": 124,
         "date": "2025-12-10",
         "url": "https://reddit.com/r/stupidpol/comments/1pj7mh5/im_a_former_central_committee_member_of_class/",
@@ -3328,7 +3328,7 @@
     "positive": 5,
     "negative": 0,
     "mixed": 7,
-    "lastUpdated": "2026-03-19",
+    "lastUpdated": "2026-03-25",
     "hackernews": [
       {
         "source": "hackernews",
@@ -3377,7 +3377,7 @@
         "title": "Gen Z fixing pathetic work culture!",
         "quote": "Image credit: r/30daysnewjob. Saw this shared there during my job search and it stuck with me.",
         "subreddit": "jobsearchhacks",
-        "score": 25702,
+        "score": 25698,
         "comments": 532,
         "date": "2026-02-05",
         "url": "https://reddit.com/r/jobsearchhacks/comments/1qwoi6a/gen_z_fixing_pathetic_work_culture/",
@@ -3388,8 +3388,352 @@
         "title": "Gen Z fixing pathetic work culture!",
         "quote": "Gen Z fixing pathetic work culture!",
         "subreddit": "remoteworks",
-        "score": 4776,
-        "comments": 706,
+        "score": 4774,
+        "comments": 707,
+        "date": "2026-03-01",
+        "url": "https://reddit.com/r/remoteworks/comments/1rhtu0m/gen_z_fixing_pathetic_work_culture/",
+        "sentiment": "neutral"
+      },
+      {
+        "source": "reddit",
+        "title": "Japan PM Says She Sleeps Just 2–4 Hours A Night Amid Criticism Over Work Culture",
+        "quote": "Japan PM Says She Sleeps Just 2–4 Hours A Night Amid Criticism Over Work Culture",
+        "subreddit": "nottheonion",
+        "score": 11406,
+        "comments": 849,
+        "date": "2025-11-14",
+        "url": "https://reddit.com/r/nottheonion/comments/1oxaudb/japan_pm_says_she_sleeps_just_24_hours_a_night/",
+        "sentiment": "neutral"
+      }
+    ]
+  },
+  "datadog": {
+    "name": "Datadog",
+    "overallSentiment": "mixed",
+    "totalMentions": 13,
+    "positive": 5,
+    "negative": 0,
+    "mixed": 8,
+    "lastUpdated": "2026-03-25",
+    "hackernews": [
+      {
+        "source": "hackernews",
+        "quote": "What you will do - Develop smart BI solutions utilizing Node.js with TypeScript - Manage extensive data volumes efficiently, employing Google BigQuery and integrating seamlessly with Business...",
+        "author": "TechRecruiting",
+        "date": "2026-03-23",
+        "url": "https://news.ycombinator.com/item?id=47486469",
+        "sentiment": "positive"
+      },
+      {
+        "source": "hackernews",
+        "quote": "Phonely | Senior Backend Engineer (Python) | San Francisco (Onsite) | Full-timeWe’re building the future of voice AI for businesses, with a platform designed to make real-time agents easy to build,...",
+        "author": "Phonely",
+        "date": "2026-02-03",
+        "url": "https://news.ycombinator.com/item?id=46872867",
+        "sentiment": "positive"
+      },
+      {
+        "source": "hackernews",
+        "quote": "We are looking for a Senior Backend Node.js Engineer (m&#x2F;f&#x2F;d) to be part of the development of our Business Intelligence Application.",
+        "author": "TechRecruiting",
+        "date": "2026-01-26",
+        "url": "https://news.ycombinator.com/item?id=46764272",
+        "sentiment": "positive"
+      },
+      {
+        "source": "hackernews",
+        "quote": "We are currently looking for a skilled Principal App Engineer (m&#x2F;f&#x2F;d) with a passion to assume leadership responsibilities to support us in building the fastest &amp; most intuitive...",
+        "author": "TechRecruiting",
+        "date": "2025-12-05",
+        "url": "https://news.ycombinator.com/item?id=46159565",
+        "sentiment": "neutral"
+      },
+      {
+        "source": "hackernews",
+        "quote": "Konvu | https:&#x2F;&#x2F;konvu.com&#x2F; | Software Engineer | FULLTIME | ONSITE | Paris, FranceAt Konvu, our mission is to make security invisible.",
+        "author": "paulbleicher",
+        "date": "2025-12-01",
+        "url": "https://news.ycombinator.com/item?id=46111599",
+        "sentiment": "neutral"
+      }
+    ],
+    "reddit": [
+      {
+        "source": "reddit",
+        "title": "Anyone work(ed) in security at Datadog?",
+        "quote": "Hello everyone, I was wondering if anyone here worked in cybersecurity at Datadog. I am curious to know about the culture, WLB, interview process, etc. Any insight would be greatly appreciated!",
+        "subreddit": "cybersecurity",
+        "score": 3,
+        "comments": 4,
+        "date": "2025-09-15",
+        "url": "https://reddit.com/r/cybersecurity/comments/1ni0m1e/anyone_worked_in_security_at_datadog/",
+        "sentiment": "positive"
+      },
+      {
+        "source": "reddit",
+        "title": "Tech Tier List",
+        "quote": "**S+ tier (basically mythic status)** * Renaissance Technologies — Medallion Fund * NSA, pure research side * OpenAI (core research / superalignment types) * SpaceX (Starship + propulsion...",
+        "subreddit": "csMajors",
+        "score": 0,
+        "comments": 131,
+        "date": "2025-12-13",
+        "url": "https://reddit.com/r/csMajors/comments/1plnso3/tech_tier_list/",
+        "sentiment": "positive"
+      },
+      {
+        "source": "reddit",
+        "title": "Gen Z fixing pathetic work culture!",
+        "quote": "Image credit: r/30daysnewjob. Saw this shared there during my job search and it stuck with me.",
+        "subreddit": "jobsearchhacks",
+        "score": 25707,
+        "comments": 532,
+        "date": "2026-02-05",
+        "url": "https://reddit.com/r/jobsearchhacks/comments/1qwoi6a/gen_z_fixing_pathetic_work_culture/",
+        "sentiment": "neutral"
+      }
+    ]
+  },
+  "cloudflare": {
+    "name": "Cloudflare",
+    "overallSentiment": "mixed",
+    "totalMentions": 13,
+    "positive": 4,
+    "negative": 1,
+    "mixed": 8,
+    "lastUpdated": "2026-03-25",
+    "hackernews": [
+      {
+        "source": "hackernews",
+        "quote": "Are there indicators in Cloudflare&#x27;s culture or history to suggest that Replicate&#x27;s strengths (docs, api, design) will remain in the long-term?",
+        "author": "antipaul",
+        "date": "2025-11-17",
+        "url": "https://news.ycombinator.com/item?id=45957838",
+        "sentiment": "neutral"
+      },
+      {
+        "source": "hackernews",
+        "quote": "In my own humble opinion, jgc is the reason behind Cloudflare&#x27;s open culture and incredible post-mortems. Thanks for making Cloudflare an incredible company to work for and with John. &lt;3",
+        "author": "sudsred",
+        "date": "2025-03-28",
+        "url": "https://news.ycombinator.com/item?id=43508286",
+        "sentiment": "neutral"
+      },
+      {
+        "source": "hackernews",
+        "quote": "When I was at Big Corp, I loved reading the internal postmortems. They were usually very interesting and I learned a lot. It&#x27;s one of the things I miss about leaving.",
+        "author": "Arcuru",
+        "date": "2025-12-15",
+        "url": "https://news.ycombinator.com/item?id=46269493",
+        "sentiment": "positive"
+      },
+      {
+        "source": "hackernews",
+        "quote": "What&#x27;s the culture like at Cloudflare re: ops&#x2F;deployment safety?They saw errors related to a deployment, and because it was related to a security issue instead of rolling it back they...",
+        "author": "flaminHotSpeedo",
+        "date": "2025-12-05",
+        "url": "https://news.ycombinator.com/item?id=46162868",
+        "sentiment": "negative"
+      },
+      {
+        "source": "hackernews",
+        "quote": "&gt; Not sure how cloudflare keeps struggling with issues like theseCloudflare has a reasonable culture around incident response, but it doesn&#x27;t incentivize proactive prevention.",
+        "author": "kod",
+        "date": "2025-07-16",
+        "url": "https://news.ycombinator.com/item?id=44584428",
+        "sentiment": "neutral"
+      }
+    ],
+    "reddit": [
+      {
+        "source": "reddit",
+        "title": "Question for current Cloudflare AEs/AMs – how’s the culture and sales environment?",
+        "quote": "Hi everyone, Posting here from a throwaway account for obvious reasons. I’m currently a Sales Engineer at a direct competitor of Cloudflare and I’ve been going through multiple interview rounds with...",
+        "subreddit": "techsales",
+        "score": 10,
+        "comments": 5,
+        "date": "2025-09-10",
+        "url": "https://reddit.com/r/techsales/comments/1ndomti/question_for_current_cloudflare_aesams_hows_the/",
+        "sentiment": "positive"
+      },
+      {
+        "source": "reddit",
+        "title": "Did everything right for my Cloudflare interview loop… still got rejected, feeling lost",
+        "quote": "Hey everyone, Just wanted to get this off my chest I recently finished my entire interview loop at Cloudflare for a Software Engineer role and today I got the rejection It honestly broke me This one...",
+        "subreddit": "leetcode",
+        "score": 153,
+        "comments": 119,
+        "date": "2025-10-13",
+        "url": "https://reddit.com/r/leetcode/comments/1o5xxbi/did_everything_right_for_my_cloudflare_interview/",
+        "sentiment": "positive"
+      },
+      {
+        "source": "reddit",
+        "title": "Gen Z fixing pathetic work culture!",
+        "quote": "Image credit: r/30daysnewjob. Saw this shared there during my job search and it stuck with me.",
+        "subreddit": "jobsearchhacks",
+        "score": 25706,
+        "comments": 532,
+        "date": "2026-02-05",
+        "url": "https://reddit.com/r/jobsearchhacks/comments/1qwoi6a/gen_z_fixing_pathetic_work_culture/",
+        "sentiment": "neutral"
+      }
+    ]
+  },
+  "crusoe": {
+    "name": "Crusoe",
+    "overallSentiment": "mixed",
+    "totalMentions": 11,
+    "positive": 3,
+    "negative": 0,
+    "mixed": 8,
+    "lastUpdated": "2026-03-25",
+    "hackernews": [
+      {
+        "source": "hackernews",
+        "quote": "I think its a real interesting challenge, from a hacker perspective. How do you bootstrap a culture, that spirals into this minima, to recover and redevelop a interest in science and cultural...",
+        "author": "ItCouldBeWorse",
+        "date": "2025-06-19",
+        "url": "https://news.ycombinator.com/item?id=44318615",
+        "sentiment": "neutral"
+      },
+      {
+        "source": "hackernews",
+        "quote": "If Robinson Crusoe is in there then shouldn&#x27;t tolkien&#x27;s works be also? He claimed they were from the Redbook of West March or something like that.And Brust&#x27;s Jhereg series?",
+        "author": "readthenotes1",
+        "date": "2025-10-20",
+        "url": "https://news.ycombinator.com/item?id=45643004",
+        "sentiment": "neutral"
+      },
+      {
+        "source": "hackernews",
+        "quote": "HACF is a goodie but there&#x27;s a lot of great shows no one&#x27;s heard of.In an effort to sing the song of underappreciated works of greatness...",
+        "author": "caycecan",
+        "date": "2026-02-18",
+        "url": "https://news.ycombinator.com/item?id=47057237",
+        "sentiment": "positive"
+      },
+      {
+        "source": "hackernews",
+        "quote": "This is one of those papers that quietly reorients the whole debate. Instead of treating equality as a cosmic accounting problem (“compensate brute luck, penalize choice”), she argues that this...",
+        "author": "foster_nyman",
+        "date": "2026-01-06",
+        "url": "https://news.ycombinator.com/item?id=46509784",
+        "sentiment": "neutral"
+      },
+      {
+        "source": "hackernews",
+        "quote": "I&#x27;ve read thousands of books. There are good novels everywhere, and no country has the exclusivity of any theme.",
+        "author": "idoubtit",
+        "date": "2026-01-04",
+        "url": "https://news.ycombinator.com/item?id=46486929",
+        "sentiment": "positive"
+      }
+    ],
+    "reddit": [
+      {
+        "source": "reddit",
+        "title": "Crusoe work experience",
+        "quote": "Going through interviews with Crusoe to work in one of their main offices. Curious if anyone can share their work experience with the company. Culture, management, benefits, etc.",
+        "subreddit": "datacenter",
+        "score": 5,
+        "comments": 16,
+        "date": "2025-08-22",
+        "url": "https://reddit.com/r/datacenter/comments/1mxiu2m/crusoe_work_experience/",
+        "sentiment": "neutral"
+      },
+      {
+        "source": "reddit",
+        "title": "Gen Z fixing pathetic work culture!",
+        "quote": "Image credit: r/30daysnewjob. Saw this shared there during my job search and it stuck with me.",
+        "subreddit": "jobsearchhacks",
+        "score": 25707,
+        "comments": 532,
+        "date": "2026-02-05",
+        "url": "https://reddit.com/r/jobsearchhacks/comments/1qwoi6a/gen_z_fixing_pathetic_work_culture/",
+        "sentiment": "neutral"
+      },
+      {
+        "source": "reddit",
+        "title": "Gen Z fixing pathetic work culture!",
+        "quote": "Gen Z fixing pathetic work culture!",
+        "subreddit": "remoteworks",
+        "score": 4778,
+        "comments": 707,
+        "date": "2026-03-01",
+        "url": "https://reddit.com/r/remoteworks/comments/1rhtu0m/gen_z_fixing_pathetic_work_culture/",
+        "sentiment": "neutral"
+      }
+    ]
+  },
+  "baseten": {
+    "name": "Baseten",
+    "overallSentiment": "mixed",
+    "totalMentions": 10,
+    "positive": 4,
+    "negative": 0,
+    "mixed": 6,
+    "lastUpdated": "2026-03-25",
+    "hackernews": [
+      {
+        "source": "hackernews",
+        "quote": "Baseten Labs | San Francisco, New York |ONSITE, REMOTE, HYBRID | VISA SPONSORSHIP | RELOCATION SUPPORT We are Baseten, the team that powers mission-critical inference for the world’s most dynamic AI...",
+        "author": "jaz46",
+        "date": "2026-03-02",
+        "url": "https://news.ycombinator.com/item?id=47220359",
+        "sentiment": "positive"
+      },
+      {
+        "source": "hackernews",
+        "quote": "Baseten Labs | San Francisco, New York |ONSITE, REMOTE, HYBRID | VISA SPONSORSHIP | RELOCATION SUPPORTWe are Baseten, the team that powers mission-critical inference for the world’s most dynamic AI...",
+        "author": "jaz46",
+        "date": "2026-02-02",
+        "url": "https://news.ycombinator.com/item?id=46857991",
+        "sentiment": "positive"
+      },
+      {
+        "source": "hackernews",
+        "quote": "&gt; we were the clear leader running on NVIDIA GPUs for both latency and throughput per public data from real-world use on OpenRouter.Baseten: 592.6 tps Groq: 784.",
+        "author": "nektro",
+        "date": "2025-08-07",
+        "url": "https://news.ycombinator.com/item?id=44822814",
+        "sentiment": "neutral"
+      },
+      {
+        "source": "hackernews",
+        "quote": "Location: Denver, USARemote: Yes pleaseWilling to relocate: Under right conditionsTechnologies: Python, PyTorch, Flyte, Weights &amp; Biases, Hugging Face, OpenAI API, Azure, GCP (GKE, BigQuery),...",
+        "author": "Lnerenbergdev",
+        "date": "2025-09-03",
+        "url": "https://news.ycombinator.com/item?id=45119469",
+        "sentiment": "neutral"
+      },
+      {
+        "source": "hackernews",
+        "quote": "Baseten serves models as a service, at scale. There’s quite a lot of interesting engineering both for inference and infrastructure perf.",
+        "author": "davepeck",
+        "date": "2025-08-08",
+        "url": "https://news.ycombinator.com/item?id=44842069",
+        "sentiment": "neutral"
+      }
+    ],
+    "reddit": [
+      {
+        "source": "reddit",
+        "title": "Gen Z fixing pathetic work culture!",
+        "quote": "Image credit: r/30daysnewjob. Saw this shared there during my job search and it stuck with me.",
+        "subreddit": "jobsearchhacks",
+        "score": 25700,
+        "comments": 532,
+        "date": "2026-02-05",
+        "url": "https://reddit.com/r/jobsearchhacks/comments/1qwoi6a/gen_z_fixing_pathetic_work_culture/",
+        "sentiment": "neutral"
+      },
+      {
+        "source": "reddit",
+        "title": "Gen Z fixing pathetic work culture!",
+        "quote": "Gen Z fixing pathetic work culture!",
+        "subreddit": "remoteworks",
+        "score": 4768,
+        "comments": 707,
         "date": "2026-03-01",
         "url": "https://reddit.com/r/remoteworks/comments/1rhtu0m/gen_z_fixing_pathetic_work_culture/",
         "sentiment": "neutral"
@@ -3404,6 +3748,60 @@
         "date": "2025-11-14",
         "url": "https://reddit.com/r/nottheonion/comments/1oxaudb/japan_pm_says_she_sleeps_just_24_hours_a_night/",
         "sentiment": "neutral"
+      }
+    ]
+  },
+  "fireworksai": {
+    "name": "Fireworks AI",
+    "overallSentiment": "positive",
+    "totalMentions": 6,
+    "positive": 3,
+    "negative": 0,
+    "mixed": 3,
+    "lastUpdated": "2026-03-25",
+    "hackernews": [
+      {
+        "source": "hackernews",
+        "quote": "Why would the open weights providers need their own tools for agentic workflows when you can just plug their OpenAI-compatible API URL into existing tools?",
+        "author": "threeducks",
+        "date": "2025-12-03",
+        "url": "https://news.ycombinator.com/item?id=46133175",
+        "sentiment": "positive"
+      }
+    ],
+    "reddit": [
+      {
+        "source": "reddit",
+        "title": "Raise your hand if you've seen your culture or background fetishized in the form of an \"AI partner\"",
+        "quote": "It's crazy how often this happens. For a tool that's usualy so hesitant to create \"offensive\" content, AI sure will throw that out the window if you give it a \"persona\" it can follow.",
+        "subreddit": "cogsuckers",
+        "score": 361,
+        "comments": 133,
+        "date": "2026-03-09",
+        "url": "https://reddit.com/r/cogsuckers/comments/1roxj9l/raise_your_hand_if_youve_seen_your_culture_or/",
+        "sentiment": "neutral"
+      },
+      {
+        "source": "reddit",
+        "title": "[Autobiography excerpt] Hidden details about Ado’s debut process, her relationship with her parents after debut, and how the meaning of her success for both herself and her agency far exceeded my expectations",
+        "quote": "I’m currently reading Ado’s autobiography, and honestly, it’s far more interesting than I expected. I’ve finished the first two chapters so far.",
+        "subreddit": "ADO",
+        "score": 680,
+        "comments": 95,
+        "date": "2026-02-27",
+        "url": "https://reddit.com/r/ADO/comments/1rg26lp/autobiography_excerpt_hidden_details_about_ados/",
+        "sentiment": "positive"
+      },
+      {
+        "source": "reddit",
+        "title": "REPOST: My Take on Jak 4 - \"Jak and daxter 4: Legacy of Mar\"",
+        "quote": "*Hi everyone! I wanted to share a Jak 4 fanfiction I've been working on for a few weeks. I'm sharing a brief synopsis so you can get your thoughts.",
+        "subreddit": "jakanddaxter",
+        "score": 322,
+        "comments": 72,
+        "date": "2025-11-09",
+        "url": "https://reddit.com/r/jakanddaxter/comments/1osqvc6/repost_my_take_on_jak_4_jak_and_daxter_4_legacy/",
+        "sentiment": "mixed"
       }
     ]
   }

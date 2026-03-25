@@ -39,6 +39,11 @@
     { "slug": "plaid",       "name": "Plaid",         "ats": "ashby",      "atsSlug": "plaid",        "domain": "plaid.com" },
     { "slug": "mercury",     "name": "Mercury",       "ats": "greenhouse", "atsSlug": "mercury",      "domain": "mercury.com" },
     { "slug": "airtable",    "name": "Airtable",      "ats": "greenhouse", "atsSlug": "airtable",     "domain": "airtable.com" },
-    { "slug": "brex",        "name": "Brex",          "ats": "greenhouse", "atsSlug": "brex",         "domain": "brex.com" }
+    { "slug": "brex",        "name": "Brex",          "ats": "greenhouse", "atsSlug": "brex",         "domain": "brex.com" },
+    { "slug": "datadog",     "name": "Datadog",       "ats": "greenhouse", "atsSlug": "datadog",      "domain": "datadoghq.com" },
+    { "slug": "cloudflare",  "name": "Cloudflare",    "ats": "greenhouse", "atsSlug": "cloudflare",   "domain": "cloudflare.com" },
+    { "slug": "crusoe",      "name": "Crusoe",        "ats": "ashby",      "atsSlug": "crusoe",       "domain": "crusoe.ai" },
+    { "slug": "baseten",     "name": "Baseten",       "ats": "ashby",      "atsSlug": "baseten",      "domain": "baseten.co" },
+    { "slug": "fireworksai", "name": "Fireworks AI",   "ats": "greenhouse", "atsSlug": "fireworksai",  "domain": "fireworks.ai" }
   ]
 }
