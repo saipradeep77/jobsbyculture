@@ -192,6 +192,7 @@ function getLocationBuckets(location) {
 
 // ─── HTML escape ───
 function esc(s) { return String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;'); }
+function jsonEsc(s) { return String(s||'').replace(/\\/g,'\\\\').replace(/"/g,'\\"').replace(/\n/g,'\\n'); }
 
 // ─── Shared HTML components (identical to build-cluster-pages.js) ───
 function navHtml() {
@@ -638,9 +639,9 @@ ${footerHtml()}
 {
     "@context": "https://schema.org",
     "@type": "CollectionPage",
-    "name": "${esc(title)}",
-    "description": "${esc(desc)}",
-    "url": "${esc(canonical)}",
+    "name": "${jsonEsc(title)}",
+    "description": "${jsonEsc(desc)}",
+    "url": "${jsonEsc(canonical)}",
     "numberOfItems": ${matchingJobs.length},
     "provider": {
         "@type": "Organization",

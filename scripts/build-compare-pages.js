@@ -180,7 +180,8 @@ function generatePage(a, b) {
     const slugA = a.slug || a.name.toLowerCase().replace(/[^a-z0-9]+/g, '-');
     const slugB = b.slug || b.name.toLowerCase().replace(/[^a-z0-9]+/g, '-');
     const pageSlug = `${slugA}-vs-${slugB}`;
-    const title = `${a.name} vs ${b.name}: Culture, Glassdoor & Work-Life Balance Compared | JobsByCulture`;
+    const longTitle = `${a.name} vs ${b.name}: Culture, Glassdoor & Work-Life Balance Compared | JobsByCulture`;
+    const title = longTitle.length > 60 ? `${a.name} vs ${b.name}: Culture & Glassdoor Compared | JobsByCulture` : longTitle;
     const glA = Number(a.glassdoor) || 0;
     const glB = Number(b.glassdoor) || 0;
     const wlbA = Number(a.wlb_score) || 0;
