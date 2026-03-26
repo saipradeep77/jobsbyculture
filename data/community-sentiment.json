@@ -1,58 +1,14 @@
 {
   "anthropic": {
     "name": "Anthropic",
-    "overallSentiment": "negative",
-    "totalMentions": 4,
+    "overallSentiment": "neutral",
+    "totalMentions": 0,
     "positive": 0,
     "negative": 0,
     "mixed": 0,
     "lastUpdated": "2026-03-26",
-    "hackernews": [
-      {
-        "source": "hackernews",
-        "quote": "These discussions around model welfare sound more like saviors searching for something to save, which says more about Anthropic’s culture than it does about the technology itself.",
-        "author": "victor9000",
-        "date": "2025-08-16",
-        "url": "https://news.ycombinator.com/item?id=44918720",
-        "sentiment": "neutral"
-      },
-      {
-        "source": "hackernews",
-        "quote": "The Sinophobic culture at Anthropic is worrying. Say what you will about authoritarianism, but China’s non-imperialist foreign policy means their economy is less reliant on a military-industrial complex.",
-        "author": "statuslover9000",
-        "date": "2026-02-26",
-        "url": "https://news.ycombinator.com/item?id=47173978",
-        "sentiment": "neutral"
-      }
-    ],
-    "reddit": [
-      {
-        "source": "reddit",
-        "title": "Anthropic - political stance",
-        "quote": "Expecting any US-based company to disavow the current presidential administration falls under unrealistic expectations.",
-        "subreddit": "Anthropic",
-        "score": 0,
-        "comments": 233,
-        "commentAuthor": "sevenfiftynorth",
-        "commentScore": 63,
-        "date": "2026-01-19",
-        "url": "https://reddit.com/r/Anthropic/comments/1qhb1gc/anthropic_political_stance/",
-        "sentiment": "neutral"
-      },
-      {
-        "source": "reddit",
-        "title": "Trying to work at Anthropic",
-        "quote": "OP, go on their careers page and scour their job openings -- Anthropic doesn't consists only of 500 software engineers. Shoot your shot. Let them tell you no instead of these jokers.",
-        "subreddit": "Anthropic",
-        "score": 0,
-        "comments": 57,
-        "commentAuthor": "xraxraxra",
-        "commentScore": 5,
-        "date": "2026-01-23",
-        "url": "https://reddit.com/r/Anthropic/comments/1ql36ua/trying_to_work_at_anthropic/",
-        "sentiment": "neutral"
-      }
-    ]
+    "hackernews": [],
+    "reddit": []
   },
   "cohere": {
     "name": "Cohere",
@@ -67,30 +23,13 @@
   },
   "perplexity": {
     "name": "Perplexity AI",
-    "overallSentiment": "positive",
-    "totalMentions": 2,
-    "positive": 1,
-    "negative": 1,
+    "overallSentiment": "neutral",
+    "totalMentions": 0,
+    "positive": 0,
+    "negative": 0,
     "mixed": 0,
     "lastUpdated": "2026-03-26",
-    "hackernews": [
-      {
-        "source": "hackernews",
-        "quote": "The silver line is not to avoid AI but to use it wisely, and this is coming from somebody who used to hate AI.I am not a Python developer or developer for the matter but Perplexity AI did help me to understand the bsic of Python for API requests and get projects delivery with...",
-        "author": "h4kunamata",
-        "date": "2026-03-01",
-        "url": "https://news.ycombinator.com/item?id=47211363",
-        "sentiment": "negative"
-      },
-      {
-        "source": "hackernews",
-        "quote": "LITERATURE REVIEW COMPLETE: Academic Validation StrongI conducted a comprehensive literature review on corporate mortality patterns using Perplexity AI.",
-        "author": "New_Person",
-        "date": "2025-12-16",
-        "url": "https://news.ycombinator.com/item?id=46284954",
-        "sentiment": "positive"
-      }
-    ],
+    "hackernews": [],
     "reddit": []
   },
   "mistral": {
@@ -106,67 +45,35 @@
   },
   "databricks": {
     "name": "Databricks",
-    "overallSentiment": "negative",
-    "totalMentions": 1,
-    "positive": 0,
-    "negative": 0,
-    "mixed": 0,
-    "lastUpdated": "2026-03-26",
-    "hackernews": [
-      {
-        "source": "hackernews",
-        "quote": "I&#x27;ve worked at a number of non-tech companies the past few years. They bought every SaaS product, Palantir, Databricks, multi-cloud, their dev teams adopted every pattern popularized by big tech and the results were always mixed.",
-        "author": "mgrat",
-        "date": "2025-12-30",
-        "url": "https://news.ycombinator.com/item?id=46434109",
-        "sentiment": "neutral"
-      }
-    ],
-    "reddit": []
-  },
-  "hubspot": {
-    "name": "HubSpot",
-    "overallSentiment": "negative",
-    "totalMentions": 1,
+    "overallSentiment": "neutral",
+    "totalMentions": 0,
     "positive": 0,
     "negative": 0,
     "mixed": 0,
     "lastUpdated": "2026-03-26",
     "hackernews": [],
-    "reddit": [
-      {
-        "source": "reddit",
-        "title": "Salesforce vs HubSpot Culture Clash?",
-        "quote": "There’s a (rough) genealogy with tech sales in the valley. Its started with Oracle——led to Siebel—-led to SFDC. Each subsequent company being a slightly more touchey-feely type culture. But at their core they’re based on a Dbag world view and work culture.",
-        "subreddit": "techsales",
-        "score": 24,
-        "comments": 20,
-        "commentAuthor": "chiaboy",
-        "commentScore": 20,
-        "date": "2025-04-15",
-        "url": "https://reddit.com/r/techsales/comments/1jzuqcr/salesforce_vs_hubspot_culture_clash/",
-        "sentiment": "neutral"
-      }
-    ]
+    "reddit": []
   },
-  "stripe": {
-    "name": "Stripe",
-    "overallSentiment": "positive",
-    "totalMentions": 1,
-    "positive": 1,
+  "hubspot": {
+    "name": "HubSpot",
+    "overallSentiment": "neutral",
+    "totalMentions": 0,
+    "positive": 0,
     "negative": 0,
     "mixed": 0,
     "lastUpdated": "2026-03-26",
-    "hackernews": [
-      {
-        "source": "hackernews",
-        "quote": "You’re describing a real coordination problem: over-polished, abstraction-heavy “AI voice” increases cognitive load and reduces signal. Since you don’t have positional authority—and leadership models the behavior—you need norm-shaping, not enforcement.",
-        "author": "Lionga",
-        "date": "2026-02-17",
-        "url": "https://news.ycombinator.com/item?id=47051244",
-        "sentiment": "positive"
-      }
-    ],
+    "hackernews": [],
+    "reddit": []
+  },
+  "stripe": {
+    "name": "Stripe",
+    "overallSentiment": "neutral",
+    "totalMentions": 0,
+    "positive": 0,
+    "negative": 0,
+    "mixed": 0,
+    "lastUpdated": "2026-03-26",
+    "hackernews": [],
     "reddit": []
   },
   "scale": {
@@ -226,41 +133,24 @@
   },
   "huggingface": {
     "name": "Hugging Face",
-    "overallSentiment": "negative",
-    "totalMentions": 1,
+    "overallSentiment": "neutral",
+    "totalMentions": 0,
     "positive": 0,
     "negative": 0,
     "mixed": 0,
     "lastUpdated": "2026-03-26",
-    "hackernews": [
-      {
-        "source": "hackernews",
-        "quote": "I don&#x27;t get the Hugging Face endgame. I&#x27;ve worked with their sales teams, and they seem like they are just constantly throwing things at the wall. With the overinflated fundraising they did, I don&#x27;t know how they&#x27;re going to justify their valuation.",
-        "author": "huhkerrf",
-        "date": "2025-04-23",
-        "url": "https://news.ycombinator.com/item?id=43775479",
-        "sentiment": "neutral"
-      }
-    ],
+    "hackernews": [],
     "reddit": []
   },
   "openai": {
     "name": "OpenAI",
     "overallSentiment": "positive",
-    "totalMentions": 3,
+    "totalMentions": 2,
     "positive": 1,
     "negative": 0,
     "mixed": 0,
     "lastUpdated": "2026-03-26",
     "hackernews": [
-      {
-        "source": "hackernews",
-        "quote": "Based on what I know of OpenAI&#x27;s culture, certainly permanent.",
-        "author": "stuartjohnson12",
-        "date": "2025-11-28",
-        "url": "https://news.ycombinator.com/item?id=46074604",
-        "sentiment": "neutral"
-      },
       {
         "source": "hackernews",
         "quote": "&gt;Thanks to this bottoms-up culture, OpenAI is also very meritocratic. Historically, leaders in the company are promoted primarily based upon their ability to have good ideas and then execute upon them.",
@@ -352,22 +242,13 @@
   },
   "langchain": {
     "name": "LangChain",
-    "overallSentiment": "negative",
-    "totalMentions": 1,
+    "overallSentiment": "neutral",
+    "totalMentions": 0,
     "positive": 0,
     "negative": 0,
     "mixed": 0,
     "lastUpdated": "2026-03-26",
-    "hackernews": [
-      {
-        "source": "hackernews",
-        "quote": "Indeed, but LangChain &#x2F; LangGraph tools are also Open Source so its not really Mozilla bringing their Open Source culture as a differentiating factor from their competitors.",
-        "author": "LunaSea",
-        "date": "2026-01-13",
-        "url": "https://news.ycombinator.com/item?id=46600573",
-        "sentiment": "neutral"
-      }
-    ],
+    "hackernews": [],
     "reddit": []
   },
   "replit": {
@@ -504,62 +385,35 @@
   },
   "cursor": {
     "name": "Cursor",
-    "overallSentiment": "negative",
-    "totalMentions": 1,
+    "overallSentiment": "neutral",
+    "totalMentions": 0,
     "positive": 0,
     "negative": 0,
     "mixed": 0,
     "lastUpdated": "2026-03-26",
-    "hackernews": [
-      {
-        "source": "hackernews",
-        "quote": "It’s going very well.Experience level: very senior, programming for 25 years, have managed platform teams at Heroku and Segment.Project type: new startup started Jan ‘26 at https:&#x2F;&#x2F;housecat.com. Pitch is “dev tools for non developers”Team size: currently 2.",
-        "author": "nzoschke",
-        "date": "2026-03-15",
-        "url": "https://news.ycombinator.com/item?id=47391947",
-        "sentiment": "neutral"
-      }
-    ],
+    "hackernews": [],
     "reddit": []
   },
   "figma": {
     "name": "Figma",
-    "overallSentiment": "negative",
-    "totalMentions": 1,
-    "positive": 0,
-    "negative": 1,
-    "mixed": 0,
-    "lastUpdated": "2026-03-26",
-    "hackernews": [
-      {
-        "source": "hackernews",
-        "quote": "Reading the other threads as well, I got the feeling it&#x27;s more a culture or process problem than tooling per se.The excessively fancy UI issue can be avoided if the devs enter the process at the prototyping phase.",
-        "author": "makeitdouble",
-        "date": "2025-10-01",
-        "url": "https://news.ycombinator.com/item?id=45440254",
-        "sentiment": "negative"
-      }
-    ],
-    "reddit": []
-  },
-  "linear": {
-    "name": "Linear",
-    "overallSentiment": "negative",
-    "totalMentions": 1,
+    "overallSentiment": "neutral",
+    "totalMentions": 0,
     "positive": 0,
     "negative": 0,
     "mixed": 0,
     "lastUpdated": "2026-03-26",
-    "hackernews": [
-      {
-        "source": "hackernews",
-        "quote": "I can&#x27;t speak to what I&#x27;d do instead because I don&#x27;t work at Linear or have enough insight into the state of the market, their product, competitors, or where things seem to be going.I just know the post gave me weird vibes.Did the value actually plummet?",
-        "author": "steve_adams_86",
-        "date": "2026-03-25",
-        "url": "https://news.ycombinator.com/item?id=47513371",
-        "sentiment": "neutral"
-      }
-    ],
+    "hackernews": [],
+    "reddit": []
+  },
+  "linear": {
+    "name": "Linear",
+    "overallSentiment": "neutral",
+    "totalMentions": 0,
+    "positive": 0,
+    "negative": 0,
+    "mixed": 0,
+    "lastUpdated": "2026-03-26",
+    "hackernews": [],
     "reddit": []
   },
   "vercel": {
@@ -575,22 +429,13 @@
   },
   "posthog": {
     "name": "PostHog",
-    "overallSentiment": "positive",
-    "totalMentions": 1,
-    "positive": 1,
+    "overallSentiment": "neutral",
+    "totalMentions": 0,
+    "positive": 0,
     "negative": 0,
     "mixed": 0,
     "lastUpdated": "2026-03-26",
-    "hackernews": [
-      {
-        "source": "hackernews",
-        "quote": "If you want to go a step further the PostHog roadmap items are all GitHub issues that users can upvote which gives a great sense of who wants what in the community.https:&#x2F;&#x2F;posthog.com&#x2F;roadmap(disclaimer: I used to work at PostHog)",
-        "author": "yakkomajuri",
-        "date": "2026-02-09",
-        "url": "https://news.ycombinator.com/item?id=46952641",
-        "sentiment": "positive"
-      }
-    ],
+    "hackernews": [],
     "reddit": []
   },
   "supabase": {
@@ -639,30 +484,13 @@
   },
   "incidentio": {
     "name": "incident.io",
-    "overallSentiment": "negative",
-    "totalMentions": 2,
+    "overallSentiment": "neutral",
+    "totalMentions": 0,
     "positive": 0,
     "negative": 0,
     "mixed": 0,
     "lastUpdated": "2026-03-26",
-    "hackernews": [
-      {
-        "source": "hackernews",
-        "quote": "Always makes me laugh when people pick company names that are domains and spend their life fighting incorrect capitalisation.I work at incident.io it&#x27;s a daily struggle.",
-        "author": "lawrjone",
-        "date": "2025-04-10",
-        "url": "https://news.ycombinator.com/item?id=43645430",
-        "sentiment": "neutral"
-      },
-      {
-        "source": "hackernews",
-        "quote": "Biased as I work for them but I think https:&#x2F;&#x2F;incident.io&#x2F;blog&#x2F;engineering is definitely worth adding.",
-        "author": "shelika",
-        "date": "2025-08-10",
-        "url": "https://news.ycombinator.com/item?id=44855256",
-        "sentiment": "neutral"
-      }
-    ],
+    "hackernews": [],
     "reddit": []
   },
   "grafanalabs": {
@@ -743,9 +571,9 @@
   "cloudflare": {
     "name": "Cloudflare",
     "overallSentiment": "negative",
-    "totalMentions": 3,
+    "totalMentions": 2,
     "positive": 0,
-    "negative": 1,
+    "negative": 0,
     "mixed": 0,
     "lastUpdated": "2026-03-26",
     "hackernews": [
@@ -756,14 +584,6 @@
         "date": "2025-03-28",
         "url": "https://news.ycombinator.com/item?id=43508286",
         "sentiment": "neutral"
-      },
-      {
-        "source": "hackernews",
-        "quote": "What&#x27;s the culture like at Cloudflare re: ops&#x2F;deployment safety?They saw errors related to a deployment, and because it was related to a security issue instead of rolling it back they decided to make another deployment with global blast radius instead?",
-        "author": "flaminHotSpeedo",
-        "date": "2025-12-05",
-        "url": "https://news.ycombinator.com/item?id=46162868",
-        "sentiment": "negative"
       },
       {
         "source": "hackernews",
