@@ -130,6 +130,9 @@ Data-driven insights on AI company culture, work-life balance, and what it's act
 - [Working at Grafana Labs in 2026](https://jobsbyculture.com/blog/working-at-grafana-labs-2026): 4.1 Glassdoor, 100% remote, engineers rate it 4.9/5, $400M+ ARR — what 205 employee reviews say
 - [Best AI & Tech Companies for Engineers in 2026](https://jobsbyculture.com/blog/best-ai-companies-for-engineers-2026): 45 companies ranked by engineering culture, autonomy, comp, and open source — 1,644 live engineering jobs
 - [Anthropic Remote Work Policy 2026](https://jobsbyculture.com/blog/anthropic-remote-work-policy-2026): Is Anthropic remote friendly? Only 7% of 443 roles are remote. Office locations, which roles qualify, and what employees say
+- [Working at Datadog in 2026](https://jobsbyculture.com/blog/working-at-datadog-2026): 4.2 Glassdoor, $200k–$400k TC, 454 open roles. Engineering culture, compensation, and what 6,000 employees say
+- [Working at Cloudflare in 2026](https://jobsbyculture.com/blog/working-at-cloudflare-2026): 3.9 Glassdoor, 529 open roles. Mission-driven internet infrastructure with legendary postmortem culture
+- [Stripe Layoffs 2026](https://jobsbyculture.com/blog/stripe-layoffs-2026): Stripe laid off 14% in 2022. Now 8,000 employees, 512 open roles, 4.0 Glassdoor. The full recovery story
 
 ## Culture Values We Track
 
