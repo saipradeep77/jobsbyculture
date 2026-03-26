@@ -889,6 +889,10 @@
 
 
 
+
+
+
+
 <!-- ═══ COMMUNITY SENTIMENT ═══ -->
 <section class="cs-section">
     <div class="container">
@@ -896,44 +900,15 @@
         <h2 class="s-title">What the <em>community</em> says about Grafana Labs</h2>
         <div class="cs-overall">
             <span class="cs-badge positive">Mostly Positive</span>
-            <span class="cs-stats">4 mentions from Hacker News &amp; Reddit &middot; Updated 2026-03-26</span>
-        </div>
-        <div class="cs-tabs">
-            <button class="cs-tab active" onclick="showSentiment('all',this)">All</button>
-            <button class="cs-tab" onclick="showSentiment('hn',this)">Hacker News</button>
-            <button class="cs-tab" onclick="showSentiment('reddit',this)">Reddit</button>
+            <span class="cs-stats">1 mentions from Hacker News &amp; Reddit &middot; Updated 2026-03-26</span>
         </div>
         <div class="cs-quotes" id="csQuotes">
             <div class="cs-quote" data-source="hn">
-                <div class="cs-quote-text">&ldquo;A reply of sorts, and a standard disclaimer that I work at Grafana Labs.&amp;gt; career-driven developmentwe don't have this and promote and reward as frequently for &quot;I've done solid...&rdquo;</div>
+                <div class="cs-quote-text">&ldquo;A reply of sorts, and a standard disclaimer that I work at Grafana Labs.&amp;gt; career-driven developmentwe don&amp;#x27;t have this and promote and reward as frequently for &amp;quot;I&amp;#x27;ve done solid operations&amp;quot; as we do for &amp;quot;I&amp;#x27;ve added this feature&amp;quot; (I&amp;#x27;m on...&rdquo;</div>
                 <div class="cs-quote-meta">
                     <span class="cs-quote-source hn">Hacker News</span>
                     <span>buro9 &middot; 2025-11-18</span>
                     <a href="https://news.ycombinator.com/item?id=45963212" target="_blank" rel="noopener" class="cs-quote-link">View thread &rarr;</a>
-                </div>
-            </div>
-            <div class="cs-quote" data-source="hn">
-                <div class="cs-quote-text">&ldquo;Grafana Labs | Remote-first (and-only) | Senior / Staff Software Engineer | Full-timeI am looking for someone with a lot of experience with SaaS platforms at scale.&rdquo;</div>
-                <div class="cs-quote-meta">
-                    <span class="cs-quote-source hn">Hacker News</span>
-                    <span>arturw8i &middot; 2025-08-01</span>
-                    <a href="https://news.ycombinator.com/item?id=44757803" target="_blank" rel="noopener" class="cs-quote-link">View thread &rarr;</a>
-                </div>
-            </div>
-            <div class="cs-quote" data-source="reddit">
-                <div class="cs-quote-text">&ldquo;Hey everyone I am thinking about applying to Grafana Labs for a software engineering role and wanted to get a better sense of the company culture.&rdquo;</div>
-                <div class="cs-quote-meta">
-                    <span class="cs-quote-source reddit">Reddit</span>
-                    <span>r/cscareerquestionsEU &middot; 6 upvotes &middot; 2026-03-02</span>
-                    <a href="https://reddit.com/r/cscareerquestionsEU/comments/1rj12rb/how_demanding_is_grafana_labs_for_software/" target="_blank" rel="noopener" class="cs-quote-link">View thread &rarr;</a>
-                </div>
-            </div>
-            <div class="cs-quote" data-source="reddit">
-                <div class="cs-quote-text">&ldquo;**S+ tier (basically mythic status)** * Renaissance Technologies -- Medallion Fund * NSA, pure research side * OpenAI (core research / superalignment types) * SpaceX (Starship + propulsion...&rdquo;</div>
-                <div class="cs-quote-meta">
-                    <span class="cs-quote-source reddit">Reddit</span>
-                    <span>r/csMajors &middot; 0 upvotes &middot; 2025-12-13</span>
-                    <a href="https://reddit.com/r/csMajors/comments/1plnso3/tech_tier_list/" target="_blank" rel="noopener" class="cs-quote-link">View thread &rarr;</a>
                 </div>
             </div>
         </div>
@@ -1174,5 +1149,18 @@ if (searchInput) {
 </div>
 <!-- ═══ /CLAIM MODAL ═══ -->
 
+
+<script>
+function showSentiment(src, btn) {
+    var quotes = document.querySelectorAll('#csQuotes .cs-quote');
+    quotes.forEach(function(q) {
+        if (src === 'all') q.style.display = 'block';
+        else if (src === 'hn') q.style.display = q.getAttribute('data-source') === 'hn' ? 'block' : 'none';
+        else if (src === 'reddit') q.style.display = q.getAttribute('data-source') === 'reddit' ? 'block' : 'none';
+    });
+    document.querySelectorAll('.cs-tab').forEach(function(t) { t.classList.remove('active'); });
+    btn.classList.add('active');
+}
+</script>
 </body>
 </html>

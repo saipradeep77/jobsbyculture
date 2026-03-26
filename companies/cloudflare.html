@@ -863,31 +863,22 @@
 
 
 
+
+
+
+
 <!-- ═══ COMMUNITY SENTIMENT ═══ -->
 <section class="cs-section">
     <div class="container">
         <span class="s-label">Community Sentiment</span>
         <h2 class="s-title">What the <em>community</em> says about Cloudflare</h2>
         <div class="cs-overall">
-            <span class="cs-badge mixed">Mixed Sentiment</span>
-            <span class="cs-stats">5 mentions from Hacker News &amp; Reddit &middot; Updated 2026-03-26</span>
-        </div>
-        <div class="cs-tabs">
-            <button class="cs-tab active" onclick="showSentiment('all',this)">All</button>
-            <button class="cs-tab" onclick="showSentiment('hn',this)">Hacker News</button>
-            <button class="cs-tab" onclick="showSentiment('reddit',this)">Reddit</button>
+            <span class="cs-badge negative">Mostly Negative</span>
+            <span class="cs-stats">3 mentions from Hacker News &amp; Reddit &middot; Updated 2026-03-26</span>
         </div>
         <div class="cs-quotes" id="csQuotes">
             <div class="cs-quote" data-source="hn">
-                <div class="cs-quote-text">&ldquo;Are there indicators in Cloudflare's culture or history to suggest that Replicate's strengths (docs, api, design) will remain in the long-term?&rdquo;</div>
-                <div class="cs-quote-meta">
-                    <span class="cs-quote-source hn">Hacker News</span>
-                    <span>antipaul &middot; 2025-11-17</span>
-                    <a href="https://news.ycombinator.com/item?id=45957838" target="_blank" rel="noopener" class="cs-quote-link">View thread &rarr;</a>
-                </div>
-            </div>
-            <div class="cs-quote" data-source="hn">
-                <div class="cs-quote-text">&ldquo;In my own humble opinion, jgc is the reason behind Cloudflare's open culture and incredible post-mortems. Thanks for making Cloudflare an incredible company to work for and with John. &lt;3&rdquo;</div>
+                <div class="cs-quote-text">&ldquo;In my own humble opinion, jgc is the reason behind Cloudflare&amp;#x27;s open culture and incredible post-mortems. Thanks for making Cloudflare an incredible company to work for and with John. &amp;lt;3&rdquo;</div>
                 <div class="cs-quote-meta">
                     <span class="cs-quote-source hn">Hacker News</span>
                     <span>sudsred &middot; 2025-03-28</span>
@@ -895,7 +886,7 @@
                 </div>
             </div>
             <div class="cs-quote" data-source="hn">
-                <div class="cs-quote-text">&ldquo;What's the culture like at Cloudflare re: ops/deployment safety?They saw errors related to a deployment, and because it was related to a security issue instead of rolling it back they...&rdquo;</div>
+                <div class="cs-quote-text">&ldquo;What&amp;#x27;s the culture like at Cloudflare re: ops&amp;#x2F;deployment safety?They saw errors related to a deployment, and because it was related to a security issue instead of rolling it back they decided to make another deployment with global blast radius instead?&rdquo;</div>
                 <div class="cs-quote-meta">
                     <span class="cs-quote-source hn">Hacker News</span>
                     <span>flaminHotSpeedo &middot; 2025-12-05</span>
@@ -903,19 +894,11 @@
                 </div>
             </div>
             <div class="cs-quote" data-source="hn">
-                <div class="cs-quote-text">&ldquo;&amp;gt; Not sure how cloudflare keeps struggling with issues like theseCloudflare has a reasonable culture around incident response, but it doesn't incentivize proactive prevention.&rdquo;</div>
+                <div class="cs-quote-text">&ldquo;&amp;gt; Not sure how cloudflare keeps struggling with issues like theseCloudflare has a reasonable culture around incident response, but it doesn&amp;#x27;t incentivize proactive prevention.&rdquo;</div>
                 <div class="cs-quote-meta">
                     <span class="cs-quote-source hn">Hacker News</span>
                     <span>kod &middot; 2025-07-16</span>
                     <a href="https://news.ycombinator.com/item?id=44584428" target="_blank" rel="noopener" class="cs-quote-link">View thread &rarr;</a>
-                </div>
-            </div>
-            <div class="cs-quote" data-source="reddit">
-                <div class="cs-quote-text">&ldquo;Hi everyone, Posting here from a throwaway account for obvious reasons. I'm currently a Sales Engineer at a direct competitor of Cloudflare and I've been going through multiple interview rounds with...&rdquo;</div>
-                <div class="cs-quote-meta">
-                    <span class="cs-quote-source reddit">Reddit</span>
-                    <span>r/techsales &middot; 9 upvotes &middot; 2025-09-10</span>
-                    <a href="https://reddit.com/r/techsales/comments/1ndomti/question_for_current_cloudflare_aesams_hows_the/" target="_blank" rel="noopener" class="cs-quote-link">View thread &rarr;</a>
                 </div>
             </div>
         </div>
@@ -1146,5 +1129,18 @@ if (searchInput) {
 </div>
 <!-- ═══ /CLAIM MODAL ═══ -->
 
+
+<script>
+function showSentiment(src, btn) {
+    var quotes = document.querySelectorAll('#csQuotes .cs-quote');
+    quotes.forEach(function(q) {
+        if (src === 'all') q.style.display = 'block';
+        else if (src === 'hn') q.style.display = q.getAttribute('data-source') === 'hn' ? 'block' : 'none';
+        else if (src === 'reddit') q.style.display = q.getAttribute('data-source') === 'reddit' ? 'block' : 'none';
+    });
+    document.querySelectorAll('.cs-tab').forEach(function(t) { t.classList.remove('active'); });
+    btn.classList.add('active');
+}
+</script>
 </body>
 </html>

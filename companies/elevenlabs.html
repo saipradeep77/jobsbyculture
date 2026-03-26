@@ -892,18 +892,27 @@
 
 
 
+
+
+
+
 <!-- ═══ COMMUNITY SENTIMENT ═══ -->
 <section class="cs-section">
     <div class="container">
         <span class="s-label">Community Sentiment</span>
         <h2 class="s-title">What the <em>community</em> says about ElevenLabs</h2>
         <div class="cs-overall">
-            <span class="cs-badge neutral">Neutral</span>
-            <span class="cs-stats">2 mentions from Hacker News &amp; Reddit &middot; Updated 2026-03-26</span>
+            <span class="cs-badge negative">Mostly Negative</span>
+            <span class="cs-stats">4 mentions from Hacker News &amp; Reddit &middot; Updated 2026-03-26</span>
+        </div>
+        <div class="cs-tabs">
+            <button class="cs-tab active" onclick="showSentiment('all',this)">All</button>
+            <button class="cs-tab" onclick="showSentiment('hn',this)">Hacker News</button>
+            <button class="cs-tab" onclick="showSentiment('reddit',this)">Reddit</button>
         </div>
         <div class="cs-quotes" id="csQuotes">
             <div class="cs-quote" data-source="hn">
-                <div class="cs-quote-text">&ldquo;(I work at ElevenLabs)Sad to hear this. How are you submitting the bug report? If you submit an issue via any of our open source repos on GitHub you'll get a timely human response.&rdquo;</div>
+                <div class="cs-quote-text">&ldquo;(I work at ElevenLabs)Sad to hear this. How are you submitting the bug report? If you submit an issue via any of our open source repos on GitHub you&amp;#x27;ll get a timely human response.&rdquo;</div>
                 <div class="cs-quote-meta">
                     <span class="cs-quote-source hn">Hacker News</span>
                     <span>paulasjes &middot; 2026-03-26</span>
@@ -911,11 +920,27 @@
                 </div>
             </div>
             <div class="cs-quote" data-source="hn">
-                <div class="cs-quote-text">&ldquo;[disclaimer, i work at elevenlabs] we specifically went with a cascading model for our agents platform because it's better suited for enterprise use cases where they have full control over the...&rdquo;</div>
+                <div class="cs-quote-text">&ldquo;[disclaimer, i work at elevenlabs] we specifically went with a cascading model for our agents platform because it&amp;#x27;s better suited for enterprise use cases where they have full control over the brain and can bring their own llm.&rdquo;</div>
                 <div class="cs-quote-meta">
                     <span class="cs-quote-source hn">Hacker News</span>
                     <span>hi_im_vijay &middot; 2025-12-11</span>
                     <a href="https://news.ycombinator.com/item?id=46236377" target="_blank" rel="noopener" class="cs-quote-link">View thread &rarr;</a>
+                </div>
+            </div>
+            <div class="cs-quote" data-source="reddit">
+                <div class="cs-quote-text">&ldquo;I dont work there. Just go for it. It´s one of the leading companies in voice / speech AI. and spending time there (and perfoming well) will almost guarantee an immensly useful experience.&rdquo;</div>
+                <div class="cs-quote-meta">
+                    <span class="cs-quote-source reddit">Reddit</span>
+                    <span>r/techsales &middot; 6 upvotes &middot; 2026-01-07</span>
+                    <a href="https://reddit.com/r/techsales/comments/1q6sojl/elevenlabs_sdr/" target="_blank" rel="noopener" class="cs-quote-link">View thread &rarr;</a>
+                </div>
+            </div>
+            <div class="cs-quote" data-source="reddit">
+                <div class="cs-quote-text">&ldquo;They were a customer of mine. Everyone is super sharp and works very hard. Top player in the space too. A few years there will do wonders for your career and if the equity hits that could set you up very well. Go all in imo&rdquo;</div>
+                <div class="cs-quote-meta">
+                    <span class="cs-quote-source reddit">Reddit</span>
+                    <span>r/techsales &middot; 6 upvotes &middot; 2025-10-09</span>
+                    <a href="https://reddit.com/r/techsales/comments/1o2asjr/bdr_at_elevenlabs/" target="_blank" rel="noopener" class="cs-quote-link">View thread &rarr;</a>
                 </div>
             </div>
         </div>
