@@ -43,6 +43,7 @@ function addRef(url) {
         const parsed = new URL(url);
         if (SKIP_DOMAINS.some(d => parsed.hostname === d || parsed.hostname.endsWith('.' + d))) return url;
         if (parsed.searchParams.has('ref')) return url;
+        if (decoded.includes('ref=jobsbyculture') || decoded.includes('ref%3Djobsbyculture')) return url;
         parsed.searchParams.set('ref', 'jobsbyculture.com');
         return parsed.toString();
     } catch {
@@ -78,6 +79,7 @@ for (const fp of files) {
                 const parsed = new URL(decoded);
                 if (SKIP_DOMAINS.some(d => parsed.hostname === d || parsed.hostname.endsWith('.' + d))) return match;
                 if (parsed.searchParams.has('ref')) return match;
+                if (decoded.includes('ref=jobsbyculture') || decoded.includes('ref%3Djobsbyculture')) return match;
 
                 parsed.searchParams.set('ref', 'jobsbyculture.com');
                 // Re-encode & as &amp; for HTML attribute
