@@ -888,14 +888,21 @@
 
 
 
+
+
 <!-- ═══ COMMUNITY SENTIMENT ═══ -->
 <section class="cs-section">
     <div class="container">
         <span class="s-label">Community Sentiment</span>
         <h2 class="s-title">What the <em>community</em> says about Databricks</h2>
         <div class="cs-overall">
-            <span class="cs-badge negative">Mostly Negative</span>
-            <span class="cs-stats">1 mentions from Hacker News &amp; Reddit &middot; Updated 2026-03-26</span>
+            <span class="cs-badge positive">Mostly Positive</span>
+            <span class="cs-stats">8 mentions from Hacker News &amp; Reddit &middot; Updated 2026-03-27</span>
+        </div>
+        <div class="cs-tabs">
+            <button class="cs-tab active" onclick="showSentiment('all',this)">All</button>
+            <button class="cs-tab" onclick="showSentiment('hn',this)">Hacker News</button>
+            <button class="cs-tab" onclick="showSentiment('reddit',this)">Reddit</button>
         </div>
         <div class="cs-quotes" id="csQuotes">
             <div class="cs-quote" data-source="hn">
@@ -903,7 +910,55 @@
                 <div class="cs-quote-meta">
                     <span class="cs-quote-source hn">Hacker News</span>
                     <span>mgrat &middot; 2025-12-30</span>
-                    <a href="https://news.ycombinator.com/item?id=46434109" target="_blank" rel="noopener" class="cs-quote-link">View thread &rarr;</a>
+                    <a href="https://news.ycombinator.com/item?id=46434109&amp;ref=jobsbyculture.com" target="_blank" rel="noopener" class="cs-quote-link">View thread &rarr;</a>
+                </div>
+            </div>
+            <div class="cs-quote" data-source="hn">
+                <div class="cs-quote-text">&ldquo;we have databricks at my company 50m ARR, 150 employee thats still growing at 15% YoY. With 0 full time Data Engineer (1 data scientist + 1 db admin both co-manage everything on there as part-time jobs. They have their full-time role).&rdquo;</div>
+                <div class="cs-quote-meta">
+                    <span class="cs-quote-source hn">Hacker News</span>
+                    <span>naijaboiler &middot; 2025-08-21</span>
+                    <a href="https://news.ycombinator.com/item?id=44968177&amp;ref=jobsbyculture.com" target="_blank" rel="noopener" class="cs-quote-link">View thread &rarr;</a>
+                </div>
+            </div>
+            <div class="cs-quote" data-source="hn">
+                <div class="cs-quote-text">&ldquo;we have databricks at my company 50m ARR, 150 employee thats still growing at 15% YoY.. With 0 full time Data Engineer (1 data scientist + 1 db admin manages everything on there as part time jobs).&rdquo;</div>
+                <div class="cs-quote-meta">
+                    <span class="cs-quote-source hn">Hacker News</span>
+                    <span>naijaboiler &middot; 2025-08-21</span>
+                    <a href="https://news.ycombinator.com/item?id=44968125&amp;ref=jobsbyculture.com" target="_blank" rel="noopener" class="cs-quote-link">View thread &rarr;</a>
+                </div>
+            </div>
+            <div class="cs-quote" data-source="hn">
+                <div class="cs-quote-text">&ldquo;we have databricks at my company 50m ARR, 150 employee. With 0 full time Data Engineer (1 data scientist + 1 db admin manages everything on there as part time jobs).&rdquo;</div>
+                <div class="cs-quote-meta">
+                    <span class="cs-quote-source hn">Hacker News</span>
+                    <span>naijaboiler &middot; 2025-08-21</span>
+                    <a href="https://news.ycombinator.com/item?id=44968053&amp;ref=jobsbyculture.com" target="_blank" rel="noopener" class="cs-quote-link">View thread &rarr;</a>
+                </div>
+            </div>
+            <div class="cs-quote" data-source="reddit">
+                <div class="cs-quote-text">&ldquo;Wow! This is insane - considering how bad the market is you've been able to bag so many interviews! Congratulations and thank you for your post, definitely super insightful and inspiring! Hopefully I can do the same soon!&rdquo;</div>
+                <div class="cs-quote-meta">
+                    <span class="cs-quote-source reddit">Reddit</span>
+                    <span>r/leetcode &middot; 681 upvotes &middot; 2025-05-22</span>
+                    <a href="https://reddit.com/r/leetcode/comments/1ksh0j1/my_job_switch_journey_fintech_to_faang/?ref=jobsbyculture.com" target="_blank" rel="noopener" class="cs-quote-link">View thread &rarr;</a>
+                </div>
+            </div>
+            <div class="cs-quote" data-source="reddit">
+                <div class="cs-quote-text">&ldquo;As a hiring manager and a career data professional, I can’t stress #4 enough! ALWAYS maintain an up-to-date inventory of your projects, the key problem each one solved, the pre and post state, design/architecture and the stakeholders your project supported.&rdquo;</div>
+                <div class="cs-quote-meta">
+                    <span class="cs-quote-source reddit">Reddit</span>
+                    <span>r/dataengineering &middot; 196 upvotes &middot; 2025-12-02</span>
+                    <a href="https://reddit.com/r/dataengineering/comments/1pcl7on/taking_165k_offer_over_175k_offer/?ref=jobsbyculture.com" target="_blank" rel="noopener" class="cs-quote-link">View thread &rarr;</a>
+                </div>
+            </div>
+            <div class="cs-quote" data-source="reddit">
+                <div class="cs-quote-text">&ldquo;You need to work on your salary negotiation skills. You're lacking that mercantalist attitude and, without realising that the market is pretty solid right now letting organisations pay you a junior level salary (yes, a junior salary for companies with a strong tech culture) with...&rdquo;</div>
+                <div class="cs-quote-meta">
+                    <span class="cs-quote-source reddit">Reddit</span>
+                    <span>r/dataengineering &middot; 75 upvotes &middot; 2026-01-13</span>
+                    <a href="https://reddit.com/r/dataengineering/comments/1qbx8ay/data_engineer_with_4_years_what_do_i_need_to_work/?ref=jobsbyculture.com" target="_blank" rel="noopener" class="cs-quote-link">View thread &rarr;</a>
                 </div>
             </div>
         </div>
@@ -911,6 +966,8 @@
     </div>
 </section>
 <!-- ═══ /COMMUNITY SENTIMENT ═══ -->
+
+
 
 <!-- ═══ RELATED ═══ -->
 <section class="cp-related">
@@ -1110,6 +1167,18 @@ if (searchInput) {
 }
 </script>
 
+<script>
+function showSentiment(src, btn) {
+    var quotes = document.querySelectorAll('#csQuotes .cs-quote');
+    quotes.forEach(function(q) {
+        if (src === 'all') q.style.display = 'block';
+        else if (src === 'hn') q.style.display = q.getAttribute('data-source') === 'hn' ? 'block' : 'none';
+        else if (src === 'reddit') q.style.display = q.getAttribute('data-source') === 'reddit' ? 'block' : 'none';
+    });
+    document.querySelectorAll('.cs-tab').forEach(function(t) { t.classList.remove('active'); });
+    btn.classList.add('active');
+}
+</script>
 <!-- ═══ CLAIM MODAL ═══ -->
 <div class="claim-overlay" id="claimOverlaydatabricks" onclick="if(event.target===this)this.classList.remove('open')">
     <div class="claim-modal">
@@ -1148,18 +1217,5 @@ if (searchInput) {
 </div>
 <!-- ═══ /CLAIM MODAL ═══ -->
 
-
-<script>
-function showSentiment(src, btn) {
-    var quotes = document.querySelectorAll('#csQuotes .cs-quote');
-    quotes.forEach(function(q) {
-        if (src === 'all') q.style.display = 'block';
-        else if (src === 'hn') q.style.display = q.getAttribute('data-source') === 'hn' ? 'block' : 'none';
-        else if (src === 'reddit') q.style.display = q.getAttribute('data-source') === 'reddit' ? 'block' : 'none';
-    });
-    document.querySelectorAll('.cs-tab').forEach(function(t) { t.classList.remove('active'); });
-    btn.classList.add('active');
-}
-</script>
 </body>
 </html>

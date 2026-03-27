@@ -859,6 +859,10 @@
 
 
 
+
+
+
+
 <!-- ═══ COMMUNITY SENTIMENT ═══ -->
 <section class="cs-section">
     <div class="container">
@@ -866,12 +870,7 @@
         <h2 class="s-title">What the <em>community</em> says about Fireworks AI</h2>
         <div class="cs-overall">
             <span class="cs-badge positive">Mostly Positive</span>
-            <span class="cs-stats">6 mentions from Hacker News &amp; Reddit &middot; Updated 2026-03-26</span>
-        </div>
-        <div class="cs-tabs">
-            <button class="cs-tab active" onclick="showSentiment('all',this)">All</button>
-            <button class="cs-tab" onclick="showSentiment('hn',this)">Hacker News</button>
-            <button class="cs-tab" onclick="showSentiment('reddit',this)">Reddit</button>
+            <span class="cs-stats">1 mentions from Hacker News &amp; Reddit &middot; Updated 2026-03-27</span>
         </div>
         <div class="cs-quotes" id="csQuotes">
             <div class="cs-quote" data-source="hn">
@@ -880,30 +879,6 @@
                     <span class="cs-quote-source hn">Hacker News</span>
                     <span>threeducks &middot; 2025-12-03</span>
                     <a href="https://news.ycombinator.com/item?id=46133175&amp;ref=jobsbyculture.com" target="_blank" rel="noopener" class="cs-quote-link">View thread &rarr;</a>
-                </div>
-            </div>
-            <div class="cs-quote" data-source="reddit">
-                <div class="cs-quote-text">&ldquo;It's crazy how often this happens. For a tool that's usualy so hesitant to create &quot;offensive&quot; content, AI sure will throw that out the window if you give it a &quot;persona&quot; it can follow.&rdquo;</div>
-                <div class="cs-quote-meta">
-                    <span class="cs-quote-source reddit">Reddit</span>
-                    <span>r/cogsuckers &middot; 365 upvotes &middot; 2026-03-09</span>
-                    <a href="https://reddit.com/r/cogsuckers/comments/1roxj9l/raise_your_hand_if_youve_seen_your_culture_or/?ref=jobsbyculture.com" target="_blank" rel="noopener" class="cs-quote-link">View thread &rarr;</a>
-                </div>
-            </div>
-            <div class="cs-quote" data-source="reddit">
-                <div class="cs-quote-text">&ldquo;I’m currently reading Ado’s autobiography, and honestly, it’s far more interesting than I expected. I’ve finished the first two chapters so far.&rdquo;</div>
-                <div class="cs-quote-meta">
-                    <span class="cs-quote-source reddit">Reddit</span>
-                    <span>r/ADO &middot; 677 upvotes &middot; 2026-02-27</span>
-                    <a href="https://reddit.com/r/ADO/comments/1rg26lp/autobiography_excerpt_hidden_details_about_ados/?ref=jobsbyculture.com" target="_blank" rel="noopener" class="cs-quote-link">View thread &rarr;</a>
-                </div>
-            </div>
-            <div class="cs-quote" data-source="reddit">
-                <div class="cs-quote-text">&ldquo;*Hi everyone! I wanted to share a Jak 4 fanfiction I've been working on for a few weeks. I'm sharing a brief synopsis so you can get your thoughts.&rdquo;</div>
-                <div class="cs-quote-meta">
-                    <span class="cs-quote-source reddit">Reddit</span>
-                    <span>r/jakanddaxter &middot; 321 upvotes &middot; 2025-11-09</span>
-                    <a href="https://reddit.com/r/jakanddaxter/comments/1osqvc6/repost_my_take_on_jak_4_jak_and_daxter_4_legacy/?ref=jobsbyculture.com" target="_blank" rel="noopener" class="cs-quote-link">View thread &rarr;</a>
                 </div>
             </div>
         </div>
@@ -1098,6 +1073,18 @@ if (searchInput) {
 }
 </script>
 
+<script>
+function showSentiment(src, btn) {
+    var quotes = document.querySelectorAll('#csQuotes .cs-quote');
+    quotes.forEach(function(q) {
+        if (src === 'all') q.style.display = 'block';
+        else if (src === 'hn') q.style.display = q.getAttribute('data-source') === 'hn' ? 'block' : 'none';
+        else if (src === 'reddit') q.style.display = q.getAttribute('data-source') === 'reddit' ? 'block' : 'none';
+    });
+    document.querySelectorAll('.cs-tab').forEach(function(t) { t.classList.remove('active'); });
+    btn.classList.add('active');
+}
+</script>
 <!-- ═══ CLAIM MODAL ═══ -->
 <div class="claim-overlay" id="claimOverlayfireworksai" onclick="if(event.target===this)this.classList.remove('open')">
     <div class="claim-modal">

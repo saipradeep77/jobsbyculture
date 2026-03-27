@@ -860,22 +860,48 @@
 
 
 
+
+
 <!-- ═══ COMMUNITY SENTIMENT ═══ -->
 <section class="cs-section">
     <div class="container">
         <span class="s-label">Community Sentiment</span>
         <h2 class="s-title">What the <em>community</em> says about Crusoe</h2>
         <div class="cs-overall">
-            <span class="cs-badge neutral">Neutral</span>
-            <span class="cs-stats">1 mentions from Hacker News &amp; Reddit &middot; Updated 2026-03-26</span>
+            <span class="cs-badge mixed">Mixed Sentiment</span>
+            <span class="cs-stats">5 mentions from Hacker News &amp; Reddit &middot; Updated 2026-03-27</span>
         </div>
         <div class="cs-quotes" id="csQuotes">
-            <div class="cs-quote" data-source="reddit">
-                <div class="cs-quote-text">&ldquo;Going through interviews with Crusoe to work in one of their main offices. Curious if anyone can share their work experience with the company. Culture, management, benefits, etc.&rdquo;</div>
+            <div class="cs-quote" data-source="hn">
+                <div class="cs-quote-text">&ldquo;I think its a real interesting challenge, from a hacker perspective. How do you bootstrap a culture, that spirals into this minima, to recover and redevelop a interest in science and cultural development, without external intervention or enforcement.&rdquo;</div>
                 <div class="cs-quote-meta">
-                    <span class="cs-quote-source reddit">Reddit</span>
-                    <span>r/datacenter &middot; 5 upvotes &middot; 2025-08-22</span>
-                    <a href="https://reddit.com/r/datacenter/comments/1mxiu2m/crusoe_work_experience/" target="_blank" rel="noopener" class="cs-quote-link">View thread &rarr;</a>
+                    <span class="cs-quote-source hn">Hacker News</span>
+                    <span>ItCouldBeWorse &middot; 2025-06-19</span>
+                    <a href="https://news.ycombinator.com/item?id=44318615&amp;ref=jobsbyculture.com" target="_blank" rel="noopener" class="cs-quote-link">View thread &rarr;</a>
+                </div>
+            </div>
+            <div class="cs-quote" data-source="hn">
+                <div class="cs-quote-text">&ldquo;This is one of those papers that quietly reorients the whole debate. Instead of treating equality as a cosmic accounting problem (“compensate brute luck, penalize choice”), she argues that this framing predictably turns into stigma, paternalism, and weird moral surveillance of...&rdquo;</div>
+                <div class="cs-quote-meta">
+                    <span class="cs-quote-source hn">Hacker News</span>
+                    <span>foster_nyman &middot; 2026-01-06</span>
+                    <a href="https://news.ycombinator.com/item?id=46509784&amp;ref=jobsbyculture.com" target="_blank" rel="noopener" class="cs-quote-link">View thread &rarr;</a>
+                </div>
+            </div>
+            <div class="cs-quote" data-source="hn">
+                <div class="cs-quote-text">&ldquo;I&amp;#x27;ve read thousands of books. There are good novels everywhere, and no country has the exclusivity of any theme.&amp;gt; One is the depiction of desolation and human loneliness before the American continent was developed into a prosperous land.&rdquo;</div>
+                <div class="cs-quote-meta">
+                    <span class="cs-quote-source hn">Hacker News</span>
+                    <span>idoubtit &middot; 2026-01-04</span>
+                    <a href="https://news.ycombinator.com/item?id=46486929&amp;ref=jobsbyculture.com" target="_blank" rel="noopener" class="cs-quote-link">View thread &rarr;</a>
+                </div>
+            </div>
+            <div class="cs-quote" data-source="hn">
+                <div class="cs-quote-text">&ldquo;I worked at Transmeta. I remember for the launch of one of the Crusoe-powered laptops, there was a bug that prevented the BIOS from booting Linux. Since the laptop was only going to run Windows ME, they didn’t fix it.&rdquo;</div>
+                <div class="cs-quote-meta">
+                    <span class="cs-quote-source hn">Hacker News</span>
+                    <span>MikeNotThePope &middot; 2025-11-12</span>
+                    <a href="https://news.ycombinator.com/item?id=45901214&amp;ref=jobsbyculture.com" target="_blank" rel="noopener" class="cs-quote-link">View thread &rarr;</a>
                 </div>
             </div>
         </div>
@@ -883,6 +909,8 @@
     </div>
 </section>
 <!-- ═══ /COMMUNITY SENTIMENT ═══ -->
+
+
 
 <!-- ═══ RELATED ═══ -->
 <section class="cp-related">
@@ -1068,6 +1096,18 @@ if (searchInput) {
 }
 </script>
 
+<script>
+function showSentiment(src, btn) {
+    var quotes = document.querySelectorAll('#csQuotes .cs-quote');
+    quotes.forEach(function(q) {
+        if (src === 'all') q.style.display = 'block';
+        else if (src === 'hn') q.style.display = q.getAttribute('data-source') === 'hn' ? 'block' : 'none';
+        else if (src === 'reddit') q.style.display = q.getAttribute('data-source') === 'reddit' ? 'block' : 'none';
+    });
+    document.querySelectorAll('.cs-tab').forEach(function(t) { t.classList.remove('active'); });
+    btn.classList.add('active');
+}
+</script>
 <!-- ═══ CLAIM MODAL ═══ -->
 <div class="claim-overlay" id="claimOverlaycrusoe" onclick="if(event.target===this)this.classList.remove('open')">
     <div class="claim-modal">
@@ -1106,18 +1146,5 @@ if (searchInput) {
 </div>
 <!-- ═══ /CLAIM MODAL ═══ -->
 
-
-<script>
-function showSentiment(src, btn) {
-    var quotes = document.querySelectorAll('#csQuotes .cs-quote');
-    quotes.forEach(function(q) {
-        if (src === 'all') q.style.display = 'block';
-        else if (src === 'hn') q.style.display = q.getAttribute('data-source') === 'hn' ? 'block' : 'none';
-        else if (src === 'reddit') q.style.display = q.getAttribute('data-source') === 'reddit' ? 'block' : 'none';
-    });
-    document.querySelectorAll('.cs-tab').forEach(function(t) { t.classList.remove('active'); });
-    btn.classList.add('active');
-}
-</script>
 </body>
 </html>
