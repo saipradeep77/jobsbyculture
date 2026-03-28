@@ -133,6 +133,9 @@ Data-driven insights on AI company culture, work-life balance, and what it's act
 - [Working at Datadog in 2026](https://jobsbyculture.com/blog/working-at-datadog-2026): 4.2 Glassdoor, $200k–$400k TC, 454 open roles. Engineering culture, compensation, and what 6,000 employees say
 - [Working at Cloudflare in 2026](https://jobsbyculture.com/blog/working-at-cloudflare-2026): 3.9 Glassdoor, 529 open roles. Mission-driven internet infrastructure with legendary postmortem culture
 - [Stripe Layoffs 2026](https://jobsbyculture.com/blog/stripe-layoffs-2026): Stripe laid off 14% in 2022. Now 8,000 employees, 512 open roles, 4.0 Glassdoor. The full recovery story
+- [Working at HubSpot in 2026](https://jobsbyculture.com/blog/working-at-hubspot-2026): 4.3 Glassdoor, 90% recommend, Culture Code company. 276 open roles with genuine remote-first flexibility
+- [Anthropic Compensation 2026](https://jobsbyculture.com/blog/anthropic-compensation-2026): $300k–$490k TC, 4.8/5 comp score (highest in database). Full salary, equity, bonus breakdown vs OpenAI, DeepMind, Stripe
+- [AI Jobs in Paris 2026](https://jobsbyculture.com/blog/ai-jobs-paris-2026): 220 AI & tech jobs from 13 companies — Mistral AI (95), Datadog (55), Databricks (24), Hugging Face. Europe's AI capital
 
 ## Culture Values We Track
 
