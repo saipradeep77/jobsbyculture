@@ -157,6 +157,14 @@
         }
         .hero-stat-val { font-family: var(--font-mono); font-size: 32px; font-weight: 500; letter-spacing: -0.02em; color: var(--text); }
         .hero-stat-label { font-size: 13px; color: var(--text-3); margin-top: 4px; }
+        .hero-cta {
+            display: inline-flex; align-items: center; gap: 8px;
+            background: var(--accent); color: #fff; padding: 14px 32px;
+            border-radius: var(--radius-sm); font-size: 16px; font-weight: 600;
+            text-decoration: none; transition: all 0.2s; margin-top: 36px;
+            animation: fadeUp 0.5s ease 0.32s both;
+        }
+        .hero-cta:hover { background: var(--accent-hover); transform: translateY(-2px); box-shadow: 0 6px 24px rgba(232,89,12,0.2); }
 
         /* ═══ SECTIONS ═══ */
         .s-label {
@@ -173,45 +181,6 @@
         .s-center .s-desc { margin: 0 auto 48px; }
 
         /* ═══ COMPANY SEARCH ═══ */
-        .search-section { padding: 80px 0; background: var(--bg-raised); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
-        .search-wrap { max-width: 640px; margin: 0 auto; }
-        .search-input {
-            width: 100%; padding: 16px 22px; border-radius: var(--radius);
-            border: 1.5px solid var(--border-2); font-size: 16px;
-            font-family: var(--font-body); background: var(--bg);
-            color: var(--text); outline: none; transition: all 0.2s;
-        }
-        .search-input:focus {
-            border-color: var(--accent); box-shadow: 0 0 0 3px rgba(232,89,12,0.08);
-            background: #fff;
-        }
-        .search-input::placeholder { color: var(--text-3); }
-        .search-results { margin-top: 16px; }
-        .search-card {
-            display: flex; align-items: center; gap: 14px;
-            padding: 16px 20px; background: var(--bg-card); border: 1px solid var(--border);
-            border-radius: var(--radius); margin-bottom: 8px;
-            transition: all 0.2s;
-        }
-        .search-card:hover { border-color: var(--accent-border); transform: translateY(-1px); box-shadow: var(--shadow); }
-        .search-card-logo { width: 40px; height: 40px; border-radius: 10px; object-fit: contain; background: var(--bg); padding: 4px; flex-shrink: 0; }
-        .search-card-info { flex: 1; }
-        .search-card-name { font-size: 15px; font-weight: 600; }
-        .search-card-meta { font-size: 12px; color: var(--text-3); margin-top: 2px; }
-        .search-card-meta span { margin-right: 12px; }
-        .search-card-link {
-            font-size: 13px; color: var(--accent); text-decoration: none; font-weight: 600;
-            white-space: nowrap; padding: 7px 14px; border: 1px solid var(--accent-border);
-            border-radius: var(--radius-sm); transition: all 0.2s;
-        }
-        .search-card-link:hover { background: var(--accent-bg); border-color: var(--accent); }
-        .search-empty { display: none; text-align: center; padding: 24px; color: var(--text-2); font-size: 14px; }
-        .search-empty a { color: var(--accent); text-decoration: none; font-weight: 600; }
-        .search-empty a:hover { text-decoration: underline; }
-        .search-not-listed { text-align: center; margin-top: 20px; font-size: 14px; color: var(--text-3); }
-        .search-not-listed a { color: var(--accent); text-decoration: none; font-weight: 600; }
-        .search-not-listed a:hover { text-decoration: underline; }
-
         /* ═══ WHAT YOU GET ═══ */
         .benefits { padding: 80px 0; }
         .benefits-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
@@ -241,28 +210,37 @@
         }
         .benefit-card p { font-size: 14px; color: var(--text-2); line-height: 1.7; }
 
-        /* ═══ LOGO STRIP ═══ */
-        .logos-section { padding: 60px 0; background: var(--bg-raised); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); overflow: hidden; }
-        .logos-track {
-            display: flex; gap: 40px; width: max-content;
-            animation: scrollLogos 60s linear infinite;
+        /* ═══ LOGO CLOUD ═══ */
+        .logos-section { padding: 60px 0; }
+        .logo-cloud {
+            display: flex; flex-wrap: wrap; justify-content: center; gap: 12px;
+            max-width: 960px; margin: 32px auto 0;
         }
-        .logos-track:hover { animation-play-state: paused; }
-        .logo-item {
-            display: flex; flex-direction: column; align-items: center; gap: 8px;
-            flex-shrink: 0;
+        .logo-cloud-item {
+            display: flex; align-items: center; gap: 10px;
+            background: var(--bg-card); border: 1px solid var(--border);
+            border-radius: var(--radius-sm); padding: 10px 18px;
+            transition: all 0.2s; text-decoration: none; color: var(--text);
         }
-        .logo-item img { width: 40px; height: 40px; border-radius: 10px; object-fit: contain; background: var(--bg); padding: 4px; }
-        .logo-item span { font-size: 11px; color: var(--text-3); font-weight: 500; white-space: nowrap; }
-        @keyframes scrollLogos {
-            0% { transform: translateX(0); }
-            100% { transform: translateX(-50%); }
-        }
+        .logo-cloud-item:hover { border-color: var(--accent-border); transform: translateY(-2px); box-shadow: var(--shadow); }
+        .logo-cloud-item img { width: 28px; height: 28px; border-radius: 6px; }
+        .logo-cloud-item span { font-size: 13px; font-weight: 600; white-space: nowrap; }
 
         /* ═══ FORMS ═══ */
         .form-section { padding: 80px 0; }
-        .form-section + .form-section { padding-top: 0; }
         .form-wrap { max-width: 640px; margin: 0 auto; }
+        .form-tabs {
+            display: flex; gap: 0; margin-bottom: 24px;
+            border-bottom: 2px solid var(--border);
+        }
+        .form-tab {
+            flex: 1; padding: 12px 20px; background: none; border: none;
+            font-size: 14px; font-weight: 600; color: var(--text-3);
+            cursor: pointer; transition: all 0.15s; font-family: var(--font-body);
+            border-bottom: 2px solid transparent; margin-bottom: -2px;
+        }
+        .form-tab:hover { color: var(--text); }
+        .form-tab.active { color: var(--accent); border-bottom-color: var(--accent); }
         .form-card {
             background: var(--bg-card); border: 1px solid var(--border);
             border-radius: var(--radius-lg); padding: 40px;
@@ -333,8 +311,6 @@
             .form-row { grid-template-columns: 1fr; }
             .form-card { padding: 28px 24px; }
             .ft-grid { grid-template-columns: 1fr 1fr; gap: 28px; }
-            .search-card { flex-wrap: wrap; }
-            .search-card-link { width: 100%; text-align: center; }
         }
         @media (max-width: 480px) {
             .hero-stats { flex-direction: column; gap: 20px; }
@@ -373,8 +349,8 @@
 <section class="hero">
     <div class="container">
         <div class="hero-pill"><span class="hero-pill-dot"></span> For Employers</div>
-        <h1>Your culture profile is <em>already live</em></h1>
-        <p class="hero-sub">7,101 job seekers browse culture profiles on JobsByCulture every month. Claim yours — it's free.</p>
+        <h1>Reach candidates who care about <em>culture</em></h1>
+        <p class="hero-sub">JobsByCulture profiles 45 AI &amp; tech companies with real Glassdoor data, employee reviews, and culture values. 7,101 job seekers browse every month.</p>
         <div class="hero-stats">
             <div>
                 <div class="hero-stat-val">45</div>
@@ -384,27 +360,23 @@
                 <div class="hero-stat-val">7,101</div>
                 <div class="hero-stat-label">active job listings</div>
             </div>
+            <div>
+                <div class="hero-stat-val">18</div>
+                <div class="hero-stat-label">culture values tracked</div>
+            </div>
         </div>
+        <a href="#get-started" class="hero-cta">Get Started &mdash; It&rsquo;s Free &rarr;</a>
     </div>
 </section>
 
-<!-- ═══ COMPANY SEARCH ═══ -->
-<section class="search-section">
+<!-- ═══ LOGO CLOUD ═══ -->
+<section class="logos-section">
     <div class="container">
-        <div class="search-wrap">
-            <div class="s-center">
-                <span class="s-label">Find Your Company</span>
-                <h2 class="s-title">Is your company already <em>profiled</em>?</h2>
-            </div>
-            <input type="text" class="search-input" id="companySearch" placeholder="Search by company name..." autocomplete="off">
-            <div class="search-results" id="searchResults"></div>
-            <div class="search-empty" id="searchEmpty">
-                No match found. <a href="#submit-company">Submit your company</a> and we'll add it within 48 hours.
-            </div>
-            <div class="search-not-listed" id="searchNotListed" style="display:none">
-                Don't see your company? <a href="#submit-company">Submit it here</a>
-            </div>
+        <div class="s-center">
+            <span class="s-label">Trusted By</span>
+            <h2 class="s-title">Companies already on <em>JobsByCulture</em></h2>
         </div>
+        <div class="logo-cloud" id="logoCloud"></div>
     </div>
 </section>
 
@@ -413,48 +385,42 @@
     <div class="container">
         <div class="s-center">
             <span class="s-label">What You Get</span>
-            <h2 class="s-title">Everything is <em>already built</em></h2>
-            <p class="s-desc">Your company's culture profile is live and indexed by Google. Here's what job seekers see when they find you.</p>
+            <h2 class="s-title">Everything included. <em>Free.</em></h2>
         </div>
         <div class="benefits-grid">
             <div class="benefit-card" style="animation: fadeUp 0.5s ease 0.1s both">
                 <div class="benefit-icon orange">&#x1f3e2;</div>
                 <h3>Culture Profile</h3>
-                <p>Your Glassdoor ratings, culture values, employee pros &amp; cons — visible to every visitor. Claim it to update your data.</p>
+                <p>Glassdoor ratings, culture values, employee pros &amp; cons &mdash; all in one page seen by thousands of job seekers monthly.</p>
             </div>
             <div class="benefit-card" style="animation: fadeUp 0.5s ease 0.2s both">
                 <div class="benefit-icon teal">&#x1f4bc;</div>
                 <h3>Job Visibility</h3>
-                <p>Your open roles appear alongside your culture profile. Job seekers filter by values that match how you work.</p>
+                <p>Your open roles auto-sync from your ATS and appear alongside your culture data. Candidates filter by values that match.</p>
             </div>
             <div class="benefit-card" style="animation: fadeUp 0.5s ease 0.3s both">
                 <div class="benefit-icon violet">&#x1f4ca;</div>
                 <h3>Competitive Intel</h3>
-                <p>See how you compare to 44 other companies. Your compare pages are already live and indexed by Google.</p>
+                <p>Side-by-side compare pages vs every other company. See how your employer brand stacks up on Glassdoor, WLB, and comp.</p>
             </div>
         </div>
     </div>
 </section>
 
-<!-- ═══ LOGO STRIP ═══ -->
-<section class="logos-section">
-    <div class="container s-center" style="margin-bottom: 32px;">
-        <span class="s-label">Already Profiled</span>
-        <h2 class="s-title" style="font-size: clamp(24px, 2.5vw, 34px);">45 companies. <em>Is yours one of them?</em></h2>
-    </div>
-    <div class="logos-track" id="logosTrack"></div>
-</section>
-
-<!-- ═══ CLAIM PROFILE FORM ═══ -->
-<section class="form-section" id="claim-form">
+<!-- ═══ SINGLE FORM ═══ -->
+<section class="form-section" id="get-started">
     <div class="container">
         <div class="form-wrap">
             <div class="s-center">
-                <span class="s-label">Claim Your Profile</span>
-                <h2 class="s-title">Take ownership of your <em>culture profile</em></h2>
-                <p class="s-desc">Update your data, respond to community sentiment, and feature your open roles to candidates who care about culture.</p>
+                <span class="s-label">Get Started</span>
+                <h2 class="s-title">Claim or submit your <em>company</em></h2>
+                <p class="s-desc">Already profiled? Claim it. Not listed yet? We&rsquo;ll add you within 48 hours.</p>
             </div>
             <div class="form-card">
+                <div class="form-tabs">
+                    <button class="form-tab active" onclick="switchTab('claim',this)">Claim Profile</button>
+                    <button class="form-tab" onclick="switchTab('submit',this)">Submit Company</button>
+                </div>
                 <div id="claimFormWrap">
                     <form class="form-fields" id="claimForm">
                         <input type="hidden" name="_subject" value="Employer: Profile Claim">
@@ -463,40 +429,17 @@
                             <input type="email" name="email" placeholder="Work email" required>
                         </div>
                         <input type="text" name="company" id="claimCompanyInput" placeholder="Company name" required>
-                        <input type="text" name="role" placeholder="e.g., Head of Talent, HR Director">
                         <select name="interest" required>
                             <option value="" disabled selected>What are you interested in?</option>
                             <option value="claim-update">Claim &amp; update our profile</option>
                             <option value="feature-roles">Feature our open roles</option>
-                            <option value="respond-sentiment">Respond to community sentiment</option>
                             <option value="employer-brand">Employer branding partnership</option>
                             <option value="other">Something else</option>
                         </select>
                         <button type="submit" class="form-submit">Claim Profile &rarr;</button>
                     </form>
-                    <p class="form-footer">Free. No spam, ever.</p>
                 </div>
-                <div class="form-success" id="claimSuccess">
-                    <div class="check">&#10003;</div>
-                    <h3>Request received!</h3>
-                    <p>Thanks! We'll review your request and respond within 24 hours.</p>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- ═══ SUBMIT COMPANY FORM ═══ -->
-<section class="form-section" id="submit-company">
-    <div class="container">
-        <div class="form-wrap">
-            <div class="s-center">
-                <span class="s-label">Not Listed?</span>
-                <h2 class="s-title">Submit your <em>company</em></h2>
-                <p class="s-desc">We'll review your company and add a culture profile within 48 hours.</p>
-            </div>
-            <div class="form-card">
-                <div id="submitFormWrap">
+                <div id="submitFormWrap" style="display:none">
                     <form class="form-fields" id="submitForm">
                         <input type="hidden" name="_subject" value="Employer: New Company Submission">
                         <div class="form-row">
@@ -507,25 +450,15 @@
                             <input type="text" name="name" placeholder="Your name" required>
                             <input type="email" name="email" placeholder="Work email" required>
                         </div>
-                        <select name="ats">
-                            <option value="" disabled selected>ATS Platform</option>
-                            <option value="greenhouse">Greenhouse</option>
-                            <option value="ashby">Ashby</option>
-                            <option value="lever">Lever</option>
-                            <option value="workable">Workable</option>
-                            <option value="other">Other</option>
-                            <option value="not-sure">Not sure</option>
-                        </select>
-                        <input type="url" name="careers_url" placeholder="https://yourcompany.com/careers">
                         <button type="submit" class="form-submit">Submit Company &rarr;</button>
                     </form>
-                    <p class="form-footer">Free. No spam, ever.</p>
                 </div>
-                <div class="form-success" id="submitSuccess">
+                <div class="form-success" id="formSuccess" style="display:none">
                     <div class="check">&#10003;</div>
-                    <h3>Submission received!</h3>
-                    <p>Thanks! We'll review and get back to you within 48 hours.</p>
+                    <h3>We&rsquo;ve got it!</h3>
+                    <p>We&rsquo;ll review and get back to you within 48 hours.</p>
                 </div>
+                <p class="form-footer">Free. No spam, ever.</p>
             </div>
         </div>
     </div>
@@ -647,59 +580,14 @@ const COMPANIES_LIST = [
     { name: 'Fireworks AI', slug: 'fireworksai', domain: 'fireworks.ai', glassdoor: 4.2, wlb_score: 3.3 },
 ];
 
-// ═══ COMPANY SEARCH ═══
-const searchInput = document.getElementById('companySearch');
-const searchResults = document.getElementById('searchResults');
-const searchEmpty = document.getElementById('searchEmpty');
-const searchNotListed = document.getElementById('searchNotListed');
-
-searchInput.addEventListener('input', function() {
-    const q = this.value.trim().toLowerCase();
-    searchResults.innerHTML = '';
-    searchEmpty.style.display = 'none';
-    searchNotListed.style.display = 'none';
-
-    if (q.length < 2) return;
-
-    const matches = COMPANIES_LIST.filter(function(c) {
-        return c.name.toLowerCase().includes(q) || c.slug.toLowerCase().includes(q);
-    }).slice(0, 5);
-
-    if (matches.length === 0) {
-        searchEmpty.style.display = 'block';
-        return;
-    }
-
-    matches.forEach(function(c) {
-        var card = document.createElement('div');
-        card.className = 'search-card';
-        card.innerHTML = '<img class="search-card-logo" src="https://www.google.com/s2/favicons?domain=' + c.domain + '&sz=128" alt="' + c.name + '" width="40" height="40">' +
-            '<div class="search-card-info"><div class="search-card-name">' + c.name + '</div>' +
-            '<div class="search-card-meta"><span>Glassdoor ' + c.glassdoor + '</span><span>WLB ' + c.wlb_score + '/5</span></div></div>' +
-            '<a href="#claim-form" class="search-card-link" onclick="prefillClaim(\'' + c.name.replace(/'/g, "\\'") + '\')">Claim Profile &rarr;</a>';
-        searchResults.appendChild(card);
-    });
-
-    if (matches.length > 0) {
-        searchNotListed.style.display = 'block';
-    }
-});
-
-function prefillClaim(companyName) {
-    document.getElementById('claimCompanyInput').value = companyName;
-}
-
-// ═══ LOGO STRIP ═══
+// ═══ LOGO CLOUD ═══
 (function() {
-    var track = document.getElementById('logosTrack');
+    var cloud = document.getElementById('logoCloud');
     var html = '';
-    // Render twice for seamless infinite scroll
-    for (var i = 0; i < 2; i++) {
-        COMPANIES_LIST.forEach(function(c) {
-            html += '<div class="logo-item"><img src="https://www.google.com/s2/favicons?domain=' + c.domain + '&sz=128" alt="' + c.name + '" width="40" height="40"><span>' + c.name + '</span></div>';
-        });
-    }
-    track.innerHTML = html;
+    COMPANIES_LIST.forEach(function(c) {
+        html += '<a href="/companies/' + c.slug + '" class="logo-cloud-item"><img src="https://www.google.com/s2/favicons?domain=' + c.domain + '&sz=128" alt="' + c.name + '" width="28" height="28"><span>' + c.name + '</span></a>';
+    });
+    cloud.innerHTML = html;
 })();
 
 // ═══ FORM SUBMISSIONS ═══
@@ -733,8 +621,16 @@ function handleFormSubmit(formId, wrapId, successId) {
     });
 }
 
-handleFormSubmit('claimForm', 'claimFormWrap', 'claimSuccess');
-handleFormSubmit('submitForm', 'submitFormWrap', 'submitSuccess');
+handleFormSubmit('claimForm', 'claimFormWrap', 'formSuccess');
+handleFormSubmit('submitForm', 'submitFormWrap', 'formSuccess');
+
+// ═══ FORM TAB SWITCHING ═══
+function switchTab(tab, btn) {
+    document.getElementById('claimFormWrap').style.display = tab === 'claim' ? 'block' : 'none';
+    document.getElementById('submitFormWrap').style.display = tab === 'submit' ? 'block' : 'none';
+    document.querySelectorAll('.form-tab').forEach(function(t) { t.classList.remove('active'); });
+    btn.classList.add('active');
+}
 </script>
 
 </body>
