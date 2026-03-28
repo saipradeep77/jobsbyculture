@@ -229,18 +229,6 @@
         /* ═══ FORMS ═══ */
         .form-section { padding: 80px 0; }
         .form-wrap { max-width: 640px; margin: 0 auto; }
-        .form-tabs {
-            display: flex; gap: 0; margin-bottom: 24px;
-            border-bottom: 2px solid var(--border);
-        }
-        .form-tab {
-            flex: 1; padding: 12px 20px; background: none; border: none;
-            font-size: 14px; font-weight: 600; color: var(--text-3);
-            cursor: pointer; transition: all 0.15s; font-family: var(--font-body);
-            border-bottom: 2px solid transparent; margin-bottom: -2px;
-        }
-        .form-tab:hover { color: var(--text); }
-        .form-tab.active { color: var(--accent); border-bottom-color: var(--accent); }
         .form-card {
             background: var(--bg-card); border: 1px solid var(--border);
             border-radius: var(--radius-lg); padding: 40px;
@@ -412,35 +400,13 @@
         <div class="form-wrap">
             <div class="s-center">
                 <span class="s-label">Get Started</span>
-                <h2 class="s-title">Claim or submit your <em>company</em></h2>
-                <p class="s-desc">Already profiled? Claim it. Not listed yet? We&rsquo;ll add you within 48 hours.</p>
+                <h2 class="s-title">Get your company on <em>JobsByCulture</em></h2>
+                <p class="s-desc">Submit your company and we&rsquo;ll get back to you within 48 hours.</p>
             </div>
             <div class="form-card">
-                <div class="form-tabs">
-                    <button class="form-tab active" onclick="switchTab('claim',this)">Claim Profile</button>
-                    <button class="form-tab" onclick="switchTab('submit',this)">Submit Company</button>
-                </div>
-                <div id="claimFormWrap">
-                    <form class="form-fields" id="claimForm">
-                        <input type="hidden" name="_subject" value="Employer: Profile Claim">
-                        <div class="form-row">
-                            <input type="text" name="name" placeholder="Your name" required>
-                            <input type="email" name="email" placeholder="Work email" required>
-                        </div>
-                        <input type="text" name="company" id="claimCompanyInput" placeholder="Company name" required>
-                        <select name="interest" required>
-                            <option value="" disabled selected>What are you interested in?</option>
-                            <option value="claim-update">Claim &amp; update our profile</option>
-                            <option value="feature-roles">Feature our open roles</option>
-                            <option value="employer-brand">Employer branding partnership</option>
-                            <option value="other">Something else</option>
-                        </select>
-                        <button type="submit" class="form-submit">Claim Profile &rarr;</button>
-                    </form>
-                </div>
-                <div id="submitFormWrap" style="display:none">
+                <div id="submitFormWrap">
                     <form class="form-fields" id="submitForm">
-                        <input type="hidden" name="_subject" value="Employer: New Company Submission">
+                        <input type="hidden" name="_subject" value="Employer: Company Submission">
                         <div class="form-row">
                             <input type="text" name="company" placeholder="Company name" required>
                             <input type="url" name="website" placeholder="https://yourcompany.com" required>
@@ -620,16 +586,7 @@ function handleFormSubmit(formId, wrapId, successId) {
     });
 }
 
-handleFormSubmit('claimForm', 'claimFormWrap', 'formSuccess');
 handleFormSubmit('submitForm', 'submitFormWrap', 'formSuccess');
-
-// ═══ FORM TAB SWITCHING ═══
-function switchTab(tab, btn) {
-    document.getElementById('claimFormWrap').style.display = tab === 'claim' ? 'block' : 'none';
-    document.getElementById('submitFormWrap').style.display = tab === 'submit' ? 'block' : 'none';
-    document.querySelectorAll('.form-tab').forEach(function(t) { t.classList.remove('active'); });
-    btn.classList.add('active');
-}
 </script>
 
 </body>
