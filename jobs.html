@@ -8563,10 +8563,67 @@ function renderJobs() {
 
     if (filtered.length === 0) {
         document.getElementById('jobsList').innerHTML = `<div class="no-results"><h3>No jobs match your filters</h3><p>Try removing some filters or broadening your search.</p></div>`;
+        _lazyFiltered = [];
+        _lazyRendered = 0;
         return;
     }
 
-    document.getElementById('jobsList').innerHTML = filtered.map(j => {
+    // Lazy loading: render first batch, load more on scroll
+    _lazyFiltered = filtered;
+    _lazyRendered = 0;
+    document.getElementById('jobsList').innerHTML = '';
+    _renderBatch();
+}
+
+var _lazyFiltered = [];
+var _lazyRendered = 0;
+var _BATCH_SIZE = 200;
+var _lazyLoading = false;
+
+function _renderBatch() {
+    if (_lazyRendered >= _lazyFiltered.length) return;
+    var end = Math.min(_lazyRendered + _BATCH_SIZE, _lazyFiltered.length);
+    var html = '';
+    for (var i = _lazyRendered; i < end; i++) {
+        html += _renderJobCard(_lazyFiltered[i]);
+    }
+    document.getElementById('jobsList').insertAdjacentHTML('beforeend', html);
+    _lazyRendered = end;
+
+    // Show/hide "load more" sentinel
+    var sentinel = document.getElementById('lazySentinel');
+    if (sentinel) {
+        sentinel.style.display = _lazyRendered < _lazyFiltered.length ? 'block' : 'none';
+        sentinel.textContent = _lazyRendered < _lazyFiltered.length
+            ? 'Showing ' + _lazyRendered.toLocaleString() + ' of ' + _lazyFiltered.length.toLocaleString() + ' jobs — scroll for more'
+            : '';
+    }
+    _lazyLoading = false;
+}
+
+// Intersection Observer for infinite scroll
+(function() {
+    var observer = new IntersectionObserver(function(entries) {
+        if (entries[0].isIntersecting && !_lazyLoading && _lazyRendered < _lazyFiltered.length) {
+            _lazyLoading = true;
+            _renderBatch();
+        }
+    }, { rootMargin: '600px' });
+
+    // Create sentinel element after DOM is ready
+    document.addEventListener('DOMContentLoaded', function() {
+        var list = document.getElementById('jobsList');
+        if (list) {
+            var sentinel = document.createElement('div');
+            sentinel.id = 'lazySentinel';
+            sentinel.style.cssText = 'text-align:center;padding:24px;font-size:13px;color:var(--text-3);font-family:var(--font-mono)';
+            list.parentNode.insertBefore(sentinel, list.nextSibling);
+            observer.observe(sentinel);
+        }
+    });
+})();
+
+function _renderJobCard(j) {
         const c = COMPANIES[j.company];
         const cs = getCultureScore(j.company);
         let cultureHtml = '';
@@ -8658,7 +8715,6 @@ function renderJobs() {
                 </div>
             </div>
         </a>`;
-    }).join('');
 }
 
 // ═══ INIT ═══
