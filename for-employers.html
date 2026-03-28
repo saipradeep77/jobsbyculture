@@ -1,0 +1,741 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For Employers — Claim Your Culture Profile | JobsByCulture</title>
+    <meta name="description" content="Your company's culture profile is already live on JobsByCulture. Claim it for free — update your Glassdoor data, feature open roles, and reach 7,101 culture-first job seekers.">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="For Employers — Claim Your Culture Profile | JobsByCulture">
+    <meta property="og:description" content="Your company's culture profile is already live on JobsByCulture. Claim it for free — update your Glassdoor data, feature open roles, and reach 7,101 culture-first job seekers.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://jobsbyculture.com/for-employers">
+    <meta property="og:image" content="https://jobsbyculture.com/og-image.png">
+    <meta property="og:image:type" content="image/png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="For Employers — Claim Your Culture Profile | JobsByCulture">
+    <meta name="twitter:description" content="Your company's culture profile is already live on JobsByCulture. Claim it for free — update your Glassdoor data, feature open roles, and reach 7,101 culture-first job seekers.">
+    <meta name="twitter:image" content="https://jobsbyculture.com/og-image.png">
+    <link rel="canonical" href="https://jobsbyculture.com/for-employers">
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <link rel="icon" type="image/png" sizes="512x512" href="/logo.png">
+    <link rel="apple-touch-icon" href="/logo.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Satoshi:wght@400;500;600;700;900&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #fafaf8;
+            --bg-raised: #ffffff;
+            --bg-card: #ffffff;
+            --bg-hover: #f4f3ef;
+            --text: #1a1a1f;
+            --text-2: #52525b;
+            --text-3: #9ca3af;
+            --accent: #e8590c;
+            --accent-hover: #c2410c;
+            --accent-bg: rgba(232,89,12,0.06);
+            --accent-border: rgba(232,89,12,0.2);
+            --teal: #0d9488;
+            --teal-bg: rgba(13,148,136,0.06);
+            --teal-border: rgba(13,148,136,0.2);
+            --violet: #7c3aed;
+            --violet-bg: rgba(124,58,237,0.06);
+            --violet-border: rgba(124,58,237,0.2);
+            --rose: #e11d48;
+            --rose-bg: rgba(225,29,72,0.06);
+            --rose-border: rgba(225,29,72,0.2);
+            --sky: #0284c7;
+            --sky-bg: rgba(2,132,199,0.06);
+            --sky-border: rgba(2,132,199,0.2);
+            --lime: #4d7c0f;
+            --lime-bg: rgba(77,124,15,0.06);
+            --lime-border: rgba(77,124,15,0.2);
+            --border: rgba(0,0,0,0.07);
+            --border-2: rgba(0,0,0,0.12);
+            --border-3: rgba(0,0,0,0.18);
+            --radius: 12px;
+            --radius-sm: 8px;
+            --radius-lg: 20px;
+            --radius-full: 100px;
+            --font-display: 'Instrument Serif', Georgia, serif;
+            --font-body: 'Satoshi', -apple-system, sans-serif;
+            --font-mono: 'IBM Plex Mono', monospace;
+            --shadow: 0 4px 24px rgba(0,0,0,0.06), 0 1px 3px rgba(0,0,0,0.04);
+            --shadow-lg: 0 12px 48px rgba(0,0,0,0.08);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body {
+            font-family: var(--font-body);
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+            overflow-x: hidden;
+        }
+        .container { max-width: 1140px; margin: 0 auto; padding: 0 24px; }
+
+        /* ═══ NAV ═══ */
+        nav {
+            position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+            background: rgba(250,250,248,0.85);
+            backdrop-filter: blur(24px) saturate(1.4);
+            border-bottom: 1px solid var(--border);
+        }
+        .nav-inner {
+            max-width: 1140px; margin: 0 auto; padding: 14px 24px;
+            display: flex; align-items: center; justify-content: space-between;
+        }
+        .nav-logo { display: flex; align-items: center; gap: 10px; text-decoration: none; color: var(--text); }
+        .nav-mark {
+            width: 30px; height: 30px; position: relative;
+            display: flex; align-items: center; justify-content: center;
+        }
+        .nav-mark .ring {
+            position: absolute; border: 1.5px solid var(--accent); border-radius: 50%;
+            animation: logoPing 2.5s ease-out infinite;
+        }
+        .nav-mark .ring-1 { width: 100%; height: 100%; opacity: 0.2; }
+        .nav-mark .ring-2 { width: 65%; height: 65%; opacity: 0.4; animation-delay: 0.3s; }
+        .nav-mark .nav-dot { width: 7px; height: 7px; background: var(--accent); border-radius: 50%; position: relative; z-index: 1; }
+        @keyframes logoPing { 0% { transform: scale(1); opacity: 0.4; } 100% { transform: scale(1.5); opacity: 0; } }
+        .nav-wordmark { font-weight: 700; font-size: 16px; letter-spacing: -0.03em; }
+        .nav-wordmark span { color: var(--accent); }
+        .nav-links { display: flex; align-items: center; gap: 28px; }
+        .nav-links a { color: var(--text-2); text-decoration: none; font-size: 14px; font-weight: 500; transition: color 0.15s; }
+        .nav-links a:hover { color: var(--text); }
+        .nav-links .nav-cta {
+            background: var(--accent); color: #fff !important; padding: 7px 16px;
+            border-radius: var(--radius-sm); font-size: 13px; font-weight: 600;
+            transition: all 0.2s;
+        }
+        .nav-links .nav-cta:hover { background: var(--accent-hover); transform: translateY(-1px); }
+        .nav-links a.active { color: var(--accent); font-weight: 600; }
+        .hamburger { display: none; background: none; border: none; cursor: pointer; padding: 4px; flex-direction: column; gap: 5px; }
+        .hamburger span { display: block; width: 22px; height: 2px; background: var(--text); border-radius: 1px; transition: all 0.3s; }
+        .hamburger.active span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
+        .hamburger.active span:nth-child(2) { opacity: 0; }
+        .hamburger.active span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
+
+        /* ═══ HERO ═══ */
+        .hero { padding: 140px 0 80px; position: relative; text-align: center; }
+        .hero::before {
+            content: ''; position: absolute; top: -100px; left: 50%; transform: translateX(-50%);
+            width: 900px; height: 600px;
+            background: radial-gradient(ellipse, rgba(232,89,12,0.06) 0%, transparent 70%);
+            pointer-events: none;
+        }
+        .hero-pill {
+            display: inline-flex; align-items: center; gap: 8px;
+            background: var(--accent-bg); border: 1px solid var(--accent-border);
+            padding: 5px 14px 5px 8px; border-radius: var(--radius-full);
+            font-size: 13px; font-weight: 500; color: var(--accent);
+            margin-bottom: 24px;
+            animation: fadeUp 0.5s ease both;
+        }
+        .hero-pill-dot { width: 7px; height: 7px; border-radius: 50%; background: var(--accent); animation: blink 2s infinite; }
+        .hero h1 {
+            font-family: var(--font-display); font-weight: 400;
+            font-size: clamp(38px, 5vw, 64px);
+            line-height: 1.08; letter-spacing: -0.025em;
+            max-width: 700px; margin: 0 auto 20px;
+            animation: fadeUp 0.5s ease 0.08s both;
+        }
+        .hero h1 em { font-style: italic; color: var(--accent); }
+        .hero-sub {
+            font-size: 18px; color: var(--text-2); max-width: 560px;
+            line-height: 1.7; margin: 0 auto 40px;
+            animation: fadeUp 0.5s ease 0.16s both;
+        }
+        .hero-stats {
+            display: flex; justify-content: center; gap: 48px;
+            animation: fadeUp 0.5s ease 0.24s both;
+        }
+        .hero-stat-val { font-family: var(--font-mono); font-size: 32px; font-weight: 500; letter-spacing: -0.02em; color: var(--text); }
+        .hero-stat-label { font-size: 13px; color: var(--text-3); margin-top: 4px; }
+
+        /* ═══ SECTIONS ═══ */
+        .s-label {
+            font-family: var(--font-mono); font-size: 11px; text-transform: uppercase;
+            letter-spacing: 0.14em; color: var(--accent); display: block; margin-bottom: 14px;
+        }
+        .s-title {
+            font-family: var(--font-display); font-size: clamp(30px, 3.2vw, 46px);
+            line-height: 1.15; font-weight: 400; margin-bottom: 14px;
+        }
+        .s-title em { font-style: italic; color: var(--accent); }
+        .s-desc { font-size: 16px; color: var(--text-2); max-width: 500px; line-height: 1.7; margin-bottom: 48px; }
+        .s-center { text-align: center; }
+        .s-center .s-desc { margin: 0 auto 48px; }
+
+        /* ═══ COMPANY SEARCH ═══ */
+        .search-section { padding: 80px 0; background: var(--bg-raised); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+        .search-wrap { max-width: 640px; margin: 0 auto; }
+        .search-input {
+            width: 100%; padding: 16px 22px; border-radius: var(--radius);
+            border: 1.5px solid var(--border-2); font-size: 16px;
+            font-family: var(--font-body); background: var(--bg);
+            color: var(--text); outline: none; transition: all 0.2s;
+        }
+        .search-input:focus {
+            border-color: var(--accent); box-shadow: 0 0 0 3px rgba(232,89,12,0.08);
+            background: #fff;
+        }
+        .search-input::placeholder { color: var(--text-3); }
+        .search-results { margin-top: 16px; }
+        .search-card {
+            display: flex; align-items: center; gap: 14px;
+            padding: 16px 20px; background: var(--bg-card); border: 1px solid var(--border);
+            border-radius: var(--radius); margin-bottom: 8px;
+            transition: all 0.2s;
+        }
+        .search-card:hover { border-color: var(--accent-border); transform: translateY(-1px); box-shadow: var(--shadow); }
+        .search-card-logo { width: 40px; height: 40px; border-radius: 10px; object-fit: contain; background: var(--bg); padding: 4px; flex-shrink: 0; }
+        .search-card-info { flex: 1; }
+        .search-card-name { font-size: 15px; font-weight: 600; }
+        .search-card-meta { font-size: 12px; color: var(--text-3); margin-top: 2px; }
+        .search-card-meta span { margin-right: 12px; }
+        .search-card-link {
+            font-size: 13px; color: var(--accent); text-decoration: none; font-weight: 600;
+            white-space: nowrap; padding: 7px 14px; border: 1px solid var(--accent-border);
+            border-radius: var(--radius-sm); transition: all 0.2s;
+        }
+        .search-card-link:hover { background: var(--accent-bg); border-color: var(--accent); }
+        .search-empty { display: none; text-align: center; padding: 24px; color: var(--text-2); font-size: 14px; }
+        .search-empty a { color: var(--accent); text-decoration: none; font-weight: 600; }
+        .search-empty a:hover { text-decoration: underline; }
+        .search-not-listed { text-align: center; margin-top: 20px; font-size: 14px; color: var(--text-3); }
+        .search-not-listed a { color: var(--accent); text-decoration: none; font-weight: 600; }
+        .search-not-listed a:hover { text-decoration: underline; }
+
+        /* ═══ WHAT YOU GET ═══ */
+        .benefits { padding: 80px 0; }
+        .benefits-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+        .benefit-card {
+            background: var(--bg-card); border: 1px solid var(--border);
+            border-radius: var(--radius-lg); padding: 32px 28px;
+            transition: all 0.25s; position: relative; overflow: hidden;
+        }
+        .benefit-card::after {
+            content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px;
+            background: linear-gradient(90deg, var(--accent), var(--teal));
+            opacity: 0; transition: opacity 0.25s;
+        }
+        .benefit-card:hover { border-color: var(--border-2); transform: translateY(-3px); box-shadow: var(--shadow-lg); }
+        .benefit-card:hover::after { opacity: 1; }
+        .benefit-icon {
+            width: 48px; height: 48px; border-radius: 14px;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 24px; margin-bottom: 20px;
+        }
+        .benefit-icon.orange { background: var(--accent-bg); }
+        .benefit-icon.teal { background: var(--teal-bg); }
+        .benefit-icon.violet { background: var(--violet-bg); }
+        .benefit-card h3 {
+            font-family: var(--font-display); font-size: 22px; font-weight: 400;
+            margin-bottom: 10px;
+        }
+        .benefit-card p { font-size: 14px; color: var(--text-2); line-height: 1.7; }
+
+        /* ═══ LOGO STRIP ═══ */
+        .logos-section { padding: 60px 0; background: var(--bg-raised); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); overflow: hidden; }
+        .logos-track {
+            display: flex; gap: 40px; width: max-content;
+            animation: scrollLogos 60s linear infinite;
+        }
+        .logos-track:hover { animation-play-state: paused; }
+        .logo-item {
+            display: flex; flex-direction: column; align-items: center; gap: 8px;
+            flex-shrink: 0;
+        }
+        .logo-item img { width: 40px; height: 40px; border-radius: 10px; object-fit: contain; background: var(--bg); padding: 4px; }
+        .logo-item span { font-size: 11px; color: var(--text-3); font-weight: 500; white-space: nowrap; }
+        @keyframes scrollLogos {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+
+        /* ═══ FORMS ═══ */
+        .form-section { padding: 80px 0; }
+        .form-section + .form-section { padding-top: 0; }
+        .form-wrap { max-width: 640px; margin: 0 auto; }
+        .form-card {
+            background: var(--bg-card); border: 1px solid var(--border);
+            border-radius: var(--radius-lg); padding: 40px;
+            box-shadow: var(--shadow);
+        }
+        .form-fields { display: flex; flex-direction: column; gap: 14px; }
+        .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+        .form-fields input, .form-fields select {
+            width: 100%; padding: 12px 16px; border-radius: 10px;
+            border: 1.5px solid var(--border-2); font-size: 14px;
+            font-family: var(--font-body); background: var(--bg);
+            color: var(--text); outline: none; transition: all 0.2s;
+            box-sizing: border-box;
+        }
+        .form-fields input:focus, .form-fields select:focus {
+            border-color: var(--teal); box-shadow: 0 0 0 3px rgba(13,148,136,0.08);
+            background: #fff;
+        }
+        .form-fields input::placeholder { color: var(--text-3); }
+        .form-fields select { -webkit-appearance: none; appearance: none; cursor: pointer; }
+        .form-submit {
+            width: 100%; padding: 13px; border-radius: 10px;
+            background: var(--teal); color: #fff; font-size: 15px;
+            font-weight: 700; border: none; cursor: pointer;
+            font-family: var(--font-body); transition: all 0.2s;
+            margin-top: 4px;
+        }
+        .form-submit:hover { background: #0b8278; transform: translateY(-1px); box-shadow: 0 4px 16px rgba(13,148,136,0.2); }
+        .form-footer { font-size: 12px; color: var(--text-3); text-align: center; margin-top: 16px; }
+        .form-success {
+            display: none; text-align: center; padding: 20px 0;
+        }
+        .form-success .check {
+            width: 56px; height: 56px; border-radius: 50%;
+            background: rgba(13,148,136,0.1); display: flex;
+            align-items: center; justify-content: center;
+            font-size: 28px; margin: 0 auto 16px;
+        }
+        .form-success h3 {
+            font-family: var(--font-display); font-size: 22px; font-weight: 400;
+            margin-bottom: 8px;
+        }
+        .form-success p { font-size: 14px; color: var(--text-2); }
+
+        /* ═══ FOOTER ═══ */
+        footer { padding: 56px 0 36px; border-top: 1px solid var(--border); }
+        .ft-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 40px; margin-bottom: 40px; }
+        .ft-about p { font-size: 13px; color: var(--text-3); margin-top: 10px; line-height: 1.7; max-width: 260px; }
+        .ft-col h4 { font-size: 12px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em; color: var(--text-2); margin-bottom: 14px; }
+        .ft-col a { display: block; font-size: 13px; color: var(--text-3); text-decoration: none; padding: 3px 0; transition: color 0.15s; }
+        .ft-col a:hover { color: var(--text); }
+        .ft-bar { border-top: 1px solid var(--border); padding-top: 20px; display: flex; justify-content: space-between; align-items: center; }
+        .ft-bar p { font-size: 12px; color: var(--text-3); }
+
+        /* ═══ ANIMATIONS ═══ */
+        @keyframes fadeUp { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }
+        @keyframes blink { 0%,100% { opacity: 1; } 50% { opacity: 0.3; } }
+
+        /* ═══ RESPONSIVE ═══ */
+        @media (max-width: 768px) {
+            .hamburger { display: flex; }
+            .nav-links { display: none; position: absolute; top: 100%; left: 0; right: 0; background: rgba(250,250,248,0.98); backdrop-filter: blur(20px); border-bottom: 1px solid var(--border); padding: 20px 24px; flex-direction: column; gap: 16px; box-shadow: 0 8px 24px rgba(0,0,0,0.06); }
+            .nav-links.open { display: flex; }
+            .hero { padding: 100px 0 60px; }
+            .hero h1 { font-size: clamp(30px, 7vw, 44px); }
+            .hero-stats { gap: 32px; }
+            .benefits-grid { grid-template-columns: 1fr; }
+            .form-row { grid-template-columns: 1fr; }
+            .form-card { padding: 28px 24px; }
+            .ft-grid { grid-template-columns: 1fr 1fr; gap: 28px; }
+            .search-card { flex-wrap: wrap; }
+            .search-card-link { width: 100%; text-align: center; }
+        }
+        @media (max-width: 480px) {
+            .hero-stats { flex-direction: column; gap: 20px; }
+            .ft-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+    <!-- Privacy-friendly analytics by Plausible -->
+    <script async src="https://plausible.io/js/pa-qa3pjs5eZbsfBQJMk4hVW.js"></script>
+    <script>
+      window.plausible=window.plausible||function(){(plausible.q=plausible.q||[]).push(arguments)},plausible.init=plausible.init||function(i){plausible.o=i||{}};
+      plausible.init()
+    </script>
+</head>
+<body>
+
+<!-- ═══ NAV ═══ -->
+<nav>
+    <div class="nav-inner">
+        <a href="/" class="nav-logo">
+            <div class="nav-mark"><div class="ring ring-1"></div><div class="ring ring-2"></div><div class="nav-dot"></div></div>
+            <div class="nav-wordmark">Jobs<span>By</span>Culture</div>
+        </a>
+        <button class="hamburger" onclick="this.classList.toggle('active');document.querySelector('.nav-links').classList.toggle('open')" aria-label="Menu">
+            <span></span><span></span><span></span>
+        </button>
+        <div class="nav-links">
+            <a href="/jobs">Jobs</a>
+            <a href="/directory">Companies</a>
+            <a href="/blog">Blog</a>
+            <a href="/for-employers" class="active">For Employers</a>
+        </div>
+    </div>
+</nav>
+
+<!-- ═══ HERO ═══ -->
+<section class="hero">
+    <div class="container">
+        <div class="hero-pill"><span class="hero-pill-dot"></span> For Employers</div>
+        <h1>Your culture profile is <em>already live</em></h1>
+        <p class="hero-sub">7,101 job seekers browse culture profiles on JobsByCulture every month. Claim yours — it's free.</p>
+        <div class="hero-stats">
+            <div>
+                <div class="hero-stat-val">45</div>
+                <div class="hero-stat-label">companies profiled</div>
+            </div>
+            <div>
+                <div class="hero-stat-val">7,101</div>
+                <div class="hero-stat-label">active job listings</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ═══ COMPANY SEARCH ═══ -->
+<section class="search-section">
+    <div class="container">
+        <div class="search-wrap">
+            <div class="s-center">
+                <span class="s-label">Find Your Company</span>
+                <h2 class="s-title">Is your company already <em>profiled</em>?</h2>
+            </div>
+            <input type="text" class="search-input" id="companySearch" placeholder="Search by company name..." autocomplete="off">
+            <div class="search-results" id="searchResults"></div>
+            <div class="search-empty" id="searchEmpty">
+                No match found. <a href="#submit-company">Submit your company</a> and we'll add it within 48 hours.
+            </div>
+            <div class="search-not-listed" id="searchNotListed" style="display:none">
+                Don't see your company? <a href="#submit-company">Submit it here</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ═══ WHAT YOU GET ═══ -->
+<section class="benefits">
+    <div class="container">
+        <div class="s-center">
+            <span class="s-label">What You Get</span>
+            <h2 class="s-title">Everything is <em>already built</em></h2>
+            <p class="s-desc">Your company's culture profile is live and indexed by Google. Here's what job seekers see when they find you.</p>
+        </div>
+        <div class="benefits-grid">
+            <div class="benefit-card" style="animation: fadeUp 0.5s ease 0.1s both">
+                <div class="benefit-icon orange">&#x1f3e2;</div>
+                <h3>Culture Profile</h3>
+                <p>Your Glassdoor ratings, culture values, employee pros &amp; cons — visible to every visitor. Claim it to update your data.</p>
+            </div>
+            <div class="benefit-card" style="animation: fadeUp 0.5s ease 0.2s both">
+                <div class="benefit-icon teal">&#x1f4bc;</div>
+                <h3>Job Visibility</h3>
+                <p>Your open roles appear alongside your culture profile. Job seekers filter by values that match how you work.</p>
+            </div>
+            <div class="benefit-card" style="animation: fadeUp 0.5s ease 0.3s both">
+                <div class="benefit-icon violet">&#x1f4ca;</div>
+                <h3>Competitive Intel</h3>
+                <p>See how you compare to 44 other companies. Your compare pages are already live and indexed by Google.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ═══ LOGO STRIP ═══ -->
+<section class="logos-section">
+    <div class="container s-center" style="margin-bottom: 32px;">
+        <span class="s-label">Already Profiled</span>
+        <h2 class="s-title" style="font-size: clamp(24px, 2.5vw, 34px);">45 companies. <em>Is yours one of them?</em></h2>
+    </div>
+    <div class="logos-track" id="logosTrack"></div>
+</section>
+
+<!-- ═══ CLAIM PROFILE FORM ═══ -->
+<section class="form-section" id="claim-form">
+    <div class="container">
+        <div class="form-wrap">
+            <div class="s-center">
+                <span class="s-label">Claim Your Profile</span>
+                <h2 class="s-title">Take ownership of your <em>culture profile</em></h2>
+                <p class="s-desc">Update your data, respond to community sentiment, and feature your open roles to candidates who care about culture.</p>
+            </div>
+            <div class="form-card">
+                <div id="claimFormWrap">
+                    <form class="form-fields" id="claimForm">
+                        <input type="hidden" name="_subject" value="Employer: Profile Claim">
+                        <div class="form-row">
+                            <input type="text" name="name" placeholder="Your name" required>
+                            <input type="email" name="email" placeholder="Work email" required>
+                        </div>
+                        <input type="text" name="company" id="claimCompanyInput" placeholder="Company name" required>
+                        <input type="text" name="role" placeholder="e.g., Head of Talent, HR Director">
+                        <select name="interest" required>
+                            <option value="" disabled selected>What are you interested in?</option>
+                            <option value="claim-update">Claim &amp; update our profile</option>
+                            <option value="feature-roles">Feature our open roles</option>
+                            <option value="respond-sentiment">Respond to community sentiment</option>
+                            <option value="employer-brand">Employer branding partnership</option>
+                            <option value="other">Something else</option>
+                        </select>
+                        <button type="submit" class="form-submit">Claim Profile &rarr;</button>
+                    </form>
+                    <p class="form-footer">Free. No spam, ever.</p>
+                </div>
+                <div class="form-success" id="claimSuccess">
+                    <div class="check">&#10003;</div>
+                    <h3>Request received!</h3>
+                    <p>Thanks! We'll review your request and respond within 24 hours.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ═══ SUBMIT COMPANY FORM ═══ -->
+<section class="form-section" id="submit-company">
+    <div class="container">
+        <div class="form-wrap">
+            <div class="s-center">
+                <span class="s-label">Not Listed?</span>
+                <h2 class="s-title">Submit your <em>company</em></h2>
+                <p class="s-desc">We'll review your company and add a culture profile within 48 hours.</p>
+            </div>
+            <div class="form-card">
+                <div id="submitFormWrap">
+                    <form class="form-fields" id="submitForm">
+                        <input type="hidden" name="_subject" value="Employer: New Company Submission">
+                        <div class="form-row">
+                            <input type="text" name="company" placeholder="Company name" required>
+                            <input type="url" name="website" placeholder="https://yourcompany.com" required>
+                        </div>
+                        <div class="form-row">
+                            <input type="text" name="name" placeholder="Your name" required>
+                            <input type="email" name="email" placeholder="Work email" required>
+                        </div>
+                        <select name="ats">
+                            <option value="" disabled selected>ATS Platform</option>
+                            <option value="greenhouse">Greenhouse</option>
+                            <option value="ashby">Ashby</option>
+                            <option value="lever">Lever</option>
+                            <option value="workable">Workable</option>
+                            <option value="other">Other</option>
+                            <option value="not-sure">Not sure</option>
+                        </select>
+                        <input type="url" name="careers_url" placeholder="https://yourcompany.com/careers">
+                        <button type="submit" class="form-submit">Submit Company &rarr;</button>
+                    </form>
+                    <p class="form-footer">Free. No spam, ever.</p>
+                </div>
+                <div class="form-success" id="submitSuccess">
+                    <div class="check">&#10003;</div>
+                    <h3>Submission received!</h3>
+                    <p>Thanks! We'll review and get back to you within 48 hours.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ═══ FOOTER ═══ -->
+<footer>
+    <div class="container">
+        <div class="ft-grid">
+            <div class="ft-col">
+                <h4>By Culture</h4>
+                <a href="/values/remote">Remote-Friendly</a>
+                <a href="/values/async">Async-First</a>
+                <a href="/values/deep-work">Deep Work</a>
+                <a href="/values/wlb">Work-Life Balance</a>
+                <a href="/values/ethical-ai">Ethical AI</a>
+                <a href="/values/equity">Strong Comp</a>
+            </div>
+            <div class="ft-col">
+                <h4>By Role</h4>
+                <a href="/roles/engineering">Engineering</a>
+                <a href="/roles/ml-ai">ML / AI</a>
+                <a href="/roles/design">Design</a>
+                <a href="/roles/product">Product</a>
+                <a href="/roles/data">Data</a>
+                <a href="/roles/marketing">Marketing</a>
+            </div>
+            <div class="ft-col">
+                <h4>By Seniority</h4>
+                <a href="/seniority/entry">Entry / Junior</a>
+                <a href="/seniority/mid">Mid-Level</a>
+                <a href="/seniority/senior">Senior</a>
+                <a href="/seniority/staff">Staff / Principal</a>
+                <a href="/seniority/lead">Lead / Manager</a>
+                <a href="/seniority/director">Director+</a>
+            </div>
+            <div class="ft-col">
+                <h4>By Location</h4>
+                <a href="/locations/san-francisco">San Francisco</a>
+                <a href="/locations/new-york">New York</a>
+                <a href="/locations/london">London</a>
+                <a href="/locations/remote">Remote</a>
+                <a href="/locations/seattle">Seattle</a>
+                <a href="/locations/paris">Paris</a>
+            </div>
+            <div class="ft-col">
+                <h4>Explore</h4>
+                <a href="/directory">Culture Directory</a>
+                <a href="/compare">Compare Cultures</a>
+                <a href="/culture-map">Culture Map</a>
+                <a href="/quiz">Culture Quiz</a>
+                <a href="/blog">Blog</a>
+                <a href="/for-employers">For Employers</a>
+                <a href="https://meetingtax.com/?ref=jobsbyculture.com" target="_blank">Meeting Tax</a>
+                <a href="https://paytaxfa.st/?ref=jobsbyculture.com" target="_blank">PayTaxFast</a>
+            </div>
+        </div>
+        <div class="ft-about" style="display:flex;align-items:center;gap:10px;margin-bottom:32px">
+            <a href="/" class="nav-logo" style="margin-bottom:0">
+                <div class="nav-mark"><div class="ring ring-1"></div><div class="ring ring-2"></div><div class="nav-dot"></div></div>
+                <div class="nav-wordmark">Jobs<span>By</span>Culture</div>
+            </a>
+            <span style="color:var(--text-3);font-size:14px;margin-left:8px">The culture-first job board. Built for the AI era.</span>
+        </div>
+        <div class="ft-bar">
+            <p>&copy; 2026 JobsByCulture. Built with &hearts; for the indie hacker community.</p>
+            <p>Made by <a href="https://x.com/itspradz?ref=jobsbyculture.com" target="_blank" style="color:var(--accent);text-decoration:none">@itspradz</a></p>
+        </div>
+    </div>
+</footer>
+
+<script>
+// ═══ COMPANIES LIST ═══
+const COMPANIES_LIST = [
+    { name: 'Anthropic', slug: 'anthropic', domain: 'anthropic.com', glassdoor: 4.4, wlb_score: 3.7 },
+    { name: 'Hugging Face', slug: 'huggingface', domain: 'huggingface.co', glassdoor: 3.8, wlb_score: 4.1 },
+    { name: 'Databricks', slug: 'databricks', domain: 'databricks.com', glassdoor: 4.1, wlb_score: 3.9 },
+    { name: 'Cohere', slug: 'cohere', domain: 'cohere.com', glassdoor: 2.9, wlb_score: 3.5 },
+    { name: 'Mistral AI', slug: 'mistral', domain: 'mistral.ai', glassdoor: 4.0, wlb_score: 3.6 },
+    { name: 'HubSpot', slug: 'hubspot', domain: 'hubspot.com', glassdoor: 4.3, wlb_score: 4.1 },
+    { name: 'Vercel', slug: 'vercel', domain: 'vercel.com', glassdoor: 3.9, wlb_score: 3.4 },
+    { name: 'Stripe', slug: 'stripe', domain: 'stripe.com', glassdoor: 4.0, wlb_score: 3.6 },
+    { name: 'Perplexity AI', slug: 'perplexity', domain: 'perplexity.ai', glassdoor: 4.7, wlb_score: 3.3 },
+    { name: 'Together AI', slug: 'together', domain: 'together.ai', glassdoor: 4.1, wlb_score: 3.8 },
+    { name: 'Cursor (Anysphere)', slug: 'cursor', domain: 'cursor.com', glassdoor: 4.0, wlb_score: 3.5 },
+    { name: 'Linear', slug: 'linear', domain: 'linear.app', glassdoor: 4.6, wlb_score: 4.4 },
+    { name: 'Scale AI', slug: 'scale', domain: 'scale.com', glassdoor: 3.5, wlb_score: 2.7 },
+    { name: 'CoreWeave', slug: 'coreweave', domain: 'coreweave.com', glassdoor: 3.6, wlb_score: 3.2 },
+    { name: 'Runway', slug: 'runway', domain: 'runway.ml', glassdoor: 4.5, wlb_score: 4.0 },
+    { name: 'Vast AI', slug: 'vast', domain: 'vast.ai', glassdoor: 5.0, wlb_score: 4.5 },
+    { name: 'Apollo.io', slug: 'apollo', domain: 'apollo.io', glassdoor: 4.0, wlb_score: 3.6 },
+    { name: 'Airbnb', slug: 'airbnb', domain: 'airbnb.com', glassdoor: 4.1, wlb_score: 4.0 },
+    { name: 'Figma', slug: 'figma', domain: 'figma.com', glassdoor: 3.7, wlb_score: 3.1 },
+    { name: 'ElevenLabs', slug: 'elevenlabs', domain: 'elevenlabs.io', glassdoor: 4.2, wlb_score: 3.6 },
+    { name: 'Pinecone', slug: 'pinecone', domain: 'pinecone.io', glassdoor: 4.2, wlb_score: 4.3 },
+    { name: 'Modal', slug: 'modal', domain: 'modal.com', glassdoor: 4.0, wlb_score: 3.8 },
+    { name: 'Ramp', slug: 'ramp', domain: 'ramp.com', glassdoor: 4.2, wlb_score: 3.5 },
+    { name: 'Weaviate', slug: 'weaviate', domain: 'weaviate.io', glassdoor: 4.3, wlb_score: 4.2 },
+    { name: 'OpenAI', slug: 'openai', domain: 'openai.com', glassdoor: 4.5, wlb_score: 3.6 },
+    { name: 'Google DeepMind', slug: 'deepmind', domain: 'deepmind.google', glassdoor: 4.2, wlb_score: 4.0 },
+    { name: 'Notion', slug: 'notion', domain: 'notion.so', glassdoor: 4.4, wlb_score: 4.2 },
+    { name: 'LangChain', slug: 'langchain', domain: 'langchain.com', glassdoor: 4.6, wlb_score: 4.0 },
+    { name: 'Replit', slug: 'replit', domain: 'replit.com', glassdoor: 4.0, wlb_score: 3.9 },
+    { name: 'PostHog', slug: 'posthog', domain: 'posthog.com', glassdoor: 4.3, wlb_score: 4.5 },
+    { name: 'Supabase', slug: 'supabase', domain: 'supabase.com', glassdoor: 4.8, wlb_score: 3.0 },
+    { name: 'Tailscale', slug: 'tailscale', domain: 'tailscale.com', glassdoor: 4.4, wlb_score: 4.5 },
+    { name: 'Suno', slug: 'suno', domain: 'suno.com', glassdoor: 4.2, wlb_score: 3.8 },
+    { name: 'Pylon', slug: 'pylon', domain: 'pylon.com', glassdoor: 3.0, wlb_score: 4.0 },
+    { name: 'incident.io', slug: 'incidentio', domain: 'incident.io', glassdoor: 4.5, wlb_score: 4.1 },
+    { name: 'Grafana Labs', slug: 'grafanalabs', domain: 'grafana.com', glassdoor: 4.1, wlb_score: 4.3 },
+    { name: 'Plaid', slug: 'plaid', domain: 'plaid.com', glassdoor: 4.6, wlb_score: 4.2 },
+    { name: 'Mercury', slug: 'mercury', domain: 'mercury.com', glassdoor: 4.3, wlb_score: 3.8 },
+    { name: 'Airtable', slug: 'airtable', domain: 'airtable.com', glassdoor: 4.1, wlb_score: 4.0 },
+    { name: 'Brex', slug: 'brex', domain: 'brex.com', glassdoor: 4.0, wlb_score: 3.9 },
+    { name: 'Datadog', slug: 'datadog', domain: 'datadoghq.com', glassdoor: 4.2, wlb_score: 3.8 },
+    { name: 'Cloudflare', slug: 'cloudflare', domain: 'cloudflare.com', glassdoor: 3.9, wlb_score: 3.7 },
+    { name: 'Crusoe', slug: 'crusoe', domain: 'crusoe.ai', glassdoor: 4.3, wlb_score: 3.5 },
+    { name: 'Baseten', slug: 'baseten', domain: 'baseten.co', glassdoor: 4.3, wlb_score: 3.5 },
+    { name: 'Fireworks AI', slug: 'fireworksai', domain: 'fireworks.ai', glassdoor: 4.2, wlb_score: 3.3 },
+];
+
+// ═══ COMPANY SEARCH ═══
+const searchInput = document.getElementById('companySearch');
+const searchResults = document.getElementById('searchResults');
+const searchEmpty = document.getElementById('searchEmpty');
+const searchNotListed = document.getElementById('searchNotListed');
+
+searchInput.addEventListener('input', function() {
+    const q = this.value.trim().toLowerCase();
+    searchResults.innerHTML = '';
+    searchEmpty.style.display = 'none';
+    searchNotListed.style.display = 'none';
+
+    if (q.length < 2) return;
+
+    const matches = COMPANIES_LIST.filter(function(c) {
+        return c.name.toLowerCase().includes(q) || c.slug.toLowerCase().includes(q);
+    }).slice(0, 5);
+
+    if (matches.length === 0) {
+        searchEmpty.style.display = 'block';
+        return;
+    }
+
+    matches.forEach(function(c) {
+        var card = document.createElement('div');
+        card.className = 'search-card';
+        card.innerHTML = '<img class="search-card-logo" src="https://www.google.com/s2/favicons?domain=' + c.domain + '&sz=128" alt="' + c.name + '" width="40" height="40">' +
+            '<div class="search-card-info"><div class="search-card-name">' + c.name + '</div>' +
+            '<div class="search-card-meta"><span>Glassdoor ' + c.glassdoor + '</span><span>WLB ' + c.wlb_score + '/5</span></div></div>' +
+            '<a href="#claim-form" class="search-card-link" onclick="prefillClaim(\'' + c.name.replace(/'/g, "\\'") + '\')">Claim Profile &rarr;</a>';
+        searchResults.appendChild(card);
+    });
+
+    if (matches.length > 0) {
+        searchNotListed.style.display = 'block';
+    }
+});
+
+function prefillClaim(companyName) {
+    document.getElementById('claimCompanyInput').value = companyName;
+}
+
+// ═══ LOGO STRIP ═══
+(function() {
+    var track = document.getElementById('logosTrack');
+    var html = '';
+    // Render twice for seamless infinite scroll
+    for (var i = 0; i < 2; i++) {
+        COMPANIES_LIST.forEach(function(c) {
+            html += '<div class="logo-item"><img src="https://www.google.com/s2/favicons?domain=' + c.domain + '&sz=128" alt="' + c.name + '" width="40" height="40"><span>' + c.name + '</span></div>';
+        });
+    }
+    track.innerHTML = html;
+})();
+
+// ═══ FORM SUBMISSIONS ═══
+function handleFormSubmit(formId, wrapId, successId) {
+    var form = document.getElementById(formId);
+    form.addEventListener('submit', function(e) {
+        e.preventDefault();
+        var btn = form.querySelector('.form-submit');
+        var origText = btn.textContent;
+        btn.textContent = 'Sending...';
+        btn.disabled = true;
+
+        fetch('https://formspree.io/f/xbdapzke', {
+            method: 'POST',
+            body: new FormData(form),
+            headers: { 'Accept': 'application/json' }
+        }).then(function(r) {
+            if (r.ok) {
+                document.getElementById(wrapId).style.display = 'none';
+                document.getElementById(successId).style.display = 'block';
+            } else {
+                btn.textContent = origText;
+                btn.disabled = false;
+                alert('Something went wrong. Please try again.');
+            }
+        }).catch(function() {
+            btn.textContent = origText;
+            btn.disabled = false;
+            alert('Something went wrong. Please try again.');
+        });
+    });
+}
+
+handleFormSubmit('claimForm', 'claimFormWrap', 'claimSuccess');
+handleFormSubmit('submitForm', 'submitFormWrap', 'submitSuccess');
+</script>
+
+</body>
+</html>

@@ -200,6 +200,12 @@
             font-size: 14px; font-weight: 500; transition: color 0.15s;
         }
         .nav-links a:hover { color: var(--text); }
+        .nav-links .nav-cta {
+            background: var(--accent); color: #fff !important; padding: 7px 16px;
+            border-radius: var(--radius-sm); font-size: 13px; font-weight: 600;
+            transition: all 0.2s;
+        }
+        .nav-links .nav-cta:hover { background: var(--accent-hover); transform: translateY(-1px); }
         .nav-links a.active { color: var(--accent); font-weight: 600; }
         .hamburger {
             display: none; background: none; border: none;
@@ -727,11 +733,10 @@
                 <div class="nav-wordmark">Jobs<span>By</span>Culture</div>
             </a>
             <div class="nav-links">
-                <a href="/">Home</a>
                 <a href="/jobs">Jobs</a>
-                <a href="/compare">Compare</a>
-                <a href="/directory">Culture Directory</a>
+                <a href="/directory">Companies</a>
                 <a href="/blog" class="active">Blog</a>
+                <a href="/for-employers" class="nav-cta">For Employers</a>
             </div>
             <button class="hamburger" onclick="this.classList.toggle('active');this.closest('.nav-inner').querySelector('.nav-links').classList.toggle('open')" aria-label="Menu">
                 <span></span><span></span><span></span>
@@ -850,21 +855,21 @@
                     <td><span class="rate-bar" style="width:15px"></span>30%</td>
                     <td><span class="glassdoor-badge high">4.4</span></td>
                 </tr>
-                <tr class="hypergrowth">
+                <tr>
                     <td class="rank">10</td>
+                    <td class="company-name"><a href="/companies/together">Together AI</a></td>
+                    <td>46</td>
+                    <td>~150</td>
+                    <td><span class="rate-bar" style="width:15px"></span>31%</td>
+                    <td><span class="glassdoor-badge high">4.1</span></td>
+                </tr>
+                <tr>
+                    <td class="rank">11</td>
                     <td class="company-name"><a href="/companies/fireworksai">Fireworks AI</a></td>
                     <td>29</td>
                     <td>~100</td>
                     <td><span class="rate-bar" style="width:15px"></span>29%</td>
                     <td><span class="glassdoor-badge high">4.2</span></td>
-                </tr>
-                <tr>
-                    <td class="rank">11</td>
-                    <td class="company-name"><a href="/companies/modal">Modal</a></td>
-                    <td>27</td>
-                    <td>~110</td>
-                    <td><span class="rate-bar" style="width:12px"></span>25%</td>
-                    <td><span class="glassdoor-badge high">4.0</span></td>
                 </tr>
                 <tr>
                     <td class="rank">12</td>
@@ -876,6 +881,14 @@
                 </tr>
                 <tr>
                     <td class="rank">13</td>
+                    <td class="company-name"><a href="/companies/modal">Modal</a></td>
+                    <td>27</td>
+                    <td>~110</td>
+                    <td><span class="rate-bar" style="width:12px"></span>25%</td>
+                    <td><span class="glassdoor-badge high">4.0</span></td>
+                </tr>
+                <tr>
+                    <td class="rank">14</td>
                     <td class="company-name"><a href="/companies/linear">Linear</a></td>
                     <td>19</td>
                     <td>~80</td>
@@ -883,7 +896,7 @@
                     <td><span class="glassdoor-badge high">4.6</span></td>
                 </tr>
                 <tr>
-                    <td class="rank">14</td>
+                    <td class="rank">15</td>
                     <td class="company-name"><a href="/companies/suno">Suno</a></td>
                     <td>40</td>
                     <td>~200</td>
@@ -891,7 +904,7 @@
                     <td><span class="glassdoor-badge high">4.2</span></td>
                 </tr>
                 <tr>
-                    <td class="rank">15</td>
+                    <td class="rank">16</td>
                     <td class="company-name"><a href="/companies/notion">Notion</a></td>
                     <td>158</td>
                     <td>~800</td>
@@ -899,7 +912,7 @@
                     <td><span class="glassdoor-badge high">4.4</span></td>
                 </tr>
                 <tr>
-                    <td class="rank">16</td>
+                    <td class="rank">17</td>
                     <td class="company-name"><a href="/companies/incidentio">incident.io</a></td>
                     <td>27</td>
                     <td>~140</td>
@@ -907,7 +920,7 @@
                     <td><span class="glassdoor-badge high">4.5</span></td>
                 </tr>
                 <tr>
-                    <td class="rank">17</td>
+                    <td class="rank">18</td>
                     <td class="company-name"><a href="/companies/openai">OpenAI</a></td>
                     <td>654</td>
                     <td>~3,500</td>
@@ -915,7 +928,7 @@
                     <td><span class="glassdoor-badge high">4.5</span></td>
                 </tr>
                 <tr>
-                    <td class="rank">18</td>
+                    <td class="rank">19</td>
                     <td class="company-name"><a href="/companies/elevenlabs">ElevenLabs</a></td>
                     <td>95</td>
                     <td>~600</td>
@@ -923,7 +936,7 @@
                     <td><span class="glassdoor-badge high">4.2</span></td>
                 </tr>
                 <tr>
-                    <td class="rank">19</td>
+                    <td class="rank">20</td>
                     <td class="company-name"><a href="/companies/perplexity">Perplexity AI</a></td>
                     <td>79</td>
                     <td>~500</td>
@@ -931,7 +944,7 @@
                     <td><span class="glassdoor-badge high">4.7</span></td>
                 </tr>
                 <tr>
-                    <td class="rank">20</td>
+                    <td class="rank">21</td>
                     <td class="company-name"><a href="/companies/tailscale">Tailscale</a></td>
                     <td>44</td>
                     <td>~290</td>
@@ -939,7 +952,7 @@
                     <td><span class="glassdoor-badge high">4.4</span></td>
                 </tr>
                 <tr>
-                    <td class="rank">21</td>
+                    <td class="rank">22</td>
                     <td class="company-name"><a href="/companies/supabase">Supabase</a></td>
                     <td>37</td>
                     <td>~250</td>
@@ -947,167 +960,7 @@
                     <td><span class="glassdoor-badge high">4.8</span></td>
                 </tr>
                 <tr>
-                    <td class="rank">22</td>
-                    <td class="company-name"><a href="/companies/coreweave">CoreWeave</a></td>
-                    <td>265</td>
-                    <td>~1,800</td>
-                    <td><span class="rate-bar" style="width:7px"></span>15%</td>
-                    <td><span class="glassdoor-badge mid">3.6</span></td>
-                </tr>
-                <tr>
                     <td class="rank">23</td>
-                    <td class="company-name"><a href="/companies/scale">Scale AI</a></td>
-                    <td>173</td>
-                    <td>~1,200</td>
-                    <td><span class="rate-bar" style="width:7px"></span>14%</td>
-                    <td><span class="glassdoor-badge mid">3.5</span></td>
-                </tr>
-                <tr>
-                    <td class="rank">24</td>
-                    <td class="company-name"><a href="/companies/ramp">Ramp</a></td>
-                    <td>135</td>
-                    <td>~1,000</td>
-                    <td><span class="rate-bar" style="width:7px"></span>14%</td>
-                    <td><span class="glassdoor-badge high">4.2</span></td>
-                </tr>
-                <tr>
-                    <td class="rank">25</td>
-                    <td class="company-name"><a href="/companies/vercel">Vercel</a></td>
-                    <td>79</td>
-                    <td>~600</td>
-                    <td><span class="rate-bar" style="width:7px"></span>13%</td>
-                    <td><span class="glassdoor-badge mid">3.9</span></td>
-                </tr>
-                <tr>
-                    <td class="rank">26</td>
-                    <td class="company-name"><a href="/companies/cloudflare">Cloudflare</a></td>
-                    <td>525</td>
-                    <td>~4,000</td>
-                    <td><span class="rate-bar" style="width:7px"></span>13%</td>
-                    <td><span class="glassdoor-badge mid">3.9</span></td>
-                </tr>
-                <tr>
-                    <td class="rank">27</td>
-                    <td class="company-name"><a href="/companies/plaid">Plaid</a></td>
-                    <td>100</td>
-                    <td>~800</td>
-                    <td><span class="rate-bar" style="width:6px"></span>13%</td>
-                    <td><span class="glassdoor-badge high">4.6</span></td>
-                </tr>
-                <tr>
-                    <td class="rank">28</td>
-                    <td class="company-name"><a href="/companies/deepmind">Google DeepMind</a></td>
-                    <td>89</td>
-                    <td>~7,000</td>
-                    <td><span class="rate-bar" style="width:3px"></span>1%</td>
-                    <td><span class="glassdoor-badge high">4.2</span></td>
-                </tr>
-                <tr>
-                    <td class="rank">29</td>
-                    <td class="company-name"><a href="/companies/databricks">Databricks</a></td>
-                    <td>836</td>
-                    <td>~7,000</td>
-                    <td><span class="rate-bar" style="width:6px"></span>12%</td>
-                    <td><span class="glassdoor-badge high">4.1</span></td>
-                </tr>
-                <tr>
-                    <td class="rank">30</td>
-                    <td class="company-name"><a href="/companies/posthog">PostHog</a></td>
-                    <td>15</td>
-                    <td>~170</td>
-                    <td><span class="rate-bar" style="width:4px"></span>9%</td>
-                    <td><span class="glassdoor-badge high">4.3</span></td>
-                </tr>
-                <tr>
-                    <td class="rank">31</td>
-                    <td class="company-name"><a href="/companies/runway">Runway</a></td>
-                    <td>35</td>
-                    <td>~420</td>
-                    <td><span class="rate-bar" style="width:4px"></span>8%</td>
-                    <td><span class="glassdoor-badge high">4.5</span></td>
-                </tr>
-                <tr>
-                    <td class="rank">32</td>
-                    <td class="company-name"><a href="/companies/grafanalabs">Grafana Labs</a></td>
-                    <td>135</td>
-                    <td>~1,700</td>
-                    <td><span class="rate-bar" style="width:4px"></span>8%</td>
-                    <td><span class="glassdoor-badge high">4.1</span></td>
-                </tr>
-                <tr>
-                    <td class="rank">33</td>
-                    <td class="company-name"><a href="/companies/datadog">Datadog</a></td>
-                    <td>466</td>
-                    <td>~6,000</td>
-                    <td><span class="rate-bar" style="width:4px"></span>8%</td>
-                    <td><span class="glassdoor-badge high">4.2</span></td>
-                </tr>
-                <tr>
-                    <td class="rank">34</td>
-                    <td class="company-name"><a href="/companies/pinecone">Pinecone</a></td>
-                    <td>9</td>
-                    <td>~130</td>
-                    <td><span class="rate-bar" style="width:4px"></span>7%</td>
-                    <td><span class="glassdoor-badge high">4.2</span></td>
-                </tr>
-                <tr>
-                    <td class="rank">35</td>
-                    <td class="company-name"><a href="/companies/stripe">Stripe</a></td>
-                    <td>515</td>
-                    <td>~8,000</td>
-                    <td><span class="rate-bar" style="width:3px"></span>6%</td>
-                    <td><span class="glassdoor-badge high">4.0</span></td>
-                </tr>
-                <tr>
-                    <td class="rank">36</td>
-                    <td class="company-name"><a href="/companies/apollo">Apollo.io</a></td>
-                    <td>49</td>
-                    <td>~800</td>
-                    <td><span class="rate-bar" style="width:3px"></span>6%</td>
-                    <td><span class="glassdoor-badge high">4.0</span></td>
-                </tr>
-                <tr>
-                    <td class="rank">37</td>
-                    <td class="company-name"><a href="/companies/airtable">Airtable</a></td>
-                    <td>55</td>
-                    <td>~900</td>
-                    <td><span class="rate-bar" style="width:3px"></span>6%</td>
-                    <td><span class="glassdoor-badge high">4.1</span></td>
-                </tr>
-                <tr>
-                    <td class="rank">38</td>
-                    <td class="company-name"><a href="/companies/figma">Figma</a></td>
-                    <td>151</td>
-                    <td>~2,800</td>
-                    <td><span class="rate-bar" style="width:3px"></span>5%</td>
-                    <td><span class="glassdoor-badge mid">3.7</span></td>
-                </tr>
-                <tr>
-                    <td class="rank">39</td>
-                    <td class="company-name"><a href="/companies/weaviate">Weaviate</a></td>
-                    <td>5</td>
-                    <td>~110</td>
-                    <td><span class="rate-bar" style="width:2px"></span>5%</td>
-                    <td><span class="glassdoor-badge high">4.3</span></td>
-                </tr>
-                <tr>
-                    <td class="rank">40</td>
-                    <td class="company-name"><a href="/companies/mercury">Mercury</a></td>
-                    <td>53</td>
-                    <td>~1,300</td>
-                    <td><span class="rate-bar" style="width:2px"></span>4%</td>
-                    <td><span class="glassdoor-badge high">4.3</span></td>
-                </tr>
-                <tr>
-                    <td class="rank">41</td>
-                    <td class="company-name"><a href="/companies/together">Together AI</a></td>
-                    <td>46</td>
-                    <td>~150</td>
-                    <td><span class="rate-bar" style="width:15px"></span>31%</td>
-                    <td><span class="glassdoor-badge high">4.1</span></td>
-                </tr>
-                <tr>
-                    <td class="rank">42</td>
                     <td class="company-name"><a href="/companies/brex">Brex</a></td>
                     <td>242</td>
                     <td>~1,600</td>
@@ -1115,7 +968,151 @@
                     <td><span class="glassdoor-badge high">4.0</span></td>
                 </tr>
                 <tr>
-                    <td class="rank">43</td>
+                    <td class="rank">24</td>
+                    <td class="company-name"><a href="/companies/coreweave">CoreWeave</a></td>
+                    <td>265</td>
+                    <td>~1,800</td>
+                    <td><span class="rate-bar" style="width:7px"></span>15%</td>
+                    <td><span class="glassdoor-badge mid">3.6</span></td>
+                </tr>
+                <tr>
+                    <td class="rank">25</td>
+                    <td class="company-name"><a href="/companies/scale">Scale AI</a></td>
+                    <td>173</td>
+                    <td>~1,200</td>
+                    <td><span class="rate-bar" style="width:7px"></span>14%</td>
+                    <td><span class="glassdoor-badge mid">3.5</span></td>
+                </tr>
+                <tr>
+                    <td class="rank">26</td>
+                    <td class="company-name"><a href="/companies/ramp">Ramp</a></td>
+                    <td>135</td>
+                    <td>~1,000</td>
+                    <td><span class="rate-bar" style="width:7px"></span>14%</td>
+                    <td><span class="glassdoor-badge high">4.2</span></td>
+                </tr>
+                <tr>
+                    <td class="rank">27</td>
+                    <td class="company-name"><a href="/companies/vercel">Vercel</a></td>
+                    <td>79</td>
+                    <td>~600</td>
+                    <td><span class="rate-bar" style="width:7px"></span>13%</td>
+                    <td><span class="glassdoor-badge mid">3.9</span></td>
+                </tr>
+                <tr>
+                    <td class="rank">28</td>
+                    <td class="company-name"><a href="/companies/cloudflare">Cloudflare</a></td>
+                    <td>525</td>
+                    <td>~4,000</td>
+                    <td><span class="rate-bar" style="width:7px"></span>13%</td>
+                    <td><span class="glassdoor-badge mid">3.9</span></td>
+                </tr>
+                <tr>
+                    <td class="rank">29</td>
+                    <td class="company-name"><a href="/companies/plaid">Plaid</a></td>
+                    <td>100</td>
+                    <td>~800</td>
+                    <td><span class="rate-bar" style="width:6px"></span>13%</td>
+                    <td><span class="glassdoor-badge high">4.6</span></td>
+                </tr>
+                <tr>
+                    <td class="rank">30</td>
+                    <td class="company-name"><a href="/companies/databricks">Databricks</a></td>
+                    <td>836</td>
+                    <td>~7,000</td>
+                    <td><span class="rate-bar" style="width:6px"></span>12%</td>
+                    <td><span class="glassdoor-badge high">4.1</span></td>
+                </tr>
+                <tr>
+                    <td class="rank">31</td>
+                    <td class="company-name"><a href="/companies/posthog">PostHog</a></td>
+                    <td>15</td>
+                    <td>~170</td>
+                    <td><span class="rate-bar" style="width:4px"></span>9%</td>
+                    <td><span class="glassdoor-badge high">4.3</span></td>
+                </tr>
+                <tr>
+                    <td class="rank">32</td>
+                    <td class="company-name"><a href="/companies/runway">Runway</a></td>
+                    <td>35</td>
+                    <td>~420</td>
+                    <td><span class="rate-bar" style="width:4px"></span>8%</td>
+                    <td><span class="glassdoor-badge high">4.5</span></td>
+                </tr>
+                <tr>
+                    <td class="rank">33</td>
+                    <td class="company-name"><a href="/companies/grafanalabs">Grafana Labs</a></td>
+                    <td>135</td>
+                    <td>~1,700</td>
+                    <td><span class="rate-bar" style="width:4px"></span>8%</td>
+                    <td><span class="glassdoor-badge high">4.1</span></td>
+                </tr>
+                <tr>
+                    <td class="rank">34</td>
+                    <td class="company-name"><a href="/companies/datadog">Datadog</a></td>
+                    <td>466</td>
+                    <td>~6,000</td>
+                    <td><span class="rate-bar" style="width:4px"></span>8%</td>
+                    <td><span class="glassdoor-badge high">4.2</span></td>
+                </tr>
+                <tr>
+                    <td class="rank">35</td>
+                    <td class="company-name"><a href="/companies/pinecone">Pinecone</a></td>
+                    <td>9</td>
+                    <td>~130</td>
+                    <td><span class="rate-bar" style="width:4px"></span>7%</td>
+                    <td><span class="glassdoor-badge high">4.2</span></td>
+                </tr>
+                <tr>
+                    <td class="rank">36</td>
+                    <td class="company-name"><a href="/companies/stripe">Stripe</a></td>
+                    <td>515</td>
+                    <td>~8,000</td>
+                    <td><span class="rate-bar" style="width:3px"></span>6%</td>
+                    <td><span class="glassdoor-badge high">4.0</span></td>
+                </tr>
+                <tr>
+                    <td class="rank">37</td>
+                    <td class="company-name"><a href="/companies/apollo">Apollo.io</a></td>
+                    <td>49</td>
+                    <td>~800</td>
+                    <td><span class="rate-bar" style="width:3px"></span>6%</td>
+                    <td><span class="glassdoor-badge high">4.0</span></td>
+                </tr>
+                <tr>
+                    <td class="rank">38</td>
+                    <td class="company-name"><a href="/companies/airtable">Airtable</a></td>
+                    <td>55</td>
+                    <td>~900</td>
+                    <td><span class="rate-bar" style="width:3px"></span>6%</td>
+                    <td><span class="glassdoor-badge high">4.1</span></td>
+                </tr>
+                <tr>
+                    <td class="rank">39</td>
+                    <td class="company-name"><a href="/companies/figma">Figma</a></td>
+                    <td>151</td>
+                    <td>~2,800</td>
+                    <td><span class="rate-bar" style="width:3px"></span>5%</td>
+                    <td><span class="glassdoor-badge mid">3.7</span></td>
+                </tr>
+                <tr>
+                    <td class="rank">40</td>
+                    <td class="company-name"><a href="/companies/weaviate">Weaviate</a></td>
+                    <td>5</td>
+                    <td>~110</td>
+                    <td><span class="rate-bar" style="width:2px"></span>5%</td>
+                    <td><span class="glassdoor-badge high">4.3</span></td>
+                </tr>
+                <tr>
+                    <td class="rank">41</td>
+                    <td class="company-name"><a href="/companies/mercury">Mercury</a></td>
+                    <td>53</td>
+                    <td>~1,300</td>
+                    <td><span class="rate-bar" style="width:2px"></span>4%</td>
+                    <td><span class="glassdoor-badge high">4.3</span></td>
+                </tr>
+                <tr>
+                    <td class="rank">42</td>
                     <td class="company-name"><a href="/companies/airbnb">Airbnb</a></td>
                     <td>258</td>
                     <td>~7,300</td>
@@ -1123,7 +1120,7 @@
                     <td><span class="glassdoor-badge high">4.1</span></td>
                 </tr>
                 <tr>
-                    <td class="rank">44</td>
+                    <td class="rank">43</td>
                     <td class="company-name"><a href="/companies/hubspot">HubSpot</a></td>
                     <td>276</td>
                     <td>~8,000</td>
@@ -1131,12 +1128,20 @@
                     <td><span class="glassdoor-badge high">4.3</span></td>
                 </tr>
                 <tr>
-                    <td class="rank">45</td>
+                    <td class="rank">44</td>
                     <td class="company-name"><a href="/companies/huggingface">Hugging Face</a></td>
                     <td>11</td>
                     <td>~400</td>
                     <td><span class="rate-bar" style="width:2px"></span>3%</td>
                     <td><span class="glassdoor-badge mid">3.8</span></td>
+                </tr>
+                <tr>
+                    <td class="rank">45</td>
+                    <td class="company-name"><a href="/companies/deepmind">Google DeepMind</a></td>
+                    <td>89</td>
+                    <td>~7,000</td>
+                    <td><span class="rate-bar" style="width:2px"></span>1%</td>
+                    <td><span class="glassdoor-badge high">4.2</span></td>
                 </tr>
             </tbody>
         </table>
@@ -1506,10 +1511,12 @@
             <div class="ft-links">
                 <a href="/">Home</a>
                 <a href="/jobs">Browse Jobs</a>
+                <a href="/directory">Companies</a>
                 <a href="/compare">Compare Cultures</a>
-                <a href="/directory">Culture Directory</a>
                 <a href="/culture-map">Culture Map</a>
+                <a href="/quiz">Culture Quiz</a>
                 <a href="/blog">Blog</a>
+                <a href="/for-employers">For Employers</a>
                 <a href="/values/remote">By Culture</a>
                 <a href="/roles/engineering">By Role</a>
             </div>

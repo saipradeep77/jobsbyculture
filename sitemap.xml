@@ -30,6 +30,12 @@
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
+  <url>
+    <loc>https://jobsbyculture.com/for-employers</loc>
+    <lastmod>2026-03-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
   <!-- Company profile pages -->
   <url>
     <loc>https://jobsbyculture.com/companies/anthropic</loc>

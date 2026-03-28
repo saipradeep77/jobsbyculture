@@ -84,6 +84,12 @@
         .nav-links { display: flex; align-items: center; gap: 28px; }
         .nav-links a { color: var(--text-2); text-decoration: none; font-size: 14px; font-weight: 500; transition: color 0.15s; }
         .nav-links a:hover { color: var(--text); }
+        .nav-links .nav-cta {
+            background: var(--accent); color: #fff !important; padding: 7px 16px;
+            border-radius: var(--radius-sm); font-size: 13px; font-weight: 600;
+            transition: all 0.2s;
+        }
+        .nav-links .nav-cta:hover { background: var(--accent-hover); transform: translateY(-1px); }
         .btn-sm { display: inline-flex; align-items: center; gap: 6px; background: var(--accent); color: #fff; padding: 7px 16px; border-radius: var(--radius-sm); font-size: 13px; font-weight: 600; text-decoration: none; transition: all 0.2s; border: none; cursor: pointer; }
         .btn-sm:hover { background: var(--accent-hover); transform: translateY(-1px); }
         .hamburger { display: none; background: none; border: none; cursor: pointer; padding: 8px; flex-direction: column; gap: 5px; }
@@ -337,11 +343,10 @@
                 <div class="nav-wordmark">Jobs<span>By</span>Culture</div>
             </a>
             <div class="nav-links">
-                <a href="/jobs">Browse Jobs</a>
-                <a href="/compare">Compare</a>
-                <a href="/directory">Culture Directory</a>
+                <a href="/jobs">Jobs</a>
+                <a href="/directory">Companies</a>
                 <a href="/blog">Blog</a>
-                <a href="/jobs" class="btn-sm" style="background:transparent;border:1px solid #ea580c;color:#ea580c">Browse Jobs</a>
+                <a href="/for-employers" class="nav-cta">For Employers</a>
             </div>
             <button class="hamburger" onclick="this.classList.toggle('active');this.closest('.nav-inner').querySelector('.nav-links').classList.toggle('open')" aria-label="Menu">
                 <span></span><span></span><span></span>

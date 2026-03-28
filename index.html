@@ -132,6 +132,12 @@
         .nav-links { display: flex; align-items: center; gap: 28px; }
         .nav-links a { color: var(--text-2); text-decoration: none; font-size: 14px; font-weight: 500; transition: color 0.15s; }
         .nav-links a:hover { color: var(--text); }
+        .nav-links .nav-cta {
+            background: var(--accent); color: #fff !important; padding: 7px 16px;
+            border-radius: var(--radius-sm); font-size: 13px; font-weight: 600;
+            transition: all 0.2s;
+        }
+        .nav-links .nav-cta:hover { background: var(--accent-hover); transform: translateY(-1px); }
         .btn-sm {
             display: inline-flex; align-items: center; gap: 6px;
             background: var(--accent); color: #fff; padding: 7px 16px;
@@ -569,12 +575,11 @@
             <div class="nav-wordmark">Jobs<span>By</span>Culture</div>
         </a>
         <div class="nav-links">
-            <a href="/jobs">Browse Jobs</a>
-            <a href="/compare">Compare</a>
-            <a href="/directory">Culture Directory</a>
-            <a href="/blog">Blog</a>
-            <a href="#newsletter" class="btn-sm" style="background:transparent;border:1px solid #ea580c;color:#ea580c">Get Alerts →</a>
-        </div>
+                <a href="/jobs">Jobs</a>
+                <a href="/directory">Companies</a>
+                <a href="/blog">Blog</a>
+                <a href="/for-employers" class="nav-cta">For Employers</a>
+            </div>
         <button class="hamburger" onclick="this.classList.toggle('active');this.closest('.nav-inner').querySelector('.nav-links').classList.toggle('open')" aria-label="Menu">
             <span></span><span></span><span></span>
         </button>
@@ -3268,7 +3273,7 @@
                 <a href="/culture-map">Culture Map</a>
                 <a href="/quiz">Culture Quiz</a>
                 <a href="/blog">Blog</a>
-                <a href="#" onclick="document.getElementById('listModal').style.display='flex';return false">List Your Company</a>
+                <a href="/for-employers">For Employers</a>
                 <a href="https://meetingtax.com/?ref=jobsbyculture.com" target="_blank">Meeting Tax</a>
                 <a href="https://paytaxfa.st/?ref=jobsbyculture.com" target="_blank">PayTaxFast</a>
             </div>
