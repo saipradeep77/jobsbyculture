@@ -178,6 +178,25 @@ indexHtml = indexHtml.replace(
     `$1${fmt(totalJobs)}$2`
 );
 
+// Location cards — update job counts from rebuilt location pages
+const locDir = resolve(ROOT, 'locations');
+if (existsSync(locDir)) {
+    const locFiles = readdirSync(locDir).filter(f => f.endsWith('.html'));
+    for (const locFile of locFiles) {
+        const locSlug = locFile.replace('.html', '');
+        const locHtml = readFileSync(resolve(locDir, locFile), 'utf-8');
+        const itemsMatch = locHtml.match(/"numberOfItems":\s*(\d+)/);
+        if (!itemsMatch) continue;
+        const locCount = parseInt(itemsMatch[1]);
+        const locRe = new RegExp(`(locations/${locSlug}"[^>]*>.*?→ )[\\d,]+( jobs</span>)`, 's');
+        const before = indexHtml;
+        indexHtml = indexHtml.replace(locRe, `$1${fmt(locCount)}$2`);
+        if (indexHtml !== before) {
+            console.log(`  Location card ${locSlug}: ${fmt(locCount)} jobs`);
+        }
+    }
+}
+
 // Featured jobs — pick 8 recent jobs from different companies, prefer eng/ml/data roles
 const featuredRoles = new Set(['engineering', 'ml-ai', 'data', 'design', 'product']);
 
