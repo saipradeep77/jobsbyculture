@@ -8589,17 +8589,9 @@ function renderJobs() {
     // Lazy loading: render first batch, load more on scroll
     _lazyFiltered = filtered;
     _lazyRendered = 0;
+    _showSponsor = !searchQuery && activeValues.size === 0 && activeRoles.size === 0 && activeSeniorities.size === 0 && activeLocations.size === 0 && activeSizes.size === 0;
+    _sponsorInserted = false;
     document.getElementById('jobsList').innerHTML = '';
-
-    // Sponsored job slot (dashed placeholder)
-    document.getElementById('jobsList').insertAdjacentHTML('beforeend', `
-        <a href="/for-employers" class="job sponsor-job" style="border:1.5px dashed rgba(0,0,0,0.12);background:var(--bg);text-align:center;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:28px 20px;gap:6px;">
-            <span style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;color:var(--text-3);">Sponsored</span>
-            <span style="font-size:15px;font-weight:600;color:var(--text-2);">Feature your open roles here</span>
-            <span style="font-size:13px;color:var(--accent);font-weight:500;">Get in front of 7,000+ culture-first candidates →</span>
-        </a>
-    `);
-
     _renderBatch();
 }
 
@@ -8607,12 +8599,23 @@ var _lazyFiltered = [];
 var _lazyRendered = 0;
 var _BATCH_SIZE = 200;
 var _lazyLoading = false;
+var _showSponsor = false;
+var _sponsorInserted = false;
 
 function _renderBatch() {
     if (_lazyRendered >= _lazyFiltered.length) return;
     var end = Math.min(_lazyRendered + _BATCH_SIZE, _lazyFiltered.length);
     var html = '';
     for (var i = _lazyRendered; i < end; i++) {
+        // Insert sponsor card at position 5 (only on unfiltered main page)
+        if (i === 4 && _showSponsor && !_sponsorInserted) {
+            html += `<a href="/for-employers" class="job" style="border:1px solid rgba(232,89,12,0.15);background:linear-gradient(135deg,rgba(232,89,12,0.03),rgba(13,148,136,0.03));display:flex;flex-direction:column;align-items:center;justify-content:center;padding:24px 20px;gap:6px;text-align:center;text-decoration:none;">
+                <span style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:0.1em;color:var(--accent);opacity:0.7;">Sponsored</span>
+                <span style="font-size:15px;font-weight:600;color:var(--text);">Get your roles in front of culture-first candidates</span>
+                <span style="font-size:13px;color:var(--accent);font-weight:500;margin-top:2px;">Learn more →</span>
+            </a>`;
+            _sponsorInserted = true;
+        }
         html += _renderJobCard(_lazyFiltered[i]);
     }
     document.getElementById('jobsList').insertAdjacentHTML('beforeend', html);
