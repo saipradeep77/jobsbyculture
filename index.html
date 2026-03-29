@@ -354,6 +354,13 @@
         }
         
         
+        /* ═══ SPONSOR CARD ═══ */
+        .fj-card.sponsor-card { border: 1.5px dashed var(--border-2); background: var(--bg); text-align: center; justify-content: center; align-items: center; min-height: 160px; }
+        .fj-card.sponsor-card:hover { border-color: var(--accent); background: var(--accent-bg); }
+        .sponsor-label { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-3); margin-bottom: 8px; }
+        .sponsor-title { font-size: 15px; font-weight: 600; color: var(--text-2); }
+        .sponsor-cta { font-size: 13px; color: var(--accent); margin-top: 6px; font-weight: 500; }
+
         /* ═══ FEATURED JOBS ═══ */
         .featured-jobs { padding: 48px 0 56px; }
         .fj-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 12px; margin-top: 32px; }
@@ -3066,6 +3073,11 @@
                         <span class="fj-posted">1w ago</span>
                         <span class="fj-apply">Apply →</span>
                     </div>
+                </a>
+                <a href="/employers" class="fj-card sponsor-card">
+                    <div class="sponsor-label">Featured Spot</div>
+                    <div class="sponsor-title">Get your company in front of culture-conscious candidates</div>
+                    <div class="sponsor-cta">Learn more →</div>
                 </a>
         </div>
         <div class="fj-cta">
