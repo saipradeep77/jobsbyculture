@@ -2,8 +2,8 @@ name: Daily Job Refresh
 
 on:
   schedule:
-    # Every day at 10:00 UTC (~6:00 AM ET / 3:00 AM PT)
-    - cron: '0 10 * * *'
+    # Every day at 4:00 UTC (5:00 AM Dublin) — runs before Claude agents at 5-6am
+    - cron: '0 4 * * *'
 
   workflow_dispatch:
 
@@ -28,6 +28,16 @@ jobs:
       # ── Fetch jobs from all ATS APIs ──
       - name: Fetch jobs
         run: node scripts/fetch-jobs.js
+
+      # ── Verify fetch succeeded (safety check) ──
+      - name: Verify job count
+        run: |
+          JOBS=$(node -e "console.log(JSON.parse(require('fs').readFileSync('data/jobs-fetched.json','utf8')).length)")
+          echo "Fetched $JOBS jobs"
+          if [ "$JOBS" -lt 100 ]; then
+            echo "::error::ABORT: Only $JOBS jobs fetched — API failure likely"
+            exit 1
+          fi
 
       # ── Update JOBS[] array in jobs.html ──
       - name: Update jobs.html
@@ -59,6 +69,14 @@ jobs:
 
       - name: Inject related sections
         run: node scripts/inject-related-section.js
+
+      # ── Inject claim banner ──
+      - name: Inject claim banner
+        run: node scripts/inject-claim-banner.js
+
+      # ── Add ref tracking to all external links ──
+      - name: Add ref to links
+        run: node scripts/add-ref-to-links.js
 
       # ── Build RSS feed ──
       - name: Build RSS feed
