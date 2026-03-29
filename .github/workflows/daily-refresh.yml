@@ -11,6 +11,9 @@ concurrency:
   group: daily-refresh
   cancel-in-progress: false
 
+permissions:
+  contents: write
+
 jobs:
   refresh-jobs:
     runs-on: ubuntu-latest
