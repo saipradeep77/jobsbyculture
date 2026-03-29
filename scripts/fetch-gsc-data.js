@@ -217,6 +217,8 @@ async function fetchGSC() {
 }
 
 fetchGSC().catch(e => {
-    console.error('Error:', e.message);
-    process.exit(1);
+    console.error('⚠ GSC fetch failed (non-fatal):', e.message);
+    console.error('  Skipping GSC data — credentials may be missing in this environment.');
+    // Exit 0 so the pipeline continues even without GSC data
+    process.exit(0);
 });
