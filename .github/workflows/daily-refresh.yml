@@ -85,6 +85,14 @@ jobs:
       - name: Build RSS feed
         run: node scripts/build-rss.js
 
+      # ── Fetch GSC performance data ──
+      - name: Write GSC credentials
+        run: echo '${{ secrets.GSC_CREDENTIALS }}' > data/google-service-account.json
+
+      - name: Fetch GSC data
+        run: node scripts/fetch-gsc-data.js
+        continue-on-error: true
+
       # ── Submit to IndexNow (Bing, Yandex, Naver) ──
       - name: Submit to IndexNow
         run: node scripts/indexnow.js
