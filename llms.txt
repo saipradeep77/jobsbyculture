@@ -1,6 +1,6 @@
 # JobsByCulture
 
-> Culture-first job search for AI & tech professionals. Browse 7,108+ jobs filtered by culture values like async-first, work-life balance, remote-friendly, and ethical AI.
+> Culture-first job search for AI & tech professionals. Browse 0+ jobs filtered by culture values like async-first, work-life balance, remote-friendly, and ethical AI.
 
 ## About
 
@@ -8,7 +8,7 @@ JobsByCulture helps professionals find jobs at companies whose culture actually 
 
 ## Key Pages
 
-- [Browse Jobs](https://jobsbyculture.com/jobs): 7,108+ AI & tech jobs filtered by 18 culture values, 12 role categories, and 8 locations
+- [Browse Jobs](https://jobsbyculture.com/jobs): 0+ AI & tech jobs filtered by 18 culture values, 12 role categories, and 8 locations
 - [Compare Cultures](https://jobsbyculture.com/compare): Side-by-side company culture comparison tool
 - [Company Directory](https://jobsbyculture.com/directory): All 45 profiled companies with ratings, values, and reviews
 - [Culture Map](https://jobsbyculture.com/culture-map): Interactive scatter chart comparing all 45 companies by Glassdoor rating vs work-life balance
