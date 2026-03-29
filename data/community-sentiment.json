@@ -6,7 +6,7 @@
     "positive": 0,
     "negative": 0,
     "mixed": 8,
-    "lastUpdated": "2026-03-27",
+    "lastUpdated": "2026-03-28",
     "hackernews": [
       {
         "source": "hackernews",
@@ -58,7 +58,7 @@
         "score": 0,
         "comments": 233,
         "commentAuthor": "sevenfiftynorth",
-        "commentScore": 61,
+        "commentScore": 63,
         "date": "2026-01-19",
         "url": "https://reddit.com/r/Anthropic/comments/1qhb1gc/anthropic_political_stance/",
         "sentiment": "neutral"
@@ -68,10 +68,10 @@
         "title": "Anthropic Technical Interview (55 min CodeSignal) – Anyone done this before?",
         "quote": "I had one and they looked at your resume to see what you’ve done before and pick a question based on that. Mine was about transforming images based on json data in a pipeline using pillow. Failed lol",
         "subreddit": "leetcode",
-        "score": 89,
+        "score": 88,
         "comments": 43,
         "commentAuthor": "Proud_Writer_1854",
-        "commentScore": 60,
+        "commentScore": 58,
         "date": "2026-02-05",
         "url": "https://reddit.com/r/leetcode/comments/1qx0hyj/anthropic_technical_interview_55_min_codesignal/",
         "sentiment": "neutral"
@@ -98,7 +98,7 @@
     "positive": 1,
     "negative": 0,
     "mixed": 4,
-    "lastUpdated": "2026-03-27",
+    "lastUpdated": "2026-03-28",
     "hackernews": [
       {
         "source": "hackernews",
@@ -150,7 +150,7 @@
     "positive": 1,
     "negative": 1,
     "mixed": 0,
-    "lastUpdated": "2026-03-27",
+    "lastUpdated": "2026-03-28",
     "hackernews": [
       {
         "source": "hackernews",
@@ -178,7 +178,7 @@
     "positive": 2,
     "negative": 0,
     "mixed": 2,
-    "lastUpdated": "2026-03-27",
+    "lastUpdated": "2026-03-28",
     "hackernews": [
       {
         "source": "hackernews",
@@ -222,7 +222,7 @@
     "positive": 4,
     "negative": 0,
     "mixed": 4,
-    "lastUpdated": "2026-03-27",
+    "lastUpdated": "2026-03-28",
     "hackernews": [
       {
         "source": "hackernews",
@@ -274,7 +274,7 @@
         "score": 681,
         "comments": 124,
         "commentAuthor": "No_Distribution_1005",
-        "commentScore": 13,
+        "commentScore": 14,
         "date": "2025-05-22",
         "url": "https://reddit.com/r/leetcode/comments/1ksh0j1/my_job_switch_journey_fintech_to_faang/",
         "sentiment": "neutral"
@@ -287,7 +287,7 @@
         "score": 196,
         "comments": 23,
         "commentAuthor": "DJ_Laaal",
-        "commentScore": 28,
+        "commentScore": 27,
         "date": "2025-12-02",
         "url": "https://reddit.com/r/dataengineering/comments/1pcl7on/taking_165k_offer_over_175k_offer/",
         "sentiment": "neutral"
@@ -300,7 +300,7 @@
         "score": 75,
         "comments": 39,
         "commentAuthor": "Certain_Leader9946",
-        "commentScore": 34,
+        "commentScore": 36,
         "date": "2026-01-13",
         "url": "https://reddit.com/r/dataengineering/comments/1qbx8ay/data_engineer_with_4_years_what_do_i_need_to_work/",
         "sentiment": "mixed"
@@ -314,7 +314,7 @@
     "positive": 4,
     "negative": 0,
     "mixed": 4,
-    "lastUpdated": "2026-03-27",
+    "lastUpdated": "2026-03-28",
     "hackernews": [
       {
         "source": "hackernews",
@@ -363,7 +363,7 @@
         "title": "What I wish every new HubSpot customer knew",
         "quote": "Biggest win: lock your process first, then build it into HubSpot. A few things that keep new portals clean: \\- Write a one-pager of your funnel before touching workflows: entry/exit criteria for each lifecycle stage, and how it differs from Lead Status. Train from that doc.",
         "subreddit": "hubspot",
-        "score": 71,
+        "score": 70,
         "comments": 15,
         "commentAuthor": "Decent-Mistake-3207",
         "commentScore": 5,
@@ -389,7 +389,7 @@
         "title": "Salesforce vs HubSpot Culture Clash?",
         "quote": "There’s a (rough) genealogy with tech sales in the valley. Its started with Oracle——led to Siebel—-led to SFDC. Each subsequent company being a slightly more touchey-feely type culture. But at their core they’re based on a Dbag world view and work culture.",
         "subreddit": "techsales",
-        "score": 26,
+        "score": 24,
         "comments": 20,
         "commentAuthor": "chiaboy",
         "commentScore": 19,
@@ -406,7 +406,7 @@
     "positive": 5,
     "negative": 1,
     "mixed": 2,
-    "lastUpdated": "2026-03-27",
+    "lastUpdated": "2026-03-28",
     "hackernews": [
       {
         "source": "hackernews",
@@ -458,7 +458,7 @@
         "score": 211,
         "comments": 105,
         "commentAuthor": "lazyant",
-        "commentScore": 22,
+        "commentScore": 23,
         "date": "2025-11-12",
         "url": "https://reddit.com/r/SaaS/comments/1ov9w12/i_analyzed_847_successful_startups_and_found_that/",
         "sentiment": "neutral"
@@ -468,10 +468,10 @@
         "title": "Landed Meta and Coinbase offers after spending nearly a year getting rejected",
         "quote": "Hire to pip. Meta is likely going to have another round of layoffs in 4 months - due to super intelligent labs high capex. Coinbase stock is down 45% over last 6 months.",
         "subreddit": "cscareerquestions",
-        "score": 214,
+        "score": 209,
         "comments": 90,
         "commentAuthor": "Intuitive31",
-        "commentScore": 77,
+        "commentScore": 75,
         "date": "2026-02-27",
         "url": "https://reddit.com/r/cscareerquestions/comments/1rg03si/landed_meta_and_coinbase_offers_after_spending/",
         "sentiment": "negative"
@@ -496,7 +496,7 @@
     "positive": 1,
     "negative": 0,
     "mixed": 5,
-    "lastUpdated": "2026-03-27",
+    "lastUpdated": "2026-03-28",
     "hackernews": [
       {
         "source": "hackernews",
@@ -545,10 +545,10 @@
         "title": "The entire \"Innovation Team\" at the Dallas office of Scale AI, that was hired to train the company's chatbots, has been fired",
         "quote": "The problem I see with the implementation of AI is people deploy it without oversight or review. For example, students having ChatGPT write their paper and turning it in without looking at it. I use AI alot in photo editing but I don't wave my hand and say, \"Fix my photos\".",
         "subreddit": "antiwork",
-        "score": 1295,
+        "score": 1297,
         "comments": 27,
         "commentAuthor": "OnDasher808",
-        "commentScore": 70,
+        "commentScore": 73,
         "date": "2025-10-26",
         "url": "https://reddit.com/r/antiwork/comments/1ogzee3/the_entire_innovation_team_at_the_dallas_office/",
         "sentiment": "positive"
@@ -562,7 +562,7 @@
     "positive": 2,
     "negative": 0,
     "mixed": 1,
-    "lastUpdated": "2026-03-27",
+    "lastUpdated": "2026-03-28",
     "hackernews": [
       {
         "source": "hackernews",
@@ -592,7 +592,7 @@
         "title": "Case Study: Together AI's entire GTM is basically \"give stuff away until you become unavoidable\"",
         "quote": "Been studying Together AI's growth lately and honestly their strategy is kind of underrated in how simple it is. They didn't go build a sales team. They didn't run ads. They just made themselves genuinely useful to developers and let that compound.",
         "subreddit": "SaaS",
-        "score": 6,
+        "score": 4,
         "comments": 4,
         "date": "2026-03-19",
         "url": "https://reddit.com/r/SaaS/comments/1rxu31r/case_study_together_ais_entire_gtm_is_basically/",
@@ -607,7 +607,7 @@
     "positive": 0,
     "negative": 0,
     "mixed": 2,
-    "lastUpdated": "2026-03-27",
+    "lastUpdated": "2026-03-28",
     "hackernews": [
       {
         "source": "hackernews",
@@ -635,7 +635,7 @@
     "positive": 2,
     "negative": 0,
     "mixed": 4,
-    "lastUpdated": "2026-03-27",
+    "lastUpdated": "2026-03-28",
     "hackernews": [
       {
         "source": "hackernews",
@@ -684,10 +684,10 @@
         "title": "I analyzed 847 successful startups and found that 90% of startup advice is backwards. The companies that won violated every rule. Here are the 10 foundation truths nobody tells you. (Part 1/5)",
         "quote": "Your 3 examples are bad (any example would probably be since survivorship bias): Airbnb didn’t “sell cereal” as their core business, they did a publicity stunt which is fine. Slack did pivot so it doesn’t go against advice to look into pivoting.",
         "subreddit": "SaaS",
-        "score": 213,
+        "score": 212,
         "comments": 105,
         "commentAuthor": "lazyant",
-        "commentScore": 25,
+        "commentScore": 23,
         "date": "2025-11-12",
         "url": "https://reddit.com/r/SaaS/comments/1ov9w12/i_analyzed_847_successful_startups_and_found_that/",
         "sentiment": "neutral"
@@ -701,7 +701,7 @@
     "positive": 0,
     "negative": 0,
     "mixed": 1,
-    "lastUpdated": "2026-03-27",
+    "lastUpdated": "2026-03-28",
     "hackernews": [],
     "reddit": [
       {
@@ -709,10 +709,10 @@
         "title": "[D] VAST AI GPUs for Development and Deployment",
         "quote": "I found RunPod server less to be better It’s more reliable than vast AI. You can write your own request handler and custom logic and deploy via a docker image, and you pay only for the time you use GPUs, there might be cold start issues but if latency is a big factor you can...",
         "subreddit": "MachineLearning",
-        "score": 6,
+        "score": 8,
         "comments": 33,
         "commentAuthor": "Effective-Yam-7656",
-        "commentScore": 5,
+        "commentScore": 6,
         "date": "2025-11-23",
         "url": "https://reddit.com/r/MachineLearning/comments/1p4jzgp/d_vast_ai_gpus_for_development_and_deployment/",
         "sentiment": "neutral"
@@ -726,7 +726,7 @@
     "positive": 2,
     "negative": 1,
     "mixed": 2,
-    "lastUpdated": "2026-03-27",
+    "lastUpdated": "2026-03-28",
     "hackernews": [
       {
         "source": "hackernews",
@@ -778,7 +778,7 @@
     "positive": 2,
     "negative": 0,
     "mixed": 6,
-    "lastUpdated": "2026-03-27",
+    "lastUpdated": "2026-03-28",
     "hackernews": [
       {
         "source": "hackernews",
@@ -827,10 +827,10 @@
         "title": "Ex-OpenAI researcher: ChatGPT hasn't actually been fixed",
         "quote": "Could we create a publicly accessible “sycophancy benchmark”? It looks like that’s essentially what you’ve done here. My broader point: if companies neglect proper safety testing for their models, maybe public benchmarks—and the resulting pressure or embarrassment—could...",
         "subreddit": "ChatGPT",
-        "score": 1507,
+        "score": 1502,
         "comments": 258,
         "commentAuthor": "[deleted]",
-        "commentScore": 45,
+        "commentScore": 44,
         "date": "2025-05-12",
         "url": "https://reddit.com/r/ChatGPT/comments/1kkydfa/exopenai_researcher_chatgpt_hasnt_actually_been/",
         "sentiment": "neutral"
@@ -840,7 +840,7 @@
         "title": "OpenAI sales GTM interview",
         "quote": "Totally sustainable to pay employees $1m on their first year anniversary and another $1m on their second. Super convenient it’s all in openai stock now too. I just don’t see the path to success there. That said I am envious of your opportunity",
         "subreddit": "techsales",
-        "score": 6,
+        "score": 7,
         "comments": 45,
         "commentAuthor": "Capital-Value8479",
         "commentScore": 9,
@@ -853,10 +853,10 @@
         "title": "How Does Promotion Work at OpenAI?",
         "quote": "It’s the same as any other company. There is research and there is product. OpenAI still hires plain ass engineers to build and scale.",
         "subreddit": "cscareerquestions",
-        "score": 6,
+        "score": 8,
         "comments": 3,
         "commentAuthor": "pm_me_github_repos",
-        "commentScore": 4,
+        "commentScore": 5,
         "date": "2026-01-10",
         "url": "https://reddit.com/r/cscareerquestions/comments/1q8zkq9/how_does_promotion_work_at_openai/",
         "sentiment": "neutral"
@@ -870,7 +870,7 @@
     "positive": 1,
     "negative": 2,
     "mixed": 5,
-    "lastUpdated": "2026-03-27",
+    "lastUpdated": "2026-03-28",
     "hackernews": [
       {
         "source": "hackernews",
@@ -919,10 +919,10 @@
         "title": "[D] Preparing for a DeepMind Gemini Team Interview — Any Resources, Tips, or Experience to Share?",
         "quote": "Culture fit: do not say anything racist or sexist (you would be surprised how many people get tripped up by this). Be open and social, be an active and engaged part of the conversation. You know, be collaborative, a team-player, someone other people want to work with.",
         "subreddit": "MachineLearning",
-        "score": 243,
+        "score": 242,
         "comments": 41,
         "commentAuthor": "one_hump_camel",
-        "commentScore": 80,
+        "commentScore": 82,
         "date": "2025-04-26",
         "url": "https://reddit.com/r/MachineLearning/comments/1k8gy12/d_preparing_for_a_deepmind_gemini_team_interview/",
         "sentiment": "neutral"
@@ -935,7 +935,7 @@
         "score": 0,
         "comments": 9,
         "commentAuthor": "Magnus-Methelson-m3",
-        "commentScore": 12,
+        "commentScore": 11,
         "date": "2026-03-15",
         "url": "https://reddit.com/r/cscareerquestions/comments/1ru2pw5/advice_on_how_to_best_position_myself_for/",
         "sentiment": "neutral"
@@ -960,7 +960,7 @@
     "positive": 4,
     "negative": 0,
     "mixed": 1,
-    "lastUpdated": "2026-03-27",
+    "lastUpdated": "2026-03-28",
     "hackernews": [
       {
         "source": "hackernews",
@@ -1012,7 +1012,7 @@
     "positive": 2,
     "negative": 0,
     "mixed": 3,
-    "lastUpdated": "2026-03-27",
+    "lastUpdated": "2026-03-28",
     "hackernews": [
       {
         "source": "hackernews",
@@ -1064,7 +1064,7 @@
     "positive": 4,
     "negative": 1,
     "mixed": 3,
-    "lastUpdated": "2026-03-27",
+    "lastUpdated": "2026-03-28",
     "hackernews": [
       {
         "source": "hackernews",
@@ -1113,7 +1113,7 @@
         "title": "Replit Core: I Paid $40 to Watch an AI Have a Spiritual Awakening",
         "quote": "Hahahaha, Poor Sam. I would recommend giving a try to [jdoodle.ai](http://www.jdoodle.ai) I think [jdoodle.ai](http://jdoodle.ai) is much more snappy developing and previewing your app.",
         "subreddit": "replit",
-        "score": 43,
+        "score": 42,
         "comments": 33,
         "commentAuthor": "Junior-Read-770",
         "commentScore": 2,
@@ -1126,7 +1126,7 @@
         "title": "To the 3 humans that work at Replit...",
         "quote": "Replit Bounties were also so cool that have top notch transparency.Wish they have given more depth to it instead or removing completely.",
         "subreddit": "replit",
-        "score": 14,
+        "score": 16,
         "comments": 11,
         "commentAuthor": "Important-Cow6737",
         "commentScore": 3,
@@ -1153,19 +1153,11 @@
     "name": "ElevenLabs",
     "overallSentiment": "mixed",
     "totalMentions": 7,
-    "positive": 1,
-    "negative": 0,
+    "positive": 0,
+    "negative": 1,
     "mixed": 6,
-    "lastUpdated": "2026-03-27",
+    "lastUpdated": "2026-03-28",
     "hackernews": [
-      {
-        "source": "hackernews",
-        "quote": "I&#x27;ve been experimenting with autonomous coordination between two Claude Code instances (Opus and Sonnet) using a simple timer-based polling protocol. Results: they&#x27;re coordinating real work, avoiding file conflicts, and acknowledging each other&#x27;s contributions.",
-        "author": "Drew-Aetherwave",
-        "date": "2026-03-15",
-        "url": "https://news.ycombinator.com/item?id=47391328",
-        "sentiment": "positive"
-      },
       {
         "source": "hackernews",
         "quote": "(I work at ElevenLabs)Sad to hear this. How are you submitting the bug report? If you submit an issue via any of our open source repos on GitHub you&#x27;ll get a timely human response.",
@@ -1197,6 +1189,14 @@
         "date": "2025-08-10",
         "url": "https://news.ycombinator.com/item?id=44856894",
         "sentiment": "neutral"
+      },
+      {
+        "source": "hackernews",
+        "quote": "I also find current voice interfaces are terrible. I only use voice commands to set timers or play music.That said, voice is the original social interface for humans. We learn to speak much earlier than we learn to read&#x2F;write.",
+        "author": "gunnaraasen",
+        "date": "2025-08-07",
+        "url": "https://news.ycombinator.com/item?id=44829622",
+        "sentiment": "negative"
       }
     ],
     "reddit": [
@@ -1205,10 +1205,10 @@
         "title": "Elevenlabs SDR",
         "quote": "I dont work there. Just go for it. It´s one of the leading companies in voice / speech AI. and spending time there (and perfoming well) will almost guarantee an immensly useful experience.",
         "subreddit": "techsales",
-        "score": 5,
+        "score": 6,
         "comments": 33,
         "commentAuthor": "readthisrandomstuff",
-        "commentScore": 4,
+        "commentScore": 5,
         "date": "2026-01-07",
         "url": "https://reddit.com/r/techsales/comments/1q6sojl/elevenlabs_sdr/",
         "sentiment": "neutral"
@@ -1235,7 +1235,7 @@
     "positive": 3,
     "negative": 0,
     "mixed": 2,
-    "lastUpdated": "2026-03-27",
+    "lastUpdated": "2026-03-28",
     "hackernews": [
       {
         "source": "hackernews",
@@ -1287,7 +1287,7 @@
     "positive": 0,
     "negative": 1,
     "mixed": 4,
-    "lastUpdated": "2026-03-27",
+    "lastUpdated": "2026-03-28",
     "hackernews": [
       {
         "source": "hackernews",
@@ -1339,7 +1339,7 @@
     "positive": 3,
     "negative": 0,
     "mixed": 2,
-    "lastUpdated": "2026-03-27",
+    "lastUpdated": "2026-03-28",
     "hackernews": [
       {
         "source": "hackernews",
@@ -1391,7 +1391,7 @@
     "positive": 3,
     "negative": 0,
     "mixed": 2,
-    "lastUpdated": "2026-03-27",
+    "lastUpdated": "2026-03-28",
     "hackernews": [
       {
         "source": "hackernews",
@@ -1438,12 +1438,12 @@
   },
   "airbnb": {
     "name": "Airbnb",
-    "overallSentiment": "mixed",
-    "totalMentions": 7,
-    "positive": 3,
+    "overallSentiment": "positive",
+    "totalMentions": 8,
+    "positive": 4,
     "negative": 1,
     "mixed": 3,
-    "lastUpdated": "2026-03-27",
+    "lastUpdated": "2026-03-28",
     "hackernews": [
       {
         "source": "hackernews",
@@ -1489,27 +1489,40 @@
     "reddit": [
       {
         "source": "reddit",
+        "title": "I analyzed 847 successful startups and found that 90% of startup advice is backwards. The companies that won violated every rule. Here are the 10 foundation truths nobody tells you. (Part 1/5)",
+        "quote": "Your 3 examples are bad (any example would probably be since survivorship bias): Airbnb didn’t “sell cereal” as their core business, they did a publicity stunt which is fine. Slack did pivot so it doesn’t go against advice to look into pivoting.",
+        "subreddit": "SaaS",
+        "score": 208,
+        "comments": 105,
+        "commentAuthor": "lazyant",
+        "commentScore": 23,
+        "date": "2025-11-12",
+        "url": "https://reddit.com/r/SaaS/comments/1ov9w12/i_analyzed_847_successful_startups_and_found_that/",
+        "sentiment": "neutral"
+      },
+      {
+        "source": "reddit",
         "title": "Currently a Software Engineer working at Airbnb, need help in determining future career moves.",
         "quote": "I’m surprised they are paying as much as £70k in India, that’s an exceptional salary. Even UK SWE, on average, don’t make that much. If you move to UK you will earn £70k-£90k with far far far higher cost of living. Honestly.",
         "subreddit": "cscareerquestionsuk",
         "score": 0,
         "comments": 66,
         "commentAuthor": "[deleted]",
-        "commentScore": 24,
+        "commentScore": 25,
         "date": "2026-01-03",
         "url": "https://reddit.com/r/cscareerquestionsuk/comments/1q2r4py/currently_a_software_engineer_working_at_airbnb/",
         "sentiment": "neutral"
       },
       {
         "source": "reddit",
-        "title": "Fridge Stopped Working at Airbnb, are my groceries covered? [MEXICO]",
-        "quote": "The mini fridge at my airbnb started emitting a burnt plastic smell I immediately researched it learned I should unplug the unit and ventilate the room. I’ve contacted my host about this issue and am waiting on a response.",
-        "subreddit": "AirBnB",
-        "score": 1,
-        "comments": 5,
-        "date": "2025-11-18",
-        "url": "https://reddit.com/r/AirBnB/comments/1p022lc/fridge_stopped_working_at_airbnb_are_my_groceries/",
-        "sentiment": "neutral"
+        "title": "Is anyone aware of Airbnb's core values interview round ?",
+        "quote": "Hey folks, I have recently interviewed for Airbnb G8 position and have a cultural fit kind of round which got scheduled today. I had my on sites completed 3 days earlier consisting of a behavioural, 2 coding and a System Design round.",
+        "subreddit": "leetcode",
+        "score": 2,
+        "comments": 8,
+        "date": "2025-08-21",
+        "url": "https://reddit.com/r/leetcode/comments/1mweh9a/is_anyone_aware_of_airbnbs_core_values_interview/",
+        "sentiment": "positive"
       }
     ]
   },
@@ -1520,7 +1533,7 @@
     "positive": 3,
     "negative": 1,
     "mixed": 1,
-    "lastUpdated": "2026-03-27",
+    "lastUpdated": "2026-03-28",
     "hackernews": [
       {
         "source": "hackernews",
@@ -1568,11 +1581,11 @@
   "cursor": {
     "name": "Cursor",
     "overallSentiment": "mixed",
-    "totalMentions": 6,
+    "totalMentions": 7,
     "positive": 2,
     "negative": 0,
-    "mixed": 4,
-    "lastUpdated": "2026-03-27",
+    "mixed": 5,
+    "lastUpdated": "2026-03-28",
     "hackernews": [
       {
         "source": "hackernews",
@@ -1618,13 +1631,24 @@
     "reddit": [
       {
         "source": "reddit",
+        "title": "Exploitative Unpaid \"Work Trials\" in Tech - My Experience Interviewing at Cursor (I will not promote)",
+        "quote": "Paid work trials are fair game, and as a hiring manager, it was a really useful tool that provided a much better signal than most interviews. However, unpaid work trials where you're building something useful are probably illegal, but I'm not a lawyer.",
+        "subreddit": "startups",
+        "score": 40,
+        "comments": 33,
+        "commentAuthor": "NullPointer1",
+        "commentScore": 24,
+        "date": "2025-10-01",
+        "url": "https://reddit.com/r/startups/comments/1nuu67a/exploitative_unpaid_work_trials_in_tech_my/",
+        "sentiment": "neutral"
+      },
+      {
+        "source": "reddit",
         "title": "Slow requests",
-        "quote": "I switched to Windsurf and use SWE-1 for most of my tasks. It help me save a lot of credit for complex tasks.",
+        "quote": "People were really complaining about them and I saw the people working at cursor and what not saying that its based on your usage you may wait longer, but for my very first two slow requests of the month which renews in 3 days, I waited 3-4 minutes each time😂😂 What is this man",
         "subreddit": "cursor",
-        "score": 2,
+        "score": 1,
         "comments": 2,
-        "commentAuthor": "sbayit",
-        "commentScore": 2,
         "date": "2025-06-04",
         "url": "https://reddit.com/r/cursor/comments/1l3h7xf/slow_requests/",
         "sentiment": "neutral"
@@ -1634,11 +1658,11 @@
   "figma": {
     "name": "Figma",
     "overallSentiment": "mixed",
-    "totalMentions": 6,
+    "totalMentions": 5,
     "positive": 1,
     "negative": 2,
-    "mixed": 3,
-    "lastUpdated": "2026-03-27",
+    "mixed": 2,
+    "lastUpdated": "2026-03-28",
     "hackernews": [
       {
         "source": "hackernews",
@@ -1681,21 +1705,7 @@
         "sentiment": "negative"
       }
     ],
-    "reddit": [
-      {
-        "source": "reddit",
-        "title": "Please stop posting about the Figma UI3 update",
-        "quote": "I like the new one. Internet people just like to complain",
-        "subreddit": "FigmaDesign",
-        "score": 164,
-        "comments": 72,
-        "commentAuthor": "MarginWalker13",
-        "commentScore": 85,
-        "date": "2025-05-04",
-        "url": "https://reddit.com/r/FigmaDesign/comments/1kemrsw/please_stop_posting_about_the_figma_ui3_update/",
-        "sentiment": "neutral"
-      }
-    ]
+    "reddit": []
   },
   "linear": {
     "name": "Linear",
@@ -1704,7 +1714,7 @@
     "positive": 1,
     "negative": 1,
     "mixed": 3,
-    "lastUpdated": "2026-03-27",
+    "lastUpdated": "2026-03-28",
     "hackernews": [
       {
         "source": "hackernews",
@@ -1752,11 +1762,11 @@
   "vercel": {
     "name": "Vercel",
     "overallSentiment": "mixed",
-    "totalMentions": 7,
+    "totalMentions": 5,
     "positive": 2,
     "negative": 0,
-    "mixed": 5,
-    "lastUpdated": "2026-03-27",
+    "mixed": 3,
+    "lastUpdated": "2026-03-28",
     "hackernews": [
       {
         "source": "hackernews",
@@ -1799,41 +1809,16 @@
         "sentiment": "neutral"
       }
     ],
-    "reddit": [
-      {
-        "source": "reddit",
-        "title": "I'm leerob and I work at Vercel, AMA!",
-        "quote": "No question, just want to say I appreciate your style for your videos. It’s a good pace and always informative. Cheers!",
-        "subreddit": "vercel",
-        "score": 66,
-        "comments": 144,
-        "commentAuthor": "MomentousTime1337",
-        "commentScore": 12,
-        "date": "2025-05-01",
-        "url": "https://reddit.com/r/vercel/comments/1kci8dr/im_leerob_and_i_work_at_vercel_ama/",
-        "sentiment": "neutral"
-      },
-      {
-        "source": "reddit",
-        "title": "want to buy enterprise but have to book a call, can someone who works at vercel contact me asap?",
-        "quote": "I want to purchase enterprise usage today but I have to wait until tomorrow to have a call and I want it set up asap If anyone at vercel has access to this please message me and I'll DM my email",
-        "subreddit": "vercel",
-        "score": 0,
-        "comments": 2,
-        "date": "2025-09-18",
-        "url": "https://reddit.com/r/vercel/comments/1nk8qi2/want_to_buy_enterprise_but_have_to_book_a_call/",
-        "sentiment": "neutral"
-      }
-    ]
+    "reddit": []
   },
   "posthog": {
     "name": "PostHog",
-    "overallSentiment": "positive",
-    "totalMentions": 6,
-    "positive": 3,
+    "overallSentiment": "mixed",
+    "totalMentions": 5,
+    "positive": 2,
     "negative": 0,
     "mixed": 3,
-    "lastUpdated": "2026-03-27",
+    "lastUpdated": "2026-03-28",
     "hackernews": [
       {
         "source": "hackernews",
@@ -1876,28 +1861,16 @@
         "sentiment": "positive"
       }
     ],
-    "reddit": [
-      {
-        "source": "reddit",
-        "title": "The hidden benefits of being an open-source startup",
-        "quote": "PostHog wouldn’t be here now if it wasn’t open source. It’s *that* core to our success, and has been since day one. Inevitably though, what “being open source” means has changed as we've grown.",
-        "subreddit": "posthog",
-        "score": 16,
-        "comments": 1,
-        "date": "2025-05-20",
-        "url": "https://reddit.com/r/posthog/comments/1kr74xb/the_hidden_benefits_of_being_an_opensource_startup/",
-        "sentiment": "positive"
-      }
-    ]
+    "reddit": []
   },
   "supabase": {
     "name": "Supabase",
     "overallSentiment": "positive",
-    "totalMentions": 6,
-    "positive": 5,
+    "totalMentions": 5,
+    "positive": 4,
     "negative": 0,
     "mixed": 1,
-    "lastUpdated": "2026-03-27",
+    "lastUpdated": "2026-03-28",
     "hackernews": [
       {
         "source": "hackernews",
@@ -1940,30 +1913,16 @@
         "sentiment": "positive"
       }
     ],
-    "reddit": [
-      {
-        "source": "reddit",
-        "title": "How do I get hired into Supabase? I think I found my home.",
-        "quote": "I would start with using your own voice instead of relying on an LLM to express your thoughts and feelings. It's so transparent and embarrassing. Otherwise, the answer would obviously be contributing to the open source project.",
-        "subreddit": "Supabase",
-        "score": 32,
-        "comments": 31,
-        "commentAuthor": "Liftaris",
-        "commentScore": 43,
-        "date": "2025-11-13",
-        "url": "https://reddit.com/r/Supabase/comments/1ovq3ta/how_do_i_get_hired_into_supabase_i_think_i_found/",
-        "sentiment": "positive"
-      }
-    ]
+    "reddit": []
   },
   "tailscale": {
     "name": "Tailscale",
     "overallSentiment": "positive",
-    "totalMentions": 6,
+    "totalMentions": 5,
     "positive": 3,
     "negative": 0,
-    "mixed": 3,
-    "lastUpdated": "2026-03-27",
+    "mixed": 2,
+    "lastUpdated": "2026-03-28",
     "hackernews": [
       {
         "source": "hackernews",
@@ -2006,28 +1965,16 @@
         "sentiment": "neutral"
       }
     ],
-    "reddit": [
-      {
-        "source": "reddit",
-        "title": "Anyone here working at Tailscale?",
-        "quote": "I found tailscale as a company very interesting, the problem they are solving, people and product. I am a software engineer by profession and wanting to work in a company like Tailscale.",
-        "subreddit": "Tailscale",
-        "score": 25,
-        "comments": 13,
-        "date": "2025-07-12",
-        "url": "https://reddit.com/r/Tailscale/comments/1lxuhlw/anyone_here_working_at_tailscale/",
-        "sentiment": "neutral"
-      }
-    ]
+    "reddit": []
   },
   "suno": {
     "name": "Suno",
-    "overallSentiment": "positive",
-    "totalMentions": 6,
-    "positive": 3,
+    "overallSentiment": "mixed",
+    "totalMentions": 5,
+    "positive": 2,
     "negative": 0,
     "mixed": 3,
-    "lastUpdated": "2026-03-27",
+    "lastUpdated": "2026-03-28",
     "hackernews": [
       {
         "source": "hackernews",
@@ -2035,6 +1982,14 @@
         "author": "A_D_E_P_T",
         "date": "2026-02-08",
         "url": "https://news.ycombinator.com/item?id=46930715",
+        "sentiment": "neutral"
+      },
+      {
+        "source": "hackernews",
+        "quote": "https:&#x2F;&#x2F;www.wsj.com&#x2F;arts-culture&#x2F;music&#x2F;suno-ceo-mikey-shulma...",
+        "author": "bookofjoe",
+        "date": "2026-03-28",
+        "url": "https://news.ycombinator.com/item?id=47557806",
         "sentiment": "neutral"
       },
       {
@@ -2060,29 +2015,9 @@
         "date": "2026-03-24",
         "url": "https://news.ycombinator.com/item?id=47510632",
         "sentiment": "positive"
-      },
-      {
-        "source": "hackernews",
-        "quote": "That is the decision of artists to sign with a mega corp. Any tom dick or harry can create a Spotify account, load their warbling autotuned ditty written by themselves ( or AI ) on any theme, in any genre and wait for fame or fortune to appear or not.",
-        "author": "injidup",
-        "date": "2025-12-21",
-        "url": "https://news.ycombinator.com/item?id=46342730",
-        "sentiment": "mixed"
       }
     ],
-    "reddit": [
-      {
-        "source": "reddit",
-        "title": "Greetings from the Suno team 👋",
-        "quote": "**Hey** r/SunoAI **community!** It’s great to meet all of you! A special S/O to the moderators for putting this space together and working so hard to make sure it's safe and fun! It’s been incredible to see the creativity and energy happening here!",
-        "subreddit": "SunoAI",
-        "score": 509,
-        "comments": 479,
-        "date": "2025-09-24",
-        "url": "https://reddit.com/r/SunoAI/comments/1npn6mb/greetings_from_the_suno_team/",
-        "sentiment": "positive"
-      }
-    ]
+    "reddit": []
   },
   "pylon": {
     "name": "Pylon",
@@ -2091,7 +2026,7 @@
     "positive": 0,
     "negative": 0,
     "mixed": 2,
-    "lastUpdated": "2026-03-27",
+    "lastUpdated": "2026-03-28",
     "hackernews": [
       {
         "source": "hackernews",
@@ -2119,7 +2054,7 @@
     "positive": 1,
     "negative": 1,
     "mixed": 3,
-    "lastUpdated": "2026-03-27",
+    "lastUpdated": "2026-03-28",
     "hackernews": [
       {
         "source": "hackernews",
@@ -2171,7 +2106,7 @@
     "positive": 2,
     "negative": 0,
     "mixed": 3,
-    "lastUpdated": "2026-03-27",
+    "lastUpdated": "2026-03-28",
     "hackernews": [
       {
         "source": "hackernews",
@@ -2223,7 +2158,7 @@
     "positive": 2,
     "negative": 0,
     "mixed": 3,
-    "lastUpdated": "2026-03-27",
+    "lastUpdated": "2026-03-28",
     "hackernews": [
       {
         "source": "hackernews",
@@ -2275,7 +2210,7 @@
     "positive": 0,
     "negative": 1,
     "mixed": 4,
-    "lastUpdated": "2026-03-27",
+    "lastUpdated": "2026-03-28",
     "hackernews": [
       {
         "source": "hackernews",
@@ -2323,11 +2258,11 @@
   "airtable": {
     "name": "Airtable",
     "overallSentiment": "mixed",
-    "totalMentions": 6,
+    "totalMentions": 5,
     "positive": 2,
     "negative": 0,
-    "mixed": 4,
-    "lastUpdated": "2026-03-27",
+    "mixed": 3,
+    "lastUpdated": "2026-03-28",
     "hackernews": [
       {
         "source": "hackernews",
@@ -2370,21 +2305,7 @@
         "sentiment": "neutral"
       }
     ],
-    "reddit": [
-      {
-        "source": "reddit",
-        "title": "Hiring for an Airtable Implementation Lead! (LA/US-based, enterprise-scale, creative operations focus)",
-        "quote": "Hi @psengath -- are salary targets posted anywhere.",
-        "subreddit": "Airtable",
-        "score": 11,
-        "comments": 4,
-        "commentAuthor": "latetothegame2",
-        "commentScore": 6,
-        "date": "2025-11-06",
-        "url": "https://reddit.com/r/Airtable/comments/1opkenp/hiring_for_an_airtable_implementation_lead/",
-        "sentiment": "neutral"
-      }
-    ]
+    "reddit": []
   },
   "brex": {
     "name": "Brex",
@@ -2393,7 +2314,7 @@
     "positive": 2,
     "negative": 0,
     "mixed": 3,
-    "lastUpdated": "2026-03-27",
+    "lastUpdated": "2026-03-28",
     "hackernews": [
       {
         "source": "hackernews",
@@ -2441,11 +2362,11 @@
   "datadog": {
     "name": "Datadog",
     "overallSentiment": "positive",
-    "totalMentions": 8,
-    "positive": 5,
+    "totalMentions": 5,
+    "positive": 4,
     "negative": 0,
-    "mixed": 3,
-    "lastUpdated": "2026-03-27",
+    "mixed": 1,
+    "lastUpdated": "2026-03-28",
     "hackernews": [
       {
         "source": "hackernews",
@@ -2488,59 +2409,17 @@
         "sentiment": "positive"
       }
     ],
-    "reddit": [
-      {
-        "source": "reddit",
-        "title": "Some Tips For New Grads and Job Search in General",
-        "quote": "Strategy for Applying and How to get More Responses: * Do apply to any and all big companies. This includes Big Tech (tech companies such as Google, Datadog, OpenAI, FAANG etc.) but also includes big non-tech companies (think Walmart, Target, Ford, Epic to a certain extent).",
-        "subreddit": "cscareerquestions",
-        "score": 15,
-        "comments": 2,
-        "date": "2026-01-12",
-        "url": "https://reddit.com/r/cscareerquestions/comments/1qbb5z0/some_tips_for_new_grads_and_job_search_in_general/",
-        "sentiment": "neutral"
-      },
-      {
-        "source": "reddit",
-        "title": "We’re the co-founders of WarpStream. Ask Us Anything.",
-        "quote": "Hey, everyone. We are [Richie Artoul](https://www.linkedin.com/in/richardartoul/) and [Ryan Worl](https://www.linkedin.com/in/ryanworl/), co-founders and engineers at[ WarpStream](https://www.warpstream.",
-        "subreddit": "dataengineering",
-        "score": 0,
-        "comments": 5,
-        "date": "2025-05-13",
-        "url": "https://reddit.com/r/dataengineering/comments/1klsl4o/were_the_cofounders_of_warpstream_ask_us_anything/",
-        "sentiment": "positive"
-      },
-      {
-        "source": "reddit",
-        "title": "Datadog commercial AE interview",
-        "quote": "Hi Guys! I have a sale role play challange interview scheduled with Datadog. Anyone who work at Datadog and can give me some tips. Thanks in advance",
-        "subreddit": "techsales",
-        "score": 2,
-        "comments": 3,
-        "date": "2025-04-03",
-        "url": "https://reddit.com/r/techsales/comments/1jqex12/datadog_commercial_ae_interview/",
-        "sentiment": "neutral"
-      }
-    ]
+    "reddit": []
   },
   "cloudflare": {
     "name": "Cloudflare",
-    "overallSentiment": "mixed",
-    "totalMentions": 7,
-    "positive": 2,
-    "negative": 2,
-    "mixed": 3,
-    "lastUpdated": "2026-03-27",
+    "overallSentiment": "negative",
+    "totalMentions": 5,
+    "positive": 1,
+    "negative": 3,
+    "mixed": 1,
+    "lastUpdated": "2026-03-28",
     "hackernews": [
-      {
-        "source": "hackernews",
-        "quote": "In my own humble opinion, jgc is the reason behind Cloudflare&#x27;s open culture and incredible post-mortems. Thanks for making Cloudflare an incredible company to work for and with John. &lt;3",
-        "author": "sudsred",
-        "date": "2025-03-28",
-        "url": "https://news.ycombinator.com/item?id=43508286",
-        "sentiment": "neutral"
-      },
       {
         "source": "hackernews",
         "quote": "When I was at Big Corp, I loved reading the internal postmortems. They were usually very interesting and I learned a lot. It&#x27;s one of the things I miss about leaving.",
@@ -2572,32 +2451,17 @@
         "date": "2025-11-18",
         "url": "https://news.ycombinator.com/item?id=45964366",
         "sentiment": "negative"
-      }
-    ],
-    "reddit": [
-      {
-        "source": "reddit",
-        "title": "Working at Cloudflare",
-        "quote": "Hey gang, I see some customer success roles open at Cloudflare and am thinking of applying. Curious what's it like working at this company in the US? If you can share your role there for context, that would be great. Thank you!",
-        "subreddit": "CloudFlare",
-        "score": 21,
-        "comments": 26,
-        "date": "2025-04-15",
-        "url": "https://reddit.com/r/CloudFlare/comments/1k02may/working_at_cloudflare/",
-        "sentiment": "positive"
       },
       {
-        "source": "reddit",
-        "title": "First day working at Cloudflare. Gonna do some Cloudflare Pages Updates, all of your builds should be building faster! 🙏",
-        "quote": "https://preview.redd.it/n5908y7rs76g1.jpg?width=1080&amp;format=pjpg&amp;auto=webp&amp;s=af2bacde4ead6cb0aac9270fd7467e7cd56f7130",
-        "subreddit": "CloudFlare",
-        "score": 0,
-        "comments": 16,
-        "date": "2025-12-09",
-        "url": "https://reddit.com/r/CloudFlare/comments/1pidu8s/first_day_working_at_cloudflare_gonna_do_some/",
-        "sentiment": "neutral"
+        "source": "hackernews",
+        "quote": "Now. Right now. Seriously, stop using this terrible service. We also need to change the narrative that step 1 in every tutorial is &quot;sign up for Cloudflare&quot;. This is partly a culture problem.",
+        "author": "venturecruelty",
+        "date": "2025-12-05",
+        "url": "https://news.ycombinator.com/item?id=46167446",
+        "sentiment": "negative"
       }
-    ]
+    ],
+    "reddit": []
   },
   "crusoe": {
     "name": "Crusoe",
@@ -2606,7 +2470,7 @@
     "positive": 2,
     "negative": 0,
     "mixed": 3,
-    "lastUpdated": "2026-03-27",
+    "lastUpdated": "2026-03-28",
     "hackernews": [
       {
         "source": "hackernews",
@@ -2658,7 +2522,7 @@
     "positive": 2,
     "negative": 0,
     "mixed": 1,
-    "lastUpdated": "2026-03-27",
+    "lastUpdated": "2026-03-28",
     "hackernews": [
       {
         "source": "hackernews",
@@ -2694,7 +2558,7 @@
     "positive": 1,
     "negative": 0,
     "mixed": 0,
-    "lastUpdated": "2026-03-27",
+    "lastUpdated": "2026-03-28",
     "hackernews": [
       {
         "source": "hackernews",

@@ -1,0 +1,5 @@
+PR,URL,Title,Content type,Is rendered page,HTTP status code,Organic traffic,Size (bytes),Time to first byte (ms),Loading time (ms),Depth,Is indexable page,No. of all inlinks,First found at
+20,https://jobsbyculture.com/compare/posthog-vs-replit,PostHog vs Replit: Culture & Glassdoor Compared | JobsByCulture,text/html; charset=utf-8,false,200,0,9069,5484,5485,0,true,2,
+20,https://jobsbyculture.com/compare/databricks-vs-stripe,Databricks vs Stripe: Culture & Glassdoor Compared | JobsByCulture,text/html; charset=utf-8,false,200,0,9484,10532,10532,0,true,2,
+20,https://jobsbyculture.com/locations/paris/ml-ai,ML / AI Jobs in Paris | AI & Tech Companies | JobsByCulture,text/html; charset=utf-8,false,200,0,6602,7898,7899,0,true,14,
+20,https://jobsbyculture.com/compare/airtable-vs-huggingface,Airtable vs Hugging Face: Culture & Glassdoor Compared | JobsByCulture,text/html; charset=utf-8,false,200,0,9374,6581,6581,0,true,2,

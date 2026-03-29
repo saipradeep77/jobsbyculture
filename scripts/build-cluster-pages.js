@@ -41,20 +41,40 @@ const COMPANIES = extract('COMPANIES');
 const COMPANY_REVIEWS = extract('COMPANY_REVIEWS');
 const JOBS = extractArray('JOBS');
 
-// ─── Classify helpers (same logic as export script) ───
+// ─── Classify helpers (synced with update-counts.js — keep these identical) ───
 function classifyRole(title) {
     const t = title.toLowerCase();
-    if (/(machine learning|ml |ml\/|deep learning|ai research|ai scientist|llm|nlp|computer vision|cv engineer|research scientist|research engineer|reinforcement learning|ai safety|interpretability|alignment)/.test(t)) return 'ml-ai';
-    if (/(data scien|data eng|data analy|data infra|data platform|analytics engineer|business intel)/.test(t)) return 'data';
-    if (/design/.test(t) && !/engineer|security/.test(t)) return 'design';
-    if (/(product manag|program manag|technical program|product owner|product lead|head of product|product strateg|product director|product operation|product analys|scrum master|agile coach)/.test(t)) return 'product';
-    if (/(engineer|developer|swe|software|frontend|backend|fullstack|full-stack|devops|sre|infrastructure|platform|architect|firmware|embedded)/.test(t) && !/(solutions engineer|solutions architect|sales engineer|developer relations|devrel)/.test(t)) return 'engineering';
-    if (/(marketing|growth|content|seo|communications|brand|copywriter|developer relations|devrel|community manag|editorial|creative)/.test(t)) return 'marketing';
-    if (/(sales|account exec|account manag|business develop|revenue|gtm|go-to-market|solutions|partnerships|customer success|pre-sales)/.test(t) && !/accountant/.test(t)) return 'sales';
-    if (/(finance|accounti|accountant|controller|treasury|fp&a|financial|investor relations)/.test(t)) return 'finance';
+    // ML/AI
+    const mlPatterns = ['machine learning', 'research scientist', 'research engineer', 'reinforcement learning', 'ai safety', 'interpretability', 'alignment', 'computer vision', 'nlp engineer', 'natural language', 'deep learning', 'ai researcher', 'ai research', 'ml engineer', 'ml infrastructure', 'ml platform', 'ml acceleration', 'ml networking'];
+    if (mlPatterns.some(p => t.includes(p)) || / ml /i.test(t) || /\bllm\b/i.test(t)) return 'ml-ai';
+    // Data
+    const dataPatterns = ['data scien', 'data engineer', 'data analy', 'data infra', 'data platform', 'advanced analytics', 'business intelligence', 'bi engineer', 'bi analyst', 'analytics engineer'];
+    if (dataPatterns.some(p => t.includes(p))) return 'data';
+    // Design
+    if (t.includes('design') && !t.includes('engineer') && !t.includes('security')) return 'design';
+    // Product
+    const productPatterns = ['product manag', 'program manag', 'technical program', 'product owner', 'product lead', 'scrum master', 'agile coach', 'product strateg', 'product director', 'head of product', 'product operation', 'product analys'];
+    if (productPatterns.some(p => t.includes(p))) return 'product';
+    // Engineering
+    const engPatterns = ['engineer', 'developer', 'architect', 'platform', 'sre ', 'site reliability', 'devops', 'qa ', 'quality assurance', 'security', 'systems', 'infrastructure', 'frontend', 'backend', 'fullstack', 'full stack', 'firmware', 'embedded'];
+    const engExclusions = ['developer relations', 'developer education', 'devrel', 'solutions engineer', 'solutions architect', 'sales engineer', 'business systems', 'customer support engineer', 'gtm'];
+    if (engPatterns.some(p => t.includes(p)) && !engExclusions.some(p => t.includes(p))) return 'engineering';
+    // Marketing
+    const marketingPatterns = ['marketing', 'communications', 'developer relations', 'developer education', 'devrel', 'brand', 'social media', 'public relations', 'copywriter', 'growth marketing', 'community manag', 'influencer', 'creative', 'editorial', 'content'];
+    if (marketingPatterns.some(p => t.includes(p))) return 'marketing';
+    // Sales
+    const salesPatterns = ['account exec', 'account manag', 'sales', 'solutions engineer', 'solutions architect', 'sales engineer', 'gtm', 'business develop', 'partnerships', 'deal desk', 'revenue', 'engagement manag', 'customer success', 'pre-sales'];
+    if (salesPatterns.some(p => t.includes(p)) && !t.includes('accountant')) return 'sales';
+    // Finance
+    const financePatterns = ['accountant', 'accounting', 'financial', 'fp&a', 'treasury', 'controller', 'actuary', 'actuarial', 'investor relations', 'bookkeeper'];
+    if (financePatterns.some(p => t.includes(p))) return 'finance';
+    // HR/People
     if (/(recruiter|recruiting|people ops|people partner|talent|hr |human resources|sourcer|onboarding|enablement)/.test(t)) return 'hr-people';
+    // Legal
     if (/(legal|counsel|compliance|policy|regulatory|paralegal|attorney)/.test(t)) return 'legal';
+    // Support
     if (/(support specialist|customer support|premium support|help desk|safety specialist|support delivery)/.test(t)) return 'support';
+    // Operations
     if (/(operations|ops |logistics|supply chain|procurement|coordinator|facilities|workplace|office manag)/.test(t)) return 'operations';
     return 'other';
 }

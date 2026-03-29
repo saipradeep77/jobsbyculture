@@ -1,11 +1,11 @@
 {
-  "totalJobs": 7101,
+  "totalJobs": 7108,
   "companyCount": 45,
   "companies": {
     "anthropic": {
       "name": "Anthropic",
       "glassdoor": 4.4,
-      "jobCount": 454,
+      "jobCount": 449,
       "values": [
         "ethical-ai",
         "learning",
@@ -45,7 +45,7 @@
     "mistral": {
       "name": "Mistral AI",
       "glassdoor": 4,
-      "jobCount": 145,
+      "jobCount": 144,
       "values": [
         "ship-fast",
         "eng-driven",
@@ -65,7 +65,7 @@
     "vercel": {
       "name": "Vercel",
       "glassdoor": 3.9,
-      "jobCount": 79,
+      "jobCount": 78,
       "values": [
         "ship-fast",
         "eng-driven",
@@ -75,7 +75,7 @@
     "stripe": {
       "name": "Stripe",
       "glassdoor": 4,
-      "jobCount": 515,
+      "jobCount": 514,
       "values": [
         "eng-driven",
         "learning",
@@ -105,7 +105,7 @@
     "cursor": {
       "name": "Cursor (Anysphere)",
       "glassdoor": 4,
-      "jobCount": 62,
+      "jobCount": 63,
       "values": [
         "ship-fast",
         "eng-driven",
@@ -135,7 +135,7 @@
     "coreweave": {
       "name": "CoreWeave",
       "glassdoor": 3.6,
-      "jobCount": 265,
+      "jobCount": 266,
       "values": [
         "eng-driven",
         "ship-fast",
@@ -175,7 +175,7 @@
     "airbnb": {
       "name": "Airbnb",
       "glassdoor": 4.1,
-      "jobCount": 258,
+      "jobCount": 262,
       "values": [
         "remote",
         "wlb",
@@ -185,7 +185,7 @@
     "figma": {
       "name": "Figma",
       "glassdoor": 3.7,
-      "jobCount": 151,
+      "jobCount": 152,
       "values": [
         "eng-driven",
         "ship-fast",
@@ -245,7 +245,7 @@
     "openai": {
       "name": "OpenAI",
       "glassdoor": 4.5,
-      "jobCount": 654,
+      "jobCount": 661,
       "values": [
         "eng-driven",
         "ship-fast",
@@ -275,7 +275,7 @@
     "langchain": {
       "name": "LangChain",
       "glassdoor": 4.6,
-      "jobCount": 94,
+      "jobCount": 95,
       "values": [
         "open-source",
         "eng-driven",
@@ -285,7 +285,7 @@
     "replit": {
       "name": "Replit",
       "glassdoor": 4,
-      "jobCount": 78,
+      "jobCount": 76,
       "values": [
         "ship-fast",
         "remote",
@@ -395,7 +395,7 @@
     "brex": {
       "name": "Brex",
       "glassdoor": 4,
-      "jobCount": 242,
+      "jobCount": 243,
       "values": [
         "ship-fast",
         "eng-driven",
@@ -415,7 +415,7 @@
     "cloudflare": {
       "name": "Cloudflare",
       "glassdoor": 3.9,
-      "jobCount": 525,
+      "jobCount": 524,
       "values": [
         "eng-driven",
         "ship-fast",
@@ -425,7 +425,7 @@
     "crusoe": {
       "name": "Crusoe",
       "glassdoor": 4.3,
-      "jobCount": 330,
+      "jobCount": 332,
       "values": [
         "ship-fast",
         "ethical-ai",
@@ -456,12 +456,12 @@
   "values": {
     "wlb": {
       "name": "Work-Life Balance",
-      "jobCount": 733,
+      "jobCount": 737,
       "companyCount": 6
     },
     "remote": {
       "name": "Remote-Friendly",
-      "jobCount": 1260,
+      "jobCount": 1263,
       "companyCount": 17
     },
     "flex-hours": {
@@ -476,22 +476,22 @@
     },
     "deep-work": {
       "name": "Deep Work / Low Meetings",
-      "jobCount": 315,
+      "jobCount": 316,
       "companyCount": 5
     },
     "transparent": {
       "name": "Transparent",
-      "jobCount": 2179,
+      "jobCount": 2178,
       "companyCount": 12
     },
     "flat": {
       "name": "Flat Hierarchy",
-      "jobCount": 1039,
+      "jobCount": 1035,
       "companyCount": 14
     },
     "diverse": {
       "name": "Diverse & Inclusive",
-      "jobCount": 1824,
+      "jobCount": 1828,
       "companyCount": 10
     },
     "psych-safety": {
@@ -501,66 +501,66 @@
     },
     "eng-driven": {
       "name": "Engineering-Driven",
-      "jobCount": 6540,
+      "jobCount": 6543,
       "companyCount": 40
     },
     "ship-fast": {
       "name": "Ship Fast & Iterate",
-      "jobCount": 3958,
+      "jobCount": 3967,
       "companyCount": 27
     },
     "open-source": {
       "name": "Open Source",
-      "jobCount": 930,
+      "jobCount": 931,
       "companyCount": 12
     },
     "learning": {
       "name": "Learning & Growth",
-      "jobCount": 5544,
+      "jobCount": 5546,
       "companyCount": 27
     },
     "equity": {
       "name": "Strong Comp & Equity",
-      "jobCount": 4344,
+      "jobCount": 4352,
       "companyCount": 15
     },
     "product-impact": {
       "name": "Direct Product Impact",
-      "jobCount": 4805,
+      "jobCount": 4811,
       "companyCount": 27
     },
     "many-hats": {
       "name": "Wears Many Hats",
-      "jobCount": 1407,
+      "jobCount": 1409,
       "companyCount": 17
     },
     "ethical-ai": {
       "name": "Ethical AI / Safety",
-      "jobCount": 1622,
+      "jobCount": 1626,
       "companyCount": 5
     },
     "social-impact": {
       "name": "Mission-Driven",
-      "jobCount": 862,
+      "jobCount": 857,
       "companyCount": 3
     }
   },
   "roles": {
     "ml-ai": {
       "name": "ML / AI",
-      "jobCount": 248
+      "jobCount": 249
     },
     "data": {
       "name": "Data",
-      "jobCount": 187
+      "jobCount": 186
     },
     "design": {
       "name": "Design",
-      "jobCount": 144
+      "jobCount": 143
     },
     "engineering": {
       "name": "Engineering",
-      "jobCount": 2230
+      "jobCount": 2240
     },
     "product": {
       "name": "Product",
@@ -568,11 +568,11 @@
     },
     "marketing": {
       "name": "Marketing",
-      "jobCount": 281
+      "jobCount": 280
     },
     "sales": {
       "name": "Sales / GTM",
-      "jobCount": 1873
+      "jobCount": 1874
     },
     "finance": {
       "name": "Finance",
@@ -580,29 +580,29 @@
     },
     "hr-people": {
       "name": "HR / People",
-      "jobCount": 147
+      "jobCount": 146
     },
     "legal": {
       "name": "Legal",
-      "jobCount": 120
+      "jobCount": 119
     },
     "support": {
       "name": "Support",
-      "jobCount": 61
+      "jobCount": 59
     },
     "operations": {
       "name": "Operations",
-      "jobCount": 207
+      "jobCount": 205
     }
   },
   "seniorities": {
     "entry": {
       "name": "Entry / Junior",
-      "jobCount": 183,
+      "jobCount": 185,
       "roles": {
         "ml-ai": 8,
-        "engineering": 38,
-        "support": 2,
+        "engineering": 39,
+        "support": 3,
         "sales": 23,
         "other": 43,
         "legal": 7,
@@ -617,29 +617,29 @@
     },
     "mid": {
       "name": "Mid-Level",
-      "jobCount": 3168,
+      "jobCount": 3174,
       "roles": {
         "sales": 1076,
-        "other": 407,
-        "data": 97,
-        "ml-ai": 168,
-        "engineering": 1026,
-        "legal": 57,
+        "other": 410,
+        "data": 96,
+        "ml-ai": 169,
+        "engineering": 1034,
+        "legal": 56,
         "finance": 24,
-        "marketing": 60,
+        "marketing": 59,
         "operations": 68,
         "hr-people": 83,
         "design": 47,
         "product": 8,
-        "support": 47
+        "support": 44
       }
     },
     "senior": {
       "name": "Senior",
-      "jobCount": 903,
+      "jobCount": 905,
       "roles": {
         "other": 56,
-        "engineering": 389,
+        "engineering": 391,
         "ml-ai": 26,
         "sales": 274,
         "legal": 23,
@@ -655,10 +655,10 @@
     },
     "staff": {
       "name": "Staff / Principal",
-      "jobCount": 534,
+      "jobCount": 535,
       "roles": {
         "other": 47,
-        "engineering": 371,
+        "engineering": 372,
         "ml-ai": 27,
         "data": 31,
         "hr-people": 3,
@@ -671,17 +671,17 @@
     },
     "lead": {
       "name": "Lead / Manager",
-      "jobCount": 1987,
+      "jobCount": 1983,
       "roles": {
-        "marketing": 178,
+        "marketing": 177,
         "data": 20,
-        "engineering": 358,
+        "engineering": 356,
         "other": 427,
         "finance": 33,
         "product": 386,
         "sales": 404,
         "design": 19,
-        "operations": 89,
+        "operations": 88,
         "ml-ai": 18,
         "legal": 19,
         "hr-people": 30,
@@ -693,16 +693,16 @@
       "jobCount": 326,
       "roles": {
         "finance": 8,
-        "operations": 13,
-        "other": 112,
-        "marketing": 21,
-        "sales": 83,
+        "operations": 12,
+        "other": 113,
+        "marketing": 22,
+        "sales": 84,
         "legal": 14,
         "engineering": 48,
         "data": 3,
-        "design": 3,
+        "design": 2,
         "ml-ai": 1,
-        "hr-people": 8,
+        "hr-people": 7,
         "product": 12
       }
     }

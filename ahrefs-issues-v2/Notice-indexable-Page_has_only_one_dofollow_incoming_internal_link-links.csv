@@ -1,0 +1,119 @@
+Link type,Is nofollow,Source URL,Source HTTP status code,Target URL,Target HTTP status code,Anchor,No. of dofollow inlinks to target,No. of nofollow inlinks to target,Is source canonical,Is source noindex,Is target canonical,Is target noindex,Is link internal
+Href link,false,https://jobsbyculture.com/values/flex-hours,200,https://jobsbyculture.com/roles/flex-hours/sales,200,Flexible Hours Sales / GTM Jobs 137,1,0,true,false,true,false,true
+Href link,false,https://jobsbyculture.com/values/open-source,200,https://jobsbyculture.com/roles/open-source/legal,200,Open Source Legal Jobs 23,1,0,true,false,true,false,true
+Href link,false,https://jobsbyculture.com/values/remote,200,https://jobsbyculture.com/roles/remote/ml-ai,200,Remote-Friendly ML / AI Jobs 33,1,0,true,false,true,false,true
+Href link,false,https://jobsbyculture.com/roles/hr-people,200,https://jobsbyculture.com/roles/equity/hr-people,200,💎 Strong Comp & Equity HR / People 77,1,0,true,false,true,false,true
+Href link,false,https://jobsbyculture.com/values/flex-hours,200,https://jobsbyculture.com/roles/flex-hours/engineering,200,Flexible Hours Engineering Jobs 69,1,0,true,false,true,false,true
+Href link,false,https://jobsbyculture.com/values/deep-work,200,https://jobsbyculture.com/roles/deep-work/marketing,200,Deep Work / Low Meetings Marketing Jobs 14,1,0,true,false,true,false,true
+Href link,false,https://jobsbyculture.com/roles/design,200,https://jobsbyculture.com/roles/ship-fast/design,200,🚀 Ship Fast & Iterate Design 72,1,0,true,false,true,false,true
+Href link,false,https://jobsbyculture.com/values/wlb,200,https://jobsbyculture.com/roles/wlb/design,200,Work-Life Balance Design Jobs 26,1,0,true,false,true,false,true
+Href link,false,https://jobsbyculture.com/values/async,200,https://jobsbyculture.com/roles/async/engineering,200,Async-First Engineering Jobs 40,1,0,true,false,true,false,true
+Href link,false,https://jobsbyculture.com/values/flat,200,https://jobsbyculture.com/roles/flat/finance,200,Flat Hierarchy Finance Jobs 25,1,0,true,false,true,false,true
+Href link,false,https://jobsbyculture.com/values/async,200,https://jobsbyculture.com/roles/async/sales,200,Async-First Sales / GTM Jobs 15,1,0,true,false,true,false,true
+Href link,false,https://jobsbyculture.com/roles/legal,200,https://jobsbyculture.com/roles/ethical-ai/legal,200,🤖 Ethical AI / Safety Legal 35,1,0,true,false,true,false,true
+Href link,false,https://jobsbyculture.com/values/psych-safety,200,https://jobsbyculture.com/roles/psych-safety/engineering,200,Safe to Fail Engineering Jobs 85,1,0,true,false,true,false,true
+Href link,false,https://jobsbyculture.com/values/social-impact,200,https://jobsbyculture.com/roles/social-impact/marketing,200,Mission-Driven Marketing Jobs 44,1,0,true,false,true,false,true
+Href link,false,https://jobsbyculture.com/values/deep-work,200,https://jobsbyculture.com/roles/deep-work/ml-ai,200,Deep Work / Low Meetings ML / AI Jobs 32,1,0,true,false,true,false,true
+Href link,false,https://jobsbyculture.com/values/async,200,https://jobsbyculture.com/roles/async/marketing,200,Async-First Marketing Jobs 6,1,0,true,false,true,false,true
+Href link,false,https://jobsbyculture.com/values/open-source,200,https://jobsbyculture.com/roles/open-source/marketing,200,Open Source Marketing Jobs 52,1,0,true,false,true,false,true
+Href link,false,https://jobsbyculture.com/roles/support,200,https://jobsbyculture.com/roles/learning/support,200,🌱 Learning & Growth Support 32,1,0,true,false,true,false,true
+Href link,false,https://jobsbyculture.com/blog,200,https://jobsbyculture.com/blog/working-at-grafana-labs-2026,200,"Company Deep-Dive Working at Grafana Labs in 2026: Culture, Compensation & What Employees Say 100% remote, engineers rate it 4.9/5, $400M+ ARR — what 205 Glassdoor reviews say about the open-source observability leader. Mar 18, 2026 10 min read",1,0,true,false,true,false,true
+Href link,false,https://jobsbyculture.com/values/many-hats,200,https://jobsbyculture.com/roles/many-hats/marketing,200,Wears Many Hats Marketing Jobs 59,1,0,true,false,true,false,true
+Href link,false,https://jobsbyculture.com/values/async,200,https://jobsbyculture.com/roles/async/design,200,Async-First Design Jobs 4,1,0,true,false,true,false,true
+Href link,false,https://jobsbyculture.com/blog,200,https://jobsbyculture.com/blog/openai-vs-deepmind-culture-comparison,200,"Comparison OpenAI vs DeepMind: Culture, Compensation & Work-Life Balance Compared Ship-fast vs deep-work, SF vs London, $350k–$550k vs $300k–$500k — which frontier lab fits you? Mar 16, 2026 8 min read",1,0,true,false,true,false,true
+Href link,false,https://jobsbyculture.com/values/social-impact,200,https://jobsbyculture.com/roles/social-impact/finance,200,Mission-Driven Finance Jobs 31,1,0,true,false,true,false,true
+Href link,false,https://jobsbyculture.com/values/remote,200,https://jobsbyculture.com/roles/remote/engineering,200,Remote-Friendly Engineering Jobs 426,1,0,true,false,true,false,true
+Href link,false,https://jobsbyculture.com/values/deep-work,200,https://jobsbyculture.com/roles/deep-work/sales,200,Deep Work / Low Meetings Sales / GTM Jobs 67,1,0,true,false,true,false,true
+Href link,false,https://jobsbyculture.com/roles/design,200,https://jobsbyculture.com/roles/learning/design,200,🌱 Learning & Growth Design 117,1,0,true,false,true,false,true
+Href link,false,https://jobsbyculture.com/values/social-impact,200,https://jobsbyculture.com/roles/social-impact/sales,200,Mission-Driven Sales / GTM Jobs 135,1,0,true,false,true,false,true
+Href link,false,https://jobsbyculture.com/values/psych-safety,200,https://jobsbyculture.com/roles/psych-safety/sales,200,Safe to Fail Sales / GTM Jobs 181,1,0,true,false,true,false,true
+Href link,false,https://jobsbyculture.com/companies/anthropic,200,https://jobsbyculture.com/compare/anthropic-vs-meta,200,→ Anthropic vs meta,1,0,true,false,true,false,true
+Href link,false,https://jobsbyculture.com/roles/hr-people,200,https://jobsbyculture.com/roles/eng-driven/hr-people,200,⚙️ Engineering-Driven HR / People 146,1,0,true,false,true,false,true
+Href link,false,https://jobsbyculture.com/values/flat,200,https://jobsbyculture.com/roles/flat/legal,200,Flat Hierarchy Legal Jobs 28,1,0,true,false,true,false,true
+Href link,false,https://jobsbyculture.com/values/open-source,200,https://jobsbyculture.com/roles/open-source/sales,200,Open Source Sales / GTM Jobs 126,1,0,true,false,true,false,true
+Href link,false,https://jobsbyculture.com/companies/anthropic,200,https://jobsbyculture.com/compare/anthropic-vs-google,200,→ Anthropic vs google,1,0,true,false,true,false,true
+Href link,false,https://jobsbyculture.com/values/diverse,200,https://jobsbyculture.com/roles/diverse/marketing,200,Diverse & Inclusive Marketing Jobs 52,1,0,true,false,true,false,true
+Href link,false,https://jobsbyculture.com/values/wlb,200,https://jobsbyculture.com/roles/wlb/marketing,200,Work-Life Balance Marketing Jobs 34,1,0,true,false,true,false,true
+Href link,false,https://jobsbyculture.com/roles/design,200,https://jobsbyculture.com/roles/equity/design,200,💎 Strong Comp & Equity Design 60,1,0,true,false,true,false,true
+Href link,false,https://jobsbyculture.com/companies/hubspot,200,https://jobsbyculture.com/compare/hubspot-vs-salesforce,200,→ HubSpot vs salesforce,1,0,true,false,true,false,true
+Href link,false,https://jobsbyculture.com/roles/support,200,https://jobsbyculture.com/roles/diverse/support,200,🌈 Diverse & Inclusive Support 29,1,0,true,false,true,false,true
+Href link,false,https://jobsbyculture.com/values/open-source,200,https://jobsbyculture.com/roles/open-source/product,200,Open Source Product Jobs 34,1,0,true,false,true,false,true
+Href link,false,https://jobsbyculture.com/values/social-impact,200,https://jobsbyculture.com/roles/social-impact/operations,200,Mission-Driven Operations Jobs 31,1,0,true,false,true,false,true
+Href link,false,https://jobsbyculture.com/values/flex-hours,200,https://jobsbyculture.com/roles/flex-hours/support,200,Flexible Hours Support Jobs 7,1,0,true,false,true,false,true
+Href link,false,https://jobsbyculture.com/roles/legal,200,https://jobsbyculture.com/roles/ship-fast/legal,200,🚀 Ship Fast & Iterate Legal 82,1,0,true,false,true,false,true
+Href link,false,https://jobsbyculture.com/values/diverse,200,https://jobsbyculture.com/roles/diverse/ml-ai,200,Diverse & Inclusive ML / AI Jobs 59,1,0,true,false,true,false,true
+Href link,false,https://jobsbyculture.com/roles/legal,200,https://jobsbyculture.com/roles/product-impact/legal,200,🎯 Direct Product Impact Legal 83,1,0,true,false,true,false,true
+Href link,false,https://jobsbyculture.com/values/flat,200,https://jobsbyculture.com/roles/flat/marketing,200,Flat Hierarchy Marketing Jobs 50,1,0,true,false,true,false,true
+Href link,false,https://jobsbyculture.com/values/flex-hours,200,https://jobsbyculture.com/roles/flex-hours/design,200,Flexible Hours Design Jobs 29,1,0,true,false,true,false,true
+Href link,false,https://jobsbyculture.com/roles/support,200,https://jobsbyculture.com/roles/equity/support,200,💎 Strong Comp & Equity Support 41,1,0,true,false,true,false,true
+Href link,false,https://jobsbyculture.com/values/open-source,200,https://jobsbyculture.com/roles/open-source/hr-people,200,Open Source HR / People Jobs 19,1,0,true,false,true,false,true
+Href link,false,https://jobsbyculture.com/roles/support,200,https://jobsbyculture.com/roles/eng-driven/support,200,⚙️ Engineering-Driven Support 26,1,0,true,false,true,false,true
+Href link,false,https://jobsbyculture.com/companies/airbnb,200,https://jobsbyculture.com/compare/airbnb-vs-uber,200,→ Airbnb vs uber,1,0,true,false,true,false,true
+Href link,false,https://jobsbyculture.com/roles/support,200,https://jobsbyculture.com/roles/remote/support,200,🌐 Remote-Friendly Support 22,1,0,true,false,true,false,true
+Href link,false,https://jobsbyculture.com/companies/databricks,200,https://jobsbyculture.com/compare/palantir-vs-databricks,200,→ Databricks vs palantir,1,0,true,false,true,false,true
+Href link,false,https://jobsbyculture.com/roles/support,200,https://jobsbyculture.com/roles/product-impact/support,200,🎯 Direct Product Impact Support 18,1,0,true,false,true,false,true
+Href link,false,https://jobsbyculture.com/values/diverse,200,https://jobsbyculture.com/roles/diverse/engineering,200,Diverse & Inclusive Engineering Jobs 496,1,0,true,false,true,false,true
+Href link,false,https://jobsbyculture.com/companies/figma,200,https://jobsbyculture.com/compare/figma-vs-canva,200,→ Figma vs canva,1,0,true,false,true,false,true
+Href link,false,https://jobsbyculture.com/roles/legal,200,https://jobsbyculture.com/roles/many-hats/legal,200,🧩 Wears Many Hats Legal 34,1,0,true,false,true,false,true
+Href link,false,https://jobsbyculture.com/values/psych-safety,200,https://jobsbyculture.com/roles/psych-safety/data,200,Safe to Fail Data Jobs 14,1,0,true,false,true,false,true
+Href link,false,https://jobsbyculture.com/values/flex-hours,200,https://jobsbyculture.com/roles/flex-hours/ml-ai,200,Flexible Hours ML / AI Jobs 38,1,0,true,false,true,false,true
+Href link,false,https://jobsbyculture.com/roles/legal,200,https://jobsbyculture.com/roles/equity/legal,200,💎 Strong Comp & Equity Legal 71,1,0,true,false,true,false,true
+Href link,false,https://jobsbyculture.com/values/deep-work,200,https://jobsbyculture.com/roles/deep-work/product,200,Deep Work / Low Meetings Product Jobs 27,1,0,true,false,true,false,true
+Href link,false,https://jobsbyculture.com/values/wlb,200,https://jobsbyculture.com/roles/wlb/ml-ai,200,Work-Life Balance ML / AI Jobs 18,1,0,true,false,true,false,true
+Href link,false,https://jobsbyculture.com/values/remote,200,https://jobsbyculture.com/roles/remote/data,200,Remote-Friendly Data Jobs 33,1,0,true,false,true,false,true
+Href link,false,https://jobsbyculture.com/companies/openai,200,https://jobsbyculture.com/compare/openai-vs-meta,200,→ OpenAI vs meta,1,0,true,false,true,false,true
+Href link,false,https://jobsbyculture.com/blog,200,https://jobsbyculture.com/blog/working-at-supabase-2026,200,"Company Deep-Dive Working at Supabase in 2026: Culture, Compensation & What Employees Say 4.8 Glassdoor but 3.0 WLB — 100% recommend yet relentless pace. The paradox of the open-source Firebase alternative. Mar 21, 2026 10 min read",1,0,true,false,true,false,true
+Href link,false,https://jobsbyculture.com/values/deep-work,200,https://jobsbyculture.com/roles/deep-work/design,200,Deep Work / Low Meetings Design Jobs 25,1,0,true,false,true,false,true
+Href link,false,https://jobsbyculture.com/roles/finance,200,https://jobsbyculture.com/roles/transparent/finance,200,🪟 Transparent Finance 50,1,0,true,false,true,false,true
+Href link,false,https://jobsbyculture.com/values/psych-safety,200,https://jobsbyculture.com/roles/psych-safety/product,200,Safe to Fail Product Jobs 24,1,0,true,false,true,false,true
+Href link,false,https://jobsbyculture.com/values/deep-work,200,https://jobsbyculture.com/roles/deep-work/engineering,200,Deep Work / Low Meetings Engineering Jobs 59,1,0,true,false,true,false,true
+Href link,false,https://jobsbyculture.com/values/psych-safety,200,https://jobsbyculture.com/roles/psych-safety/ml-ai,200,Safe to Fail ML / AI Jobs 7,1,0,true,false,true,false,true
+Href link,false,https://jobsbyculture.com/values/wlb,200,https://jobsbyculture.com/roles/wlb/sales,200,Work-Life Balance Sales / GTM Jobs 183,1,0,true,false,true,false,true
+Href link,false,https://jobsbyculture.com/companies/openai,200,https://jobsbyculture.com/compare/openai-vs-microsoft,200,→ OpenAI vs microsoft,1,0,true,false,true,false,true
+Href link,false,https://jobsbyculture.com/roles/legal,200,https://jobsbyculture.com/roles/transparent/legal,200,🪟 Transparent Legal 33,1,0,true,false,true,false,true
+Href link,false,https://jobsbyculture.com/roles/finance,200,https://jobsbyculture.com/roles/product-impact/finance,200,🎯 Direct Product Impact Finance 105,1,0,true,false,true,false,true
+Href link,false,https://jobsbyculture.com/companies/databricks,200,https://jobsbyculture.com/compare/snowflake-vs-databricks,200,→ Databricks vs snowflake,1,0,true,false,true,false,true
+Href link,false,https://jobsbyculture.com/values/many-hats,200,https://jobsbyculture.com/roles/many-hats/product,200,Wears Many Hats Product Jobs 71,1,0,true,false,true,false,true
+Href link,false,https://jobsbyculture.com/roles/design,200,https://jobsbyculture.com/roles/eng-driven/design,200,⚙️ Engineering-Driven Design 118,1,0,true,false,true,false,true
+Href link,false,https://jobsbyculture.com/values/diverse,200,https://jobsbyculture.com/roles/diverse/operations,200,Diverse & Inclusive Operations Jobs 40,1,0,true,false,true,false,true
+Href link,false,https://jobsbyculture.com/values/social-impact,200,https://jobsbyculture.com/roles/social-impact/legal,200,Mission-Driven Legal Jobs 19,1,0,true,false,true,false,true
+Href link,false,https://jobsbyculture.com/values/psych-safety,200,https://jobsbyculture.com/roles/psych-safety/support,200,Safe to Fail Support Jobs 7,1,0,true,false,true,false,true
+Href link,false,https://jobsbyculture.com/values/wlb,200,https://jobsbyculture.com/roles/wlb/engineering,200,Work-Life Balance Engineering Jobs 220,1,0,true,false,true,false,true
+Href link,false,https://jobsbyculture.com/values/open-source,200,https://jobsbyculture.com/roles/open-source/engineering,200,Open Source Engineering Jobs 368,1,0,true,false,true,false,true
+Href link,false,https://jobsbyculture.com/blog,200,https://jobsbyculture.com/blog/working-at-perplexity-2026,200,"Company Deep-Dive Working at Perplexity AI in 2026: Culture, Compensation & What Employees Say Highest Glassdoor in our database (4.7) but third-lowest WLB (3.3). Here's the real story. Mar 14, 2026 8 min read",1,0,true,false,true,false,true
+Href link,false,https://jobsbyculture.com/blog,200,https://jobsbyculture.com/blog/working-at-deepmind-2026,200,"Company Deep-Dive Working at Google DeepMind in 2026: Culture, Compensation & What Employees Say Nobel Prize research, $300k–$500k comp, best WLB among frontier labs (4.0), and what 7,000 employees say. Mar 16, 2026 9 min read",1,0,true,false,true,false,true
+Href link,false,https://jobsbyculture.com/values/deep-work,200,https://jobsbyculture.com/roles/deep-work/legal,200,Deep Work / Low Meetings Legal Jobs 9,1,0,true,false,true,false,true
+Href link,false,https://jobsbyculture.com/values/flat,200,https://jobsbyculture.com/roles/flat/sales,200,Flat Hierarchy Sales / GTM Jobs 244,1,0,true,false,true,false,true
+Href link,false,https://jobsbyculture.com/values/flat,200,https://jobsbyculture.com/roles/flat/engineering,200,Flat Hierarchy Engineering Jobs 356,1,0,true,false,true,false,true
+Href link,false,https://jobsbyculture.com/roles/hr-people,200,https://jobsbyculture.com/roles/learning/hr-people,200,🌱 Learning & Growth HR / People 117,1,0,true,false,true,false,true
+Href link,false,https://jobsbyculture.com/blog,200,https://jobsbyculture.com/blog/working-at-together-ai-2026,200,"Company Deep-Dive Working at Together AI in 2026: Culture, Compensation & What Employees Say Open-source AI cloud with $3.3B valuation, $300M revenue, and ~300 employees. What the team says about building AI infrastructure. Mar 21, 2026 10 min read",1,0,true,false,true,false,true
+Href link,false,https://jobsbyculture.com/roles/support,200,https://jobsbyculture.com/roles/open-source/support,200,🔓 Open Source Support 19,1,0,true,false,true,false,true
+Href link,false,https://jobsbyculture.com/values/remote,200,https://jobsbyculture.com/roles/remote/product,200,Remote-Friendly Product Jobs 65,1,0,true,false,true,false,true
+Href link,false,https://jobsbyculture.com/values/flex-hours,200,https://jobsbyculture.com/roles/flex-hours/marketing,200,Flexible Hours Marketing Jobs 9,1,0,true,false,true,false,true
+Href link,false,https://jobsbyculture.com/values/flat,200,https://jobsbyculture.com/roles/flat/data,200,Flat Hierarchy Data Jobs 24,1,0,true,false,true,false,true
+Href link,false,https://jobsbyculture.com/roles/legal,200,https://jobsbyculture.com/roles/learning/legal,200,🌱 Learning & Growth Legal 98,1,0,true,false,true,false,true
+Href link,false,https://jobsbyculture.com/roles/legal,200,https://jobsbyculture.com/roles/eng-driven/legal,200,⚙️ Engineering-Driven Legal 124,1,0,true,false,true,false,true
+Href link,false,https://jobsbyculture.com/values/deep-work,200,https://jobsbyculture.com/roles/deep-work/hr-people,200,Deep Work / Low Meetings HR / People Jobs 19,1,0,true,false,true,false,true
+Href link,false,https://jobsbyculture.com/companies/openai,200,https://jobsbyculture.com/compare/openai-vs-google,200,→ OpenAI vs google,1,0,true,false,true,false,true
+Href link,false,https://jobsbyculture.com/blog,200,https://jobsbyculture.com/blog/working-at-mistral-2026,200,"Company Deep-Dive Working at Mistral AI in 2026: Culture, Compensation & What Employees Say Europe's fastest AI unicorn — $14B valuation, 700+ employees, 141 open roles. What the team says about building frontier AI from Paris. Mar 21, 2026 10 min read",1,0,true,false,true,false,true
+Href link,false,https://jobsbyculture.com/values/social-impact,200,https://jobsbyculture.com/roles/social-impact/ml-ai,200,Mission-Driven ML / AI Jobs 48,1,0,true,false,true,false,true
+Href link,false,https://jobsbyculture.com/values/async,200,https://jobsbyculture.com/roles/async/ml-ai,200,Async-First ML / AI Jobs 8,1,0,true,false,true,false,true
+Href link,false,https://jobsbyculture.com/blog,200,https://jobsbyculture.com/blog/working-at-airbnb-2026,200,"Company Deep-Dive Working at Airbnb in 2026: Culture, Compensation & What Employees Say Live and Work Anywhere policy, 4.1 Glassdoor, $180k–$350k TC, and what 7,300 employees actually think. Mar 17, 2026 7 min read",1,0,true,false,true,false,true
+Href link,false,https://jobsbyculture.com/values/async,200,https://jobsbyculture.com/roles/async/product,200,Async-First Product Jobs 4,1,0,true,false,true,false,true
+Href link,false,https://jobsbyculture.com/values/open-source,200,https://jobsbyculture.com/roles/open-source/operations,200,Open Source Operations Jobs 23,1,0,true,false,true,false,true
+Href link,false,https://jobsbyculture.com/companies/databricks,200,https://jobsbyculture.com/compare/databricks-vs-snowflake,200,→ Databricks vs snowflake,1,0,true,false,true,false,true
+Href link,false,https://jobsbyculture.com/values/wlb,200,https://jobsbyculture.com/roles/wlb/data,200,Work-Life Balance Data Jobs 20,1,0,true,false,true,false,true
+Href link,false,https://jobsbyculture.com/values/flat,200,https://jobsbyculture.com/roles/flat/product,200,Flat Hierarchy Product Jobs 42,1,0,true,false,true,false,true
+Href link,false,https://jobsbyculture.com/values/flex-hours,200,https://jobsbyculture.com/roles/flex-hours/product,200,Flexible Hours Product Jobs 36,1,0,true,false,true,false,true
+Href link,false,https://jobsbyculture.com/values/ethical-ai,200,https://jobsbyculture.com/roles/ethical-ai/sales,200,Ethical AI / Safety Sales / GTM Jobs 223,1,0,true,false,true,false,true
+Href link,false,https://jobsbyculture.com/values/social-impact,200,https://jobsbyculture.com/roles/social-impact/engineering,200,Mission-Driven Engineering Jobs 264,1,0,true,false,true,false,true
+Href link,false,https://jobsbyculture.com/values/wlb,200,https://jobsbyculture.com/roles/wlb/product,200,Work-Life Balance Product Jobs 37,1,0,true,false,true,false,true
+Href link,false,https://jobsbyculture.com/values/psych-safety,200,https://jobsbyculture.com/roles/psych-safety/marketing,200,Safe to Fail Marketing Jobs 14,1,0,true,false,true,false,true
+Href link,false,https://jobsbyculture.com/values/social-impact,200,https://jobsbyculture.com/roles/social-impact/product,200,Mission-Driven Product Jobs 46,1,0,true,false,true,false,true
+Href link,false,https://jobsbyculture.com/values/flex-hours,200,https://jobsbyculture.com/roles/flex-hours/data,200,Flexible Hours Data Jobs 11,1,0,true,false,true,false,true
+Href link,false,https://jobsbyculture.com/roles/finance,200,https://jobsbyculture.com/roles/ship-fast/finance,200,🚀 Ship Fast & Iterate Finance 87,1,0,true,false,true,false,true
+Href link,false,https://jobsbyculture.com/values/psych-safety,200,https://jobsbyculture.com/roles/psych-safety/design,200,Safe to Fail Design Jobs 19,1,0,true,false,true,false,true
+Href link,false,https://jobsbyculture.com/values/many-hats,200,https://jobsbyculture.com/roles/many-hats/sales,200,Wears Many Hats Sales / GTM Jobs 184,1,0,true,false,true,false,true
+Href link,false,https://jobsbyculture.com/roles/design,200,https://jobsbyculture.com/roles/product-impact/design,200,🎯 Direct Product Impact Design 94,1,0,true,false,true,false,true
+Href link,false,https://jobsbyculture.com/companies/stripe,200,https://jobsbyculture.com/compare/stripe-vs-google,200,→ Stripe vs google,1,0,true,false,true,false,true
+Href link,false,https://jobsbyculture.com/values/open-source,200,https://jobsbyculture.com/roles/open-source/ml-ai,200,Open Source ML / AI Jobs 52,1,0,true,false,true,false,true

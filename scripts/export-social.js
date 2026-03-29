@@ -44,55 +44,61 @@ const VALUE_LABELS = {
     'social-impact': 'Mission-Driven'
 };
 
-// ── Role categorization by keywords ──
+// ── Role categorization (synced with update-counts.js classifyRole) ──
+// Returns human-readable labels for CSV, using the same matching logic as the site
+const ROLE_LABELS = {
+    'ml-ai': 'ML / AI', 'data': 'Data', 'design': 'Design', 'engineering': 'Engineering',
+    'product': 'Product', 'marketing': 'Marketing', 'sales': 'Sales', 'finance': 'Finance',
+    'hr-people': 'HR / People', 'legal': 'Legal', 'support': 'Support', 'operations': 'Operations',
+    'other': 'Other',
+};
+
 function categorizeRole(title) {
     const t = title.toLowerCase();
-
-    if (/\b(machine learning|ml engineer|ai scientist|ai research|deep learning|nlp|computer vision|llm)\b/.test(t))
-        return 'ML / AI';
-    if (/\b(data scientist|data analyst|data engineer|analytics engineer|business intelligence)\b/.test(t))
-        return 'Data';
-    if (/\b(design|ux|ui|brand design|graphic design|visual design|content design)\b/.test(t))
-        return 'Design';
-    if (/\b(product manager|product lead|program manager|technical program|product owner|head of product|product strateg|product director|product operation|product analys|scrum master|agile coach)\b/.test(t))
-        return 'Product';
-    if (/\b(engineer|developer|sre|devops|infrastructure|backend|frontend|fullstack|full.stack|platform|security engineer|software)\b/.test(t))
-        return 'Engineering';
-    if (/\b(marketing|growth|content strat|seo|communications|copywriter|brand manager|social media)\b/.test(t))
-        return 'Marketing';
-    if (/\b(sales|account executive|account manager|business develop|solutions architect|solutions engineer|customer success|revenue|partnerships)\b/.test(t))
-        return 'Sales';
-    if (/\b(finance|accounting|controller|treasury|tax|payroll|billing|financial analyst)\b/.test(t))
-        return 'Finance';
-    if (/\b(recruiter|recruiting|people ops|people partner|talent|hr |human resources|compensation|benefits admin)\b/.test(t))
-        return 'HR / People';
-    if (/\b(legal|counsel|compliance|regulatory|policy|privacy|paralegal)\b/.test(t))
-        return 'Legal';
-    if (/\b(support|customer service|help desk|technical support|customer experience)\b/.test(t))
-        return 'Support';
-    if (/\b(operations|project manager|chief of staff|office manager|facilities|workplace|supply chain|logistics)\b/.test(t))
-        return 'Operations';
-
-    return 'Other';
+    // ML/AI
+    const mlPatterns = ['machine learning', 'research scientist', 'research engineer', 'reinforcement learning', 'ai safety', 'interpretability', 'alignment', 'computer vision', 'nlp engineer', 'natural language', 'deep learning', 'ai researcher', 'ai research', 'ml engineer', 'ml infrastructure', 'ml platform', 'ml acceleration', 'ml networking'];
+    if (mlPatterns.some(p => t.includes(p)) || / ml /i.test(t) || /\bllm\b/i.test(t)) return ROLE_LABELS['ml-ai'];
+    // Data
+    const dataPatterns = ['data scien', 'data engineer', 'data analy', 'data infra', 'data platform', 'advanced analytics', 'business intelligence', 'bi engineer', 'bi analyst', 'analytics engineer'];
+    if (dataPatterns.some(p => t.includes(p))) return ROLE_LABELS['data'];
+    // Design
+    if (t.includes('design') && !t.includes('engineer') && !t.includes('security')) return ROLE_LABELS['design'];
+    // Product
+    const productPatterns = ['product manag', 'program manag', 'technical program', 'product owner', 'product lead', 'scrum master', 'agile coach', 'product strateg', 'product director', 'head of product', 'product operation', 'product analys'];
+    if (productPatterns.some(p => t.includes(p))) return ROLE_LABELS['product'];
+    // Engineering
+    const engPatterns = ['engineer', 'developer', 'architect', 'platform', 'sre ', 'site reliability', 'devops', 'qa ', 'quality assurance', 'security', 'systems', 'infrastructure', 'frontend', 'backend', 'fullstack', 'full stack', 'firmware', 'embedded'];
+    const engExclusions = ['developer relations', 'developer education', 'devrel', 'solutions engineer', 'solutions architect', 'sales engineer', 'business systems', 'customer support engineer', 'gtm'];
+    if (engPatterns.some(p => t.includes(p)) && !engExclusions.some(p => t.includes(p))) return ROLE_LABELS['engineering'];
+    // Marketing
+    const marketingPatterns = ['marketing', 'communications', 'developer relations', 'developer education', 'devrel', 'brand', 'social media', 'public relations', 'copywriter', 'growth marketing', 'community manag', 'influencer', 'creative', 'editorial', 'content'];
+    if (marketingPatterns.some(p => t.includes(p))) return ROLE_LABELS['marketing'];
+    // Sales
+    const salesPatterns = ['account exec', 'account manag', 'sales', 'solutions engineer', 'solutions architect', 'sales engineer', 'gtm', 'business develop', 'partnerships', 'deal desk', 'revenue', 'engagement manag', 'customer success', 'pre-sales'];
+    if (salesPatterns.some(p => t.includes(p)) && !t.includes('accountant')) return ROLE_LABELS['sales'];
+    // Finance
+    const financePatterns = ['accountant', 'accounting', 'financial', 'fp&a', 'treasury', 'controller', 'actuary', 'actuarial', 'investor relations', 'bookkeeper'];
+    if (financePatterns.some(p => t.includes(p))) return ROLE_LABELS['finance'];
+    // HR/People
+    if (/(recruiter|recruiting|people ops|people partner|talent|hr |human resources|sourcer|onboarding|enablement)/.test(t)) return ROLE_LABELS['hr-people'];
+    // Legal
+    if (/(legal|counsel|compliance|policy|regulatory|paralegal|attorney)/.test(t)) return ROLE_LABELS['legal'];
+    // Support
+    if (/(support specialist|customer support|premium support|help desk|safety specialist|support delivery)/.test(t)) return ROLE_LABELS['support'];
+    // Operations
+    if (/(operations|ops |logistics|supply chain|procurement|coordinator|facilities|workplace|office manag)/.test(t)) return ROLE_LABELS['operations'];
+    return ROLE_LABELS['other'];
 }
 
-// ── Seniority detection ──
+// ── Seniority detection (synced with update-counts.js classifySeniority) ──
+// Returns human-readable labels for CSV
 function detectSeniority(title) {
     const t = title.toLowerCase();
-
-    if (/\b(vp|vice president|head of|chief|cto|cfo|coo|ceo|evp|svp)\b/.test(t))
-        return 'VP / Executive';
-    if (/\b(director)\b/.test(t))
-        return 'Director';
-    if (/\b(staff|principal|distinguished|fellow|member of technical staff)\b/.test(t))
-        return 'Staff / Principal';
-    if (/\b(manager|lead|team lead|tech lead|engineering manager)\b/.test(t))
-        return 'Lead / Manager';
-    if (/\b(senior|sr\.?|iii)\b/.test(t))
-        return 'Senior';
-    if (/\b(junior|jr\.?|associate|intern|entry.level|new grad|i\b)\b/.test(t))
-        return 'Junior / Entry';
-
+    if (/\b(director|vp |vice president|head of|chief)\b/.test(t)) return 'VP / Director';
+    if (/\b(lead|manager|engineering manager)\b/.test(t)) return 'Lead / Manager';
+    if (/\b(staff|principal|distinguished)\b/.test(t)) return 'Staff / Principal';
+    if (/\b(senior|sr\.?)\b/.test(t)) return 'Senior';
+    if (/\b(junior|jr\.?|intern|entry|associate|new grad)\b/.test(t)) return 'Junior / Entry';
     return 'Mid-Level';
 }
 

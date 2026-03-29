@@ -1,0 +1,5 @@
+PR,URL,Title,Content type,Is rendered page,HTTP status code,Organic traffic,Redirect chain URLs,Redirect chain URLs codes,Is redirect loop,No. of all inlinks,No. of redirect inlinks,First found at
+0,http://jobsbyculture.com/,,text/plain,false,308,0,https://jobsbyculture.com/,200,false,0,0,
+0,http://www.jobsbyculture.com/,,text/plain,false,308,0,"https://www.jobsbyculture.com/
+https://jobsbyculture.com/","301
+200",false,0,0,
