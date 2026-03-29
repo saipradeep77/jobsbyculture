@@ -1,0 +1,94 @@
+{
+  "type": "new-article",
+  "slug": "working-at-figma-2026",
+  "company": "figma",
+  "companyName": "Figma",
+  "glassdoor": 3.7,
+  "glassdoorReviews": 194,
+  "wlb": 3.1,
+  "cultureValues": 4.0,
+  "compensation": 4.0,
+  "careerOpportunities": 3.4,
+  "seniorLeadership": 3.4,
+  "recommendToFriend": 64,
+  "positiveOutlook": 68,
+  "interviewDifficulty": "3/5",
+  "interviewPositive": "46%",
+  "size": "Large (~2,800)",
+  "founded": 2012,
+  "location": "San Francisco, CA",
+  "jobCount": 152,
+  "jobsByDept": {
+    "Sales": 57,
+    "Engineering": 28,
+    "Marketing": 10,
+    "Weavy - Figma Weave": 9,
+    "Business Operations": 9,
+    "Talent": 7,
+    "Design": 7,
+    "Product Support": 6,
+    "Legal": 6,
+    "Business Development": 5,
+    "People": 5,
+    "Product": 2,
+    "Early Career": 1
+  },
+  "values": ["eng-driven", "ship-fast", "learning", "product-impact", "deep-work"],
+  "salaryRange": {
+    "swe_l1_total": "$221K–$255K",
+    "swe_senior_l3_total": "$437K–$617K",
+    "company_median_total": "$437K",
+    "source": "Levels.fyi 2025"
+  },
+  "pros": [
+    "World-class talent and technically ambitious problems — real-time multiplayer, WebAssembly rendering, and massive-scale infrastructure",
+    "Strong product mission that employees genuinely believe in — Figma is loved by its users and that pride is infectious",
+    "Competitive compensation and benefits rated 4.0/5 — total comp rivals FAANG at senior levels ($437K–$617K for L3)",
+    "Culture of play and experimentation — side projects are encouraged and many shipped features started as unsanctioned prototypes"
+  ],
+  "cons": [
+    "Work-life balance is the weakest area at 3.1/5 — 60+ hour weeks are common, especially near deadlines",
+    "Management instability — multiple reviewers mention 3-5 manager changes in 2 years with frequent strategy pivots",
+    "Hypergrowth growing pains — product suite doubled without proportional hiring, leaving teams stretched thin",
+    "Very high expectations — long hours can still yield only a 'meets expectations' review"
+  ],
+  "cultureOverview": "Founded in 2012 by Dylan Field and Evan Wallace, Figma redefined collaborative design with its browser-based, real-time multiplayer editor. The culture is deeply product-obsessed with a strong emphasis on craft and craft excellence. Engineers work on genuinely hard technical problems — WebAssembly rendering, CRDTs for multiplayer sync, infrastructure for millions of daily users. Glassdoor reviewers consistently praise the talent density and mission clarity. The flip side: expectations are sky-high and WLB is a recurring concern.",
+  "communityQuotes": [
+    {
+      "source": "Glassdoor",
+      "sentiment": "positive",
+      "quote": "Exceptionally talented colleagues; strong learning environment and impactful, widely-used product — work feels meaningful."
+    },
+    {
+      "source": "Glassdoor",
+      "sentiment": "negative",
+      "quote": "High expectations — 60-hour weeks may still yield a 'meets expectations' review. Management turnover is a real issue."
+    }
+  ],
+  "gscQueries": [
+    { "query": "figma vs supabase", "impressions": 71, "position": 7.3 },
+    { "query": "grafana vs figma", "impressions": 70, "position": 1.9 },
+    { "query": "figma vs grafana", "impressions": 58, "position": 2.1 },
+    { "query": "how does figma's workplace culture compare to other tech giants like adobe or canva?", "impressions": 5, "position": 5 }
+  ],
+  "faqs": [
+    {
+      "q": "What is Figma's Glassdoor rating in 2026?",
+      "a": "Figma has a 3.7/5 overall Glassdoor rating based on 194 reviews. Culture & Values scores 4.0/5, Compensation 4.0/5, but Work-Life Balance lags at 3.1/5."
+    },
+    {
+      "q": "How much do Software Engineers earn at Figma?",
+      "a": "Entry-level SWEs (L1) earn $221K–$255K total compensation including RSUs. Senior Engineers (L3) earn $437K–$617K total comp, with a company-wide engineer median around $437K according to Levels.fyi."
+    },
+    {
+      "q": "Is Figma a good place to work?",
+      "a": "Figma is excellent for engineers who want world-class technical challenges on a product millions love — but expect a demanding pace. 64% of Glassdoor reviewers would recommend it to a friend. WLB is the main concern, with 60+ hour weeks common during crunch periods."
+    },
+    {
+      "q": "How does working at Figma compare to Supabase or Grafana?",
+      "a": "Figma offers a larger scale product and higher pay than Supabase or Grafana, but has lower WLB scores. Supabase is more startup-paced and remote-first; Grafana has a stronger open-source culture. All three attract strong engineers, but Figma's product is B2B SaaS at massive scale."
+    }
+  ],
+  "whyThisTopic": "Striking-distance GSC query 'figma vs supabase' (71 imp, pos 7.3) with no blog article exists. Also 'grafana vs figma' (70 imp) showing. Figma has 152 open jobs — most among companies without articles. High SEO + traffic opportunity.",
+  "researchedAt": "2026-03-29"
+}
