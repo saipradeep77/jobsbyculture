@@ -886,6 +886,26 @@ if (compareCompanies) {
 console.log('  done');
 
 // ═══════════════════════════════════════════════════════════════
+// CHECK 15: Compare page placeholder data
+// ═══════════════════════════════════════════════════════════════
+
+console.log('Checking compare.html for placeholder data...');
+if (compareCompanies) {
+    for (const [slug, c] of Object.entries(compareCompanies)) {
+        if (c.bestFor && c.bestFor.startsWith('Professionals interested in')) {
+            error('placeholder', 'compare.html', `Company "${slug}" has placeholder bestFor: "${c.bestFor}"`);
+        }
+        if (c.verdict && c.verdict.includes('check Glassdoor for detailed reviews')) {
+            error('placeholder', 'compare.html', `Company "${slug}" has placeholder verdict`);
+        }
+        if (c.ceo_name === 'CEO') {
+            error('placeholder', 'compare.html', `Company "${slug}" has placeholder ceo_name: "CEO"`);
+        }
+    }
+}
+console.log('  done');
+
+// ═══════════════════════════════════════════════════════════════
 // REPORT
 // ═══════════════════════════════════════════════════════════════
 

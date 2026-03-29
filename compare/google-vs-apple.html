@@ -92,6 +92,12 @@
         .nav-links { display: flex; align-items: center; gap: 28px; }
         .nav-links a { color: var(--text-2); text-decoration: none; font-size: 14px; font-weight: 500; transition: color 0.15s; }
         .nav-links a:hover { color: var(--text); }
+        .nav-links .nav-cta {
+            background: var(--accent); color: #fff !important; padding: 7px 16px;
+            border-radius: var(--radius-sm); font-size: 13px; font-weight: 600;
+            transition: all 0.2s;
+        }
+        .nav-links .nav-cta:hover { background: var(--accent-hover); transform: translateY(-1px); }
         .nav-links a.active { color: var(--accent); font-weight: 600; }
         .hamburger { display: none; background: none; border: none; cursor: pointer; padding: 4px; flex-direction: column; gap: 5px; }
         .hamburger span { display: block; width: 22px; height: 2px; background: var(--text); border-radius: 1px; transition: all 0.3s; }
@@ -724,9 +730,9 @@
 
         <!-- CTAs -->
         <div class="cmp-ctas"><div class="cmp-cta-col">
-            <a class="cmp-btn cmp-btn-primary" href="https://careers.google.com/?ref=jobsbyculture.com" target="_blank">Visit Google careers →</a>
+            <a class="cmp-btn cmp-btn-primary" href="https://careers.google.com" target="_blank">Visit Google careers →</a>
         </div><div class="cmp-cta-col right">
-            <a class="cmp-btn cmp-btn-primary" href="https://www.apple.com/careers?ref=jobsbyculture.com" target="_blank">Visit Apple Inc. careers →</a>
+            <a class="cmp-btn cmp-btn-primary" href="https://www.apple.com/careers" target="_blank">Visit Apple Inc. careers →</a>
         </div></div>
     </div>
 </div>
@@ -746,7 +752,7 @@
         </div>
         <div class="ft-bar">
             <p>&copy; 2026 JobsByCulture</p>
-            <p>Made by <a href="https://x.com/itspradz?ref=jobsbyculture.com" target="_blank">@itspradz</a></p>
+            <p>Made by <a href="https://x.com/itspradz" target="_blank">@itspradz</a></p>
         </div>
     </div>
 </footer>
