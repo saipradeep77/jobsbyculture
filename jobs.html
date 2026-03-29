@@ -8560,6 +8560,18 @@ function renderJobs() {
             }
             filtered = spread;
         }
+        // Final pass: break any remaining consecutive runs (max 1 from same company in a row)
+        for (let i = 1; i < filtered.length; i++) {
+            if (filtered[i].company === filtered[i-1].company) {
+                // Find the nearest different-company job to swap with
+                for (let j = i + 1; j < Math.min(i + 20, filtered.length); j++) {
+                    if (filtered[j].company !== filtered[i].company && filtered[j].company !== filtered[i-1].company) {
+                        [filtered[i], filtered[j]] = [filtered[j], filtered[i]];
+                        break;
+                    }
+                }
+            }
+        }
     }
 
     document.getElementById('resultsCount').innerHTML = `<b>${filtered.length}</b> jobs found${activeValues.size ? ` matching <b>${activeValues.size}</b> value${activeValues.size>1?'s':''}` : ''}`;
