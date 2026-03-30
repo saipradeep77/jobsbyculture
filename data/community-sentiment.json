@@ -2,10 +2,10 @@
   "anthropic": {
     "name": "Anthropic",
     "overallSentiment": "mixed",
-    "totalMentions": 8,
+    "totalMentions": 6,
     "positive": 0,
     "negative": 0,
-    "mixed": 8,
+    "mixed": 6,
     "lastUpdated": "2026-03-30",
     "hackernews": [
       {
@@ -14,14 +14,6 @@
         "author": "xpe",
         "date": "2026-02-27",
         "url": "https://news.ycombinator.com/item?id=47175951",
-        "sentiment": "neutral"
-      },
-      {
-        "source": "hackernews",
-        "quote": "All of the posts in question explicitly say that it&#x27;s a hard question and that they don&#x27;t know the answer. Their policy seems to be to take steps that have a small enough cost to be justified when the chance is tiny.",
-        "author": "ascorbic",
-        "date": "2025-08-16",
-        "url": "https://news.ycombinator.com/item?id=44920766",
         "sentiment": "neutral"
       },
       {
@@ -38,14 +30,6 @@
         "author": "statuslover9000",
         "date": "2026-02-26",
         "url": "https://news.ycombinator.com/item?id=47173978",
-        "sentiment": "neutral"
-      },
-      {
-        "source": "hackernews",
-        "quote": "Yes, it appears they&#x27;ve been cracking down elsewhere as well: https:&#x2F;&#x2F;github.com&#x2F;charmbracelet&#x2F;crush&#x2F;pull&#x2F;1783Are they really that strapped already? It took Netflix like 20 years before they began nickel and diming us..",
-        "author": "metadat",
-        "date": "2026-01-09",
-        "url": "https://news.ycombinator.com/item?id=46549958",
         "sentiment": "neutral"
       }
     ],
@@ -93,43 +77,19 @@
   },
   "cohere": {
     "name": "Cohere",
-    "overallSentiment": "mixed",
-    "totalMentions": 5,
+    "overallSentiment": "positive",
+    "totalMentions": 2,
     "positive": 1,
     "negative": 0,
-    "mixed": 4,
+    "mixed": 1,
     "lastUpdated": "2026-03-30",
     "hackernews": [
-      {
-        "source": "hackernews",
-        "quote": "I made a small RAG database just using Postgres. I outlined it in the blog post below. I use it for RSS Feed organisation, and searching. They are small blobs. I do the labeling using a pseudo-KNN algorithm.https:&#x2F;&#x2F;aws.amazon.",
-        "author": "podgietaru",
-        "date": "2026-01-15",
-        "url": "https://news.ycombinator.com/item?id=46630440",
-        "sentiment": "neutral"
-      },
       {
         "source": "hackernews",
         "quote": "I&#x27;d push back on a couple things here.The notion that Scale AI&#x27;s data is of secondary value to Wang seems wrong: data-labeling in the era of agentic RL is more sophisticated than the pejorative view of outsourcing mechanical turk work at slave wages to third world...",
         "author": "vagabund",
         "date": "2025-06-28",
         "url": "https://news.ycombinator.com/item?id=44408187",
-        "sentiment": "neutral"
-      },
-      {
-        "source": "hackernews",
-        "quote": "I did the traditional blog post about this, and used it to create an RSS Aggregator website using AWS Bedrock.https:&#x2F;&#x2F;aws.amazon.com&#x2F;blogs&#x2F;machine-learning&#x2F;use-language-e...",
-        "author": "podgietaru",
-        "date": "2025-05-29",
-        "url": "https://news.ycombinator.com/item?id=44130745",
-        "sentiment": "neutral"
-      },
-      {
-        "source": "hackernews",
-        "quote": "I built an rss aggregator with semantic search using embeddings. The main usage was being able to categorise based on any randomly created category. So you could have arbitrary categorieshttps:&#x2F;&#x2F;github.com&#x2F;aws-samples&#x2F;rss-aggregator-using-cohere-e...",
-        "author": "podgietaru",
-        "date": "2025-05-12",
-        "url": "https://news.ycombinator.com/item?id=43964388",
         "sentiment": "neutral"
       },
       {
@@ -146,20 +106,12 @@
   "perplexity": {
     "name": "Perplexity AI",
     "overallSentiment": "positive",
-    "totalMentions": 2,
+    "totalMentions": 1,
     "positive": 1,
-    "negative": 1,
+    "negative": 0,
     "mixed": 0,
     "lastUpdated": "2026-03-30",
     "hackernews": [
-      {
-        "source": "hackernews",
-        "quote": "The silver line is not to avoid AI but to use it wisely, and this is coming from somebody who used to hate AI.I am not a Python developer or developer for the matter but Perplexity AI did help me to understand the bsic of Python for API requests and get projects delivery with...",
-        "author": "h4kunamata",
-        "date": "2026-03-01",
-        "url": "https://news.ycombinator.com/item?id=47211363",
-        "sentiment": "negative"
-      },
       {
         "source": "hackernews",
         "quote": "LITERATURE REVIEW COMPLETE: Academic Validation StrongI conducted a comprehensive literature review on corporate mortality patterns using Perplexity AI.",
@@ -174,34 +126,18 @@
   "mistral": {
     "name": "Mistral AI",
     "overallSentiment": "positive",
-    "totalMentions": 4,
-    "positive": 2,
+    "totalMentions": 2,
+    "positive": 1,
     "negative": 0,
-    "mixed": 2,
+    "mixed": 1,
     "lastUpdated": "2026-03-30",
     "hackernews": [
-      {
-        "source": "hackernews",
-        "quote": "&gt; just not at AirbusAirbus has publicized that it is working on a Project Maven style project with France&#x27;s DGA [0][1].Thales also publicly launched and demonstrated SkyDefender a couple days ago [2].",
-        "author": "alephnerd",
-        "date": "2026-03-15",
-        "url": "https://news.ycombinator.com/item?id=47384498",
-        "sentiment": "positive"
-      },
       {
         "source": "hackernews",
         "quote": "&gt; Devstral 2 ships under a modified MIT license, while Devstral Small 2 uses Apache 2.0. Both are open-source and permissively licensed to accelerate distributed intelligence.",
         "author": "badsectoracula",
         "date": "2025-12-09",
         "url": "https://news.ycombinator.com/item?id=46206850",
-        "sentiment": "neutral"
-      },
-      {
-        "source": "hackernews",
-        "quote": "I built this to solve my own problem as a small streamer: chat moves fast, viewers come and go, and I kept forgetting who was who and what we&#x27;d talked about before.StreamKin is a real-time dashboard that organizes chat by viewer rather than just a message feed.",
-        "author": "kgnz",
-        "date": "2025-09-11",
-        "url": "https://news.ycombinator.com/item?id=45213894",
         "sentiment": "neutral"
       },
       {
@@ -217,9 +153,9 @@
   },
   "databricks": {
     "name": "Databricks",
-    "overallSentiment": "positive",
-    "totalMentions": 8,
-    "positive": 4,
+    "overallSentiment": "mixed",
+    "totalMentions": 4,
+    "positive": 0,
     "negative": 0,
     "mixed": 4,
     "lastUpdated": "2026-03-30",
@@ -231,38 +167,6 @@
         "date": "2025-12-30",
         "url": "https://news.ycombinator.com/item?id=46434109",
         "sentiment": "neutral"
-      },
-      {
-        "source": "hackernews",
-        "quote": "we have databricks at my company 50m ARR, 150 employee thats still growing at 15% YoY. With 0 full time Data Engineer (1 data scientist + 1 db admin both co-manage everything on there as part-time jobs. They have their full-time role).",
-        "author": "naijaboiler",
-        "date": "2025-08-21",
-        "url": "https://news.ycombinator.com/item?id=44968177",
-        "sentiment": "positive"
-      },
-      {
-        "source": "hackernews",
-        "quote": "we have databricks at my company 50m ARR, 150 employee thats still growing at 15% YoY.. With 0 full time Data Engineer (1 data scientist + 1 db admin manages everything on there as part time jobs).",
-        "author": "naijaboiler",
-        "date": "2025-08-21",
-        "url": "https://news.ycombinator.com/item?id=44968125",
-        "sentiment": "positive"
-      },
-      {
-        "source": "hackernews",
-        "quote": "we have databricks at my company 50m ARR, 150 employee. With 0 full time Data Engineer (1 data scientist + 1 db admin manages everything on there as part time jobs).",
-        "author": "naijaboiler",
-        "date": "2025-08-21",
-        "url": "https://news.ycombinator.com/item?id=44968053",
-        "sentiment": "positive"
-      },
-      {
-        "source": "hackernews",
-        "quote": "LEGO | London (Farringdon) | Hybrid (3 days a week in the office)* Lead engineer on the personalisation &#x2F; recommendation engine* Python, Node JS &#x2F; TS, Databricks, Aurora RDS, AWS, API Gateway* Experience required in both data engineering and back-end engineering...",
-        "author": "milesjag",
-        "date": "2025-08-13",
-        "url": "https://news.ycombinator.com/item?id=44888935",
-        "sentiment": "positive"
       }
     ],
     "reddit": [
@@ -309,37 +213,13 @@
   },
   "hubspot": {
     "name": "HubSpot",
-    "overallSentiment": "positive",
-    "totalMentions": 8,
-    "positive": 4,
+    "overallSentiment": "mixed",
+    "totalMentions": 3,
+    "positive": 1,
     "negative": 0,
-    "mixed": 4,
+    "mixed": 2,
     "lastUpdated": "2026-03-30",
     "hackernews": [
-      {
-        "source": "hackernews",
-        "quote": "Fathom - AI Notetaker | REMOTE (must work US hours) | Full time | https:&#x2F;&#x2F;fathom.video We make the number one AI Notetaker and are hiring across the stack (rails&#x2F;typescript&#x2F;go&#x2F;k8s&#x2F;gcp).",
-        "author": "madiganf",
-        "date": "2025-07-01",
-        "url": "https://news.ycombinator.com/item?id=44434765",
-        "sentiment": "positive"
-      },
-      {
-        "source": "hackernews",
-        "quote": "Fathom - AI Notetaker | REMOTE (must work US hours) | Full time | https:&#x2F;&#x2F;fathom.videoWe make the number one AI Notetaker and are hiring across the stack (rails&#x2F;typescript&#x2F;go&#x2F;k8s&#x2F;gcp).",
-        "author": "madiganf",
-        "date": "2025-05-01",
-        "url": "https://news.ycombinator.com/item?id=43859004",
-        "sentiment": "positive"
-      },
-      {
-        "source": "hackernews",
-        "quote": "Fathom - AI Notetaker | REMOTE (must work US hours) | Full time | https:&#x2F;&#x2F;fathom.videoWe make the number one AI Notetaker and are hiring across the stack (rails&#x2F;typescript&#x2F;go&#x2F;k8s&#x2F;gcp).",
-        "author": "madiganf",
-        "date": "2025-04-01",
-        "url": "https://news.ycombinator.com/item?id=43548465",
-        "sentiment": "positive"
-      },
       {
         "source": "hackernews",
         "quote": "Not proof, per se, but the term to look up is &quot;inbound marketing&quot;.HubSpot was very big on pushing companies to publish lots of content like blog posts and then having calls to action for people to submit their info in exchange for a whitepaper download or similar.",
@@ -347,30 +227,9 @@
         "date": "2025-09-24",
         "url": "https://news.ycombinator.com/item?id=45362480",
         "sentiment": "positive"
-      },
-      {
-        "source": "hackernews",
-        "quote": "Built this Chrome extension that generates professional emails using AI while keeping all data processing local to your browser. Unlike other AI email tools, EffiMail integrates directly with existing workflows (Salesforce, HubSpot, Gmail, Outlook) without sending sensitive data...",
-        "author": "popwatch",
-        "date": "2025-07-07",
-        "url": "https://news.ycombinator.com/item?id=44487905",
-        "sentiment": "neutral"
       }
     ],
     "reddit": [
-      {
-        "source": "reddit",
-        "title": "What I wish every new HubSpot customer knew",
-        "quote": "Biggest win: lock your process first, then build it into HubSpot. A few things that keep new portals clean: \\- Write a one-pager of your funnel before touching workflows: entry/exit criteria for each lifecycle stage, and how it differs from Lead Status. Train from that doc.",
-        "subreddit": "hubspot",
-        "score": 69,
-        "comments": 15,
-        "commentAuthor": "Decent-Mistake-3207",
-        "commentScore": 5,
-        "date": "2025-10-10",
-        "url": "https://reddit.com/r/hubspot/comments/1o3em2l/what_i_wish_every_new_hubspot_customer_knew/",
-        "sentiment": "neutral"
-      },
       {
         "source": "reddit",
         "title": "How I Audit a Messy HubSpot Portal (as a former HubSpotter)",
@@ -402,8 +261,8 @@
   "stripe": {
     "name": "Stripe",
     "overallSentiment": "positive",
-    "totalMentions": 8,
-    "positive": 5,
+    "totalMentions": 6,
+    "positive": 3,
     "negative": 1,
     "mixed": 2,
     "lastUpdated": "2026-03-30",
@@ -439,14 +298,6 @@
         "date": "2025-12-22",
         "url": "https://news.ycombinator.com/item?id=46355702",
         "sentiment": "positive"
-      },
-      {
-        "source": "hackernews",
-        "quote": "Memora, Senior Backend Engineer, Remote (CET, Full-time, TypeScript, Node, NestJSWe are building infrastructure for memorial care. Real users, high ownership, shipping culture. Small team of senior builders.",
-        "author": "joememora",
-        "date": "2025-10-26",
-        "url": "https://news.ycombinator.com/item?id=45712175",
-        "sentiment": "positive"
       }
     ],
     "reddit": [
@@ -475,27 +326,16 @@
         "date": "2026-02-27",
         "url": "https://reddit.com/r/cscareerquestions/comments/1rg03si/landed_meta_and_coinbase_offers_after_spending/",
         "sentiment": "negative"
-      },
-      {
-        "source": "reddit",
-        "title": "Yesterday was my last day working at Stripe. AMA",
-        "quote": "I unfortunately won’t be verifying my identity or employment for some protection of my privacy. I’ve worked for Stripe for over four years and am parting on good terms for my next adventure.",
-        "subreddit": "stripe",
-        "score": 29,
-        "comments": 107,
-        "date": "2026-03-04",
-        "url": "https://reddit.com/r/stripe/comments/1rkxa9u/yesterday_was_my_last_day_working_at_stripe_ama/",
-        "sentiment": "positive"
       }
     ]
   },
   "scale": {
     "name": "Scale AI",
     "overallSentiment": "mixed",
-    "totalMentions": 6,
+    "totalMentions": 5,
     "positive": 1,
     "negative": 0,
-    "mixed": 5,
+    "mixed": 4,
     "lastUpdated": "2026-03-30",
     "hackernews": [
       {
@@ -512,14 +352,6 @@
         "author": "vagabund",
         "date": "2025-06-28",
         "url": "https://news.ycombinator.com/item?id=44408187",
-        "sentiment": "neutral"
-      },
-      {
-        "source": "hackernews",
-        "quote": "AAAI 2026: My ReflectionsThe 40th annual conference of the Association for the Advancement of Artificial Intelligence, #AAAI2026, recently concluded in Singapore, marking the first time this landmark event has been held in Asia.",
-        "author": "nuuuwan",
-        "date": "2026-01-27",
-        "url": "https://news.ycombinator.com/item?id=46779490",
         "sentiment": "neutral"
       },
       {
@@ -602,37 +434,20 @@
   },
   "apollo": {
     "name": "Apollo.io",
-    "overallSentiment": "mixed",
-    "totalMentions": 2,
+    "overallSentiment": "neutral",
+    "totalMentions": 0,
     "positive": 0,
     "negative": 0,
-    "mixed": 2,
+    "mixed": 0,
     "lastUpdated": "2026-03-30",
-    "hackernews": [
-      {
-        "source": "hackernews",
-        "quote": "Everyone is building AI capabilities these days and trying to release them super fast. Apollo.io we prioritized Jobs To Be Done and quality vs Hype. So, we are bringing first to the market Apollo GTM AI Assistant that just works.",
-        "author": "dmicher",
-        "date": "2025-09-15",
-        "url": "https://news.ycombinator.com/item?id=45251601",
-        "sentiment": "neutral"
-      },
-      {
-        "source": "hackernews",
-        "quote": "I want to introduce you to the easiest and most affordable way to find leads right now.We looked at the painful process of finding and connecting with prospects and thought, &quot;There has to be a better way.",
-        "author": "snapyleads",
-        "date": "2025-04-02",
-        "url": "https://news.ycombinator.com/item?id=43553217",
-        "sentiment": "neutral"
-      }
-    ],
+    "hackernews": [],
     "reddit": []
   },
   "runway": {
     "name": "Runway",
     "overallSentiment": "mixed",
-    "totalMentions": 6,
-    "positive": 2,
+    "totalMentions": 5,
+    "positive": 1,
     "negative": 0,
     "mixed": 4,
     "lastUpdated": "2026-03-30",
@@ -660,14 +475,6 @@
         "date": "2025-05-04",
         "url": "https://news.ycombinator.com/item?id=43888474",
         "sentiment": "neutral"
-      },
-      {
-        "source": "hackernews",
-        "quote": "So I have been using Cursor a lot more in a vibe code way lately and I have been coming across what a lot of people report: sometimes the model will rewrite perfectly working code that I didn&#x27;t ask it to touch and break it.",
-        "author": "zoogeny",
-        "date": "2025-04-19",
-        "url": "https://news.ycombinator.com/item?id=43737046",
-        "sentiment": "positive"
       },
       {
         "source": "hackernews",
@@ -721,21 +528,13 @@
   },
   "huggingface": {
     "name": "Hugging Face",
-    "overallSentiment": "mixed",
-    "totalMentions": 5,
+    "overallSentiment": "positive",
+    "totalMentions": 3,
     "positive": 2,
-    "negative": 1,
-    "mixed": 2,
+    "negative": 0,
+    "mixed": 1,
     "lastUpdated": "2026-03-30",
     "hackernews": [
-      {
-        "source": "hackernews",
-        "quote": "Yann LeCun has long argued that current LLM-centric approaches are a dead end for AGI, advocating instead for world models grounded in richer representations of reality.",
-        "author": "ju2ez",
-        "date": "2025-12-23",
-        "url": "https://news.ycombinator.com/item?id=46364184",
-        "sentiment": "negative"
-      },
       {
         "source": "hackernews",
         "quote": "I built Allplix, a suite of 30+ free AI-powered tools (image compression, background removal, video compression, file conversion, image enhancement...) that run entirely in your browser. No server uploads, no sign-up, no limits.",
@@ -743,14 +542,6 @@
         "date": "2026-03-12",
         "url": "https://news.ycombinator.com/item?id=47354562",
         "sentiment": "positive"
-      },
-      {
-        "source": "hackernews",
-        "quote": "I&#x27;m having trouble running this on my Mac - I&#x27;ve tried Ollama and llama.cpp llama-server so far, both using GGUFs from Hugging Face, but neither worked.",
-        "author": "simonw",
-        "date": "2025-07-09",
-        "url": "https://news.ycombinator.com/item?id=44505302",
-        "sentiment": "neutral"
       },
       {
         "source": "hackernews",
@@ -774,28 +565,12 @@
   "openai": {
     "name": "OpenAI",
     "overallSentiment": "mixed",
-    "totalMentions": 8,
+    "totalMentions": 6,
     "positive": 2,
     "negative": 0,
-    "mixed": 6,
+    "mixed": 4,
     "lastUpdated": "2026-03-30",
     "hackernews": [
-      {
-        "source": "hackernews",
-        "quote": "Based on what I know of OpenAI&#x27;s culture, certainly permanent.",
-        "author": "stuartjohnson12",
-        "date": "2025-11-28",
-        "url": "https://news.ycombinator.com/item?id=46074604",
-        "sentiment": "neutral"
-      },
-      {
-        "source": "hackernews",
-        "quote": "It illustrates that there is a real risk to lying about research results: if you get caught it&#x27;s embarrassing.It&#x27;s also worth taking professional integrity into account.",
-        "author": "simonw",
-        "date": "2025-10-23",
-        "url": "https://news.ycombinator.com/item?id=45687806",
-        "sentiment": "neutral"
-      },
       {
         "source": "hackernews",
         "quote": "&gt;Thanks to this bottoms-up culture, OpenAI is also very meritocratic. Historically, leaders in the company are promoted primarily based upon their ability to have good ideas and then execute upon them.",
@@ -866,10 +641,10 @@
   "deepmind": {
     "name": "DeepMind",
     "overallSentiment": "mixed",
-    "totalMentions": 8,
-    "positive": 1,
+    "totalMentions": 5,
+    "positive": 0,
     "negative": 2,
-    "mixed": 5,
+    "mixed": 3,
     "lastUpdated": "2026-03-30",
     "hackernews": [
       {
@@ -890,27 +665,11 @@
       },
       {
         "source": "hackernews",
-        "quote": "I think you underestimate how powerful lean is, and close it is to the tedious part of formal math. A theorem prover needs consult no outside resource. A formal math LLM-like generator need only consult the theorem prover to get rid of hallucinations.",
-        "author": "robrenaud",
-        "date": "2025-12-16",
-        "url": "https://news.ycombinator.com/item?id=46285890",
-        "sentiment": "neutral"
-      },
-      {
-        "source": "hackernews",
         "quote": "Mustafa Suleyman (Microsoft AI CEO) is a grifter. He dropped out at 19 and later ran &quot;product&quot; for Deepmind, riding the coattails of Demis Hassabis.He&#x27;s known for:- bullying employees: https:&#x2F;&#x2F;en.wikipedia.",
         "author": "650",
         "date": "2025-11-20",
         "url": "https://news.ycombinator.com/item?id=45987695",
         "sentiment": "negative"
-      },
-      {
-        "source": "hackernews",
-        "quote": "The UK faces serious structural problems (low productivity, weak investment, stagnant wages, and an over-centralized economy), but none of that automatically translates to terminal decline.",
-        "author": "Aromasin",
-        "date": "2025-11-10",
-        "url": "https://news.ycombinator.com/item?id=45874643",
-        "sentiment": "positive"
       }
     ],
     "reddit": [
@@ -939,53 +698,18 @@
         "date": "2026-03-15",
         "url": "https://reddit.com/r/cscareerquestions/comments/1ru2pw5/advice_on_how_to_best_position_myself_for/",
         "sentiment": "neutral"
-      },
-      {
-        "source": "reddit",
-        "title": "Accelerating Research Ideas",
-        "quote": "Are there any known frameworks for accelerating research across disciplines? I've been playing around with an approach called, RAP Analysis - recursive architecture prompting. Pretty straightforward.",
-        "subreddit": "ChatGPT",
-        "score": 0,
-        "comments": 3,
-        "date": "2025-07-16",
-        "url": "https://reddit.com/r/ChatGPT/comments/1m1bxyl/accelerating_research_ideas/",
-        "sentiment": "neutral"
       }
     ]
   },
   "notion": {
     "name": "Notion",
     "overallSentiment": "positive",
-    "totalMentions": 5,
-    "positive": 4,
+    "totalMentions": 2,
+    "positive": 1,
     "negative": 0,
     "mixed": 1,
     "lastUpdated": "2026-03-30",
     "hackernews": [
-      {
-        "source": "hackernews",
-        "quote": "Clipster | Remote (UTC+2) | Full-TimeClipster is where brands and creators connect to turn views into profits. We help creators earn through performance-based content and enable brands to scale organic content marketing with measurable results.",
-        "author": "NikitaPyanzin",
-        "date": "2026-03-07",
-        "url": "https://news.ycombinator.com/item?id=47290112",
-        "sentiment": "positive"
-      },
-      {
-        "source": "hackernews",
-        "quote": "Trinsic | Software Engineer | REMOTE (North America) | Full‑timeWe’re building the first Identity Acceptance Network—the “Visa for ID.” Humanity is editing genes, starting space tourism and working on artificial intelligence.",
-        "author": "janpieterz",
-        "date": "2025-11-03",
-        "url": "https://news.ycombinator.com/item?id=45800978",
-        "sentiment": "positive"
-      },
-      {
-        "source": "hackernews",
-        "quote": "My take is that the right workflow for people is quite varied. Everyone wants something that’s low friction and will keep them engaged but these daily behaviors are fundamentally high friction habits, so existing solutions are rarely satisfying in the long run.",
-        "author": "jitl",
-        "date": "2025-09-27",
-        "url": "https://news.ycombinator.com/item?id=45396050",
-        "sentiment": "positive"
-      },
       {
         "source": "hackernews",
         "quote": "(I work at Notion)Notion has transclusions. In the product we call them “synced blocks” (https:&#x2F;&#x2F;www.notion.com&#x2F;help&#x2F;synced-blocks), but the implementation type name is transclusion_container and transclusion_reference.We also have backlinks.",
@@ -1008,8 +732,8 @@
   "langchain": {
     "name": "LangChain",
     "overallSentiment": "mixed",
-    "totalMentions": 5,
-    "positive": 2,
+    "totalMentions": 4,
+    "positive": 1,
     "negative": 0,
     "mixed": 3,
     "lastUpdated": "2026-03-30",
@@ -1029,14 +753,6 @@
         "date": "2026-01-13",
         "url": "https://news.ycombinator.com/item?id=46600573",
         "sentiment": "neutral"
-      },
-      {
-        "source": "hackernews",
-        "quote": "I have a nine year old so same age as one of your kids. We do three major things together with LLMs:1.) We spend time together on ChatGPT. Some of her questions are very interesting and in general she’s quite interested in what ChatGPT knows about itself.",
-        "author": "hluska",
-        "date": "2025-06-14",
-        "url": "https://news.ycombinator.com/item?id=44277236",
-        "sentiment": "positive"
       },
       {
         "source": "hackernews",
@@ -1060,20 +776,12 @@
   "replit": {
     "name": "Replit",
     "overallSentiment": "positive",
-    "totalMentions": 8,
+    "totalMentions": 6,
     "positive": 4,
     "negative": 1,
-    "mixed": 3,
+    "mixed": 1,
     "lastUpdated": "2026-03-30",
     "hackernews": [
-      {
-        "source": "hackernews",
-        "quote": "Super interesting that no one here has mentioned replit.I found the experience of using Kiro and replit really similar with one important difference: replit mostly worked.Kiro tore off and wrote tonnes of code and tests.",
-        "author": "sgt101",
-        "date": "2025-07-25",
-        "url": "https://news.ycombinator.com/item?id=44683433",
-        "sentiment": "neutral"
-      },
       {
         "source": "hackernews",
         "quote": "The worst customer support experiences of my life have been from Google, both while using Google Fi personally and GCP while working at Replit in its early days. Thankfully I&#x27;m no longer using either of those products now.",
@@ -1097,14 +805,6 @@
         "date": "2025-03-31",
         "url": "https://news.ycombinator.com/item?id=43538918",
         "sentiment": "positive"
-      },
-      {
-        "source": "hackernews",
-        "quote": "Replit customer service did the same thing to me as a paying customer.Their customer service threw me around because fixing my locked git processes that their system locks you out of for security reasons was too much work for them.",
-        "author": "mannanj",
-        "date": "2026-03-26",
-        "url": "https://news.ycombinator.com/item?id=47526266",
-        "sentiment": "neutral"
       }
     ],
     "reddit": [
@@ -1152,10 +852,10 @@
   "elevenlabs": {
     "name": "ElevenLabs",
     "overallSentiment": "mixed",
-    "totalMentions": 7,
+    "totalMentions": 6,
     "positive": 0,
     "negative": 1,
-    "mixed": 6,
+    "mixed": 5,
     "lastUpdated": "2026-03-30",
     "hackernews": [
       {
@@ -1172,14 +872,6 @@
         "author": "hi_im_vijay",
         "date": "2025-12-11",
         "url": "https://news.ycombinator.com/item?id=46236377",
-        "sentiment": "neutral"
-      },
-      {
-        "source": "hackernews",
-        "quote": "Australian Radio Network’s CADA station, which broadcasts in Sydney and on the iHeartRadio app, created a host called Thy using artificial intelligence software developed by voice cloning firm ElevenLabs.",
-        "author": "pasc1878",
-        "date": "2025-04-25",
-        "url": "https://news.ycombinator.com/item?id=43792710",
         "sentiment": "neutral"
       },
       {
@@ -1231,28 +923,12 @@
   "pinecone": {
     "name": "Pinecone",
     "overallSentiment": "positive",
-    "totalMentions": 5,
-    "positive": 3,
+    "totalMentions": 3,
+    "positive": 2,
     "negative": 0,
-    "mixed": 2,
+    "mixed": 1,
     "lastUpdated": "2026-03-30",
     "hackernews": [
-      {
-        "source": "hackernews",
-        "quote": "Fair point on the &quot;wrapper&quot; label. Let me clarify what we&#x27;re building on top of base LLMs:Yes, we use OpenAI&#x2F;Anthropic APIs - we&#x27;re not training models from scratch (like you said, neither does Perplexity, Jasper, or most AI tools).",
-        "author": "nityasha",
-        "date": "2025-10-22",
-        "url": "https://news.ycombinator.com/item?id=45667394",
-        "sentiment": "neutral"
-      },
-      {
-        "source": "hackernews",
-        "quote": "Happy to answer questions or go deeper on anything. A few notes that might help set expectations:- Provider support is solid for Chroma, Qdrant, and Postgres&#x2F;pgvector. Pinecone works for most read workflows but isn’t full parity yet.",
-        "author": "spitefowl",
-        "date": "2026-02-01",
-        "url": "https://news.ycombinator.com/item?id=46850152",
-        "sentiment": "positive"
-      },
       {
         "source": "hackernews",
         "quote": "Location: India Remote: YesWilling to relocate: Yes, Outside India (Visa sponsorship required)Languages: C++, Python, JavaScript, TypeScriptFull-Stack Development: HTML, CSS, React.js, Next.js, Node.js, Express.",
@@ -1283,10 +959,10 @@
   "modal": {
     "name": "Modal",
     "overallSentiment": "mixed",
-    "totalMentions": 5,
+    "totalMentions": 3,
     "positive": 0,
     "negative": 1,
-    "mixed": 4,
+    "mixed": 2,
     "lastUpdated": "2026-03-30",
     "hackernews": [
       {
@@ -1295,22 +971,6 @@
         "author": "raw_anon_1111",
         "date": "2026-01-14",
         "url": "https://news.ycombinator.com/item?id=46620092",
-        "sentiment": "neutral"
-      },
-      {
-        "source": "hackernews",
-        "quote": "Post author here: there are other projects that will create a proxy for CUDA calls and use the log of CUDA operations to checkpoint &#x2F; restore or live migration tasks. We haven’t used them. I don’t believe they are very popular nor used outside specific orgs.",
-        "author": "luiscape",
-        "date": "2026-01-11",
-        "url": "https://news.ycombinator.com/item?id=46577481",
-        "sentiment": "neutral"
-      },
-      {
-        "source": "hackernews",
-        "quote": "&gt; The second thing is that domestic buildings usually do not come with a consistent ground plane.Ordinary unshielded copper Ethernet doesn’t care: it’s transformer-isolated at both ends.",
-        "author": "amluto",
-        "date": "2026-01-11",
-        "url": "https://news.ycombinator.com/item?id=46573105",
         "sentiment": "neutral"
       },
       {
@@ -1335,10 +995,10 @@
   "ramp": {
     "name": "Ramp",
     "overallSentiment": "positive",
-    "totalMentions": 5,
-    "positive": 3,
+    "totalMentions": 2,
+    "positive": 1,
     "negative": 0,
-    "mixed": 2,
+    "mixed": 1,
     "lastUpdated": "2026-03-30",
     "hackernews": [
       {
@@ -1351,35 +1011,11 @@
       },
       {
         "source": "hackernews",
-        "quote": "IMO its more nuanced. They&#x27;re likely in production ramp-up of the M5 Ultra Mac Studio, for release in the next ~3 months; they have pre-purchased bins of memory from the supply-constrained major memory supplies; and they need as much as they can get because they want to...",
-        "author": "827a",
-        "date": "2026-03-08",
-        "url": "https://news.ycombinator.com/item?id=47298623",
-        "sentiment": "positive"
-      },
-      {
-        "source": "hackernews",
         "quote": "I work at Ona (formerly Gitpod). Background agents from Stripe, Ramp, and Shopify are shipping real code in production, but they all depend on one thing: a fully automated, reproducible dev environment. No localhost, no local state, no &quot;works on my machine.",
         "author": "sidk24",
         "date": "2026-02-13",
         "url": "https://news.ycombinator.com/item?id=47004250",
         "sentiment": "neutral"
-      },
-      {
-        "source": "hackernews",
-        "quote": "While the multiplier is less for me ( perhaps 3x or 4x ) I think the assumption that productivity gain leads to directly to more money is bit optimistic.",
-        "author": "damezumari",
-        "date": "2025-12-28",
-        "url": "https://news.ycombinator.com/item?id=46409823",
-        "sentiment": "neutral"
-      },
-      {
-        "source": "hackernews",
-        "quote": "Here’s mine:I’m building a small live NFL game-prediction tracker and writing up what I learn as I go:https:&#x2F;&#x2F;michellepellon.com&#x2F;portfolio&#x2F;nfl-game-predictions# What’s under the hood todayELO translated to the NFL with margin-of-victory adjustments, a modest...",
-        "author": "bitsofgrace",
-        "date": "2025-11-09",
-        "url": "https://news.ycombinator.com/item?id=45869829",
-        "sentiment": "positive"
       }
     ],
     "reddit": []
@@ -1387,20 +1023,12 @@
   "weaviate": {
     "name": "Weaviate",
     "overallSentiment": "positive",
-    "totalMentions": 5,
-    "positive": 3,
+    "totalMentions": 1,
+    "positive": 1,
     "negative": 0,
-    "mixed": 2,
+    "mixed": 0,
     "lastUpdated": "2026-03-30",
     "hackernews": [
-      {
-        "source": "hackernews",
-        "quote": "Author here. June 16th, 2025, 3 AM - my mother-in-law got diagnosed with cancer. I&#x27;d been building AI agents that shared business intelligence. That night I realized: the same architecture could route survival patterns between patients.",
-        "author": "chris_trevethan",
-        "date": "2026-03-09",
-        "url": "https://news.ycombinator.com/item?id=47312538",
-        "sentiment": "positive"
-      },
       {
         "source": "hackernews",
         "quote": "Author here. I&#x27;ve been using PostgreSQL for AI workloads in production for the past 3 years and wrote this book because I kept seeing teams spin up Pinecone, Weaviate, or Chroma when pgvector could handle their use case with less operational overhead.",
@@ -1408,30 +1036,6 @@
         "date": "2026-03-05",
         "url": "https://news.ycombinator.com/item?id=47257022",
         "sentiment": "positive"
-      },
-      {
-        "source": "hackernews",
-        "quote": "I built Wax because every RAG solution required either Pinecone&#x2F;Weaviate in the cloud or ChromaDB&#x2F;Qdrant running locally. I wanted the SQLite of RAG -- import a library, open a file, query. Except for multimodal content at GPU speed.",
-        "author": "ckarani",
-        "date": "2026-02-17",
-        "url": "https://news.ycombinator.com/item?id=47048732",
-        "sentiment": "positive"
-      },
-      {
-        "source": "hackernews",
-        "quote": "Thanks for the kind words and for giving Mantic.sh a spin, excited to hear how it works for your personal assistant!The cost estimates were rough illustrations for high-usage cloud setups (100 devs × 100 searches&#x2F;day = ~3.65M queries&#x2F;year):Vector embeddings: ~$0.",
-        "author": "marcoaapfortes",
-        "date": "2026-01-06",
-        "url": "https://news.ycombinator.com/item?id=46518682",
-        "sentiment": "mixed"
-      },
-      {
-        "source": "hackernews",
-        "quote": "I built the tech stack behind ChatRAG to handle the increasing number of clients I started getting about a year ago who needed Retrieval Augmented Generation (RAG) powered chatbots.After a lot of trial and error, I settled on this tech stack for ChatRAG:Frontend- Next.",
-        "author": "carlos_marcial",
-        "date": "2025-11-23",
-        "url": "https://news.ycombinator.com/item?id=46022853",
-        "sentiment": "neutral"
       }
     ],
     "reddit": []
@@ -1439,36 +1043,12 @@
   "airbnb": {
     "name": "Airbnb",
     "overallSentiment": "positive",
-    "totalMentions": 6,
-    "positive": 4,
+    "totalMentions": 2,
+    "positive": 1,
     "negative": 1,
-    "mixed": 1,
+    "mixed": 0,
     "lastUpdated": "2026-03-30",
     "hackernews": [
-      {
-        "source": "hackernews",
-        "quote": "If you want second homes to be used productively, just allow folks to list them on AirBnb for planned short-term rental. Long-term rentals are a total non-starter politically for second homes, since you obviously can&#x27;t ethically throw out someone who regards that rental...",
-        "author": "zozbot234",
-        "date": "2026-03-19",
-        "url": "https://news.ycombinator.com/item?id=47435990",
-        "sentiment": "neutral"
-      },
-      {
-        "source": "hackernews",
-        "quote": "eventfirst | Senior Full-Stack Engineer | Berlin, Germany | REMOTE (CET) | Full-timeWe are applying AI to organize corporate events.We are looking for a senior engineer with at least ten years of full stack experience, a strong focus on product and UX, and optionally some...",
-        "author": "felix-h",
-        "date": "2026-03-02",
-        "url": "https://news.ycombinator.com/item?id=47223697",
-        "sentiment": "positive"
-      },
-      {
-        "source": "hackernews",
-        "quote": "eventfirst | Senior Full-Stack Engineer | Berlin, Germany | REMOTE (CET) | Full-timeWe are applying AI to organize corporate events.We are looking for a senior engineer with at least ten years of full stack experience, a strong focus on product and UX, and optionally some...",
-        "author": "felix-h",
-        "date": "2026-02-03",
-        "url": "https://news.ycombinator.com/item?id=46869101",
-        "sentiment": "positive"
-      },
       {
         "source": "hackernews",
         "quote": "&gt; I just spent a week living in an Airbnb with four other people.I can see how it may be really cool, but I can also see how some people may hate that. Colleagues are not (always) friends, a week is a long time, and living together (i.e.",
@@ -1476,14 +1056,6 @@
         "date": "2026-01-26",
         "url": "https://news.ycombinator.com/item?id=46765427",
         "sentiment": "negative"
-      },
-      {
-        "source": "hackernews",
-        "quote": "eventfirst | Senior Full-Stack Engineer | Berlin, Germany | REMOTE (CET) | Full-timeWe are applying AI to organize corporate events.We are looking for a senior engineer with at least ten years of full stack experience, a strong focus on product and UX, and optionally some...",
-        "author": "felix-h",
-        "date": "2026-01-03",
-        "url": "https://news.ycombinator.com/item?id=46475488",
-        "sentiment": "positive"
       }
     ],
     "reddit": [
@@ -1502,63 +1074,22 @@
   },
   "coreweave": {
     "name": "CoreWeave",
-    "overallSentiment": "positive",
-    "totalMentions": 5,
-    "positive": 3,
-    "negative": 1,
-    "mixed": 1,
+    "overallSentiment": "neutral",
+    "totalMentions": 0,
+    "positive": 0,
+    "negative": 0,
+    "mixed": 0,
     "lastUpdated": "2026-03-30",
-    "hackernews": [
-      {
-        "source": "hackernews",
-        "quote": "The timing (Saturday, no announcement) feels calculated to minimize attention. And the framing as &quot;supply and demand&quot; gives them cover for future increases.The real concern isn&#x27;t this specific 15% - it&#x27;s the precedent.",
-        "author": "ktg0215",
-        "date": "2026-01-08",
-        "url": "https://news.ycombinator.com/item?id=46543192",
-        "sentiment": "negative"
-      },
-      {
-        "source": "hackernews",
-        "quote": "The biggest run classified nuclear stockpile loads, at least in the US. They cost about half a billion apiece. And are 30 (carefully cooled and cabled) megawatts. https:&#x2F;&#x2F;en.wikipedia.",
-        "author": "fdr",
-        "date": "2025-12-30",
-        "url": "https://news.ycombinator.com/item?id=46439602",
-        "sentiment": "neutral"
-      },
-      {
-        "source": "hackernews",
-        "quote": "Thunder Compute, YC S24 | https:&#x2F;&#x2F;www.thundercompute.com | In-person in San FranciscoHiring 4 full-time Software Engineers for low-level C++ systems work (HFT skillset), reporting to the CTO, team ex-Citadel, ex-Aquatic, ex-BainWe&#x27;re a GPU cloud provider making...",
-        "author": "cpeterson42",
-        "date": "2025-12-01",
-        "url": "https://news.ycombinator.com/item?id=46111126",
-        "sentiment": "positive"
-      },
-      {
-        "source": "hackernews",
-        "quote": "&gt; even if the depreciation rates are slightly wrong.The TFA cites a linked study which states &quot;CoreWeave, for example, depreciates its GPUs over six years&quot; which is way more than &#x27;slightly wrong&#x27;.",
-        "author": "mrandish",
-        "date": "2025-11-21",
-        "url": "https://news.ycombinator.com/item?id=46000695",
-        "sentiment": "positive"
-      },
-      {
-        "source": "hackernews",
-        "quote": "I could see the case for Palantir purely from the ridiculous P&#x2F;E ratio. On the other hand hey, so does Tesla and it&#x27;s stayed irrational longer than many shorters have stayed solvent.But Nvidia seems highly risky to bet against.",
-        "author": "keeda",
-        "date": "2025-11-05",
-        "url": "https://news.ycombinator.com/item?id=45827990",
-        "sentiment": "positive"
-      }
-    ],
+    "hackernews": [],
     "reddit": []
   },
   "cursor": {
     "name": "Cursor",
-    "overallSentiment": "mixed",
-    "totalMentions": 5,
+    "overallSentiment": "positive",
+    "totalMentions": 4,
     "positive": 2,
     "negative": 0,
-    "mixed": 3,
+    "mixed": 2,
     "lastUpdated": "2026-03-30",
     "hackernews": [
       {
@@ -1592,14 +1123,6 @@
         "date": "2026-03-11",
         "url": "https://news.ycombinator.com/item?id=47330762",
         "sentiment": "positive"
-      },
-      {
-        "source": "hackernews",
-        "quote": "The signal-to-noise problem is real, but I think framing it as a &quot;bubble&quot; confuses two different products being sold under the same name.Product A: &quot;AI looks at your diff and leaves comments.&quot; This is getting commoditized fast.",
-        "author": "mergeshield",
-        "date": "2026-03-10",
-        "url": "https://news.ycombinator.com/item?id=47330240",
-        "sentiment": "neutral"
       }
     ],
     "reddit": []
@@ -1659,10 +1182,10 @@
   "linear": {
     "name": "Linear",
     "overallSentiment": "mixed",
-    "totalMentions": 5,
-    "positive": 1,
+    "totalMentions": 3,
+    "positive": 0,
     "negative": 1,
-    "mixed": 3,
+    "mixed": 2,
     "lastUpdated": "2026-03-30",
     "hackernews": [
       {
@@ -1672,14 +1195,6 @@
         "date": "2026-03-25",
         "url": "https://news.ycombinator.com/item?id=47513371",
         "sentiment": "neutral"
-      },
-      {
-        "source": "hackernews",
-        "quote": "Agree. This article would had been a lot stronger if it had just concentrated on the issue of anthropomorphizing LLMs, without bringing “intelligence” into it.",
-        "author": "libraryofbabel",
-        "date": "2025-08-15",
-        "url": "https://news.ycombinator.com/item?id=44914873",
-        "sentiment": "positive"
       },
       {
         "source": "hackernews",
@@ -1696,14 +1211,6 @@
         "date": "2026-03-18",
         "url": "https://news.ycombinator.com/item?id=47430469",
         "sentiment": "negative"
-      },
-      {
-        "source": "hackernews",
-        "quote": "&gt; &quot;ablation studies&quot;, by which it means removing random layers of an already-trained model, to find the source of the refusals(?)This is not what an ablation study is.",
-        "author": "D-Machine",
-        "date": "2026-03-07",
-        "url": "https://news.ycombinator.com/item?id=47283197",
-        "sentiment": "mixed"
       }
     ],
     "reddit": []
@@ -1711,10 +1218,10 @@
   "vercel": {
     "name": "Vercel",
     "overallSentiment": "mixed",
-    "totalMentions": 5,
-    "positive": 2,
+    "totalMentions": 3,
+    "positive": 1,
     "negative": 0,
-    "mixed": 3,
+    "mixed": 2,
     "lastUpdated": "2026-03-30",
     "hackernews": [
       {
@@ -1735,22 +1242,6 @@
       },
       {
         "source": "hackernews",
-        "quote": "eventfirst | Senior Full-Stack Engineer | Berlin, Germany | REMOTE (CET) | Full-timeWe are applying AI to organize corporate events.We are looking for a senior engineer with at least ten years of full stack experience, a strong focus on product and UX, and optionally some...",
-        "author": "felix-h",
-        "date": "2026-03-02",
-        "url": "https://news.ycombinator.com/item?id=47223697",
-        "sentiment": "positive"
-      },
-      {
-        "source": "hackernews",
-        "quote": "I&#x27;m not convinced. I don&#x27;t want to rack servers and diagnose bad RAM like it&#x27;s still the 90&#x27;s, so I&#x27;m paying someone else for the privilege, especially to get POPs closer to customers than I want to drive or fly to setup, especially in foreign countries...",
-        "author": "fragmede",
-        "date": "2026-02-26",
-        "url": "https://news.ycombinator.com/item?id=47173493",
-        "sentiment": "neutral"
-      },
-      {
-        "source": "hackernews",
         "quote": "&quot; I think people stopped talking about it because the &#x27;how-to&#x27; got buried under &#x27;hustle culture&#x27; noise. The simple, honest machine still works, but for a global audience, the biggest barrier now isn&#x27;t the will to work—it&#x27;s the infrastructure.",
         "author": "Dollarland",
         "date": "2026-02-19",
@@ -1763,8 +1254,8 @@
   "posthog": {
     "name": "PostHog",
     "overallSentiment": "mixed",
-    "totalMentions": 5,
-    "positive": 2,
+    "totalMentions": 4,
+    "positive": 1,
     "negative": 0,
     "mixed": 3,
     "lastUpdated": "2026-03-30",
@@ -1800,14 +1291,6 @@
         "date": "2026-01-08",
         "url": "https://news.ycombinator.com/item?id=46543025",
         "sentiment": "neutral"
-      },
-      {
-        "source": "hackernews",
-        "quote": "OpenAI published an article and demo for scoring how well AI agents can work in a codebase (https:&#x2F;&#x2F;openai.com&#x2F;index&#x2F;harness-engineering&#x2F;, https:&#x2F;&#x2F;www.youtube.com&#x2F;watch?v=rhsSqr0jdFw). We turned it into a free tool anyone can use.",
-        "author": "danoandco",
-        "date": "2026-03-17",
-        "url": "https://news.ycombinator.com/item?id=47419043",
-        "sentiment": "positive"
       }
     ],
     "reddit": []
@@ -1815,28 +1298,12 @@
   "supabase": {
     "name": "Supabase",
     "overallSentiment": "positive",
-    "totalMentions": 5,
-    "positive": 4,
+    "totalMentions": 2,
+    "positive": 1,
     "negative": 0,
     "mixed": 1,
     "lastUpdated": "2026-03-30",
     "hackernews": [
-      {
-        "source": "hackernews",
-        "quote": "Over the last few years I&#x27;ve talked with hundreds of people in the dev community, and almost everyone shared the same concern: there&#x27;s no sustainable funding for critical OSS maintenance, and without it the modern world runs on an increasingly fragile foundation.",
-        "author": "kvinogradov",
-        "date": "2026-02-26",
-        "url": "https://news.ycombinator.com/item?id=47168013",
-        "sentiment": "positive"
-      },
-      {
-        "source": "hackernews",
-        "quote": "Phonely | Senior Backend Engineer (Python) | San Francisco (Onsite) | Full-timeWe’re building the future of voice AI for businesses, with a platform designed to make real-time agents easy to build, tune, and operate.",
-        "author": "Phonely",
-        "date": "2026-02-03",
-        "url": "https://news.ycombinator.com/item?id=46872867",
-        "sentiment": "positive"
-      },
       {
         "source": "hackernews",
         "quote": "I have adapted our &quot;Stealth&quot; pitch to fit their strict format while keeping the &quot;Nerd Bait&quot; hook. Stealth PropTech Startup | Boston, MA (or Remote) | Founding Full-Stack Engineer | CONTRACT TO HIRE | Competitive Market Rate + Equity We are looking for a...",
@@ -1852,14 +1319,6 @@
         "date": "2025-12-22",
         "url": "https://news.ycombinator.com/item?id=46355702",
         "sentiment": "positive"
-      },
-      {
-        "source": "hackernews",
-        "quote": "Onlook (https:&#x2F;&#x2F;www.onlook.com&#x2F;) | Founding Engineer (Fullstack &#x2F; AI) | San Francisco or REMOTE (US) | Full-timeOnlook is an AI-native visual editor that lets designers, PMS, and engineers collaborate directly in the browser.",
-        "author": "D_R_Farrell",
-        "date": "2025-12-01",
-        "url": "https://news.ycombinator.com/item?id=46112642",
-        "sentiment": "positive"
       }
     ],
     "reddit": []
@@ -1867,10 +1326,10 @@
   "tailscale": {
     "name": "Tailscale",
     "overallSentiment": "positive",
-    "totalMentions": 5,
-    "positive": 3,
+    "totalMentions": 3,
+    "positive": 2,
     "negative": 0,
-    "mixed": 2,
+    "mixed": 1,
     "lastUpdated": "2026-03-30",
     "hackernews": [
       {
@@ -1891,22 +1350,6 @@
       },
       {
         "source": "hackernews",
-        "quote": "&gt; i think youre not hearing what - at least i - was saying.You said &quot; it&#x27;s nonsensical to say tailscale works in places where wireguard is blocked&quot;.",
-        "author": "BrandoElFollito",
-        "date": "2026-01-05",
-        "url": "https://news.ycombinator.com/item?id=46499876",
-        "sentiment": "positive"
-      },
-      {
-        "source": "hackernews",
-        "quote": "Spotify and Tailscale do...https:&#x2F;&#x2F;engineering.atspotify.com&#x2F;feedhttps:&#x2F;&#x2F;tailscale.com&#x2F;blog&#x2F;index.xml",
-        "author": "onion2k",
-        "date": "2025-12-23",
-        "url": "https://news.ycombinator.com/item?id=46364511",
-        "sentiment": "neutral"
-      },
-      {
-        "source": "hackernews",
         "quote": "&gt; especially from tech company blogs,https:&#x2F;&#x2F;engineering.fb.com&#x2F;https:&#x2F;&#x2F;netflixtechblog.com&#x2F;https:&#x2F;&#x2F;stripe.com&#x2F;blog&#x2F;engineeringhttps:&#x2F;&#x2F;eng.uber.comhttps:&#x2F;&#x2F;engineering.linkedin.",
         "author": "pella",
         "date": "2025-12-23",
@@ -1919,10 +1362,10 @@
   "suno": {
     "name": "Suno",
     "overallSentiment": "mixed",
-    "totalMentions": 5,
-    "positive": 2,
+    "totalMentions": 3,
+    "positive": 1,
     "negative": 0,
-    "mixed": 3,
+    "mixed": 2,
     "lastUpdated": "2026-03-30",
     "hackernews": [
       {
@@ -1943,22 +1386,6 @@
       },
       {
         "source": "hackernews",
-        "quote": "&gt; I would prefer we have cheaper pianos, samples and microphones instead of worthless music-copying models.There are lots of ML models that produce instrumentals and vocals that are incredibly useful for practicing musicians.",
-        "author": "echelon",
-        "date": "2025-04-04",
-        "url": "https://news.ycombinator.com/item?id=43577508",
-        "sentiment": "neutral"
-      },
-      {
-        "source": "hackernews",
-        "quote": "&gt; Big IP is strong arming OpenAI, Suno, and all the rest.&gt; It&#x27;ll be interesting to see whether creators at the bottom of the pyramid can effectively create new brandsThe problem is, to create a brand, you need to be able to protect it against rivals either ripping you...",
-        "author": "KaiserPro",
-        "date": "2026-03-25",
-        "url": "https://news.ycombinator.com/item?id=47515069",
-        "sentiment": "positive"
-      },
-      {
-        "source": "hackernews",
         "quote": "We can have that discussion, or we can have the more interesting discussion of just how much big corporate intellectual property, franchises, and brands have their hooks in pop culture.Big IP is strong arming OpenAI, Suno, and all the rest.",
         "author": "echelon",
         "date": "2026-03-24",
@@ -1970,39 +1397,22 @@
   },
   "pylon": {
     "name": "Pylon",
-    "overallSentiment": "mixed",
-    "totalMentions": 2,
+    "overallSentiment": "neutral",
+    "totalMentions": 0,
     "positive": 0,
     "negative": 0,
-    "mixed": 2,
+    "mixed": 0,
     "lastUpdated": "2026-03-30",
-    "hackernews": [
-      {
-        "source": "hackernews",
-        "quote": "&gt; I’m not sure where you’re getting these conclusions fromI&#x27;m not sure how to say this in a way that does not come across as rude, and I apologise in advance if it does, but I got those conclusions (in actuality, statements of fact) from actually reading the reports and...",
-        "author": "filleduchaos",
-        "date": "2025-11-25",
-        "url": "https://news.ycombinator.com/item?id=46050494",
-        "sentiment": "neutral"
-      },
-      {
-        "source": "hackernews",
-        "quote": "According to the preliminary report, 3 of the 4 showed fatigue cracks, and the 4th overstressed. So yes, agree a random sample of these parts should be pulled from the fleet and tested - but something pretty crazy was happening here re: fatigue.",
-        "author": "lazide",
-        "date": "2025-11-21",
-        "url": "https://news.ycombinator.com/item?id=46003628",
-        "sentiment": "neutral"
-      }
-    ],
+    "hackernews": [],
     "reddit": []
   },
   "incidentio": {
     "name": "incident.io",
     "overallSentiment": "mixed",
-    "totalMentions": 5,
+    "totalMentions": 3,
     "positive": 1,
-    "negative": 1,
-    "mixed": 3,
+    "negative": 0,
+    "mixed": 2,
     "lastUpdated": "2026-03-30",
     "hackernews": [
       {
@@ -2023,22 +1433,6 @@
       },
       {
         "source": "hackernews",
-        "quote": "But you still have to carry two phones, or using work phone during personal time (as part of on-call).How is this better than just having PagerDuty&#x2F;Incident.io&#x2F;whatever and receiving pings there?",
-        "author": "elAhmo",
-        "date": "2025-09-11",
-        "url": "https://news.ycombinator.com/item?id=45209938",
-        "sentiment": "negative"
-      },
-      {
-        "source": "hackernews",
-        "quote": "Biased as I work for them but I think https:&#x2F;&#x2F;incident.io&#x2F;blog&#x2F;engineering is definitely worth adding.",
-        "author": "shelika",
-        "date": "2025-08-10",
-        "url": "https://news.ycombinator.com/item?id=44855256",
-        "sentiment": "neutral"
-      },
-      {
-        "source": "hackernews",
         "quote": "Cool idea. I thought I’d try to make a Kagi Lens to accomplish the same thing:https:&#x2F;&#x2F;kagi.com&#x2F;lenses&#x2F;LdYine8hZtYmrt8yTMngOUtvTM9rmkRyKagi Lenses can be defined in many ways, one of which is specifying URLs to search.",
         "author": "pbronez",
         "date": "2025-08-10",
@@ -2050,11 +1444,11 @@
   },
   "grafanalabs": {
     "name": "Grafana Labs",
-    "overallSentiment": "mixed",
-    "totalMentions": 5,
+    "overallSentiment": "positive",
+    "totalMentions": 3,
     "positive": 2,
     "negative": 0,
-    "mixed": 3,
+    "mixed": 1,
     "lastUpdated": "2026-03-30",
     "hackernews": [
       {
@@ -2075,22 +1469,6 @@
       },
       {
         "source": "hackernews",
-        "quote": "Grafana Labs | Remote-first (and-only) | Senior &#x2F; Staff Software Engineer | Full-timeI am looking for someone with a lot of experience with SaaS platforms at scale.",
-        "author": "arturw8i",
-        "date": "2025-08-01",
-        "url": "https://news.ycombinator.com/item?id=44757803",
-        "sentiment": "neutral"
-      },
-      {
-        "source": "hackernews",
-        "quote": "Grafana Labs | Remote-first (and-only) | Senior &#x2F; Staff Software Engineer | Full-timeI am looking for someone with a lot of experience with SaaS platforms at scale.",
-        "author": "arturw8i",
-        "date": "2025-07-06",
-        "url": "https://news.ycombinator.com/item?id=44485113",
-        "sentiment": "neutral"
-      },
-      {
-        "source": "hackernews",
         "quote": "Location: Georgia, Europe Remote: Yes Willing to relocate: No Technologies: HTML &#x2F; CSS &#x2F; Tailwind, TypeScript, JavaScript, Vue &#x2F; React &#x2F; React Native &#x2F; Next.js, Redux &#x2F; React Query, Node.js, Ruby on Rails. Résumé: https:&#x2F;&#x2F;drive.google.",
         "author": "nikasvan",
         "date": "2025-06-13",
@@ -2103,10 +1481,10 @@
   "plaid": {
     "name": "Plaid",
     "overallSentiment": "mixed",
-    "totalMentions": 5,
-    "positive": 2,
+    "totalMentions": 3,
+    "positive": 1,
     "negative": 0,
-    "mixed": 3,
+    "mixed": 2,
     "lastUpdated": "2026-03-30",
     "hackernews": [
       {
@@ -2127,27 +1505,11 @@
       },
       {
         "source": "hackernews",
-        "quote": "Channel3 | NYC | $120–200K + 0.5–1.5% equity | Full-timeChannel3 is hiring a Founding Engineer to help us build a database of every product on the internet.Our API lets any AI app or agent add shopping capabilities and earn commission on sales.",
-        "author": "aschiff1",
-        "date": "2025-09-01",
-        "url": "https://news.ycombinator.com/item?id=45093743",
-        "sentiment": "positive"
-      },
-      {
-        "source": "hackernews",
         "quote": "It&#x27;s a strange question to ask me about DEI policy since they specifically aim to hire or promote non-white and non-male people. So, jobs or promotions based on official policy.",
         "author": "nickpsecurity",
         "date": "2025-05-20",
         "url": "https://news.ycombinator.com/item?id=44037294",
         "sentiment": "positive"
-      },
-      {
-        "source": "hackernews",
-        "quote": "It’s true the Plaid Track Edition is brutally quick off the line, Tesla nailed the 0–60 quarter-mile game. But saying it’s &#x27;just as fast&#x27; as the Lotus Evija misses the point. The Evija hits 200 mph in about 13 seconds. That’s not just fast - it’s hypercar territory.",
-        "author": "taylodl",
-        "date": "2025-10-10",
-        "url": "https://news.ycombinator.com/item?id=45538891",
-        "sentiment": "neutral"
       }
     ],
     "reddit": []
@@ -2155,10 +1517,10 @@
   "mercury": {
     "name": "Mercury",
     "overallSentiment": "mixed",
-    "totalMentions": 5,
+    "totalMentions": 2,
     "positive": 0,
-    "negative": 1,
-    "mixed": 4,
+    "negative": 0,
+    "mixed": 2,
     "lastUpdated": "2026-03-30",
     "hackernews": [
       {
@@ -2167,30 +1529,6 @@
         "author": "throw0101d",
         "date": "2025-05-15",
         "url": "https://news.ycombinator.com/item?id=43993727",
-        "sentiment": "neutral"
-      },
-      {
-        "source": "hackernews",
-        "quote": "This reminds me so much of present-day generative AI criticisms.&gt; “These innovations were sometimes misguided, occasionally obsessive, periodically dangerous, and perpetually fascinating,” [Burgess writes]&gt; Susan Sontag once called [them] “the clever, the wealthy, and the...",
-        "author": "echelon",
-        "date": "2025-07-25",
-        "url": "https://news.ycombinator.com/item?id=44682931",
-        "sentiment": "negative"
-      },
-      {
-        "source": "hackernews",
-        "quote": "How about Kombucha? Vanilla extract? Sourdough bread? Mouth wash? Oral medicines? There are more sources to alcohol than the bar, including many incidental sources we don’t think about and happily feed to children as soon as they can handle solid foods.",
-        "author": "Moto7451",
-        "date": "2025-07-20",
-        "url": "https://news.ycombinator.com/item?id=44626491",
-        "sentiment": "neutral"
-      },
-      {
-        "source": "hackernews",
-        "quote": "&gt; For rites, Tacitus mentions that Mercury receives animal and human sacrifices while other deities only get animals.Right, but as the text I quoted earlier pointed out: &quot;Of course, it has already been shown by Karl Helm that this was a historical trope copied from...",
-        "author": "eesmith",
-        "date": "2025-06-23",
-        "url": "https://news.ycombinator.com/item?id=44352560",
         "sentiment": "neutral"
       },
       {
@@ -2207,10 +1545,10 @@
   "airtable": {
     "name": "Airtable",
     "overallSentiment": "mixed",
-    "totalMentions": 5,
-    "positive": 2,
+    "totalMentions": 3,
+    "positive": 1,
     "negative": 0,
-    "mixed": 3,
+    "mixed": 2,
     "lastUpdated": "2026-03-30",
     "hackernews": [
       {
@@ -2223,27 +1561,11 @@
       },
       {
         "source": "hackernews",
-        "quote": "For what it’s worth:- Workflowy is great for taking notes in meetings, allowing ad-hoc moving things around. It’s also great for reference material (what was that long command SQL query I use). But yes it’s also a graveyard.",
-        "author": "halfcat",
-        "date": "2026-01-31",
-        "url": "https://news.ycombinator.com/item?id=46832950",
-        "sentiment": "positive"
-      },
-      {
-        "source": "hackernews",
         "quote": "We have been working on how to track Y Combinator Companies (and other incubators for that matter) and I wanted to share a few learnings:Identifying them in the first place is easy; even with a simple scraper you can save them to Notion, Google Sheets etc.",
         "author": "leo_researchly",
         "date": "2026-01-22",
         "url": "https://news.ycombinator.com/item?id=46724604",
         "sentiment": "positive"
-      },
-      {
-        "source": "hackernews",
-        "quote": "I&#x27;ve been able to submit new entries tohttps:&#x2F;&#x2F;eucloud.tech&#x2F;https:&#x2F;&#x2F;buy-european.net&#x2F;I&#x27;ve also found other problematic ones:https:&#x2F;&#x2F;euro-stack.com&#x2F; (I couldn&#x27;t understand how to submit a new entry)https:&#x2F;&#x2F;www.",
-        "author": "quicksilver03",
-        "date": "2026-01-23",
-        "url": "https://news.ycombinator.com/item?id=46737449",
-        "sentiment": "neutral"
       },
       {
         "source": "hackernews",
@@ -2258,89 +1580,24 @@
   },
   "brex": {
     "name": "Brex",
-    "overallSentiment": "mixed",
-    "totalMentions": 5,
-    "positive": 2,
+    "overallSentiment": "neutral",
+    "totalMentions": 0,
+    "positive": 0,
     "negative": 0,
-    "mixed": 3,
+    "mixed": 0,
     "lastUpdated": "2026-03-30",
-    "hackernews": [
-      {
-        "source": "hackernews",
-        "quote": "Great Question | Director of Engineering | Full time, Remote (USA&#x2F;Canada)Great Question is a unified customer research platform used and loved by teams at companies like Amazon, Canva &amp; Brex.",
-        "author": "nedwin",
-        "date": "2025-09-02",
-        "url": "https://news.ycombinator.com/item?id=45106379",
-        "sentiment": "positive"
-      },
-      {
-        "source": "hackernews",
-        "quote": "Tape on the posters name:about: Data for good. Co-Founder at Empirical Health (https:&#x2F;&#x2F;empirical.health).Before: Risk Engineering at Brex",
-        "author": "ljf",
-        "date": "2025-07-27",
-        "url": "https://news.ycombinator.com/item?id=44704697",
-        "sentiment": "neutral"
-      },
-      {
-        "source": "hackernews",
-        "quote": "Neo.Tax | Senior Full-Stack Engineer | Remote (US Timezones) | Full-timeNeo.Tax is automating enterprise accounting and tax with AI. We help companies like Notion, Mercury, Brex, and Whoop calculate R&amp;D tax credits and capitalize software costs in hours instead of...",
-        "author": "fabuzaid21",
-        "date": "2026-02-02",
-        "url": "https://news.ycombinator.com/item?id=46862175",
-        "sentiment": "positive"
-      },
-      {
-        "source": "hackernews",
-        "quote": "Trunk | https:&#x2F;&#x2F;trunk.ioDeveloper Marketing Lead - Remote friendly | Senior DevRel Engineer - San Francisco| Technical Lead (CI &amp; Test Data Platform) - San Francisco | Sr Platform Engineer - San FranciscoTrunk is an a16z funded (25M) Series A dev tools startup,...",
-        "author": "trunksuzieross",
-        "date": "2026-02-02",
-        "url": "https://news.ycombinator.com/item?id=46858047",
-        "sentiment": "neutral"
-      },
-      {
-        "source": "hackernews",
-        "quote": "&gt; That last one took a bit of time, we went down the ESM&#x2F;CJS bundling rabbithole, ran into lots of monorepo issues, and ultimately opted for a more explicit approach.shudders in vietnam war flashbacks congrats on launch guys!!!",
-        "author": "swyx",
-        "date": "2026-01-20",
-        "url": "https://news.ycombinator.com/item?id=46697822",
-        "sentiment": "neutral"
-      }
-    ],
+    "hackernews": [],
     "reddit": []
   },
   "datadog": {
     "name": "Datadog",
-    "overallSentiment": "positive",
-    "totalMentions": 5,
-    "positive": 4,
+    "overallSentiment": "mixed",
+    "totalMentions": 1,
+    "positive": 0,
     "negative": 0,
     "mixed": 1,
     "lastUpdated": "2026-03-30",
     "hackernews": [
-      {
-        "source": "hackernews",
-        "quote": "What you will do - Develop smart BI solutions utilizing Node.js with TypeScript - Manage extensive data volumes efficiently, employing Google BigQuery and integrating seamlessly with Business Intelligence systems - Build and enhance high-traffic APIs, ensuring minimal latencies...",
-        "author": "TechRecruiting",
-        "date": "2026-03-23",
-        "url": "https://news.ycombinator.com/item?id=47486469",
-        "sentiment": "positive"
-      },
-      {
-        "source": "hackernews",
-        "quote": "Phonely | Senior Backend Engineer (Python) | San Francisco (Onsite) | Full-timeWe’re building the future of voice AI for businesses, with a platform designed to make real-time agents easy to build, tune, and operate.",
-        "author": "Phonely",
-        "date": "2026-02-03",
-        "url": "https://news.ycombinator.com/item?id=46872867",
-        "sentiment": "positive"
-      },
-      {
-        "source": "hackernews",
-        "quote": "We are looking for a Senior Backend Node.js Engineer (m&#x2F;f&#x2F;d) to be part of the development of our Business Intelligence Application.",
-        "author": "TechRecruiting",
-        "date": "2026-01-26",
-        "url": "https://news.ycombinator.com/item?id=46764272",
-        "sentiment": "positive"
-      },
       {
         "source": "hackernews",
         "quote": "We are currently looking for a skilled Principal App Engineer (m&#x2F;f&#x2F;d) with a passion to assume leadership responsibilities to support us in building the fastest &amp; most intuitive shopping app using a brand-new tech stack onsite in Hamburg or Berlin!",
@@ -2348,14 +1605,6 @@
         "date": "2025-12-05",
         "url": "https://news.ycombinator.com/item?id=46159565",
         "sentiment": "neutral"
-      },
-      {
-        "source": "hackernews",
-        "quote": "We are currently looking for a skilled &amp; passionate Senior Fullstack Engineer (m&#x2F;f&#x2F;d) with the focus on the backend) to support our ABOUT YOU Partner Portal onsite in Hamburg.",
-        "author": "TechRecruiting",
-        "date": "2025-10-17",
-        "url": "https://news.ycombinator.com/item?id=45614984",
-        "sentiment": "positive"
       }
     ],
     "reddit": []
@@ -2363,20 +1612,12 @@
   "cloudflare": {
     "name": "Cloudflare",
     "overallSentiment": "negative",
-    "totalMentions": 5,
-    "positive": 1,
+    "totalMentions": 4,
+    "positive": 0,
     "negative": 3,
     "mixed": 1,
     "lastUpdated": "2026-03-30",
     "hackernews": [
-      {
-        "source": "hackernews",
-        "quote": "When I was at Big Corp, I loved reading the internal postmortems. They were usually very interesting and I learned a lot. It&#x27;s one of the things I miss about leaving.",
-        "author": "Arcuru",
-        "date": "2025-12-15",
-        "url": "https://news.ycombinator.com/item?id=46269493",
-        "sentiment": "positive"
-      },
       {
         "source": "hackernews",
         "quote": "What&#x27;s the culture like at Cloudflare re: ops&#x2F;deployment safety?They saw errors related to a deployment, and because it was related to a security issue instead of rolling it back they decided to make another deployment with global blast radius instead?",
@@ -2415,8 +1656,8 @@
   "crusoe": {
     "name": "Crusoe",
     "overallSentiment": "mixed",
-    "totalMentions": 5,
-    "positive": 2,
+    "totalMentions": 4,
+    "positive": 1,
     "negative": 0,
     "mixed": 3,
     "lastUpdated": "2026-03-30",
@@ -2436,14 +1677,6 @@
         "date": "2026-01-06",
         "url": "https://news.ycombinator.com/item?id=46509784",
         "sentiment": "neutral"
-      },
-      {
-        "source": "hackernews",
-        "quote": "I&#x27;ve read thousands of books. There are good novels everywhere, and no country has the exclusivity of any theme.&gt; One is the depiction of desolation and human loneliness before the American continent was developed into a prosperous land.",
-        "author": "idoubtit",
-        "date": "2026-01-04",
-        "url": "https://news.ycombinator.com/item?id=46486929",
-        "sentiment": "positive"
       },
       {
         "source": "hackernews",
@@ -2467,10 +1700,10 @@
   "baseten": {
     "name": "Baseten",
     "overallSentiment": "positive",
-    "totalMentions": 3,
+    "totalMentions": 2,
     "positive": 2,
     "negative": 0,
-    "mixed": 1,
+    "mixed": 0,
     "lastUpdated": "2026-03-30",
     "hackernews": [
       {
@@ -2488,14 +1721,6 @@
         "date": "2026-02-02",
         "url": "https://news.ycombinator.com/item?id=46857991",
         "sentiment": "positive"
-      },
-      {
-        "source": "hackernews",
-        "quote": "Baseten serves models as a service, at scale. There’s quite a lot of interesting engineering both for inference and infrastructure perf. This is a pretty good deep dive into the tricks they employ: https:&#x2F;&#x2F;www.baseten.",
-        "author": "davepeck",
-        "date": "2025-08-08",
-        "url": "https://news.ycombinator.com/item?id=44842069",
-        "sentiment": "neutral"
       }
     ],
     "reddit": []
@@ -2522,38 +1747,21 @@
   },
   "synthesia": {
     "name": "Synthesia",
-    "overallSentiment": "positive",
-    "totalMentions": 2,
-    "positive": 2,
+    "overallSentiment": "neutral",
+    "totalMentions": 0,
+    "positive": 0,
     "negative": 0,
     "mixed": 0,
     "lastUpdated": "2026-03-30",
-    "hackernews": [
-      {
-        "source": "hackernews",
-        "quote": "Tracebit | https:&#x2F;&#x2F;tracebit.com | London&#x2F;New York| Full-TimeTracebit is an Accel backed, UK founded security product company taking a new look at canaries for intrusion detection.We work with some amazing companies (Docker, Riot Games, Synthesia, Zepz...",
-        "author": "tracebit",
-        "date": "2026-03-04",
-        "url": "https://news.ycombinator.com/item?id=47244862",
-        "sentiment": "positive"
-      },
-      {
-        "source": "hackernews",
-        "quote": "Tracebit | https:&#x2F;&#x2F;tracebit.com | London&#x2F;New York| Full-TimeTracebit is an Accel backed, UK founded security product company taking a new look at canaries for intrusion detection.We work with some amazing companies (Docker, Riot Games, Synthesia, Zepz...",
-        "author": "tracebit",
-        "date": "2026-02-05",
-        "url": "https://news.ycombinator.com/item?id=46899988",
-        "sentiment": "positive"
-      }
-    ],
+    "hackernews": [],
     "reddit": []
   },
   "samsara": {
     "name": "Samsara",
     "overallSentiment": "positive",
-    "totalMentions": 2,
+    "totalMentions": 1,
     "positive": 1,
-    "negative": 1,
+    "negative": 0,
     "mixed": 0,
     "lastUpdated": "2026-03-30",
     "hackernews": [
@@ -2564,14 +1772,6 @@
         "date": "2025-10-01",
         "url": "https://news.ycombinator.com/item?id=45442402",
         "sentiment": "positive"
-      },
-      {
-        "source": "hackernews",
-        "quote": "https:&#x2F;&#x2F;archive.is&#x2F;fcbPg&#x27;Late one night in June 2021, a tanker-truck driver on Phoenix’s Red Mountain Freeway barreled through a line of stopped cars at more than 60 miles an hour, leaving mangled metal and broken bodies in his wake.",
-        "author": "Bostonian",
-        "date": "2025-07-01",
-        "url": "https://news.ycombinator.com/item?id=44437484",
-        "sentiment": "negative"
       }
     ],
     "reddit": []
@@ -2579,28 +1779,12 @@
   "glean": {
     "name": "Glean",
     "overallSentiment": "mixed",
-    "totalMentions": 5,
-    "positive": 2,
+    "totalMentions": 1,
+    "positive": 0,
     "negative": 0,
-    "mixed": 3,
+    "mixed": 1,
     "lastUpdated": "2026-03-30",
     "hackernews": [
-      {
-        "source": "hackernews",
-        "quote": "One of my favourite kooks is an artist named Stanislaw Szukalski[0]. Although he had some heinously racist ideas (yeti inbreeding with humans), his art skills are unmatched, and his critical analysis of ancient art led him to develop the concept of the &quot;Protong&quot;, the...",
-        "author": "aa-jv",
-        "date": "2025-09-22",
-        "url": "https://news.ycombinator.com/item?id=45330520",
-        "sentiment": "positive"
-      },
-      {
-        "source": "hackernews",
-        "quote": "Glean was working in this space since 2019, before chatgpt moment.",
-        "author": "cantor_S_drug",
-        "date": "2025-10-24",
-        "url": "https://news.ycombinator.com/item?id=45693351",
-        "sentiment": "neutral"
-      },
       {
         "source": "hackernews",
         "quote": "Perhaps you haven&#x27;t used many MCP server, but those that I have used (GitHub, Atlassian, Glean, BuildKite, Figma, Google Workspace, etc) work very well. They teach an LLM how to do exactly what you&#x27;re saying - &quot;use the API standards...",
@@ -2608,22 +1792,6 @@
         "date": "2025-11-17",
         "url": "https://news.ycombinator.com/item?id=45951510",
         "sentiment": "neutral"
-      },
-      {
-        "source": "hackernews",
-        "quote": "I guess one flaw in the argument about success leading to failure due to model providers eating the product layer, esp for B2B, is it ignores switching costs.",
-        "author": "another_twist",
-        "date": "2025-09-14",
-        "url": "https://news.ycombinator.com/item?id=45238572",
-        "sentiment": "neutral"
-      },
-      {
-        "source": "hackernews",
-        "quote": "SEEKING WORK | Zagreb, Croatia (Europe) | Remote (any time zone)Senior Frontend EngineerI’ve been building web products for 10+ years, mostly from scratch with small teams and founders.I’ve worked across SaaS and fintech - at Glean.",
-        "author": "sinisamikulic",
-        "date": "2025-09-03",
-        "url": "https://news.ycombinator.com/item?id=45114989",
-        "sentiment": "positive"
       }
     ],
     "reddit": []
@@ -2631,20 +1799,12 @@
   "vanta": {
     "name": "Vanta",
     "overallSentiment": "negative",
-    "totalMentions": 5,
+    "totalMentions": 4,
     "positive": 0,
     "negative": 4,
-    "mixed": 1,
+    "mixed": 0,
     "lastUpdated": "2026-03-30",
     "hackernews": [
-      {
-        "source": "hackernews",
-        "quote": "I am, CMMC 2.0 requires and is essentially satisfied by FedRAMP Moderate, and NIST 800-171 is a subset of FedRAMP. Notably both CMMC and FedRAMP were met with immense criticism from industry which was mostly ignored.",
-        "author": "cuuupid",
-        "date": "2026-03-19",
-        "url": "https://news.ycombinator.com/item?id=47442242",
-        "sentiment": "neutral"
-      },
       {
         "source": "hackernews",
         "quote": "Location: Europe Remote:Yes Willing to relocate: no Technologies: Vue, React, Next.js, Tailwind, Node.js, Django, PostgreSQL, Prisma, Redis, Celery, FFmpeg, HLS.",
