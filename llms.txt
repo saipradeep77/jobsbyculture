@@ -1,6 +1,6 @@
 # JobsByCulture
 
-> Culture-first job search for AI & tech professionals. Browse 7,083+ jobs filtered by culture values like async-first, work-life balance, remote-friendly, and ethical AI.
+> Culture-first job search for AI & tech professionals. Browse 7,925+ jobs filtered by culture values like async-first, work-life balance, remote-friendly, and ethical AI.
 
 ## About
 
@@ -8,9 +8,9 @@ JobsByCulture helps professionals find jobs at companies whose culture actually 
 
 ## Key Pages
 
-- [Browse Jobs](https://jobsbyculture.com/jobs): 7,083+ AI & tech jobs filtered by 18 culture values, 12 role categories, and 8 locations
+- [Browse Jobs](https://jobsbyculture.com/jobs): 7,925+ AI & tech jobs filtered by 18 culture values, 12 role categories, and 8 locations
 - [Compare Cultures](https://jobsbyculture.com/compare): Side-by-side company culture comparison tool
-- [Company Directory](https://jobsbyculture.com/directory): All 45 profiled companies with ratings, values, and reviews
+- [Company Directory](https://jobsbyculture.com/directory): All 49 profiled companies with ratings, values, and reviews
 - [Culture Map](https://jobsbyculture.com/culture-map): Interactive scatter chart comparing all 45 companies by Glassdoor rating vs work-life balance
 - [Culture Quiz](https://jobsbyculture.com/quiz): "What's Your Work Culture Type?" — 90-second quiz with 6 archetypes (Deep Work Monk, Remote Explorer, Mission Hacker, Startup Sprinter, Culture Architect, Growth Engineer) and matching company recommendations
 
@@ -61,6 +61,10 @@ JobsByCulture helps professionals find jobs at companies whose culture actually 
 - [Crusoe](https://jobsbyculture.com/companies/crusoe): 4.3 Glassdoor, AI Cloud Infrastructure (Clean Energy), 85% recommend
 - [Baseten](https://jobsbyculture.com/companies/baseten): 4.3 Glassdoor, ML Inference Infrastructure
 - [Fireworks AI](https://jobsbyculture.com/companies/fireworksai): 4.2 Glassdoor, LLM Inference Platform (ex-Meta team)
+- [Synthesia](https://jobsbyculture.com/companies/synthesia): 4.4 Glassdoor, AI Video Generation Platform
+- [Samsara](https://jobsbyculture.com/companies/samsara): 4.0 Glassdoor, IoT for Physical Operations
+- [Glean](https://jobsbyculture.com/companies/glean): 4.2 Glassdoor, AI Enterprise Search
+- [Vanta](https://jobsbyculture.com/companies/vanta): 3.8 Glassdoor, Security Compliance Automation
 
 ## Popular Comparisons
 

@@ -44,6 +44,10 @@
     { "slug": "cloudflare",  "name": "Cloudflare",    "ats": "greenhouse", "atsSlug": "cloudflare",   "domain": "cloudflare.com" },
     { "slug": "crusoe",      "name": "Crusoe",        "ats": "ashby",      "atsSlug": "crusoe",       "domain": "crusoe.ai" },
     { "slug": "baseten",     "name": "Baseten",       "ats": "ashby",      "atsSlug": "baseten",      "domain": "baseten.co" },
-    { "slug": "fireworksai", "name": "Fireworks AI",   "ats": "greenhouse", "atsSlug": "fireworksai",  "domain": "fireworks.ai" }
+    { "slug": "fireworksai", "name": "Fireworks AI",   "ats": "greenhouse", "atsSlug": "fireworksai",  "domain": "fireworks.ai" },
+    { "slug": "synthesia",   "name": "Synthesia",       "ats": "ashby",      "atsSlug": "synthesia",    "domain": "synthesia.io" },
+    { "slug": "samsara",     "name": "Samsara",         "ats": "greenhouse", "atsSlug": "samsara",      "domain": "samsara.com" },
+    { "slug": "glean",       "name": "Glean",           "ats": "greenhouse", "atsSlug": "gleanwork",    "domain": "glean.com" },
+    { "slug": "vanta",       "name": "Vanta",           "ats": "ashby",      "atsSlug": "vanta",        "domain": "vanta.com" }
   ]
 }

@@ -854,6 +854,10 @@
 
 
 
+
+
+
+
 <!-- ═══ COMMUNITY SENTIMENT ═══ -->
 <section class="cs-section">
     <div class="container">
@@ -861,7 +865,12 @@
         <h2 class="s-title">What the <em>community</em> says about Together AI</h2>
         <div class="cs-overall">
             <span class="cs-badge positive">Mostly Positive</span>
-            <span class="cs-stats">1 mentions from Hacker News &amp; Reddit &middot; Updated 2026-03-30</span>
+            <span class="cs-stats">3 mentions from Hacker News &amp; Reddit &middot; Updated 2026-03-30</span>
+        </div>
+        <div class="cs-tabs">
+            <button class="cs-tab active" onclick="showSentiment('all',this)">All</button>
+            <button class="cs-tab" onclick="showSentiment('hn',this)">Hacker News</button>
+            <button class="cs-tab" onclick="showSentiment('reddit',this)">Reddit</button>
         </div>
         <div class="cs-quotes" id="csQuotes">
             <div class="cs-quote" data-source="hn">
@@ -870,6 +879,22 @@
                     <span class="cs-quote-source hn">Hacker News</span>
                     <span>elric &middot; 2025-10-24</span>
                     <a href="https://news.ycombinator.com/item?id=45693025&amp;ref=jobsbyculture.com" target="_blank" rel="noopener" class="cs-quote-link">View thread &rarr;</a>
+                </div>
+            </div>
+            <div class="cs-quote" data-source="reddit">
+                <div class="cs-quote-text">&ldquo;It’s easier to get into a start up from Google than it is to go from a start up to Google. Also the good thing about big tech companies is that they generally have reasonable expectations.&rdquo;</div>
+                <div class="cs-quote-meta">
+                    <span class="cs-quote-source reddit">Reddit</span>
+                    <span>r/cscareerquestions &middot; 3 upvotes &middot; 2026-03-05</span>
+                    <a href="https://reddit.com/r/cscareerquestions/comments/1rl3at2/together_ai_vs_google/?ref=jobsbyculture.com" target="_blank" rel="noopener" class="cs-quote-link">View thread &rarr;</a>
+                </div>
+            </div>
+            <div class="cs-quote" data-source="reddit">
+                <div class="cs-quote-text">&ldquo;Been studying Together AI's growth lately and honestly their strategy is kind of underrated in how simple it is. They didn't go build a sales team. They didn't run ads. They just made themselves genuinely useful to developers and let that compound.&rdquo;</div>
+                <div class="cs-quote-meta">
+                    <span class="cs-quote-source reddit">Reddit</span>
+                    <span>r/SaaS &middot; 4 upvotes &middot; 2026-03-19</span>
+                    <a href="https://reddit.com/r/SaaS/comments/1rxu31r/case_study_together_ais_entire_gtm_is_basically/?ref=jobsbyculture.com" target="_blank" rel="noopener" class="cs-quote-link">View thread &rarr;</a>
                 </div>
             </div>
         </div>
