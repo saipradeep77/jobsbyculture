@@ -84,7 +84,7 @@ After refresh, update job/company counts in **every** file that references them:
 
 | File | What to update |
 |------|---------------|
-| `index.html` | Meta description, twitter description, hero count, hero metrics (jobs + companies profiled), "See all X jobs" CTA, "From N companies" note, ALL browse-by-value counts (eng-driven, flat, learning, ethical-ai, equity, many-hats, open-source, ship-fast), "All AI & Tech Jobs" card count + company count |
+| `index.html` | Meta description, twitter description, hero count, hero metrics (jobs + companies profiled), **sticky CTA bar count (`#stickyCount` — must match hero count)**, "See all X jobs" CTA, "From N companies" note, ALL browse-by-value counts (eng-driven, flat, learning, ethical-ai, equity, many-hats, open-source, ship-fast), "All AI & Tech Jobs" card count + company count |
 | `compare.html` | Profiled companies comment, AUTOCOMPLETE_LIST (add new companies) |
 | `llms.txt` | Job count, company count, add new company profile entries |
 | `directory.html` | Meta description, og:description, twitter:description, visible company count |
