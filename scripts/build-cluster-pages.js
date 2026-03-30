@@ -129,6 +129,46 @@ const VALUE_DESCRIPTIONS = {
     'social-impact': 'Companies driven by a mission beyond profit. Whether it\'s climate, education, health, or AI safety — the work connects to something larger.',
 };
 
+// ─── Blog article mappings for Related Reading ───
+const VALUE_BLOG_ARTICLES = {
+    'remote': [
+        { slug: 'remote-friendly-ai-companies-hiring-2026', title: 'Remote-Friendly AI Companies Hiring in 2026' },
+        { slug: 'anthropic-remote-work-policy-2026', title: 'Anthropic Remote Work Policy in 2026' },
+    ],
+    'wlb': [
+        { slug: 'best-ai-companies-work-life-balance-2026', title: 'Best AI Companies for Work-Life Balance (2026)' },
+        { slug: 'best-ai-companies-work-life-balance-san-francisco-2026', title: 'Best AI Companies for Work-Life Balance in San Francisco' },
+        { slug: 'best-ai-companies-work-life-balance-new-york-2026', title: 'Best AI Companies for Work-Life Balance in New York' },
+    ],
+    'eng-driven': [
+        { slug: 'best-ai-companies-for-engineers-2026', title: 'Best AI Companies for Engineers (2026)' },
+    ],
+    'flat': [
+        { slug: 'flat-hierarchy-tech-companies', title: 'Flat Hierarchy Tech Companies Worth Joining' },
+    ],
+    'open-source': [
+        { slug: 'open-source-ai-companies-hiring-2026', title: 'Open Source AI Companies Hiring in 2026' },
+    ],
+    'ethical-ai': [
+        { slug: 'anthropic-vs-openai-culture-comparison', title: 'Anthropic vs OpenAI: Culture Comparison' },
+    ],
+    'ship-fast': [
+        { slug: 'ai-hiring-trends-2026', title: 'AI Hiring Trends in 2026' },
+    ],
+    'learning': [
+        { slug: 'best-ai-startups-to-join-2026', title: 'Best AI Startups to Join in 2026' },
+    ],
+    'equity': [
+        { slug: 'highest-paying-ai-companies-2026', title: 'Highest Paying AI Companies in 2026' },
+    ],
+    'product-impact': [
+        { slug: 'best-ai-companies-to-work-for-2026', title: 'Best AI Companies to Work For (2026)' },
+    ],
+    'diverse': [
+        { slug: 'employer-brand-benchmarks-ai-2026', title: 'Employer Brand Benchmarks for AI Companies (2026)' },
+    ],
+};
+
 // ─── Role descriptions for SEO content ───
 const ROLE_DESCRIPTIONS = {
     'ml-ai': 'Machine learning and AI roles: research scientists, ML engineers, NLP specialists, computer vision engineers, and AI researchers working on cutting-edge models.',
@@ -556,7 +596,26 @@ ${relatedValues.slice(0, 8).map(v => {
 }).join('\n')}
         </div>
     </div>
-</section>
+</section>`;
+
+    // Related Reading (blog articles)
+    const blogArticles = VALUE_BLOG_ARTICLES[valueSlug];
+    if (blogArticles && blogArticles.length > 0) {
+        html += `
+
+<section style="padding:0 0 48px;">
+    <div class="container">
+        <div style="padding-top:32px;border-top:1px solid var(--border);">
+            <h2 class="cl-section-title">Related Reading</h2>
+            <div style="display:flex;flex-direction:column;gap:8px;">
+${blogArticles.map(a => `                <a href="/blog/${esc(a.slug)}" style="color:var(--accent);text-decoration:none;font-weight:500;font-size:15px;">${esc(a.title)} &rarr;</a>`).join('\n')}
+            </div>
+        </div>
+    </div>
+</section>`;
+    }
+
+    html += `
 
 ${footerHtml()}
 </body>

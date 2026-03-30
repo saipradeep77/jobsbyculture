@@ -202,6 +202,29 @@ const LOCATIONS = {
     },
 };
 
+// ─── Blog article mappings for Related Reading on location pages ───
+const LOCATION_BLOG_ARTICLES = {
+    'san-francisco': [
+        { slug: 'best-ai-companies-work-life-balance-san-francisco-2026', title: 'Best AI Companies for Work-Life Balance in San Francisco' },
+        { slug: 'ai-hiring-trends-2026', title: 'AI Hiring Trends in 2026' },
+    ],
+    'new-york': [
+        { slug: 'best-ai-companies-work-life-balance-new-york-2026', title: 'Best AI Companies for Work-Life Balance in New York' },
+        { slug: 'ai-hiring-trends-2026', title: 'AI Hiring Trends in 2026' },
+    ],
+    'paris': [
+        { slug: 'ai-jobs-paris-2026', title: 'AI Jobs in Paris (2026)' },
+        { slug: 'ai-hiring-trends-2026', title: 'AI Hiring Trends in 2026' },
+    ],
+    'remote': [
+        { slug: 'remote-friendly-ai-companies-hiring-2026', title: 'Remote-Friendly AI Companies Hiring in 2026' },
+        { slug: 'ai-hiring-trends-2026', title: 'AI Hiring Trends in 2026' },
+    ],
+};
+const LOCATION_DEFAULT_ARTICLES = [
+    { slug: 'ai-hiring-trends-2026', title: 'AI Hiring Trends in 2026' },
+];
+
 // classifyRole: synced with update-counts.js — keep these identical
 function classifyRole(title) {
     const t = title.toLowerCase();
@@ -700,7 +723,26 @@ ${Object.entries(VALUES).slice(0, 8).map(([v, vData]) => {
 }).join('\n')}
         </div>
     </div>
-</section>
+</section>`;
+
+    // Related Reading (blog articles)
+    const blogArticles = LOCATION_BLOG_ARTICLES[locSlug] || LOCATION_DEFAULT_ARTICLES;
+    if (blogArticles && blogArticles.length > 0) {
+        html += `
+
+<section style="padding:0 0 48px;">
+    <div class="container">
+        <div style="padding-top:32px;border-top:1px solid var(--border);">
+            <h2 class="cl-section-title">Related Reading</h2>
+            <div style="display:flex;flex-direction:column;gap:8px;">
+${blogArticles.map(a => `                <a href="/blog/${esc(a.slug)}" style="color:var(--accent);text-decoration:none;font-weight:500;font-size:15px;">${esc(a.title)} &rarr;</a>`).join('\n')}
+            </div>
+        </div>
+    </div>
+</section>`;
+    }
+
+    html += `
 
 ${footerHtml()}
 

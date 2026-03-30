@@ -40,6 +40,28 @@ const COMPANIES = extractJSObject(compareHtml, 'COMPANIES');
 const COMPANY_REVIEWS = extractJSObject(compareHtml, 'COMPANY_REVIEWS');
 const CRC = extractJSObject(compareHtml, 'CRC');
 
+// ─── Blog post mappings for compare pages ───
+// Maps company slugs to their "working-at" blog post slugs
+const WORKING_AT_BLOG = {
+    'airbnb': { slug: 'working-at-airbnb-2026', title: 'Working at Airbnb' },
+    'anthropic': { slug: 'working-at-anthropic-2026', title: 'Working at Anthropic' },
+    'cloudflare': { slug: 'working-at-cloudflare-2026', title: 'Working at Cloudflare' },
+    'coreweave': { slug: 'working-at-coreweave-2026', title: 'Working at CoreWeave' },
+    'cursor': { slug: 'working-at-cursor-2026', title: 'Working at Cursor' },
+    'databricks': { slug: 'working-at-databricks-2026', title: 'Working at Databricks' },
+    'datadog': { slug: 'working-at-datadog-2026', title: 'Working at Datadog' },
+    'deepmind': { slug: 'working-at-deepmind-2026', title: 'Working at DeepMind' },
+    'figma': { slug: 'working-at-figma-2026', title: 'Working at Figma' },
+    'grafanalabs': { slug: 'working-at-grafana-labs-2026', title: 'Working at Grafana Labs' },
+    'hubspot': { slug: 'working-at-hubspot-2026', title: 'Working at HubSpot' },
+    'mistral': { slug: 'working-at-mistral-2026', title: 'Working at Mistral' },
+    'openai': { slug: 'working-at-openai-2026', title: 'Working at OpenAI' },
+    'perplexity': { slug: 'working-at-perplexity-2026', title: 'Working at Perplexity' },
+    'stripe': { slug: 'working-at-stripe-2026', title: 'Working at Stripe' },
+    'supabase': { slug: 'working-at-supabase-2026', title: 'Working at Supabase' },
+    'together': { slug: 'working-at-together-ai-2026', title: 'Working at Together AI' },
+};
+
 const VALID_VALUES = [
     'wlb','remote','flex-hours','async','deep-work','transparent','flat',
     'diverse','psych-safety','eng-driven','ship-fast','open-source',
@@ -550,6 +572,16 @@ function generatePage(a, b) {
         <div class="cmp-ctas">${ctaCol(a, false)}${ctaCol(b, true)}</div>
     </div>
 </div>
+
+${(() => {
+    const blogA = WORKING_AT_BLOG[slugA];
+    const blogB = WORKING_AT_BLOG[slugB];
+    if (!blogA && !blogB) return '';
+    const links = [];
+    if (blogA) links.push(`<a href="/blog/${blogA.slug}" style="color:var(--accent);text-decoration:none;font-weight:500;">${blogA.title}</a>`);
+    if (blogB) links.push(`<a href="/blog/${blogB.slug}" style="color:var(--accent);text-decoration:none;font-weight:500;">${blogB.title}</a>`);
+    return `<div class="container"><div style="margin-top:32px;padding-top:24px;border-top:1px solid var(--border);"><p style="font-size:14px;color:var(--text-2);">Read more: ${links.join(' &middot; ')}</p></div></div>`;
+})()}
 
 <!-- FOOTER -->
 <footer>
