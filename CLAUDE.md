@@ -39,8 +39,7 @@ This is the critical step. For each new company, add three things to `jobs.html`
 },
 ```
 
-**Available culture values** (pick the ones that genuinely apply):
-`wlb`, `remote`, `flex-hours`, `async`, `deep-work`, `transparent`, `flat`, `diverse`, `psych-safety`, `eng-driven`, `ship-fast`, `open-source`, `learning`, `equity`, `product-impact`, `many-hats`, `ethical-ai`, `social-impact`
+**Available culture values** — see **Culture Values Evidence Framework** section below for strict assignment criteria. Every value MUST have evidence. When in doubt, leave it out.
 
 **B) Add to `COMPANY_REVIEWS` object** (after last entry, before `};`):
 ```javascript
@@ -109,10 +108,75 @@ Co-Authored-By: Claude Opus 4.6 <noreply@anthropic.com>"
 
 **IMPORTANT: Do NOT run `git push`. The owner will review and push to production manually.**
 
+## Culture Values Evidence Framework
+
+**This is the most important section of this document.** Assigning wrong culture values undermines the entire site. Every value assigned to a company MUST have concrete evidence. The bar is: "Could I defend this assignment to a user who works there?"
+
+### Assignment Process (MANDATORY for every new company)
+
+1. **Check Glassdoor reviews** — read at least 10 recent reviews. Note specific quotes supporting each candidate value.
+2. **Check the careers/culture page** — look for explicit policies, not marketing fluff. "We value flexibility" with no specifics is not evidence.
+3. **Check engineering blog** (if exists) — real signal on `eng-driven`, `open-source`, `ship-fast`, `deep-work`.
+4. **Cross-reference cons against values** — if Glassdoor cons directly contradict a value (e.g., "too many meetings" → don't assign `deep-work`), do NOT assign it.
+5. **When in doubt, leave it out** — 3 accurate values are better than 6 aspirational ones.
+6. **Minimum 3, maximum 6 values per company.** More than 6 dilutes signal. Fewer than 3 means we don't know enough (research more or don't add the company).
+
+### Evidence Criteria Per Value
+
+#### Work & Time (highest risk of getting wrong — be strict)
+
+| Value | Assign ONLY if... | Reject if... |
+|---|---|---|
+| `remote` | >50% of open roles are listed as remote/distributed, OR company explicitly states "remote-first" on careers page | "Hybrid," "flexible," or "in-office with some remote" language. Mandatory office days = NOT remote. Having a few remote roles ≠ remote-friendly culture. |
+| `wlb` | Glassdoor WLB score ≥ 4.0, AND multiple reviews specifically praise work-life balance | WLB < 3.5, or "long hours" / "always on" appears in 3+ reviews |
+| `flex-hours` | Explicit flex-hours or async-schedule policy on careers page, OR consistent review mentions | "Core hours" with strict enforcement. Marketing-speak without specifics. |
+| `async` | Company explicitly promotes async communication — must be documented (handbook, blog post, careers page), not assumed from being remote | Heavy Slack/meeting culture mentioned in reviews. Being remote does NOT automatically mean async. |
+| `deep-work` | Reviews or blog posts emphasize low-meeting culture, maker schedules, focus time blocks | "Too many meetings" as a Glassdoor con. High-growth startups rarely qualify unless they actively protect focus time. |
+
+#### Organizational Culture
+
+| Value | Assign ONLY if... | Reject if... |
+|---|---|---|
+| `flat` | Company has <300 employees with demonstrably few management layers, OR explicitly documents flat structure (e.g., no managers, elected leads) | Company has >500 people (almost impossible to be truly flat at scale). Multiple VP/Director/SVP layers visible on LinkedIn. "Politics" mentioned in reviews. |
+| `transparent` | Open salary bands published, OR public company metrics/dashboards, OR reviews consistently mention "transparent leadership" | "Lack of communication" or "decisions made behind closed doors" as Glassdoor cons |
+| `diverse` | Published DEI data with specifics, diverse leadership team visible, concrete programs (ERGs, sponsorship) | No diversity page. A single diversity statement without data or programs is not enough. |
+| `psych-safety` | Reviews mention blameless postmortems, safe to disagree with leadership, constructive failure culture | "Fear-based," "blame culture," "walking on eggshells" in reviews |
+
+#### Product & Engineering
+
+| Value | Assign ONLY if... | Reject if... |
+|---|---|---|
+| `eng-driven` | Engineers demonstrably influence product direction. Evidence: eng blog, technical founders still active, reviews say "engineers have real ownership" | "Product/sales driven" in reviews. Sales-led GTM with eng as a service org. |
+| `ship-fast` | Frequent release cadence, CI/CD emphasis, "move fast" is genuine culture (not just a tagline). Reviews mention pace and iteration. | Slow, bureaucratic processes described in reviews. Heavy compliance/approval gates. |
+| `open-source` | Company actively maintains significant OSS projects, OR core product is open-source | Merely using open-source tools does NOT count. Having a GitHub with minor repos is not enough. The company must be known for OSS contributions. |
+
+#### Growth & Compensation
+
+| Value | Assign ONLY if... | Reject if... |
+|---|---|---|
+| `equity` | Above-market total comp confirmed by reviews or Levels.fyi. Strong equity/RSU packages mentioned. | "Below market," "equity is worthless," "low pay" in reviews |
+| `learning` | Dedicated L&D budget, conference sponsorship, internal tech talks, or reviews consistently cite growth opportunities | "No growth path," "stagnant," "no mentorship" as cons |
+| `product-impact` | Individual contributors ship features to real users with visible outcomes. Small teams, direct user impact. | "Cog in the machine" sentiment. Layers of abstraction between IC work and user-facing product. |
+| `many-hats` | Company has <300 people AND roles are genuinely cross-functional (not just understaffed). Reviews frame this positively. | Large company (>500) with specialized roles. Negative framing like "expected to do everything" or "no clear responsibilities" = understaffing, not culture. |
+
+#### Mission & Impact
+
+| Value | Assign ONLY if... | Reject if... |
+|---|---|---|
+| `ethical-ai` | Published safety/alignment research, responsible AI policy with substance, dedicated safety team, or the company's core mission involves AI safety | Just having a generic "AI ethics" page. Companies that have faced controversy around safety practices without meaningful response. |
+| `social-impact` | Company's core product or mission directly addresses a social good (education, health, climate, equity) — not just CSR programs | Side philanthropic initiatives. "Tech for good" marketing without substance. Being a for-profit SaaS with a charity page is NOT social-impact. |
+
+### Special Rules
+
+- **Company size gates**: `flat` requires <300. `many-hats` requires <300. Large companies (1000+) rarely qualify for `async` or `deep-work` — require extra-strong evidence.
+- **Glassdoor score gates**: If Glassdoor WLB < 3.5, do NOT assign `wlb`, `flex-hours`, or `deep-work`. If overall Glassdoor < 3.0, reconsider whether the company should be on the site at all.
+- **"Remote" is the highest-risk value.** Users filter by it and make career decisions based on it. Triple-check. Look at actual job listings — if most say "San Francisco, CA" or "New York, NY" with no remote option, the company is NOT remote regardless of what the careers page implies.
+- **Values must reflect current reality, not aspirations.** A company that was remote during COVID but returned to office is NOT remote. A company that used to be flat but added 3 management layers is NOT flat.
+
 ## Important Rules
 
 1. **Never fake Glassdoor data.** If you can't find ratings, use reasonable estimates and note it.
-2. **Culture values must be genuine.** Research the company before assigning values. Check Glassdoor reviews, engineering blogs, and careers pages.
+2. **Culture values must pass the Evidence Framework.** Follow the full Culture Values Evidence Framework section above. Every value must have documented evidence. This is the core of the site — getting it wrong makes everything else pointless.
 3. **Logo URL format**: Always use `https://www.google.com/s2/favicons?domain=DOMAIN&sz=128`
 4. **OG image**: Use `https://jobsbyculture.com/og-image.png` (no query params)
 5. **Add `og:image:type`**: Include `<meta property="og:image:type" content="image/png">` in all pages
