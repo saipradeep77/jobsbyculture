@@ -54,10 +54,15 @@ This is the critical step. For each new company, add three things to `jobs.html`
 - Update: title, meta tags, company name, OG tags, ratings, culture overview, values, featured jobs
 - Use canonical URL: `https://jobsbyculture.com/companies/companyname`
 
-### Step 5: Update Directory
+### Step 5: Add to Homepage Grid (CRITICAL — DO NOT SKIP)
+Add a company card to the `#coGrid` section in `index.html` for EVERY new company. This is the most commonly missed step. Copy an existing `co-card` div and update: `data-company`, `data-values`, logo, name, meta, rating, tags, quote, details, and links.
+
+**Verification:** After adding, run: `grep -c 'data-company=' index.html` — the count must equal the total number of companies.
+
+### Step 6: Update Directory
 Add the new company card to `directory.html` in the appropriate position.
 
-### Step 6: Update Sitemap
+### Step 7: Update Sitemap
 Add new entries to `sitemap.xml`:
 ```xml
 <url>
@@ -68,7 +73,7 @@ Add new entries to `sitemap.xml`:
 </url>
 ```
 
-### Step 7: Fetch & Update Jobs
+### Step 8: Fetch & Update Jobs
 ```bash
 npm run refresh
 ```
@@ -79,7 +84,7 @@ This runs 5 scripts in sequence:
 4. `indexnow.js` — Submits all URLs to search engines (Bing, Yandex, Naver)
 5. `export-social.js` — Generates `data/jobs-export.csv` for Google Sheets/Zapier
 
-### Step 8: Update ALL Counts Site-Wide
+### Step 9: Update ALL Counts Site-Wide
 After refresh, update job/company counts in **every** file that references them:
 
 | File | What to update |
@@ -93,7 +98,7 @@ After refresh, update job/company counts in **every** file that references them:
 
 **This step is MANDATORY. Never skip it. Every number on the site must match reality.**
 
-### Step 9: Commit (DO NOT PUSH)
+### Step 10: Commit (DO NOT PUSH)
 ```bash
 git add -A
 git commit -m "Add [company names] + refresh all jobs
