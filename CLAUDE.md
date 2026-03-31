@@ -24,30 +24,34 @@ Add each new company to `data/ats-companies.json`:
 { "slug": "companyname", "name": "Company Name", "ats": "ashby", "atsSlug": "companyname", "domain": "company.com" }
 ```
 
-### Step 4: Add Company Data to jobs.html
-This is the critical step. For each new company, add three things to `jobs.html`:
+### Step 4: Add Company Data to `data/companies.json`
+This is the critical step. `data/companies.json` is the **single source of truth** for all company data. Add a new entry:
 
-**A) Add to `COMPANIES` object** (after the last entry, before `};`):
-```javascript
-'companyname': {
-    name: 'Company Name', logo: 'https://www.google.com/s2/favicons?domain=company.com&sz=128',
-    size: 'Small (~100)',  // Small <200, Mid 200-1000, Large 1000+
-    glassdoor: 4.0,        // Look up on Glassdoor
-    wlb_score: 3.5,        // Work-life balance from Glassdoor
-    values: ['eng-driven','ship-fast','flat'],  // Pick 3-6 from VALUES list below
-    careers: 'https://company.com/careers?ref=jobsbyculture.com'
-},
+```json
+"companyname": {
+    "name": "Company Name",
+    "logo": "https://www.google.com/s2/favicons?domain=company.com&sz=128",
+    "meta": "Short tagline · City",
+    "size": "Small (~100)",
+    "glassdoor": 4.0,
+    "wlb_score": 3.5,
+    "values": ["eng-driven","ship-fast","flat"],
+    "careers": "https://company.com/careers?ref=jobsbyculture.com",
+    "quote": "One-liner culture quote from reviews",
+    "location": "🇺🇸 City",
+    "details": { "Size": "~100 employees", "Work-Life Balance": "3.5/5" },
+    "tags": [{"slug": "eng-driven", "label": "⚙️ Engineering-Driven"}],
+    "pros": ["Pro 1", "Pro 2"],
+    "cons": ["Con 1", "Con 2"],
+    "source": "Based on Glassdoor reviews",
+    "reviewPros": ["Short pro for jobs page", "Second pro"],
+    "reviewCons": ["Short con for jobs page", "Second con"]
+}
 ```
 
-**Available culture values** — see **Culture Values Evidence Framework** section below for strict assignment criteria. Every value MUST have evidence. When in doubt, leave it out.
+**Culture values** — see **Culture Values Evidence Framework** section below. Every value MUST have evidence. When in doubt, leave it out.
 
-**B) Add to `COMPANY_REVIEWS` object** (after last entry, before `};`):
-```javascript
-'companyname': {
-    pros: ['First genuine pro based on Glassdoor reviews', 'Second pro'],
-    cons: ['First con based on Glassdoor reviews', 'Second con']
-},
-```
+Then run `node scripts/sync-companies-to-jobs.js` — this syncs the data to both `jobs.html` (COMPANIES + COMPANY_REVIEWS) and `index.html` (homepage grid). **No manual editing of jobs.html or index.html needed.**
 
 **C) Create company profile page** at `companies/companyname.html`:
 - Copy an existing company page as template (e.g., `companies/anthropic.html`)

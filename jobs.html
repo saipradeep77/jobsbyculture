@@ -521,7 +521,9 @@ const SENIORITIES = {
     'director': { name: 'Director+',        ico: '🏛️' },
 };
 
-// ═══ COMPANY DATA (from Glassdoor analysis) ═══
+// ═══ COMPANY DATA — auto-synced from data/companies.json ═══
+// ═══ COMPANY DATA — auto-synced from data/companies.json ═══
+// COMPANIES-START
 const COMPANIES = {
     'anthropic': {
         name: 'Anthropic', logo: 'https://www.google.com/s2/favicons?domain=anthropic.com&sz=128',
@@ -549,7 +551,7 @@ const COMPANIES = {
     },
     'mistral': {
         name: 'Mistral AI', logo: 'https://www.google.com/s2/favicons?domain=mistral.ai&sz=128',
-        size: 'Small (~100)', glassdoor: 4.0, wlb_score: 3.6,
+        size: 'Small (~100)', glassdoor: 4, wlb_score: 3.6,
         values: ['ship-fast','eng-driven','flat','many-hats','open-source'],
         careers: 'https://mistral.ai/careers?ref=jobsbyculture.com'
     },
@@ -567,7 +569,7 @@ const COMPANIES = {
     },
     'stripe': {
         name: 'Stripe', logo: 'https://www.google.com/s2/favicons?domain=stripe.com&sz=128',
-        size: 'Large (~8,000)', glassdoor: 4.0, wlb_score: 3.6,
+        size: 'Large (~8,000)', glassdoor: 4, wlb_score: 3.6,
         values: ['eng-driven','learning','equity','product-impact','transparent'],
         careers: 'https://stripe.com/jobs?ref=jobsbyculture.com'
     },
@@ -585,7 +587,7 @@ const COMPANIES = {
     },
     'cursor': {
         name: 'Cursor (Anysphere)', logo: 'https://www.google.com/s2/favicons?domain=cursor.com&sz=128',
-        size: 'Small (~50)', glassdoor: 4.0, wlb_score: 3.5,
+        size: 'Small (~50)', glassdoor: 4, wlb_score: 3.5,
         values: ['ship-fast','eng-driven','product-impact','flat','many-hats'],
         careers: 'https://anysphere.inc?ref=jobsbyculture.com'
     },
@@ -609,25 +611,25 @@ const COMPANIES = {
     },
     'runway': {
         name: 'Runway', logo: 'https://www.google.com/s2/favicons?domain=runwayml.com&sz=128',
-        size: 'Mid (~420)', glassdoor: 4.5, wlb_score: 4.0,
+        size: 'Mid (~420)', glassdoor: 4.5, wlb_score: 4,
         values: ['eng-driven','product-impact','remote','learning','ship-fast'],
         careers: 'https://runwayml.com/careers?ref=jobsbyculture.com'
     },
     'vast': {
         name: 'Vast AI', logo: 'https://www.google.com/s2/favicons?domain=vast.ai&sz=128',
-        size: 'Small (~30)', glassdoor: 5.0, wlb_score: 3.8,
+        size: 'Small (~30)', glassdoor: 5, wlb_score: 3.8,
         values: ['eng-driven','ship-fast','flat','many-hats','equity'],
         careers: 'https://vast.ai/careers?ref=jobsbyculture.com'
     },
     'apollo': {
         name: 'Apollo.io', logo: 'https://www.google.com/s2/favicons?domain=apollo.io&sz=128',
-        size: 'Large (~800)', glassdoor: 4.0, wlb_score: 3.6,
+        size: 'Large (~800)', glassdoor: 4, wlb_score: 3.6,
         values: ['ship-fast','eng-driven','remote','product-impact','learning'],
         careers: 'https://www.apollo.io/careers?ref=jobsbyculture.com'
     },
     'airbnb': {
         name: 'Airbnb', logo: 'https://www.google.com/s2/favicons?domain=airbnb.com&sz=128',
-        size: 'Large (~7,300)', glassdoor: 4.1, wlb_score: 4.0,
+        size: 'Large (~7,300)', glassdoor: 4.1, wlb_score: 4,
         values: ['remote','wlb','diverse','open-source','equity'],
         careers: 'https://careers.airbnb.com/?ref=jobsbyculture.com'
     },
@@ -651,7 +653,7 @@ const COMPANIES = {
     },
     'modal': {
         name: 'Modal', logo: 'https://www.google.com/s2/favicons?domain=modal.com&sz=128',
-        size: 'Small (~110)', glassdoor: 4.0, wlb_score: 3.8,
+        size: 'Small (~110)', glassdoor: 4, wlb_score: 3.8,
         values: ['eng-driven','ship-fast','deep-work','open-source','product-impact','many-hats'],
         careers: 'https://modal.com/careers?ref=jobsbyculture.com'
     },
@@ -675,7 +677,7 @@ const COMPANIES = {
     },
     'deepmind': {
         name: 'Google DeepMind', logo: 'https://www.google.com/s2/favicons?domain=deepmind.google&sz=128',
-        size: 'Large (~7,000)', glassdoor: 4.2, wlb_score: 4.0,
+        size: 'Large (~7,000)', glassdoor: 4.2, wlb_score: 4,
         values: ['deep-work','learning','eng-driven','diverse','ethical-ai','equity','flex-hours'],
         careers: 'https://deepmind.google/careers/?ref=jobsbyculture.com'
     },
@@ -687,13 +689,13 @@ const COMPANIES = {
     },
     'langchain': {
         name: 'LangChain', logo: 'https://www.google.com/s2/favicons?domain=langchain.com&sz=128',
-        size: 'Small (~230)', glassdoor: 4.6, wlb_score: 4.0,
+        size: 'Small (~230)', glassdoor: 4.6, wlb_score: 4,
         values: ['open-source','eng-driven','ship-fast','remote','many-hats','product-impact','flat'],
         careers: 'https://www.langchain.com/careers?ref=jobsbyculture.com'
     },
     'replit': {
         name: 'Replit', logo: 'https://www.google.com/s2/favicons?domain=replit.com&sz=128',
-        size: 'Small (~200)', glassdoor: 4.0, wlb_score: 3.9,
+        size: 'Small (~200)', glassdoor: 4, wlb_score: 3.9,
         values: ['ship-fast','many-hats','product-impact','eng-driven','social-impact'],
         careers: 'https://replit.com/careers?ref=jobsbyculture.com'
     },
@@ -705,7 +707,7 @@ const COMPANIES = {
     },
     'supabase': {
         name: 'Supabase', logo: 'https://www.google.com/s2/favicons?domain=supabase.com&sz=128',
-        size: 'Small (~250)', glassdoor: 4.8, wlb_score: 3.0,
+        size: 'Small (~250)', glassdoor: 4.8, wlb_score: 3,
         values: ['open-source','remote','eng-driven','ship-fast','flat','async'],
         careers: 'https://supabase.com/careers?ref=jobsbyculture.com'
     },
@@ -723,7 +725,7 @@ const COMPANIES = {
     },
     'pylon': {
         name: 'Pylon', logo: 'https://www.google.com/s2/favicons?domain=usepylon.com&sz=128',
-        size: 'Small (~70)', glassdoor: 3.0, wlb_score: 3.5,
+        size: 'Small (~70)', glassdoor: 3, wlb_score: 3.5,
         values: ['ship-fast','many-hats','product-impact'],
         careers: 'https://usepylon.com/careers?ref=jobsbyculture.com'
     },
@@ -753,13 +755,13 @@ const COMPANIES = {
     },
     'airtable': {
         name: 'Airtable', logo: 'https://www.google.com/s2/favicons?domain=airtable.com&sz=128',
-        size: 'Mid (~900)', glassdoor: 4.1, wlb_score: 4.0,
+        size: 'Mid (~900)', glassdoor: 4.1, wlb_score: 4,
         values: ['product-impact','eng-driven','learning','diverse'],
         careers: 'https://airtable.com/careers?ref=jobsbyculture.com'
     },
     'brex': {
         name: 'Brex', logo: 'https://www.google.com/s2/favicons?domain=brex.com&sz=128',
-        size: 'Large (~1,600)', glassdoor: 4.0, wlb_score: 3.9,
+        size: 'Large (~1,600)', glassdoor: 4, wlb_score: 3.9,
         values: ['ship-fast','eng-driven','product-impact','learning','transparent'],
         careers: 'https://brex.com/careers?ref=jobsbyculture.com'
     },
@@ -801,7 +803,7 @@ const COMPANIES = {
     },
     'samsara': {
         name: 'Samsara', logo: 'https://www.google.com/s2/favicons?domain=samsara.com&sz=128',
-        size: 'Large (~5,200)', glassdoor: 4.0, wlb_score: 3.9,
+        size: 'Large (~5,200)', glassdoor: 4, wlb_score: 3.9,
         values: ['product-impact','learning','ship-fast','equity'],
         careers: 'https://www.samsara.com/company/careers?ref=jobsbyculture.com'
     },
@@ -819,7 +821,7 @@ const COMPANIES = {
     },
     'helsing': {
         name: 'Helsing', logo: 'https://www.google.com/s2/favicons?domain=helsing.ai&sz=128',
-        size: 'Mid (~660)', glassdoor: 4.0, wlb_score: 3.6,
+        size: 'Mid (~660)', glassdoor: 4, wlb_score: 3.6,
         values: ['eng-driven','ship-fast','product-impact','equity','learning'],
         careers: 'https://helsing.ai/careers?ref=jobsbyculture.com'
     },
@@ -831,7 +833,7 @@ const COMPANIES = {
     },
     'deepl': {
         name: 'DeepL', logo: 'https://www.google.com/s2/favicons?domain=deepl.com&sz=128',
-        size: 'Large (~1,570)', glassdoor: 3.2, wlb_score: 4.0,
+        size: 'Large (~1,570)', glassdoor: 3.2, wlb_score: 4,
         values: ['wlb','flex-hours','diverse','product-impact','learning'],
         careers: 'https://www.deepl.com/en/careers/hub?ref=jobsbyculture.com'
     },
@@ -861,81 +863,81 @@ const COMPANIES = {
     },
     'n8n': {
         name: 'n8n', logo: 'https://www.google.com/s2/favicons?domain=n8n.io&sz=128',
-        size: 'Mid (~300)', glassdoor: 4.5, wlb_score: 4.0,
+        size: 'Mid (~300)', glassdoor: 4.5, wlb_score: 4,
         values: ['remote','open-source','flat','transparent','async','many-hats'],
         careers: 'https://n8n.io/careers?ref=jobsbyculture.com'
     },
 };
 
-// ═══ COMPANY REVIEWS (top 2 pros/cons from employee reviews) ═══
+// COMPANY-REVIEWS-START
 const COMPANY_REVIEWS = {
     'anthropic': {
         pros: ['Mission-driven to the core — the safety focus is genuine and deeply embedded', 'Incredible autonomy and ownership, even for mid-level engineers'],
         cons: ['High-intensity environment — extended work hours are common during peak periods', 'Processes still catching up to hypergrowth; some things feel ad-hoc']
     },
-    'apollo': {
-        pros: ['Strong product-market fit — best-in-class sales intelligence platform', 'Competitive compensation with RSUs, performance bonuses, and paid health insurance'],
-        cons: ['Some reports of leadership involvement in granular decisions and frequent pivots', 'Work-life balance challenges under high-growth pressure']
-    },
-    'cohere': {
-        pros: ['Cutting-edge NLP research from Transformer co-author', 'Enterprise AI focus gives real customer impact'],
-        cons: ['Frequent organizational restructuring has led to notable team turnover', 'Internal communication from leadership could be more transparent']
-    },
-    'coreweave': {
-        pros: ['GPU cloud infrastructure leader backed by NVIDIA ($2B investment)', 'Strong compensation and equity — especially valuable post-IPO'],
-        cons: ['Work-life balance can be challenging — some teams expect off-hours availability', 'Culture and values rated 3.1/5 — processes still maturing']
-    },
-    'cursor': {
-        pros: ['Building the most-loved AI code editor — massive developer love and daily impact', 'Tiny team, extreme ownership — every person shapes the product directly'],
-        cons: ['Extremely small team = no specialists; everyone does everything', 'Intense pace — the speed of shipping can be relentless']
+    'huggingface': {
+        pros: ['True open-source DNA — you work on things millions of developers actually use', 'Remote-first and async culture that actually works across time zones'],
+        cons: ['Below-market comp compared to FAANG', 'Career progression is unclear — no well-defined ladder']
     },
     'databricks': {
         pros: ['Engineers who built Spark, Delta Lake, MLflow — deep technical pedigree', 'Strong compensation and equity packages consistently above market'],
         cons: ['Hypergrowth means org changes are constant — teams restructure frequently', 'Some legacy Spark-era tech debt that can slow down new features']
     },
-    'hubspot': {
-        pros: ['Culture Code is legendary — transparency, autonomy, flexibility are real', 'Remote-first done right with genuine work-life balance'],
-        cons: ['Enterprise sales culture can clash with engineering', 'Comp below FAANG for senior roles']
-    },
-    'huggingface': {
-        pros: ['True open-source DNA — you work on things millions of developers actually use', 'Remote-first and async culture that actually works across time zones'],
-        cons: ['Below-market comp compared to FAANG', 'Career progression is unclear — no well-defined ladder']
-    },
-    'linear': {
-        pros: ['Obsessive product craft — building the best-in-class PM tool teams genuinely love', 'Deep work culture with no standups and minimal meetings — actually practiced'],
-        cons: ['Very small team = limited roles available at any given time', 'High hiring bar means slow growth — patience required']
+    'cohere': {
+        pros: ['Cutting-edge NLP research from Transformer co-author', 'Enterprise AI focus gives real customer impact'],
+        cons: ['Frequent organizational restructuring has led to notable team turnover', 'Internal communication from leadership could be more transparent']
     },
     'mistral': {
         pros: ['Small team punching way above weight — Mixtral, Mistral Large', 'European AI champion with strong research DNA'],
         cons: ['Very early-stage — processes are minimal', 'Paris-centric with limited remote options']
     },
-    'perplexity': {
-        pros: ['Fastest-growing AI product — real users, real revenue, genuine product-market fit', 'Small team, massive impact per engineer — your work ships to millions quickly'],
-        cons: ['Startup intensity — expect long hours and high expectations', 'Growing pains as the team scales — roles and responsibilities shift frequently']
+    'hubspot': {
+        pros: ['Culture Code is legendary — transparency, autonomy, flexibility are real', 'Remote-first done right with genuine work-life balance'],
+        cons: ['Enterprise sales culture can clash with engineering', 'Comp below FAANG for senior roles']
     },
-    'runway': {
-        pros: ['Pioneer in AI video generation — Gen-3 Alpha is industry-leading', 'Unique blend of art and engineering — creative culture values both'],
-        cons: ['Smaller team (~420) means limited specialization — engineers wear multiple hats', 'AI video generation is an increasingly competitive space']
-    },
-    'scale': {
-        pros: ['Building critical AI data infrastructure used by OpenAI, Meta, Microsoft, and the US government', 'Strong compensation for engineers — competitive base + equity'],
-        cons: ['Work-life balance rated 2.7/5 — long hours common during client deadlines', 'Culture and values scored 2.9/5 — inconsistent management quality']
+    'vercel': {
+        pros: ['Building the future of web infrastructure — Next.js, Turbopack, edge runtime', 'Strong open-source culture — Next.js, Turbopack, and SWC used by millions'],
+        cons: ['High expectations and fast pace can lead to burnout', 'Leadership sets very high standards — the pace isn\'t for everyone']
     },
     'stripe': {
         pros: ['Engineering culture is elite — code quality and writing culture are best-in-class', 'Top compensation in fintech — competitive base, equity, and benefits'],
         cons: ['Perfectionism can slow shipping — high bar sometimes means slower velocity', 'The 2022-23 layoffs affected morale — company has been rebuilding confidence']
     },
+    'perplexity': {
+        pros: ['Fastest-growing AI product — real users, real revenue, genuine product-market fit', 'Small team, massive impact per engineer — your work ships to millions quickly'],
+        cons: ['Startup intensity — expect long hours and high expectations', 'Growing pains as the team scales — roles and responsibilities shift frequently']
+    },
     'together': {
         pros: ['Open-source AI infrastructure — real mission alignment, not just marketing', 'Small team with outsized research output; your work has direct impact'],
         cons: ['Early-stage means wearing many hats constantly — not for specialists', 'Limited career ladder; growth paths are still being defined']
+    },
+    'cursor': {
+        pros: ['Building the most-loved AI code editor — massive developer love and daily impact', 'Tiny team, extreme ownership — every person shapes the product directly'],
+        cons: ['Extremely small team = no specialists; everyone does everything', 'Intense pace — the speed of shipping can be relentless']
+    },
+    'linear': {
+        pros: ['Obsessive product craft — building the best-in-class PM tool teams genuinely love', 'Deep work culture with no standups and minimal meetings — actually practiced'],
+        cons: ['Very small team = limited roles available at any given time', 'High hiring bar means slow growth — patience required']
+    },
+    'scale': {
+        pros: ['Building critical AI data infrastructure used by OpenAI, Meta, Microsoft, and the US government', 'Strong compensation for engineers — competitive base + equity'],
+        cons: ['Work-life balance rated 2.7/5 — long hours common during client deadlines', 'Culture and values scored 2.9/5 — inconsistent management quality']
+    },
+    'coreweave': {
+        pros: ['GPU cloud infrastructure leader backed by NVIDIA ($2B investment)', 'Strong compensation and equity — especially valuable post-IPO'],
+        cons: ['Work-life balance can be challenging — some teams expect off-hours availability', 'Culture and values rated 3.1/5 — processes still maturing']
+    },
+    'runway': {
+        pros: ['Pioneer in AI video generation — Gen-3 Alpha is industry-leading', 'Unique blend of art and engineering — creative culture values both'],
+        cons: ['Smaller team (~420) means limited specialization — engineers wear multiple hats', 'AI video generation is an increasingly competitive space']
     },
     'vast': {
         pros: ['Front-row seat to the AI compute revolution — demand for GPU cloud is surging', 'Strong compensation and generous equity stakes for a bootstrapped startup'],
         cons: ['Processes are still being defined — expect ad hoc workflows', 'Intense workload — the team explicitly values high output']
     },
-    'vercel': {
-        pros: ['Building the future of web infrastructure — Next.js, Turbopack, edge runtime', 'Strong open-source culture — Next.js, Turbopack, and SWC used by millions'],
-        cons: ['High expectations and fast pace can lead to burnout', 'Leadership sets very high standards — the pace isn\'t for everyone']
+    'apollo': {
+        pros: ['Strong product-market fit — best-in-class sales intelligence platform', 'Competitive compensation with RSUs, performance bonuses, and paid health insurance'],
+        cons: ['Some reports of leadership involvement in granular decisions and frequent pivots', 'Work-life balance challenges under high-growth pressure']
     },
     'airbnb': {
         pros: ['Live and Work Anywhere policy — genuine remote flexibility with no pay cuts', 'Strong compensation and benefits with quarterly travel credits and educational stipends'],
@@ -1096,8 +1098,9 @@ const COMPANY_REVIEWS = {
     'n8n': {
         pros: ['Exceptional remote-first culture with high trust, autonomy, and smart collaborative teammates', 'Fast-growing open-source product with real impact — lots of ownership in a low-ego environment'],
         cons: ['Hypergrowth means priorities shift frequently and processes are still being defined', 'Startup intensity can be stressful; some concerns about product leadership direction']
-    }
+    },
 };
+// COMPANIES-END
 
 // ═══ JOBS DATA ═══
 const JOBS = [
