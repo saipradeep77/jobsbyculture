@@ -1,0 +1,3615 @@
+{
+  "valueLabels": {
+    "wlb": "⚖️ Work-Life Balance",
+    "remote": "🌐 Remote",
+    "flex-hours": "🕐 Flex Hours",
+    "async": "📡 Async",
+    "deep-work": "🎧 Deep Work",
+    "transparent": "🪟 Transparent",
+    "flat": "🤝 Flat Hierarchy",
+    "diverse": "🌈 Diverse",
+    "psych-safety": "🛡️ Safe to Fail",
+    "eng-driven": "⚙️ Engineering-Driven",
+    "ship-fast": "🚀 Ship Fast",
+    "open-source": "🔓 Open Source",
+    "learning": "📚 Learning & Growth",
+    "equity": "💰 Strong Equity",
+    "product-impact": "🎯 Product Impact",
+    "many-hats": "🧩 Many Hats",
+    "ethical-ai": "🛡️ Ethical AI",
+    "social-impact": "💜 Mission-Driven"
+  },
+  "companies": {
+    "anthropic": {
+      "name": "Anthropic",
+      "logo": "https://www.google.com/s2/favicons?domain=anthropic.com&sz=128",
+      "meta": "AI Safety · San Francisco / Remote",
+      "size": "Mid (~1,500)",
+      "glassdoor": 4.4,
+      "wlb_score": 3.7,
+      "values": [
+        "ethical-ai",
+        "learning",
+        "equity",
+        "social-impact",
+        "eng-driven"
+      ],
+      "careers": "https://www.anthropic.com/careers?ref=jobsbyculture.com",
+      "quote": "High-trust, low-politics environment. Mission-driven to the core. Engineers own projects end-to-end with incredible autonomy.",
+      "location": "🇺🇸 SF · 🇬🇧 London · Remote",
+      "details": {
+        "Size": "~1,500 employees",
+        "Recommend": "95%",
+        "Work-Life Balance": "3.7/5",
+        "Salary Range": "$300k – $490k"
+      },
+      "tags": [
+        {
+          "slug": "ethical-ai",
+          "label": "🛡️ Ethical AI"
+        },
+        {
+          "slug": "learning",
+          "label": "📚 Learning & Growth"
+        },
+        {
+          "slug": "flat",
+          "label": "🤝 Flat Hierarchy"
+        },
+        {
+          "slug": "eng-driven",
+          "label": "⚙️ Engineering-Driven"
+        },
+        {
+          "slug": "equity",
+          "label": "💰 Strong Equity"
+        }
+      ],
+      "pros": [
+        "Mission-driven to the core, not marketing",
+        "Incredible autonomy and ownership",
+        "Top-tier comp ($300k–$490k TC for engineers)",
+        "Smart, humble, low-ego coworkers"
+      ],
+      "cons": [
+        "High-intensity — 60+ hr crunch weeks happen",
+        "Processes still catching up to hypergrowth",
+        "Some teams lack clear career ladders",
+        "SF-heavy despite \"remote-friendly\" label"
+      ],
+      "source": "Based on Glassdoor reviews + Blind employee posts",
+      "reviewPros": [
+        "Mission-driven to the core — the safety focus is genuine and deeply embedded",
+        "Incredible autonomy and ownership, even for mid-level engineers"
+      ],
+      "reviewCons": [
+        "High-intensity environment — extended work hours are common during peak periods",
+        "Processes still catching up to hypergrowth; some things feel ad-hoc"
+      ]
+    },
+    "huggingface": {
+      "name": "Hugging Face",
+      "logo": "https://www.google.com/s2/favicons?domain=huggingface.co&sz=128",
+      "meta": "Open-Source AI · Remote-First",
+      "size": "Small (~400)",
+      "glassdoor": 3.8,
+      "wlb_score": 4.1,
+      "values": [
+        "open-source",
+        "flat",
+        "remote",
+        "flex-hours",
+        "transparent",
+        "many-hats",
+        "async"
+      ],
+      "careers": "https://apply.workable.com/huggingface/?ref=jobsbyculture.com",
+      "quote": "The open-source community vibe extends internally. Flat structure, remote-first, and you genuinely build in public.",
+      "location": "🌍 Fully Remote · 🇺🇸 NYC · 🇫🇷 Paris",
+      "details": {
+        "Size": "~400 employees",
+        "Recommend": "78%",
+        "Work-Life Balance": "4.1/5",
+        "Salary Range": "$150k – $280k"
+      },
+      "tags": [
+        {
+          "slug": "open-source",
+          "label": "📖 Open Source"
+        },
+        {
+          "slug": "flat",
+          "label": "🤝 Flat Hierarchy"
+        },
+        {
+          "slug": "async",
+          "label": "💬 Async-First"
+        },
+        {
+          "slug": "remote",
+          "label": "🌍 Remote-Native"
+        },
+        {
+          "slug": "many-hats",
+          "label": "🎭 Wear Many Hats"
+        }
+      ],
+      "pros": [
+        "True open-source DNA — Transformers library, Hub",
+        "Remote-first and async culture actually works",
+        "Flat hierarchy, anyone can push to main",
+        "Incredible community and developer love"
+      ],
+      "cons": [
+        "Below-market comp compared to FAANG",
+        "Fast-moving environment with lightweight processes",
+        "Career progression unclear",
+        "Some teams stretched thin"
+      ],
+      "source": "Based on Glassdoor reviews + community feedback",
+      "reviewPros": [
+        "True open-source DNA — you work on things millions of developers actually use",
+        "Remote-first and async culture that actually works across time zones"
+      ],
+      "reviewCons": [
+        "Below-market comp compared to FAANG",
+        "Career progression is unclear — no well-defined ladder"
+      ]
+    },
+    "databricks": {
+      "name": "Databricks",
+      "logo": "https://www.google.com/s2/favicons?domain=databricks.com&sz=128",
+      "meta": "Data & AI Platform · San Francisco",
+      "size": "Large (~7,000)",
+      "glassdoor": 4.1,
+      "wlb_score": 3.9,
+      "values": [
+        "eng-driven",
+        "learning",
+        "equity",
+        "diverse",
+        "product-impact"
+      ],
+      "careers": "https://www.databricks.com/company/careers?ref=jobsbyculture.com",
+      "quote": "Engineering-first culture at scale. Strong investment in employee growth with a global footprint.",
+      "location": "🇺🇸 SF · 🇳🇱 Amsterdam · 🇸🇬 Singapore · 🇮🇳 Bangalore",
+      "details": {
+        "Size": "~7,000 employees",
+        "Recommend": "82%",
+        "Work-Life Balance": "3.9/5",
+        "Salary Range": "$180k – $380k"
+      },
+      "tags": [
+        {
+          "slug": "eng-driven",
+          "label": "⚙️ Engineering-Driven"
+        },
+        {
+          "slug": "learning",
+          "label": "📚 Learning"
+        },
+        {
+          "slug": "diverse",
+          "label": "🌈 Diverse & Inclusive"
+        },
+        {
+          "slug": "equity",
+          "label": "💰 Strong Equity"
+        }
+      ],
+      "pros": [
+        "Engineers who built Spark, Delta Lake, MLflow — deep technical pedigree",
+        "Strong comp and equity",
+        "Genuine learning culture with internal tech talks",
+        "Data lakehouse category leader"
+      ],
+      "cons": [
+        "Hypergrowth means org changes are constant",
+        "Some legacy Spark-era tech debt",
+        "Some large-company dynamics emerging as the org scales",
+        "Work-life balance varies heavily by team"
+      ],
+      "source": "Based on Glassdoor reviews",
+      "reviewPros": [
+        "Engineers who built Spark, Delta Lake, MLflow — deep technical pedigree",
+        "Strong compensation and equity packages consistently above market"
+      ],
+      "reviewCons": [
+        "Hypergrowth means org changes are constant — teams restructure frequently",
+        "Some legacy Spark-era tech debt that can slow down new features"
+      ]
+    },
+    "cohere": {
+      "name": "Cohere",
+      "logo": "https://www.google.com/s2/favicons?domain=cohere.com&sz=128",
+      "meta": "Enterprise AI · Toronto / Remote",
+      "size": "Small (~500)",
+      "glassdoor": 2.9,
+      "wlb_score": 2.5,
+      "values": [
+        "learning",
+        "eng-driven"
+      ],
+      "careers": "https://cohere.com/careers?ref=jobsbyculture.com",
+      "quote": "Enterprise AI with a research lab feel. Fast-growing with lots of opportunity to own new problem spaces.",
+      "location": "🇨🇦 Toronto · 🇺🇸 SF · 🇬🇧 London",
+      "details": {
+        "Size": "~500 employees",
+        "Recommend": "48%",
+        "Work-Life Balance": "3.5/5",
+        "Salary Range": "$150k – $300k CAD"
+      },
+      "tags": [
+        {
+          "slug": "learning",
+          "label": "📚 Learning & Growth"
+        },
+        {
+          "slug": "eng-driven",
+          "label": "⚙️ Engineering-Driven"
+        },
+        {
+          "slug": "many-hats",
+          "label": "🎭 Wear Many Hats"
+        }
+      ],
+      "pros": [
+        "Cutting-edge NLP research from Transformer co-author",
+        "Enterprise AI focus gives real customer impact",
+        "Toronto HQ means strong Canadian talent pool",
+        "Fast-moving with startup energy"
+      ],
+      "cons": [
+        "High turnover and org instability (multiple re-orgs)",
+        "Leadership communication gaps",
+        "Career growth paths not well-defined",
+        "Engineering processes still maturing"
+      ],
+      "source": "Based on Glassdoor reviews",
+      "reviewPros": [
+        "Cutting-edge NLP research from Transformer co-author",
+        "Enterprise AI focus gives real customer impact"
+      ],
+      "reviewCons": [
+        "Frequent organizational restructuring has led to notable team turnover",
+        "Internal communication from leadership could be more transparent"
+      ]
+    },
+    "mistral": {
+      "name": "Mistral AI",
+      "logo": "https://www.google.com/s2/favicons?domain=mistral.ai&sz=128",
+      "meta": "Open-Source AI · Paris",
+      "size": "Small (~100)",
+      "glassdoor": 4,
+      "wlb_score": 3.6,
+      "values": [
+        "ship-fast",
+        "eng-driven",
+        "flat",
+        "many-hats",
+        "open-source"
+      ],
+      "careers": "https://mistral.ai/careers?ref=jobsbyculture.com",
+      "quote": "Small, elite team shipping world-class open models from Paris. Research meets engineering at startup speed.",
+      "location": "🇫🇷 Paris · 🇺🇸 SF · 🇬🇧 London",
+      "details": {
+        "Size": "~100 employees",
+        "Recommend": "80%",
+        "Work-Life Balance": "3.6/5",
+        "Salary Range": "€80k – €200k"
+      },
+      "tags": [
+        {
+          "slug": "ship-fast",
+          "label": "🚀 Ship Fast"
+        },
+        {
+          "slug": "eng-driven",
+          "label": "⚙️ Engineering-Driven"
+        },
+        {
+          "slug": "open-source",
+          "label": "📖 Open Source"
+        },
+        {
+          "slug": "flat",
+          "label": "🤝 Flat Hierarchy"
+        },
+        {
+          "slug": "many-hats",
+          "label": "🎭 Wear Many Hats"
+        }
+      ],
+      "pros": [
+        "Small team punching way above weight — Mixtral, Mistral Large",
+        "European AI champion with strong research DNA",
+        "Open-weight model philosophy",
+        "Startup speed with serious funding"
+      ],
+      "cons": [
+        "Very early-stage — processes are minimal",
+        "Paris-centric (limited remote)",
+        "Intense pace, startup hours",
+        "Limited career ladder at this size"
+      ],
+      "source": "Based on Glassdoor reviews + industry reports",
+      "reviewPros": [
+        "Small team punching way above weight — Mixtral, Mistral Large",
+        "European AI champion with strong research DNA"
+      ],
+      "reviewCons": [
+        "Very early-stage — processes are minimal",
+        "Paris-centric with limited remote options"
+      ]
+    },
+    "hubspot": {
+      "name": "HubSpot",
+      "logo": "https://www.google.com/s2/favicons?domain=hubspot.com&sz=128",
+      "meta": "Marketing & CRM · Cambridge / Remote",
+      "size": "Large (~8,000)",
+      "glassdoor": 4.3,
+      "wlb_score": 4.1,
+      "values": [
+        "diverse",
+        "learning",
+        "wlb",
+        "transparent",
+        "flex-hours",
+        "psych-safety"
+      ],
+      "careers": "https://www.hubspot.com/careers?ref=jobsbyculture.com",
+      "quote": "The Culture Code is real here, not just a PDF. Genuine flexibility, strong DEI, and managers who actually care.",
+      "location": "🇺🇸 Cambridge · 🇮🇪 Dublin · 🌍 Remote",
+      "details": {
+        "Size": "~8,000 employees",
+        "Recommend": "87%",
+        "Work-Life Balance": "4.1/5",
+        "Salary Range": "$140k – $250k"
+      },
+      "tags": [
+        {
+          "slug": "diverse",
+          "label": "🌈 Diverse & Inclusive"
+        },
+        {
+          "slug": "learning",
+          "label": "📚 Learning"
+        },
+        {
+          "slug": "wlb",
+          "label": "⚖️ Work-Life Balance"
+        },
+        {
+          "slug": "transparent",
+          "label": "🔓 Transparent"
+        },
+        {
+          "slug": "psych-safety",
+          "label": "🧘 Psych Safety"
+        }
+      ],
+      "pros": [
+        "Culture Code is legendary — transparency, autonomy, flexibility are real",
+        "Remote-first done right",
+        "Strong engineering blog and internal learning",
+        "Genuinely inclusive, high psychological safety"
+      ],
+      "cons": [
+        "Enterprise sales culture can clash with eng",
+        "Comp below FAANG for senior roles",
+        "Large org = slower decisions",
+        "Some teams feel bureaucratic"
+      ],
+      "source": "Based on Glassdoor reviews",
+      "reviewPros": [
+        "Culture Code is legendary — transparency, autonomy, flexibility are real",
+        "Remote-first done right with genuine work-life balance"
+      ],
+      "reviewCons": [
+        "Enterprise sales culture can clash with engineering",
+        "Comp below FAANG for senior roles"
+      ]
+    },
+    "vercel": {
+      "name": "Vercel",
+      "logo": "https://www.google.com/s2/favicons?domain=vercel.com&sz=128",
+      "meta": "Frontend Cloud · Remote-First",
+      "size": "Mid (~600)",
+      "glassdoor": 3.9,
+      "wlb_score": 3.4,
+      "values": [
+        "ship-fast",
+        "eng-driven",
+        "product-impact",
+        "open-source"
+      ],
+      "careers": "https://vercel.com/careers?ref=jobsbyculture.com",
+      "quote": "Ship on Friday, deploy on Monday. Developer tools company that eats its own dogfood. Fast-paced and product-obsessed.",
+      "location": "🇺🇸 SF · 🌍 Remote",
+      "details": {
+        "Size": "~600 employees",
+        "Recommend": "72%",
+        "Work-Life Balance": "3.4/5",
+        "Salary Range": "$180k – $320k"
+      },
+      "tags": [
+        {
+          "slug": "ship-fast",
+          "label": "🚀 Ship Fast"
+        },
+        {
+          "slug": "eng-driven",
+          "label": "⚙️ Engineering-Driven"
+        },
+        {
+          "slug": "remote",
+          "label": "🌍 Remote"
+        },
+        {
+          "slug": "product-impact",
+          "label": "🎯 Product Impact"
+        }
+      ],
+      "pros": [
+        "Building the future of web infra — Next.js, Turbopack",
+        "Remote-first with async culture",
+        "Ship-fast mentality is real — weekly releases",
+        "Strong open-source community impact"
+      ],
+      "cons": [
+        "High expectations, fast pace can lead to burnout",
+        "Leadership sets very high standards",
+        "Some teams have unclear ownership",
+        "Comp competitive but not top-tier"
+      ],
+      "source": "Based on Glassdoor reviews",
+      "reviewPros": [
+        "Building the future of web infrastructure — Next.js, Turbopack, edge runtime",
+        "Strong open-source culture — Next.js, Turbopack, and SWC used by millions"
+      ],
+      "reviewCons": [
+        "High expectations and fast pace can lead to burnout",
+        "Leadership sets very high standards — the pace isn't for everyone"
+      ]
+    },
+    "stripe": {
+      "name": "Stripe",
+      "logo": "https://www.google.com/s2/favicons?domain=stripe.com&sz=128",
+      "meta": "Payments Infrastructure · San Francisco",
+      "size": "Large (~8,000)",
+      "glassdoor": 4,
+      "wlb_score": 3.6,
+      "values": [
+        "eng-driven",
+        "learning",
+        "equity",
+        "product-impact",
+        "transparent"
+      ],
+      "careers": "https://stripe.com/jobs?ref=jobsbyculture.com",
+      "quote": "Rigorous engineering culture. Writing-first communication. The bar is extremely high and staying here means you clear it.",
+      "location": "🇺🇸 SF · 🇮🇪 Dublin · 🇸🇬 Singapore",
+      "details": {
+        "Size": "~8,000 employees",
+        "Recommend": "80%",
+        "Work-Life Balance": "3.6/5",
+        "Salary Range": "$200k – $400k"
+      },
+      "tags": [
+        {
+          "slug": "eng-driven",
+          "label": "⚙️ Engineering-Driven"
+        },
+        {
+          "slug": "learning",
+          "label": "📚 Learning"
+        },
+        {
+          "slug": "product-impact",
+          "label": "🎯 Product Impact"
+        },
+        {
+          "slug": "transparent",
+          "label": "🔓 Transparent"
+        }
+      ],
+      "pros": [
+        "Engineering culture is elite — internal tools, code quality, writing culture",
+        "Top comp in fintech",
+        "Solving genuinely hard distributed systems problems",
+        "Intellectual rigor and long-term thinking"
+      ],
+      "cons": [
+        "Perfectionism can slow shipping",
+        "The 2022-23 layoffs affected team morale",
+        "Promotion process opaque",
+        "Work-life balance struggles in payments/infra teams"
+      ],
+      "source": "Based on Glassdoor reviews + Blind posts",
+      "reviewPros": [
+        "Engineering culture is elite — code quality and writing culture are best-in-class",
+        "Top compensation in fintech — competitive base, equity, and benefits"
+      ],
+      "reviewCons": [
+        "Perfectionism can slow shipping — high bar sometimes means slower velocity",
+        "The 2022-23 layoffs affected morale — company has been rebuilding confidence"
+      ]
+    },
+    "perplexity": {
+      "name": "Perplexity AI",
+      "logo": "https://www.google.com/s2/favicons?domain=perplexity.ai&sz=128",
+      "meta": "AI Search · San Francisco",
+      "size": "Mid (~500)",
+      "glassdoor": 4.7,
+      "wlb_score": 3.3,
+      "values": [
+        "ship-fast",
+        "eng-driven",
+        "product-impact",
+        "equity",
+        "learning"
+      ],
+      "careers": "https://www.perplexity.ai/hub/careers?ref=jobsbyculture.com",
+      "quote": "Small teams shipping features to millions of users. High intensity, high reward startup energy with exceptional speed.",
+      "location": "🇺🇸 SF · 🇬🇧 London",
+      "details": {
+        "Size": "~500 employees",
+        "Recommend": "92%",
+        "Work-Life Balance": "3.3/5",
+        "Salary Range": "$200k – $400k"
+      },
+      "tags": [
+        {
+          "slug": "ship-fast",
+          "label": "🚀 Ship Fast"
+        },
+        {
+          "slug": "eng-driven",
+          "label": "⚙️ Engineering-Driven"
+        },
+        {
+          "slug": "equity",
+          "label": "💰 Strong Equity"
+        },
+        {
+          "slug": "product-impact",
+          "label": "🎯 Product Impact"
+        }
+      ],
+      "pros": [
+        "Fastest-growing AI product — real users, real revenue",
+        "Small team, massive impact per engineer",
+        "Strong comp and equity",
+        "CEO is deeply technical and accessible"
+      ],
+      "cons": [
+        "Startup intensity — expect long hours",
+        "Growing pains as team scales fast",
+        "Limited work-life balance",
+        "Processes are catching up to growth"
+      ],
+      "source": "Based on Glassdoor reviews + Blind posts",
+      "reviewPros": [
+        "Fastest-growing AI product — real users, real revenue, genuine product-market fit",
+        "Small team, massive impact per engineer — your work ships to millions quickly"
+      ],
+      "reviewCons": [
+        "Startup intensity — expect long hours and high expectations",
+        "Growing pains as the team scales — roles and responsibilities shift frequently"
+      ]
+    },
+    "together": {
+      "name": "Together AI",
+      "logo": "https://www.google.com/s2/favicons?domain=together.ai&sz=128",
+      "meta": "AI Infrastructure · San Francisco",
+      "size": "Small (~150)",
+      "glassdoor": 4.1,
+      "wlb_score": 3.8,
+      "values": [
+        "open-source",
+        "eng-driven",
+        "learning",
+        "flat",
+        "many-hats"
+      ],
+      "careers": "https://www.together.ai/about?ref=jobsbyculture.com",
+      "quote": "Building the infrastructure layer for open AI. Small team, big ambition, strong research DNA.",
+      "location": "🇺🇸 SF",
+      "details": {
+        "Size": "~150 employees",
+        "Recommend": "82%",
+        "Work-Life Balance": "3.8/5",
+        "Salary Range": "$180k – $350k"
+      },
+      "tags": [
+        {
+          "slug": "open-source",
+          "label": "📖 Open Source"
+        },
+        {
+          "slug": "eng-driven",
+          "label": "⚙️ Engineering-Driven"
+        },
+        {
+          "slug": "flat",
+          "label": "🤝 Flat Hierarchy"
+        },
+        {
+          "slug": "learning",
+          "label": "📚 Learning"
+        },
+        {
+          "slug": "many-hats",
+          "label": "🎭 Wear Many Hats"
+        }
+      ],
+      "pros": [
+        "Open-source AI infrastructure — real mission alignment",
+        "Small team with outsized research output",
+        "Strong comp for stage",
+        "Collaborative, low-ego culture"
+      ],
+      "cons": [
+        "Early-stage means wearing many hats constantly",
+        "Limited career ladder",
+        "Fast-changing priorities",
+        "Less brand recognition than competitors"
+      ],
+      "source": "Based on Glassdoor reviews",
+      "reviewPros": [
+        "Open-source AI infrastructure — real mission alignment, not just marketing",
+        "Small team with outsized research output; your work has direct impact"
+      ],
+      "reviewCons": [
+        "Early-stage means wearing many hats constantly — not for specialists",
+        "Limited career ladder; growth paths are still being defined"
+      ]
+    },
+    "cursor": {
+      "name": "Cursor (Anysphere)",
+      "logo": "https://www.google.com/s2/favicons?domain=cursor.com&sz=128",
+      "meta": "AI Code Editor · San Francisco",
+      "size": "Small (~50)",
+      "glassdoor": 4,
+      "wlb_score": 3.5,
+      "values": [
+        "ship-fast",
+        "eng-driven",
+        "product-impact",
+        "flat",
+        "many-hats"
+      ],
+      "careers": "https://anysphere.inc?ref=jobsbyculture.com",
+      "quote": "Tiny team building the most-loved AI code editor. Everyone ships, everyone matters. Pure startup energy.",
+      "location": "🇺🇸 SF",
+      "details": {
+        "Size": "~50 employees",
+        "Recommend": "~85%",
+        "Work-Life Balance": "3.5/5",
+        "Salary Range": "$180k – $350k"
+      },
+      "tags": [
+        {
+          "slug": "ship-fast",
+          "label": "🚀 Ship Fast"
+        },
+        {
+          "slug": "eng-driven",
+          "label": "⚙️ Engineering-Driven"
+        },
+        {
+          "slug": "flat",
+          "label": "🤝 Flat"
+        },
+        {
+          "slug": "many-hats",
+          "label": "🎭 Wear Many Hats"
+        }
+      ],
+      "pros": [
+        "Building the most-loved AI code editor — massive developer love",
+        "Tiny team, extreme ownership",
+        "Top comp for stage",
+        "Pure product-engineering culture, no bloat"
+      ],
+      "cons": [
+        "Extremely small = no specialists, everyone does everything",
+        "Intense pace",
+        "Limited HR/people ops",
+        "Career growth bounded by team size"
+      ],
+      "source": "Based on limited reviews + community feedback",
+      "reviewPros": [
+        "Building the most-loved AI code editor — massive developer love and daily impact",
+        "Tiny team, extreme ownership — every person shapes the product directly"
+      ],
+      "reviewCons": [
+        "Extremely small team = no specialists; everyone does everything",
+        "Intense pace — the speed of shipping can be relentless"
+      ]
+    },
+    "linear": {
+      "name": "Linear",
+      "logo": "https://www.google.com/s2/favicons?domain=linear.app&sz=128",
+      "meta": "Project Management · Remote-First",
+      "size": "Small (~80)",
+      "glassdoor": 4.6,
+      "wlb_score": 4.4,
+      "values": [
+        "deep-work",
+        "remote",
+        "async",
+        "eng-driven",
+        "product-impact",
+        "wlb"
+      ],
+      "careers": "https://linear.app/careers?ref=jobsbyculture.com",
+      "quote": "Craft-obsessed, design-driven, fully remote. They build the tool the way they work — focused, intentional, no noise.",
+      "location": "🌍 Fully Remote",
+      "details": {
+        "Size": "~80 employees",
+        "Recommend": "95%",
+        "Work-Life Balance": "4.4/5",
+        "Salary Range": "$160k – $280k"
+      },
+      "tags": [
+        {
+          "slug": "deep-work",
+          "label": "🧠 Deep Work"
+        },
+        {
+          "slug": "remote",
+          "label": "🌍 Remote-Native"
+        },
+        {
+          "slug": "async",
+          "label": "💬 Async-First"
+        },
+        {
+          "slug": "product-impact",
+          "label": "🎯 Product Impact"
+        },
+        {
+          "slug": "eng-driven",
+          "label": "⚙️ Eng-Driven"
+        }
+      ],
+      "pros": [
+        "Obsessive product craft — best-in-class PM tool",
+        "Deep work culture (no standups, minimal meetings)",
+        "Async-first actually practiced",
+        "Small, senior team with high autonomy"
+      ],
+      "cons": [
+        "Very small team = limited roles available",
+        "High hiring bar means slow growth",
+        "Niche product category",
+        "Limited public engineering content"
+      ],
+      "source": "Based on Glassdoor reviews",
+      "reviewPros": [
+        "Obsessive product craft — building the best-in-class PM tool teams genuinely love",
+        "Deep work culture with no standups and minimal meetings — actually practiced"
+      ],
+      "reviewCons": [
+        "Very small team = limited roles available at any given time",
+        "High hiring bar means slow growth — patience required"
+      ]
+    },
+    "scale": {
+      "name": "Scale AI",
+      "logo": "https://www.google.com/s2/favicons?domain=scale.com&sz=128",
+      "meta": "AI Data Infrastructure · San Francisco",
+      "size": "Large (~1,200)",
+      "glassdoor": 3.5,
+      "wlb_score": 2.7,
+      "values": [
+        "eng-driven",
+        "product-impact",
+        "learning",
+        "ship-fast"
+      ],
+      "careers": "https://scale.com/careers?ref=jobsbyculture.com",
+      "quote": "The picks and shovels of the AI gold rush — powering data infrastructure for OpenAI, Meta, and the US government.",
+      "location": "🇺🇸 SF · Global",
+      "details": {
+        "Size": "~1,200 employees",
+        "Recommend": "56%",
+        "Work-Life Balance": "2.7/5",
+        "Salary Range": "$150k – $350k"
+      },
+      "tags": [
+        {
+          "slug": "eng-driven",
+          "label": "⚙️ Eng-Driven"
+        },
+        {
+          "slug": "product-impact",
+          "label": "🎯 Product Impact"
+        },
+        {
+          "slug": "learning",
+          "label": "📚 Learning Culture"
+        },
+        {
+          "slug": "ship-fast",
+          "label": "🚀 Ship Fast"
+        }
+      ],
+      "pros": [
+        "Building critical AI data infrastructure for top AI labs",
+        "Strong compensation for engineers — competitive base + equity",
+        "Career growth in a rapidly expanding AI data market",
+        "Smart, driven coworkers solving hard problems"
+      ],
+      "cons": [
+        "Work-life balance rated 2.7/5 — long hours common during deadlines",
+        "Culture score 2.9/5 — inconsistent management quality across teams",
+        "Rapid scaling has created organizational growing pains",
+        "Contractor workforce dynamics add team complexity"
+      ],
+      "source": "Based on Glassdoor reviews",
+      "reviewPros": [
+        "Building critical AI data infrastructure used by OpenAI, Meta, Microsoft, and the US government",
+        "Strong compensation for engineers — competitive base + equity"
+      ],
+      "reviewCons": [
+        "Work-life balance rated 2.7/5 — long hours common during client deadlines",
+        "Culture and values scored 2.9/5 — inconsistent management quality"
+      ]
+    },
+    "coreweave": {
+      "name": "CoreWeave",
+      "logo": "https://www.google.com/s2/favicons?domain=coreweave.com&sz=128",
+      "meta": "GPU Cloud Infrastructure · Public (CRWV)",
+      "size": "Large (~1,800)",
+      "glassdoor": 3.6,
+      "wlb_score": 3.2,
+      "values": [
+        "eng-driven",
+        "ship-fast",
+        "equity",
+        "many-hats"
+      ],
+      "careers": "https://coreweave.com/careers?ref=jobsbyculture.com",
+      "quote": "GPU cloud infrastructure leader backed by NVIDIA. 32 data centers, 250K+ GPUs, stock up 200%+ since IPO.",
+      "location": "🇺🇸 NJ · Multi-site",
+      "details": {
+        "Size": "~1,800 employees",
+        "Recommend": "62%",
+        "Work-Life Balance": "3.2/5",
+        "Salary Range": "$140k – $300k"
+      },
+      "tags": [
+        {
+          "slug": "eng-driven",
+          "label": "⚙️ Eng-Driven"
+        },
+        {
+          "slug": "ship-fast",
+          "label": "🚀 Ship Fast"
+        },
+        {
+          "slug": "equity",
+          "label": "💰 Strong Equity"
+        },
+        {
+          "slug": "many-hats",
+          "label": "🎩 Many Hats"
+        }
+      ],
+      "pros": [
+        "GPU cloud leader backed by NVIDIA ($2B investment Jan 2026)",
+        "Strong comp and equity — stock up 200%+ since IPO",
+        "Hard distributed systems and GPU infrastructure challenges",
+        "Rapid growth = abundant career opportunities"
+      ],
+      "cons": [
+        "Work-life balance can be challenging — some teams report long hours",
+        "Culture rated 3.1/5 — organizational processes still maturing",
+        "Management quality varies across teams (3.0/5)",
+        "Hypergrowth from ~880 to ~1,800 employees creates adjustment challenges"
+      ],
+      "source": "Based on Glassdoor reviews",
+      "reviewPros": [
+        "GPU cloud infrastructure leader backed by NVIDIA ($2B investment)",
+        "Strong compensation and equity — especially valuable post-IPO"
+      ],
+      "reviewCons": [
+        "Work-life balance can be challenging — some teams expect off-hours availability",
+        "Culture and values rated 3.1/5 — processes still maturing"
+      ]
+    },
+    "runway": {
+      "name": "Runway",
+      "logo": "https://www.google.com/s2/favicons?domain=runwayml.com&sz=128",
+      "meta": "AI Video Generation · New York",
+      "size": "Mid (~420)",
+      "glassdoor": 4.5,
+      "wlb_score": 4,
+      "values": [
+        "eng-driven",
+        "product-impact",
+        "remote",
+        "learning",
+        "ship-fast"
+      ],
+      "careers": "https://runwayml.com/careers?ref=jobsbyculture.com",
+      "quote": "Pioneer in AI video generation — Gen-3 Alpha is industry-leading. A unique blend of art and engineering, used by filmmakers and creators globally.",
+      "location": "🇺🇸 NYC · Remote",
+      "details": {
+        "Size": "~420 employees",
+        "Recommend": "90%",
+        "Work-Life Balance": "4.0/5",
+        "Salary Range": "$180k – $350k"
+      },
+      "tags": [
+        {
+          "slug": "eng-driven",
+          "label": "⚙️ Eng-Driven"
+        },
+        {
+          "slug": "product-impact",
+          "label": "🎯 Product Impact"
+        },
+        {
+          "slug": "remote",
+          "label": "🌍 Remote-Native"
+        },
+        {
+          "slug": "learning",
+          "label": "📚 Learning Culture"
+        },
+        {
+          "slug": "ship-fast",
+          "label": "🚀 Ship Fast"
+        }
+      ],
+      "pros": [
+        "Pioneer in AI video generation — Gen-3 Alpha is industry-leading",
+        "Unique creative + technical culture that values aesthetics",
+        "Mostly remote-friendly with strong async practices",
+        "Strong research output with real product impact"
+      ],
+      "cons": [
+        "Smaller team (~420) means limited specialization",
+        "AI video generation is an increasingly competitive space",
+        "Limited public engineering blog content",
+        "New York HQ can mean fewer roles outside the US"
+      ],
+      "source": "Based on Glassdoor reviews",
+      "reviewPros": [
+        "Pioneer in AI video generation — Gen-3 Alpha is industry-leading",
+        "Unique blend of art and engineering — creative culture values both"
+      ],
+      "reviewCons": [
+        "Smaller team (~420) means limited specialization — engineers wear multiple hats",
+        "AI video generation is an increasingly competitive space"
+      ]
+    },
+    "vast": {
+      "name": "Vast AI",
+      "logo": "https://www.google.com/s2/favicons?domain=vast.ai&sz=128",
+      "meta": "GPU Cloud Marketplace · LA & SF",
+      "size": "Small (~30)",
+      "glassdoor": 5,
+      "wlb_score": 3.8,
+      "values": [
+        "eng-driven",
+        "ship-fast",
+        "flat",
+        "many-hats",
+        "equity"
+      ],
+      "careers": "https://vast.ai/careers?ref=jobsbyculture.com",
+      "quote": "Decentralized GPU cloud marketplace — small, bootstrapped team building the cheapest way to run AI compute at scale.",
+      "location": "🇺🇸 LA · SF",
+      "details": {
+        "Size": "~30 employees",
+        "CEO Approval": "100%",
+        "Work-Life Balance": "4.5/5",
+        "Salary Range": "$150k – $250k"
+      },
+      "tags": [
+        {
+          "slug": "eng-driven",
+          "label": "⚙️ Eng-Driven"
+        },
+        {
+          "slug": "ship-fast",
+          "label": "🚀 Ship Fast"
+        },
+        {
+          "slug": "flat",
+          "label": "🏗️ Flat Org"
+        },
+        {
+          "slug": "many-hats",
+          "label": "🎩 Many Hats"
+        },
+        {
+          "slug": "equity",
+          "label": "💰 Strong Equity"
+        }
+      ],
+      "pros": [
+        "Front-row seat to the AI compute revolution",
+        "Strong compensation and equity for stage",
+        "Direct access to CEO — flat, transparent culture",
+        "Bootstrapped and profitable — no VC drama"
+      ],
+      "cons": [
+        "Processes still being defined — startup-stage ambiguity",
+        "Intense pace with demanding workloads",
+        "Small team means broad responsibilities",
+        "Limited brand recognition vs. hyperscaler competitors"
+      ],
+      "source": "Based on Glassdoor reviews (limited sample)",
+      "reviewPros": [
+        "Front-row seat to the AI compute revolution — demand for GPU cloud is surging",
+        "Strong compensation and generous equity stakes for a bootstrapped startup"
+      ],
+      "reviewCons": [
+        "Processes are still being defined — expect ad hoc workflows",
+        "Intense workload — the team explicitly values high output"
+      ]
+    },
+    "apollo": {
+      "name": "Apollo.io",
+      "logo": "https://www.google.com/s2/favicons?domain=apollo.io&sz=128",
+      "meta": "Sales Intelligence · Remote-First",
+      "size": "Large (~800)",
+      "glassdoor": 4,
+      "wlb_score": 3.6,
+      "values": [
+        "ship-fast",
+        "eng-driven",
+        "remote",
+        "product-impact",
+        "learning"
+      ],
+      "careers": "https://www.apollo.io/careers?ref=jobsbyculture.com",
+      "quote": "AI-powered GTM platform used by 500k+ companies. Y Combinator roots, $1.6B unicorn, shipping fast with a remote-first, product-led culture.",
+      "location": "🌍 Remote · Austin · London",
+      "details": {
+        "Size": "~800 employees",
+        "Recommend": "77%",
+        "Work-Life Balance": "3.6/5",
+        "Salary Range": "$130k – $250k"
+      },
+      "tags": [
+        {
+          "slug": "ship-fast",
+          "label": "🚀 Ship Fast"
+        },
+        {
+          "slug": "eng-driven",
+          "label": "⚙️ Eng-Driven"
+        },
+        {
+          "slug": "remote",
+          "label": "🌍 Remote-First"
+        },
+        {
+          "slug": "product-impact",
+          "label": "🎯 Product Impact"
+        },
+        {
+          "slug": "learning",
+          "label": "📚 Learning"
+        }
+      ],
+      "pros": [
+        "Strong product-market fit — best-in-class sales intelligence platform",
+        "Competitive comp with RSUs and performance bonuses",
+        "Remote-first with global team (US, UK, India, Poland)",
+        "Rapid career growth in a high-growth environment ($150M ARR)"
+      ],
+      "cons": [
+        "Work-life balance challenges under startup intensity (3.6/5)",
+        "Some reports of micromanagement at senior leadership level",
+        "Management quality varies across teams",
+        "High performance expectations with weekly tracking cycles"
+      ],
+      "source": "Based on Glassdoor reviews",
+      "reviewPros": [
+        "Strong product-market fit — best-in-class sales intelligence platform",
+        "Competitive compensation with RSUs, performance bonuses, and paid health insurance"
+      ],
+      "reviewCons": [
+        "Some reports of leadership involvement in granular decisions and frequent pivots",
+        "Work-life balance challenges under high-growth pressure"
+      ]
+    },
+    "airbnb": {
+      "name": "Airbnb",
+      "logo": "https://www.google.com/s2/favicons?domain=airbnb.com&sz=128",
+      "meta": "Travel & Tech · Remote-Friendly",
+      "size": "Large (~7,300)",
+      "glassdoor": 4.1,
+      "wlb_score": 4,
+      "values": [
+        "remote",
+        "wlb",
+        "diverse",
+        "open-source",
+        "equity"
+      ],
+      "careers": "https://careers.airbnb.com/?ref=jobsbyculture.com",
+      "quote": "Pioneered the sharing economy and remote work with 'Live and Work Anywhere.' Open-source powerhouse behind Lottie and Apache Airflow.",
+      "location": "🌍 Remote · San Francisco · Global",
+      "details": {
+        "Size": "~7,300 employees",
+        "Recommend": "80%",
+        "Work-Life Balance": "4.0/5",
+        "CEO Approval": "87% (Brian Chesky)"
+      },
+      "tags": [
+        {
+          "slug": "remote",
+          "label": "🌐 Remote-Friendly"
+        },
+        {
+          "slug": "wlb",
+          "label": "⚖️ Work-Life Balance"
+        },
+        {
+          "slug": "diverse",
+          "label": "🌈 Diverse & Inclusive"
+        },
+        {
+          "slug": "open-source",
+          "label": "🔓 Open Source"
+        },
+        {
+          "slug": "equity",
+          "label": "💎 Strong Comp"
+        }
+      ],
+      "pros": [
+        "Live and Work Anywhere — genuine remote flexibility with no pay cuts",
+        "Strong compensation with quarterly travel credits and educational stipends",
+        "Amazing people and collaborative, mission-driven culture",
+        "Good work-life balance with flexible schedules and minimal mandatory office time"
+      ],
+      "cons": [
+        "Limited career growth — promotions slow, senior roles filled externally",
+        "Internal politics at mid-to-senior levels can influence decisions",
+        "Post-IPO cultural shift — increasing bureaucracy vs. early days",
+        "Accountability gaps in some teams — inconsistent management quality"
+      ],
+      "source": "Based on Glassdoor reviews",
+      "reviewPros": [
+        "Live and Work Anywhere policy — genuine remote flexibility with no pay cuts",
+        "Strong compensation and benefits with quarterly travel credits and educational stipends"
+      ],
+      "reviewCons": [
+        "Limited career growth — senior roles often filled externally, promotions are slow",
+        "Post-IPO cultural shift — increasing bureaucracy and internal politics at mid-to-senior levels"
+      ]
+    },
+    "figma": {
+      "name": "Figma",
+      "logo": "https://www.google.com/s2/favicons?domain=figma.com&sz=128",
+      "meta": "Design Platform · San Francisco",
+      "size": "Large (~2,800)",
+      "glassdoor": 3.7,
+      "wlb_score": 3.1,
+      "values": [
+        "eng-driven",
+        "ship-fast",
+        "learning",
+        "product-impact"
+      ],
+      "careers": "https://www.figma.com/careers?ref=jobsbyculture.com",
+      "quote": "Collaborative design platform making design accessible to all. Real-time multiplayer, WebAssembly rendering, and a culture of craft and play.",
+      "location": "🌍 San Francisco · New York · Global",
+      "details": {
+        "Size": "~2,800 employees",
+        "Recommend": "73%",
+        "Work-Life Balance": "3.1/5",
+        "CEO Approval": "95% (Dylan Field)"
+      },
+      "tags": [
+        {
+          "slug": "eng-driven",
+          "label": "🔧 Eng-Driven"
+        },
+        {
+          "slug": "ship-fast",
+          "label": "🚀 Ship Fast"
+        },
+        {
+          "slug": "learning",
+          "label": "📚 Learning"
+        },
+        {
+          "slug": "product-impact",
+          "label": "🎯 Product Impact"
+        },
+        {
+          "slug": "deep-work",
+          "label": "🧠 Deep Work"
+        }
+      ],
+      "pros": [
+        "World-class talent — you learn something new every day from incredibly smart peers",
+        "Strong product mission — Figma is genuinely loved by its users",
+        "Technically ambitious problems: real-time multiplayer, WebAssembly, massive-scale infra",
+        "Culture of play and experimentation — side projects encouraged"
+      ],
+      "cons": [
+        "Work-life balance rated 3.1/5 — 60+ hour weeks common near deadlines",
+        "Hypergrowth pains — product suite doubled without proportional hiring",
+        "Senior management rated 3.2/5 — shifting priorities and changing targets",
+        "Career progression unclear — promotions hard to get with vague criteria"
+      ],
+      "source": "Based on Glassdoor reviews",
+      "reviewPros": [
+        "World-class talent and technically ambitious problems — real-time multiplayer, WebAssembly rendering",
+        "Strong product mission that employees genuinely believe in — Figma is loved by its users"
+      ],
+      "reviewCons": [
+        "Work-life balance rated 3.1/5 — 60+ hour weeks common, especially near deadlines",
+        "Hypergrowth growing pains — product suite doubled without proportional hiring"
+      ]
+    },
+    "elevenlabs": {
+      "name": "ElevenLabs",
+      "logo": "https://www.google.com/s2/favicons?domain=elevenlabs.io&sz=128",
+      "meta": "AI Voice · Remote-First",
+      "size": "Mid (~600)",
+      "glassdoor": 4.2,
+      "wlb_score": 3.6,
+      "values": [
+        "ship-fast",
+        "remote",
+        "eng-driven",
+        "product-impact",
+        "learning"
+      ],
+      "careers": "https://jobs.ashbyhq.com/elevenlabs?ref=jobsbyculture.com",
+      "quote": "Cutting-edge AI voice technology with exceptional talent density. Remote-first culture spanning 30+ countries with a bias for shipping.",
+      "location": "🌍 Remote · Global",
+      "details": {
+        "Size": "~600 employees",
+        "Recommend": "78%",
+        "Work-Life Balance": "3.6/5",
+        "CEO Approval": "82% (Mati Staniszewski)"
+      },
+      "tags": [
+        {
+          "slug": "ship-fast",
+          "label": "🚀 Ship Fast"
+        },
+        {
+          "slug": "remote",
+          "label": "🌍 Remote"
+        },
+        {
+          "slug": "eng-driven",
+          "label": "⚙️ Eng-Driven"
+        },
+        {
+          "slug": "product-impact",
+          "label": "🎯 Product Impact"
+        },
+        {
+          "slug": "ethical-ai",
+          "label": "🛡️ Ethical AI"
+        }
+      ],
+      "pros": [
+        "Cutting-edge AI voice technology — one of the most advanced in the space",
+        "Exceptional talent density and remote-first culture spanning 30+ countries"
+      ],
+      "cons": [
+        "Work-life balance is poor — 60+ hour weeks are the norm",
+        "Leadership maturity concerns — little margin for error or professional growth"
+      ],
+      "source": "Based on Glassdoor reviews",
+      "reviewPros": [
+        "Cutting-edge AI voice technology — working on one of the most advanced products in the AI voice space",
+        "Exceptional talent density and remote-first culture spanning 30+ countries"
+      ],
+      "reviewCons": [
+        "Work-life balance is poor — 60+ hour weeks are the norm with constant pressure to deliver",
+        "Leadership maturity concerns — little margin for error or professional growth"
+      ]
+    },
+    "pinecone": {
+      "name": "Pinecone",
+      "logo": "https://www.google.com/s2/favicons?domain=pinecone.io&sz=128",
+      "meta": "Vector Database · Remote",
+      "size": "Small (~130)",
+      "glassdoor": 4.2,
+      "wlb_score": 4.3,
+      "values": [
+        "remote",
+        "flex-hours",
+        "learning",
+        "product-impact",
+        "eng-driven"
+      ],
+      "careers": "https://www.pinecone.io/careers?ref=jobsbyculture.com",
+      "quote": "Exceptional colleagues — warm, welcoming, and technically among the best. Fully remote with strong autonomy and genuine growth opportunities.",
+      "location": "🌍 Remote · US",
+      "details": {
+        "Size": "~130 employees",
+        "Recommend": "80%",
+        "Work-Life Balance": "4.3/5",
+        "CEO Approval": "85% (Edo Liberty)"
+      },
+      "tags": [
+        {
+          "slug": "remote",
+          "label": "🌍 Remote"
+        },
+        {
+          "slug": "flex-hours",
+          "label": "⏰ Flex Hours"
+        },
+        {
+          "slug": "diverse",
+          "label": "🌈 Diverse"
+        },
+        {
+          "slug": "learning",
+          "label": "📚 Learning"
+        },
+        {
+          "slug": "eng-driven",
+          "label": "⚙️ Eng-Driven"
+        }
+      ],
+      "pros": [
+        "Exceptional colleagues — warm, welcoming, and technically top-tier",
+        "Fully remote with strong culture, autonomy, and growth opportunities"
+      ],
+      "cons": [
+        "Significant layoffs in 2024 (30% of staff) eroded trust",
+        "Below-market base salary even with equity compensation"
+      ],
+      "source": "Based on Glassdoor reviews",
+      "reviewPros": [
+        "Exceptional colleagues — warm, welcoming, and technically among the best in the industry",
+        "Fully remote with strong company culture, autonomy, and genuine growth opportunities"
+      ],
+      "reviewCons": [
+        "Significant layoffs in 2024 (30% of staff) eroded trust and reduced headcount",
+        "Below-market base salary even with equity compensation"
+      ]
+    },
+    "modal": {
+      "name": "Modal",
+      "logo": "https://www.google.com/s2/favicons?domain=modal.com&sz=128",
+      "meta": "AI Cloud Infrastructure · New York",
+      "size": "Small (~110)",
+      "glassdoor": 4,
+      "wlb_score": 3.8,
+      "values": [
+        "eng-driven",
+        "ship-fast",
+        "deep-work",
+        "open-source",
+        "product-impact",
+        "many-hats"
+      ],
+      "careers": "https://modal.com/careers?ref=jobsbyculture.com",
+      "quote": "World-class engineering team — creators of Luigi, Seaborn, and olympiad medalists. High-impact product with 50x revenue growth.",
+      "location": "🇺🇸 New York · Remote",
+      "details": {
+        "Size": "~110 employees",
+        "Recommend": "82%",
+        "Work-Life Balance": "3.8/5",
+        "CEO Approval": "88% (Erik Bernhardsson)"
+      },
+      "tags": [
+        {
+          "slug": "eng-driven",
+          "label": "⚙️ Eng-Driven"
+        },
+        {
+          "slug": "ship-fast",
+          "label": "🚀 Ship Fast"
+        },
+        {
+          "slug": "deep-work",
+          "label": "🧠 Deep Work"
+        },
+        {
+          "slug": "open-source",
+          "label": "📖 Open Source"
+        },
+        {
+          "slug": "many-hats",
+          "label": "🎭 Many Hats"
+        }
+      ],
+      "pros": [
+        "World-class engineering team with olympiad medalists",
+        "High-impact product with 50x revenue growth — developers love it"
+      ],
+      "cons": [
+        "Early-stage dynamics — roles shift quickly, requires self-direction",
+        "Limited HR infrastructure — benefits and career ladders still developing"
+      ],
+      "source": "Based on Glassdoor reviews",
+      "reviewPros": [
+        "World-class engineering team — includes creators of Luigi, Seaborn, and olympiad medalists",
+        "High-impact product with 50x revenue growth — developers widely praise the platform"
+      ],
+      "reviewCons": [
+        "Early-stage startup dynamics — roles shift quickly, requires high self-direction",
+        "Limited HR infrastructure — benefits and career ladders still being developed"
+      ]
+    },
+    "ramp": {
+      "name": "Ramp",
+      "logo": "https://www.google.com/s2/favicons?domain=ramp.com&sz=128",
+      "meta": "Fintech · New York",
+      "size": "Large (~1,000+)",
+      "glassdoor": 4.2,
+      "wlb_score": 3.5,
+      "values": [
+        "ship-fast",
+        "product-impact",
+        "eng-driven",
+        "transparent",
+        "equity",
+        "learning"
+      ],
+      "careers": "https://ramp.com/careers?ref=jobsbyculture.com",
+      "quote": "Exceptional talent and product-driven culture. Outstanding compensation and benefits — 16 weeks maternity, IVF coverage, free lunch.",
+      "location": "🇺🇸 NYC · SF · Miami",
+      "details": {
+        "Size": "~1,000+ employees",
+        "Recommend": "82%",
+        "Work-Life Balance": "3.5/5",
+        "CEO Approval": "88% (Eric Glyman)"
+      },
+      "tags": [
+        {
+          "slug": "ship-fast",
+          "label": "🚀 Ship Fast"
+        },
+        {
+          "slug": "product-impact",
+          "label": "🎯 Product Impact"
+        },
+        {
+          "slug": "eng-driven",
+          "label": "⚙️ Eng-Driven"
+        },
+        {
+          "slug": "transparent",
+          "label": "🪟 Transparent"
+        },
+        {
+          "slug": "equity",
+          "label": "💰 Strong Equity"
+        }
+      ],
+      "pros": [
+        "Exceptional talent — software engineers rate 4.7/5 on Glassdoor",
+        "Outstanding compensation and benefits — 16 weeks maternity, IVF coverage"
+      ],
+      "cons": [
+        "Intense work demands — 60+ hour weeks and 10-12 hour days common",
+        "Shifting to in-office — new hires expected 3+ days/week in NYC, SF, or Miami"
+      ],
+      "source": "Based on Glassdoor reviews",
+      "reviewPros": [
+        "Exceptional talent and product-driven culture — software engineers rate 4.7/5 on Glassdoor",
+        "Outstanding compensation and benefits — 16 weeks maternity, IVF coverage, free lunch"
+      ],
+      "reviewCons": [
+        "Intense work demands — 60+ hour weeks and 10-12 hour days are common",
+        "Shifting to in-office preference — new hires expected 3+ days/week in NYC, SF, or Miami"
+      ]
+    },
+    "weaviate": {
+      "name": "Weaviate",
+      "logo": "https://www.google.com/s2/favicons?domain=weaviate.io&sz=128",
+      "meta": "Vector Database · Remote-First",
+      "size": "Small (~110)",
+      "glassdoor": 4.3,
+      "wlb_score": 4.2,
+      "values": [
+        "remote",
+        "async",
+        "flat",
+        "open-source",
+        "wlb",
+        "diverse",
+        "psych-safety"
+      ],
+      "careers": "https://weaviate.io/company/careers?ref=jobsbyculture.com",
+      "quote": "Excellent remote-first culture with async workflows, timezone respect, and high autonomy. Flat, ego-free — your voice is heard from day 1.",
+      "location": "🌍 Remote · Global",
+      "details": {
+        "Size": "~110 employees",
+        "Recommend": "85%",
+        "Work-Life Balance": "4.2/5",
+        "CEO Approval": "90% (Bob van Luijt)"
+      },
+      "tags": [
+        {
+          "slug": "remote",
+          "label": "🌍 Remote"
+        },
+        {
+          "slug": "async",
+          "label": "💬 Async-First"
+        },
+        {
+          "slug": "flat",
+          "label": "🤝 Flat Hierarchy"
+        },
+        {
+          "slug": "open-source",
+          "label": "📖 Open Source"
+        },
+        {
+          "slug": "wlb",
+          "label": "⚖️ Work-Life Balance"
+        }
+      ],
+      "pros": [
+        "Excellent remote-first culture — async workflows and timezone respect",
+        "Flat, ego-free culture — your voice is heard from day 1 regardless of title"
+      ],
+      "cons": [
+        "Time zone challenges inherent to a fully distributed global team",
+        "Startup growing pains — processes still being established"
+      ],
+      "source": "Based on Glassdoor reviews",
+      "reviewPros": [
+        "Excellent remote-first culture — async workflows, timezone respect, and high autonomy",
+        "Flat, ego-free culture — your voice is heard from day 1 regardless of title"
+      ],
+      "reviewCons": [
+        "Time zone challenges inherent to a fully distributed global team",
+        "Startup growing pains — processes still being established, things evolve quickly"
+      ]
+    },
+    "openai": {
+      "name": "OpenAI",
+      "logo": "https://www.google.com/s2/favicons?domain=openai.com&sz=128",
+      "meta": "Frontier AI Research · San Francisco",
+      "size": "Large (~3,500)",
+      "glassdoor": 4.5,
+      "wlb_score": 3.6,
+      "values": [
+        "eng-driven",
+        "ship-fast",
+        "learning",
+        "product-impact",
+        "equity"
+      ],
+      "careers": "https://openai.com/careers?ref=jobsbyculture.com",
+      "quote": "Cutting-edge frontier AI research with world-class colleagues. Elite compensation — top-tier TC and equity packages.",
+      "location": "📍 San Francisco, CA",
+      "details": {
+        "Size": "~3,500 employees",
+        "Recommend": "82%",
+        "Work-Life Balance": "3.6/5",
+        "CEO Approval": "~75% (Sam Altman)"
+      },
+      "tags": [
+        {
+          "slug": "eng-driven",
+          "label": "🛠️ Eng-Driven"
+        },
+        {
+          "slug": "ship-fast",
+          "label": "🚀 Ship Fast"
+        },
+        {
+          "slug": "learning",
+          "label": "📚 Learning"
+        },
+        {
+          "slug": "ethical-ai",
+          "label": "🤖 Ethical AI"
+        },
+        {
+          "slug": "product-impact",
+          "label": "🎯 Product Impact"
+        }
+      ],
+      "pros": [
+        "Cutting-edge frontier AI research with world-class colleagues",
+        "Elite compensation — top-tier TC and equity packages"
+      ],
+      "cons": [
+        "High-intensity environment — long hours and intense pace are the norm",
+        "Internal politics and rapid org changes as the company scales"
+      ],
+      "source": "Based on Glassdoor reviews",
+      "reviewPros": [
+        "Cutting-edge frontier AI research with world-class colleagues",
+        "Elite compensation — top-tier TC and equity packages"
+      ],
+      "reviewCons": [
+        "High-intensity environment — long hours and intense pace are the norm",
+        "Internal politics and rapid org changes as the company scales"
+      ]
+    },
+    "deepmind": {
+      "name": "Google DeepMind",
+      "logo": "https://www.google.com/s2/favicons?domain=deepmind.google&sz=128",
+      "meta": "AI Research Lab · London, UK",
+      "size": "Large (~7,000)",
+      "glassdoor": 4.2,
+      "wlb_score": 4,
+      "values": [
+        "deep-work",
+        "learning",
+        "eng-driven",
+        "diverse",
+        "ethical-ai",
+        "equity",
+        "flex-hours"
+      ],
+      "careers": "https://deepmind.google/careers/?ref=jobsbyculture.com",
+      "quote": "World-class AI research environment with brilliant, collaborative colleagues. Google-level compensation and benefits with genuine work-life balance.",
+      "location": "📍 London, UK",
+      "details": {
+        "Size": "~7,000 employees",
+        "Recommend": "85%",
+        "Work-Life Balance": "4.0/5",
+        "CEO Approval": "86% (Demis Hassabis)"
+      },
+      "tags": [
+        {
+          "slug": "deep-work",
+          "label": "🧘 Deep Work"
+        },
+        {
+          "slug": "learning",
+          "label": "📚 Learning"
+        },
+        {
+          "slug": "eng-driven",
+          "label": "🛠️ Eng-Driven"
+        },
+        {
+          "slug": "diverse",
+          "label": "🌈 Diverse"
+        },
+        {
+          "slug": "ethical-ai",
+          "label": "🤖 Ethical AI"
+        }
+      ],
+      "pros": [
+        "World-class AI research environment with brilliant, collaborative colleagues",
+        "Google-level compensation and benefits with genuine work-life balance"
+      ],
+      "cons": [
+        "Google-scale bureaucracy — slow decision-making compared to startups",
+        "Large org means less individual ownership and impact on direction"
+      ],
+      "source": "Based on Glassdoor reviews",
+      "reviewPros": [
+        "World-class AI research environment with brilliant, collaborative colleagues",
+        "Google-level compensation and benefits with genuine work-life balance"
+      ],
+      "reviewCons": [
+        "Google-scale bureaucracy — slow decision-making compared to startups",
+        "Large org means less individual ownership and impact on direction"
+      ]
+    },
+    "notion": {
+      "name": "Notion",
+      "logo": "https://www.google.com/s2/favicons?domain=notion.so&sz=128",
+      "meta": "Productivity Tools · San Francisco",
+      "size": "Mid (~800)",
+      "glassdoor": 4.4,
+      "wlb_score": 4.2,
+      "values": [
+        "product-impact",
+        "eng-driven",
+        "learning",
+        "transparent",
+        "diverse",
+        "equity"
+      ],
+      "careers": "https://notion.so/careers?ref=jobsbyculture.com",
+      "quote": "Incredible product culture — everyone uses Notion daily and cares deeply. Transparent leadership with accessible founders and high trust.",
+      "location": "📍 San Francisco, CA",
+      "details": {
+        "Size": "~800 employees",
+        "Recommend": "89%",
+        "Work-Life Balance": "4.2/5",
+        "CEO Approval": "96% (Ivan Zhao)"
+      },
+      "tags": [
+        {
+          "slug": "product-impact",
+          "label": "🎯 Product Impact"
+        },
+        {
+          "slug": "eng-driven",
+          "label": "🛠️ Eng-Driven"
+        },
+        {
+          "slug": "learning",
+          "label": "📚 Learning"
+        },
+        {
+          "slug": "transparent",
+          "label": "🔍 Transparent"
+        },
+        {
+          "slug": "diverse",
+          "label": "🌈 Diverse"
+        }
+      ],
+      "pros": [
+        "Incredible product culture — everyone uses Notion daily and cares deeply",
+        "Transparent leadership with accessible founders and high trust"
+      ],
+      "cons": [
+        "Fast pace can lead to burnout, especially during product pushes",
+        "Hybrid required (3 days in-office) — not truly remote-friendly"
+      ],
+      "source": "Based on Glassdoor reviews",
+      "reviewPros": [
+        "Incredible product culture — everyone uses Notion daily and cares deeply",
+        "Transparent leadership with accessible founders and high trust"
+      ],
+      "reviewCons": [
+        "Fast pace can lead to burnout, especially during product pushes",
+        "Hybrid required (3 days in-office) — not truly remote-friendly"
+      ]
+    },
+    "langchain": {
+      "name": "LangChain",
+      "logo": "https://www.google.com/s2/favicons?domain=langchain.com&sz=128",
+      "meta": "LLM Framework · San Francisco",
+      "size": "Small (~230)",
+      "glassdoor": 4.6,
+      "wlb_score": 4,
+      "values": [
+        "open-source",
+        "eng-driven",
+        "ship-fast",
+        "remote",
+        "many-hats",
+        "product-impact",
+        "flat"
+      ],
+      "careers": "https://www.langchain.com/careers?ref=jobsbyculture.com",
+      "quote": "Open-source DNA with massive community — your work impacts millions of developers. Small team with outsized impact — ship fast with high autonomy.",
+      "location": "📍 San Francisco, CA",
+      "details": {
+        "Size": "~230 employees",
+        "Recommend": "N/A",
+        "Work-Life Balance": "4.0/5",
+        "CEO": "Harrison Chase"
+      },
+      "tags": [
+        {
+          "slug": "open-source",
+          "label": "📖 Open Source"
+        },
+        {
+          "slug": "eng-driven",
+          "label": "🛠️ Eng-Driven"
+        },
+        {
+          "slug": "ship-fast",
+          "label": "🚀 Ship Fast"
+        },
+        {
+          "slug": "remote",
+          "label": "🌍 Remote"
+        },
+        {
+          "slug": "flat",
+          "label": "🤝 Flat Hierarchy"
+        }
+      ],
+      "pros": [
+        "Open-source DNA with massive community — your work impacts millions of developers",
+        "Small team with outsized impact — ship fast with high autonomy"
+      ],
+      "cons": [
+        "Very early-stage startup — limited structure and processes",
+        "Rapidly scaling which brings growing pains and role ambiguity"
+      ],
+      "source": "Based on RepVue reviews",
+      "reviewPros": [
+        "Open-source DNA with massive community — your work impacts millions of developers",
+        "Small team with outsized impact — ship fast with high autonomy"
+      ],
+      "reviewCons": [
+        "Very early-stage startup — limited structure and processes",
+        "Rapidly scaling which brings growing pains and role ambiguity"
+      ]
+    },
+    "replit": {
+      "name": "Replit",
+      "logo": "https://www.google.com/s2/favicons?domain=replit.com&sz=128",
+      "meta": "AI Code Editor · Foster City, CA",
+      "size": "Small (~200)",
+      "glassdoor": 4,
+      "wlb_score": 3.9,
+      "values": [
+        "ship-fast",
+        "many-hats",
+        "product-impact",
+        "eng-driven",
+        "social-impact"
+      ],
+      "careers": "https://replit.com/careers?ref=jobsbyculture.com",
+      "quote": "Exciting AI-powered developer tools — cool technology on the frontier. Remote-friendly with high autonomy and ownership of your work.",
+      "location": "📍 Foster City, CA",
+      "details": {
+        "Size": "~200 employees",
+        "Recommend": "83%",
+        "Work-Life Balance": "3.9/5",
+        "CEO": "Amjad Masad"
+      },
+      "tags": [
+        {
+          "slug": "ship-fast",
+          "label": "🚀 Ship Fast"
+        },
+        {
+          "slug": "remote",
+          "label": "🌍 Remote"
+        },
+        {
+          "slug": "many-hats",
+          "label": "🎩 Many Hats"
+        },
+        {
+          "slug": "product-impact",
+          "label": "🎯 Product Impact"
+        },
+        {
+          "slug": "eng-driven",
+          "label": "🛠️ Eng-Driven"
+        }
+      ],
+      "pros": [
+        "Exciting AI-powered developer tools — cool technology on the frontier",
+        "Remote-friendly with high autonomy and ownership of your work"
+      ],
+      "cons": [
+        "Disorganized operations — processes can feel chaotic",
+        "Leadership style can feel intense — high pressure to deliver"
+      ],
+      "source": "Based on Glassdoor reviews",
+      "reviewPros": [
+        "Exciting AI-powered developer tools — cool technology on the frontier",
+        "High autonomy and ownership — mission to empower the next billion software creators"
+      ],
+      "reviewCons": [
+        "Disorganized operations — processes can feel chaotic",
+        "Leadership style can feel intense — high pressure to deliver"
+      ]
+    },
+    "posthog": {
+      "name": "PostHog",
+      "logo": "https://www.google.com/s2/favicons?domain=posthog.com&sz=128",
+      "meta": "Open-Source Product Analytics · Fully Remote",
+      "size": "Small (~170)",
+      "glassdoor": 4.3,
+      "wlb_score": 4.5,
+      "values": [
+        "open-source",
+        "transparent",
+        "async",
+        "remote",
+        "flat",
+        "many-hats"
+      ],
+      "careers": "https://posthog.com/careers?ref=jobsbyculture.com",
+      "quote": "Extreme transparency — public handbook, open salaries, open-source everything. Fully remote across 30+ countries with genuine async-first culture.",
+      "location": "🌍 Fully Remote (30+ countries)",
+      "details": {
+        "Size": "~170 employees",
+        "Recommend": "75%",
+        "Work-Life Balance": "4.5/5",
+        "CEO": "James Hawkins"
+      },
+      "tags": [
+        {
+          "slug": "open-source",
+          "label": "📖 Open Source"
+        },
+        {
+          "slug": "transparent",
+          "label": "🪟 Transparent"
+        },
+        {
+          "slug": "async",
+          "label": "💬 Async-First"
+        },
+        {
+          "slug": "remote",
+          "label": "🌍 Remote-Native"
+        },
+        {
+          "slug": "flat",
+          "label": "🤝 Flat Hierarchy"
+        }
+      ],
+      "pros": [
+        "Extreme transparency — public handbook, open-source everything",
+        "Generous compensation with competitive pay, equity, and home office budget"
+      ],
+      "cons": [
+        "Small team means limited career progression paths",
+        "Top-down decision-making can sometimes override team input"
+      ],
+      "source": "Based on Glassdoor reviews",
+      "reviewPros": [
+        "Extreme transparency — public handbook, open-source everything, radical autonomy",
+        "Generous compensation with competitive pay, equity, and home office budget"
+      ],
+      "reviewCons": [
+        "Small team means limited career progression paths",
+        "Top-down decision-making can sometimes override team input"
+      ]
+    },
+    "supabase": {
+      "name": "Supabase",
+      "logo": "https://www.google.com/s2/favicons?domain=supabase.com&sz=128",
+      "meta": "Open-Source Firebase Alternative · Fully Remote",
+      "size": "Small (~250)",
+      "glassdoor": 4.8,
+      "wlb_score": 3,
+      "values": [
+        "open-source",
+        "remote",
+        "eng-driven",
+        "ship-fast",
+        "flat",
+        "async"
+      ],
+      "careers": "https://supabase.com/careers?ref=jobsbyculture.com",
+      "quote": "Truly open-source DNA — build products millions of developers use daily. No-hierarchy remote culture with extreme autonomy.",
+      "location": "🌍 Fully Remote",
+      "details": {
+        "Size": "~250 employees",
+        "Recommend": "100%",
+        "Work-Life Balance": "3.0/5",
+        "CEO": "Paul Copplestone"
+      },
+      "tags": [
+        {
+          "slug": "open-source",
+          "label": "📖 Open Source"
+        },
+        {
+          "slug": "remote",
+          "label": "🌍 Remote-Native"
+        },
+        {
+          "slug": "eng-driven",
+          "label": "⚙️ Engineering-Driven"
+        },
+        {
+          "slug": "ship-fast",
+          "label": "🚀 Ship Fast"
+        },
+        {
+          "slug": "flat",
+          "label": "🤝 Flat Hierarchy"
+        }
+      ],
+      "pros": [
+        "Truly open-source DNA — build products millions of developers use daily",
+        "No-hierarchy remote culture with extreme autonomy and generous allowances"
+      ],
+      "cons": [
+        "Intense workload — more work than a single person can reasonably manage",
+        "Work-life balance rated 3.0/5 — fast shipping pace can be relentless"
+      ],
+      "source": "Based on Glassdoor reviews",
+      "reviewPros": [
+        "Truly open-source DNA — build products millions of developers use daily",
+        "No-hierarchy remote culture with extreme autonomy and generous allowances"
+      ],
+      "reviewCons": [
+        "Intense workload — more work than a single person can reasonably manage",
+        "Work-life balance rated 3.0/5 — fast shipping pace can be relentless"
+      ]
+    },
+    "tailscale": {
+      "name": "Tailscale",
+      "logo": "https://www.google.com/s2/favicons?domain=tailscale.com&sz=128",
+      "meta": "Zero-Config VPN · Remote-First",
+      "size": "Small (~290)",
+      "glassdoor": 4.4,
+      "wlb_score": 4.5,
+      "values": [
+        "remote",
+        "wlb",
+        "equity",
+        "eng-driven",
+        "diverse",
+        "transparent"
+      ],
+      "careers": "https://tailscale.com/careers?ref=jobsbyculture.com",
+      "quote": "Same pay worldwide with 26 weeks parental leave and genuine work-life balance. Brilliant, nerdy CEO who deeply understands the tech.",
+      "location": "🌍 Remote-First (Toronto HQ)",
+      "details": {
+        "Size": "~290 employees",
+        "Recommend": "79%",
+        "Work-Life Balance": "4.5/5",
+        "CEO": "Avery Pennarun"
+      },
+      "tags": [
+        {
+          "slug": "remote",
+          "label": "🌍 Remote-First"
+        },
+        {
+          "slug": "wlb",
+          "label": "⚖️ Work-Life Balance"
+        },
+        {
+          "slug": "equity",
+          "label": "💰 Strong Equity"
+        },
+        {
+          "slug": "eng-driven",
+          "label": "⚙️ Engineering-Driven"
+        },
+        {
+          "slug": "diverse",
+          "label": "🌈 Diverse"
+        }
+      ],
+      "pros": [
+        "Same pay worldwide with 26 weeks parental leave and genuine WLB",
+        "Brilliant, nerdy CEO — culture is intellectual and respectful"
+      ],
+      "cons": [
+        "Career progression limited — only 3.0/5 on career opportunities",
+        "Middle management still developing — some growing pains as org scales"
+      ],
+      "source": "Based on Glassdoor reviews",
+      "reviewPros": [
+        "Same pay worldwide with 26 weeks parental leave and genuine work-life balance",
+        "Brilliant, nerdy CEO who deeply understands the tech — culture is intellectual and respectful"
+      ],
+      "reviewCons": [
+        "Career progression limited — only 3.0/5 on career opportunities",
+        "Middle management still developing — some growing pains as the org scales"
+      ]
+    },
+    "suno": {
+      "name": "Suno",
+      "logo": "https://www.google.com/s2/favicons?domain=suno.com&sz=128",
+      "meta": "AI Music Generation · Cambridge, MA",
+      "size": "Small (~200)",
+      "glassdoor": 4.2,
+      "wlb_score": 3.8,
+      "values": [
+        "ship-fast",
+        "eng-driven",
+        "product-impact",
+        "many-hats",
+        "learning"
+      ],
+      "careers": "https://suno.com/careers?ref=jobsbyculture.com",
+      "quote": "Building the leading AI music platform with 2M+ paid subscribers and explosive growth. Creative, mission-driven team at the intersection of AI and music.",
+      "location": "📍 Cambridge, MA",
+      "details": {
+        "Size": "~200 employees",
+        "Recommend": "85%",
+        "Work-Life Balance": "3.8/5",
+        "CEO": "Mikey Shulman"
+      },
+      "tags": [
+        {
+          "slug": "ship-fast",
+          "label": "🚀 Ship Fast"
+        },
+        {
+          "slug": "eng-driven",
+          "label": "⚙️ Engineering-Driven"
+        },
+        {
+          "slug": "product-impact",
+          "label": "🎯 Product Impact"
+        },
+        {
+          "slug": "many-hats",
+          "label": "🎩 Many Hats"
+        },
+        {
+          "slug": "learning",
+          "label": "📚 Learning"
+        }
+      ],
+      "pros": [
+        "Building the leading AI music platform with 2M+ paid subscribers",
+        "Creative, mission-driven team working at the intersection of AI and music"
+      ],
+      "cons": [
+        "Compensation & benefits rated 3.5/5 — below market for AI startups",
+        "Startup growing pains — processes and structure still catching up"
+      ],
+      "source": "Based on Glassdoor reviews",
+      "reviewPros": [
+        "Building the leading AI music platform with 2M+ paid subscribers and explosive growth",
+        "Creative, mission-driven team working at the intersection of AI and music"
+      ],
+      "reviewCons": [
+        "Compensation & benefits rated 3.5/5 — below market for AI startups",
+        "Startup growing pains — processes and structure still catching up to rapid scaling"
+      ]
+    },
+    "pylon": {
+      "name": "Pylon",
+      "logo": "https://www.google.com/s2/favicons?domain=usepylon.com&sz=128",
+      "meta": "B2B Customer Support · San Francisco",
+      "size": "Small (~70)",
+      "glassdoor": 3,
+      "wlb_score": 3.5,
+      "values": [
+        "ship-fast",
+        "many-hats",
+        "product-impact"
+      ],
+      "careers": "https://usepylon.com/careers?ref=jobsbyculture.com",
+      "quote": "YC + a16z backed with strong product-market fit. Small team with outsized ownership — every engineer directly shapes the product.",
+      "location": "📍 San Francisco, CA",
+      "details": {
+        "Size": "~70 employees",
+        "Recommend": "50%",
+        "Work-Life Balance": "4.0/5",
+        "Funding": "YC + a16z backed"
+      },
+      "tags": [
+        {
+          "slug": "ship-fast",
+          "label": "🚀 Ship Fast"
+        },
+        {
+          "slug": "eng-driven",
+          "label": "⚙️ Engineering-Driven"
+        },
+        {
+          "slug": "flat",
+          "label": "🤝 Flat Hierarchy"
+        },
+        {
+          "slug": "many-hats",
+          "label": "🎩 Many Hats"
+        },
+        {
+          "slug": "product-impact",
+          "label": "🎯 Product Impact"
+        }
+      ],
+      "pros": [
+        "YC + a16z backed with strong product-market fit in B2B support",
+        "Small team with outsized ownership — every engineer shapes the product"
+      ],
+      "cons": [
+        "Polarized reviews — aggressive culture reported by some employees",
+        "Very early-stage with minimal processes — only 4 Glassdoor reviews"
+      ],
+      "source": "Based on Glassdoor reviews",
+      "reviewPros": [
+        "YC + a16z backed with strong product-market fit in B2B customer support",
+        "Small team with outsized ownership — every engineer directly shapes the product"
+      ],
+      "reviewCons": [
+        "Polarized reviews — aggressive culture reported by some employees",
+        "Very early-stage with minimal processes — only 4 Glassdoor reviews"
+      ]
+    },
+    "incidentio": {
+      "name": "incident.io",
+      "logo": "https://www.google.com/s2/favicons?domain=incident.io&sz=128",
+      "meta": "Incident Management · London",
+      "size": "Small (~140)",
+      "glassdoor": 4.5,
+      "wlb_score": 4.1,
+      "values": [
+        "transparent",
+        "psych-safety",
+        "ship-fast",
+        "learning",
+        "eng-driven",
+        "flat"
+      ],
+      "careers": "https://incident.io/careers?ref=jobsbyculture.com",
+      "quote": "Strong culture with a dedicated culture manager — values are practiced, not just stated. Excellent compensation and benefits with strong career growth.",
+      "location": "📍 London, UK",
+      "details": {
+        "Size": "~140 employees",
+        "Recommend": "88%",
+        "Work-Life Balance": "4.1/5",
+        "CEO": "Stephen Whitworth"
+      },
+      "tags": [
+        {
+          "slug": "transparent",
+          "label": "🪟 Transparent"
+        },
+        {
+          "slug": "psych-safety",
+          "label": "🛡️ Safe to Fail"
+        },
+        {
+          "slug": "ship-fast",
+          "label": "🚀 Ship Fast"
+        },
+        {
+          "slug": "learning",
+          "label": "📚 Learning"
+        },
+        {
+          "slug": "eng-driven",
+          "label": "⚙️ Engineering-Driven"
+        }
+      ],
+      "pros": [
+        "Strong culture with a dedicated culture manager — values are practiced",
+        "Excellent compensation and benefits with strong career growth"
+      ],
+      "cons": [
+        "Rapid scaling can create instability — organizational growing pains",
+        "London-centric with limited remote options for some roles"
+      ],
+      "source": "Based on Glassdoor reviews",
+      "reviewPros": [
+        "Strong culture with a dedicated culture manager — values are practiced, not just stated",
+        "Excellent compensation and benefits with strong career growth opportunities"
+      ],
+      "reviewCons": [
+        "Rapid scaling can create instability — some report organizational growing pains",
+        "London-centric with limited remote options for some roles"
+      ]
+    },
+    "grafanalabs": {
+      "name": "Grafana Labs",
+      "logo": "https://www.google.com/s2/favicons?domain=grafana.com&sz=128",
+      "meta": "Open-Source Observability · Fully Remote",
+      "size": "Large (~1,700)",
+      "glassdoor": 4.1,
+      "wlb_score": 4.3,
+      "values": [
+        "remote",
+        "open-source",
+        "eng-driven",
+        "transparent",
+        "wlb",
+        "learning"
+      ],
+      "careers": "https://grafana.com/about/careers?ref=jobsbyculture.com",
+      "quote": "100% remote-first across 40+ countries with generous PTO and mandatory shutdown days. Engineers rate it 4.9/5 — absurdly talented colleagues.",
+      "location": "🌍 Fully Remote (40+ countries)",
+      "details": {
+        "Size": "~1,700 employees",
+        "Recommend": "78%",
+        "Work-Life Balance": "4.3/5",
+        "CEO": "Raj Dutt"
+      },
+      "tags": [
+        {
+          "slug": "remote",
+          "label": "🌍 Remote-First"
+        },
+        {
+          "slug": "open-source",
+          "label": "📖 Open Source"
+        },
+        {
+          "slug": "eng-driven",
+          "label": "⚙️ Engineering-Driven"
+        },
+        {
+          "slug": "transparent",
+          "label": "🪟 Transparent"
+        },
+        {
+          "slug": "wlb",
+          "label": "⚖️ Work-Life Balance"
+        }
+      ],
+      "pros": [
+        "100% remote-first across 40+ countries with generous PTO (~30 days)",
+        "Engineers rate it 4.9/5 — strong open-source culture"
+      ],
+      "cons": [
+        "Career progression above staff level can be challenging",
+        "Product management sometimes marginalized by engineering"
+      ],
+      "source": "Based on Glassdoor reviews (205 reviews)",
+      "reviewPros": [
+        "100% remote-first across 40+ countries with generous PTO (~30 days) and mandatory shutdown days",
+        "Engineers rate it 4.9/5 — absurdly talented colleagues with strong open-source culture"
+      ],
+      "reviewCons": [
+        "Career progression above staff level can be challenging with limited upward mobility",
+        "Product management is sometimes marginalized with engineers holding disproportionate power"
+      ]
+    },
+    "plaid": {
+      "name": "Plaid",
+      "logo": "https://www.google.com/s2/favicons?domain=plaid.com&sz=128",
+      "meta": "Financial Infrastructure API · San Francisco",
+      "size": "Mid (~800)",
+      "glassdoor": 4.6,
+      "wlb_score": 4.2,
+      "values": [
+        "eng-driven",
+        "transparent",
+        "learning",
+        "product-impact",
+        "psych-safety",
+        "diverse"
+      ],
+      "careers": "https://plaid.com/careers?ref=jobsbyculture.com",
+      "quote": "91% of employees recommend — highly accessible and transparent senior leadership. Build APIs used by Venmo, Robinhood, and thousands of fintechs.",
+      "location": "🇺🇸 San Francisco, CA",
+      "details": {
+        "Size": "~800 employees",
+        "Recommend": "91%",
+        "Work-Life Balance": "4.2/5",
+        "CEO": "Zach Perret"
+      },
+      "tags": [
+        {
+          "slug": "eng-driven",
+          "label": "⚙️ Engineering-Driven"
+        },
+        {
+          "slug": "transparent",
+          "label": "🪟 Transparent"
+        },
+        {
+          "slug": "learning",
+          "label": "📚 Learning"
+        },
+        {
+          "slug": "product-impact",
+          "label": "🎯 Product Impact"
+        },
+        {
+          "slug": "psych-safety",
+          "label": "🛡️ Safe to Fail"
+        }
+      ],
+      "pros": [
+        "91% of employees recommend — one of the highest-rated fintechs",
+        "Highly accessible and transparent senior leadership"
+      ],
+      "cons": [
+        "Organizational changes can create uncertainty as company scales",
+        "Career opportunities rated 3.9/5 — growth paths vary by department"
+      ],
+      "source": "Based on Glassdoor reviews (189 reviews)",
+      "reviewPros": [
+        "91% of employees recommend — highly accessible and transparent senior leadership",
+        "Strong engineering culture with competitive compensation (4.1/5 comp rating) and real product impact"
+      ],
+      "reviewCons": [
+        "Organizational changes can create uncertainty as the company scales",
+        "Career opportunities rated 3.9/5 — growth paths may vary by department"
+      ]
+    },
+    "mercury": {
+      "name": "Mercury",
+      "logo": "https://www.google.com/s2/favicons?domain=mercury.com&sz=128",
+      "meta": "Startup Banking · San Francisco",
+      "size": "Large (~1,300)",
+      "glassdoor": 4.3,
+      "wlb_score": 3.8,
+      "values": [
+        "product-impact",
+        "eng-driven",
+        "ship-fast",
+        "learning",
+        "equity",
+        "many-hats"
+      ],
+      "careers": "https://mercury.com/jobs?ref=jobsbyculture.com",
+      "quote": "Great Place to Work certified — strong talent density with smart, motivated teammates. Genuine autonomy and ownership with meaningful scope.",
+      "location": "🇺🇸 San Francisco · Remote-Friendly",
+      "details": {
+        "Size": "~1,300 employees",
+        "Recommend": "79%",
+        "Work-Life Balance": "3.8/5",
+        "CEO": "Immad Akhund"
+      },
+      "tags": [
+        {
+          "slug": "product-impact",
+          "label": "🎯 Product Impact"
+        },
+        {
+          "slug": "eng-driven",
+          "label": "⚙️ Engineering-Driven"
+        },
+        {
+          "slug": "ship-fast",
+          "label": "🚀 Ship Fast"
+        },
+        {
+          "slug": "learning",
+          "label": "📚 Learning"
+        },
+        {
+          "slug": "equity",
+          "label": "💰 Strong Equity"
+        }
+      ],
+      "pros": [
+        "Great Place to Work certified — smart, motivated teammates",
+        "Genuine autonomy and ownership — product-first mindset"
+      ],
+      "cons": [
+        "Still figuring out how to scale — expect ambiguity and shifting priorities",
+        "WLB rated 3.8/5 — periods of higher intensity during growth"
+      ],
+      "source": "Based on Glassdoor reviews (112 reviews)",
+      "reviewPros": [
+        "Strong talent density with smart, motivated teammates and genuine autonomy and ownership",
+        "Great Place to Work certified — product-first mindset with meaningful scope for every engineer"
+      ],
+      "reviewCons": [
+        "Still figuring out how to scale processes — expect some ambiguity and shifting priorities",
+        "Work-life balance rated 3.8/5 — periods of higher intensity during rapid growth phases"
+      ]
+    },
+    "airtable": {
+      "name": "Airtable",
+      "logo": "https://www.google.com/s2/favicons?domain=airtable.com&sz=128",
+      "meta": "Low-Code Platform · San Francisco",
+      "size": "Mid (~900)",
+      "glassdoor": 4.1,
+      "wlb_score": 4,
+      "values": [
+        "product-impact",
+        "eng-driven",
+        "learning",
+        "diverse"
+      ],
+      "careers": "https://airtable.com/careers?ref=jobsbyculture.com",
+      "quote": "91% of engineers recommend — strong technical culture with high engineering standards. Build a platform used by 450,000+ organizations including Netflix and NASA.",
+      "location": "🇺🇸 San Francisco, CA · Remote-Friendly",
+      "details": {
+        "Size": "~900 employees",
+        "Recommend": "74%",
+        "Work-Life Balance": "4.0/5",
+        "CEO": "Howie Liu"
+      },
+      "tags": [
+        {
+          "slug": "product-impact",
+          "label": "🎯 Product Impact"
+        },
+        {
+          "slug": "eng-driven",
+          "label": "⚙️ Engineering-Driven"
+        },
+        {
+          "slug": "learning",
+          "label": "📚 Learning"
+        },
+        {
+          "slug": "diverse",
+          "label": "🌈 Diverse"
+        },
+        {
+          "slug": "flat",
+          "label": "🤝 Flat Hierarchy"
+        }
+      ],
+      "pros": [
+        "91% of engineers recommend — strong technical culture",
+        "Good WLB (4.0/5) with remote-friendly options and great benefits"
+      ],
+      "cons": [
+        "Post-layoff culture impacted — some report declining morale since 2023",
+        "Communication from leadership could improve — varies by team"
+      ],
+      "source": "Based on Glassdoor reviews (236 reviews)",
+      "reviewPros": [
+        "91% of engineers recommend — dedicated culture ambassadors plan events and build community",
+        "Strong work-life balance (4.0/5) with good benefits and hybrid flexibility"
+      ],
+      "reviewCons": [
+        "Post-layoff culture has been impacted — some report declining morale since 2023 restructuring",
+        "Communication from leadership could improve — management quality varies by team"
+      ]
+    },
+    "brex": {
+      "name": "Brex",
+      "logo": "https://www.google.com/s2/favicons?domain=brex.com&sz=128",
+      "meta": "AI-Powered Spend Management · Remote-First",
+      "size": "Large (~1,600)",
+      "glassdoor": 4,
+      "wlb_score": 3.9,
+      "values": [
+        "ship-fast",
+        "eng-driven",
+        "product-impact",
+        "learning",
+        "transparent"
+      ],
+      "careers": "https://brex.com/careers?ref=jobsbyculture.com",
+      "quote": "Innovation-driven culture with incredibly smart, passionate, and supportive colleagues. Remote-first with strong benefits and flexible scheduling.",
+      "location": "🇺🇸 San Francisco · Remote-First",
+      "details": {
+        "Size": "~1,600 employees",
+        "Recommend": "77%",
+        "Work-Life Balance": "3.9/5",
+        "CEO": "Pedro Franceschi"
+      },
+      "tags": [
+        {
+          "slug": "ship-fast",
+          "label": "🚀 Ship Fast"
+        },
+        {
+          "slug": "eng-driven",
+          "label": "⚙️ Engineering-Driven"
+        },
+        {
+          "slug": "product-impact",
+          "label": "🎯 Product Impact"
+        },
+        {
+          "slug": "learning",
+          "label": "📚 Learning"
+        },
+        {
+          "slug": "transparent",
+          "label": "🪟 Transparent"
+        }
+      ],
+      "pros": [
+        "Innovation-driven culture with smart, passionate colleagues",
+        "Remote-first with strong benefits — time off actively encouraged"
+      ],
+      "cons": [
+        "Culture of overworking — many departments understaffed",
+        "Multiple layoff rounds have created uncertainty and morale challenges"
+      ],
+      "source": "Based on Glassdoor reviews (625 reviews)",
+      "reviewPros": [
+        "Innovation-driven culture with incredibly smart, passionate, and supportive colleagues",
+        "Strong benefits and time off actively encouraged with flexible scheduling"
+      ],
+      "reviewCons": [
+        "Culture of overworking — many departments understaffed relative to workload expectations",
+        "Multiple rounds of layoffs in recent years have created uncertainty and morale challenges"
+      ]
+    },
+    "datadog": {
+      "name": "Datadog",
+      "logo": "https://www.google.com/s2/favicons?domain=datadoghq.com&sz=128",
+      "meta": "Cloud Monitoring &amp; Observability · New York",
+      "size": "Large (~6,000)",
+      "glassdoor": 4.2,
+      "wlb_score": 3.8,
+      "values": [
+        "eng-driven",
+        "ship-fast",
+        "learning",
+        "product-impact",
+        "equity"
+      ],
+      "careers": "https://careers.datadoghq.com/?ref=jobsbyculture.com",
+      "quote": "Strong engineering culture with smart coworkers and interesting technical challenges at scale. Excellent compensation and equity.",
+      "location": "🇺🇸 New York · Global",
+      "details": {
+        "Size": "~6,000 employees",
+        "Recommend": "80%",
+        "Work-Life Balance": "3.8/5",
+        "CEO": "Olivier Pomel"
+      },
+      "tags": [
+        {
+          "slug": "eng-driven",
+          "label": "⚙️ Engineering-Driven"
+        },
+        {
+          "slug": "ship-fast",
+          "label": "🚀 Ship Fast"
+        },
+        {
+          "slug": "learning",
+          "label": "📚 Learning"
+        },
+        {
+          "slug": "product-impact",
+          "label": "🎯 Product Impact"
+        },
+        {
+          "slug": "equity",
+          "label": "💰 Strong Equity"
+        }
+      ],
+      "pros": [
+        "Excellent compensation and equity — stock has been a wealth builder",
+        "Smart coworkers and interesting technical challenges at scale"
+      ],
+      "cons": [
+        "Fast pace can lead to long hours — WLB varies by team",
+        "Rapid growth has led to organizational growing pains"
+      ],
+      "source": "Based on Glassdoor reviews (1,500+ reviews)",
+      "reviewPros": [
+        "Excellent compensation and equity — stock has been a genuine wealth builder for early employees",
+        "Strong engineering culture with smart coworkers and interesting technical challenges at scale"
+      ],
+      "reviewCons": [
+        "Fast pace can lead to long hours and pressure to deliver, work-life balance varies by team",
+        "Rapid growth has led to organizational growing pains and bureaucracy creeping in"
+      ]
+    },
+    "cloudflare": {
+      "name": "Cloudflare",
+      "logo": "https://www.google.com/s2/favicons?domain=cloudflare.com&sz=128",
+      "meta": "Internet Infrastructure &amp; Edge AI · San Francisco",
+      "size": "Large (~4,000)",
+      "glassdoor": 3.9,
+      "wlb_score": 3.7,
+      "values": [
+        "eng-driven",
+        "ship-fast",
+        "product-impact",
+        "learning",
+        "transparent"
+      ],
+      "careers": "https://www.cloudflare.com/careers/?ref=jobsbyculture.com",
+      "quote": "Mission-driven company building critical internet infrastructure. Smart colleagues who value innovation and shipping quickly.",
+      "location": "🇺🇸 San Francisco · Global",
+      "details": {
+        "Size": "~4,000 employees",
+        "Recommend": "72%",
+        "Work-Life Balance": "3.7/5",
+        "CEO": "Matthew Prince"
+      },
+      "tags": [
+        {
+          "slug": "eng-driven",
+          "label": "⚙️ Engineering-Driven"
+        },
+        {
+          "slug": "ship-fast",
+          "label": "🚀 Ship Fast"
+        },
+        {
+          "slug": "product-impact",
+          "label": "🎯 Product Impact"
+        },
+        {
+          "slug": "transparent",
+          "label": "🪟 Transparent"
+        }
+      ],
+      "pros": [
+        "Mission-driven — building critical internet infrastructure",
+        "Smart colleagues who value innovation and technical excellence"
+      ],
+      "cons": [
+        "Compensation can lag behind FAANG, especially base salary",
+        "Some teams experience high pressure with uneven management"
+      ],
+      "source": "Based on Glassdoor reviews (1,200+ reviews)",
+      "reviewPros": [
+        "Mission-driven company building critical internet infrastructure — meaningful work with real impact",
+        "Smart colleagues and a culture that values innovation, shipping quickly, and technical excellence"
+      ],
+      "reviewCons": [
+        "Compensation can lag behind FAANG competitors, especially base salary",
+        "Some teams experience high pressure and demanding workloads with uneven management quality"
+      ]
+    },
+    "crusoe": {
+      "name": "Crusoe",
+      "logo": "https://www.google.com/s2/favicons?domain=crusoe.ai&sz=128",
+      "meta": "AI Cloud &amp; Clean Energy · Denver",
+      "size": "Mid (~800)",
+      "glassdoor": 4.3,
+      "wlb_score": 3.5,
+      "values": [
+        "ship-fast",
+        "social-impact",
+        "many-hats",
+        "eng-driven",
+        "equity"
+      ],
+      "careers": "https://www.crusoe.ai/careers/?ref=jobsbyculture.com",
+      "quote": "Unique mission combining AI compute with clean energy. Genuine environmental impact with startup energy and strong equity.",
+      "location": "🇺🇸 Denver · Multi-State",
+      "details": {
+        "Size": "~800 employees",
+        "Recommend": "85%",
+        "Work-Life Balance": "3.5/5",
+        "CEO": "Chase Lochmiller"
+      },
+      "tags": [
+        {
+          "slug": "ethical-ai",
+          "label": "🛡️ Ethical AI"
+        },
+        {
+          "slug": "social-impact",
+          "label": "🌍 Social Impact"
+        },
+        {
+          "slug": "eng-driven",
+          "label": "⚙️ Engineering-Driven"
+        },
+        {
+          "slug": "ship-fast",
+          "label": "🚀 Ship Fast"
+        },
+        {
+          "slug": "equity",
+          "label": "💰 Strong Equity"
+        }
+      ],
+      "pros": [
+        "AI compute with clean energy — genuine environmental impact",
+        "Strong compensation and equity with rapidly growing resources"
+      ],
+      "cons": [
+        "Startup pace means long hours and ambiguity",
+        "Rapid scaling creates process gaps and shifting priorities"
+      ],
+      "source": "Based on Glassdoor reviews (100-200 reviews)",
+      "reviewPros": [
+        "Unique mission combining AI compute with clean energy — employees feel genuine environmental impact",
+        "Strong compensation and equity with startup energy and rapidly growing resources"
+      ],
+      "reviewCons": [
+        "Startup pace means long hours and ambiguity — not for people who want strict 9-to-5",
+        "Rapid scaling creates process gaps, shifting priorities, and some organizational chaos"
+      ]
+    },
+    "baseten": {
+      "name": "Baseten",
+      "logo": "https://www.google.com/s2/favicons?domain=baseten.co&sz=128",
+      "meta": "ML Inference Infrastructure · San Francisco",
+      "size": "Small (~100)",
+      "glassdoor": 4.3,
+      "wlb_score": 3.5,
+      "values": [
+        "eng-driven",
+        "ship-fast",
+        "many-hats",
+        "product-impact",
+        "flat"
+      ],
+      "careers": "https://www.baseten.co/careers/?ref=jobsbyculture.com",
+      "quote": "Cutting-edge ML inference infrastructure. Small team with high ownership and direct impact on product direction.",
+      "location": "🇺🇸 San Francisco",
+      "details": {
+        "Size": "~100 employees",
+        "Work-Life Balance": "3.5/5",
+        "CEO": "Tuhin Srivastava"
+      },
+      "tags": [
+        {
+          "slug": "eng-driven",
+          "label": "⚙️ Engineering-Driven"
+        },
+        {
+          "slug": "ship-fast",
+          "label": "🚀 Ship Fast"
+        },
+        {
+          "slug": "many-hats",
+          "label": "🎩 Many Hats"
+        },
+        {
+          "slug": "flat",
+          "label": "🤝 Flat Hierarchy"
+        },
+        {
+          "slug": "product-impact",
+          "label": "🎯 Product Impact"
+        }
+      ],
+      "pros": [
+        "Cutting-edge ML inference — deploying models at scale",
+        "Small team means high ownership and direct product impact"
+      ],
+      "cons": [
+        "Limited resources — can feel stretched thin",
+        "Priorities shift frequently as the market evolves"
+      ],
+      "source": "Based on limited Glassdoor data (estimated ratings)",
+      "reviewPros": [
+        "Cutting-edge ML inference infrastructure — deploying models at scale for real production customers",
+        "Small team means high ownership and direct impact on product direction and company strategy"
+      ],
+      "reviewCons": [
+        "Limited resources compared to larger competitors — can feel stretched thin on multiple fronts",
+        "Fast-moving product roadmap means priorities shift frequently as the market evolves"
+      ]
+    },
+    "fireworksai": {
+      "name": "Fireworks AI",
+      "logo": "https://www.google.com/s2/favicons?domain=fireworks.ai&sz=128",
+      "meta": "LLM Inference Platform · Redwood City",
+      "size": "Small (~100)",
+      "glassdoor": 4.2,
+      "wlb_score": 3.3,
+      "values": [
+        "eng-driven",
+        "ship-fast",
+        "many-hats",
+        "deep-work",
+        "learning"
+      ],
+      "careers": "https://fireworks.ai/careers?ref=jobsbyculture.com",
+      "quote": "World-class team of ex-Meta AI infrastructure engineers. Working on LLM inference optimization — one of the hottest areas in AI.",
+      "location": "🇺🇸 Redwood City",
+      "details": {
+        "Size": "~100 employees",
+        "Work-Life Balance": "3.3/5",
+        "CEO": "Lin Qiao (ex-Meta)"
+      },
+      "tags": [
+        {
+          "slug": "eng-driven",
+          "label": "⚙️ Engineering-Driven"
+        },
+        {
+          "slug": "ship-fast",
+          "label": "🚀 Ship Fast"
+        },
+        {
+          "slug": "deep-work",
+          "label": "🧠 Deep Work"
+        },
+        {
+          "slug": "learning",
+          "label": "📚 Learning"
+        },
+        {
+          "slug": "many-hats",
+          "label": "🎩 Many Hats"
+        }
+      ],
+      "pros": [
+        "World-class ex-Meta AI infrastructure engineers",
+        "Hottest area in AI — LLM inference optimization"
+      ],
+      "cons": [
+        "Early-stage intensity with long hours expected",
+        "Small team means less structure and career laddering"
+      ],
+      "source": "Based on limited Glassdoor data (estimated ratings)",
+      "reviewPros": [
+        "World-class team of ex-Meta AI infrastructure engineers — technically very strong peers",
+        "Working on LLM inference optimization which is one of the hottest areas in AI infrastructure"
+      ],
+      "reviewCons": [
+        "Early-stage startup intensity with long hours expected and high performance bar",
+        "Small team and rapidly evolving product means less structure, process, and career laddering"
+      ]
+    },
+    "synthesia": {
+      "name": "Synthesia",
+      "logo": "https://www.google.com/s2/favicons?domain=synthesia.io&sz=128",
+      "meta": "AI Video Generation · London",
+      "size": "Mid (~660)",
+      "glassdoor": 4.4,
+      "wlb_score": 4.2,
+      "values": [
+        "ship-fast",
+        "learning",
+        "flat",
+        "product-impact",
+        "eng-driven",
+        "many-hats"
+      ],
+      "careers": "https://www.synthesia.io/careers?ref=jobsbyculture.com",
+      "quote": "Low-ego supportive culture with genuine trust and ownership. Fast-paced growth with real opportunity to develop and lead.",
+      "location": "🇬🇧 London",
+      "details": {
+        "Size": "~660 employees",
+        "Work-Life Balance": "4.2/5",
+        "CEO": "Victor Riparbelli"
+      },
+      "tags": [
+        {
+          "slug": "ship-fast",
+          "label": "🚀 Ship Fast"
+        },
+        {
+          "slug": "learning",
+          "label": "📚 Learning"
+        },
+        {
+          "slug": "flat",
+          "label": "🏗️ Flat"
+        },
+        {
+          "slug": "product-impact",
+          "label": "🎯 Product Impact"
+        },
+        {
+          "slug": "eng-driven",
+          "label": "⚙️ Engineering-Driven"
+        }
+      ],
+      "pros": [
+        "Low-ego supportive culture with genuine trust",
+        "Fast-paced growth with real leadership opportunities"
+      ],
+      "cons": [
+        "R&D and Product teams feel intense pressure",
+        "Promotions rare internally — favor external hires"
+      ],
+      "source": "Based on Glassdoor reviews",
+      "reviewPros": [
+        "Low-ego supportive culture with genuine trust and ownership",
+        "Fast-paced growth with real opportunity to develop and lead"
+      ],
+      "reviewCons": [
+        "R&D and Product teams feel intense pressure and WLB suffers",
+        "Promotions rare internally — new roles favor external hires"
+      ]
+    },
+    "samsara": {
+      "name": "Samsara",
+      "logo": "https://www.google.com/s2/favicons?domain=samsara.com&sz=128",
+      "meta": "IoT for Physical Operations · San Francisco",
+      "size": "Large (~5,200)",
+      "glassdoor": 4,
+      "wlb_score": 3.9,
+      "values": [
+        "product-impact",
+        "learning",
+        "ship-fast",
+        "equity"
+      ],
+      "careers": "https://www.samsara.com/company/careers?ref=jobsbyculture.com",
+      "quote": "Real-world product impact building IoT for physical operations. Clear career trajectory with frequent promotions in sales.",
+      "location": "🇺🇸 San Francisco",
+      "details": {
+        "Size": "~5,200 employees",
+        "Work-Life Balance": "3.9/5",
+        "CEO": "Sanjit Biswas"
+      },
+      "tags": [
+        {
+          "slug": "product-impact",
+          "label": "🎯 Product Impact"
+        },
+        {
+          "slug": "learning",
+          "label": "📚 Learning"
+        },
+        {
+          "slug": "ship-fast",
+          "label": "🚀 Ship Fast"
+        },
+        {
+          "slug": "equity",
+          "label": "💰 Equity"
+        }
+      ],
+      "pros": [
+        "Clear career trajectory with frequent promotions",
+        "Real-world product impact — IoT for physical ops"
+      ],
+      "cons": [
+        "Engineers rate WLB at only 2.9/5",
+        "Remote work used to justify overwork"
+      ],
+      "source": "Based on Glassdoor reviews",
+      "reviewPros": [
+        "Clear career trajectory with frequent promotions in sales",
+        "Real-world product impact building IoT for physical operations"
+      ],
+      "reviewCons": [
+        "Engineers rate WLB at only 2.9/5 despite company average of 3.9",
+        "Remote work used to justify overwork including weekends"
+      ]
+    },
+    "glean": {
+      "name": "Glean",
+      "logo": "https://www.google.com/s2/favicons?domain=glean.com&sz=128",
+      "meta": "AI Enterprise Search · Palo Alto",
+      "size": "Large (~1,475)",
+      "glassdoor": 4.2,
+      "wlb_score": 3.8,
+      "values": [
+        "eng-driven",
+        "learning",
+        "product-impact",
+        "ship-fast",
+        "transparent"
+      ],
+      "careers": "https://www.glean.com/careers?ref=jobsbyculture.com",
+      "quote": "World-class AI talent — learn from ex-Google leadership on cutting-edge enterprise search. Transparent collaborative culture.",
+      "location": "🇺🇸 Palo Alto",
+      "details": {
+        "Size": "~1,475 employees",
+        "Work-Life Balance": "3.8/5",
+        "CEO": "Arvind Jain"
+      },
+      "tags": [
+        {
+          "slug": "eng-driven",
+          "label": "⚙️ Engineering-Driven"
+        },
+        {
+          "slug": "learning",
+          "label": "📚 Learning"
+        },
+        {
+          "slug": "product-impact",
+          "label": "🎯 Product Impact"
+        },
+        {
+          "slug": "ship-fast",
+          "label": "🚀 Ship Fast"
+        },
+        {
+          "slug": "transparent",
+          "label": "🔍 Transparent"
+        }
+      ],
+      "pros": [
+        "World-class AI talent and ex-Google leadership",
+        "Transparent collaborative culture"
+      ],
+      "cons": [
+        "Below-market compensation — comp rated only 3.6/5",
+        "Sales org has high churn problems"
+      ],
+      "source": "Based on Glassdoor reviews",
+      "reviewPros": [
+        "World-class AI talent — learn from ex-Google leadership on cutting-edge enterprise search",
+        "Transparent collaborative culture with strong career growth"
+      ],
+      "reviewCons": [
+        "Below-market compensation — comp rated only 3.6/5",
+        "Sales org has high churn and toxicity problems in EMEA and US"
+      ]
+    },
+    "vanta": {
+      "name": "Vanta",
+      "logo": "https://www.google.com/s2/favicons?domain=vanta.com&sz=128",
+      "meta": "Security Compliance Automation · San Francisco",
+      "size": "Large (~1,400)",
+      "glassdoor": 3.8,
+      "wlb_score": 3.3,
+      "values": [
+        "product-impact",
+        "ship-fast",
+        "equity"
+      ],
+      "careers": "https://www.vanta.com/careers?ref=jobsbyculture.com",
+      "quote": "Strong compensation rated 4.3/5. Market-defining product in security compliance automation.",
+      "location": "🇺🇸 San Francisco",
+      "details": {
+        "Size": "~1,400 employees",
+        "Work-Life Balance": "3.3/5",
+        "CEO": "Christina Cacioppo"
+      },
+      "tags": [
+        {
+          "slug": "product-impact",
+          "label": "🎯 Product Impact"
+        },
+        {
+          "slug": "ship-fast",
+          "label": "🚀 Ship Fast"
+        },
+        {
+          "slug": "equity",
+          "label": "💰 Equity"
+        }
+      ],
+      "pros": [
+        "Strong compensation rated 4.3/5",
+        "Market-defining product in security compliance"
+      ],
+      "cons": [
+        "Brutal meeting culture pushing work into nights",
+        "Virtually no AEs hit quota — unrealistic targets"
+      ],
+      "source": "Based on Glassdoor reviews",
+      "reviewPros": [
+        "Strong compensation rated 4.3/5 — best category score",
+        "Market-defining product in security compliance automation"
+      ],
+      "reviewCons": [
+        "Brutal meeting culture pushing work into nights and weekends",
+        "Virtually no AEs hit quota — targets unrealistically high"
+      ]
+    },
+    "helsing": {
+      "name": "Helsing",
+      "logo": "https://www.google.com/s2/favicons?domain=helsing.ai&sz=128",
+      "meta": "Defense AI · Munich / Paris / London",
+      "size": "Mid (~660)",
+      "glassdoor": 4,
+      "wlb_score": 3.6,
+      "values": [
+        "eng-driven",
+        "ship-fast",
+        "product-impact",
+        "equity",
+        "learning"
+      ],
+      "careers": "https://helsing.ai/careers?ref=jobsbyculture.com",
+      "quote": "Highest talent density of any tech company I've worked at — world-class AI and engineering leadership.",
+      "location": "🇩🇪 Munich / 🇫🇷 Paris",
+      "details": {
+        "Size": "~660 employees",
+        "Work-Life Balance": "3.6/5",
+        "Valuation": "$12B"
+      },
+      "tags": [
+        {
+          "slug": "eng-driven",
+          "label": "⚙️ Engineering-Driven"
+        },
+        {
+          "slug": "ship-fast",
+          "label": "🚀 Ship Fast"
+        },
+        {
+          "slug": "product-impact",
+          "label": "🎯 Product Impact"
+        },
+        {
+          "slug": "equity",
+          "label": "💰 Equity"
+        },
+        {
+          "slug": "learning",
+          "label": "📚 Learning"
+        }
+      ],
+      "pros": [
+        "World-class AI talent density",
+        "Important mission with competitive salary"
+      ],
+      "cons": [
+        "Excessive work hour expectations",
+        "Some inexperienced management"
+      ],
+      "source": "Based on Glassdoor reviews",
+      "reviewPros": [
+        "Highest talent density of any tech company — world-class AI and engineering leadership",
+        "Extremely important mission with rewarding impact and competitive salary"
+      ],
+      "reviewCons": [
+        "Ridiculous expectations of work hours — high salaries do not mean constant overtime",
+        "Some management not experienced enough to lead; lacking in performance feedback"
+      ]
+    },
+    "wayve": {
+      "name": "Wayve",
+      "logo": "https://www.google.com/s2/favicons?domain=wayve.ai&sz=128",
+      "meta": "Autonomous Driving AI · London",
+      "size": "Mid (~850)",
+      "glassdoor": 4.4,
+      "wlb_score": 3.9,
+      "values": [
+        "eng-driven",
+        "learning",
+        "product-impact",
+        "diverse",
+        "ship-fast"
+      ],
+      "careers": "https://wayve.ai/careers?ref=jobsbyculture.com",
+      "quote": "Great culture — smart, friendly people with a supportive and inclusive familial bond. Immense creative freedom.",
+      "location": "🇬🇧 London",
+      "details": {
+        "Size": "~850 employees",
+        "Work-Life Balance": "3.9/5",
+        "Valuation": "$8.6B"
+      },
+      "tags": [
+        {
+          "slug": "eng-driven",
+          "label": "⚙️ Engineering-Driven"
+        },
+        {
+          "slug": "learning",
+          "label": "📚 Learning"
+        },
+        {
+          "slug": "product-impact",
+          "label": "🎯 Product Impact"
+        },
+        {
+          "slug": "diverse",
+          "label": "🌈 Diverse"
+        },
+        {
+          "slug": "ship-fast",
+          "label": "🚀 Ship Fast"
+        }
+      ],
+      "pros": [
+        "Inclusive culture with humble founders",
+        "Creative freedom and autonomy"
+      ],
+      "cons": [
+        "Unclear career progression",
+        "Burnout risk from ambitious pace"
+      ],
+      "source": "Based on Glassdoor reviews",
+      "reviewPros": [
+        "Great culture — smart, friendly people with a supportive and inclusive familial bond",
+        "Immense creative freedom and autonomy; founders are humble and open to being challenged"
+      ],
+      "reviewCons": [
+        "Career progression framework is unclear — salaries and promotions feel arbitrary",
+        "Very ambitious demands create vulnerability to burnout; processes built on the fly"
+      ]
+    },
+    "deepl": {
+      "name": "DeepL",
+      "logo": "https://www.google.com/s2/favicons?domain=deepl.com&sz=128",
+      "meta": "AI Translation · Cologne",
+      "size": "Large (~1,570)",
+      "glassdoor": 3.2,
+      "wlb_score": 4,
+      "values": [
+        "wlb",
+        "flex-hours",
+        "diverse",
+        "product-impact",
+        "learning"
+      ],
+      "careers": "https://www.deepl.com/en/careers/hub?ref=jobsbyculture.com",
+      "quote": "Great product with big-name customers. Very international team of 90+ nationalities with good work-life balance.",
+      "location": "🇩🇪 Cologne",
+      "details": {
+        "Size": "~1,570 employees",
+        "Work-Life Balance": "4.0/5",
+        "Users": "100M+"
+      },
+      "tags": [
+        {
+          "slug": "wlb",
+          "label": "⚖️ Work-Life Balance"
+        },
+        {
+          "slug": "flex-hours",
+          "label": "🕐 Flex Hours"
+        },
+        {
+          "slug": "diverse",
+          "label": "🌈 Diverse"
+        },
+        {
+          "slug": "product-impact",
+          "label": "🎯 Product Impact"
+        }
+      ],
+      "pros": [
+        "Great product, 100M+ users",
+        "90+ nationalities, good WLB"
+      ],
+      "cons": [
+        "Intransparent leadership",
+        "High employee churn"
+      ],
+      "source": "Based on Glassdoor reviews",
+      "reviewPros": [
+        "Great product with big-name customers — startup vibe with corporate safety net",
+        "Good salary, very international team of 90+ nationalities with good work-life balance"
+      ],
+      "reviewCons": [
+        "Intransparent leadership — hidden salary bands, top-down decisions with no feedback loop",
+        "High employee churn with repeated downsizing despite positive financial messaging"
+      ]
+    },
+    "celonis": {
+      "name": "Celonis",
+      "logo": "https://www.google.com/s2/favicons?domain=celonis.com&sz=128",
+      "meta": "Process Mining AI · Munich",
+      "size": "Large (~3,800)",
+      "glassdoor": 3.8,
+      "wlb_score": 3.8,
+      "values": [
+        "learning",
+        "equity",
+        "ship-fast",
+        "product-impact"
+      ],
+      "careers": "https://www.celonis.com/careers/jobs/?ref=jobsbyculture.com",
+      "quote": "Strong learning and development opportunities with excellent internal mobility options.",
+      "location": "🇩🇪 Munich",
+      "details": {
+        "Size": "~3,800 employees",
+        "Work-Life Balance": "3.8/5",
+        "Valuation": "$13B"
+      },
+      "tags": [
+        {
+          "slug": "learning",
+          "label": "📚 Learning"
+        },
+        {
+          "slug": "equity",
+          "label": "💰 Equity"
+        },
+        {
+          "slug": "ship-fast",
+          "label": "🚀 Ship Fast"
+        },
+        {
+          "slug": "product-impact",
+          "label": "🎯 Product Impact"
+        }
+      ],
+      "pros": [
+        "Strong L&D and internal mobility",
+        "Great team culture with mentorship"
+      ],
+      "cons": [
+        "Below-market compensation",
+        "Frequent reorgs with poor comms"
+      ],
+      "source": "Based on Glassdoor reviews",
+      "reviewPros": [
+        "Strong learning and development opportunities with excellent internal mobility",
+        "Great team culture with supportive colleagues and mentorship from leadership"
+      ],
+      "reviewCons": [
+        "Below-market compensation compared to other tech companies of similar size",
+        "Frequent organizational changes and restructuring with poor communication from leadership"
+      ]
+    },
+    "contentful": {
+      "name": "Contentful",
+      "logo": "https://www.google.com/s2/favicons?domain=contentful.com&sz=128",
+      "meta": "Headless CMS · Berlin (Remote)",
+      "size": "Large (~1,000)",
+      "glassdoor": 3.4,
+      "wlb_score": 3.8,
+      "values": [
+        "remote",
+        "eng-driven",
+        "learning",
+        "product-impact"
+      ],
+      "careers": "https://www.contentful.com/careers/?ref=jobsbyculture.com",
+      "quote": "Flexible remote/hybrid setup with strong distributed team culture. Talented and humble engineering team.",
+      "location": "🇩🇪 Berlin / 🌍 Remote",
+      "details": {
+        "Size": "~1,000 employees",
+        "Work-Life Balance": "3.8/5",
+        "HQ": "Berlin (6 continents)"
+      },
+      "tags": [
+        {
+          "slug": "remote",
+          "label": "🌐 Remote"
+        },
+        {
+          "slug": "eng-driven",
+          "label": "⚙️ Engineering-Driven"
+        },
+        {
+          "slug": "learning",
+          "label": "📚 Learning"
+        },
+        {
+          "slug": "product-impact",
+          "label": "🎯 Product Impact"
+        }
+      ],
+      "pros": [
+        "Flexible remote/hybrid setup",
+        "Humble engineering team"
+      ],
+      "cons": [
+        "Stagnating product development",
+        "Difficult internal promotions"
+      ],
+      "source": "Based on Glassdoor reviews",
+      "reviewPros": [
+        "Flexible remote/hybrid setup with strong distributed team culture",
+        "Talented and humble engineering team with approachable, responsive leadership"
+      ],
+      "reviewCons": [
+        "Stagnating product development with competition overtaking in key areas",
+        "Internal promotions are difficult with pay disparities between long-tenured and new hires"
+      ]
+    },
+    "adyen": {
+      "name": "Adyen",
+      "logo": "https://www.google.com/s2/favicons?domain=adyen.com&sz=128",
+      "meta": "Payments Tech · Amsterdam",
+      "size": "Large (~4,770)",
+      "glassdoor": 3.8,
+      "wlb_score": 4.1,
+      "values": [
+        "eng-driven",
+        "ship-fast",
+        "wlb",
+        "product-impact",
+        "learning"
+      ],
+      "careers": "https://careers.adyen.com/?ref=jobsbyculture.com",
+      "quote": "Smart, humble colleagues with high standards. Good work-life balance with trust-based culture.",
+      "location": "🇳🇱 Amsterdam",
+      "details": {
+        "Size": "~4,770 employees",
+        "Work-Life Balance": "4.1/5",
+        "Stock": "AMS: ADYEN"
+      },
+      "tags": [
+        {
+          "slug": "eng-driven",
+          "label": "⚙️ Engineering-Driven"
+        },
+        {
+          "slug": "ship-fast",
+          "label": "🚀 Ship Fast"
+        },
+        {
+          "slug": "wlb",
+          "label": "⚖️ Work-Life Balance"
+        },
+        {
+          "slug": "product-impact",
+          "label": "🎯 Product Impact"
+        },
+        {
+          "slug": "learning",
+          "label": "📚 Learning"
+        }
+      ],
+      "pros": [
+        "Smart colleagues, market-leading product",
+        "Good WLB, trust-based culture"
+      ],
+      "cons": [
+        "Below-market comp (~20% less)",
+        "Management issues at scale"
+      ],
+      "source": "Based on Glassdoor reviews",
+      "reviewPros": [
+        "Smart, humble colleagues with high standards and a market-leading payments product",
+        "Good work-life balance with trust-based culture, free lunch, and international team trips"
+      ],
+      "reviewCons": [
+        "Below-market compensation (~20% less than peers) with poor stock options",
+        "Middle management quality issues as company scaled — inexperienced managers and internal politics"
+      ]
+    },
+    "doctolib": {
+      "name": "Doctolib",
+      "logo": "https://www.google.com/s2/favicons?domain=doctolib.com&sz=128",
+      "meta": "Healthtech · Paris",
+      "size": "Large (~3,500)",
+      "glassdoor": 3.7,
+      "wlb_score": 3.7,
+      "values": [
+        "social-impact",
+        "learning",
+        "product-impact",
+        "ship-fast"
+      ],
+      "careers": "https://careers.doctolib.com/?ref=jobsbyculture.com",
+      "quote": "Mission-driven colleagues who genuinely care about improving healthcare access across Europe.",
+      "location": "🇫🇷 Paris",
+      "details": {
+        "Size": "~3,500 employees",
+        "Work-Life Balance": "3.7/5",
+        "Revenue": "~$402M"
+      },
+      "tags": [
+        {
+          "slug": "social-impact",
+          "label": "💜 Mission-Driven"
+        },
+        {
+          "slug": "learning",
+          "label": "📚 Learning"
+        },
+        {
+          "slug": "product-impact",
+          "label": "🎯 Product Impact"
+        },
+        {
+          "slug": "ship-fast",
+          "label": "🚀 Ship Fast"
+        }
+      ],
+      "pros": [
+        "Genuine healthcare mission",
+        "Strong growth opportunities"
+      ],
+      "cons": [
+        "Heavy-handed management",
+        "French-centric culture barrier"
+      ],
+      "source": "Based on Glassdoor reviews",
+      "reviewPros": [
+        "Mission-driven colleagues who genuinely care about improving healthcare access",
+        "Strong growth opportunities with flexible remote policy and decent benefits"
+      ],
+      "reviewCons": [
+        "Management can be heavy-handed — uses company principles as weapons against feedback",
+        "French-centric culture makes it harder for non-French speakers to advance"
+      ]
+    },
+    "n8n": {
+      "name": "n8n",
+      "logo": "https://www.google.com/s2/favicons?domain=n8n.io&sz=128",
+      "meta": "Open-Source Workflow Automation · Berlin (Remote)",
+      "size": "Mid (~300)",
+      "glassdoor": 4.5,
+      "wlb_score": 4,
+      "values": [
+        "remote",
+        "open-source",
+        "flat",
+        "transparent",
+        "async",
+        "many-hats"
+      ],
+      "careers": "https://n8n.io/careers?ref=jobsbyculture.com",
+      "quote": "Exceptional remote-first culture with high trust, autonomy, and smart collaborative teammates.",
+      "location": "🇩🇪 Berlin / 🌍 Remote",
+      "details": {
+        "Size": "~300 employees",
+        "Work-Life Balance": "4.0/5",
+        "ARR": "$40M"
+      },
+      "tags": [
+        {
+          "slug": "remote",
+          "label": "🌐 Remote"
+        },
+        {
+          "slug": "open-source",
+          "label": "🔓 Open Source"
+        },
+        {
+          "slug": "flat",
+          "label": "🤝 Flat"
+        },
+        {
+          "slug": "transparent",
+          "label": "🪟 Transparent"
+        },
+        {
+          "slug": "async",
+          "label": "📡 Async"
+        }
+      ],
+      "pros": [
+        "Exceptional remote-first culture",
+        "Fast-growing OSS product, lots of ownership"
+      ],
+      "cons": [
+        "Shifting priorities in hypergrowth",
+        "Startup intensity can be stressful"
+      ],
+      "source": "Based on Glassdoor reviews",
+      "reviewPros": [
+        "Exceptional remote-first culture with high trust, autonomy, and smart collaborative teammates",
+        "Fast-growing open-source product with real impact — lots of ownership in a low-ego environment"
+      ],
+      "reviewCons": [
+        "Hypergrowth means priorities shift frequently and processes are still being defined",
+        "Startup intensity can be stressful; some concerns about product leadership direction"
+      ]
+    }
+  }
+}

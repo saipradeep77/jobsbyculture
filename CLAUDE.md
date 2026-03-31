@@ -54,10 +54,14 @@ This is the critical step. For each new company, add three things to `jobs.html`
 - Update: title, meta tags, company name, OG tags, ratings, culture overview, values, featured jobs
 - Use canonical URL: `https://jobsbyculture.com/companies/companyname`
 
-### Step 5: Add to Homepage Grid (CRITICAL — DO NOT SKIP)
-Add a company card to the `#coGrid` section in `index.html` for EVERY new company. This is the most commonly missed step. Copy an existing `co-card` div and update: `data-company`, `data-values`, logo, name, meta, rating, tags, quote, details, and links.
+### Step 5: Add to Homepage Grid (AUTO-GENERATED)
+Add the new company's data to `data/companies.json` (meta, quote, location, details, tags, pros, cons, source). Then run:
+```bash
+node scripts/build-homepage-grid.js
+```
+This regenerates all company cards in `index.html` from `companies.json`. No manual HTML editing needed.
 
-**Verification:** After adding, run: `grep -c 'data-company=' index.html` — the count must equal the total number of companies.
+**Verification:** `grep -c 'data-company=' index.html` — the count must equal the total number of companies + 1 (for the JS template string).
 
 ### Step 6: Update Directory
 Add the new company card to `directory.html` in the appropriate position.
