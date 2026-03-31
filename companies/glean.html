@@ -152,6 +152,26 @@
         .cs-tab:hover { border-color: var(--accent); }
         @media (max-width: 768px) { .cs-quotes { gap: 12px; } .cs-quote { padding: 14px 16px; } }
 
+    
+        /* ═══ RELATED SECTION ═══ */
+        .cp-related { padding: 56px 0; border-top: 1px solid var(--border); }
+        .cp-related-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; }
+        .cp-related-col h3 { font-size: 16px; font-weight: 600; margin-bottom: 16px; color: var(--text); }
+        .cp-related-list { list-style: none; display: flex; flex-direction: column; gap: 8px; }
+        .cp-related-list li a {
+            font-size: 14px; color: var(--text-2); text-decoration: none;
+            display: flex; align-items: center; gap: 6px; padding: 8px 12px;
+            border-radius: var(--radius-sm); transition: all 0.15s;
+        }
+        .cp-related-list li a:hover { background: var(--bg-hover); color: var(--accent); }
+        .cp-related-list li a .arrow { color: var(--text-3); font-size: 12px; }
+        .cp-related-more {
+            display: inline-block; margin-top: 12px; font-size: 13px; font-weight: 600;
+            color: var(--accent); text-decoration: none;
+        }
+        .cp-related-more:hover { text-decoration: underline; }
+        @media (max-width: 768px) { .cp-related-grid { grid-template-columns: 1fr; } }
+
     </style>
 <script async src="https://plausible.io/js/pa-qa3pjs5eZbsfBQJMk4hVW.js"></script>
 <script>window.plausible=window.plausible||function(){(plausible.q=plausible.q||[]).push(arguments)},plausible.init=plausible.init||function(i){plausible.o=i||{}};plausible.init()</script>
@@ -266,6 +286,8 @@
 
 
 
+
+
 <!-- ═══ COMMUNITY SENTIMENT ═══ -->
 <section class="cs-section">
     <div class="container">
@@ -273,15 +295,39 @@
         <h2 class="s-title">What the <em>community</em> says about Glean</h2>
         <div class="cs-overall">
             <span class="cs-badge mixed">Mixed Sentiment</span>
-            <span class="cs-stats">1 mentions from Hacker News &amp; Reddit &middot; Updated 2026-03-30</span>
+            <span class="cs-stats">5 mentions from Hacker News &amp; Reddit &middot; Updated 2026-03-31</span>
         </div>
         <div class="cs-quotes" id="csQuotes">
+            <div class="cs-quote" data-source="hn">
+                <div class="cs-quote-text">&ldquo;One of my favourite kooks is an artist named Stanislaw Szukalski[0]. Although he had some heinously racist ideas (yeti inbreeding with humans), his art skills are unmatched, and his critical analysis of ancient art led him to develop the concept of the &amp;quot;Protong&amp;quot;, the...&rdquo;</div>
+                <div class="cs-quote-meta">
+                    <span class="cs-quote-source hn">Hacker News</span>
+                    <span>aa-jv &middot; 2025-09-22</span>
+                    <a href="https://news.ycombinator.com/item?id=45330520&amp;ref=jobsbyculture.com" target="_blank" rel="noopener" class="cs-quote-link">View thread &rarr;</a>
+                </div>
+            </div>
+            <div class="cs-quote" data-source="hn">
+                <div class="cs-quote-text">&ldquo;Glean was working in this space since 2019, before chatgpt moment.&rdquo;</div>
+                <div class="cs-quote-meta">
+                    <span class="cs-quote-source hn">Hacker News</span>
+                    <span>cantor_S_drug &middot; 2025-10-24</span>
+                    <a href="https://news.ycombinator.com/item?id=45693351&amp;ref=jobsbyculture.com" target="_blank" rel="noopener" class="cs-quote-link">View thread &rarr;</a>
+                </div>
+            </div>
             <div class="cs-quote" data-source="hn">
                 <div class="cs-quote-text">&ldquo;Perhaps you haven&amp;#x27;t used many MCP server, but those that I have used (GitHub, Atlassian, Glean, BuildKite, Figma, Google Workspace, etc) work very well. They teach an LLM how to do exactly what you&amp;#x27;re saying - &amp;quot;use the API standards...&rdquo;</div>
                 <div class="cs-quote-meta">
                     <span class="cs-quote-source hn">Hacker News</span>
                     <span>block_dagger &middot; 2025-11-17</span>
-                    <a href="https://news.ycombinator.com/item?id=45951510" target="_blank" rel="noopener" class="cs-quote-link">View thread &rarr;</a>
+                    <a href="https://news.ycombinator.com/item?id=45951510&amp;ref=jobsbyculture.com" target="_blank" rel="noopener" class="cs-quote-link">View thread &rarr;</a>
+                </div>
+            </div>
+            <div class="cs-quote" data-source="hn">
+                <div class="cs-quote-text">&ldquo;I guess one flaw in the argument about success leading to failure due to model providers eating the product layer, esp for B2B, is it ignores switching costs.&rdquo;</div>
+                <div class="cs-quote-meta">
+                    <span class="cs-quote-source hn">Hacker News</span>
+                    <span>another_twist &middot; 2025-09-14</span>
+                    <a href="https://news.ycombinator.com/item?id=45238572&amp;ref=jobsbyculture.com" target="_blank" rel="noopener" class="cs-quote-link">View thread &rarr;</a>
                 </div>
             </div>
         </div>
@@ -289,6 +335,70 @@
     </div>
 </section>
 <!-- ═══ /COMMUNITY SENTIMENT ═══ -->
+
+<!-- ═══ RELATED ═══ -->
+<section class="cp-related">
+    <div class="container">
+        <span class="s-label">Explore More</span>
+        <h2 class="s-title">Related <em>content</em></h2>
+        <div class="cp-related-grid">
+            <div class="cp-related-col">
+                <h3>Compare Glean</h3>
+                <ul class="cp-related-list">
+                    <li><a href="/compare/airbnb-vs-glean"><span class="arrow">&rarr;</span> Glean vs Airbnb</a></li>
+                    <li><a href="/compare/airtable-vs-glean"><span class="arrow">&rarr;</span> Glean vs Airtable</a></li>
+                    <li><a href="/compare/anthropic-vs-glean"><span class="arrow">&rarr;</span> Glean vs Anthropic</a></li>
+                    <li><a href="/compare/apollo-vs-glean"><span class="arrow">&rarr;</span> Glean vs Apollo.io</a></li>
+                    <li><a href="/compare/baseten-vs-glean"><span class="arrow">&rarr;</span> Glean vs Baseten</a></li>
+                    <li><a href="/compare/brex-vs-glean"><span class="arrow">&rarr;</span> Glean vs Brex</a></li>
+                    <li><a href="/compare/cloudflare-vs-glean"><span class="arrow">&rarr;</span> Glean vs Cloudflare</a></li>
+                    <li><a href="/compare/cohere-vs-glean"><span class="arrow">&rarr;</span> Glean vs Cohere</a></li>
+                    <li><a href="/compare/coreweave-vs-glean"><span class="arrow">&rarr;</span> Glean vs CoreWeave</a></li>
+                    <li><a href="/compare/crusoe-vs-glean"><span class="arrow">&rarr;</span> Glean vs Crusoe</a></li>
+                    <li><a href="/compare/cursor-vs-glean"><span class="arrow">&rarr;</span> Glean vs Cursor</a></li>
+                    <li><a href="/compare/databricks-vs-glean"><span class="arrow">&rarr;</span> Glean vs Databricks</a></li>
+                    <li><a href="/compare/datadog-vs-glean"><span class="arrow">&rarr;</span> Glean vs Datadog</a></li>
+                    <li><a href="/compare/deepmind-vs-glean"><span class="arrow">&rarr;</span> Glean vs DeepMind</a></li>
+                    <li><a href="/compare/elevenlabs-vs-glean"><span class="arrow">&rarr;</span> Glean vs ElevenLabs</a></li>
+                    <li><a href="/compare/figma-vs-glean"><span class="arrow">&rarr;</span> Glean vs Figma</a></li>
+                    <li><a href="/compare/fireworksai-vs-glean"><span class="arrow">&rarr;</span> Glean vs Fireworks AI</a></li>
+                    <li><a href="/compare/glean-vs-grafanalabs"><span class="arrow">&rarr;</span> Glean vs Grafana Labs</a></li>
+                    <li><a href="/compare/glean-vs-hubspot"><span class="arrow">&rarr;</span> Glean vs HubSpot</a></li>
+                    <li><a href="/compare/glean-vs-huggingface"><span class="arrow">&rarr;</span> Glean vs Hugging Face</a></li>
+                    <li><a href="/compare/glean-vs-incidentio"><span class="arrow">&rarr;</span> Glean vs incident.io</a></li>
+                    <li><a href="/compare/glean-vs-langchain"><span class="arrow">&rarr;</span> Glean vs LangChain</a></li>
+                    <li><a href="/compare/glean-vs-linear"><span class="arrow">&rarr;</span> Glean vs Linear</a></li>
+                    <li><a href="/compare/glean-vs-mercury"><span class="arrow">&rarr;</span> Glean vs Mercury</a></li>
+                    <li><a href="/compare/glean-vs-mistral"><span class="arrow">&rarr;</span> Glean vs Mistral AI</a></li>
+                    <li><a href="/compare/glean-vs-modal"><span class="arrow">&rarr;</span> Glean vs Modal</a></li>
+                    <li><a href="/compare/glean-vs-notion"><span class="arrow">&rarr;</span> Glean vs Notion</a></li>
+                    <li><a href="/compare/glean-vs-openai"><span class="arrow">&rarr;</span> Glean vs OpenAI</a></li>
+                    <li><a href="/compare/glean-vs-perplexity"><span class="arrow">&rarr;</span> Glean vs Perplexity AI</a></li>
+                    <li><a href="/compare/glean-vs-pinecone"><span class="arrow">&rarr;</span> Glean vs Pinecone</a></li>
+                    <li><a href="/compare/glean-vs-plaid"><span class="arrow">&rarr;</span> Glean vs Plaid</a></li>
+                    <li><a href="/compare/glean-vs-posthog"><span class="arrow">&rarr;</span> Glean vs PostHog</a></li>
+                    <li><a href="/compare/glean-vs-pylon"><span class="arrow">&rarr;</span> Glean vs Pylon</a></li>
+                    <li><a href="/compare/glean-vs-ramp"><span class="arrow">&rarr;</span> Glean vs Ramp</a></li>
+                    <li><a href="/compare/glean-vs-replit"><span class="arrow">&rarr;</span> Glean vs Replit</a></li>
+                    <li><a href="/compare/glean-vs-runway"><span class="arrow">&rarr;</span> Glean vs Runway</a></li>
+                    <li><a href="/compare/glean-vs-samsara"><span class="arrow">&rarr;</span> Glean vs Samsara</a></li>
+                    <li><a href="/compare/glean-vs-scale"><span class="arrow">&rarr;</span> Glean vs Scale AI</a></li>
+                    <li><a href="/compare/glean-vs-stripe"><span class="arrow">&rarr;</span> Glean vs Stripe</a></li>
+                    <li><a href="/compare/glean-vs-suno"><span class="arrow">&rarr;</span> Glean vs Suno</a></li>
+                    <li><a href="/compare/glean-vs-supabase"><span class="arrow">&rarr;</span> Glean vs Supabase</a></li>
+                    <li><a href="/compare/glean-vs-synthesia"><span class="arrow">&rarr;</span> Glean vs Synthesia</a></li>
+                    <li><a href="/compare/glean-vs-tailscale"><span class="arrow">&rarr;</span> Glean vs Tailscale</a></li>
+                    <li><a href="/compare/glean-vs-together"><span class="arrow">&rarr;</span> Glean vs Together AI</a></li>
+                    <li><a href="/compare/glean-vs-vanta"><span class="arrow">&rarr;</span> Glean vs Vanta</a></li>
+                    <li><a href="/compare/glean-vs-vast"><span class="arrow">&rarr;</span> Glean vs Vast AI</a></li>
+                    <li><a href="/compare/glean-vs-vercel"><span class="arrow">&rarr;</span> Glean vs Vercel</a></li>
+                    <li><a href="/compare/glean-vs-weaviate"><span class="arrow">&rarr;</span> Glean vs Weaviate</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- ═══ /RELATED ═══ -->
 
 <footer class="cp-footer"><div class="container"><div class="cp-footer-links"><a href="/">&larr; Back to Homepage</a><a href="/jobs">Browse Jobs</a><a href="/compare">Compare</a><a href="/directory">Culture Directory</a><a href="https://www.glean.com/careers?ref=jobsbyculture.com" target="_blank" rel="noopener">Glean Careers</a></div><p>Powered by <a href="/">JobsByCulture</a> &mdash; the culture-first job board</p></div></footer>
 

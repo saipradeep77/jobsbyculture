@@ -257,6 +257,26 @@
         .cs-tab:hover { border-color: var(--accent); }
         @media (max-width: 768px) { .cs-quotes { gap: 12px; } .cs-quote { padding: 14px 16px; } }
 
+    
+        /* ═══ RELATED SECTION ═══ */
+        .cp-related { padding: 56px 0; border-top: 1px solid var(--border); }
+        .cp-related-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; }
+        .cp-related-col h3 { font-size: 16px; font-weight: 600; margin-bottom: 16px; color: var(--text); }
+        .cp-related-list { list-style: none; display: flex; flex-direction: column; gap: 8px; }
+        .cp-related-list li a {
+            font-size: 14px; color: var(--text-2); text-decoration: none;
+            display: flex; align-items: center; gap: 6px; padding: 8px 12px;
+            border-radius: var(--radius-sm); transition: all 0.15s;
+        }
+        .cp-related-list li a:hover { background: var(--bg-hover); color: var(--accent); }
+        .cp-related-list li a .arrow { color: var(--text-3); font-size: 12px; }
+        .cp-related-more {
+            display: inline-block; margin-top: 12px; font-size: 13px; font-weight: 600;
+            color: var(--accent); text-decoration: none;
+        }
+        .cp-related-more:hover { text-decoration: underline; }
+        @media (max-width: 768px) { .cp-related-grid { grid-template-columns: 1fr; } }
+
     </style>
 <script async src="https://plausible.io/js/pa-qa3pjs5eZbsfBQJMk4hVW.js"></script>
 <script>
@@ -454,6 +474,8 @@
     </div>
 </section>
 
+
+
 <!-- ═══ COMMUNITY SENTIMENT ═══ -->
 <section class="cs-section">
     <div class="container">
@@ -461,7 +483,7 @@
         <h2 class="s-title">What the <em>community</em> says about Synthesia</h2>
         <div class="cs-overall">
             <span class="cs-badge positive">Mostly Positive</span>
-            <span class="cs-stats">2 mentions from Hacker News &amp; Reddit &middot; Updated 2026-03-30</span>
+            <span class="cs-stats">2 mentions from Hacker News &amp; Reddit &middot; Updated 2026-03-31</span>
         </div>
         <div class="cs-quotes" id="csQuotes">
             <div class="cs-quote" data-source="hn">
@@ -485,6 +507,70 @@
     </div>
 </section>
 <!-- ═══ /COMMUNITY SENTIMENT ═══ -->
+
+<!-- ═══ RELATED ═══ -->
+<section class="cp-related">
+    <div class="container">
+        <span class="s-label">Explore More</span>
+        <h2 class="s-title">Related <em>content</em></h2>
+        <div class="cp-related-grid">
+            <div class="cp-related-col">
+                <h3>Compare Synthesia</h3>
+                <ul class="cp-related-list">
+                    <li><a href="/compare/airbnb-vs-synthesia"><span class="arrow">&rarr;</span> Synthesia vs Airbnb</a></li>
+                    <li><a href="/compare/airtable-vs-synthesia"><span class="arrow">&rarr;</span> Synthesia vs Airtable</a></li>
+                    <li><a href="/compare/anthropic-vs-synthesia"><span class="arrow">&rarr;</span> Synthesia vs Anthropic</a></li>
+                    <li><a href="/compare/apollo-vs-synthesia"><span class="arrow">&rarr;</span> Synthesia vs Apollo.io</a></li>
+                    <li><a href="/compare/baseten-vs-synthesia"><span class="arrow">&rarr;</span> Synthesia vs Baseten</a></li>
+                    <li><a href="/compare/brex-vs-synthesia"><span class="arrow">&rarr;</span> Synthesia vs Brex</a></li>
+                    <li><a href="/compare/cloudflare-vs-synthesia"><span class="arrow">&rarr;</span> Synthesia vs Cloudflare</a></li>
+                    <li><a href="/compare/cohere-vs-synthesia"><span class="arrow">&rarr;</span> Synthesia vs Cohere</a></li>
+                    <li><a href="/compare/coreweave-vs-synthesia"><span class="arrow">&rarr;</span> Synthesia vs CoreWeave</a></li>
+                    <li><a href="/compare/crusoe-vs-synthesia"><span class="arrow">&rarr;</span> Synthesia vs Crusoe</a></li>
+                    <li><a href="/compare/cursor-vs-synthesia"><span class="arrow">&rarr;</span> Synthesia vs Cursor</a></li>
+                    <li><a href="/compare/databricks-vs-synthesia"><span class="arrow">&rarr;</span> Synthesia vs Databricks</a></li>
+                    <li><a href="/compare/datadog-vs-synthesia"><span class="arrow">&rarr;</span> Synthesia vs Datadog</a></li>
+                    <li><a href="/compare/deepmind-vs-synthesia"><span class="arrow">&rarr;</span> Synthesia vs DeepMind</a></li>
+                    <li><a href="/compare/elevenlabs-vs-synthesia"><span class="arrow">&rarr;</span> Synthesia vs ElevenLabs</a></li>
+                    <li><a href="/compare/figma-vs-synthesia"><span class="arrow">&rarr;</span> Synthesia vs Figma</a></li>
+                    <li><a href="/compare/fireworksai-vs-synthesia"><span class="arrow">&rarr;</span> Synthesia vs Fireworks AI</a></li>
+                    <li><a href="/compare/glean-vs-synthesia"><span class="arrow">&rarr;</span> Synthesia vs Glean</a></li>
+                    <li><a href="/compare/grafanalabs-vs-synthesia"><span class="arrow">&rarr;</span> Synthesia vs Grafana Labs</a></li>
+                    <li><a href="/compare/hubspot-vs-synthesia"><span class="arrow">&rarr;</span> Synthesia vs HubSpot</a></li>
+                    <li><a href="/compare/huggingface-vs-synthesia"><span class="arrow">&rarr;</span> Synthesia vs Hugging Face</a></li>
+                    <li><a href="/compare/incidentio-vs-synthesia"><span class="arrow">&rarr;</span> Synthesia vs incident.io</a></li>
+                    <li><a href="/compare/langchain-vs-synthesia"><span class="arrow">&rarr;</span> Synthesia vs LangChain</a></li>
+                    <li><a href="/compare/linear-vs-synthesia"><span class="arrow">&rarr;</span> Synthesia vs Linear</a></li>
+                    <li><a href="/compare/mercury-vs-synthesia"><span class="arrow">&rarr;</span> Synthesia vs Mercury</a></li>
+                    <li><a href="/compare/mistral-vs-synthesia"><span class="arrow">&rarr;</span> Synthesia vs Mistral AI</a></li>
+                    <li><a href="/compare/modal-vs-synthesia"><span class="arrow">&rarr;</span> Synthesia vs Modal</a></li>
+                    <li><a href="/compare/notion-vs-synthesia"><span class="arrow">&rarr;</span> Synthesia vs Notion</a></li>
+                    <li><a href="/compare/openai-vs-synthesia"><span class="arrow">&rarr;</span> Synthesia vs OpenAI</a></li>
+                    <li><a href="/compare/perplexity-vs-synthesia"><span class="arrow">&rarr;</span> Synthesia vs Perplexity AI</a></li>
+                    <li><a href="/compare/pinecone-vs-synthesia"><span class="arrow">&rarr;</span> Synthesia vs Pinecone</a></li>
+                    <li><a href="/compare/plaid-vs-synthesia"><span class="arrow">&rarr;</span> Synthesia vs Plaid</a></li>
+                    <li><a href="/compare/posthog-vs-synthesia"><span class="arrow">&rarr;</span> Synthesia vs PostHog</a></li>
+                    <li><a href="/compare/pylon-vs-synthesia"><span class="arrow">&rarr;</span> Synthesia vs Pylon</a></li>
+                    <li><a href="/compare/ramp-vs-synthesia"><span class="arrow">&rarr;</span> Synthesia vs Ramp</a></li>
+                    <li><a href="/compare/replit-vs-synthesia"><span class="arrow">&rarr;</span> Synthesia vs Replit</a></li>
+                    <li><a href="/compare/runway-vs-synthesia"><span class="arrow">&rarr;</span> Synthesia vs Runway</a></li>
+                    <li><a href="/compare/samsara-vs-synthesia"><span class="arrow">&rarr;</span> Synthesia vs Samsara</a></li>
+                    <li><a href="/compare/scale-vs-synthesia"><span class="arrow">&rarr;</span> Synthesia vs Scale AI</a></li>
+                    <li><a href="/compare/stripe-vs-synthesia"><span class="arrow">&rarr;</span> Synthesia vs Stripe</a></li>
+                    <li><a href="/compare/suno-vs-synthesia"><span class="arrow">&rarr;</span> Synthesia vs Suno</a></li>
+                    <li><a href="/compare/supabase-vs-synthesia"><span class="arrow">&rarr;</span> Synthesia vs Supabase</a></li>
+                    <li><a href="/compare/synthesia-vs-tailscale"><span class="arrow">&rarr;</span> Synthesia vs Tailscale</a></li>
+                    <li><a href="/compare/synthesia-vs-together"><span class="arrow">&rarr;</span> Synthesia vs Together AI</a></li>
+                    <li><a href="/compare/synthesia-vs-vanta"><span class="arrow">&rarr;</span> Synthesia vs Vanta</a></li>
+                    <li><a href="/compare/synthesia-vs-vast"><span class="arrow">&rarr;</span> Synthesia vs Vast AI</a></li>
+                    <li><a href="/compare/synthesia-vs-vercel"><span class="arrow">&rarr;</span> Synthesia vs Vercel</a></li>
+                    <li><a href="/compare/synthesia-vs-weaviate"><span class="arrow">&rarr;</span> Synthesia vs Weaviate</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- ═══ /RELATED ═══ -->
 
 <footer class="cp-footer">
     <div class="container">
