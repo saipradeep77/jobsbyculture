@@ -3,22 +3,49 @@ Allow: /
 
 Sitemap: https://jobsbyculture.com/sitemap.xml
 
-# LLM discovery
+# LLM / AI agent discovery — all bots welcome, we want citations
 # See https://llmstxt.org for spec
-User-agent: ChatGPT-User
-Allow: /llms.txt
-
 User-agent: GPTBot
-Allow: /llms.txt
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
 
 User-agent: Claude-Web
-Allow: /llms.txt
+Allow: /
 
 User-agent: Anthropic-AI
-Allow: /llms.txt
+Allow: /
 
 User-agent: Google-Extended
-Allow: /llms.txt
+Allow: /
 
 User-agent: PerplexityBot
-Allow: /llms.txt
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+User-agent: Meta-ExternalAgent
+Allow: /
+
+User-agent: Meta-ExternalFetcher
+Allow: /
+
+User-agent: cohere-ai
+Allow: /
+
+User-agent: Bytespider
+Allow: /
+
+User-agent: YouBot
+Allow: /
+
+User-agent: Amazonbot
+Allow: /
+
+User-agent: PhindBot
+Allow: /
