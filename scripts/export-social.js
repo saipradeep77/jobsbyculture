@@ -238,7 +238,7 @@ function extractJobId(url) {
     return 'h' + Math.abs(hash).toString(36);
 }
 
-const HEADER = 'id,title,company,company_slug,location,type,posted,role_category,seniority,culture_values,glassdoor_rating,apply_url,profile_url,jobs_filter_url,post_count,last_posted,status,og_image,job_id,highlight_url';
+const HEADER = 'row,title,company,company_slug,location,type,posted,role_category,seniority,culture_values,glassdoor_rating,apply_url,profile_url,jobs_filter_url,post_count,last_posted,status,og_image,job_id,highlight_url';
 
 const rows = [];
 let newCount = 0;

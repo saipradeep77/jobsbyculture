@@ -1088,7 +1088,7 @@ function escHtml(s) {
 }
 
 function jobCard(job, isHighlight) {
-    return '<a class="cp-job-card' + (isHighlight ? ' cp-job-highlight' : '') + '" href="' + job.url + '" target="_blank" rel="noopener">' +
+    return '<a' + (isHighlight ? ' id="highlightedJob"' : '') + ' class="cp-job-card' + (isHighlight ? ' cp-job-highlight' : '') + '" href="' + job.url + '" target="_blank" rel="noopener">' +
         '<div>' +
             '<div class="cp-job-title">' + escHtml(job.title) + '</div>' +
             '<div class="cp-job-location">' +
@@ -1120,7 +1120,7 @@ function renderJobs(query) {
     var highlighted = null;
     var rest = [];
     for (var i = 0; i < filtered.length; i++) {
-        if (HIGHLIGHT_JOB_ID && filtered[i].id === HIGHLIGHT_JOB_ID) {
+        if (HIGHLIGHT_JOB_ID && (filtered[i].id === HIGHLIGHT_JOB_ID || filtered[i].id.indexOf(HIGHLIGHT_JOB_ID) === 0)) {
             highlighted = filtered[i];
         } else {
             rest.push(filtered[i]);
@@ -1139,7 +1139,7 @@ function renderJobs(query) {
         for (var k = 0; k < showCount; k++) {
             html += jobCard(rest[k], false);
         }
-        grid.innerHTML = html;
+        grid.innerHTML = html; var hlEl = document.getElementById("highlightedJob"); if (hlEl) { setTimeout(function() { hlEl.scrollIntoView({ behavior: "smooth", block: "center" }); }, 200); }
 
         if (ctaCenter) {
             ctaCenter.innerHTML = '<a href="/jobs?company=' + COMPANY_SLUG + '" class="btn-primary">Browse all ' + ALL_JOBS.length + ' ' + COMPANY_NAME + ' jobs \u2192</a>';
@@ -1159,7 +1159,7 @@ function renderJobs(query) {
         html = '<p style="color:#9ca3af;font-size:14px;text-align:center;padding:20px 0;">No jobs match your search.</p>';
     }
 
-    grid.innerHTML = html;
+    grid.innerHTML = html; var hlEl = document.getElementById("highlightedJob"); if (hlEl) { setTimeout(function() { hlEl.scrollIntoView({ behavior: "smooth", block: "center" }); }, 200); }
 
     if (ctaCenter) {
         ctaCenter.innerHTML = '<a href="/jobs?company=' + COMPANY_SLUG + '" class="btn-primary">Browse all ' + ALL_JOBS.length + ' ' + COMPANY_NAME + ' jobs \u2192</a>';
