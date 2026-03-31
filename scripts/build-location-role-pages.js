@@ -159,6 +159,16 @@ const LOCATIONS = {
         pattern: /madrid/i,
         region: 'Europe',
     },
+    'stockholm': {
+        name: 'Stockholm', emoji: '🇸🇪',
+        pattern: /stockholm/i,
+        region: 'Europe',
+    },
+    'lisbon': {
+        name: 'Lisbon', emoji: '🇵🇹',
+        pattern: /lisbon|lisboa/i,
+        region: 'Europe',
+    },
 };
 
 // classifyRole: synced with update-counts.js — keep these identical

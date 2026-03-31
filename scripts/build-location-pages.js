@@ -200,6 +200,20 @@ const LOCATIONS = {
         region: 'Europe',
         description: 'Madrid is an emerging European tech hub with growing AI presence, competitive cost of living compared to London or Paris, and strong engineering talent from Spanish universities.',
     },
+    'stockholm': {
+        name: 'Stockholm',
+        emoji: '🇸🇪',
+        pattern: /stockholm/i,
+        region: 'Europe',
+        description: 'Stockholm punches above its weight in tech, having produced Spotify, Klarna, and King. Growing AI presence with competitive compensation, excellent quality of life, and strong engineering talent from KTH and Stockholm University.',
+    },
+    'lisbon': {
+        name: 'Lisbon',
+        emoji: '🇵🇹',
+        pattern: /lisbon|lisboa/i,
+        region: 'Europe',
+        description: 'Lisbon is Southern Europe\'s fastest-growing tech hub, attracting AI companies with its talent pool, Web Summit presence, favorable tax regime, and high quality of life at a lower cost than Western European capitals.',
+    },
 };
 
 // ─── Blog article mappings for Related Reading on location pages ───

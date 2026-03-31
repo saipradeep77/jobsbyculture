@@ -101,8 +101,10 @@ JobsByCulture helps professionals find jobs at companies whose culture actually 
 - [Berlin](https://jobsbyculture.com/locations/berlin): 46 jobs at 9 companies
 - [Sydney](https://jobsbyculture.com/locations/sydney): 47 jobs at 9 companies
 - [Munich](https://jobsbyculture.com/locations/munich): 43 jobs at 6 companies
-- [Austin](https://jobsbyculture.com/locations/austin): 31 jobs at 5 companies
-- [Chicago](https://jobsbyculture.com/locations/chicago): 64 jobs at 4 companies
+- [Austin](https://jobsbyculture.com/locations/austin): 49 jobs at 9 companies
+- [Chicago](https://jobsbyculture.com/locations/chicago): 74 jobs at 6 companies
+- [Stockholm](https://jobsbyculture.com/locations/stockholm): 17 jobs at 5 companies
+- [Lisbon](https://jobsbyculture.com/locations/lisbon): 8 jobs at 1 companies
 
 ## Blog — The Culture Report
 
