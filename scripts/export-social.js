@@ -238,7 +238,7 @@ function extractJobId(url) {
     return 'h' + Math.abs(hash).toString(36);
 }
 
-const HEADER = 'row,title,company,company_slug,location,type,posted,role_category,seniority,culture_values,glassdoor_rating,apply_url,profile_url,jobs_filter_url,post_count,last_posted,status,og_image,job_id,highlight_url';
+const HEADER = 'job_id,title,company,company_slug,location,type,posted,role_category,seniority,culture_values,glassdoor_rating,apply_url,profile_url,jobs_filter_url,post_count,last_posted,status,og_image,highlight_url';
 
 const rows = [];
 let newCount = 0;
@@ -263,7 +263,7 @@ for (const j of knownJobs) {
 
     const jobId = extractJobId(j.url);
     rows.push([
-        j.id,
+        jobId,
         escapeCSV(j.title),
         escapeCSV(co.name),
         j.company,
@@ -281,7 +281,6 @@ for (const j of knownJobs) {
         escapeCSV(lastPosted),
         status,
         `https://jobsbyculture.com/api/og?type=company&slug=${j.company}`,
-        jobId,
         `https://jobsbyculture.com/companies/${j.company}?job=${jobId}`
     ].join(','));
 }
@@ -315,7 +314,7 @@ if (prevStatuses.size > 0) {
             const companySlug = fields[headerFields.indexOf('company_slug')];
             const expJobId = extractJobId(url);
             rows.push([
-                fields[headerFields.indexOf('id')],
+                expJobId,
                 escapeCSV(fields[headerFields.indexOf('title')]),
                 escapeCSV(fields[headerFields.indexOf('company')]),
                 companySlug,
@@ -333,7 +332,6 @@ if (prevStatuses.size > 0) {
                 escapeCSV(lastPostedIdx >= 0 ? fields[lastPostedIdx] : ''),
                 'expired',
                 `https://jobsbyculture.com/api/og?type=company&slug=${companySlug}`,
-                expJobId,
                 `https://jobsbyculture.com/companies/${companySlug}?job=${expJobId}`
             ].join(','));
         }

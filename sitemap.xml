@@ -331,6 +331,54 @@
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
+  <url>
+    <loc>https://jobsbyculture.com/companies/helsing</loc>
+    <lastmod>2026-03-31</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://jobsbyculture.com/companies/wayve</loc>
+    <lastmod>2026-03-31</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://jobsbyculture.com/companies/deepl</loc>
+    <lastmod>2026-03-31</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://jobsbyculture.com/companies/celonis</loc>
+    <lastmod>2026-03-31</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://jobsbyculture.com/companies/contentful</loc>
+    <lastmod>2026-03-31</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://jobsbyculture.com/companies/adyen</loc>
+    <lastmod>2026-03-31</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://jobsbyculture.com/companies/doctolib</loc>
+    <lastmod>2026-03-31</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://jobsbyculture.com/companies/n8n</loc>
+    <lastmod>2026-03-31</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
 
   <!-- /Compare pages -->
   <!-- /Cluster pages -->
@@ -7936,6 +7984,7 @@
     <priority>0.7</priority>
   </url>
   <!-- /Compare pages -->
+  <!-- /Cluster pages -->
 
   <!-- Cluster pages -->
   <url>
@@ -8156,6 +8205,12 @@
   </url>
   <url>
     <loc>https://jobsbyculture.com/roles/wlb/sales</loc>
+    <lastmod>2026-03-31</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://jobsbyculture.com/roles/wlb/finance</loc>
     <lastmod>2026-03-31</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
@@ -9337,6 +9392,12 @@
     <priority>0.5</priority>
   </url>
   <url>
+    <loc>https://jobsbyculture.com/seniority/entry/data</loc>
+    <lastmod>2026-03-31</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
     <loc>https://jobsbyculture.com/seniority/entry/engineering</loc>
     <lastmod>2026-03-31</lastmod>
     <changefreq>weekly</changefreq>
@@ -9356,6 +9417,12 @@
   </url>
   <url>
     <loc>https://jobsbyculture.com/seniority/entry/finance</loc>
+    <lastmod>2026-03-31</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://jobsbyculture.com/seniority/entry/hr-people</loc>
     <lastmod>2026-03-31</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -9559,6 +9626,12 @@
     <priority>0.5</priority>
   </url>
   <url>
+    <loc>https://jobsbyculture.com/seniority/staff/hr-people</loc>
+    <lastmod>2026-03-31</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
     <loc>https://jobsbyculture.com/seniority/lead</loc>
     <lastmod>2026-03-31</lastmod>
     <changefreq>weekly</changefreq>
@@ -9641,6 +9714,12 @@
     <lastmod>2026-03-31</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://jobsbyculture.com/seniority/director/data</loc>
+    <lastmod>2026-03-31</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   <url>
     <loc>https://jobsbyculture.com/seniority/director/engineering</loc>
@@ -10272,12 +10351,6 @@
     <priority>0.55</priority>
   </url>
   <url>
-    <loc>https://jobsbyculture.com/locations/bengaluru/marketing</loc>
-    <lastmod>2026-03-31</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.55</priority>
-  </url>
-  <url>
     <loc>https://jobsbyculture.com/locations/bengaluru/sales</loc>
     <lastmod>2026-03-31</lastmod>
     <changefreq>weekly</changefreq>
@@ -10362,6 +10435,12 @@
     <priority>0.55</priority>
   </url>
   <url>
+    <loc>https://jobsbyculture.com/locations/tokyo/support</loc>
+    <lastmod>2026-03-31</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.55</priority>
+  </url>
+  <url>
     <loc>https://jobsbyculture.com/locations/toronto/ml-ai</loc>
     <lastmod>2026-03-31</lastmod>
     <changefreq>weekly</changefreq>
@@ -10410,13 +10489,37 @@
     <priority>0.55</priority>
   </url>
   <url>
+    <loc>https://jobsbyculture.com/locations/chicago/hr-people</loc>
+    <lastmod>2026-03-31</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.55</priority>
+  </url>
+  <url>
+    <loc>https://jobsbyculture.com/locations/berlin/ml-ai</loc>
+    <lastmod>2026-03-31</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.55</priority>
+  </url>
+  <url>
     <loc>https://jobsbyculture.com/locations/berlin/engineering</loc>
     <lastmod>2026-03-31</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.55</priority>
   </url>
   <url>
+    <loc>https://jobsbyculture.com/locations/berlin/product</loc>
+    <lastmod>2026-03-31</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.55</priority>
+  </url>
+  <url>
     <loc>https://jobsbyculture.com/locations/berlin/sales</loc>
+    <lastmod>2026-03-31</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.55</priority>
+  </url>
+  <url>
+    <loc>https://jobsbyculture.com/locations/berlin/hr-people</loc>
     <lastmod>2026-03-31</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.55</priority>
@@ -10440,13 +10543,31 @@
     <priority>0.55</priority>
   </url>
   <url>
+    <loc>https://jobsbyculture.com/locations/munich/ml-ai</loc>
+    <lastmod>2026-03-31</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.55</priority>
+  </url>
+  <url>
     <loc>https://jobsbyculture.com/locations/munich/engineering</loc>
     <lastmod>2026-03-31</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.55</priority>
   </url>
   <url>
+    <loc>https://jobsbyculture.com/locations/munich/product</loc>
+    <lastmod>2026-03-31</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.55</priority>
+  </url>
+  <url>
     <loc>https://jobsbyculture.com/locations/munich/sales</loc>
+    <lastmod>2026-03-31</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.55</priority>
+  </url>
+  <url>
+    <loc>https://jobsbyculture.com/locations/munich/operations</loc>
     <lastmod>2026-03-31</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.55</priority>
@@ -10477,6 +10598,12 @@
   </url>
   <url>
     <loc>https://jobsbyculture.com/locations/denver/engineering</loc>
+    <lastmod>2026-03-31</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.55</priority>
+  </url>
+  <url>
+    <loc>https://jobsbyculture.com/locations/denver/product</loc>
     <lastmod>2026-03-31</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.55</priority>
@@ -10524,13 +10651,31 @@
     <priority>0.55</priority>
   </url>
   <url>
+    <loc>https://jobsbyculture.com/locations/amsterdam/data</loc>
+    <lastmod>2026-03-31</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.55</priority>
+  </url>
+  <url>
     <loc>https://jobsbyculture.com/locations/amsterdam/engineering</loc>
     <lastmod>2026-03-31</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.55</priority>
   </url>
   <url>
+    <loc>https://jobsbyculture.com/locations/amsterdam/product</loc>
+    <lastmod>2026-03-31</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.55</priority>
+  </url>
+  <url>
     <loc>https://jobsbyculture.com/locations/amsterdam/sales</loc>
+    <lastmod>2026-03-31</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.55</priority>
+  </url>
+  <url>
+    <loc>https://jobsbyculture.com/locations/amsterdam/finance</loc>
     <lastmod>2026-03-31</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.55</priority>
@@ -10573,6 +10718,12 @@
   </url>
   <url>
     <loc>https://jobsbyculture.com/locations/madrid/sales</loc>
+    <lastmod>2026-03-31</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.55</priority>
+  </url>
+  <url>
+    <loc>https://jobsbyculture.com/locations/stockholm/engineering</loc>
     <lastmod>2026-03-31</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.55</priority>

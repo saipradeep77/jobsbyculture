@@ -48,6 +48,14 @@
     { "slug": "synthesia",   "name": "Synthesia",       "ats": "ashby",      "atsSlug": "synthesia",    "domain": "synthesia.io" },
     { "slug": "samsara",     "name": "Samsara",         "ats": "greenhouse", "atsSlug": "samsara",      "domain": "samsara.com" },
     { "slug": "glean",       "name": "Glean",           "ats": "greenhouse", "atsSlug": "gleanwork",    "domain": "glean.com" },
-    { "slug": "vanta",       "name": "Vanta",           "ats": "ashby",      "atsSlug": "vanta",        "domain": "vanta.com" }
+    { "slug": "vanta",       "name": "Vanta",           "ats": "ashby",      "atsSlug": "vanta",        "domain": "vanta.com" },
+    { "slug": "helsing",     "name": "Helsing",         "ats": "greenhouse", "atsSlug": "helsing",      "domain": "helsing.ai" },
+    { "slug": "wayve",       "name": "Wayve",           "ats": "greenhouse", "atsSlug": "wayve",        "domain": "wayve.ai" },
+    { "slug": "deepl",       "name": "DeepL",           "ats": "ashby",      "atsSlug": "deepl",        "domain": "deepl.com" },
+    { "slug": "celonis",     "name": "Celonis",         "ats": "greenhouse", "atsSlug": "celonis",      "domain": "celonis.com" },
+    { "slug": "contentful",  "name": "Contentful",      "ats": "greenhouse", "atsSlug": "contentful",   "domain": "contentful.com" },
+    { "slug": "adyen",       "name": "Adyen",           "ats": "greenhouse", "atsSlug": "adyen",        "domain": "adyen.com" },
+    { "slug": "doctolib",    "name": "Doctolib",        "ats": "greenhouse", "atsSlug": "doctolib",     "domain": "doctolib.com" },
+    { "slug": "n8n",         "name": "n8n",             "ats": "ashby",      "atsSlug": "n8n",          "domain": "n8n.io" }
   ]
 }

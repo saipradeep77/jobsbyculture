@@ -868,6 +868,10 @@
 
 
 
+
+
+
+
 <!-- ═══ COMMUNITY SENTIMENT ═══ -->
 <section class="cs-section">
     <div class="container">
@@ -875,7 +879,12 @@
         <h2 class="s-title">What the <em>community</em> says about Vercel</h2>
         <div class="cs-overall">
             <span class="cs-badge mixed">Mixed Sentiment</span>
-            <span class="cs-stats">5 mentions from Hacker News &amp; Reddit &middot; Updated 2026-03-31</span>
+            <span class="cs-stats">7 mentions from Hacker News &amp; Reddit &middot; Updated 2026-03-31</span>
+        </div>
+        <div class="cs-tabs">
+            <button class="cs-tab active" onclick="showSentiment('all',this)">All</button>
+            <button class="cs-tab" onclick="showSentiment('hn',this)">Hacker News</button>
+            <button class="cs-tab" onclick="showSentiment('reddit',this)">Reddit</button>
         </div>
         <div class="cs-quotes" id="csQuotes">
             <div class="cs-quote" data-source="hn">
@@ -908,6 +917,22 @@
                     <span class="cs-quote-source hn">Hacker News</span>
                     <span>fragmede &middot; 2026-02-26</span>
                     <a href="https://news.ycombinator.com/item?id=47173493&amp;ref=jobsbyculture.com" target="_blank" rel="noopener" class="cs-quote-link">View thread &rarr;</a>
+                </div>
+            </div>
+            <div class="cs-quote" data-source="reddit">
+                <div class="cs-quote-text">&ldquo;No question, just want to say I appreciate your style for your videos. It’s a good pace and always informative. Cheers!&rdquo;</div>
+                <div class="cs-quote-meta">
+                    <span class="cs-quote-source reddit">Reddit</span>
+                    <span>r/vercel &middot; 68 upvotes &middot; 2025-05-01</span>
+                    <a href="https://reddit.com/r/vercel/comments/1kci8dr/im_leerob_and_i_work_at_vercel_ama/?ref=jobsbyculture.com" target="_blank" rel="noopener" class="cs-quote-link">View thread &rarr;</a>
+                </div>
+            </div>
+            <div class="cs-quote" data-source="reddit">
+                <div class="cs-quote-text">&ldquo;Hey there! If you haven't already, I recommend filling out the form at [vercel.com/contact/sales](http://vercel.com/contact/sales) just to make sure the sales team has all the info they need to get started.&rdquo;</div>
+                <div class="cs-quote-meta">
+                    <span class="cs-quote-source reddit">Reddit</span>
+                    <span>r/vercel &middot; 0 upvotes &middot; 2025-09-18</span>
+                    <a href="https://reddit.com/r/vercel/comments/1nk8qi2/want_to_buy_enterprise_but_have_to_book_a_call/?ref=jobsbyculture.com" target="_blank" rel="noopener" class="cs-quote-link">View thread &rarr;</a>
                 </div>
             </div>
         </div>
