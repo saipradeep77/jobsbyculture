@@ -2,6 +2,8 @@
 
 > Culture-first job search for AI & tech professionals. Browse 7,887+ jobs filtered by culture values like async-first, work-life balance, remote-friendly, and ethical AI.
 
+**Full version with embedded content:** [llms-full.txt](https://jobsbyculture.com/llms-full.txt)
+
 ## About
 
 JobsByCulture helps professionals find jobs at companies whose culture actually matches how they like to work. Instead of generic job boards, we tag every role with real culture data from employee reviews.

@@ -1,0 +1,684 @@
+# JobsByCulture — Full Content for LLMs
+
+> Culture-first job search for AI & tech professionals. Browse 7,887+ jobs from 49 profiled companies, filtered by 18 culture values like async-first, work-life balance, remote-friendly, and ethical AI. Every company is rated using Glassdoor employee review data.
+
+Website: https://jobsbyculture.com
+Built by: @itspradz (https://x.com/itspradz)
+Data last updated: March 2026
+
+---
+
+## About
+
+JobsByCulture helps professionals find jobs at companies whose culture actually matches how they like to work. Instead of generic job boards, we tag every role with real culture data from employee reviews.
+
+The site profiles 49 AI and tech companies with Glassdoor ratings, work-life balance scores, culture values, employee review summaries (pros/cons), and live job listings fetched daily from Greenhouse, Ashby, Lever, and Workable ATS platforms.
+
+**Who it's for:** Software engineers, ML researchers, product managers, designers, and other tech professionals evaluating job offers not just by compensation, but by culture fit.
+
+**Key pages:**
+- Browse Jobs: https://jobsbyculture.com/jobs
+- Compare Cultures: https://jobsbyculture.com/compare
+- Company Directory: https://jobsbyculture.com/directory
+- Culture Map (interactive scatter chart): https://jobsbyculture.com/culture-map
+- Culture Quiz: https://jobsbyculture.com/quiz
+
+---
+
+## Company Culture Database
+
+All 49 companies profiled with Glassdoor rating, work-life balance score, company size, culture values, and employee review highlights. Glassdoor and WLB scores are on a 1.0-5.0 scale.
+
+### Anthropic
+- URL: https://jobsbyculture.com/companies/anthropic
+- Glassdoor: 4.4 / 5.0 | WLB: 3.7 / 5.0
+- Size: Mid (~1,500) | Values: ethical-ai, learning, equity, social-impact, eng-driven
+- Pros: Mission-driven to the core — the safety focus is genuine and deeply embedded. Incredible autonomy and ownership, even for mid-level engineers.
+- Cons: High-intensity environment — extended work hours are common during peak periods. Processes still catching up to hypergrowth; some things feel ad-hoc.
+
+### Hugging Face
+- URL: https://jobsbyculture.com/companies/huggingface
+- Glassdoor: 3.8 / 5.0 | WLB: 4.1 / 5.0
+- Size: Small (~400) | Values: open-source, flat, remote, flex-hours, transparent, many-hats, async
+- Pros: True open-source DNA — you work on things millions of developers actually use. Remote-first and async culture that actually works across time zones.
+- Cons: Below-market comp compared to FAANG. Career progression is unclear — no well-defined ladder.
+
+### Databricks
+- URL: https://jobsbyculture.com/companies/databricks
+- Glassdoor: 4.1 / 5.0 | WLB: 3.9 / 5.0
+- Size: Large (~7,000) | Values: eng-driven, learning, equity, diverse, product-impact
+- Pros: Engineers who built Spark, Delta Lake, MLflow — deep technical pedigree. Strong compensation and equity packages consistently above market.
+- Cons: Hypergrowth means org changes are constant — teams restructure frequently. Some legacy Spark-era tech debt that can slow down new features.
+
+### Cohere
+- URL: https://jobsbyculture.com/companies/cohere
+- Glassdoor: 2.9 / 5.0 | WLB: 2.5 / 5.0
+- Size: Small (~500) | Values: learning, eng-driven
+- Pros: Cutting-edge NLP research from Transformer co-author. Enterprise AI focus gives real customer impact.
+- Cons: Frequent organizational restructuring has led to notable team turnover. Internal communication from leadership could be more transparent.
+
+### Mistral AI
+- URL: https://jobsbyculture.com/companies/mistral
+- Glassdoor: 4.0 / 5.0 | WLB: 3.6 / 5.0
+- Size: Small (~100) | Values: ship-fast, eng-driven, flat, many-hats, open-source
+- Pros: Small team punching way above weight — Mixtral, Mistral Large. European AI champion with strong research DNA.
+- Cons: Very early-stage — processes are minimal. Paris-centric with limited remote options.
+
+### HubSpot
+- URL: https://jobsbyculture.com/companies/hubspot
+- Glassdoor: 4.3 / 5.0 | WLB: 4.1 / 5.0
+- Size: Large (~8,000) | Values: diverse, learning, wlb, transparent, flex-hours, psych-safety
+- Pros: Culture Code is legendary — transparency, autonomy, flexibility are real. Remote-first done right with genuine work-life balance.
+- Cons: Enterprise sales culture can clash with engineering. Comp below FAANG for senior roles.
+
+### Vercel
+- URL: https://jobsbyculture.com/companies/vercel
+- Glassdoor: 3.9 / 5.0 | WLB: 3.4 / 5.0
+- Size: Mid (~600) | Values: ship-fast, eng-driven, product-impact, open-source
+- Pros: Building the future of web infrastructure — Next.js, Turbopack, edge runtime. Strong open-source culture — Next.js, Turbopack, and SWC used by millions.
+- Cons: High expectations and fast pace can lead to burnout. Leadership sets very high standards — the pace isn't for everyone.
+
+### Stripe
+- URL: https://jobsbyculture.com/companies/stripe
+- Glassdoor: 4.0 / 5.0 | WLB: 3.6 / 5.0
+- Size: Large (~8,000) | Values: eng-driven, learning, equity, product-impact, transparent
+- Pros: Engineering culture is elite — code quality and writing culture are best-in-class. Top compensation in fintech — competitive base, equity, and benefits.
+- Cons: Perfectionism can slow shipping — high bar sometimes means slower velocity. The 2022-23 layoffs affected morale — company has been rebuilding confidence.
+
+### Perplexity AI
+- URL: https://jobsbyculture.com/companies/perplexity
+- Glassdoor: 4.7 / 5.0 | WLB: 3.3 / 5.0
+- Size: Mid (~500) | Values: ship-fast, eng-driven, product-impact, equity, learning
+- Pros: Fastest-growing AI product — real users, real revenue, genuine product-market fit. Small team, massive impact per engineer — your work ships to millions quickly.
+- Cons: Startup intensity — expect long hours and high expectations. Growing pains as the team scales — roles and responsibilities shift frequently.
+
+### Together AI
+- URL: https://jobsbyculture.com/companies/together
+- Glassdoor: 4.1 / 5.0 | WLB: 3.8 / 5.0
+- Size: Small (~150) | Values: open-source, eng-driven, learning, flat, many-hats
+- Pros: Open-source AI infrastructure — real mission alignment, not just marketing. Small team with outsized research output; your work has direct impact.
+- Cons: Early-stage means wearing many hats constantly — not for specialists. Limited career ladder; growth paths are still being defined.
+
+### Cursor (Anysphere)
+- URL: https://jobsbyculture.com/companies/cursor
+- Glassdoor: 4.0 / 5.0 | WLB: 3.5 / 5.0
+- Size: Small (~50) | Values: ship-fast, eng-driven, product-impact, flat, many-hats
+- Pros: Building the most-loved AI code editor — massive developer love and daily impact. Tiny team, extreme ownership — every person shapes the product directly.
+- Cons: Extremely small team = no specialists; everyone does everything. Intense pace — the speed of shipping can be relentless.
+
+### Linear
+- URL: https://jobsbyculture.com/companies/linear
+- Glassdoor: 4.6 / 5.0 | WLB: 4.4 / 5.0
+- Size: Small (~80) | Values: deep-work, remote, async, eng-driven, product-impact, wlb
+- Pros: Obsessive product craft — building the best-in-class PM tool teams genuinely love. Deep work culture with no standups and minimal meetings — actually practiced.
+- Cons: Very small team = limited roles available at any given time. High hiring bar means slow growth — patience required.
+
+### Scale AI
+- URL: https://jobsbyculture.com/companies/scale
+- Glassdoor: 3.5 / 5.0 | WLB: 2.7 / 5.0
+- Size: Large (~1,200) | Values: eng-driven, product-impact, learning, ship-fast
+- Pros: Building critical AI data infrastructure used by OpenAI, Meta, Microsoft, and the US government. Strong compensation for engineers — competitive base + equity.
+- Cons: Work-life balance rated 2.7/5 — long hours common during client deadlines. Culture and values scored 2.9/5 — inconsistent management quality.
+
+### CoreWeave
+- URL: https://jobsbyculture.com/companies/coreweave
+- Glassdoor: 3.6 / 5.0 | WLB: 3.2 / 5.0
+- Size: Large (~1,800) | Values: eng-driven, ship-fast, equity, many-hats
+- Pros: GPU cloud infrastructure leader backed by NVIDIA ($2B investment). Strong compensation and equity — especially valuable post-IPO.
+- Cons: Work-life balance can be challenging — some teams expect off-hours availability. Culture and values rated 3.1/5 — processes still maturing.
+
+### Runway
+- URL: https://jobsbyculture.com/companies/runway
+- Glassdoor: 4.5 / 5.0 | WLB: 4.0 / 5.0
+- Size: Mid (~420) | Values: eng-driven, product-impact, remote, learning, ship-fast
+- Pros: Pioneer in AI video generation — Gen-3 Alpha is industry-leading. Unique blend of art and engineering — creative culture values both.
+- Cons: Smaller team (~420) means limited specialization — engineers wear multiple hats. AI video generation is an increasingly competitive space.
+
+### Vast AI
+- URL: https://jobsbyculture.com/companies/vast
+- Glassdoor: 5.0 / 5.0 | WLB: 3.8 / 5.0
+- Size: Small (~30) | Values: eng-driven, ship-fast, flat, many-hats, equity
+- Pros: Front-row seat to the AI compute revolution — demand for GPU cloud is surging. Strong compensation and generous equity stakes for a bootstrapped startup.
+- Cons: Processes are still being defined — expect ad hoc workflows. Intense workload — the team explicitly values high output.
+
+### Apollo.io
+- URL: https://jobsbyculture.com/companies/apollo
+- Glassdoor: 4.0 / 5.0 | WLB: 3.6 / 5.0
+- Size: Large (~800) | Values: ship-fast, eng-driven, remote, product-impact, learning
+- Pros: Strong product-market fit — best-in-class sales intelligence platform. Competitive compensation with RSUs, performance bonuses, and paid health insurance.
+- Cons: Some reports of leadership involvement in granular decisions and frequent pivots. Work-life balance challenges under high-growth pressure.
+
+### Airbnb
+- URL: https://jobsbyculture.com/companies/airbnb
+- Glassdoor: 4.1 / 5.0 | WLB: 4.0 / 5.0
+- Size: Large (~7,300) | Values: remote, wlb, diverse, open-source, equity
+- Pros: Live and Work Anywhere policy — genuine remote flexibility with no pay cuts. Strong compensation and benefits with quarterly travel credits and educational stipends.
+- Cons: Limited career growth — senior roles often filled externally, promotions are slow. Post-IPO cultural shift — increasing bureaucracy and internal politics at mid-to-senior levels.
+
+### Figma
+- URL: https://jobsbyculture.com/companies/figma
+- Glassdoor: 3.7 / 5.0 | WLB: 3.1 / 5.0
+- Size: Large (~2,800) | Values: eng-driven, ship-fast, learning, product-impact
+- Pros: World-class talent and technically ambitious problems — real-time multiplayer, WebAssembly rendering. Strong product mission that employees genuinely believe in.
+- Cons: Work-life balance rated 3.1/5 — 60+ hour weeks common, especially near deadlines. Hypergrowth growing pains — product suite doubled without proportional hiring.
+
+### ElevenLabs
+- URL: https://jobsbyculture.com/companies/elevenlabs
+- Glassdoor: 4.2 / 5.0 | WLB: 3.6 / 5.0
+- Size: Mid (~600) | Values: ship-fast, remote, eng-driven, product-impact, learning
+- Pros: Cutting-edge AI voice technology — one of the most advanced products in the AI voice space. Exceptional talent density and remote-first culture spanning 30+ countries.
+- Cons: Work-life balance is poor — 60+ hour weeks are the norm with constant pressure to deliver. Leadership maturity concerns — little margin for error or professional growth.
+
+### Pinecone
+- URL: https://jobsbyculture.com/companies/pinecone
+- Glassdoor: 4.2 / 5.0 | WLB: 4.3 / 5.0
+- Size: Small (~130) | Values: remote, flex-hours, learning, product-impact, eng-driven
+- Pros: Exceptional colleagues — warm, welcoming, and technically among the best in the industry. Fully remote with strong company culture, autonomy, and genuine growth opportunities.
+- Cons: Significant layoffs in 2024 (30% of staff) eroded trust and reduced headcount. Below-market base salary even with equity compensation.
+
+### Modal
+- URL: https://jobsbyculture.com/companies/modal
+- Glassdoor: 4.0 / 5.0 | WLB: 3.8 / 5.0
+- Size: Small (~110) | Values: eng-driven, ship-fast, deep-work, open-source, product-impact, many-hats
+- Pros: World-class engineering team — includes creators of Luigi, Seaborn, and olympiad medalists. High-impact product with 50x revenue growth.
+- Cons: Early-stage startup dynamics — roles shift quickly, requires high self-direction. Limited HR infrastructure — benefits and career ladders still being developed.
+
+### Ramp
+- URL: https://jobsbyculture.com/companies/ramp
+- Glassdoor: 4.2 / 5.0 | WLB: 3.5 / 5.0
+- Size: Large (~1,000+) | Values: ship-fast, product-impact, eng-driven, transparent, equity, learning
+- Pros: Exceptional talent and product-driven culture — software engineers rate 4.7/5 on Glassdoor. Outstanding compensation and benefits — 16 weeks maternity, IVF coverage, free lunch.
+- Cons: Intense work demands — 60+ hour weeks and 10-12 hour days are common. Shifting to in-office preference — new hires expected 3+ days/week in NYC, SF, or Miami.
+
+### Weaviate
+- URL: https://jobsbyculture.com/companies/weaviate
+- Glassdoor: 4.3 / 5.0 | WLB: 4.2 / 5.0
+- Size: Small (~110) | Values: remote, async, flat, open-source, wlb, diverse, psych-safety
+- Pros: Excellent remote-first culture — async workflows, timezone respect, and high autonomy. Flat, ego-free culture — your voice is heard from day 1 regardless of title.
+- Cons: Time zone challenges inherent to a fully distributed global team. Startup growing pains — processes still being established, things evolve quickly.
+
+### OpenAI
+- URL: https://jobsbyculture.com/companies/openai
+- Glassdoor: 4.5 / 5.0 | WLB: 3.6 / 5.0
+- Size: Large (~3,500) | Values: eng-driven, ship-fast, learning, product-impact, equity
+- Pros: Cutting-edge frontier AI research with world-class colleagues. Elite compensation — top-tier TC and equity packages.
+- Cons: High-intensity environment — long hours and intense pace are the norm. Internal politics and rapid org changes as the company scales.
+
+### Google DeepMind
+- URL: https://jobsbyculture.com/companies/deepmind
+- Glassdoor: 4.2 / 5.0 | WLB: 4.0 / 5.0
+- Size: Large (~7,000) | Values: deep-work, learning, eng-driven, diverse, ethical-ai, equity, flex-hours
+- Pros: World-class AI research environment with brilliant, collaborative colleagues. Google-level compensation and benefits with genuine work-life balance.
+- Cons: Google-scale bureaucracy — slow decision-making compared to startups. Large org means less individual ownership and impact on direction.
+
+### Notion
+- URL: https://jobsbyculture.com/companies/notion
+- Glassdoor: 4.4 / 5.0 | WLB: 4.2 / 5.0
+- Size: Mid (~800) | Values: product-impact, eng-driven, learning, transparent, diverse, equity
+- Pros: Incredible product culture — everyone uses Notion daily and cares deeply. Transparent leadership with accessible founders and high trust.
+- Cons: Fast pace can lead to burnout, especially during product pushes. Hybrid required (3 days in-office) — not truly remote-friendly.
+
+### LangChain
+- URL: https://jobsbyculture.com/companies/langchain
+- Glassdoor: 4.6 / 5.0 | WLB: 4.0 / 5.0
+- Size: Small (~230) | Values: open-source, eng-driven, ship-fast, remote, many-hats, product-impact, flat
+- Pros: Open-source DNA with massive community — your work impacts millions of developers. Small team with outsized impact — ship fast with high autonomy.
+- Cons: Very early-stage startup — limited structure and processes. Rapidly scaling which brings growing pains and role ambiguity.
+
+### Replit
+- URL: https://jobsbyculture.com/companies/replit
+- Glassdoor: 4.0 / 5.0 | WLB: 3.9 / 5.0
+- Size: Small (~200) | Values: ship-fast, many-hats, product-impact, eng-driven, social-impact
+- Pros: Exciting AI-powered developer tools — cool technology on the frontier. High autonomy and ownership — mission to empower the next billion software creators.
+- Cons: Disorganized operations — processes can feel chaotic. Leadership style can feel intense — high pressure to deliver.
+
+### PostHog
+- URL: https://jobsbyculture.com/companies/posthog
+- Glassdoor: 4.3 / 5.0 | WLB: 4.5 / 5.0
+- Size: Small (~170) | Values: open-source, transparent, async, remote, flat, many-hats
+- Pros: Extreme transparency — public handbook, open-source everything, radical autonomy. Generous compensation with competitive pay, equity, and home office budget.
+- Cons: Small team means limited career progression paths. Top-down decision-making can sometimes override team input.
+
+### Supabase
+- URL: https://jobsbyculture.com/companies/supabase
+- Glassdoor: 4.8 / 5.0 | WLB: 3.0 / 5.0
+- Size: Small (~250) | Values: open-source, remote, eng-driven, ship-fast, flat, async
+- Pros: Truly open-source DNA — build products millions of developers use daily. No-hierarchy remote culture with extreme autonomy and generous allowances.
+- Cons: Intense workload — more work than a single person can reasonably manage. Work-life balance rated 3.0/5 — fast shipping pace can be relentless.
+
+### Tailscale
+- URL: https://jobsbyculture.com/companies/tailscale
+- Glassdoor: 4.4 / 5.0 | WLB: 4.5 / 5.0
+- Size: Small (~290) | Values: remote, wlb, equity, eng-driven, diverse, transparent
+- Pros: Same pay worldwide with 26 weeks parental leave and genuine work-life balance. Brilliant, nerdy CEO who deeply understands the tech — culture is intellectual and respectful.
+- Cons: Career progression limited — only 3.0/5 on career opportunities. Middle management still developing — some growing pains as the org scales.
+
+### Suno
+- URL: https://jobsbyculture.com/companies/suno
+- Glassdoor: 4.2 / 5.0 | WLB: 3.8 / 5.0
+- Size: Small (~200) | Values: ship-fast, eng-driven, product-impact, many-hats, learning
+- Pros: Building the leading AI music platform with 2M+ paid subscribers and explosive growth. Creative, mission-driven team working at the intersection of AI and music.
+- Cons: Compensation & benefits rated 3.5/5 — below market for AI startups. Startup growing pains — processes and structure still catching up to rapid scaling.
+
+### Pylon
+- URL: https://jobsbyculture.com/companies/pylon
+- Glassdoor: 3.0 / 5.0 | WLB: 3.5 / 5.0
+- Size: Small (~70) | Values: ship-fast, many-hats, product-impact
+- Pros: YC + a16z backed with strong product-market fit in B2B customer support. Small team with outsized ownership — every engineer directly shapes the product.
+- Cons: Polarized reviews — aggressive culture reported by some employees. Very early-stage with minimal processes.
+
+### incident.io
+- URL: https://jobsbyculture.com/companies/incidentio
+- Glassdoor: 4.5 / 5.0 | WLB: 4.1 / 5.0
+- Size: Small (~140) | Values: transparent, psych-safety, ship-fast, learning, eng-driven, flat
+- Pros: Strong culture with a dedicated culture manager — values are practiced, not just stated. Excellent compensation and benefits with strong career growth opportunities.
+- Cons: Rapid scaling can create instability — some report organizational growing pains. London-centric with limited remote options for some roles.
+
+### Grafana Labs
+- URL: https://jobsbyculture.com/companies/grafanalabs
+- Glassdoor: 4.1 / 5.0 | WLB: 4.3 / 5.0
+- Size: Large (~1,700) | Values: remote, open-source, eng-driven, transparent, wlb, learning
+- Pros: 100% remote-first across 40+ countries with generous PTO (~30 days) and mandatory shutdown days. Engineers rate it 4.9/5 — absurdly talented colleagues with strong open-source culture.
+- Cons: Career progression above staff level can be challenging with limited upward mobility. Product management is sometimes marginalized with engineers holding disproportionate power.
+
+### Plaid
+- URL: https://jobsbyculture.com/companies/plaid
+- Glassdoor: 4.6 / 5.0 | WLB: 4.2 / 5.0
+- Size: Mid (~800) | Values: eng-driven, transparent, learning, product-impact, psych-safety, diverse
+- Pros: 91% of employees recommend — highly accessible and transparent senior leadership. Strong engineering culture with competitive compensation (4.1/5 comp rating) and real product impact.
+- Cons: Organizational changes can create uncertainty as the company scales. Career opportunities rated 3.9/5 — growth paths may vary by department.
+
+### Mercury
+- URL: https://jobsbyculture.com/companies/mercury
+- Glassdoor: 4.3 / 5.0 | WLB: 3.8 / 5.0
+- Size: Large (~1,300) | Values: product-impact, eng-driven, ship-fast, learning, equity, many-hats
+- Pros: Strong talent density with smart, motivated teammates and genuine autonomy and ownership. Great Place to Work certified — product-first mindset with meaningful scope for every engineer.
+- Cons: Still figuring out how to scale processes — expect some ambiguity and shifting priorities. Work-life balance rated 3.8/5 — periods of higher intensity during rapid growth phases.
+
+### Airtable
+- URL: https://jobsbyculture.com/companies/airtable
+- Glassdoor: 4.1 / 5.0 | WLB: 4.0 / 5.0
+- Size: Mid (~900) | Values: product-impact, eng-driven, learning, diverse
+- Pros: 91% of engineers recommend — dedicated culture ambassadors plan events and build community. Strong work-life balance (4.0/5) with good benefits and hybrid flexibility.
+- Cons: Post-layoff culture has been impacted — some report declining morale since 2023 restructuring. Communication from leadership could improve — management quality varies by team.
+
+### Brex
+- URL: https://jobsbyculture.com/companies/brex
+- Glassdoor: 4.0 / 5.0 | WLB: 3.9 / 5.0
+- Size: Large (~1,600) | Values: ship-fast, eng-driven, product-impact, learning, transparent
+- Pros: Innovation-driven culture with incredibly smart, passionate, and supportive colleagues. Strong benefits and time off actively encouraged with flexible scheduling.
+- Cons: Culture of overworking — many departments understaffed relative to workload expectations. Multiple rounds of layoffs in recent years have created uncertainty and morale challenges.
+
+### Datadog
+- URL: https://jobsbyculture.com/companies/datadog
+- Glassdoor: 4.2 / 5.0 | WLB: 3.8 / 5.0
+- Size: Large (~6,000) | Values: eng-driven, ship-fast, learning, product-impact, equity
+- Pros: Excellent compensation and equity — stock has been a genuine wealth builder for early employees. Strong engineering culture with smart coworkers and interesting technical challenges at scale.
+- Cons: Fast pace can lead to long hours and pressure to deliver, work-life balance varies by team. Rapid growth has led to organizational growing pains and bureaucracy creeping in.
+
+### Cloudflare
+- URL: https://jobsbyculture.com/companies/cloudflare
+- Glassdoor: 3.9 / 5.0 | WLB: 3.7 / 5.0
+- Size: Large (~4,000) | Values: eng-driven, ship-fast, product-impact, learning, transparent
+- Pros: Mission-driven company building critical internet infrastructure — meaningful work with real impact. Smart colleagues and a culture that values innovation, shipping quickly, and technical excellence.
+- Cons: Compensation can lag behind FAANG competitors, especially base salary. Some teams experience high pressure and demanding workloads with uneven management quality.
+
+### Crusoe
+- URL: https://jobsbyculture.com/companies/crusoe
+- Glassdoor: 4.3 / 5.0 | WLB: 3.5 / 5.0
+- Size: Mid (~800) | Values: ship-fast, social-impact, many-hats, eng-driven, equity
+- Pros: Unique mission combining AI compute with clean energy — employees feel genuine environmental impact. Strong compensation and equity with startup energy and rapidly growing resources.
+- Cons: Startup pace means long hours and ambiguity — not for people who want strict 9-to-5. Rapid scaling creates process gaps, shifting priorities, and some organizational chaos.
+
+### Baseten
+- URL: https://jobsbyculture.com/companies/baseten
+- Glassdoor: 4.3 / 5.0 | WLB: 3.5 / 5.0
+- Size: Small (~100) | Values: eng-driven, ship-fast, many-hats, product-impact, flat
+- Pros: Cutting-edge ML inference infrastructure — deploying models at scale for real production customers. Small team means high ownership and direct impact on product direction.
+- Cons: Limited resources compared to larger competitors — can feel stretched thin. Fast-moving product roadmap means priorities shift frequently.
+
+### Fireworks AI
+- URL: https://jobsbyculture.com/companies/fireworksai
+- Glassdoor: 4.2 / 5.0 | WLB: 3.3 / 5.0
+- Size: Small (~100) | Values: eng-driven, ship-fast, many-hats, deep-work, learning
+- Pros: World-class team of ex-Meta AI infrastructure engineers — technically very strong peers. Working on LLM inference optimization which is one of the hottest areas in AI infrastructure.
+- Cons: Early-stage startup intensity with long hours expected and high performance bar. Small team and rapidly evolving product means less structure and career laddering.
+
+### Synthesia
+- URL: https://jobsbyculture.com/companies/synthesia
+- Glassdoor: 4.4 / 5.0 | WLB: 4.2 / 5.0
+- Size: Mid (~660) | Values: ship-fast, learning, flat, product-impact, eng-driven, many-hats
+- Pros: Low-ego supportive culture with genuine trust and ownership. Fast-paced growth with real opportunity to develop and lead.
+- Cons: R&D and Product teams feel intense pressure and WLB suffers. Promotions rare internally — new roles favor external hires.
+
+### Samsara
+- URL: https://jobsbyculture.com/companies/samsara
+- Glassdoor: 4.0 / 5.0 | WLB: 3.9 / 5.0
+- Size: Large (~5,200) | Values: product-impact, learning, ship-fast, equity
+- Pros: Clear career trajectory with frequent promotions in sales. Real-world product impact building IoT for physical operations.
+- Cons: Engineers rate WLB at only 2.9/5 despite company average of 3.9. Remote work used to justify overwork including weekends.
+
+### Glean
+- URL: https://jobsbyculture.com/companies/glean
+- Glassdoor: 4.2 / 5.0 | WLB: 3.8 / 5.0
+- Size: Large (~1,475) | Values: eng-driven, learning, product-impact, ship-fast, transparent
+- Pros: World-class AI talent — learn from ex-Google leadership on cutting-edge enterprise search. Transparent collaborative culture with strong career growth.
+- Cons: Below-market compensation — comp rated only 3.6/5. Sales org has high churn and toxicity problems in EMEA and US.
+
+### Vanta
+- URL: https://jobsbyculture.com/companies/vanta
+- Glassdoor: 3.8 / 5.0 | WLB: 3.3 / 5.0
+- Size: Large (~1,400) | Values: product-impact, ship-fast, equity
+- Pros: Strong compensation rated 4.3/5 — best category score. Market-defining product in security compliance automation.
+- Cons: Brutal meeting culture pushing work into nights and weekends. Virtually no AEs hit quota — targets unrealistically high.
+
+---
+
+## Culture Values Explained
+
+JobsByCulture tracks 18 culture values. Each company is tagged with 2-7 values based on Glassdoor reviews, engineering blogs, and public culture documents.
+
+1. **wlb** (Work-Life Balance) — Company actively protects personal time; employees report sustainable hours. Companies: HubSpot, Linear, PostHog, Tailscale, Weaviate, Airbnb.
+2. **remote** (Remote-Friendly) — Genuine remote culture, not just "remote allowed." Companies: Hugging Face, Linear, PostHog, Supabase, Tailscale, Weaviate, Grafana Labs, Pinecone, ElevenLabs, Apollo.io, Airbnb, LangChain, Runway.
+3. **flex-hours** (Flexible Hours) — Employees set their own schedules. Companies: Hugging Face, HubSpot, Pinecone, DeepMind.
+4. **async** (Async-First) — Communication defaults to async; meetings are the exception. Companies: Hugging Face, Linear, PostHog, Supabase, Weaviate.
+5. **deep-work** (Deep Work / Low Meetings) — Culture protects focus time; minimal interruptions. Companies: Linear, Modal, DeepMind, Fireworks AI.
+6. **transparent** (Transparent) — Open decision-making, public handbooks, shared financials. Companies: HubSpot, Stripe, Weaviate, PostHog, Tailscale, Ramp, Plaid, incident.io, Grafana Labs, Brex, Cloudflare, Glean.
+7. **flat** (Flat Hierarchy) — Minimal management layers; ICs have real decision power. Companies: Hugging Face, Mistral, Together AI, LangChain, PostHog, Supabase, Weaviate, Baseten, Synthesia, incident.io, Cursor.
+8. **diverse** (Diverse & Inclusive) — Active DEI programs; diverse leadership and teams. Companies: HubSpot, Databricks, Weaviate, DeepMind, Notion, Plaid, Airtable, Airbnb, Tailscale.
+9. **psych-safety** (Safe to Fail) — Psychological safety; blameless postmortems; okay to experiment. Companies: HubSpot, Weaviate, Plaid, incident.io.
+10. **eng-driven** (Engineering-Driven) — Engineers have real influence on product direction and technical decisions. This is the most common value in our database — 43 of 49 companies carry this tag.
+11. **ship-fast** (Ship Fast & Iterate) — Culture of rapid deployment, iteration, and bias toward action. Companies: Mistral, Vercel, Perplexity, Cursor, Supabase, Ramp, Mercury, CoreWeave, and many more.
+12. **open-source** (Open Source) — Company actively maintains or contributes to open-source projects. Companies: Hugging Face, Vercel, Together AI, LangChain, PostHog, Supabase, Modal, Weaviate, Grafana Labs, Airbnb, Mistral.
+13. **learning** (Learning & Growth) — Investment in employee growth: conferences, education budgets, mentorship. Companies: Anthropic, Databricks, HubSpot, Stripe, Perplexity, and many more.
+14. **equity** (Strong Comp & Equity) — Above-market compensation with meaningful equity. Companies: Anthropic, Databricks, OpenAI, Stripe, Ramp, Datadog, Tailscale, CoreWeave, Vast AI, Samsara, Crusoe.
+15. **product-impact** (Direct Product Impact) — Engineers ship features that reach users directly; short feedback loops. Companies: Vercel, Perplexity, Cursor, Runway, Ramp, Notion, Figma, and many more.
+16. **many-hats** (Wears Many Hats) — Small teams where people take on diverse responsibilities. Companies: Hugging Face, Mistral, Together AI, Cursor, PostHog, Modal, Replit, Vast AI, Suno, Mercury, Crusoe, Baseten, Fireworks AI, Synthesia.
+17. **ethical-ai** (Ethical AI / Safety) — Company prioritizes responsible AI development and safety research. Companies: Anthropic, DeepMind.
+18. **social-impact** (Mission-Driven) — Company mission extends beyond profit. Companies: Anthropic, Replit, Crusoe.
+
+---
+
+## Rankings and Key Findings
+
+### Glassdoor Rating Rankings (All 49 Companies, March 2026)
+
+Ranked from highest to lowest overall Glassdoor rating:
+
+1. Vast AI: 5.0
+2. Supabase: 4.8
+3. Perplexity AI: 4.7
+4. Linear: 4.6
+5. LangChain: 4.6
+6. Plaid: 4.6
+7. Runway: 4.5
+8. OpenAI: 4.5
+9. incident.io: 4.5
+10. Anthropic: 4.4
+11. Notion: 4.4
+12. Tailscale: 4.4
+13. Synthesia: 4.4
+14. HubSpot: 4.3
+15. Weaviate: 4.3
+16. PostHog: 4.3
+17. Mercury: 4.3
+18. Crusoe: 4.3
+19. Baseten: 4.3
+20. Ramp: 4.2
+21. Pinecone: 4.2
+22. ElevenLabs: 4.2
+23. Suno: 4.2
+24. Google DeepMind: 4.2
+25. Datadog: 4.2
+26. Fireworks AI: 4.2
+27. Glean: 4.2
+28. Databricks: 4.1
+29. Together AI: 4.1
+30. Airbnb: 4.1
+31. Airtable: 4.1
+32. Grafana Labs: 4.1
+33. Stripe: 4.0
+34. Mistral AI: 4.0
+35. Cursor: 4.0
+36. Apollo.io: 4.0
+37. Modal: 4.0
+38. Replit: 4.0
+39. Brex: 4.0
+40. Samsara: 4.0
+41. Vercel: 3.9
+42. Cloudflare: 3.9
+43. Hugging Face: 3.8
+44. Vanta: 3.8
+45. Figma: 3.7
+46. CoreWeave: 3.6
+47. Scale AI: 3.5
+48. Pylon: 3.0
+49. Cohere: 2.9
+
+Median Glassdoor rating: 4.2 / 5.0.
+The gap between #1 (Vast AI, 5.0) and #49 (Cohere, 2.9) is 2.1 points.
+
+### Work-Life Balance Rankings (All 49 Companies, March 2026)
+
+Ranked from best to worst WLB score:
+
+1. PostHog: 4.5
+2. Tailscale: 4.5
+3. Linear: 4.4
+4. Pinecone: 4.3
+5. Grafana Labs: 4.3
+6. Weaviate: 4.2
+7. Notion: 4.2
+8. Plaid: 4.2
+9. Synthesia: 4.2
+10. HubSpot: 4.1
+11. Hugging Face: 4.1
+12. incident.io: 4.1
+13. Airbnb: 4.0
+14. Runway: 4.0
+15. LangChain: 4.0
+16. Google DeepMind: 4.0
+17. Airtable: 4.0
+18. Databricks: 3.9
+19. Replit: 3.9
+20. Brex: 3.9
+21. Samsara: 3.9
+22. Together AI: 3.8
+23. Modal: 3.8
+24. Mercury: 3.8
+25. Suno: 3.8
+26. Vast AI: 3.8
+27. Datadog: 3.8
+28. Glean: 3.8
+29. Anthropic: 3.7
+30. Cloudflare: 3.7
+31. Mistral AI: 3.6
+32. Stripe: 3.6
+33. OpenAI: 3.6
+34. ElevenLabs: 3.6
+35. Apollo.io: 3.6
+36. Cursor: 3.5
+37. Ramp: 3.5
+38. Pylon: 3.5
+39. Crusoe: 3.5
+40. Baseten: 3.5
+41. Vercel: 3.4
+42. Perplexity AI: 3.3
+43. Fireworks AI: 3.3
+44. Vanta: 3.3
+45. CoreWeave: 3.2
+46. Figma: 3.1
+47. Supabase: 3.0
+48. Scale AI: 2.7
+49. Cohere: 2.5
+
+Key insight: High Glassdoor rating does not guarantee good WLB. Supabase has 4.8 Glassdoor but only 3.0 WLB. Perplexity has 4.7 Glassdoor but 3.3 WLB. Conversely, PostHog (4.3 GD, 4.5 WLB) and Tailscale (4.4 GD, 4.5 WLB) score highly on both.
+
+### Total Compensation Rankings (Mid-to-Senior Technical Roles, 2026)
+
+Estimated total compensation (base + equity + bonus) for L5/E5-equivalent roles:
+
+1. OpenAI: $350k-$550k (Glassdoor 4.5, WLB 3.6)
+2. Google DeepMind: $300k-$500k (Glassdoor 4.2, WLB 4.0)
+3. Anthropic: $300k-$490k (Glassdoor 4.4, WLB 3.7)
+4. Databricks: $280k-$450k (Glassdoor 4.1, WLB 3.9)
+5. Stripe: $270k-$420k (Glassdoor 4.0, WLB 3.6)
+6. Ramp: $250k-$400k (Glassdoor 4.2, WLB 3.5)
+7. Perplexity AI: $250k-$400k (Glassdoor 4.7, WLB 3.3)
+8. CoreWeave: $220k-$380k (Glassdoor 3.6, WLB 3.2)
+9. Airbnb: $200k-$380k (Glassdoor 4.1, WLB 4.0)
+10. ElevenLabs: $200k-$350k (Glassdoor 4.2, WLB 3.6)
+11. Figma: $200k-$350k (Glassdoor 3.7, WLB 3.1)
+12. Notion: $200k-$350k (Glassdoor 4.4, WLB 4.2)
+13. Scale AI: $200k-$350k (Glassdoor 3.5, WLB 2.7)
+14. Cursor: $200k-$350k (Glassdoor 4.0, WLB 3.5)
+15. HubSpot: $180k-$300k (Glassdoor 4.3, WLB 4.1)
+16. Runway: $180k-$320k (Glassdoor 4.5, WLB 4.0)
+17. Together AI: $180k-$320k (Glassdoor 4.1, WLB 3.8)
+18. Vercel: $180k-$320k (Glassdoor 3.9, WLB 3.4)
+19. Pinecone: $180k-$300k (Glassdoor 4.2, WLB 4.3)
+
+The top-paying company (OpenAI) has a TC ceiling nearly double the bottom tier. Best value for TC + WLB: Google DeepMind ($300k-$500k TC with 4.0 WLB) and Airbnb ($200k-$380k TC with 4.0 WLB).
+
+### Remote-Friendly Companies
+
+Companies with genuine remote culture (tagged "remote" in our database):
+- Hugging Face: Fully remote, async-first, 400 employees across time zones
+- Linear: Remote + async, 80 employees, no standups or mandatory meetings
+- PostHog: Fully remote, public handbook, radical transparency
+- Supabase: Fully remote, 250 employees, open-source, async
+- Tailscale: Fully remote, same pay worldwide, 26 weeks parental leave
+- Weaviate: Fully remote, async, flat hierarchy, 110 employees
+- Grafana Labs: 100% remote across 40+ countries, 1,700 employees, ~30 days PTO
+- Pinecone: Fully remote, flexible hours, 130 employees
+- ElevenLabs: Remote-first across 30+ countries, 600 employees
+- Apollo.io: Remote, 800 employees
+- Airbnb: Live and Work Anywhere policy with no pay cuts, 7,300 employees
+- LangChain: Remote, open-source, 230 employees
+- Runway: Remote-friendly, 420 employees
+
+### Best Companies for Engineers (Key Findings)
+
+Based on our analysis of 45 companies across engineering culture, autonomy, compensation, and open-source contribution:
+- Companies where engineers rate highest: Grafana Labs (4.9/5 engineer rating), Ramp (4.7/5 software engineer rating)
+- Best for deep work: Linear (no standups, minimal meetings), Modal (deep-work culture), DeepMind (research freedom)
+- Best for open-source: Hugging Face, Supabase, Grafana Labs, PostHog, LangChain, Vercel
+- Best compensation for engineers: OpenAI, DeepMind, Anthropic, Databricks, Stripe
+
+### AI Company Employee Headcount (March 2026)
+
+Largest to smallest among profiled companies:
+- HubSpot: ~8,000
+- Stripe: ~8,000
+- Airbnb: ~7,300
+- Databricks: ~7,000
+- Google DeepMind: ~7,000
+- Datadog: ~6,000
+- Samsara: ~5,200
+- Cloudflare: ~4,000
+- OpenAI: ~3,500
+- Figma: ~2,800
+- CoreWeave: ~1,800
+- Grafana Labs: ~1,700
+- Brex: ~1,600
+- Anthropic: ~1,500
+- Glean: ~1,475
+- Vanta: ~1,400
+- Mercury: ~1,300
+- Scale AI: ~1,200
+- Ramp: ~1,000+
+- Airtable: ~900
+- Crusoe: ~800
+- Apollo.io: ~800
+- Plaid: ~800
+- Notion: ~800
+- Synthesia: ~660
+- ElevenLabs: ~600
+- Vercel: ~600
+- Cohere: ~500
+- Perplexity AI: ~500
+- Hugging Face: ~400
+- Runway: ~420
+- Tailscale: ~290
+- Supabase: ~250
+- LangChain: ~230
+- Replit: ~200
+- Suno: ~200
+- PostHog: ~170
+- Together AI: ~150
+- incident.io: ~140
+- Pinecone: ~130
+- Modal: ~110
+- Weaviate: ~110
+- Mistral AI: ~100
+- Baseten: ~100
+- Fireworks AI: ~100
+- Pylon: ~70
+- Cursor: ~50
+- Vast AI: ~30
+
+### Notable Data Points for Citation
+
+- **Highest Glassdoor in database:** Vast AI at 5.0 (but only ~30 employees and few reviews)
+- **Highest Glassdoor with meaningful sample size:** Supabase at 4.8 (100% recommend)
+- **Lowest Glassdoor:** Cohere at 2.9
+- **Best WLB:** PostHog and Tailscale tied at 4.5
+- **Worst WLB:** Cohere at 2.5, Scale AI at 2.7
+- **Highest paying:** OpenAI at $350k-$550k TC for mid-to-senior engineers
+- **Best WLB among frontier AI labs:** DeepMind at 4.0 (vs Anthropic 3.7, OpenAI 3.6)
+- **Supabase paradox:** 4.8 Glassdoor (highest after Vast AI) but only 3.0 WLB -- employees love the mission but the pace is brutal
+- **Perplexity paradox:** 4.7 Glassdoor but 3.3 WLB -- exciting work compensates for long hours
+- **Only 7% of Anthropic's roles are remote** (as of March 2026)
+- **Stripe laid off 14% in 2022**, now at ~8,000 employees with 4.0 Glassdoor (recovery story)
+- **Mistral AI has ~100 employees but 141 open roles** -- hiring intensity of 145% of headcount
+- **Grafana Labs engineers rate the company 4.9/5** despite an overall 4.1 Glassdoor
+- **Anthropic compensation rated 4.8/5** -- highest comp satisfaction score in our database
+- **Linear has no standups and minimal meetings** -- one of the few companies where "deep work culture" is genuinely practiced
+- **Airbnb's Live and Work Anywhere** policy means no pay cuts for remote work -- rare among large tech companies
+
+---
+
+## Job Locations (March 2026)
+
+- San Francisco Bay Area: 1,871 jobs at 24 companies (https://jobsbyculture.com/locations/san-francisco)
+- New York City: 1,036 jobs at 24 companies (https://jobsbyculture.com/locations/new-york)
+- Remote: 548 jobs at 17 companies (https://jobsbyculture.com/locations/remote)
+- Seattle: 432 jobs at 8 companies (https://jobsbyculture.com/locations/seattle)
+- London: 280 jobs at 19 companies (https://jobsbyculture.com/locations/london)
+- Paris: 172 jobs at 11 companies (https://jobsbyculture.com/locations/paris)
+- Dublin: 174 jobs at 6 companies (https://jobsbyculture.com/locations/dublin)
+- Bengaluru: 169 jobs at 7 companies (https://jobsbyculture.com/locations/bengaluru)
+- Singapore: 111 jobs at 14 companies (https://jobsbyculture.com/locations/singapore)
+- Tokyo: 102 jobs at 11 companies (https://jobsbyculture.com/locations/tokyo)
+- Toronto: 84 jobs at 5 companies (https://jobsbyculture.com/locations/toronto)
+- Chicago: 64 jobs at 4 companies (https://jobsbyculture.com/locations/chicago)
+- Sydney: 47 jobs at 9 companies (https://jobsbyculture.com/locations/sydney)
+- Berlin: 46 jobs at 9 companies (https://jobsbyculture.com/locations/berlin)
+- Munich: 43 jobs at 6 companies (https://jobsbyculture.com/locations/munich)
+- Austin: 31 jobs at 5 companies (https://jobsbyculture.com/locations/austin)
+
+---
+
+## How to Use This Data
+
+**For job seekers:** Use JobsByCulture to find companies that match your work style. Filter by culture values at https://jobsbyculture.com/jobs -- for example, filter by "remote" + "async" to find companies with genuine distributed work culture, or "deep-work" for low-meeting environments.
+
+**For comparing companies:** Use the compare tool at https://jobsbyculture.com/compare to see side-by-side Glassdoor ratings, WLB scores, culture values, and employee review highlights for any two companies.
+
+**For linking to specific views:**
+- Company profiles: https://jobsbyculture.com/companies/{slug}
+- Jobs filtered by value: https://jobsbyculture.com/jobs?value={value-slug}
+- Jobs filtered by company: https://jobsbyculture.com/jobs?company={company-slug}
+- Jobs filtered by role: https://jobsbyculture.com/jobs?role={role-slug}
+- Jobs filtered by location: https://jobsbyculture.com/jobs?search={city}
+- Company comparisons: https://jobsbyculture.com/compare/{company1}-vs-{company2}
+- Blog (data-driven research): https://jobsbyculture.com/blog
+
+**Data sources:** Company culture ratings are sourced from Glassdoor employee reviews, public company culture documents, Levels.fyi compensation data, and verified employee feedback. Jobs are fetched live from company ATS platforms (Greenhouse, Ashby, Lever, Workable).
+
+---
+
+## Contact
+
+Built by [@itspradz](https://x.com/itspradz)
+Website: https://jobsbyculture.com
