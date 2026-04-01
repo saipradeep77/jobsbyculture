@@ -91,5 +91,17 @@ const startIdx = html.indexOf(START_MARKER) + START_MARKER.length;
 const endIdx = html.indexOf(END_MARKER);
 html = html.slice(0, startIdx) + '\n' + cardsHtml + '        ' + html.slice(endIdx);
 
+// Also update the inline CV object for instant hero count
+const cv = {};
+for (const [slug, co] of Object.entries(companies)) {
+    cv[slug] = co.values;
+}
+const cvJson = JSON.stringify(cv);
+const cvPattern = /let CV = \{[^;]+\};/;
+if (cvPattern.test(html)) {
+    html = html.replace(cvPattern, `let CV = ${cvJson};`);
+    console.log(`✓ Updated inline CV object (${Object.keys(cv).length} companies)`);
+}
+
 writeFileSync(indexPath, html);
 console.log(`✓ Regenerated ${Object.keys(companies).length} company cards in index.html`);
