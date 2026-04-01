@@ -1,16 +1,16 @@
 {
-  "fetchedAt": "2026-03-31T05:46:55.893Z",
+  "fetchedAt": "2026-04-01T05:58:42.691Z",
   "dateRange": {
-    "start": "2026-03-03",
-    "end": "2026-03-31"
+    "start": "2026-03-04",
+    "end": "2026-04-01"
   },
   "summary": {
     "totalClicks": 142,
-    "totalImpressions": 31381,
-    "avgCTR": 0.45,
-    "avgPosition": 8.6,
+    "totalImpressions": 31187,
+    "avgCTR": 0.46,
+    "avgPosition": 8.5,
     "totalQueries": 1000,
-    "totalPages": 748
+    "totalPages": 747
   },
   "opportunities": {
     "lowCTR": [
@@ -146,9 +146,9 @@
         "page": "https://www.jobsbyculture.com/companies/anthropic",
         "path": "https://www.jobsbyculture.com/companies/anthropic",
         "clicks": 0,
-        "impressions": 408,
+        "impressions": 377,
         "ctr": 0,
-        "position": 26.1
+        "position": 26.6
       },
       {
         "page": "https://jobsbyculture.com/companies/perplexity",
@@ -242,9 +242,9 @@
       {
         "query": "anthropic wlb",
         "clicks": 0,
-        "impressions": 55,
+        "impressions": 54,
         "ctr": 0,
-        "position": 10.2
+        "position": 10
       },
       {
         "query": "anthropic ai company size employees 2026",
@@ -574,9 +574,9 @@
         "page": "https://www.jobsbyculture.com/companies/anthropic",
         "path": "https://www.jobsbyculture.com/companies/anthropic",
         "clicks": 0,
-        "impressions": 408,
+        "impressions": 377,
         "ctr": 0,
-        "position": 26.1
+        "position": 26.6
       },
       {
         "page": "https://jobsbyculture.com/companies/airbnb",
@@ -614,7 +614,7 @@
         "page": "https://jobsbyculture.com/companies/vast",
         "path": "/companies/vast",
         "clicks": 0,
-        "impressions": 247,
+        "impressions": 241,
         "ctr": 0,
         "position": 9.7
       },
@@ -689,9 +689,9 @@
       "page": "https://jobsbyculture.com/",
       "path": "/",
       "clicks": 5,
-      "impressions": 230,
-      "ctr": 2.17,
-      "position": 7.8
+      "impressions": 225,
+      "ctr": 2.22,
+      "position": 7.6
     },
     {
       "page": "https://jobsbyculture.com/blog/working-at-deepmind-2026",
@@ -769,9 +769,9 @@
       "page": "https://jobsbyculture.com/companies/together",
       "path": "/companies/together",
       "clicks": 2,
-      "impressions": 216,
-      "ctr": 0.93,
-      "position": 11.5
+      "impressions": 193,
+      "ctr": 1.04,
+      "position": 12
     },
     {
       "page": "https://jobsbyculture.com/compare/openai-vs-microsoft",
@@ -2178,7 +2178,7 @@
     {
       "query": "anthropic careers",
       "clicks": 0,
-      "impressions": 34,
+      "impressions": 33,
       "ctr": 0,
       "position": 54.6
     },
@@ -2745,9 +2745,9 @@
     {
       "query": "anthropic glassdoor",
       "clicks": 0,
-      "impressions": 11,
+      "impressions": 9,
       "ctr": 0,
-      "position": 19.5
+      "position": 18.1
     },
     {
       "query": "anthropic glassdoor rating 2026",
@@ -2876,13 +2876,6 @@
       "position": 45
     },
     {
-      "query": "anthropic internship",
-      "clicks": 0,
-      "impressions": 1,
-      "ctr": 0,
-      "position": 90
-    },
-    {
       "query": "anthropic interpretability team",
       "clicks": 0,
       "impressions": 1,
@@ -2906,9 +2899,9 @@
     {
       "query": "anthropic jobs",
       "clicks": 0,
-      "impressions": 8,
+      "impressions": 5,
       "ctr": 0,
-      "position": 55
+      "position": 50.2
     },
     {
       "query": "anthropic jobs london",
@@ -3480,9 +3473,9 @@
     {
       "query": "anthropic wlb",
       "clicks": 0,
-      "impressions": 55,
+      "impressions": 54,
       "ctr": 0,
-      "position": 10.2
+      "position": 10
     },
     {
       "query": "anthropic work",
@@ -4094,13 +4087,6 @@
       "position": 26
     },
     {
-      "query": "careers stripe",
-      "clicks": 0,
-      "impressions": 1,
-      "ctr": 0,
-      "position": 81
-    },
-    {
       "query": "careers.anthropic",
       "clicks": 0,
       "impressions": 1,
@@ -4253,13 +4239,6 @@
       "impressions": 1,
       "ctr": 0,
       "position": 52
-    },
-    {
-      "query": "cohere values",
-      "clicks": 0,
-      "impressions": 2,
-      "ctr": 0,
-      "position": 27
     },
     {
       "query": "cohere vs mistral ai comparison for small businesses",
@@ -4465,20 +4444,6 @@
       "position": 74
     },
     {
-      "query": "core weave careers",
-      "clicks": 0,
-      "impressions": 1,
-      "ctr": 0,
-      "position": 37
-    },
-    {
-      "query": "corewave jobs",
-      "clicks": 0,
-      "impressions": 1,
-      "ctr": 0,
-      "position": 24
-    },
-    {
       "query": "coreweave bellevue",
       "clicks": 0,
       "impressions": 1,
@@ -4495,16 +4460,16 @@
     {
       "query": "coreweave career",
       "clicks": 0,
-      "impressions": 2,
+      "impressions": 1,
       "ctr": 0,
-      "position": 24
+      "position": 26
     },
     {
       "query": "coreweave careers",
       "clicks": 0,
-      "impressions": 16,
+      "impressions": 13,
       "ctr": 0,
-      "position": 27
+      "position": 27.7
     },
     {
       "query": "coreweave company",
@@ -4563,13 +4528,6 @@
       "position": 7.2
     },
     {
-      "query": "coreweave employee reviews",
-      "clicks": 0,
-      "impressions": 2,
-      "ctr": 0,
-      "position": 22.5
-    },
-    {
       "query": "coreweave employees 2026",
       "clicks": 0,
       "impressions": 5,
@@ -4579,9 +4537,9 @@
     {
       "query": "coreweave glassdoor",
       "clicks": 0,
-      "impressions": 3,
+      "impressions": 2,
       "ctr": 0,
-      "position": 16.3
+      "position": 14.5
     },
     {
       "query": "coreweave gpu pricing 2026",
@@ -4591,25 +4549,11 @@
       "position": 66
     },
     {
-      "query": "coreweave hiring",
-      "clicks": 0,
-      "impressions": 1,
-      "ctr": 0,
-      "position": 17
-    },
-    {
-      "query": "coreweave internships",
-      "clicks": 0,
-      "impressions": 1,
-      "ctr": 0,
-      "position": 25
-    },
-    {
       "query": "coreweave jobs",
       "clicks": 0,
-      "impressions": 3,
+      "impressions": 2,
       "ctr": 0,
-      "position": 22.7
+      "position": 25
     },
     {
       "query": "coreweave number of employees",
@@ -4640,13 +4584,6 @@
       "position": 26
     },
     {
-      "query": "coreweave sunnyvale",
-      "clicks": 0,
-      "impressions": 1,
-      "ctr": 0,
-      "position": 27
-    },
-    {
       "query": "coreweave work culture",
       "clicks": 0,
       "impressions": 2,
@@ -4659,13 +4596,6 @@
       "impressions": 1,
       "ctr": 0,
       "position": 17
-    },
-    {
-      "query": "corweave careers",
-      "clicks": 0,
-      "impressions": 1,
-      "ctr": 0,
-      "position": 32
     },
     {
       "query": "crosby ai careers",
@@ -6903,9 +6833,9 @@
     {
       "query": "job stripe",
       "clicks": 0,
-      "impressions": 2,
+      "impressions": 1,
       "ctr": 0,
-      "position": 57
+      "position": 46
     },
     {
       "query": "jobbrex company",
@@ -7638,9 +7568,9 @@
     {
       "query": "open source specialist",
       "clicks": 0,
-      "impressions": 7,
+      "impressions": 4,
       "ctr": 0,
-      "position": 70.7
+      "position": 69.8
     },
     {
       "query": "openai careers",
@@ -7918,9 +7848,9 @@
     {
       "query": "perplexity ai careers",
       "clicks": 0,
-      "impressions": 21,
+      "impressions": 20,
       "ctr": 0,
-      "position": 43.2
+      "position": 43.1
     },
     {
       "query": "perplexity ai careers culture",
@@ -8166,6 +8096,76 @@
       "impressions": 43,
       "ctr": 0,
       "position": 6.8
+    },
+    {
+      "query": "perplexity ai office",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 69.5
+    },
+    {
+      "query": "perplexity ai open roles 2026",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 6
+    },
+    {
+      "query": "perplexity ai ownership 2026",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 10
+    },
+    {
+      "query": "perplexity ai parent company 2026",
+      "clicks": 0,
+      "impressions": 5,
+      "ctr": 0,
+      "position": 5.8
+    },
+    {
+      "query": "perplexity ai salary",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 36
+    },
+    {
+      "query": "perplexity ai sales jobs",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 11
+    },
+    {
+      "query": "perplexity ai team size 2026",
+      "clicks": 0,
+      "impressions": 8,
+      "ctr": 0,
+      "position": 2
+    },
+    {
+      "query": "perplexity ai team size employees 2026",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 4
+    },
+    {
+      "query": "perplexity ai technology stack 2026",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 9
+    },
+    {
+      "query": "perplexity ai total employees 2026",
+      "clicks": 0,
+      "impressions": 3,
+      "ctr": 0,
+      "position": 5
     }
   ],
   "allPages": [
@@ -8205,9 +8205,9 @@
       "page": "https://jobsbyculture.com/",
       "path": "/",
       "clicks": 5,
-      "impressions": 230,
-      "ctr": 2.17,
-      "position": 7.8
+      "impressions": 225,
+      "ctr": 2.22,
+      "position": 7.6
     },
     {
       "page": "https://jobsbyculture.com/blog/working-at-deepmind-2026",
@@ -8285,9 +8285,9 @@
       "page": "https://jobsbyculture.com/companies/together",
       "path": "/companies/together",
       "clicks": 2,
-      "impressions": 216,
-      "ctr": 0.93,
-      "position": 11.5
+      "impressions": 193,
+      "ctr": 1.04,
+      "position": 12
     },
     {
       "page": "https://jobsbyculture.com/compare/openai-vs-microsoft",
@@ -8797,7 +8797,7 @@
       "page": "https://jobsbyculture.com/companies/cohere",
       "path": "/companies/cohere",
       "clicks": 0,
-      "impressions": 117,
+      "impressions": 112,
       "ctr": 0,
       "position": 16.5
     },
@@ -8933,7 +8933,7 @@
       "page": "https://jobsbyculture.com/companies/vast",
       "path": "/companies/vast",
       "clicks": 0,
-      "impressions": 247,
+      "impressions": 241,
       "ctr": 0,
       "position": 9.7
     },
@@ -12213,17 +12213,17 @@
       "page": "https://jobsbyculture.com/jobs?company=perplexity",
       "path": "/jobs?company=perplexity",
       "clicks": 0,
-      "impressions": 125,
+      "impressions": 92,
       "ctr": 0,
-      "position": 21.6
+      "position": 25.8
     },
     {
       "page": "https://jobsbyculture.com/jobs?company=together",
       "path": "/jobs?company=together",
       "clicks": 0,
-      "impressions": 15,
+      "impressions": 13,
       "ctr": 0,
-      "position": 23
+      "position": 25
     },
     {
       "page": "https://jobsbyculture.com/jobs?value=equity",
@@ -12245,9 +12245,9 @@
       "page": "https://jobsbyculture.com/jobs?value=remote",
       "path": "/jobs?value=remote",
       "clicks": 0,
-      "impressions": 48,
+      "impressions": 19,
       "ctr": 0,
-      "position": 9.8
+      "position": 12.7
     },
     {
       "page": "https://jobsbyculture.com/locations/austin",
@@ -14037,17 +14037,17 @@
       "page": "https://www.jobsbyculture.com/companies/anthropic",
       "path": "https://www.jobsbyculture.com/companies/anthropic",
       "clicks": 0,
-      "impressions": 408,
+      "impressions": 377,
       "ctr": 0,
-      "position": 26.1
+      "position": 26.6
     },
     {
       "page": "https://www.jobsbyculture.com/companies/stripe",
       "path": "https://www.jobsbyculture.com/companies/stripe",
       "clicks": 0,
-      "impressions": 34,
+      "impressions": 28,
       "ctr": 0,
-      "position": 40.5
+      "position": 38.5
     },
     {
       "page": "https://www.jobsbyculture.com/jobs?company=cohere",
@@ -14061,17 +14061,17 @@
       "page": "https://www.jobsbyculture.com/jobs?company=coreweave",
       "path": "https://www.jobsbyculture.com/jobs?company=coreweave",
       "clicks": 0,
-      "impressions": 52,
+      "impressions": 27,
       "ctr": 0,
-      "position": 22.3
+      "position": 21
     },
     {
       "page": "https://www.jobsbyculture.com/jobs?company=stripe",
       "path": "https://www.jobsbyculture.com/jobs?company=stripe",
       "clicks": 0,
-      "impressions": 115,
+      "impressions": 94,
       "ctr": 0,
-      "position": 40.5
+      "position": 38.3
     },
     {
       "page": "https://www.jobsbyculture.com/jobs?company=vercel",
@@ -14101,9 +14101,9 @@
       "page": "https://www.jobsbyculture.com/jobs?value=async",
       "path": "https://www.jobsbyculture.com/jobs?value=async",
       "clicks": 0,
-      "impressions": 4,
+      "impressions": 3,
       "ctr": 0,
-      "position": 11
+      "position": 12
     },
     {
       "page": "https://www.jobsbyculture.com/jobs?value=ethical-ai",
@@ -14125,17 +14125,17 @@
       "page": "https://www.jobsbyculture.com/jobs?value=many-hats",
       "path": "https://www.jobsbyculture.com/jobs?value=many-hats",
       "clicks": 0,
-      "impressions": 18,
+      "impressions": 15,
       "ctr": 0,
-      "position": 8.5
+      "position": 9.3
     },
     {
       "page": "https://www.jobsbyculture.com/jobs?value=open-source",
       "path": "https://www.jobsbyculture.com/jobs?value=open-source",
       "clicks": 0,
-      "impressions": 13,
+      "impressions": 10,
       "ctr": 0,
-      "position": 53.9
+      "position": 48.5
     },
     {
       "page": "https://www.jobsbyculture.com/jobs?value=psych-safety",
@@ -14144,14 +14144,6 @@
       "impressions": 1,
       "ctr": 0,
       "position": 3
-    },
-    {
-      "page": "https://www.jobsbyculture.com/jobs?value=remote",
-      "path": "https://www.jobsbyculture.com/jobs?value=remote",
-      "clicks": 0,
-      "impressions": 1,
-      "ctr": 0,
-      "position": 7
     }
   ],
   "queryPageMap": [
@@ -15600,9 +15592,9 @@
       "page": "https://www.jobsbyculture.com/companies/anthropic",
       "path": "https://www.jobsbyculture.com/companies/anthropic",
       "clicks": 0,
-      "impressions": 14,
+      "impressions": 13,
       "ctr": 0,
-      "position": 59.4
+      "position": 59.9
     },
     {
       "query": "anthropic careers bangalore",
@@ -16482,9 +16474,9 @@
       "page": "https://www.jobsbyculture.com/companies/anthropic",
       "path": "https://www.jobsbyculture.com/companies/anthropic",
       "clicks": 0,
-      "impressions": 4,
+      "impressions": 2,
       "ctr": 0,
-      "position": 26.8
+      "position": 27.5
     },
     {
       "query": "anthropic glassdoor rating 2026",
@@ -16649,15 +16641,6 @@
       "position": 45
     },
     {
-      "query": "anthropic internship",
-      "page": "https://www.jobsbyculture.com/companies/anthropic",
-      "path": "https://www.jobsbyculture.com/companies/anthropic",
-      "clicks": 0,
-      "impressions": 1,
-      "ctr": 0,
-      "position": 90
-    },
-    {
       "query": "anthropic interpretability team",
       "page": "https://www.jobsbyculture.com/companies/anthropic",
       "path": "https://www.jobsbyculture.com/companies/anthropic",
@@ -16698,9 +16681,9 @@
       "page": "https://www.jobsbyculture.com/companies/anthropic",
       "path": "https://www.jobsbyculture.com/companies/anthropic",
       "clicks": 0,
-      "impressions": 8,
+      "impressions": 5,
       "ctr": 0,
-      "position": 55
+      "position": 50.2
     },
     {
       "query": "anthropic jobs london",
@@ -17544,9 +17527,9 @@
       "page": "https://www.jobsbyculture.com/companies/anthropic",
       "path": "https://www.jobsbyculture.com/companies/anthropic",
       "clicks": 0,
-      "impressions": 6,
+      "impressions": 5,
       "ctr": 0,
-      "position": 18.5
+      "position": 18.2
     },
     {
       "query": "anthropic work",
@@ -18584,15 +18567,6 @@
       "position": 26
     },
     {
-      "query": "careers stripe",
-      "page": "https://www.jobsbyculture.com/jobs?company=stripe",
-      "path": "https://www.jobsbyculture.com/jobs?company=stripe",
-      "clicks": 0,
-      "impressions": 1,
-      "ctr": 0,
-      "position": 81
-    },
-    {
       "query": "careers.anthropic",
       "page": "https://jobsbyculture.com/companies/anthropic",
       "path": "/companies/anthropic",
@@ -18789,15 +18763,6 @@
       "impressions": 1,
       "ctr": 0,
       "position": 52
-    },
-    {
-      "query": "cohere values",
-      "page": "https://jobsbyculture.com/companies/cohere",
-      "path": "/companies/cohere",
-      "clicks": 0,
-      "impressions": 2,
-      "ctr": 0,
-      "position": 27
     },
     {
       "query": "cohere vs mistral ai comparison for small businesses",
@@ -19061,24 +19026,6 @@
       "position": 74
     },
     {
-      "query": "core weave careers",
-      "page": "https://www.jobsbyculture.com/jobs?company=coreweave",
-      "path": "https://www.jobsbyculture.com/jobs?company=coreweave",
-      "clicks": 0,
-      "impressions": 1,
-      "ctr": 0,
-      "position": 37
-    },
-    {
-      "query": "corewave jobs",
-      "page": "https://www.jobsbyculture.com/jobs?company=coreweave",
-      "path": "https://www.jobsbyculture.com/jobs?company=coreweave",
-      "clicks": 0,
-      "impressions": 1,
-      "ctr": 0,
-      "position": 24
-    },
-    {
       "query": "coreweave bellevue",
       "page": "https://jobsbyculture.com/companies/coreweave",
       "path": "/companies/coreweave",
@@ -19106,15 +19053,6 @@
       "position": 26
     },
     {
-      "query": "coreweave career",
-      "page": "https://www.jobsbyculture.com/jobs?company=coreweave",
-      "path": "https://www.jobsbyculture.com/jobs?company=coreweave",
-      "clicks": 0,
-      "impressions": 1,
-      "ctr": 0,
-      "position": 22
-    },
-    {
       "query": "coreweave careers",
       "page": "https://jobsbyculture.com/companies/coreweave",
       "path": "/companies/coreweave",
@@ -19128,7 +19066,7 @@
       "page": "https://www.jobsbyculture.com/jobs?company=coreweave",
       "path": "https://www.jobsbyculture.com/jobs?company=coreweave",
       "clicks": 0,
-      "impressions": 12,
+      "impressions": 9,
       "ctr": 0,
       "position": 24.3
     },
@@ -19205,15 +19143,6 @@
       "position": 7.2
     },
     {
-      "query": "coreweave employee reviews",
-      "page": "https://www.jobsbyculture.com/jobs?company=coreweave",
-      "path": "https://www.jobsbyculture.com/jobs?company=coreweave",
-      "clicks": 0,
-      "impressions": 2,
-      "ctr": 0,
-      "position": 22.5
-    },
-    {
       "query": "coreweave employees 2026",
       "page": "https://jobsbyculture.com/blog/working-at-coreweave-2026",
       "path": "/blog/working-at-coreweave-2026",
@@ -19232,15 +19161,6 @@
       "position": 14.5
     },
     {
-      "query": "coreweave glassdoor",
-      "page": "https://www.jobsbyculture.com/jobs?company=coreweave",
-      "path": "https://www.jobsbyculture.com/jobs?company=coreweave",
-      "clicks": 0,
-      "impressions": 1,
-      "ctr": 0,
-      "position": 20
-    },
-    {
       "query": "coreweave gpu pricing 2026",
       "page": "https://jobsbyculture.com/blog/working-at-coreweave-2026",
       "path": "/blog/working-at-coreweave-2026",
@@ -19250,24 +19170,6 @@
       "position": 66
     },
     {
-      "query": "coreweave hiring",
-      "page": "https://www.jobsbyculture.com/jobs?company=coreweave",
-      "path": "https://www.jobsbyculture.com/jobs?company=coreweave",
-      "clicks": 0,
-      "impressions": 1,
-      "ctr": 0,
-      "position": 17
-    },
-    {
-      "query": "coreweave internships",
-      "page": "https://www.jobsbyculture.com/jobs?company=coreweave",
-      "path": "https://www.jobsbyculture.com/jobs?company=coreweave",
-      "clicks": 0,
-      "impressions": 1,
-      "ctr": 0,
-      "position": 25
-    },
-    {
       "query": "coreweave jobs",
       "page": "https://jobsbyculture.com/companies/coreweave",
       "path": "/companies/coreweave",
@@ -19275,15 +19177,6 @@
       "impressions": 2,
       "ctr": 0,
       "position": 25
-    },
-    {
-      "query": "coreweave jobs",
-      "page": "https://www.jobsbyculture.com/jobs?company=coreweave",
-      "path": "https://www.jobsbyculture.com/jobs?company=coreweave",
-      "clicks": 0,
-      "impressions": 1,
-      "ctr": 0,
-      "position": 18
     },
     {
       "query": "coreweave number of employees",
@@ -19331,15 +19224,6 @@
       "position": 26
     },
     {
-      "query": "coreweave sunnyvale",
-      "page": "https://www.jobsbyculture.com/jobs?company=coreweave",
-      "path": "https://www.jobsbyculture.com/jobs?company=coreweave",
-      "clicks": 0,
-      "impressions": 1,
-      "ctr": 0,
-      "position": 27
-    },
-    {
       "query": "coreweave work culture",
       "page": "https://jobsbyculture.com/blog/working-at-coreweave-2026",
       "path": "/blog/working-at-coreweave-2026",
@@ -19356,15 +19240,6 @@
       "impressions": 1,
       "ctr": 0,
       "position": 17
-    },
-    {
-      "query": "corweave careers",
-      "page": "https://www.jobsbyculture.com/jobs?company=coreweave",
-      "path": "https://www.jobsbyculture.com/jobs?company=coreweave",
-      "clicks": 0,
-      "impressions": 1,
-      "ctr": 0,
-      "position": 32
     },
     {
       "query": "crosby ai careers",
@@ -22476,9 +22351,9 @@
       "page": "https://www.jobsbyculture.com/jobs?company=stripe",
       "path": "https://www.jobsbyculture.com/jobs?company=stripe",
       "clicks": 0,
-      "impressions": 2,
+      "impressions": 1,
       "ctr": 0,
-      "position": 57
+      "position": 46
     },
     {
       "query": "jobbrex company",
@@ -23457,9 +23332,9 @@
       "page": "https://www.jobsbyculture.com/jobs?value=open-source",
       "path": "https://www.jobsbyculture.com/jobs?value=open-source",
       "clicks": 0,
-      "impressions": 7,
+      "impressions": 4,
       "ctr": 0,
-      "position": 70.7
+      "position": 69.8
     },
     {
       "query": "openai careers",
@@ -23835,9 +23710,9 @@
       "page": "https://jobsbyculture.com/jobs?company=perplexity",
       "path": "/jobs?company=perplexity",
       "clicks": 0,
-      "impressions": 3,
+      "impressions": 2,
       "ctr": 0,
-      "position": 51
+      "position": 53.5
     },
     {
       "query": "perplexity ai careers culture",
@@ -25689,18 +25564,18 @@
       "page": "https://www.jobsbyculture.com/companies/stripe",
       "path": "https://www.jobsbyculture.com/companies/stripe",
       "clicks": 0,
-      "impressions": 2,
+      "impressions": 1,
       "ctr": 0,
-      "position": 58
+      "position": 27
     },
     {
       "query": "stripe career",
       "page": "https://www.jobsbyculture.com/jobs?company=stripe",
       "path": "https://www.jobsbyculture.com/jobs?company=stripe",
       "clicks": 0,
-      "impressions": 5,
+      "impressions": 2,
       "ctr": 0,
-      "position": 49.6
+      "position": 37
     },
     {
       "query": "stripe careers",
@@ -25725,9 +25600,9 @@
       "page": "https://www.jobsbyculture.com/jobs?company=stripe",
       "path": "https://www.jobsbyculture.com/jobs?company=stripe",
       "clicks": 0,
-      "impressions": 22,
+      "impressions": 16,
       "ctr": 0,
-      "position": 48
+      "position": 43
     },
     {
       "query": "stripe carrers",
@@ -26283,9 +26158,9 @@
       "page": "https://www.jobsbyculture.com/jobs?company=stripe",
       "path": "https://www.jobsbyculture.com/jobs?company=stripe",
       "clicks": 0,
-      "impressions": 33,
+      "impressions": 23,
       "ctr": 0,
-      "position": 33.9
+      "position": 32.8
     },
     {
       "query": "stripe jobs canada",
@@ -26517,9 +26392,9 @@
       "page": "https://www.jobsbyculture.com/companies/stripe",
       "path": "https://www.jobsbyculture.com/companies/stripe",
       "clicks": 0,
-      "impressions": 3,
+      "impressions": 2,
       "ctr": 0,
-      "position": 61.3
+      "position": 57.5
     },
     {
       "query": "stripe software engineer",
@@ -26619,15 +26494,6 @@
       "impressions": 2,
       "ctr": 0,
       "position": 65.5
-    },
-    {
-      "query": "stripe values",
-      "page": "https://www.jobsbyculture.com/companies/stripe",
-      "path": "https://www.jobsbyculture.com/companies/stripe",
-      "clicks": 0,
-      "impressions": 1,
-      "ctr": 0,
-      "position": 74
     },
     {
       "query": "stripe values culture",
@@ -27264,9 +27130,9 @@
       "page": "https://jobsbyculture.com/companies/vast",
       "path": "/companies/vast",
       "clicks": 0,
-      "impressions": 17,
+      "impressions": 16,
       "ctr": 0,
-      "position": 5.8
+      "position": 5.4
     },
     {
       "query": "vast culture",
@@ -27737,15 +27603,6 @@
       "position": 1
     },
     {
-      "query": "what's it like to work at anthropic",
-      "page": "https://www.jobsbyculture.com/companies/anthropic",
-      "path": "https://www.jobsbyculture.com/companies/anthropic",
-      "clicks": 0,
-      "impressions": 1,
-      "ctr": 0,
-      "position": 36
-    },
-    {
       "query": "what's it like working in trading at anthropic",
       "page": "https://jobsbyculture.com/blog/working-at-anthropic-2026",
       "path": "/blog/working-at-anthropic-2026",
@@ -27852,15 +27709,6 @@
       "impressions": 3,
       "ctr": 0,
       "position": 16.7
-    },
-    {
-      "query": "why work at stripe",
-      "page": "https://www.jobsbyculture.com/companies/stripe",
-      "path": "https://www.jobsbyculture.com/companies/stripe",
-      "clicks": 0,
-      "impressions": 1,
-      "ctr": 0,
-      "position": 50
     },
     {
       "query": "why work for anthropic",
