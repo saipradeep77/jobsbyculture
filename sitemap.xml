@@ -397,6 +397,18 @@
   <!-- /Cluster pages -->
   <!-- Blog pages -->
   <url>
+    <loc>https://jobsbyculture.com/blog/ai-layoffs-2026-who-is-hiring</loc>
+    <lastmod>2026-04-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://jobsbyculture.com/blog/remote-vs-rto-2026</loc>
+    <lastmod>2026-04-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://jobsbyculture.com/blog/oracle-layoffs-2026</loc>
     <lastmod>2026-04-01</lastmod>
     <changefreq>weekly</changefreq>
