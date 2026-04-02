@@ -6,7 +6,7 @@
     "positive": 0,
     "negative": 0,
     "mixed": 5,
-    "lastUpdated": "2026-04-01",
+    "lastUpdated": "2026-04-02",
     "hackernews": [
       {
         "source": "hackernews",
@@ -58,7 +58,7 @@
     "positive": 1,
     "negative": 0,
     "mixed": 4,
-    "lastUpdated": "2026-04-01",
+    "lastUpdated": "2026-04-02",
     "hackernews": [
       {
         "source": "hackernews",
@@ -110,7 +110,7 @@
     "positive": 1,
     "negative": 1,
     "mixed": 0,
-    "lastUpdated": "2026-04-01",
+    "lastUpdated": "2026-04-02",
     "hackernews": [
       {
         "source": "hackernews",
@@ -138,7 +138,7 @@
     "positive": 2,
     "negative": 0,
     "mixed": 2,
-    "lastUpdated": "2026-04-01",
+    "lastUpdated": "2026-04-02",
     "hackernews": [
       {
         "source": "hackernews",
@@ -182,8 +182,16 @@
     "positive": 4,
     "negative": 0,
     "mixed": 1,
-    "lastUpdated": "2026-04-01",
+    "lastUpdated": "2026-04-02",
     "hackernews": [
+      {
+        "source": "hackernews",
+        "quote": "BIT Capital | Principal Engineer (Data &amp; Platform) | Berlin, Germany | ONSITE (2 days&#x2F;week) | Full-timeLooking for experienced engineers to build and scale infrastructure and data platforms for a Berlin asset management fund.",
+        "author": "dipshady",
+        "date": "2026-04-01",
+        "url": "https://news.ycombinator.com/item?id=47601910",
+        "sentiment": "positive"
+      },
       {
         "source": "hackernews",
         "quote": "I&#x27;ve worked at a number of non-tech companies the past few years. They bought every SaaS product, Palantir, Databricks, multi-cloud, their dev teams adopted every pattern popularized by big tech and the results were always mixed.",
@@ -215,14 +223,6 @@
         "date": "2025-08-21",
         "url": "https://news.ycombinator.com/item?id=44968053",
         "sentiment": "positive"
-      },
-      {
-        "source": "hackernews",
-        "quote": "LEGO | London (Farringdon) | Hybrid (3 days a week in the office)* Lead engineer on the personalisation &#x2F; recommendation engine* Python, Node JS &#x2F; TS, Databricks, Aurora RDS, AWS, API Gateway* Experience required in both data engineering and back-end engineering...",
-        "author": "milesjag",
-        "date": "2025-08-13",
-        "url": "https://news.ycombinator.com/item?id=44888935",
-        "sentiment": "positive"
       }
     ],
     "reddit": []
@@ -231,10 +231,10 @@
     "name": "HubSpot",
     "overallSentiment": "positive",
     "totalMentions": 5,
-    "positive": 4,
+    "positive": 3,
     "negative": 0,
-    "mixed": 1,
-    "lastUpdated": "2026-04-01",
+    "mixed": 2,
+    "lastUpdated": "2026-04-02",
     "hackernews": [
       {
         "source": "hackernews",
@@ -254,14 +254,6 @@
       },
       {
         "source": "hackernews",
-        "quote": "Fathom - AI Notetaker | REMOTE (must work US hours) | Full time | https:&#x2F;&#x2F;fathom.videoWe make the number one AI Notetaker and are hiring across the stack (rails&#x2F;typescript&#x2F;go&#x2F;k8s&#x2F;gcp).",
-        "author": "madiganf",
-        "date": "2025-04-01",
-        "url": "https://news.ycombinator.com/item?id=43548465",
-        "sentiment": "positive"
-      },
-      {
-        "source": "hackernews",
         "quote": "Not proof, per se, but the term to look up is &quot;inbound marketing&quot;.HubSpot was very big on pushing companies to publish lots of content like blog posts and then having calls to action for people to submit their info in exchange for a whitepaper download or similar.",
         "author": "bschne",
         "date": "2025-09-24",
@@ -275,6 +267,14 @@
         "date": "2025-07-07",
         "url": "https://news.ycombinator.com/item?id=44487905",
         "sentiment": "neutral"
+      },
+      {
+        "source": "hackernews",
+        "quote": "I didn’t say they were running it locally. A single tab of ChatGPT eventually eats a few gb of ram if you leave it open and are using it constantly, which is how I see most “casual” people using it in my vicinity. I’ve seen it push 2-3 gigs regularly.",
+        "author": "Forgeties79",
+        "date": "2026-03-08",
+        "url": "https://news.ycombinator.com/item?id=47299114",
+        "sentiment": "neutral"
       }
     ],
     "reddit": []
@@ -286,7 +286,7 @@
     "positive": 4,
     "negative": 0,
     "mixed": 1,
-    "lastUpdated": "2026-04-01",
+    "lastUpdated": "2026-04-02",
     "hackernews": [
       {
         "source": "hackernews",
@@ -338,7 +338,7 @@
     "positive": 0,
     "negative": 0,
     "mixed": 5,
-    "lastUpdated": "2026-04-01",
+    "lastUpdated": "2026-04-02",
     "hackernews": [
       {
         "source": "hackernews",
@@ -390,7 +390,7 @@
     "positive": 1,
     "negative": 0,
     "mixed": 0,
-    "lastUpdated": "2026-04-01",
+    "lastUpdated": "2026-04-02",
     "hackernews": [
       {
         "source": "hackernews",
@@ -406,11 +406,11 @@
   "apollo": {
     "name": "Apollo.io",
     "overallSentiment": "mixed",
-    "totalMentions": 2,
+    "totalMentions": 1,
     "positive": 0,
     "negative": 0,
-    "mixed": 2,
-    "lastUpdated": "2026-04-01",
+    "mixed": 1,
+    "lastUpdated": "2026-04-02",
     "hackernews": [
       {
         "source": "hackernews",
@@ -418,14 +418,6 @@
         "author": "dmicher",
         "date": "2025-09-15",
         "url": "https://news.ycombinator.com/item?id=45251601",
-        "sentiment": "neutral"
-      },
-      {
-        "source": "hackernews",
-        "quote": "I want to introduce you to the easiest and most affordable way to find leads right now.We looked at the painful process of finding and connecting with prospects and thought, &quot;There has to be a better way.",
-        "author": "snapyleads",
-        "date": "2025-04-02",
-        "url": "https://news.ycombinator.com/item?id=43553217",
         "sentiment": "neutral"
       }
     ],
@@ -438,7 +430,7 @@
     "positive": 2,
     "negative": 0,
     "mixed": 3,
-    "lastUpdated": "2026-04-01",
+    "lastUpdated": "2026-04-02",
     "hackernews": [
       {
         "source": "hackernews",
@@ -490,7 +482,7 @@
     "positive": 0,
     "negative": 0,
     "mixed": 0,
-    "lastUpdated": "2026-04-01",
+    "lastUpdated": "2026-04-02",
     "hackernews": [],
     "reddit": []
   },
@@ -501,7 +493,7 @@
     "positive": 2,
     "negative": 1,
     "mixed": 2,
-    "lastUpdated": "2026-04-01",
+    "lastUpdated": "2026-04-02",
     "hackernews": [
       {
         "source": "hackernews",
@@ -553,7 +545,7 @@
     "positive": 1,
     "negative": 0,
     "mixed": 4,
-    "lastUpdated": "2026-04-01",
+    "lastUpdated": "2026-04-02",
     "hackernews": [
       {
         "source": "hackernews",
@@ -605,7 +597,7 @@
     "positive": 1,
     "negative": 2,
     "mixed": 2,
-    "lastUpdated": "2026-04-01",
+    "lastUpdated": "2026-04-02",
     "hackernews": [
       {
         "source": "hackernews",
@@ -657,7 +649,7 @@
     "positive": 4,
     "negative": 0,
     "mixed": 1,
-    "lastUpdated": "2026-04-01",
+    "lastUpdated": "2026-04-02",
     "hackernews": [
       {
         "source": "hackernews",
@@ -704,12 +696,12 @@
   },
   "langchain": {
     "name": "LangChain",
-    "overallSentiment": "mixed",
+    "overallSentiment": "positive",
     "totalMentions": 5,
-    "positive": 2,
+    "positive": 3,
     "negative": 0,
-    "mixed": 3,
-    "lastUpdated": "2026-04-01",
+    "mixed": 2,
+    "lastUpdated": "2026-04-02",
     "hackernews": [
       {
         "source": "hackernews",
@@ -737,18 +729,18 @@
       },
       {
         "source": "hackernews",
-        "quote": "Location: Toronto, Canada Remote: Yes (or hybrid)Willing to relocate: YesTechnologies:&gt; Languages, Frameworks, and Libraries: JavaScript, Express, Ruby, Sinatra, Python, Flask, SQL, jQuery, TypeScript, React&gt; Cloud: Digital Ocean Droplet, AWS (EC2, VPC, S3, CloudFormation,...",
-        "author": "jow13_12",
-        "date": "2026-02-02",
-        "url": "https://news.ycombinator.com/item?id=46861707",
-        "sentiment": "neutral"
+        "quote": "AllSpice | https:&#x2F;&#x2F;allspice.io&#x2F; | Boston, MA &#x2F; SF Hybrid or Remote | Full time (US timezones) | Mid&#x2F;Sr.&#x2F;Principal&#x2F;Staff | Golang, Vuejs, Rust, Typescript, PythonAt AllSpice, we&#x27;re building the future of hardware development and...",
+        "author": "kdumont",
+        "date": "2026-04-01",
+        "url": "https://news.ycombinator.com/item?id=47604113",
+        "sentiment": "positive"
       },
       {
         "source": "hackernews",
         "quote": "Location: Toronto, Canada Remote: Yes (or hybrid)Willing to relocate: YesTechnologies:&gt; Languages, Frameworks, and Libraries: JavaScript, Express, Ruby, Sinatra, Python, Flask, SQL, jQuery, TypeScript, React&gt; Cloud: Digital Ocean Droplet, AWS (EC2, VPC, S3, CloudFormation,...",
         "author": "jow13_12",
-        "date": "2026-01-08",
-        "url": "https://news.ycombinator.com/item?id=46543326",
+        "date": "2026-02-02",
+        "url": "https://news.ycombinator.com/item?id=46861707",
         "sentiment": "neutral"
       }
     ],
@@ -761,7 +753,7 @@
     "positive": 1,
     "negative": 1,
     "mixed": 3,
-    "lastUpdated": "2026-04-01",
+    "lastUpdated": "2026-04-02",
     "hackernews": [
       {
         "source": "hackernews",
@@ -813,7 +805,7 @@
     "positive": 0,
     "negative": 1,
     "mixed": 4,
-    "lastUpdated": "2026-04-01",
+    "lastUpdated": "2026-04-02",
     "hackernews": [
       {
         "source": "hackernews",
@@ -865,7 +857,7 @@
     "positive": 3,
     "negative": 0,
     "mixed": 2,
-    "lastUpdated": "2026-04-01",
+    "lastUpdated": "2026-04-02",
     "hackernews": [
       {
         "source": "hackernews",
@@ -917,7 +909,7 @@
     "positive": 0,
     "negative": 1,
     "mixed": 4,
-    "lastUpdated": "2026-04-01",
+    "lastUpdated": "2026-04-02",
     "hackernews": [
       {
         "source": "hackernews",
@@ -969,7 +961,7 @@
     "positive": 3,
     "negative": 0,
     "mixed": 2,
-    "lastUpdated": "2026-04-01",
+    "lastUpdated": "2026-04-02",
     "hackernews": [
       {
         "source": "hackernews",
@@ -1021,7 +1013,7 @@
     "positive": 3,
     "negative": 0,
     "mixed": 2,
-    "lastUpdated": "2026-04-01",
+    "lastUpdated": "2026-04-02",
     "hackernews": [
       {
         "source": "hackernews",
@@ -1073,8 +1065,16 @@
     "positive": 3,
     "negative": 1,
     "mixed": 1,
-    "lastUpdated": "2026-04-01",
+    "lastUpdated": "2026-04-02",
     "hackernews": [
+      {
+        "source": "hackernews",
+        "quote": "eventfirst | Senior Full-Stack Engineer | Berlin, Germany | REMOTE (CET) | Full-timeWe are applying AI to organize corporate events.We are looking for a senior engineer with at least ten years of full stack experience, a strong focus on product and UX, and optionally some...",
+        "author": "felix-h",
+        "date": "2026-04-01",
+        "url": "https://news.ycombinator.com/item?id=47604005",
+        "sentiment": "positive"
+      },
       {
         "source": "hackernews",
         "quote": "If you want second homes to be used productively, just allow folks to list them on AirBnb for planned short-term rental. Long-term rentals are a total non-starter politically for second homes, since you obviously can&#x27;t ethically throw out someone who regards that rental...",
@@ -1106,14 +1106,6 @@
         "date": "2026-01-26",
         "url": "https://news.ycombinator.com/item?id=46765427",
         "sentiment": "negative"
-      },
-      {
-        "source": "hackernews",
-        "quote": "eventfirst | Senior Full-Stack Engineer | Berlin, Germany | REMOTE (CET) | Full-timeWe are applying AI to organize corporate events.We are looking for a senior engineer with at least ten years of full stack experience, a strong focus on product and UX, and optionally some...",
-        "author": "felix-h",
-        "date": "2026-01-03",
-        "url": "https://news.ycombinator.com/item?id=46475488",
-        "sentiment": "positive"
       }
     ],
     "reddit": []
@@ -1125,7 +1117,7 @@
     "positive": 3,
     "negative": 1,
     "mixed": 1,
-    "lastUpdated": "2026-04-01",
+    "lastUpdated": "2026-04-02",
     "hackernews": [
       {
         "source": "hackernews",
@@ -1177,7 +1169,7 @@
     "positive": 2,
     "negative": 0,
     "mixed": 3,
-    "lastUpdated": "2026-04-01",
+    "lastUpdated": "2026-04-02",
     "hackernews": [
       {
         "source": "hackernews",
@@ -1229,7 +1221,7 @@
     "positive": 1,
     "negative": 2,
     "mixed": 2,
-    "lastUpdated": "2026-04-01",
+    "lastUpdated": "2026-04-02",
     "hackernews": [
       {
         "source": "hackernews",
@@ -1281,7 +1273,7 @@
     "positive": 2,
     "negative": 1,
     "mixed": 2,
-    "lastUpdated": "2026-04-01",
+    "lastUpdated": "2026-04-02",
     "hackernews": [
       {
         "source": "hackernews",
@@ -1328,13 +1320,21 @@
   },
   "vercel": {
     "name": "Vercel",
-    "overallSentiment": "mixed",
+    "overallSentiment": "positive",
     "totalMentions": 5,
-    "positive": 2,
+    "positive": 3,
     "negative": 0,
-    "mixed": 3,
-    "lastUpdated": "2026-04-01",
+    "mixed": 2,
+    "lastUpdated": "2026-04-02",
     "hackernews": [
+      {
+        "source": "hackernews",
+        "quote": "eventfirst | Senior Full-Stack Engineer | Berlin, Germany | REMOTE (CET) | Full-timeWe are applying AI to organize corporate events.We are looking for a senior engineer with at least ten years of full stack experience, a strong focus on product and UX, and optionally some...",
+        "author": "felix-h",
+        "date": "2026-04-01",
+        "url": "https://news.ycombinator.com/item?id=47604005",
+        "sentiment": "positive"
+      },
       {
         "source": "hackernews",
         "quote": "It&#x27;s easy to be critical in hindsight but honestly when Deno first came out it was pretty incredible. Even the whole idea about URL based imports makes lots of sense but it was incompatible with any of the existing toolchains that were wildly popular.",
@@ -1366,14 +1366,6 @@
         "date": "2026-02-26",
         "url": "https://news.ycombinator.com/item?id=47173493",
         "sentiment": "neutral"
-      },
-      {
-        "source": "hackernews",
-        "quote": "&quot; I think people stopped talking about it because the &#x27;how-to&#x27; got buried under &#x27;hustle culture&#x27; noise. The simple, honest machine still works, but for a global audience, the biggest barrier now isn&#x27;t the will to work—it&#x27;s the infrastructure.",
-        "author": "Dollarland",
-        "date": "2026-02-19",
-        "url": "https://news.ycombinator.com/item?id=47080519",
-        "sentiment": "neutral"
       }
     ],
     "reddit": []
@@ -1382,10 +1374,10 @@
     "name": "PostHog",
     "overallSentiment": "mixed",
     "totalMentions": 5,
-    "positive": 2,
+    "positive": 1,
     "negative": 0,
-    "mixed": 3,
-    "lastUpdated": "2026-04-01",
+    "mixed": 4,
+    "lastUpdated": "2026-04-02",
     "hackernews": [
       {
         "source": "hackernews",
@@ -1421,11 +1413,11 @@
       },
       {
         "source": "hackernews",
-        "quote": "OpenAI published an article and demo for scoring how well AI agents can work in a codebase (https:&#x2F;&#x2F;openai.com&#x2F;index&#x2F;harness-engineering&#x2F;, https:&#x2F;&#x2F;www.youtube.com&#x2F;watch?v=rhsSqr0jdFw). We turned it into a free tool anyone can use.",
-        "author": "danoandco",
-        "date": "2026-03-17",
-        "url": "https://news.ycombinator.com/item?id=47419043",
-        "sentiment": "positive"
+        "quote": "Location: New Haven, CT, USA Remote: YesWilling to relocate: NoTechnologies: TypeScript, JavaScript, Node.js, React, AWS (CDK, Lambda, API Gateway, S3, ECS), PostgreSQL, MongoDB, Docker, Python, OpenAI API, LangChain, Mastra, Ruby, SinatraRésumé&#x2F;CV: Available by...",
+        "author": "rtlo9962",
+        "date": "2026-04-01",
+        "url": "https://news.ycombinator.com/item?id=47606550",
+        "sentiment": "neutral"
       }
     ],
     "reddit": []
@@ -1437,7 +1429,7 @@
     "positive": 4,
     "negative": 0,
     "mixed": 1,
-    "lastUpdated": "2026-04-01",
+    "lastUpdated": "2026-04-02",
     "hackernews": [
       {
         "source": "hackernews",
@@ -1489,7 +1481,7 @@
     "positive": 3,
     "negative": 0,
     "mixed": 2,
-    "lastUpdated": "2026-04-01",
+    "lastUpdated": "2026-04-02",
     "hackernews": [
       {
         "source": "hackernews",
@@ -1541,7 +1533,7 @@
     "positive": 2,
     "negative": 0,
     "mixed": 3,
-    "lastUpdated": "2026-04-01",
+    "lastUpdated": "2026-04-02",
     "hackernews": [
       {
         "source": "hackernews",
@@ -1593,7 +1585,7 @@
     "positive": 0,
     "negative": 0,
     "mixed": 2,
-    "lastUpdated": "2026-04-01",
+    "lastUpdated": "2026-04-02",
     "hackernews": [
       {
         "source": "hackernews",
@@ -1621,7 +1613,7 @@
     "positive": 1,
     "negative": 1,
     "mixed": 3,
-    "lastUpdated": "2026-04-01",
+    "lastUpdated": "2026-04-02",
     "hackernews": [
       {
         "source": "hackernews",
@@ -1673,7 +1665,7 @@
     "positive": 2,
     "negative": 0,
     "mixed": 3,
-    "lastUpdated": "2026-04-01",
+    "lastUpdated": "2026-04-02",
     "hackernews": [
       {
         "source": "hackernews",
@@ -1725,7 +1717,7 @@
     "positive": 2,
     "negative": 0,
     "mixed": 3,
-    "lastUpdated": "2026-04-01",
+    "lastUpdated": "2026-04-02",
     "hackernews": [
       {
         "source": "hackernews",
@@ -1777,7 +1769,7 @@
     "positive": 0,
     "negative": 1,
     "mixed": 4,
-    "lastUpdated": "2026-04-01",
+    "lastUpdated": "2026-04-02",
     "hackernews": [
       {
         "source": "hackernews",
@@ -1829,7 +1821,7 @@
     "positive": 2,
     "negative": 0,
     "mixed": 3,
-    "lastUpdated": "2026-04-01",
+    "lastUpdated": "2026-04-02",
     "hackernews": [
       {
         "source": "hackernews",
@@ -1881,7 +1873,7 @@
     "positive": 2,
     "negative": 0,
     "mixed": 3,
-    "lastUpdated": "2026-04-01",
+    "lastUpdated": "2026-04-02",
     "hackernews": [
       {
         "source": "hackernews",
@@ -1933,7 +1925,7 @@
     "positive": 4,
     "negative": 0,
     "mixed": 1,
-    "lastUpdated": "2026-04-01",
+    "lastUpdated": "2026-04-02",
     "hackernews": [
       {
         "source": "hackernews",
@@ -1985,7 +1977,7 @@
     "positive": 1,
     "negative": 3,
     "mixed": 1,
-    "lastUpdated": "2026-04-01",
+    "lastUpdated": "2026-04-02",
     "hackernews": [
       {
         "source": "hackernews",
@@ -2037,7 +2029,7 @@
     "positive": 2,
     "negative": 0,
     "mixed": 3,
-    "lastUpdated": "2026-04-01",
+    "lastUpdated": "2026-04-02",
     "hackernews": [
       {
         "source": "hackernews",
@@ -2089,7 +2081,7 @@
     "positive": 2,
     "negative": 0,
     "mixed": 1,
-    "lastUpdated": "2026-04-01",
+    "lastUpdated": "2026-04-02",
     "hackernews": [
       {
         "source": "hackernews",
@@ -2125,7 +2117,7 @@
     "positive": 1,
     "negative": 0,
     "mixed": 0,
-    "lastUpdated": "2026-04-01",
+    "lastUpdated": "2026-04-02",
     "hackernews": [
       {
         "source": "hackernews",
@@ -2141,12 +2133,20 @@
   "synthesia": {
     "name": "Synthesia",
     "overallSentiment": "positive",
-    "totalMentions": 2,
-    "positive": 2,
+    "totalMentions": 3,
+    "positive": 3,
     "negative": 0,
     "mixed": 0,
-    "lastUpdated": "2026-04-01",
+    "lastUpdated": "2026-04-02",
     "hackernews": [
+      {
+        "source": "hackernews",
+        "quote": "Tracebit | https:&#x2F;&#x2F;tracebit.com&#x2F;| London&#x2F;New York| Full-TimeTracebit is an Accel backed, UK founded security product company taking a new look at canaries for intrusion detection. We work with some amazing companies (Docker, Riot Games, Synthesia, Zepz...",
+        "author": "tracebit",
+        "date": "2026-04-01",
+        "url": "https://news.ycombinator.com/item?id=47602038",
+        "sentiment": "positive"
+      },
       {
         "source": "hackernews",
         "quote": "Tracebit | https:&#x2F;&#x2F;tracebit.com | London&#x2F;New York| Full-TimeTracebit is an Accel backed, UK founded security product company taking a new look at canaries for intrusion detection.We work with some amazing companies (Docker, Riot Games, Synthesia, Zepz...",
@@ -2173,7 +2173,7 @@
     "positive": 1,
     "negative": 1,
     "mixed": 0,
-    "lastUpdated": "2026-04-01",
+    "lastUpdated": "2026-04-02",
     "hackernews": [
       {
         "source": "hackernews",
@@ -2201,7 +2201,7 @@
     "positive": 2,
     "negative": 0,
     "mixed": 3,
-    "lastUpdated": "2026-04-01",
+    "lastUpdated": "2026-04-02",
     "hackernews": [
       {
         "source": "hackernews",
@@ -2253,7 +2253,7 @@
     "positive": 0,
     "negative": 4,
     "mixed": 1,
-    "lastUpdated": "2026-04-01",
+    "lastUpdated": "2026-04-02",
     "hackernews": [
       {
         "source": "hackernews",
@@ -2305,7 +2305,7 @@
     "positive": 0,
     "negative": 1,
     "mixed": 4,
-    "lastUpdated": "2026-04-01",
+    "lastUpdated": "2026-04-02",
     "hackernews": [
       {
         "source": "hackernews",
@@ -2357,7 +2357,7 @@
     "positive": 0,
     "negative": 0,
     "mixed": 2,
-    "lastUpdated": "2026-04-01",
+    "lastUpdated": "2026-04-02",
     "hackernews": [
       {
         "source": "hackernews",
@@ -2385,7 +2385,7 @@
     "positive": 2,
     "negative": 0,
     "mixed": 3,
-    "lastUpdated": "2026-04-01",
+    "lastUpdated": "2026-04-02",
     "hackernews": [
       {
         "source": "hackernews",
@@ -2437,7 +2437,7 @@
     "positive": 0,
     "negative": 0,
     "mixed": 0,
-    "lastUpdated": "2026-04-01",
+    "lastUpdated": "2026-04-02",
     "hackernews": [],
     "reddit": []
   },
@@ -2448,7 +2448,7 @@
     "positive": 3,
     "negative": 0,
     "mixed": 1,
-    "lastUpdated": "2026-04-01",
+    "lastUpdated": "2026-04-02",
     "hackernews": [
       {
         "source": "hackernews",
@@ -2492,7 +2492,7 @@
     "positive": 3,
     "negative": 0,
     "mixed": 1,
-    "lastUpdated": "2026-04-01",
+    "lastUpdated": "2026-04-02",
     "hackernews": [
       {
         "source": "hackernews",
@@ -2536,7 +2536,7 @@
     "positive": 0,
     "negative": 0,
     "mixed": 0,
-    "lastUpdated": "2026-04-01",
+    "lastUpdated": "2026-04-02",
     "hackernews": [],
     "reddit": []
   },
@@ -2547,7 +2547,7 @@
     "positive": 4,
     "negative": 0,
     "mixed": 1,
-    "lastUpdated": "2026-04-01",
+    "lastUpdated": "2026-04-02",
     "hackernews": [
       {
         "source": "hackernews",

@@ -222,6 +222,26 @@
             .claim-modal { padding: 28px 24px; }
             .claim-modal-row { grid-template-columns: 1fr; }
         }
+    
+        /* ═══ RELATED SECTION ═══ */
+        .cp-related { padding: 56px 0; border-top: 1px solid var(--border); }
+        .cp-related-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; }
+        .cp-related-col h3 { font-size: 16px; font-weight: 600; margin-bottom: 16px; color: var(--text); }
+        .cp-related-list { list-style: none; display: flex; flex-direction: column; gap: 8px; }
+        .cp-related-list li a {
+            font-size: 14px; color: var(--text-2); text-decoration: none;
+            display: flex; align-items: center; gap: 6px; padding: 8px 12px;
+            border-radius: var(--radius-sm); transition: all 0.15s;
+        }
+        .cp-related-list li a:hover { background: var(--bg-hover); color: var(--accent); }
+        .cp-related-list li a .arrow { color: var(--text-3); font-size: 12px; }
+        .cp-related-more {
+            display: inline-block; margin-top: 12px; font-size: 13px; font-weight: 600;
+            color: var(--accent); text-decoration: none;
+        }
+        .cp-related-more:hover { text-decoration: underline; }
+        @media (max-width: 768px) { .cp-related-grid { grid-template-columns: 1fr; } }
+
     </style>
 <script async src="https://plausible.io/js/pa-qa3pjs5eZbsfBQJMk4hVW.js"></script>
 <script>
@@ -413,6 +433,23 @@
         </div>
     </div>
 </section>
+
+<!-- ═══ RELATED ═══ -->
+<section class="cp-related">
+    <div class="container">
+        <span class="s-label">Explore More</span>
+        <h2 class="s-title">Related <em>content</em></h2>
+        <div class="cp-related-grid">
+            <div class="cp-related-col">
+                <h3>Blog Posts</h3>
+                <ul class="cp-related-list">
+                    <li><a href="/blog/ai-layoffs-2026-who-is-hiring"><span class="arrow">&rarr;</span> AI Layoffs 2026: 61,000+ Jobs Cut — Who's Actually Hiring</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- ═══ /RELATED ═══ -->
 
 <footer class="cp-footer">
     <div class="container">
