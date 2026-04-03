@@ -6,7 +6,7 @@
     "positive": 0,
     "negative": 0,
     "mixed": 5,
-    "lastUpdated": "2026-04-02",
+    "lastUpdated": "2026-04-03",
     "hackernews": [
       {
         "source": "hackernews",
@@ -58,7 +58,7 @@
     "positive": 1,
     "negative": 0,
     "mixed": 4,
-    "lastUpdated": "2026-04-02",
+    "lastUpdated": "2026-04-03",
     "hackernews": [
       {
         "source": "hackernews",
@@ -110,7 +110,7 @@
     "positive": 1,
     "negative": 1,
     "mixed": 0,
-    "lastUpdated": "2026-04-02",
+    "lastUpdated": "2026-04-03",
     "hackernews": [
       {
         "source": "hackernews",
@@ -138,7 +138,7 @@
     "positive": 2,
     "negative": 0,
     "mixed": 2,
-    "lastUpdated": "2026-04-02",
+    "lastUpdated": "2026-04-03",
     "hackernews": [
       {
         "source": "hackernews",
@@ -182,7 +182,7 @@
     "positive": 4,
     "negative": 0,
     "mixed": 1,
-    "lastUpdated": "2026-04-02",
+    "lastUpdated": "2026-04-03",
     "hackernews": [
       {
         "source": "hackernews",
@@ -234,7 +234,7 @@
     "positive": 3,
     "negative": 0,
     "mixed": 2,
-    "lastUpdated": "2026-04-02",
+    "lastUpdated": "2026-04-03",
     "hackernews": [
       {
         "source": "hackernews",
@@ -286,7 +286,7 @@
     "positive": 4,
     "negative": 0,
     "mixed": 1,
-    "lastUpdated": "2026-04-02",
+    "lastUpdated": "2026-04-03",
     "hackernews": [
       {
         "source": "hackernews",
@@ -338,7 +338,7 @@
     "positive": 0,
     "negative": 0,
     "mixed": 5,
-    "lastUpdated": "2026-04-02",
+    "lastUpdated": "2026-04-03",
     "hackernews": [
       {
         "source": "hackernews",
@@ -390,7 +390,7 @@
     "positive": 1,
     "negative": 0,
     "mixed": 0,
-    "lastUpdated": "2026-04-02",
+    "lastUpdated": "2026-04-03",
     "hackernews": [
       {
         "source": "hackernews",
@@ -410,7 +410,7 @@
     "positive": 0,
     "negative": 0,
     "mixed": 1,
-    "lastUpdated": "2026-04-02",
+    "lastUpdated": "2026-04-03",
     "hackernews": [
       {
         "source": "hackernews",
@@ -430,7 +430,7 @@
     "positive": 2,
     "negative": 0,
     "mixed": 3,
-    "lastUpdated": "2026-04-02",
+    "lastUpdated": "2026-04-03",
     "hackernews": [
       {
         "source": "hackernews",
@@ -482,7 +482,7 @@
     "positive": 0,
     "negative": 0,
     "mixed": 0,
-    "lastUpdated": "2026-04-02",
+    "lastUpdated": "2026-04-03",
     "hackernews": [],
     "reddit": []
   },
@@ -493,7 +493,7 @@
     "positive": 2,
     "negative": 1,
     "mixed": 2,
-    "lastUpdated": "2026-04-02",
+    "lastUpdated": "2026-04-03",
     "hackernews": [
       {
         "source": "hackernews",
@@ -545,7 +545,7 @@
     "positive": 1,
     "negative": 0,
     "mixed": 4,
-    "lastUpdated": "2026-04-02",
+    "lastUpdated": "2026-04-03",
     "hackernews": [
       {
         "source": "hackernews",
@@ -597,7 +597,7 @@
     "positive": 1,
     "negative": 2,
     "mixed": 2,
-    "lastUpdated": "2026-04-02",
+    "lastUpdated": "2026-04-03",
     "hackernews": [
       {
         "source": "hackernews",
@@ -649,7 +649,7 @@
     "positive": 4,
     "negative": 0,
     "mixed": 1,
-    "lastUpdated": "2026-04-02",
+    "lastUpdated": "2026-04-03",
     "hackernews": [
       {
         "source": "hackernews",
@@ -696,12 +696,12 @@
   },
   "langchain": {
     "name": "LangChain",
-    "overallSentiment": "positive",
+    "overallSentiment": "mixed",
     "totalMentions": 5,
-    "positive": 3,
+    "positive": 2,
     "negative": 0,
-    "mixed": 2,
-    "lastUpdated": "2026-04-02",
+    "mixed": 3,
+    "lastUpdated": "2026-04-03",
     "hackernews": [
       {
         "source": "hackernews",
@@ -729,18 +729,18 @@
       },
       {
         "source": "hackernews",
-        "quote": "AllSpice | https:&#x2F;&#x2F;allspice.io&#x2F; | Boston, MA &#x2F; SF Hybrid or Remote | Full time (US timezones) | Mid&#x2F;Sr.&#x2F;Principal&#x2F;Staff | Golang, Vuejs, Rust, Typescript, PythonAt AllSpice, we&#x27;re building the future of hardware development and...",
-        "author": "kdumont",
-        "date": "2026-04-01",
-        "url": "https://news.ycombinator.com/item?id=47604113",
-        "sentiment": "positive"
+        "quote": "Location: Toronto, Canada Remote: Yes (or hybrid)Willing to relocate: YesTechnologies:&gt; Languages, Frameworks, and Libraries: JavaScript, Express, Ruby, Sinatra, Python, Flask, SQL, jQuery, TypeScript, React&gt; Cloud: Digital Ocean Droplet, AWS (EC2, VPC, S3, CloudFormation,...",
+        "author": "jow13_12",
+        "date": "2026-02-02",
+        "url": "https://news.ycombinator.com/item?id=46861707",
+        "sentiment": "neutral"
       },
       {
         "source": "hackernews",
         "quote": "Location: Toronto, Canada Remote: Yes (or hybrid)Willing to relocate: YesTechnologies:&gt; Languages, Frameworks, and Libraries: JavaScript, Express, Ruby, Sinatra, Python, Flask, SQL, jQuery, TypeScript, React&gt; Cloud: Digital Ocean Droplet, AWS (EC2, VPC, S3, CloudFormation,...",
         "author": "jow13_12",
-        "date": "2026-02-02",
-        "url": "https://news.ycombinator.com/item?id=46861707",
+        "date": "2026-01-08",
+        "url": "https://news.ycombinator.com/item?id=46543326",
         "sentiment": "neutral"
       }
     ],
@@ -753,7 +753,7 @@
     "positive": 1,
     "negative": 1,
     "mixed": 3,
-    "lastUpdated": "2026-04-02",
+    "lastUpdated": "2026-04-03",
     "hackernews": [
       {
         "source": "hackernews",
@@ -805,7 +805,7 @@
     "positive": 0,
     "negative": 1,
     "mixed": 4,
-    "lastUpdated": "2026-04-02",
+    "lastUpdated": "2026-04-03",
     "hackernews": [
       {
         "source": "hackernews",
@@ -857,7 +857,7 @@
     "positive": 3,
     "negative": 0,
     "mixed": 2,
-    "lastUpdated": "2026-04-02",
+    "lastUpdated": "2026-04-03",
     "hackernews": [
       {
         "source": "hackernews",
@@ -909,7 +909,7 @@
     "positive": 0,
     "negative": 1,
     "mixed": 4,
-    "lastUpdated": "2026-04-02",
+    "lastUpdated": "2026-04-03",
     "hackernews": [
       {
         "source": "hackernews",
@@ -961,7 +961,7 @@
     "positive": 3,
     "negative": 0,
     "mixed": 2,
-    "lastUpdated": "2026-04-02",
+    "lastUpdated": "2026-04-03",
     "hackernews": [
       {
         "source": "hackernews",
@@ -1013,7 +1013,7 @@
     "positive": 3,
     "negative": 0,
     "mixed": 2,
-    "lastUpdated": "2026-04-02",
+    "lastUpdated": "2026-04-03",
     "hackernews": [
       {
         "source": "hackernews",
@@ -1065,7 +1065,7 @@
     "positive": 3,
     "negative": 1,
     "mixed": 1,
-    "lastUpdated": "2026-04-02",
+    "lastUpdated": "2026-04-03",
     "hackernews": [
       {
         "source": "hackernews",
@@ -1117,7 +1117,7 @@
     "positive": 3,
     "negative": 1,
     "mixed": 1,
-    "lastUpdated": "2026-04-02",
+    "lastUpdated": "2026-04-03",
     "hackernews": [
       {
         "source": "hackernews",
@@ -1169,8 +1169,16 @@
     "positive": 2,
     "negative": 0,
     "mixed": 3,
-    "lastUpdated": "2026-04-02",
+    "lastUpdated": "2026-04-03",
     "hackernews": [
+      {
+        "source": "hackernews",
+        "quote": "Di Rezze Family Office | AI-Native Technical Operations Lead | Miami, FL (ONSITE) | $130K-$200K + Early Equity | Full-TimeWe&#x27;re building an AI-native clinical data platform from the ground up, not a legacy system with AI bolted on.",
+        "author": "dfo-careers",
+        "date": "2026-04-01",
+        "url": "https://news.ycombinator.com/item?id=47601886",
+        "sentiment": "positive"
+      },
       {
         "source": "hackernews",
         "quote": "I&#x27;m all for the big names and ones that have proven issues and companies like Delve to be shamedBut Cursor? Why they are operating in a risky space on tech that is all new what ethical things did they do to warrent inclusion in this shame board?",
@@ -1202,14 +1210,6 @@
         "date": "2026-03-12",
         "url": "https://news.ycombinator.com/item?id=47355428",
         "sentiment": "positive"
-      },
-      {
-        "source": "hackernews",
-        "quote": "I use Kiro IDE (≠ Kiro CLI) primarily as a spec generator.In my experience, it&#x27;s high-quality for creating and iterating on specs. Tools like Cursor are optimized for human-driven vibing -- they have great autocomplete, etc.",
-        "author": "wenc",
-        "date": "2026-03-11",
-        "url": "https://news.ycombinator.com/item?id=47330762",
-        "sentiment": "positive"
       }
     ],
     "reddit": []
@@ -1221,7 +1221,7 @@
     "positive": 1,
     "negative": 2,
     "mixed": 2,
-    "lastUpdated": "2026-04-02",
+    "lastUpdated": "2026-04-03",
     "hackernews": [
       {
         "source": "hackernews",
@@ -1273,7 +1273,7 @@
     "positive": 2,
     "negative": 1,
     "mixed": 2,
-    "lastUpdated": "2026-04-02",
+    "lastUpdated": "2026-04-03",
     "hackernews": [
       {
         "source": "hackernews",
@@ -1325,7 +1325,7 @@
     "positive": 3,
     "negative": 0,
     "mixed": 2,
-    "lastUpdated": "2026-04-02",
+    "lastUpdated": "2026-04-03",
     "hackernews": [
       {
         "source": "hackernews",
@@ -1374,10 +1374,10 @@
     "name": "PostHog",
     "overallSentiment": "mixed",
     "totalMentions": 5,
-    "positive": 1,
+    "positive": 2,
     "negative": 0,
-    "mixed": 4,
-    "lastUpdated": "2026-04-02",
+    "mixed": 3,
+    "lastUpdated": "2026-04-03",
     "hackernews": [
       {
         "source": "hackernews",
@@ -1413,11 +1413,11 @@
       },
       {
         "source": "hackernews",
-        "quote": "Location: New Haven, CT, USA Remote: YesWilling to relocate: NoTechnologies: TypeScript, JavaScript, Node.js, React, AWS (CDK, Lambda, API Gateway, S3, ECS), PostgreSQL, MongoDB, Docker, Python, OpenAI API, LangChain, Mastra, Ruby, SinatraRésumé&#x2F;CV: Available by...",
-        "author": "rtlo9962",
-        "date": "2026-04-01",
-        "url": "https://news.ycombinator.com/item?id=47606550",
-        "sentiment": "neutral"
+        "quote": "Scite (scite.ai) | Senior Developer | REMOTE (US)We build AI-powered tools that help researchers and organizations make sense of the scientific literature. Small team, hard problems, real momentum.",
+        "author": "jmnicholson",
+        "date": "2026-04-02",
+        "url": "https://news.ycombinator.com/item?id=47613220",
+        "sentiment": "positive"
       }
     ],
     "reddit": []
@@ -1429,7 +1429,7 @@
     "positive": 4,
     "negative": 0,
     "mixed": 1,
-    "lastUpdated": "2026-04-02",
+    "lastUpdated": "2026-04-03",
     "hackernews": [
       {
         "source": "hackernews",
@@ -1481,7 +1481,7 @@
     "positive": 3,
     "negative": 0,
     "mixed": 2,
-    "lastUpdated": "2026-04-02",
+    "lastUpdated": "2026-04-03",
     "hackernews": [
       {
         "source": "hackernews",
@@ -1533,7 +1533,7 @@
     "positive": 2,
     "negative": 0,
     "mixed": 3,
-    "lastUpdated": "2026-04-02",
+    "lastUpdated": "2026-04-03",
     "hackernews": [
       {
         "source": "hackernews",
@@ -1585,7 +1585,7 @@
     "positive": 0,
     "negative": 0,
     "mixed": 2,
-    "lastUpdated": "2026-04-02",
+    "lastUpdated": "2026-04-03",
     "hackernews": [
       {
         "source": "hackernews",
@@ -1613,7 +1613,7 @@
     "positive": 1,
     "negative": 1,
     "mixed": 3,
-    "lastUpdated": "2026-04-02",
+    "lastUpdated": "2026-04-03",
     "hackernews": [
       {
         "source": "hackernews",
@@ -1665,7 +1665,7 @@
     "positive": 2,
     "negative": 0,
     "mixed": 3,
-    "lastUpdated": "2026-04-02",
+    "lastUpdated": "2026-04-03",
     "hackernews": [
       {
         "source": "hackernews",
@@ -1717,7 +1717,7 @@
     "positive": 2,
     "negative": 0,
     "mixed": 3,
-    "lastUpdated": "2026-04-02",
+    "lastUpdated": "2026-04-03",
     "hackernews": [
       {
         "source": "hackernews",
@@ -1769,7 +1769,7 @@
     "positive": 0,
     "negative": 1,
     "mixed": 4,
-    "lastUpdated": "2026-04-02",
+    "lastUpdated": "2026-04-03",
     "hackernews": [
       {
         "source": "hackernews",
@@ -1821,7 +1821,7 @@
     "positive": 2,
     "negative": 0,
     "mixed": 3,
-    "lastUpdated": "2026-04-02",
+    "lastUpdated": "2026-04-03",
     "hackernews": [
       {
         "source": "hackernews",
@@ -1873,7 +1873,7 @@
     "positive": 2,
     "negative": 0,
     "mixed": 3,
-    "lastUpdated": "2026-04-02",
+    "lastUpdated": "2026-04-03",
     "hackernews": [
       {
         "source": "hackernews",
@@ -1925,7 +1925,7 @@
     "positive": 4,
     "negative": 0,
     "mixed": 1,
-    "lastUpdated": "2026-04-02",
+    "lastUpdated": "2026-04-03",
     "hackernews": [
       {
         "source": "hackernews",
@@ -1977,7 +1977,7 @@
     "positive": 1,
     "negative": 3,
     "mixed": 1,
-    "lastUpdated": "2026-04-02",
+    "lastUpdated": "2026-04-03",
     "hackernews": [
       {
         "source": "hackernews",
@@ -2029,7 +2029,7 @@
     "positive": 2,
     "negative": 0,
     "mixed": 3,
-    "lastUpdated": "2026-04-02",
+    "lastUpdated": "2026-04-03",
     "hackernews": [
       {
         "source": "hackernews",
@@ -2081,7 +2081,7 @@
     "positive": 2,
     "negative": 0,
     "mixed": 1,
-    "lastUpdated": "2026-04-02",
+    "lastUpdated": "2026-04-03",
     "hackernews": [
       {
         "source": "hackernews",
@@ -2117,7 +2117,7 @@
     "positive": 1,
     "negative": 0,
     "mixed": 0,
-    "lastUpdated": "2026-04-02",
+    "lastUpdated": "2026-04-03",
     "hackernews": [
       {
         "source": "hackernews",
@@ -2137,7 +2137,7 @@
     "positive": 3,
     "negative": 0,
     "mixed": 0,
-    "lastUpdated": "2026-04-02",
+    "lastUpdated": "2026-04-03",
     "hackernews": [
       {
         "source": "hackernews",
@@ -2173,7 +2173,7 @@
     "positive": 1,
     "negative": 1,
     "mixed": 0,
-    "lastUpdated": "2026-04-02",
+    "lastUpdated": "2026-04-03",
     "hackernews": [
       {
         "source": "hackernews",
@@ -2201,7 +2201,7 @@
     "positive": 2,
     "negative": 0,
     "mixed": 3,
-    "lastUpdated": "2026-04-02",
+    "lastUpdated": "2026-04-03",
     "hackernews": [
       {
         "source": "hackernews",
@@ -2253,7 +2253,7 @@
     "positive": 0,
     "negative": 4,
     "mixed": 1,
-    "lastUpdated": "2026-04-02",
+    "lastUpdated": "2026-04-03",
     "hackernews": [
       {
         "source": "hackernews",
@@ -2305,7 +2305,7 @@
     "positive": 0,
     "negative": 1,
     "mixed": 4,
-    "lastUpdated": "2026-04-02",
+    "lastUpdated": "2026-04-03",
     "hackernews": [
       {
         "source": "hackernews",
@@ -2357,7 +2357,7 @@
     "positive": 0,
     "negative": 0,
     "mixed": 2,
-    "lastUpdated": "2026-04-02",
+    "lastUpdated": "2026-04-03",
     "hackernews": [
       {
         "source": "hackernews",
@@ -2385,7 +2385,7 @@
     "positive": 2,
     "negative": 0,
     "mixed": 3,
-    "lastUpdated": "2026-04-02",
+    "lastUpdated": "2026-04-03",
     "hackernews": [
       {
         "source": "hackernews",
@@ -2437,7 +2437,7 @@
     "positive": 0,
     "negative": 0,
     "mixed": 0,
-    "lastUpdated": "2026-04-02",
+    "lastUpdated": "2026-04-03",
     "hackernews": [],
     "reddit": []
   },
@@ -2448,7 +2448,7 @@
     "positive": 3,
     "negative": 0,
     "mixed": 1,
-    "lastUpdated": "2026-04-02",
+    "lastUpdated": "2026-04-03",
     "hackernews": [
       {
         "source": "hackernews",
@@ -2492,7 +2492,7 @@
     "positive": 3,
     "negative": 0,
     "mixed": 1,
-    "lastUpdated": "2026-04-02",
+    "lastUpdated": "2026-04-03",
     "hackernews": [
       {
         "source": "hackernews",
@@ -2536,7 +2536,7 @@
     "positive": 0,
     "negative": 0,
     "mixed": 0,
-    "lastUpdated": "2026-04-02",
+    "lastUpdated": "2026-04-03",
     "hackernews": [],
     "reddit": []
   },
@@ -2547,7 +2547,7 @@
     "positive": 4,
     "negative": 0,
     "mixed": 1,
-    "lastUpdated": "2026-04-02",
+    "lastUpdated": "2026-04-03",
     "hackernews": [
       {
         "source": "hackernews",
