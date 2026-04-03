@@ -48,7 +48,7 @@
     <li><strong>Mission</strong>: Ethical AI, Mission-Driven</li>
 </ul>
 
-<p>Every value has evidence criteria. For example, a company only gets tagged "remote" if >50% of their open roles are listed as remote, or they explicitly state "remote-first." Having a few remote roles doesn't count. Companies like Vercel and Replit lost their "remote" tag in my audit because the data didn't support it — most of their roles are hybrid or in-office.</p>
+<p>Every value has evidence criteria. I cross-reference Glassdoor reviews, actual job listings, and engineering blogs before assigning any tag. If the evidence doesn't support it, the company doesn't get the label — regardless of what their careers page says. Several well-known companies lost tags in recent audits because the data told a different story than their marketing.</p>
 
 <h2>What the Data Revealed</h2>
 
@@ -96,29 +96,19 @@
 
 <p>The companies doubling down on remote tend to be the ones with the strongest async cultures. Remote without async is just Zoom fatigue.</p>
 
-<h2>How the Technical Architecture Works</h2>
+<h2>How It Works Under the Hood</h2>
 
-<p>The site is static HTML on Vercel — no React, no framework. Jobs are fetched from Greenhouse, Ashby, Lever, and Workable APIs and rendered with vanilla JavaScript. The full pipeline:</p>
+<p>The site pulls live job data from multiple ATS platforms daily and cross-references it with our culture database. The whole thing runs as a static site — no heavy framework, no server-side rendering — which means pages load fast and search engines can crawl everything instantly.</p>
 
-<ol>
-    <li><strong>fetch-jobs.js</strong> — Pulls live jobs from 4 ATS platforms</li>
-    <li><strong>update-jobs-html.js</strong> — Injects the JOBS array into the page</li>
-    <li><strong>build-cluster-pages.js</strong> — Generates 297 programmatic SEO pages (values × roles × locations)</li>
-    <li><strong>build-compare-pages.js</strong> — Generates 800+ comparison pages</li>
-    <li><strong>indexnow.js</strong> — Submits all URLs to search engines</li>
-</ol>
-
-<p>The company data (Glassdoor ratings, WLB scores, culture values, pros/cons) lives in a single <code>companies.json</code> file that serves as the source of truth. Everything else — the homepage grid, jobs page, company profiles — renders from this one file.</p>
-
-<p>I chose static HTML over a framework because SEO is everything for a job board. Google crawls static HTML faster, LLMs can read it without executing JavaScript, and the pages load in under 1 second on any connection.</p>
+<p>Beyond the main job board, we auto-generate hundreds of filtered pages: jobs by culture value, by role, by location, and every combination in between. That's how you end up with pages like "remote engineering jobs at companies with async culture" without anyone manually building them.</p>
 
 <h2>What I'd Build Differently</h2>
 
-<p><strong>The values framework should have come first.</strong> I initially assigned values loosely — "this company feels engineering-driven" — and it led to wrong tags that had to be corrected later. The strict evidence framework (with specific criteria like "remote = >50% of roles listed as remote") should have been the foundation from day one.</p>
+<p><strong>The values framework should have come first.</strong> I initially assigned values loosely — "this company feels engineering-driven" — and it led to wrong tags that had to be corrected later. Having strict, evidence-based criteria from day one would have saved a lot of rework.</p>
 
-<p><strong>Company data should have been centralized earlier.</strong> For the first 49 companies, I was manually editing three different files for every new company. I've since moved to a single JSON source of truth that syncs everywhere, but I should have built that architecture at company #10, not #50.</p>
+<p><strong>Data architecture matters early.</strong> When you're at 10 companies it's fine to manage things manually. At 50+ companies, you need a single source of truth that everything renders from. I learned this the hard way.</p>
 
-<p><strong>Glassdoor data is necessary but not sufficient.</strong> Reviews skew negative (unhappy people are more likely to write), and small companies with <10 reviews produce unreliable scores. I've started incorporating community sentiment from Hacker News and Reddit to get a more balanced picture.</p>
+<p><strong>Glassdoor data is necessary but not sufficient.</strong> Reviews skew negative (unhappy people are more likely to write), and small companies with fewer than 10 reviews produce unreliable scores. I've started incorporating community sentiment from Hacker News and Reddit to get a more balanced picture.</p>
 
 <h2>The Bigger Bet</h2>
 
