@@ -351,10 +351,10 @@
             padding: 48px 0 56px;
         }
         .preview-wrapper {
-            background: linear-gradient(145deg, #fef9ef, #fef3c7, #fdf2e9);
+            background: linear-gradient(145deg, #f8f6f3, #f4f0eb, #f8f5f0);
             border-radius: var(--radius-lg);
             padding: 48px;
-            border: 1px solid rgba(251,191,36,0.2);
+            border: 1px solid var(--border);
             position: relative;
             overflow: hidden;
         }
@@ -362,14 +362,12 @@
             content: '';
             position: absolute; top: 0; left: 0; right: 0; bottom: 0;
             background:
-                url('/culture-cards/confetti-bg.jpg') center / 600px repeat;
-            opacity: 0.08;
+                radial-gradient(circle at 30% 30%, rgba(232,89,12,0.04) 0%, transparent 50%),
+                radial-gradient(circle at 70% 70%, rgba(13,148,136,0.04) 0%, transparent 50%);
             pointer-events: none;
         }
         .preview-card {
-            background:
-                linear-gradient(135deg, rgba(255,255,255,0.92) 0%, rgba(254,243,199,0.85) 50%, rgba(255,255,255,0.90) 100%),
-                url('/culture-cards/confetti-bg.jpg') center / cover;
+            background: #fffbf0;
             border-radius: var(--radius-lg);
             box-shadow: 0 20px 60px rgba(0,0,0,0.10), 0 4px 16px rgba(0,0,0,0.05);
             max-width: 780px; margin: 0 auto;
@@ -389,9 +387,11 @@
             content: '';
             position: absolute; top: 0; left: 0; right: 0; bottom: 0;
             background:
-                radial-gradient(circle at 10% 15%, rgba(232,89,12,0.08) 0%, transparent 35%),
-                radial-gradient(circle at 90% 80%, rgba(13,148,136,0.08) 0%, transparent 35%),
-                radial-gradient(circle at 50% 40%, rgba(124,58,237,0.04) 0%, transparent 45%);
+                radial-gradient(ellipse at 0% 0%, rgba(251,191,36,0.15) 0%, transparent 50%),
+                radial-gradient(ellipse at 100% 100%, rgba(236,72,153,0.1) 0%, transparent 50%),
+                radial-gradient(ellipse at 50% 50%, rgba(124,58,237,0.05) 0%, transparent 60%),
+                url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80' viewBox='0 0 80 80'%3E%3Cg fill-rule='evenodd'%3E%3Cg fill='%23e8590c' fill-opacity='0.04'%3E%3Cpath d='M50 50c0-5.523 4.477-10 10-10s10 4.477 10 10-4.477 10-10 10c0 5.523-4.477 10-10 10s-10-4.477-10-10 4.477-10 10-10zM10 10c0-5.523 4.477-10 10-10s10 4.477 10 10-4.477 10-10 10c0 5.523-4.477 10-10 10S0 25.523 0 20s4.477-10 10-10zm10 8c4.418 0 8-3.582 8-8s-3.582-8-8-8-8 3.582-8 8 3.582 8 8 8zm40 40c4.418 0 8-3.582 8-8s-3.582-8-8-8-8 3.582-8 8 3.582 8 8 8z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E"),
+                url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='52' height='26' viewBox='0 0 52 26'%3E%3Cg fill-rule='evenodd'%3E%3Cg fill='%230d9488' fill-opacity='0.03'%3E%3Cpath d='M10 10c0-2.21-1.79-4-4-4-3.314 0-6-2.686-6-6h2c0 2.21 1.79 4 4 4 3.314 0 6 2.686 6 6 0 2.21 1.79 4 4 4 3.314 0 6 2.686 6 6 0 2.21 1.79 4 4 4v2c-3.314 0-6-2.686-6-6 0-2.21-1.79-4-4-4-3.314 0-6-2.686-6-6zm25.464-1.95l8.486 8.486-1.414 1.414-8.486-8.486 1.414-1.414z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
             pointer-events: none; z-index: 0;
         }
         .preview-card-header {
@@ -729,7 +729,7 @@
                         <span class="author">— Priya M.</span>
                     </div>
                     <div class="preview-msg">
-                        <img class="msg-gif" src="https://media.giphy.com/media/vzTVFTWOuxrCH1ewh6/giphy.gif" alt="Happy bye bye" loading="lazy">
+                        <img class="msg-gif" src="https://media.giphy.com/media/kaBU6pgv0OsPHz2yxy/giphy.gif" alt="We'll miss you" loading="lazy">
                         <p>"You taught me that code reviews are love letters to your future self. I'll carry that forever."</p>
                         <span class="author">— Aisha N.</span>
                     </div>
