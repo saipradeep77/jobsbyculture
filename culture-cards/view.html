@@ -754,9 +754,11 @@
                             </div>
                         </div>
                         <div id="gifTab" style="display:none">
-                            <div class="gif-input-row">
-                                <input type="url" class="gif-input" id="gifUrlInput" placeholder="Paste a GIF URL (e.g., from Giphy)">
+                            <div class="gif-search-row" style="position:relative">
+                                <input type="text" class="gif-input" id="gifSearchInput" placeholder="Search GIFs..." autocomplete="off">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/8/82/Giphy-logo.svg" alt="Powered by GIPHY" style="position:absolute;right:12px;top:50%;transform:translateY(-50%);height:16px;opacity:0.4">
                             </div>
+                            <div id="gifResults" style="display:grid;grid-template-columns:repeat(3,1fr);gap:8px;max-height:240px;overflow-y:auto;margin-top:8px;border-radius:8px"></div>
                             <div class="upload-preview" id="gifPreview" style="margin-top:8px">
                                 <img id="gifPreviewImg" src="" alt="GIF Preview">
                                 <button type="button" class="remove-upload" onclick="removeGif()">&times;</button>
@@ -1034,24 +1036,53 @@ function setupMediaUpload() {
         if (this.files.length) handleFileSelect(this.files[0]);
     });
 
-    // GIF URL preview
-    var gifInput = document.getElementById('gifUrlInput');
-    if (gifInput) {
-        gifInput.addEventListener('input', function() {
-            var url = this.value.trim();
-            var preview = document.getElementById('gifPreview');
-            var img = document.getElementById('gifPreviewImg');
-            if (url && (url.match(/\.(gif|jpg|jpeg|png|webp)$/i) || url.includes('giphy.com') || url.includes('tenor.com') || url.includes('media'))) {
-                img.src = url;
-                preview.style.display = 'block';
-                pendingMediaUrl = url;
-                pendingMediaType = 'gif';
-                pendingFile = null;
-            } else {
-                preview.style.display = 'none';
-                if (pendingMediaType === 'gif') { pendingMediaUrl = null; pendingMediaType = null; }
+    // Giphy search
+    var gifSearchInput = document.getElementById('gifSearchInput');
+    var gifSearchTimer = null;
+    var GIPHY_KEY = 'BVNwBgx4kIQIfwYPZKNh1qmxkZIU8a2J';
+    if (gifSearchInput) {
+        gifSearchInput.addEventListener('input', function() {
+            clearTimeout(gifSearchTimer);
+            var q = this.value.trim();
+            var resultsDiv = document.getElementById('gifResults');
+            if (!q) {
+                resultsDiv.innerHTML = '';
+                resultsDiv.style.display = 'none';
+                loadTrendingGifs();
+                return;
             }
+            gifSearchTimer = setTimeout(function() {
+                fetch('https://api.giphy.com/v1/gifs/search?api_key=' + GIPHY_KEY + '&q=' + encodeURIComponent(q) + '&limit=12&rating=g')
+                    .then(function(r) { return r.json(); })
+                    .then(function(data) {
+                        resultsDiv.style.display = 'grid';
+                        resultsDiv.innerHTML = (data.data || []).map(function(gif) {
+                            var url = gif.images.fixed_height.url;
+                            var thumb = gif.images.fixed_width_small.url;
+                            return '<img src="' + thumb + '" data-full="' + url + '" alt="' + escHtml(gif.title) + '" style="width:100%;border-radius:6px;cursor:pointer;object-fit:cover;height:80px" onclick="selectGif(this)">';
+                        }).join('');
+                        if (!data.data || data.data.length === 0) {
+                            resultsDiv.innerHTML = '<p style="grid-column:1/-1;text-align:center;color:var(--text-3);font-size:13px;padding:16px">No GIFs found</p>';
+                        }
+                    });
+            }, 400);
         });
+        // Load trending on tab open
+        loadTrendingGifs();
+    }
+    function loadTrendingGifs() {
+        var resultsDiv = document.getElementById('gifResults');
+        if (!resultsDiv) return;
+        fetch('https://api.giphy.com/v1/gifs/trending?api_key=' + GIPHY_KEY + '&limit=9&rating=g')
+            .then(function(r) { return r.json(); })
+            .then(function(data) {
+                resultsDiv.style.display = 'grid';
+                resultsDiv.innerHTML = (data.data || []).map(function(gif) {
+                    var url = gif.images.fixed_height.url;
+                    var thumb = gif.images.fixed_width_small.url;
+                    return '<img src="' + thumb + '" data-full="' + url + '" alt="' + escHtml(gif.title) + '" style="width:100%;border-radius:6px;cursor:pointer;object-fit:cover;height:80px" onclick="selectGif(this)">';
+                }).join('');
+            });
     }
 }
 
@@ -1091,10 +1122,23 @@ function removeUpload() {
     document.getElementById('fileInput').value = '';
 }
 
+function selectGif(imgEl) {
+    var url = imgEl.getAttribute('data-full');
+    pendingMediaUrl = url;
+    pendingMediaType = 'gif';
+    pendingFile = null;
+    var preview = document.getElementById('gifPreview');
+    var previewImg = document.getElementById('gifPreviewImg');
+    previewImg.src = url;
+    preview.style.display = 'block';
+    document.getElementById('gifResults').style.display = 'none';
+}
+
 function removeGif() {
     if (pendingMediaType === 'gif') { pendingMediaUrl = null; pendingMediaType = null; }
     document.getElementById('gifPreview').style.display = 'none';
-    document.getElementById('gifUrlInput').value = '';
+    document.getElementById('gifSearchInput').value = '';
+    document.getElementById('gifResults').style.display = 'none';
 }
 
 /* ---- Theme Switcher ---- */
