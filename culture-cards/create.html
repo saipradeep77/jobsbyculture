@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create a Culture Card | JobsByCulture</title>
+    <meta name="description" content="Create a beautiful group card for your team. Celebrate farewells, birthdays, promotions, anniversaries, welcomes, and appreciation.">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="Create a Culture Card | JobsByCulture">
+    <meta property="og:description" content="Create a beautiful group card for your team. Celebrate farewells, birthdays, promotions, and more.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://jobsbyculture.com/culture-cards/create">
+    <meta property="og:image" content="https://jobsbyculture.com/og-image.png">
+    <meta property="og:image:type" content="image/png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Create a Culture Card | JobsByCulture">
+    <meta name="twitter:description" content="Create a beautiful group card for your team. Celebrate farewells, birthdays, promotions, and more.">
+    <meta name="twitter:image" content="https://jobsbyculture.com/og-image.png">
+    <link rel="canonical" href="https://jobsbyculture.com/culture-cards/create">
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <link rel="icon" type="image/png" sizes="512x512" href="/logo.png">
+    <link rel="apple-touch-icon" href="/logo.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Satoshi:wght@400;500;600;700;900&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #fafaf8;
+            --bg-raised: #ffffff;
+            --bg-card: #ffffff;
+            --bg-hover: #f4f3ef;
+            --text: #1a1a1f;
+            --text-2: #52525b;
+            --text-3: #9ca3af;
+            --accent: #e8590c;
+            --accent-hover: #c2410c;
+            --accent-bg: rgba(232,89,12,0.06);
+            --accent-border: rgba(232,89,12,0.2);
+            --teal: #0d9488;
+            --teal-bg: rgba(13,148,136,0.06);
+            --teal-border: rgba(13,148,136,0.2);
+            --violet: #7c3aed;
+            --violet-bg: rgba(124,58,237,0.06);
+            --violet-border: rgba(124,58,237,0.2);
+            --rose: #e11d48;
+            --rose-bg: rgba(225,29,72,0.06);
+            --rose-border: rgba(225,29,72,0.2);
+            --sky: #0284c7;
+            --sky-bg: rgba(2,132,199,0.06);
+            --sky-border: rgba(2,132,199,0.2);
+            --lime: #4d7c0f;
+            --lime-bg: rgba(77,124,15,0.06);
+            --lime-border: rgba(77,124,15,0.2);
+            --border: rgba(0,0,0,0.07);
+            --border-2: rgba(0,0,0,0.12);
+            --border-3: rgba(0,0,0,0.18);
+            --radius: 12px;
+            --radius-sm: 8px;
+            --radius-lg: 20px;
+            --radius-full: 100px;
+            --font-display: 'Instrument Serif', Georgia, serif;
+            --font-body: 'Satoshi', -apple-system, sans-serif;
+            --font-mono: 'IBM Plex Mono', monospace;
+            --shadow: 0 4px 24px rgba(0,0,0,0.06), 0 1px 3px rgba(0,0,0,0.04);
+            --shadow-lg: 0 12px 48px rgba(0,0,0,0.08);
+            --green: #059669;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body {
+            font-family: var(--font-body);
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+            overflow-x: hidden;
+        }
+        .container { max-width: 1140px; margin: 0 auto; padding: 0 24px; }
+
+        /* NAV */
+        nav {
+            position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+            background: rgba(250,250,248,0.85);
+            backdrop-filter: blur(24px) saturate(1.4);
+            border-bottom: 1px solid var(--border);
+        }
+        .nav-inner {
+            max-width: 1140px; margin: 0 auto; padding: 14px 24px;
+            display: flex; align-items: center; justify-content: space-between;
+        }
+        .nav-logo { display: flex; align-items: center; gap: 10px; text-decoration: none; color: var(--text); }
+        .nav-mark {
+            width: 30px; height: 30px; position: relative;
+            display: flex; align-items: center; justify-content: center;
+        }
+        .nav-mark .ring {
+            position: absolute; border: 1.5px solid var(--accent); border-radius: 50%;
+            animation: logoPing 2.5s ease-out infinite;
+        }
+        .nav-mark .ring-1 { width: 100%; height: 100%; opacity: 0.2; }
+        .nav-mark .ring-2 { width: 65%; height: 65%; opacity: 0.4; animation-delay: 0.3s; }
+        .nav-mark .nav-dot { width: 7px; height: 7px; background: var(--accent); border-radius: 50%; position: relative; z-index: 1; }
+        @keyframes logoPing { 0% { transform: scale(1); opacity: 0.4; } 100% { transform: scale(1.5); opacity: 0; } }
+        .nav-wordmark { font-weight: 700; font-size: 16px; letter-spacing: -0.03em; }
+        .nav-wordmark span { color: var(--accent); }
+        .nav-links { display: flex; align-items: center; gap: 28px; }
+        .nav-links a { color: var(--text-2); text-decoration: none; font-size: 14px; font-weight: 500; transition: color 0.15s; }
+        .nav-links a:hover { color: var(--text); }
+        .nav-links a.active { color: var(--text); font-weight: 600; }
+        .nav-links .nav-cta {
+            background: var(--accent); color: #fff !important; padding: 7px 16px;
+            border-radius: var(--radius-sm); font-size: 13px; font-weight: 600;
+            transition: all 0.2s;
+        }
+        .nav-links .nav-cta:hover { background: var(--accent-hover); transform: translateY(-1px); }
+        .hamburger { display: none; background: none; border: none; cursor: pointer; padding: 4px; flex-direction: column; gap: 5px; }
+        .hamburger span { display: block; width: 22px; height: 2px; background: var(--text); border-radius: 1px; transition: all 0.3s; }
+        .hamburger.active span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
+        .hamburger.active span:nth-child(2) { opacity: 0; }
+        .hamburger.active span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
+
+        /* HERO */
+        .page-hero {
+            padding: 130px 0 48px;
+            text-align: center;
+            position: relative;
+        }
+        .page-hero::before {
+            content: ''; position: absolute; top: -100px; left: 50%; transform: translateX(-50%);
+            width: 900px; height: 600px;
+            background: radial-gradient(ellipse, rgba(232,89,12,0.06) 0%, transparent 70%);
+            pointer-events: none;
+        }
+        .page-hero h1 {
+            font-family: var(--font-display); font-weight: 400;
+            font-size: clamp(36px, 5vw, 56px);
+            line-height: 1.1; letter-spacing: -0.025em;
+            margin-bottom: 12px;
+            animation: fadeUp 0.5s ease both;
+        }
+        .page-hero p {
+            font-size: 18px; color: var(--text-2); max-width: 480px; margin: 0 auto;
+            line-height: 1.7;
+            animation: fadeUp 0.5s ease 0.1s both;
+        }
+
+        /* FORM CARD */
+        .form-card {
+            max-width: 600px; margin: 0 auto 80px;
+            background: var(--bg-raised);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 40px 36px;
+            box-shadow: var(--shadow);
+            animation: fadeUp 0.5s ease 0.2s both;
+        }
+
+        .form-group { margin-bottom: 24px; }
+        .form-label {
+            display: block; font-size: 14px; font-weight: 600;
+            color: var(--text); margin-bottom: 8px;
+        }
+        .form-label .optional {
+            font-weight: 400; color: var(--text-3); font-size: 13px;
+        }
+        .form-note {
+            font-size: 12px; color: var(--text-3); margin-top: 4px;
+        }
+
+        /* Occasion pills */
+        .occasion-row {
+            display: flex; flex-wrap: wrap; gap: 8px;
+        }
+        .occasion-pill {
+            padding: 10px 18px; border-radius: var(--radius-full);
+            border: 1.5px solid var(--border-2); background: var(--bg);
+            font-family: var(--font-body); font-size: 14px; font-weight: 500;
+            color: var(--text-2); cursor: pointer; transition: all 0.2s;
+            display: inline-flex; align-items: center; gap: 6px;
+        }
+        .occasion-pill:hover {
+            border-color: var(--accent-border); background: var(--accent-bg); color: var(--text);
+        }
+        .occasion-pill.selected {
+            background: var(--accent); color: #fff; border-color: var(--accent);
+        }
+
+        /* Text inputs */
+        .form-input {
+            width: 100%; padding: 12px 16px;
+            border: 1.5px solid var(--border-2); border-radius: var(--radius-sm);
+            font-family: var(--font-body); font-size: 15px;
+            background: var(--bg); color: var(--text);
+            transition: border-color 0.2s, box-shadow 0.2s;
+            outline: none;
+        }
+        .form-input:focus {
+            border-color: var(--accent); box-shadow: 0 0 0 3px rgba(232,89,12,0.1);
+        }
+        .form-input::placeholder { color: var(--text-3); }
+
+        /* Theme swatches */
+        .theme-row { display: flex; gap: 12px; align-items: center; }
+        .theme-swatch {
+            width: 44px; height: 44px; border-radius: 50%;
+            border: 2.5px solid var(--border-2); cursor: pointer;
+            transition: all 0.2s; position: relative;
+            display: flex; align-items: center; justify-content: center;
+        }
+        .theme-swatch:hover { border-color: var(--text-3); }
+        .theme-swatch.selected { border-color: var(--accent); box-shadow: 0 0 0 3px rgba(232,89,12,0.15); }
+        .theme-swatch.sw-default { background: #fff; }
+        .theme-swatch.sw-default::after {
+            content: ''; width: 12px; height: 12px; border-radius: 50%;
+            background: var(--accent);
+        }
+        .theme-swatch.sw-warm { background: #fef3c7; }
+        .theme-swatch.sw-teal { background: #0d9488; }
+        .theme-swatch.sw-midnight { background: #1e1e2e; }
+        .theme-lock {
+            position: absolute; font-size: 14px; opacity: 0.7;
+        }
+        .theme-label {
+            font-size: 12px; color: var(--text-3); margin-top: 4px; text-align: center;
+        }
+        .theme-col { display: flex; flex-direction: column; align-items: center; gap: 4px; }
+        .theme-swatch.sw-midnight[title]::before { content: none; }
+
+        /* Submit button */
+        .submit-btn {
+            width: 100%; padding: 14px 24px;
+            background: var(--accent); color: #fff;
+            border: none; border-radius: var(--radius-sm);
+            font-family: var(--font-body); font-size: 16px; font-weight: 600;
+            cursor: pointer; transition: all 0.2s;
+        }
+        .submit-btn:hover { background: var(--accent-hover); transform: translateY(-1px); }
+        .submit-btn:disabled { opacity: 0.6; cursor: not-allowed; transform: none; }
+
+        /* FOOTER */
+        footer { padding: 56px 0 36px; border-top: 1px solid var(--border); }
+        .ft-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 40px; margin-bottom: 40px; }
+        .ft-about p { font-size: 13px; color: var(--text-3); margin-top: 10px; line-height: 1.7; max-width: 260px; }
+        .ft-col h4 { font-size: 12px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em; color: var(--text-2); margin-bottom: 14px; }
+        .ft-col a { display: block; font-size: 13px; color: var(--text-3); text-decoration: none; padding: 3px 0; transition: color 0.15s; }
+        .ft-col a:hover { color: var(--text); }
+        .ft-bar { border-top: 1px solid var(--border); padding-top: 20px; display: flex; justify-content: space-between; align-items: center; }
+        .ft-bar p { font-size: 12px; color: var(--text-3); }
+
+        /* ANIMATIONS */
+        @keyframes fadeUp { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }
+
+        /* RESPONSIVE */
+        @media (max-width: 768px) {
+            .hamburger { display: flex; }
+            .nav-links {
+                display: none; position: absolute; top: 100%; left: 0; right: 0;
+                background: rgba(250,250,248,0.98); backdrop-filter: blur(20px);
+                border-bottom: 1px solid var(--border); padding: 20px 24px;
+                flex-direction: column; gap: 16px;
+                box-shadow: 0 8px 24px rgba(0,0,0,0.06);
+            }
+            .nav-links.open { display: flex; }
+            .page-hero { padding: 100px 0 32px; }
+            .form-card { padding: 28px 20px; margin-bottom: 48px; }
+            .occasion-pill { padding: 8px 14px; font-size: 13px; }
+            .ft-grid { grid-template-columns: 1fr 1fr; gap: 28px; }
+        }
+        @media (max-width: 480px) {
+            .ft-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+    <script async src="https://plausible.io/js/pa-qa3pjs5eZbsfBQJMk4hVW.js"></script>
+    <script>
+      window.plausible=window.plausible||function(){(plausible.q=plausible.q||[]).push(arguments)},plausible.init=plausible.init||function(i){plausible.o=i||{}};
+      plausible.init()
+    </script>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+    <div class="nav-inner">
+        <a href="/" class="nav-logo">
+            <div class="nav-mark"><div class="ring ring-1"></div><div class="ring ring-2"></div><div class="nav-dot"></div></div>
+            <div class="nav-wordmark">Jobs<span>By</span>Culture</div>
+        </a>
+        <div class="nav-links">
+            <a href="/jobs">Jobs</a>
+            <a href="/directory">Companies</a>
+            <a href="/culture-cards/create" class="active">Culture Cards</a>
+            <a href="/blog">Blog</a>
+            <a href="/for-employers" class="nav-cta">For Employers</a>
+        </div>
+        <button class="hamburger" onclick="this.classList.toggle('active');this.closest('.nav-inner').querySelector('.nav-links').classList.toggle('open')" aria-label="Menu">
+            <span></span><span></span><span></span>
+        </button>
+    </div>
+</nav>
+
+<!-- HERO -->
+<section class="page-hero">
+    <div class="container">
+        <h1>Create a Culture Card</h1>
+        <p>Pick an occasion, add the details, share with your team.</p>
+    </div>
+</section>
+
+<!-- FORM -->
+<div class="container">
+    <div class="form-card">
+        <form id="createForm" autocomplete="off">
+
+            <!-- Occasion -->
+            <div class="form-group">
+                <label class="form-label">Occasion</label>
+                <div class="occasion-row" id="occasionRow">
+                    <button type="button" class="occasion-pill" data-occasion="farewell">&#127917; Farewell</button>
+                    <button type="button" class="occasion-pill" data-occasion="birthday">&#127874; Birthday</button>
+                    <button type="button" class="occasion-pill" data-occasion="promotion">&#127942; Promotion</button>
+                    <button type="button" class="occasion-pill" data-occasion="anniversary">&#127881; Anniversary</button>
+                    <button type="button" class="occasion-pill" data-occasion="welcome">&#128075; Welcome</button>
+                    <button type="button" class="occasion-pill" data-occasion="appreciation">&#10084;&#65039; Appreciation</button>
+                </div>
+            </div>
+
+            <!-- Recipient Name -->
+            <div class="form-group">
+                <label class="form-label" for="recipientName">Recipient Name</label>
+                <input type="text" id="recipientName" class="form-input" placeholder="Who is this card for?" required>
+            </div>
+
+            <!-- Card Title -->
+            <div class="form-group">
+                <label class="form-label" for="cardTitle">Card Title</label>
+                <input type="text" id="cardTitle" class="form-input" placeholder="Auto-generated from occasion + name" required>
+            </div>
+
+            <!-- Team Name -->
+            <div class="form-group">
+                <label class="form-label" for="teamName">Team Name <span class="optional">(optional)</span></label>
+                <input type="text" id="teamName" class="form-input" placeholder="e.g., The Engineering Team">
+            </div>
+
+            <!-- Your Name -->
+            <div class="form-group">
+                <label class="form-label" for="yourName">Your Name</label>
+                <input type="text" id="yourName" class="form-input" placeholder="Your name" required>
+            </div>
+
+            <!-- Your Email -->
+            <div class="form-group">
+                <label class="form-label" for="yourEmail">Your Email</label>
+                <input type="email" id="yourEmail" class="form-input" placeholder="you@company.com" required>
+                <p class="form-note">Used to manage your card. Not shared.</p>
+            </div>
+
+            <!-- Theme -->
+            <div class="form-group">
+                <label class="form-label">Theme</label>
+                <div class="theme-row">
+                    <div class="theme-col">
+                        <div class="theme-swatch sw-default selected" data-theme="default" title="Default"></div>
+                        <span class="theme-label">Default</span>
+                    </div>
+                    <div class="theme-col">
+                        <div class="theme-swatch sw-warm" data-theme="warm" title="Warm"></div>
+                        <span class="theme-label">Warm</span>
+                    </div>
+                    <div class="theme-col">
+                        <div class="theme-swatch sw-teal" data-theme="teal" title="Teal"></div>
+                        <span class="theme-label">Teal</span>
+                    </div>
+                    <div class="theme-col">
+                        <div class="theme-swatch sw-midnight" data-theme="midnight" title="Midnight (Premium)">
+                            <span class="theme-lock">&#128274;</span>
+                        </div>
+                        <span class="theme-label">Midnight</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Submit -->
+            <button type="submit" class="submit-btn">Create Card &rarr;</button>
+        </form>
+    </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+    <div class="container">
+        <div class="ft-grid">
+            <div class="ft-col">
+                <h4>By Culture</h4>
+                <a href="/values/remote">Remote-Friendly</a>
+                <a href="/values/async">Async-First</a>
+                <a href="/values/deep-work">Deep Work</a>
+                <a href="/values/wlb">Work-Life Balance</a>
+                <a href="/values/ethical-ai">Ethical AI</a>
+                <a href="/values/equity">Strong Comp</a>
+            </div>
+            <div class="ft-col">
+                <h4>By Role</h4>
+                <a href="/roles/engineering">Engineering</a>
+                <a href="/roles/ml-ai">ML / AI</a>
+                <a href="/roles/design">Design</a>
+                <a href="/roles/product">Product</a>
+                <a href="/roles/data">Data</a>
+                <a href="/roles/marketing">Marketing</a>
+            </div>
+            <div class="ft-col">
+                <h4>By Seniority</h4>
+                <a href="/seniority/entry">Entry / Junior</a>
+                <a href="/seniority/mid">Mid-Level</a>
+                <a href="/seniority/senior">Senior</a>
+                <a href="/seniority/staff">Staff / Principal</a>
+                <a href="/seniority/lead">Lead / Manager</a>
+                <a href="/seniority/director">Director+</a>
+            </div>
+            <div class="ft-col">
+                <h4>By Location</h4>
+                <a href="/locations/san-francisco">San Francisco</a>
+                <a href="/locations/new-york">New York</a>
+                <a href="/locations/london">London</a>
+                <a href="/locations/remote">Remote</a>
+                <a href="/locations/seattle">Seattle</a>
+                <a href="/locations/paris">Paris</a>
+            </div>
+            <div class="ft-col">
+                <h4>Explore</h4>
+                <a href="/directory">Culture Directory</a>
+                <a href="/compare">Compare Cultures</a>
+                <a href="/culture-map">Culture Map</a>
+                <a href="/quiz">Culture Quiz</a>
+                <a href="/blog">Blog</a>
+                <a href="/for-employers">For Employers</a>
+                <a href="https://meetingtax.com/?ref=jobsbyculture.com" target="_blank">Meeting Tax</a>
+                <a href="https://paytaxfa.st/?ref=jobsbyculture.com" target="_blank">PayTaxFast</a>
+            </div>
+        </div>
+        <div class="ft-about" style="display:flex;align-items:center;gap:10px;margin-bottom:32px">
+            <a href="/" class="nav-logo" style="margin-bottom:0">
+                <div class="nav-mark"><div class="ring ring-1"></div><div class="ring ring-2"></div><div class="nav-dot"></div></div>
+                <div class="nav-wordmark">Jobs<span>By</span>Culture</div>
+            </a>
+            <span style="color:var(--text-3);font-size:14px;margin-left:8px">The culture-first job board. Built for the AI era.</span>
+        </div>
+        <div class="ft-bar">
+            <p>&copy; 2026 JobsByCulture. Built with &#10084;&#65039; for the indie hacker community.</p>
+            <p>Made by <a href="https://x.com/itspradz?ref=jobsbyculture.com" target="_blank" style="color:var(--accent);text-decoration:none">@itspradz</a></p>
+        </div>
+    </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script>
+const SUPABASE_URL = 'https://quyxzwouqlrfvpsexwbh.supabase.co';
+const SUPABASE_KEY = 'sb_publishable_7g5dGcIUkN4OxJJ2gnlYEA_XkyDtN8p';
+const sb = window.supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
+
+let selectedOccasion = new URLSearchParams(window.location.search).get('occasion') || 'farewell';
+let selectedTheme = 'default';
+
+const titleTemplates = {
+    farewell: 'Farewell, {name}!',
+    birthday: 'Happy Birthday, {name}!',
+    promotion: 'Congratulations on Your Promotion, {name}!',
+    anniversary: 'Happy Work Anniversary, {name}!',
+    welcome: 'Welcome to the Team, {name}!',
+    appreciation: 'Thank You, {name}!'
+};
+
+// Initialize occasion pills
+function initOccasions() {
+    const pills = document.querySelectorAll('.occasion-pill');
+    pills.forEach(function(pill) {
+        if (pill.dataset.occasion === selectedOccasion) {
+            pill.classList.add('selected');
+        }
+        pill.addEventListener('click', function() {
+            pills.forEach(function(p) { p.classList.remove('selected'); });
+            pill.classList.add('selected');
+            selectedOccasion = pill.dataset.occasion;
+            updateTitle();
+        });
+    });
+}
+
+// Initialize theme swatches
+function initThemes() {
+    var swatches = document.querySelectorAll('.theme-swatch');
+    swatches.forEach(function(sw) {
+        sw.addEventListener('click', function() {
+            if (sw.dataset.theme === 'midnight') return; // premium, locked
+            swatches.forEach(function(s) { s.classList.remove('selected'); });
+            sw.classList.add('selected');
+            selectedTheme = sw.dataset.theme;
+        });
+    });
+}
+
+// Auto-fill title when occasion or name changes
+function updateTitle() {
+    var name = document.getElementById('recipientName').value.trim();
+    var titleEl = document.getElementById('cardTitle');
+    if (name && !titleEl.dataset.manual) {
+        titleEl.value = (titleTemplates[selectedOccasion] || 'A Card for {name}!').replace('{name}', name);
+    }
+}
+
+// On title manual edit, stop auto-filling
+document.getElementById('cardTitle').addEventListener('input', function() {
+    this.dataset.manual = 'true';
+});
+
+// On recipient name change, auto-fill title
+document.getElementById('recipientName').addEventListener('input', function() {
+    // Reset manual flag if user clears the title
+    var titleEl = document.getElementById('cardTitle');
+    if (!titleEl.value.trim()) titleEl.dataset.manual = '';
+    updateTitle();
+});
+
+// Generate slug
+function genSlug() {
+    var chars = 'abcdefghijklmnopqrstuvwxyz0123456789';
+    var slug = '';
+    for (var i = 0; i < 8; i++) slug += chars[Math.floor(Math.random() * chars.length)];
+    return slug;
+}
+
+// Submit
+document.getElementById('createForm').addEventListener('submit', async function(e) {
+    e.preventDefault();
+    var btn = this.querySelector('button[type="submit"]');
+    btn.disabled = true;
+    btn.textContent = 'Creating...';
+
+    var slug = genSlug();
+    var payload = {
+        slug: slug,
+        creator_name: document.getElementById('yourName').value.trim(),
+        creator_email: document.getElementById('yourEmail').value.trim(),
+        recipient_name: document.getElementById('recipientName').value.trim(),
+        title: document.getElementById('cardTitle').value.trim(),
+        team_name: document.getElementById('teamName').value.trim() || null,
+        occasion: selectedOccasion,
+        theme: selectedTheme
+    };
+
+    var result = await sb.from('cards').insert(payload);
+
+    if (result.error) {
+        btn.disabled = false;
+        btn.textContent = 'Create Card \u2192';
+        alert('Something went wrong. Please try again.');
+        console.error(result.error);
+        return;
+    }
+
+    window.location.href = '/culture-cards/c/' + slug;
+});
+
+initOccasions();
+initThemes();
+</script>
+
+</body>
+</html>

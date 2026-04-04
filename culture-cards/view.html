@@ -1,0 +1,700 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Culture Card | JobsByCulture</title>
+    <meta name="description" content="A team culture card on JobsByCulture. Sign it and leave your message.">
+    <meta name="robots" content="noindex, follow">
+    <meta property="og:title" content="Culture Card | JobsByCulture">
+    <meta property="og:description" content="Someone created a culture card. Open it to sign and leave your message.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://jobsbyculture.com/og-image.png">
+    <meta property="og:image:type" content="image/png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Culture Card | JobsByCulture">
+    <meta name="twitter:description" content="Someone created a culture card. Open it to sign and leave your message.">
+    <meta name="twitter:image" content="https://jobsbyculture.com/og-image.png">
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <link rel="icon" type="image/png" sizes="512x512" href="/logo.png">
+    <link rel="apple-touch-icon" href="/logo.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Satoshi:wght@400;500;600;700;900&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #fafaf8;
+            --bg-raised: #ffffff;
+            --bg-card: #ffffff;
+            --bg-hover: #f4f3ef;
+            --text: #1a1a1f;
+            --text-2: #52525b;
+            --text-3: #9ca3af;
+            --accent: #e8590c;
+            --accent-hover: #c2410c;
+            --accent-bg: rgba(232,89,12,0.06);
+            --accent-border: rgba(232,89,12,0.2);
+            --teal: #0d9488;
+            --teal-bg: rgba(13,148,136,0.06);
+            --teal-border: rgba(13,148,136,0.2);
+            --violet: #7c3aed;
+            --violet-bg: rgba(124,58,237,0.06);
+            --violet-border: rgba(124,58,237,0.2);
+            --rose: #e11d48;
+            --rose-bg: rgba(225,29,72,0.06);
+            --rose-border: rgba(225,29,72,0.2);
+            --sky: #0284c7;
+            --sky-bg: rgba(2,132,199,0.06);
+            --sky-border: rgba(2,132,199,0.2);
+            --lime: #4d7c0f;
+            --lime-bg: rgba(77,124,15,0.06);
+            --lime-border: rgba(77,124,15,0.2);
+            --border: rgba(0,0,0,0.07);
+            --border-2: rgba(0,0,0,0.12);
+            --border-3: rgba(0,0,0,0.18);
+            --radius: 12px;
+            --radius-sm: 8px;
+            --radius-lg: 20px;
+            --radius-full: 100px;
+            --font-display: 'Instrument Serif', Georgia, serif;
+            --font-body: 'Satoshi', -apple-system, sans-serif;
+            --font-mono: 'IBM Plex Mono', monospace;
+            --shadow: 0 4px 24px rgba(0,0,0,0.06), 0 1px 3px rgba(0,0,0,0.04);
+            --shadow-lg: 0 12px 48px rgba(0,0,0,0.08);
+            --green: #059669;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body {
+            font-family: var(--font-body);
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+            overflow-x: hidden;
+        }
+        .container { max-width: 1140px; margin: 0 auto; padding: 0 24px; }
+
+        /* NAV */
+        nav {
+            position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+            background: rgba(250,250,248,0.85);
+            backdrop-filter: blur(24px) saturate(1.4);
+            border-bottom: 1px solid var(--border);
+        }
+        .nav-inner {
+            max-width: 1140px; margin: 0 auto; padding: 14px 24px;
+            display: flex; align-items: center; justify-content: space-between;
+        }
+        .nav-logo { display: flex; align-items: center; gap: 10px; text-decoration: none; color: var(--text); }
+        .nav-mark {
+            width: 30px; height: 30px; position: relative;
+            display: flex; align-items: center; justify-content: center;
+        }
+        .nav-mark .ring {
+            position: absolute; border: 1.5px solid var(--accent); border-radius: 50%;
+            animation: logoPing 2.5s ease-out infinite;
+        }
+        .nav-mark .ring-1 { width: 100%; height: 100%; opacity: 0.2; }
+        .nav-mark .ring-2 { width: 65%; height: 65%; opacity: 0.4; animation-delay: 0.3s; }
+        .nav-mark .nav-dot { width: 7px; height: 7px; background: var(--accent); border-radius: 50%; position: relative; z-index: 1; }
+        @keyframes logoPing { 0% { transform: scale(1); opacity: 0.4; } 100% { transform: scale(1.5); opacity: 0; } }
+        .nav-wordmark { font-weight: 700; font-size: 16px; letter-spacing: -0.03em; }
+        .nav-wordmark span { color: var(--accent); }
+        .nav-links { display: flex; align-items: center; gap: 28px; }
+        .nav-links a { color: var(--text-2); text-decoration: none; font-size: 14px; font-weight: 500; transition: color 0.15s; }
+        .nav-links a:hover { color: var(--text); }
+        .nav-links a.active { color: var(--text); font-weight: 600; }
+        .nav-links .nav-cta {
+            background: var(--accent); color: #fff !important; padding: 7px 16px;
+            border-radius: var(--radius-sm); font-size: 13px; font-weight: 600;
+            transition: all 0.2s;
+        }
+        .nav-links .nav-cta:hover { background: var(--accent-hover); transform: translateY(-1px); }
+        .hamburger { display: none; background: none; border: none; cursor: pointer; padding: 4px; flex-direction: column; gap: 5px; }
+        .hamburger span { display: block; width: 22px; height: 2px; background: var(--text); border-radius: 1px; transition: all 0.3s; }
+        .hamburger.active span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
+        .hamburger.active span:nth-child(2) { opacity: 0; }
+        .hamburger.active span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
+
+        /* LOADING */
+        .loading-state {
+            padding: 180px 0 120px; text-align: center;
+        }
+        .loading-spinner {
+            width: 36px; height: 36px; border: 3px solid var(--border-2);
+            border-top-color: var(--accent); border-radius: 50%;
+            animation: spin 0.8s linear infinite;
+            margin: 0 auto 16px;
+        }
+        @keyframes spin { to { transform: rotate(360deg); } }
+        .loading-state p { color: var(--text-3); font-size: 15px; }
+
+        /* CARD CONTAINER */
+        .card-container { min-height: 100vh; padding: 100px 0 0; transition: background 0.3s, color 0.3s; }
+        .card-container.theme-default { background: var(--bg); }
+        .card-container.theme-warm { background: #fef3c7; }
+        .card-container.theme-teal { background: #f0fdfa; }
+        .card-container.theme-midnight { background: #1e1e2e; color: #e4e4e7; }
+
+        /* CARD HEADER */
+        .card-header {
+            text-align: center; padding: 48px 24px 32px;
+            max-width: 700px; margin: 0 auto;
+            animation: fadeUp 0.5s ease both;
+        }
+        .card-emoji { font-size: 56px; margin-bottom: 16px; line-height: 1; }
+        .card-title {
+            font-family: var(--font-display); font-weight: 400;
+            font-size: clamp(28px, 4.5vw, 40px);
+            line-height: 1.15; letter-spacing: -0.02em;
+            margin-bottom: 16px;
+        }
+        .card-team {
+            font-size: 16px; color: var(--text-2); margin-bottom: 8px;
+        }
+        .theme-midnight .card-team { color: #a1a1aa; }
+        .card-recipient {
+            display: inline-block; padding: 6px 16px;
+            background: var(--accent-bg); border: 1px solid var(--accent-border);
+            border-radius: var(--radius-full); font-size: 14px; font-weight: 500;
+            color: var(--accent); margin-bottom: 12px;
+        }
+        .theme-midnight .card-recipient {
+            background: rgba(232,89,12,0.15); border-color: rgba(232,89,12,0.3);
+        }
+        .card-count {
+            font-family: var(--font-mono); font-size: 14px;
+            color: var(--text-3);
+        }
+        .theme-midnight .card-count { color: #71717a; }
+
+        /* MESSAGES GRID */
+        .messages-section {
+            max-width: 960px; margin: 0 auto; padding: 0 24px;
+        }
+        .messages-grid {
+            column-count: 3; column-gap: 16px; padding: 24px 0;
+        }
+        .message-card {
+            break-inside: avoid; background: #fff; border-radius: 12px;
+            padding: 20px; margin-bottom: 16px;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+            animation: fadeIn 0.4s ease;
+        }
+        .theme-midnight .message-card {
+            background: #2a2a3a; color: #e4e4e7;
+        }
+        .message-text {
+            font-size: 15px; line-height: 1.7; color: var(--text);
+            margin-bottom: 12px; white-space: pre-wrap; word-break: break-word;
+        }
+        .theme-midnight .message-text { color: #e4e4e7; }
+        .message-author {
+            font-family: var(--font-mono); font-size: 13px; color: var(--text-3);
+        }
+        .theme-midnight .message-author { color: #71717a; }
+
+        @media (max-width: 900px) { .messages-grid { column-count: 2; } }
+        @media (max-width: 600px) { .messages-grid { column-count: 1; } }
+
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+        @keyframes fadeUp { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }
+
+        /* EMPTY STATE */
+        .empty-state {
+            text-align: center; padding: 48px 24px;
+        }
+        .empty-emoji { font-size: 56px; margin-bottom: 16px; line-height: 1; }
+        .empty-text {
+            font-family: var(--font-display); font-size: 24px;
+            color: var(--text-2); margin-bottom: 8px;
+        }
+        .theme-midnight .empty-text { color: #a1a1aa; }
+        .empty-sub { font-size: 15px; color: var(--text-3); }
+
+        /* SIGN FORM */
+        .sign-section {
+            max-width: 600px; margin: 40px auto 0; padding: 0 24px 60px;
+            animation: fadeUp 0.5s ease 0.2s both;
+        }
+        .sign-card {
+            background: var(--bg-raised); border: 1px solid var(--border);
+            border-radius: var(--radius); padding: 32px;
+            box-shadow: var(--shadow);
+        }
+        .theme-midnight .sign-card {
+            background: #2a2a3a; border-color: rgba(255,255,255,0.08);
+        }
+        .sign-title {
+            font-family: var(--font-display); font-size: 24px;
+            margin-bottom: 20px;
+        }
+        .sign-input {
+            width: 100%; padding: 12px 16px;
+            border: 1.5px solid var(--border-2); border-radius: var(--radius-sm);
+            font-family: var(--font-body); font-size: 15px;
+            background: var(--bg); color: var(--text);
+            transition: border-color 0.2s, box-shadow 0.2s;
+            outline: none; margin-bottom: 14px;
+        }
+        .theme-midnight .sign-input {
+            background: #1e1e2e; color: #e4e4e7; border-color: rgba(255,255,255,0.12);
+        }
+        .sign-input:focus {
+            border-color: var(--accent); box-shadow: 0 0 0 3px rgba(232,89,12,0.1);
+        }
+        .sign-input::placeholder { color: var(--text-3); }
+        .sign-textarea {
+            width: 100%; padding: 12px 16px; min-height: 120px; resize: vertical;
+            border: 1.5px solid var(--border-2); border-radius: var(--radius-sm);
+            font-family: var(--font-body); font-size: 15px;
+            background: var(--bg); color: var(--text);
+            transition: border-color 0.2s, box-shadow 0.2s;
+            outline: none; margin-bottom: 4px;
+        }
+        .theme-midnight .sign-textarea {
+            background: #1e1e2e; color: #e4e4e7; border-color: rgba(255,255,255,0.12);
+        }
+        .sign-textarea:focus {
+            border-color: var(--accent); box-shadow: 0 0 0 3px rgba(232,89,12,0.1);
+        }
+        .sign-textarea::placeholder { color: var(--text-3); }
+        .char-count {
+            font-family: var(--font-mono); font-size: 12px; color: var(--text-3);
+            text-align: right; margin-bottom: 16px;
+        }
+        .sign-btn {
+            width: 100%; padding: 14px 24px;
+            background: var(--accent); color: #fff;
+            border: none; border-radius: var(--radius-sm);
+            font-family: var(--font-body); font-size: 16px; font-weight: 600;
+            cursor: pointer; transition: all 0.2s;
+        }
+        .sign-btn:hover { background: var(--accent-hover); transform: translateY(-1px); }
+        .sign-btn:disabled { opacity: 0.6; cursor: not-allowed; transform: none; }
+
+        /* SHARE SECTION */
+        .share-section {
+            max-width: 600px; margin: 0 auto; padding: 0 24px 60px;
+            text-align: center;
+        }
+        .share-label {
+            font-size: 14px; font-weight: 600; color: var(--text-2);
+            margin-bottom: 12px;
+        }
+        .theme-midnight .share-label { color: #a1a1aa; }
+        .share-row {
+            display: flex; gap: 8px; align-items: center;
+            max-width: 460px; margin: 0 auto;
+        }
+        .share-url {
+            flex: 1; padding: 10px 14px;
+            background: var(--bg-raised); border: 1px solid var(--border-2);
+            border-radius: var(--radius-sm); font-family: var(--font-mono);
+            font-size: 13px; color: var(--text-2);
+            overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
+        }
+        .theme-midnight .share-url {
+            background: #2a2a3a; border-color: rgba(255,255,255,0.1); color: #a1a1aa;
+        }
+        .copy-btn {
+            padding: 10px 18px; background: var(--accent); color: #fff;
+            border: none; border-radius: var(--radius-sm);
+            font-family: var(--font-body); font-size: 13px; font-weight: 600;
+            cursor: pointer; transition: all 0.2s; white-space: nowrap;
+        }
+        .copy-btn:hover { background: var(--accent-hover); }
+
+        /* 404 STATE */
+        .not-found {
+            padding: 180px 0 120px; text-align: center;
+        }
+        .not-found h2 {
+            font-family: var(--font-display); font-size: 32px; margin-bottom: 12px;
+        }
+        .not-found p {
+            font-size: 16px; color: var(--text-2); margin-bottom: 24px; max-width: 400px; margin-left: auto; margin-right: auto;
+        }
+        .not-found a {
+            display: inline-block; padding: 12px 24px;
+            background: var(--accent); color: #fff; border-radius: var(--radius-sm);
+            text-decoration: none; font-weight: 600; font-size: 15px;
+            transition: all 0.2s;
+        }
+        .not-found a:hover { background: var(--accent-hover); transform: translateY(-1px); }
+
+        /* TOAST */
+        .toast {
+            position: fixed; top: -60px; left: 50%; transform: translateX(-50%);
+            background: var(--green); color: #fff;
+            padding: 12px 24px; border-radius: var(--radius-full);
+            font-weight: 600; font-size: 14px; z-index: 999;
+            transition: top 0.3s ease;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+        }
+        .toast.show { top: 24px; }
+
+        /* FOOTER */
+        footer { padding: 56px 0 36px; border-top: 1px solid var(--border); }
+        .ft-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 40px; margin-bottom: 40px; }
+        .ft-about p { font-size: 13px; color: var(--text-3); margin-top: 10px; line-height: 1.7; max-width: 260px; }
+        .ft-col h4 { font-size: 12px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em; color: var(--text-2); margin-bottom: 14px; }
+        .ft-col a { display: block; font-size: 13px; color: var(--text-3); text-decoration: none; padding: 3px 0; transition: color 0.15s; }
+        .ft-col a:hover { color: var(--text); }
+        .ft-bar { border-top: 1px solid var(--border); padding-top: 20px; display: flex; justify-content: space-between; align-items: center; }
+        .ft-bar p { font-size: 12px; color: var(--text-3); }
+
+        /* RESPONSIVE */
+        @media (max-width: 768px) {
+            .hamburger { display: flex; }
+            .nav-links {
+                display: none; position: absolute; top: 100%; left: 0; right: 0;
+                background: rgba(250,250,248,0.98); backdrop-filter: blur(20px);
+                border-bottom: 1px solid var(--border); padding: 20px 24px;
+                flex-direction: column; gap: 16px;
+                box-shadow: 0 8px 24px rgba(0,0,0,0.06);
+            }
+            .nav-links.open { display: flex; }
+            .card-header { padding: 32px 16px 24px; }
+            .card-title { font-size: 28px; }
+            .sign-card { padding: 24px 20px; }
+            .ft-grid { grid-template-columns: 1fr 1fr; gap: 28px; }
+        }
+        @media (max-width: 480px) {
+            .ft-grid { grid-template-columns: 1fr; }
+            .share-row { flex-direction: column; }
+            .share-url { width: 100%; text-align: center; }
+            .copy-btn { width: 100%; }
+        }
+    </style>
+    <script async src="https://plausible.io/js/pa-qa3pjs5eZbsfBQJMk4hVW.js"></script>
+    <script>
+      window.plausible=window.plausible||function(){(plausible.q=plausible.q||[]).push(arguments)},plausible.init=plausible.init||function(i){plausible.o=i||{}};
+      plausible.init()
+    </script>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+    <div class="nav-inner">
+        <a href="/" class="nav-logo">
+            <div class="nav-mark"><div class="ring ring-1"></div><div class="ring ring-2"></div><div class="nav-dot"></div></div>
+            <div class="nav-wordmark">Jobs<span>By</span>Culture</div>
+        </a>
+        <div class="nav-links">
+            <a href="/jobs">Jobs</a>
+            <a href="/directory">Companies</a>
+            <a href="/culture-cards/create" class="active">Culture Cards</a>
+            <a href="/blog">Blog</a>
+            <a href="/for-employers" class="nav-cta">For Employers</a>
+        </div>
+        <button class="hamburger" onclick="this.classList.toggle('active');this.closest('.nav-inner').querySelector('.nav-links').classList.toggle('open')" aria-label="Menu">
+            <span></span><span></span><span></span>
+        </button>
+    </div>
+</nav>
+
+<!-- CARD AREA -->
+<div id="cardArea">
+    <!-- Loading state -->
+    <div class="loading-state" id="loadingState">
+        <div class="loading-spinner"></div>
+        <p>Loading card...</p>
+    </div>
+</div>
+
+<!-- Card template (hidden, populated by JS) -->
+<template id="cardTemplate">
+    <div class="card-container" id="cardContainer">
+        <!-- Header -->
+        <div class="card-header">
+            <div class="card-emoji" id="cardEmoji"></div>
+            <h1 class="card-title" id="cardTitle"></h1>
+            <div class="card-team" id="cardTeam"></div>
+            <div class="card-recipient" id="cardRecipient"></div>
+            <div class="card-count" id="cardCount"></div>
+        </div>
+
+        <!-- Messages -->
+        <div class="messages-section">
+            <div class="messages-grid" id="messagesGrid"></div>
+        </div>
+
+        <!-- Sign form -->
+        <div class="sign-section">
+            <div class="sign-card">
+                <h2 class="sign-title">Sign This Card</h2>
+                <form id="signForm" autocomplete="off">
+                    <input type="text" id="signerName" class="sign-input" placeholder="Your name" required>
+                    <textarea id="signerMessage" class="sign-textarea" placeholder="Write your message..." maxlength="500" required></textarea>
+                    <div class="char-count" id="charCount">0 / 500</div>
+                    <button type="submit" class="sign-btn">Add Your Message &rarr;</button>
+                </form>
+            </div>
+        </div>
+
+        <!-- Share -->
+        <div class="share-section">
+            <div class="share-label">Share this card</div>
+            <div class="share-row">
+                <div class="share-url" id="shareUrl"></div>
+                <button class="copy-btn" id="copyBtn" onclick="copyLink()">Copy Link</button>
+            </div>
+        </div>
+    </div>
+</template>
+
+<!-- 404 template -->
+<template id="notFoundTemplate">
+    <div class="not-found">
+        <h2>Card not found</h2>
+        <p>This card may have been removed or the link is incorrect.</p>
+        <a href="/culture-cards/create">Create a new card &rarr;</a>
+    </div>
+</template>
+
+<!-- FOOTER -->
+<footer id="pageFooter">
+    <div class="container">
+        <div class="ft-grid">
+            <div class="ft-col">
+                <h4>By Culture</h4>
+                <a href="/values/remote">Remote-Friendly</a>
+                <a href="/values/async">Async-First</a>
+                <a href="/values/deep-work">Deep Work</a>
+                <a href="/values/wlb">Work-Life Balance</a>
+                <a href="/values/ethical-ai">Ethical AI</a>
+                <a href="/values/equity">Strong Comp</a>
+            </div>
+            <div class="ft-col">
+                <h4>By Role</h4>
+                <a href="/roles/engineering">Engineering</a>
+                <a href="/roles/ml-ai">ML / AI</a>
+                <a href="/roles/design">Design</a>
+                <a href="/roles/product">Product</a>
+                <a href="/roles/data">Data</a>
+                <a href="/roles/marketing">Marketing</a>
+            </div>
+            <div class="ft-col">
+                <h4>By Seniority</h4>
+                <a href="/seniority/entry">Entry / Junior</a>
+                <a href="/seniority/mid">Mid-Level</a>
+                <a href="/seniority/senior">Senior</a>
+                <a href="/seniority/staff">Staff / Principal</a>
+                <a href="/seniority/lead">Lead / Manager</a>
+                <a href="/seniority/director">Director+</a>
+            </div>
+            <div class="ft-col">
+                <h4>By Location</h4>
+                <a href="/locations/san-francisco">San Francisco</a>
+                <a href="/locations/new-york">New York</a>
+                <a href="/locations/london">London</a>
+                <a href="/locations/remote">Remote</a>
+                <a href="/locations/seattle">Seattle</a>
+                <a href="/locations/paris">Paris</a>
+            </div>
+            <div class="ft-col">
+                <h4>Explore</h4>
+                <a href="/directory">Culture Directory</a>
+                <a href="/compare">Compare Cultures</a>
+                <a href="/culture-map">Culture Map</a>
+                <a href="/quiz">Culture Quiz</a>
+                <a href="/blog">Blog</a>
+                <a href="/for-employers">For Employers</a>
+                <a href="https://meetingtax.com/?ref=jobsbyculture.com" target="_blank">Meeting Tax</a>
+                <a href="https://paytaxfa.st/?ref=jobsbyculture.com" target="_blank">PayTaxFast</a>
+            </div>
+        </div>
+        <div class="ft-about" style="display:flex;align-items:center;gap:10px;margin-bottom:32px">
+            <a href="/" class="nav-logo" style="margin-bottom:0">
+                <div class="nav-mark"><div class="ring ring-1"></div><div class="ring ring-2"></div><div class="nav-dot"></div></div>
+                <div class="nav-wordmark">Jobs<span>By</span>Culture</div>
+            </a>
+            <span style="color:var(--text-3);font-size:14px;margin-left:8px">The culture-first job board. Built for the AI era.</span>
+        </div>
+        <div class="ft-bar">
+            <p>&copy; 2026 JobsByCulture. Built with &#10084;&#65039; for the indie hacker community.</p>
+            <p>Made by <a href="https://x.com/itspradz?ref=jobsbyculture.com" target="_blank" style="color:var(--accent);text-decoration:none">@itspradz</a></p>
+        </div>
+    </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script>
+const SUPABASE_URL = 'https://quyxzwouqlrfvpsexwbh.supabase.co';
+const SUPABASE_KEY = 'sb_publishable_7g5dGcIUkN4OxJJ2gnlYEA_XkyDtN8p';
+const sb = window.supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
+
+var slug = window.location.pathname.split('/').pop();
+var currentCard = null;
+
+var occasionEmojis = {
+    farewell: '\uD83C\uDFAD', birthday: '\uD83C\uDF82', promotion: '\uD83C\uDFC6',
+    anniversary: '\uD83C\uDF89', welcome: '\uD83D\uDC4B', appreciation: '\u2764\uFE0F'
+};
+
+function escHtml(s) {
+    return s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+}
+
+function showToast(msg) {
+    var t = document.createElement('div');
+    t.className = 'toast';
+    t.textContent = msg;
+    document.body.appendChild(t);
+    setTimeout(function() { t.classList.add('show'); }, 10);
+    setTimeout(function() {
+        t.classList.remove('show');
+        setTimeout(function() { t.remove(); }, 300);
+    }, 3000);
+}
+
+function showNotFound() {
+    var tpl = document.getElementById('notFoundTemplate');
+    var area = document.getElementById('cardArea');
+    area.innerHTML = '';
+    area.appendChild(tpl.content.cloneNode(true));
+}
+
+function renderCardHeader(card) {
+    var tpl = document.getElementById('cardTemplate');
+    var area = document.getElementById('cardArea');
+    area.innerHTML = '';
+    area.appendChild(tpl.content.cloneNode(true));
+
+    // Set theme
+    var container = document.getElementById('cardContainer');
+    container.className = 'card-container theme-' + (card.theme || 'default');
+
+    // Emoji
+    document.getElementById('cardEmoji').textContent = occasionEmojis[card.occasion] || '\uD83C\uDF89';
+
+    // Title
+    document.getElementById('cardTitle').textContent = card.title;
+
+    // Team
+    var teamEl = document.getElementById('cardTeam');
+    if (card.team_name) {
+        teamEl.textContent = 'From ' + card.team_name;
+        teamEl.style.display = '';
+    } else {
+        teamEl.style.display = 'none';
+    }
+
+    // Recipient
+    document.getElementById('cardRecipient').textContent = 'For ' + card.recipient_name;
+
+    // Share URL
+    document.getElementById('shareUrl').textContent = window.location.href;
+
+    // Wire up sign form
+    document.getElementById('signForm').addEventListener('submit', addMessage);
+    document.getElementById('signerMessage').addEventListener('input', function() {
+        document.getElementById('charCount').textContent = this.value.length + ' / 500';
+    });
+}
+
+function renderMessages(messages) {
+    var grid = document.getElementById('messagesGrid');
+    var countEl = document.getElementById('cardCount');
+
+    if (!messages || messages.length === 0) {
+        var emoji = currentCard ? (occasionEmojis[currentCard.occasion] || '\uD83C\uDF89') : '\uD83C\uDF89';
+        grid.innerHTML =
+            '<div class="empty-state">' +
+                '<div class="empty-emoji">' + emoji + '</div>' +
+                '<div class="empty-text">Be the first to sign this card!</div>' +
+                '<div class="empty-sub">Add a message below to get things started.</div>' +
+            '</div>';
+        if (countEl) countEl.innerHTML = '&#9993; 0 messages';
+        return;
+    }
+
+    if (countEl) countEl.innerHTML = '&#9993; ' + messages.length + ' message' + (messages.length === 1 ? '' : 's');
+
+    grid.innerHTML = messages.map(function(m, i) {
+        return '<div class="message-card" style="animation-delay:' + (i * 0.06) + 's">' +
+            '<div class="message-text">' + escHtml(m.content) + '</div>' +
+            '<div class="message-author">&mdash; ' + escHtml(m.author_name) + '</div>' +
+        '</div>';
+    }).join('');
+}
+
+async function loadMessages(cardId) {
+    var result = await sb
+        .from('messages').select('*')
+        .eq('card_id', cardId)
+        .order('created_at', { ascending: true });
+    renderMessages(result.data || []);
+}
+
+async function addMessage(e) {
+    e.preventDefault();
+    var btn = e.target.querySelector('button[type="submit"]');
+    var nameInput = document.getElementById('signerName');
+    var msgInput = document.getElementById('signerMessage');
+
+    if (!nameInput.value.trim() || !msgInput.value.trim()) return;
+
+    btn.disabled = true;
+    btn.textContent = 'Adding...';
+
+    var result = await sb.from('messages').insert({
+        card_id: currentCard.id,
+        author_name: nameInput.value.trim(),
+        content: msgInput.value.trim()
+    });
+
+    btn.disabled = false;
+    btn.textContent = 'Add Your Message \u2192';
+
+    if (result.error) {
+        alert('Something went wrong. Please try again.');
+        console.error(result.error);
+        return;
+    }
+
+    nameInput.value = '';
+    msgInput.value = '';
+    document.getElementById('charCount').textContent = '0 / 500';
+    showToast('Your message was added! \uD83C\uDF89');
+    loadMessages(currentCard.id);
+}
+
+function copyLink() {
+    navigator.clipboard.writeText(window.location.href);
+    var btn = document.getElementById('copyBtn');
+    btn.textContent = 'Copied!';
+    setTimeout(function() { btn.textContent = 'Copy Link'; }, 2000);
+}
+
+async function loadCard() {
+    if (!slug) { showNotFound(); return; }
+
+    var result = await sb
+        .from('cards').select('*').eq('slug', slug).single();
+
+    if (result.error || !result.data) {
+        showNotFound();
+        return;
+    }
+
+    currentCard = result.data;
+    document.title = currentCard.title + ' | Culture Cards';
+
+    // Update OG tags dynamically (limited but helps with some crawlers)
+    var ogTitle = document.querySelector('meta[property="og:title"]');
+    if (ogTitle) ogTitle.setAttribute('content', currentCard.title + ' | Culture Cards');
+
+    renderCardHeader(currentCard);
+    loadMessages(currentCard.id);
+}
+
+loadCard();
+</script>
+
+</body>
+</html>

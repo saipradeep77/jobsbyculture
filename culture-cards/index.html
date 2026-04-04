@@ -1,0 +1,814 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Culture Cards — Free Group Greeting Cards for the Workplace | JobsByCulture</title>
+    <meta name="description" content="Create free group greeting cards for farewells, birthdays, promotions, and work anniversaries. Share a link, your team signs it, deliver it beautifully. No account needed.">
+    <meta name="keywords" content="group greeting card, workplace card, farewell card, team birthday card, promotion card, work anniversary card, group card online, free group card">
+    <meta name="author" content="JobsByCulture">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="Culture Cards — Free Group Greeting Cards for the Workplace">
+    <meta property="og:description" content="Create free group greeting cards for farewells, birthdays, promotions, and work anniversaries. Share a link, your team signs it, deliver it beautifully.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://jobsbyculture.com/culture-cards">
+    <meta property="og:image" content="https://jobsbyculture.com/og-image.png">
+    <meta property="og:image:type" content="image/png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Culture Cards — Free Group Cards for the Workplace">
+    <meta name="twitter:description" content="Create free group greeting cards for farewells, birthdays, promotions, and work anniversaries. Share a link, your team signs it. No account needed.">
+    <meta name="twitter:image" content="https://jobsbyculture.com/og-image.png">
+    <link rel="canonical" href="https://jobsbyculture.com/culture-cards">
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <link rel="icon" type="image/png" sizes="512x512" href="/logo.png">
+    <link rel="apple-touch-icon" href="/logo.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Satoshi:wght@400;500;600;700;900&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "Culture Cards",
+        "description": "Free group greeting cards for the workplace. Create cards for farewells, birthdays, promotions, and milestones. Share a link, your team signs it.",
+        "url": "https://jobsbyculture.com/culture-cards",
+        "applicationCategory": "BusinessApplication",
+        "operatingSystem": "Web",
+        "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+        "creator": {
+            "@type": "Organization",
+            "name": "JobsByCulture",
+            "url": "https://jobsbyculture.com"
+        }
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "Is Culture Cards really free?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes, creating and signing is completely free. No account needed. Premium features like PDF download, custom themes, and email delivery are $4.99 per card."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Do signers need to create an account?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "No. Anyone with the link can add a message using just their name. Zero friction."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "How many people can sign a card?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Unlimited. We've seen cards with 200+ messages from large teams."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Can I download the card?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes. Premium cards can be downloaded as a PDF or image — perfect for printing or sharing."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "What occasions are supported?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Farewell, birthday, promotion, work anniversary, welcome, and team appreciation. You can also create custom cards for any occasion."
+                }
+            }
+        ]
+    }
+    </script>
+    <style>
+        :root {
+            --bg: #fafaf8;
+            --bg-raised: #ffffff;
+            --bg-card: #ffffff;
+            --bg-hover: #f4f3ef;
+            --text: #1a1a1f;
+            --text-2: #52525b;
+            --text-3: #9ca3af;
+            --accent: #e8590c;
+            --accent-hover: #c2410c;
+            --accent-bg: rgba(232,89,12,0.06);
+            --accent-border: rgba(232,89,12,0.2);
+            --teal: #0d9488;
+            --teal-bg: rgba(13,148,136,0.06);
+            --teal-border: rgba(13,148,136,0.2);
+            --violet: #7c3aed;
+            --violet-bg: rgba(124,58,237,0.06);
+            --violet-border: rgba(124,58,237,0.2);
+            --rose: #e11d48;
+            --rose-bg: rgba(225,29,72,0.06);
+            --rose-border: rgba(225,29,72,0.2);
+            --sky: #0284c7;
+            --sky-bg: rgba(2,132,199,0.06);
+            --sky-border: rgba(2,132,199,0.2);
+            --lime: #4d7c0f;
+            --lime-bg: rgba(77,124,15,0.06);
+            --lime-border: rgba(77,124,15,0.2);
+            --border: rgba(0,0,0,0.07);
+            --border-2: rgba(0,0,0,0.12);
+            --border-3: rgba(0,0,0,0.18);
+            --radius: 12px;
+            --radius-sm: 8px;
+            --radius-lg: 20px;
+            --radius-full: 100px;
+            --font-display: 'Instrument Serif', Georgia, serif;
+            --font-body: 'Satoshi', -apple-system, sans-serif;
+            --font-mono: 'IBM Plex Mono', monospace;
+            --shadow: 0 4px 24px rgba(0,0,0,0.06), 0 1px 3px rgba(0,0,0,0.04);
+            --shadow-lg: 0 12px 48px rgba(0,0,0,0.08);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body {
+            font-family: var(--font-body);
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+            overflow-x: hidden;
+        }
+        .container { max-width: 1140px; margin: 0 auto; padding: 0 24px; }
+
+        /* ═══ NAV ═══ */
+        nav {
+            position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+            background: rgba(250,250,248,0.85);
+            backdrop-filter: blur(24px) saturate(1.4);
+            border-bottom: 1px solid var(--border);
+        }
+        .nav-inner {
+            max-width: 1140px; margin: 0 auto; padding: 14px 24px;
+            display: flex; align-items: center; justify-content: space-between;
+        }
+        .nav-logo { display: flex; align-items: center; gap: 10px; text-decoration: none; color: var(--text); }
+        .nav-mark {
+            width: 30px; height: 30px; position: relative;
+            display: flex; align-items: center; justify-content: center;
+        }
+        .nav-mark .ring {
+            position: absolute; border: 1.5px solid var(--accent); border-radius: 50%;
+            animation: logoPing 2.5s ease-out infinite;
+        }
+        .nav-mark .ring-1 { width: 100%; height: 100%; opacity: 0.2; }
+        .nav-mark .ring-2 { width: 65%; height: 65%; opacity: 0.4; animation-delay: 0.3s; }
+        .nav-mark .nav-dot { width: 7px; height: 7px; background: var(--accent); border-radius: 50%; position: relative; z-index: 1; }
+        @keyframes logoPing { 0% { transform: scale(1); opacity: 0.4; } 100% { transform: scale(1.5); opacity: 0; } }
+        .nav-wordmark { font-weight: 700; font-size: 16px; letter-spacing: -0.03em; }
+        .nav-wordmark span { color: var(--accent); }
+        .nav-links { display: flex; align-items: center; gap: 28px; }
+        .nav-links a { color: var(--text-2); text-decoration: none; font-size: 14px; font-weight: 500; transition: color 0.15s; }
+        .nav-links a:hover { color: var(--text); }
+        .nav-links a.active { color: var(--accent); }
+        .nav-links .nav-cta {
+            background: var(--accent); color: #fff !important; padding: 7px 16px;
+            border-radius: var(--radius-sm); font-size: 13px; font-weight: 600;
+            transition: all 0.2s;
+        }
+        .nav-links .nav-cta:hover { background: var(--accent-hover); transform: translateY(-1px); }
+        .hamburger { display: none; background: none; border: none; cursor: pointer; padding: 4px; flex-direction: column; gap: 5px; }
+        .hamburger span { display: block; width: 22px; height: 2px; background: var(--text); border-radius: 1px; transition: all 0.3s; }
+        .hamburger.active span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
+        .hamburger.active span:nth-child(2) { opacity: 0; }
+        .hamburger.active span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
+
+        /* ═══ HERO ═══ */
+        .hero {
+            padding: 140px 0 80px;
+            text-align: center;
+            position: relative;
+        }
+        .hero::before {
+            content: ''; position: absolute; top: -60px; left: 50%; transform: translateX(-50%);
+            width: 1000px; height: 700px;
+            background: radial-gradient(ellipse at 50% 30%, rgba(13,148,136,0.07) 0%, rgba(232,89,12,0.04) 40%, transparent 70%);
+            pointer-events: none;
+        }
+        .hero::after {
+            content: ''; position: absolute; top: 80px; left: 50%; transform: translateX(-50%);
+            width: 600px; height: 600px;
+            background: radial-gradient(circle, rgba(232,89,12,0.05) 0%, transparent 60%);
+            pointer-events: none;
+        }
+        .hero-pill {
+            display: inline-flex; align-items: center; gap: 8px;
+            background: var(--teal-bg); border: 1px solid var(--teal-border);
+            padding: 6px 16px 6px 10px; border-radius: var(--radius-full);
+            font-size: 13px; font-weight: 600; color: var(--teal);
+            margin-bottom: 24px;
+            animation: fadeUp 0.5s ease both;
+        }
+        .hero-pill-dot {
+            width: 7px; height: 7px; border-radius: 50%; background: var(--teal);
+            animation: blink 2s infinite;
+        }
+        .hero h1 {
+            font-family: var(--font-display); font-weight: 400;
+            font-size: clamp(42px, 5.5vw, 72px);
+            line-height: 1.08; letter-spacing: -0.025em;
+            max-width: 800px; margin: 0 auto 24px;
+            animation: fadeUp 0.5s ease 0.08s both;
+            position: relative; z-index: 1;
+        }
+        .hero h1 em { font-style: italic; color: var(--accent); }
+        .hero-sub {
+            font-size: 19px; color: var(--text-2); max-width: 560px;
+            line-height: 1.7; margin: 0 auto 36px;
+            animation: fadeUp 0.5s ease 0.16s both;
+            position: relative; z-index: 1;
+        }
+        .hero-actions {
+            display: flex; align-items: center; justify-content: center; gap: 20px;
+            animation: fadeUp 0.5s ease 0.24s both;
+            position: relative; z-index: 1;
+        }
+        .btn-primary {
+            display: inline-flex; align-items: center; gap: 8px;
+            background: var(--accent); color: #fff; padding: 16px 36px;
+            border-radius: var(--radius); font-size: 17px; font-weight: 600;
+            text-decoration: none; transition: all 0.25s; border: none; cursor: pointer;
+            box-shadow: 0 4px 16px rgba(232,89,12,0.25), 0 1px 3px rgba(232,89,12,0.15);
+            font-family: var(--font-body);
+        }
+        .btn-primary:hover {
+            background: var(--accent-hover); transform: translateY(-2px);
+            box-shadow: 0 8px 28px rgba(232,89,12,0.3), 0 2px 6px rgba(232,89,12,0.2);
+        }
+        .btn-text {
+            color: var(--text-2); text-decoration: none; font-size: 15px; font-weight: 500;
+            transition: color 0.15s;
+        }
+        .btn-text:hover { color: var(--accent); }
+
+        /* ═══ HOW IT WORKS ═══ */
+        .how {
+            padding: 80px 0;
+        }
+        .section-label {
+            font-family: var(--font-mono); font-size: 12px; font-weight: 500;
+            text-transform: uppercase; letter-spacing: 0.12em; color: var(--teal);
+            margin-bottom: 12px; text-align: center;
+        }
+        .section-title {
+            font-family: var(--font-display); font-weight: 400;
+            font-size: clamp(30px, 3.5vw, 44px);
+            line-height: 1.1; letter-spacing: -0.02em;
+            text-align: center; margin-bottom: 56px;
+        }
+        .how-grid {
+            display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px;
+        }
+        .how-card {
+            background: var(--bg-card); border: 1px solid var(--border);
+            border-radius: var(--radius-lg); padding: 36px 28px;
+            text-align: center; position: relative;
+            transition: all 0.3s;
+        }
+        .how-card:hover {
+            border-color: var(--border-2);
+            box-shadow: var(--shadow);
+            transform: translateY(-2px);
+        }
+        .how-step {
+            display: inline-flex; align-items: center; justify-content: center;
+            width: 32px; height: 32px; border-radius: 50%;
+            background: var(--accent-bg); border: 1px solid var(--accent-border);
+            font-family: var(--font-mono); font-size: 13px; font-weight: 500;
+            color: var(--accent); margin-bottom: 16px;
+        }
+        .how-emoji {
+            font-size: 36px; margin-bottom: 16px; display: block;
+        }
+        .how-card h3 {
+            font-family: var(--font-display); font-weight: 400;
+            font-size: 22px; margin-bottom: 10px;
+        }
+        .how-card p {
+            font-size: 15px; color: var(--text-2); line-height: 1.65;
+        }
+
+        /* ═══ OCCASIONS ═══ */
+        .occasions {
+            padding: 80px 0;
+        }
+        .occasions-grid {
+            display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px;
+        }
+        .occasion-card {
+            background: var(--bg-card); border: 1px solid var(--border);
+            border-radius: var(--radius-lg); padding: 32px 28px;
+            text-decoration: none; color: var(--text);
+            transition: all 0.3s; position: relative;
+            display: flex; flex-direction: column; gap: 12px;
+        }
+        .occasion-card:hover {
+            border-color: var(--border-2);
+            box-shadow: var(--shadow-lg);
+            transform: translateY(-4px);
+        }
+        .occasion-emoji { font-size: 40px; }
+        .occasion-card h3 {
+            font-family: var(--font-display); font-weight: 400;
+            font-size: 22px; line-height: 1.2;
+        }
+        .occasion-card p {
+            font-size: 14px; color: var(--text-2); line-height: 1.6;
+        }
+        .occasion-link {
+            font-size: 14px; font-weight: 600; color: var(--accent);
+            margin-top: auto; display: inline-flex; align-items: center; gap: 4px;
+            transition: gap 0.2s;
+        }
+        .occasion-card:hover .occasion-link { gap: 8px; }
+
+        /* ═══ CARD PREVIEW ═══ */
+        .preview {
+            padding: 80px 0;
+        }
+        .preview-wrapper {
+            background: #fef3c7;
+            border-radius: var(--radius-lg);
+            padding: 48px;
+            border: 1px solid rgba(251,191,36,0.25);
+            position: relative;
+            overflow: hidden;
+        }
+        .preview-wrapper::before {
+            content: '';
+            position: absolute; top: 0; left: 0; right: 0; bottom: 0;
+            background: radial-gradient(circle at 20% 20%, rgba(232,89,12,0.04) 0%, transparent 50%),
+                        radial-gradient(circle at 80% 80%, rgba(13,148,136,0.04) 0%, transparent 50%);
+            pointer-events: none;
+        }
+        .preview-card {
+            background: #fff; border-radius: var(--radius-lg);
+            box-shadow: 0 20px 60px rgba(0,0,0,0.08), 0 4px 16px rgba(0,0,0,0.04);
+            max-width: 780px; margin: 0 auto;
+            position: relative; z-index: 1;
+            overflow: hidden;
+        }
+        .preview-card-header {
+            padding: 32px 36px 24px;
+            border-bottom: 1px solid var(--border);
+            display: flex; align-items: flex-start; justify-content: space-between;
+        }
+        .preview-card-header h3 {
+            font-family: var(--font-display); font-weight: 400;
+            font-size: 28px;
+        }
+        .preview-card-header .subtitle {
+            font-size: 14px; color: var(--text-2); margin-top: 4px;
+        }
+        .preview-card-header .msg-count {
+            font-family: var(--font-mono); font-size: 13px; color: var(--teal);
+            background: var(--teal-bg); border: 1px solid var(--teal-border);
+            padding: 5px 12px; border-radius: var(--radius-full);
+            white-space: nowrap;
+        }
+        .preview-messages {
+            padding: 28px 36px 36px;
+            column-count: 2; column-gap: 20px;
+        }
+        .preview-msg {
+            break-inside: avoid; margin-bottom: 16px;
+            background: var(--bg); border: 1px solid var(--border);
+            border-radius: var(--radius); padding: 20px;
+            display: inline-block; width: 100%;
+        }
+        .preview-msg p {
+            font-size: 14px; line-height: 1.65; color: var(--text);
+            margin-bottom: 10px; font-style: italic;
+        }
+        .preview-msg .author {
+            font-size: 13px; font-weight: 600; color: var(--text-2);
+            font-style: normal;
+        }
+        .preview-cta {
+            text-align: center; margin-top: 40px;
+            position: relative; z-index: 1;
+        }
+
+        /* ═══ TRUST ═══ */
+        .trust {
+            padding: 48px 0;
+            text-align: center;
+        }
+        .trust p {
+            font-size: 15px; color: var(--text-3);
+            max-width: 480px; margin: 0 auto;
+        }
+        .trust a { color: var(--accent); text-decoration: none; font-weight: 500; }
+        .trust a:hover { text-decoration: underline; }
+
+        /* ═══ FAQ ═══ */
+        .faq {
+            padding: 80px 0;
+        }
+        .faq-list {
+            max-width: 680px; margin: 0 auto;
+            display: flex; flex-direction: column; gap: 0;
+        }
+        .faq-item {
+            border-bottom: 1px solid var(--border);
+        }
+        .faq-item:first-child { border-top: 1px solid var(--border); }
+        .faq-q {
+            width: 100%; background: none; border: none;
+            padding: 20px 0; cursor: pointer;
+            display: flex; align-items: center; justify-content: space-between; gap: 16px;
+            font-family: var(--font-body); font-size: 16px; font-weight: 600;
+            color: var(--text); text-align: left;
+            transition: color 0.15s;
+        }
+        .faq-q:hover { color: var(--accent); }
+        .faq-q .faq-icon {
+            font-size: 20px; font-weight: 300; color: var(--text-3);
+            transition: transform 0.3s; flex-shrink: 0;
+        }
+        .faq-item.open .faq-icon { transform: rotate(45deg); }
+        .faq-a {
+            max-height: 0; overflow: hidden;
+            transition: max-height 0.35s ease, padding 0.35s ease;
+        }
+        .faq-item.open .faq-a {
+            max-height: 200px;
+        }
+        .faq-a p {
+            font-size: 15px; color: var(--text-2); line-height: 1.7;
+            padding-bottom: 20px;
+        }
+
+        /* ═══ FINAL CTA ═══ */
+        .final-cta {
+            padding: 80px 0 100px;
+            text-align: center;
+        }
+        .final-cta h2 {
+            font-family: var(--font-display); font-weight: 400;
+            font-size: clamp(32px, 4vw, 52px);
+            line-height: 1.1; letter-spacing: -0.02em;
+            margin-bottom: 16px;
+        }
+        .final-cta p {
+            font-size: 17px; color: var(--text-2);
+            margin-bottom: 32px;
+        }
+
+        /* ═══ FOOTER ═══ */
+        footer { padding: 56px 0 36px; border-top: 1px solid var(--border); }
+        .ft-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 40px; margin-bottom: 40px; }
+        .ft-about p { font-size: 13px; color: var(--text-3); margin-top: 10px; line-height: 1.7; max-width: 260px; }
+        .ft-col h4 { font-size: 12px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em; color: var(--text-2); margin-bottom: 14px; }
+        .ft-col a { display: block; font-size: 13px; color: var(--text-3); text-decoration: none; padding: 3px 0; transition: color 0.15s; }
+        .ft-col a:hover { color: var(--text); }
+        .ft-bar { border-top: 1px solid var(--border); padding-top: 20px; display: flex; justify-content: space-between; align-items: center; }
+        .ft-bar p { font-size: 12px; color: var(--text-3); }
+
+        /* ═══ ANIMATIONS ═══ */
+        @keyframes fadeUp { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }
+        @keyframes blink { 0%,100% { opacity: 1; } 50% { opacity: 0.3; } }
+
+        /* ═══ RESPONSIVE ═══ */
+        @media (max-width: 768px) {
+            .hamburger { display: flex; }
+            .nav-links {
+                display: none; position: absolute; top: 100%; left: 0; right: 0;
+                background: rgba(250,250,248,0.98); backdrop-filter: blur(20px);
+                border-bottom: 1px solid var(--border); padding: 20px 24px;
+                flex-direction: column; gap: 16px; box-shadow: 0 8px 24px rgba(0,0,0,0.06);
+            }
+            .nav-links.open { display: flex; }
+            .hero { padding: 110px 0 60px; }
+            .hero h1 { font-size: clamp(32px, 7vw, 48px); }
+            .hero-sub { font-size: 16px; }
+            .hero-actions { flex-direction: column; gap: 12px; }
+            .how-grid { grid-template-columns: 1fr; gap: 20px; }
+            .occasions-grid { grid-template-columns: 1fr 1fr; }
+            .preview-wrapper { padding: 24px; }
+            .preview-card-header { flex-direction: column; gap: 12px; padding: 24px 24px 20px; }
+            .preview-messages { column-count: 1; padding: 20px 24px 28px; }
+            .ft-grid { grid-template-columns: 1fr 1fr; gap: 28px; }
+        }
+        @media (max-width: 480px) {
+            .occasions-grid { grid-template-columns: 1fr; }
+            .ft-grid { grid-template-columns: 1fr; }
+            .preview-wrapper { padding: 16px; }
+        }
+    </style>
+    <script async src="https://plausible.io/js/pa-qa3pjs5eZbsfBQJMk4hVW.js"></script>
+    <script>
+      window.plausible=window.plausible||function(){(plausible.q=plausible.q||[]).push(arguments)},plausible.init=plausible.init||function(i){plausible.o=i||{}};
+      plausible.init()
+    </script>
+</head>
+<body>
+
+<!-- ═══ NAV ═══ -->
+<nav>
+    <div class="nav-inner">
+        <a href="/" class="nav-logo">
+            <div class="nav-mark"><div class="ring ring-1"></div><div class="ring ring-2"></div><div class="nav-dot"></div></div>
+            <div class="nav-wordmark">Jobs<span>By</span>Culture</div>
+        </a>
+        <div class="nav-links">
+            <a href="/jobs">Jobs</a>
+            <a href="/directory">Companies</a>
+            <a href="/blog">Blog</a>
+            <a href="/culture-cards" class="active">Culture Cards</a>
+            <a href="/for-employers" class="nav-cta">For Employers</a>
+        </div>
+        <button class="hamburger" onclick="this.classList.toggle('active');this.closest('.nav-inner').querySelector('.nav-links').classList.toggle('open')" aria-label="Menu">
+            <span></span><span></span><span></span>
+        </button>
+    </div>
+</nav>
+
+<!-- ═══ HERO ═══ -->
+<section class="hero">
+    <div class="container">
+        <div class="hero-pill"><span class="hero-pill-dot"></span> New &middot; Culture Cards</div>
+        <h1>Group cards your team will <em>actually</em> love</h1>
+        <p class="hero-sub">Create a free group card for farewells, birthdays, promotions, and milestones. Share a link — your team signs it. No account needed.</p>
+        <div class="hero-actions">
+            <a href="/culture-cards/create" class="btn-primary">Create a Free Card &rarr;</a>
+            <a href="#preview" class="btn-text">See an example &rarr;</a>
+        </div>
+    </div>
+</section>
+
+<!-- ═══ HOW IT WORKS ═══ -->
+<section class="how">
+    <div class="container">
+        <p class="section-label">How it works</p>
+        <h2 class="section-title">Three steps. Thirty seconds.</h2>
+        <div class="how-grid">
+            <div class="how-card">
+                <div class="how-step">1</div>
+                <span class="how-emoji">&#127912;</span>
+                <h3>Pick an occasion</h3>
+                <p>Choose farewell, birthday, promotion, anniversary, welcome, or appreciation. Add the recipient's name.</p>
+            </div>
+            <div class="how-card">
+                <div class="how-step">2</div>
+                <span class="how-emoji">&#128232;</span>
+                <h3>Share the link</h3>
+                <p>Send the card link to your team via Slack, email, or text. Everyone adds their message — no signup needed.</p>
+            </div>
+            <div class="how-card">
+                <div class="how-step">3</div>
+                <span class="how-emoji">&#127873;</span>
+                <h3>Deliver the magic</h3>
+                <p>Send the finished card. Download as PDF or deliver by email. Watch their face light up.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ═══ OCCASIONS ═══ -->
+<section class="occasions">
+    <div class="container">
+        <p class="section-label">Pick your occasion</p>
+        <h2 class="section-title">Cards for every moment that matters</h2>
+        <div class="occasions-grid">
+            <a href="/culture-cards/create?occasion=farewell" class="occasion-card">
+                <span class="occasion-emoji">&#127917;</span>
+                <h3>Farewell</h3>
+                <p>Send them off with warmth from the whole team</p>
+                <span class="occasion-link">Create &rarr;</span>
+            </a>
+            <a href="/culture-cards/create?occasion=birthday" class="occasion-card">
+                <span class="occasion-emoji">&#127874;</span>
+                <h3>Birthday</h3>
+                <p>Make their day with messages from everyone</p>
+                <span class="occasion-link">Create &rarr;</span>
+            </a>
+            <a href="/culture-cards/create?occasion=promotion" class="occasion-card">
+                <span class="occasion-emoji">&#127942;</span>
+                <h3>Promotion</h3>
+                <p>Celebrate the big win together</p>
+                <span class="occasion-link">Create &rarr;</span>
+            </a>
+            <a href="/culture-cards/create?occasion=anniversary" class="occasion-card">
+                <span class="occasion-emoji">&#127881;</span>
+                <h3>Work Anniversary</h3>
+                <p>Mark the milestone that matters</p>
+                <span class="occasion-link">Create &rarr;</span>
+            </a>
+            <a href="/culture-cards/create?occasion=welcome" class="occasion-card">
+                <span class="occasion-emoji">&#128075;</span>
+                <h3>Welcome</h3>
+                <p>Help new hires feel at home from day one</p>
+                <span class="occasion-link">Create &rarr;</span>
+            </a>
+            <a href="/culture-cards/create?occasion=appreciation" class="occasion-card">
+                <span class="occasion-emoji">&#10084;&#65039;</span>
+                <h3>Appreciation</h3>
+                <p>Show your team their work is noticed</p>
+                <span class="occasion-link">Create &rarr;</span>
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- ═══ CARD PREVIEW ═══ -->
+<section class="preview" id="preview">
+    <div class="container">
+        <p class="section-label">What you get</p>
+        <h2 class="section-title">What a Culture Card looks like</h2>
+        <div class="preview-wrapper">
+            <div class="preview-card">
+                <div class="preview-card-header">
+                    <div>
+                        <h3>Farewell, Sarah!</h3>
+                        <p class="subtitle">From The Product Team</p>
+                    </div>
+                    <span class="msg-count">&#9993; 5 messages</span>
+                </div>
+                <div class="preview-messages">
+                    <div class="preview-msg">
+                        <p>"Sarah, your energy and kindness made every standup better. The team won't be the same without you. Wishing you all the best!"</p>
+                        <span class="author">— Marcus T.</span>
+                    </div>
+                    <div class="preview-msg">
+                        <p>"Thanks for always pushing us to ship better code. You raised the bar for all of us."</p>
+                        <span class="author">— Elena R.</span>
+                    </div>
+                    <div class="preview-msg">
+                        <p>"From day one you made me feel welcome. I'll miss our coffee runs. Go crush it!"</p>
+                        <span class="author">— James K.</span>
+                    </div>
+                    <div class="preview-msg">
+                        <p>"Your product sense is unmatched. Wherever you land, they're getting a star."</p>
+                        <span class="author">— Priya M.</span>
+                    </div>
+                    <div class="preview-msg">
+                        <p>"We'll miss you! Don't be a stranger &#x1F49B;"</p>
+                        <span class="author">— The Design Team</span>
+                    </div>
+                </div>
+            </div>
+            <div class="preview-cta">
+                <a href="/culture-cards/create" class="btn-primary">Create yours in 30 seconds &rarr;</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ═══ TRUST ═══ -->
+<section class="trust">
+    <div class="container">
+        <p>From the makers of <a href="/">JobsByCulture</a> — the culture-first job board for AI &amp; tech teams.</p>
+    </div>
+</section>
+
+<!-- ═══ FAQ ═══ -->
+<section class="faq">
+    <div class="container">
+        <p class="section-label">FAQ</p>
+        <h2 class="section-title">Common questions</h2>
+        <div class="faq-list">
+            <div class="faq-item">
+                <button class="faq-q" onclick="this.parentElement.classList.toggle('open')">
+                    Is Culture Cards really free?
+                    <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-a">
+                    <p>Yes, creating and signing is completely free. No account needed. Premium features like PDF download, custom themes, and email delivery are $4.99 per card.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-q" onclick="this.parentElement.classList.toggle('open')">
+                    Do signers need to create an account?
+                    <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-a">
+                    <p>No. Anyone with the link can add a message using just their name. Zero friction.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-q" onclick="this.parentElement.classList.toggle('open')">
+                    How many people can sign a card?
+                    <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-a">
+                    <p>Unlimited. We've seen cards with 200+ messages from large teams.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-q" onclick="this.parentElement.classList.toggle('open')">
+                    Can I download the card?
+                    <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-a">
+                    <p>Yes. Premium cards can be downloaded as a PDF or image — perfect for printing or sharing.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-q" onclick="this.parentElement.classList.toggle('open')">
+                    What occasions are supported?
+                    <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-a">
+                    <p>Farewell, birthday, promotion, work anniversary, welcome, and team appreciation. You can also create custom cards for any occasion.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ═══ FINAL CTA ═══ -->
+<section class="final-cta">
+    <div class="container">
+        <h2>Ready to celebrate your team?</h2>
+        <p>Create a free card in 30 seconds. No account needed.</p>
+        <a href="/culture-cards/create" class="btn-primary">Create a Free Card &rarr;</a>
+    </div>
+</section>
+
+<!-- ═══ FOOTER ═══ -->
+<footer>
+    <div class="container">
+        <div class="ft-grid">
+            <div class="ft-col">
+                <h4>By Culture</h4>
+                <a href="/values/remote">Remote-Friendly</a>
+                <a href="/values/async">Async-First</a>
+                <a href="/values/deep-work">Deep Work</a>
+                <a href="/values/wlb">Work-Life Balance</a>
+                <a href="/values/ethical-ai">Ethical AI</a>
+                <a href="/values/equity">Strong Comp</a>
+            </div>
+            <div class="ft-col">
+                <h4>By Role</h4>
+                <a href="/roles/engineering">Engineering</a>
+                <a href="/roles/ml-ai">ML / AI</a>
+                <a href="/roles/design">Design</a>
+                <a href="/roles/product">Product</a>
+                <a href="/roles/data">Data</a>
+                <a href="/roles/marketing">Marketing</a>
+            </div>
+            <div class="ft-col">
+                <h4>By Seniority</h4>
+                <a href="/seniority/entry">Entry / Junior</a>
+                <a href="/seniority/mid">Mid-Level</a>
+                <a href="/seniority/senior">Senior</a>
+                <a href="/seniority/staff">Staff / Principal</a>
+                <a href="/seniority/lead">Lead / Manager</a>
+                <a href="/seniority/director">Director+</a>
+            </div>
+            <div class="ft-col">
+                <h4>By Location</h4>
+                <a href="/locations/san-francisco">San Francisco</a>
+                <a href="/locations/new-york">New York</a>
+                <a href="/locations/london">London</a>
+                <a href="/locations/remote">Remote</a>
+                <a href="/locations/seattle">Seattle</a>
+                <a href="/locations/paris">Paris</a>
+            </div>
+            <div class="ft-col">
+                <h4>Explore</h4>
+                <a href="/directory">Culture Directory</a>
+                <a href="/compare">Compare Cultures</a>
+                <a href="/culture-map">Culture Map</a>
+                <a href="/quiz">Culture Quiz</a>
+                <a href="/blog">Blog</a>
+                <a href="/for-employers">For Employers</a>
+                <a href="https://meetingtax.com/?ref=jobsbyculture.com" target="_blank">Meeting Tax</a>
+                <a href="https://paytaxfa.st/?ref=jobsbyculture.com" target="_blank">PayTaxFast</a>
+            </div>
+        </div>
+        <div class="ft-about" style="display:flex;align-items:center;gap:10px;margin-bottom:32px">
+            <a href="/" class="nav-logo" style="margin-bottom:0">
+                <div class="nav-mark"><div class="ring ring-1"></div><div class="ring ring-2"></div><div class="nav-dot"></div></div>
+                <div class="nav-wordmark">Jobs<span>By</span>Culture</div>
+            </a>
+            <span style="color:var(--text-3);font-size:14px;margin-left:8px">The culture-first job board. Built for the AI era.</span>
+        </div>
+        <div class="ft-bar">
+            <p>&copy; 2026 JobsByCulture. Built with &#10084;&#65039; for the indie hacker community.</p>
+            <p>Made by <a href="https://x.com/itspradz?ref=jobsbyculture.com" target="_blank" style="color:var(--accent);text-decoration:none">@itspradz</a></p>
+        </div>
+        <div style="margin-top:16px;text-align:center">
+            <a href="https://startupfa.me/s/jobsbyculture?utm_source=jobsbyculture.com&amp;ref=jobsbyculture.com" target="_blank"><img src="https://startupfa.me/badges/featured-badge.webp" alt="JobsByCulture - Featured on Startup Fame" width="171" height="54" /></a>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>
