@@ -1,7 +1,7 @@
 {
   "cleanUrls": true,
   "rewrites": [
-    { "source": "/culture-cards/c/:slug", "destination": "/culture-cards/view.html" }
+    { "source": "/culture-cards/c/:slug*", "destination": "/culture-cards/view.html" }
   ],
   "redirects": [
     {
