@@ -1644,28 +1644,16 @@ function setupPremiumUI() {
         if (downloadSection) downloadSection.style.display = '';
         if (branding) branding.style.display = 'none';
     } else {
-        // Show premium upsell
-        if (premiumSection) premiumSection.style.display = '';
         if (branding) branding.style.display = '';
-        // Show send section for creator but with upgrade prompt
+        // For creators: show ONE clear premium upsell that covers everything
         if (isCreator) {
-            if (sendSection) {
-                sendSection.style.display = '';
-                var sendBtn = document.getElementById('sendNowBtn');
-                if (sendBtn) {
-                    sendBtn.textContent = 'Unlock to Send ($5.99)';
-                    sendBtn.onclick = function() { unlockPremium(); };
-                }
-            }
-            if (downloadSection) {
-                downloadSection.style.display = '';
-                var dlBtn = downloadSection.querySelector('button');
-                if (dlBtn) {
-                    dlBtn.textContent = '\u2B07 Unlock to Download ($5.99)';
-                    dlBtn.onclick = function() { unlockPremium(); };
-                }
-            }
+            if (premiumSection) premiumSection.style.display = '';
+            // Hide send/download — they're covered by the premium upsell
+            if (sendSection) sendSection.style.display = 'none';
+            if (downloadSection) downloadSection.style.display = 'none';
         } else {
+            // Non-creators don't see any of these
+            if (premiumSection) premiumSection.style.display = 'none';
             if (sendSection) sendSection.style.display = 'none';
             if (downloadSection) downloadSection.style.display = 'none';
         }
