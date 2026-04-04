@@ -49,6 +49,18 @@
         "image": "https://jobsbyculture.com/og-image.png"
     }
     </script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {"@type": "Question", "name": "What is Together AI's Glassdoor rating?", "acceptedAnswer": {"@type": "Answer", "text": "Together AI has a 4.1 out of 5.0 Glassdoor rating with a work-life balance score of 3.8/5. The rating is based on a small number of reviews, so the internal culture is less transparent than larger companies."}},
+            {"@type": "Question", "name": "What does Together AI do?", "acceptedAnswer": {"@type": "Answer", "text": "Together AI is an open-source AI cloud platform. The company created FlashAttention, one of the most impactful AI infrastructure innovations, and offers cloud infrastructure for training and running open-source AI models."}},
+            {"@type": "Question", "name": "How many employees does Together AI have?", "acceptedAnswer": {"@type": "Answer", "text": "Together AI has approximately 150 employees as of 2026. Despite its relatively small size, the company has achieved $300M in revenue with 130% growth rate."}},
+            {"@type": "Question", "name": "Is Together AI a good place to work?", "acceptedAnswer": {"@type": "Answer", "text": "Together AI offers a strong open-source culture with a learning-focused environment. The company attracts top AI researchers and offers the chance to work on hard infrastructure problems. The equity upside at a $3.3B valuation is real, though the company is still maturing its people processes."}}
+        ]
+    }
+    </script>
 
     <!-- Plausible Analytics -->
     <script async src="https://plausible.io/js/pa-qa3pjs5eZbsfBQJMk4hVW.js"></script>
@@ -656,6 +668,20 @@
             .verdict-box { padding: 24px 20px; }
         }
 
+        /* ══ FAQ Section ══ */
+        .faq-section { margin: 48px 0; }
+        .faq-section h2 { margin-bottom: 24px; }
+        .faq-list { display: flex; flex-direction: column; gap: 0; }
+        .faq-item { border: 1px solid var(--border); border-bottom: none; padding: 20px 24px; background: var(--bg-card); }
+        .faq-item:first-child { border-radius: var(--radius) var(--radius) 0 0; }
+        .faq-item:last-child { border-bottom: 1px solid var(--border); border-radius: 0 0 var(--radius) var(--radius); }
+        .faq-q { font-size: 16px; font-weight: 600; color: var(--text); cursor: pointer; display: flex; justify-content: space-between; align-items: center; gap: 16px; }
+        .faq-q:hover { color: var(--accent); }
+        .faq-q .faq-toggle { font-size: 20px; color: var(--text-3); transition: transform 0.2s; flex-shrink: 0; }
+        .faq-item.open .faq-toggle { transform: rotate(45deg); }
+        .faq-a { display: none; margin-top: 12px; font-size: 15px; color: var(--text-2); line-height: 1.8; }
+        .faq-item.open .faq-a { display: block; }
+
         /* ══ Footer ══ */
         footer {
             padding: 56px 0 36px;
@@ -1121,6 +1147,29 @@
         </div>
 
         <p>Together AI is not for everyone. It&rsquo;s not the highest-paying option, it&rsquo;s not the most structured, and it doesn&rsquo;t have the name recognition of an Anthropic or OpenAI. What it offers is a rare combination: the chance to work on hard infrastructure problems with talented researchers, contribute to open-source projects that the entire AI community uses, and do it at a company with real revenue and growth. For the right engineer, that&rsquo;s a compelling package.</p>
+
+        <!-- FAQ Section -->
+        <div class="faq-section">
+            <h2>Frequently Asked Questions About Working at Together AI</h2>
+            <div class="faq-list">
+                <div class="faq-item" onclick="this.classList.toggle('open')">
+                    <div class="faq-q">What is Together AI's Glassdoor rating?<span class="faq-toggle">+</span></div>
+                    <div class="faq-a">Together AI has a 4.1 out of 5.0 Glassdoor rating with a work-life balance score of 3.8/5. The rating is based on a small number of reviews, so the internal culture is less transparent than larger companies. See our full <a href="/companies/together">Together AI culture profile</a>.</div>
+                </div>
+                <div class="faq-item" onclick="this.classList.toggle('open')">
+                    <div class="faq-q">What does Together AI do?<span class="faq-toggle">+</span></div>
+                    <div class="faq-a">Together AI is an open-source AI cloud platform. The company created FlashAttention, one of the most impactful AI infrastructure innovations, and offers cloud infrastructure for training and running open-source AI models at scale.</div>
+                </div>
+                <div class="faq-item" onclick="this.classList.toggle('open')">
+                    <div class="faq-q">How many employees does Together AI have?<span class="faq-toggle">+</span></div>
+                    <div class="faq-a">Together AI has approximately 150 employees as of 2026. Despite its relatively small size, the company has achieved $300M in revenue with a 130% growth rate. See our <a href="/blog/ai-company-employee-count-2026">AI company employee count rankings</a>.</div>
+                </div>
+                <div class="faq-item" onclick="this.classList.toggle('open')">
+                    <div class="faq-q">Is Together AI a good place to work?<span class="faq-toggle">+</span></div>
+                    <div class="faq-a">Together AI offers a strong open-source culture with a learning-focused environment. The company attracts top AI researchers and offers the chance to work on hard infrastructure problems. The equity upside at a $3.3B valuation is real, though the company is still maturing its people processes and leadership dynamics.</div>
+                </div>
+            </div>
+        </div>
 
         <!-- CTA Box -->
         <div class="cta-box">

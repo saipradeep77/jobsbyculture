@@ -47,6 +47,46 @@
         "image": "https://jobsbyculture.com/og-image.png"
     }
     </script>
+    <script type="application/ld+json">
+    {
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [
+                    {
+                            "@type": "Question",
+                            "name": "Is OpenAI or DeepMind better for research?",
+                            "acceptedAnswer": {
+                                    "@type": "Answer",
+                                    "text": "DeepMind is stronger for pure, long-term research with its deep-work culture and academic publishing emphasis. OpenAI is better for applied research that ships into products quickly. If you want to publish foundational papers, DeepMind; if you want to build products used by millions, OpenAI."
+                            }
+                    },
+                    {
+                            "@type": "Question",
+                            "name": "Which pays more, OpenAI or DeepMind?",
+                            "acceptedAnswer": {
+                                    "@type": "Answer",
+                                    "text": "Compensation ranges are similar at the senior level, but DeepMind employees also receive Google benefits and RSUs, which adds significant value. OpenAI offers startup-style equity with potentially higher upside if its valuation continues to grow."
+                            }
+                    },
+                    {
+                            "@type": "Question",
+                            "name": "Which has better work-life balance, OpenAI or DeepMind?",
+                            "acceptedAnswer": {
+                                    "@type": "Answer",
+                                    "text": "DeepMind scores notably higher at 4.0 on Glassdoor's work-life balance rating compared to OpenAI's 3.6. DeepMind's Google-backed structure provides more stability and predictable hours, while OpenAI operates at a faster startup pace."
+                            }
+                    },
+                    {
+                            "@type": "Question",
+                            "name": "Which is harder to get into, OpenAI or DeepMind?",
+                            "acceptedAnswer": {
+                                    "@type": "Answer",
+                                    "text": "Both are extremely selective, but DeepMind's hiring skews more heavily toward research credentials — PhD-level work and published papers carry significant weight. OpenAI also values research credentials but has more product-focused engineering roles available."
+                            }
+                    }
+            ]
+    }
+    </script>
 
     <style>
         *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
@@ -767,6 +807,18 @@
         .fade-up-d2 { animation-delay: 0.1s; }
         .fade-up-d3 { animation-delay: 0.15s; }
         .fade-up-d4 { animation-delay: 0.2s; }
+    
+        /* FAQ Accordion */
+        .faq-section { margin: 48px 0 32px; }
+        .faq-section h2 { font-family: var(--font-display); font-size: 1.75rem; margin-bottom: 20px; color: var(--text); }
+        .faq-list { display: flex; flex-direction: column; gap: 12px; }
+        .faq-item { background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius); overflow: hidden; cursor: pointer; transition: border-color 0.2s; }
+        .faq-item:hover { border-color: var(--border-2); }
+        .faq-q { padding: 18px 20px; font-weight: 600; font-size: 1rem; color: var(--text); display: flex; justify-content: space-between; align-items: center; gap: 12px; }
+        .faq-toggle { font-size: 1.25rem; color: var(--text-3); transition: transform 0.2s; flex-shrink: 0; }
+        .faq-item.open .faq-toggle { transform: rotate(45deg); }
+        .faq-a { padding: 0 20px 0; max-height: 0; overflow: hidden; transition: max-height 0.3s ease, padding 0.3s ease; color: var(--text-2); line-height: 1.7; font-size: 0.95rem; }
+        .faq-item.open .faq-a { max-height: 300px; padding: 0 20px 18px; }
     </style>
 </head>
 <body>
@@ -1038,6 +1090,29 @@
         <p>Both organizations will challenge you intellectually. Both will surround you with some of the most brilliant people in the field. And both will put you at the very center of the AI revolution. The question is which version of "frontier AI" fits how you want to live and work &mdash; the product-shipping intensity of OpenAI, or the research-deep thoughtfulness of DeepMind.</p>
 
         <p>For a side-by-side interactive comparison with live job counts, visit the full <a href="/compare/deepmind-vs-openai">DeepMind vs OpenAI comparison page</a>. Or explore all companies in the <a href="/directory">Culture Directory</a> to find the right fit across the full landscape of AI employers.</p>
+        <!-- FAQ Section -->
+        <div class="faq-section">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-list">
+                <div class="faq-item" onclick="this.classList.toggle('open')">
+                    <div class="faq-q">Is OpenAI or DeepMind better for research?<span class="faq-toggle">+</span></div>
+                    <div class="faq-a">DeepMind is stronger for pure, long-term research with its deep-work culture and academic publishing emphasis. OpenAI is better for applied research that ships into products quickly. If you want to publish foundational papers, DeepMind; if you want to build products used by millions, OpenAI.</div>
+                </div>
+                <div class="faq-item" onclick="this.classList.toggle('open')">
+                    <div class="faq-q">Which pays more, OpenAI or DeepMind?<span class="faq-toggle">+</span></div>
+                    <div class="faq-a">Compensation ranges are similar at the senior level, but DeepMind employees also receive Google benefits and RSUs, which adds significant value. OpenAI offers startup-style equity with potentially higher upside if its valuation continues to grow.</div>
+                </div>
+                <div class="faq-item" onclick="this.classList.toggle('open')">
+                    <div class="faq-q">Which has better work-life balance, OpenAI or DeepMind?<span class="faq-toggle">+</span></div>
+                    <div class="faq-a">DeepMind scores notably higher at 4.0 on Glassdoor's work-life balance rating compared to OpenAI's 3.6. DeepMind's Google-backed structure provides more stability and predictable hours, while OpenAI operates at a faster startup pace.</div>
+                </div>
+                <div class="faq-item" onclick="this.classList.toggle('open')">
+                    <div class="faq-q">Which is harder to get into, OpenAI or DeepMind?<span class="faq-toggle">+</span></div>
+                    <div class="faq-a">Both are extremely selective, but DeepMind's hiring skews more heavily toward research credentials — PhD-level work and published papers carry significant weight. OpenAI also values research credentials but has more product-focused engineering roles available.</div>
+                </div>
+            </div>
+        </div>
+
 
         <!-- CTA Box -->
         <div class="cta-box">

@@ -49,6 +49,38 @@
         "image": "https://jobsbyculture.com/og-image.png"
     }
     </script>
+    <script type="application/ld+json">
+    {
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [
+                    {
+                            "@type": "Question",
+                            "name": "Which New York AI company has the best work-life balance?",
+                            "acceptedAnswer": {
+                                    "@type": "Answer",
+                                    "text": "incident.io (4.5 WLB) and Notion (4.2 WLB) lead among companies with New York offices. Both companies have strong culture scores and genuinely prioritize employee wellbeing alongside productivity."
+                            }
+                    },
+                    {
+                            "@type": "Question",
+                            "name": "How many AI jobs are available in New York?",
+                            "acceptedAnswer": {
+                                    "@type": "Answer",
+                                    "text": "There are currently 1,400+ open positions across 40+ AI and tech companies with offices in New York City. NYC is the second-largest AI job market in the US after San Francisco."
+                            }
+                    },
+                    {
+                            "@type": "Question",
+                            "name": "Is New York a good city for AI careers?",
+                            "acceptedAnswer": {
+                                    "@type": "Answer",
+                                    "text": "Yes, especially if you're interested in the intersection of AI with finance, media, or commerce. Companies like Stripe, Ramp, and others have strong NYC presences, creating a vibrant fintech-AI crossover ecosystem."
+                            }
+                    }
+            ]
+    }
+    </script>
 
     <style>
         *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
@@ -655,6 +687,18 @@
         .fade-up-d2 { animation-delay: 0.1s; }
         .fade-up-d3 { animation-delay: 0.15s; }
         .fade-up-d4 { animation-delay: 0.2s; }
+    
+        /* FAQ Accordion */
+        .faq-section { margin: 48px 0 32px; }
+        .faq-section h2 { font-family: var(--font-display); font-size: 1.75rem; margin-bottom: 20px; color: var(--text); }
+        .faq-list { display: flex; flex-direction: column; gap: 12px; }
+        .faq-item { background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius); overflow: hidden; cursor: pointer; transition: border-color 0.2s; }
+        .faq-item:hover { border-color: var(--border-2); }
+        .faq-q { padding: 18px 20px; font-weight: 600; font-size: 1rem; color: var(--text); display: flex; justify-content: space-between; align-items: center; gap: 12px; }
+        .faq-toggle { font-size: 1.25rem; color: var(--text-3); transition: transform 0.2s; flex-shrink: 0; }
+        .faq-item.open .faq-toggle { transform: rotate(45deg); }
+        .faq-a { padding: 0 20px 0; max-height: 0; overflow: hidden; transition: max-height 0.3s ease, padding 0.3s ease; color: var(--text-2); line-height: 1.7; font-size: 0.95rem; }
+        .faq-item.open .faq-a { max-height: 300px; padding: 0 20px 18px; }
     </style>
 </head>
 <body>
@@ -1093,6 +1137,25 @@
         <p>The biggest takeaway: the hustle culture narrative doesn't hold up. NYC AI companies have the same WLB range as their San Francisco counterparts. You can find a 4.2 WLB company in Manhattan just as easily as in SoMa. The difference is that NYC gives you more <em>variety</em> in the type of AI work available &mdash; and that variety extends to how these companies treat your time.</p>
 
         <p>Whether you want to build creative AI at <a href="/companies/suno">Suno</a>, ship developer tools at <a href="/companies/langchain">LangChain</a>, or tackle AI safety at <a href="/companies/anthropic">Anthropic</a>, New York has the options. Use this ranking as a starting point, then dig into the <a href="/directory">Culture Directory</a> for the full picture on any company that catches your eye.</p>
+        <!-- FAQ Section -->
+        <div class="faq-section">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-list">
+                <div class="faq-item" onclick="this.classList.toggle('open')">
+                    <div class="faq-q">Which New York AI company has the best work-life balance?<span class="faq-toggle">+</span></div>
+                    <div class="faq-a">incident.io (4.5 WLB) and Notion (4.2 WLB) lead among companies with New York offices. Both companies have strong culture scores and genuinely prioritize employee wellbeing alongside productivity.</div>
+                </div>
+                <div class="faq-item" onclick="this.classList.toggle('open')">
+                    <div class="faq-q">How many AI jobs are available in New York?<span class="faq-toggle">+</span></div>
+                    <div class="faq-a">There are currently 1,400+ open positions across 40+ AI and tech companies with offices in New York City. NYC is the second-largest AI job market in the US after San Francisco.</div>
+                </div>
+                <div class="faq-item" onclick="this.classList.toggle('open')">
+                    <div class="faq-q">Is New York a good city for AI careers?<span class="faq-toggle">+</span></div>
+                    <div class="faq-a">Yes, especially if you're interested in the intersection of AI with finance, media, or commerce. Companies like Stripe, Ramp, and others have strong NYC presences, creating a vibrant fintech-AI crossover ecosystem.</div>
+                </div>
+            </div>
+        </div>
+
 
         <!-- CTA Box -->
         <div class="cta-box">

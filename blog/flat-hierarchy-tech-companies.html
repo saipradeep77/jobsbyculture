@@ -46,6 +46,46 @@
         "image": "https://jobsbyculture.com/og-image.png"
     }
     </script>
+    <script type="application/ld+json">
+    {
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [
+                    {
+                            "@type": "Question",
+                            "name": "Which tech companies have a flat hierarchy?",
+                            "acceptedAnswer": {
+                                    "@type": "Answer",
+                                    "text": "PostHog, Supabase, n8n, Weaviate, and Linear are among the companies with genuinely flat organizational structures. All are under 300 employees, which appears to be a key factor in making flat hierarchy work effectively."
+                            }
+                    },
+                    {
+                            "@type": "Question",
+                            "name": "Can flat hierarchy work at scale?",
+                            "acceptedAnswer": {
+                                    "@type": "Answer",
+                                    "text": "Data suggests flat hierarchy becomes increasingly difficult to maintain past approximately 300 employees. Beyond that point, companies tend to introduce lightweight management layers while trying to preserve the autonomy and speed that flat structures provide."
+                            }
+                    },
+                    {
+                            "@type": "Question",
+                            "name": "What are the benefits of a flat hierarchy?",
+                            "acceptedAnswer": {
+                                    "@type": "Answer",
+                                    "text": "Flat hierarchy provides more individual autonomy, faster decision-making, and direct ownership of projects. Engineers can talk directly to leadership, there's less bureaucracy blocking progress, and new ideas can move from concept to implementation quickly."
+                            }
+                    },
+                    {
+                            "@type": "Question",
+                            "name": "What are the downsides of flat hierarchy?",
+                            "acceptedAnswer": {
+                                    "@type": "Answer",
+                                    "text": "The main downsides include unclear career progression paths, harder-to-define promotion criteria, and potential for informal power structures to emerge. Some employees also report difficulty knowing who to go to for decisions in truly flat organizations."
+                            }
+                    }
+            ]
+    }
+    </script>
 
     <style>
         *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
@@ -641,6 +681,18 @@
         .fade-up-d2 { animation-delay: 0.1s; }
         .fade-up-d3 { animation-delay: 0.15s; }
         .fade-up-d4 { animation-delay: 0.2s; }
+    
+        /* FAQ Accordion */
+        .faq-section { margin: 48px 0 32px; }
+        .faq-section h2 { font-family: var(--font-display); font-size: 1.75rem; margin-bottom: 20px; color: var(--text); }
+        .faq-list { display: flex; flex-direction: column; gap: 12px; }
+        .faq-item { background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius); overflow: hidden; cursor: pointer; transition: border-color 0.2s; }
+        .faq-item:hover { border-color: var(--border-2); }
+        .faq-q { padding: 18px 20px; font-weight: 600; font-size: 1rem; color: var(--text); display: flex; justify-content: space-between; align-items: center; gap: 12px; }
+        .faq-toggle { font-size: 1.25rem; color: var(--text-3); transition: transform 0.2s; flex-shrink: 0; }
+        .faq-item.open .faq-toggle { transform: rotate(45deg); }
+        .faq-a { padding: 0 20px 0; max-height: 0; overflow: hidden; transition: max-height 0.3s ease, padding 0.3s ease; color: var(--text-2); line-height: 1.7; font-size: 0.95rem; }
+        .faq-item.open .faq-a { max-height: 300px; padding: 0 20px 18px; }
     </style>
 </head>
 <body>
@@ -900,6 +952,29 @@
         <p>If you want deep specialization &mdash; spending years mastering one narrow domain &mdash; flat hierarchy might not be for you. These companies reward generalists who thrive in ambiguity. The flip side: the breadth of experience you gain at a flat company in 2 years might take 5 years at a larger, more structured org.</p>
 
         <p>The other common pairings are worth noting too. Five of 8 are <a href="/values/eng-driven">eng-driven</a>. Four are <a href="/values/open-source">open-source</a>. Three are <a href="/values/remote">remote</a>. Flat hierarchy clusters with engineering-led, builder-first cultures &mdash; which tracks. Browse all flat companies and their <a href="/jobs">open roles</a> on the <a href="/values/flat">flat hierarchy value page</a>.</p>
+        <!-- FAQ Section -->
+        <div class="faq-section">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-list">
+                <div class="faq-item" onclick="this.classList.toggle('open')">
+                    <div class="faq-q">Which tech companies have a flat hierarchy?<span class="faq-toggle">+</span></div>
+                    <div class="faq-a">PostHog, Supabase, n8n, Weaviate, and Linear are among the companies with genuinely flat organizational structures. All are under 300 employees, which appears to be a key factor in making flat hierarchy work effectively.</div>
+                </div>
+                <div class="faq-item" onclick="this.classList.toggle('open')">
+                    <div class="faq-q">Can flat hierarchy work at scale?<span class="faq-toggle">+</span></div>
+                    <div class="faq-a">Data suggests flat hierarchy becomes increasingly difficult to maintain past approximately 300 employees. Beyond that point, companies tend to introduce lightweight management layers while trying to preserve the autonomy and speed that flat structures provide.</div>
+                </div>
+                <div class="faq-item" onclick="this.classList.toggle('open')">
+                    <div class="faq-q">What are the benefits of a flat hierarchy?<span class="faq-toggle">+</span></div>
+                    <div class="faq-a">Flat hierarchy provides more individual autonomy, faster decision-making, and direct ownership of projects. Engineers can talk directly to leadership, there's less bureaucracy blocking progress, and new ideas can move from concept to implementation quickly.</div>
+                </div>
+                <div class="faq-item" onclick="this.classList.toggle('open')">
+                    <div class="faq-q">What are the downsides of flat hierarchy?<span class="faq-toggle">+</span></div>
+                    <div class="faq-a">The main downsides include unclear career progression paths, harder-to-define promotion criteria, and potential for informal power structures to emerge. Some employees also report difficulty knowing who to go to for decisions in truly flat organizations.</div>
+                </div>
+            </div>
+        </div>
+
 
         <!-- CTA Box -->
         <div class="cta-box">

@@ -49,6 +49,38 @@
         "image": "https://jobsbyculture.com/og-image.png"
     }
     </script>
+    <script type="application/ld+json">
+    {
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [
+                    {
+                            "@type": "Question",
+                            "name": "Which San Francisco AI company has the best work-life balance?",
+                            "acceptedAnswer": {
+                                    "@type": "Answer",
+                                    "text": "Tailscale (4.5 WLB), PostHog (4.5 WLB), and Notion (4.2 WLB) lead among SF-based AI and tech companies. These companies combine strong Glassdoor ratings with cultures that genuinely support sustainable work hours and flexibility."
+                            }
+                    },
+                    {
+                            "@type": "Question",
+                            "name": "How many AI jobs are available in San Francisco?",
+                            "acceptedAnswer": {
+                                    "@type": "Answer",
+                                    "text": "There are currently 2,500+ open positions across 40+ AI and tech companies with offices in San Francisco. This includes roles in engineering, research, product, design, and operations."
+                            }
+                    },
+                    {
+                            "@type": "Question",
+                            "name": "Is San Francisco still the best city for AI jobs?",
+                            "acceptedAnswer": {
+                                    "@type": "Answer",
+                                    "text": "Yes, San Francisco maintains the highest concentration of AI jobs globally, with the most companies, highest compensation, and deepest talent pool. However, London and Paris are growing fast as AI hubs, especially with companies like DeepMind and Mistral."
+                            }
+                    }
+            ]
+    }
+    </script>
 
     <style>
         *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
@@ -649,6 +681,18 @@
         .fade-up-d2 { animation-delay: 0.1s; }
         .fade-up-d3 { animation-delay: 0.15s; }
         .fade-up-d4 { animation-delay: 0.2s; }
+    
+        /* FAQ Accordion */
+        .faq-section { margin: 48px 0 32px; }
+        .faq-section h2 { font-family: var(--font-display); font-size: 1.75rem; margin-bottom: 20px; color: var(--text); }
+        .faq-list { display: flex; flex-direction: column; gap: 12px; }
+        .faq-item { background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius); overflow: hidden; cursor: pointer; transition: border-color 0.2s; }
+        .faq-item:hover { border-color: var(--border-2); }
+        .faq-q { padding: 18px 20px; font-weight: 600; font-size: 1rem; color: var(--text); display: flex; justify-content: space-between; align-items: center; gap: 12px; }
+        .faq-toggle { font-size: 1.25rem; color: var(--text-3); transition: transform 0.2s; flex-shrink: 0; }
+        .faq-item.open .faq-toggle { transform: rotate(45deg); }
+        .faq-a { padding: 0 20px 0; max-height: 0; overflow: hidden; transition: max-height 0.3s ease, padding 0.3s ease; color: var(--text-2); line-height: 1.7; font-size: 0.95rem; }
+        .faq-item.open .faq-a { max-height: 300px; padding: 0 20px 18px; }
     </style>
 </head>
 <body>
@@ -1091,6 +1135,25 @@
         <p>The data is clear: you don't have to sacrifice work-life balance to work in AI in San Francisco. The city's AI ecosystem is large enough and diverse enough that you can find a role that matches both your career ambitions and your personal boundaries. The companies that respect your time are hiring. The question is whether you'll prioritize WLB when you make your next move.</p>
 
         <p>If work-life balance matters to you, we've built a dedicated filter for it. <a href="/values/wlb">Browse all jobs from companies with high WLB scores</a>, or use our <a href="/compare">comparison tool</a> to see how any two SF companies stack up side-by-side.</p>
+        <!-- FAQ Section -->
+        <div class="faq-section">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-list">
+                <div class="faq-item" onclick="this.classList.toggle('open')">
+                    <div class="faq-q">Which San Francisco AI company has the best work-life balance?<span class="faq-toggle">+</span></div>
+                    <div class="faq-a">Tailscale (4.5 WLB), PostHog (4.5 WLB), and Notion (4.2 WLB) lead among SF-based AI and tech companies. These companies combine strong Glassdoor ratings with cultures that genuinely support sustainable work hours and flexibility.</div>
+                </div>
+                <div class="faq-item" onclick="this.classList.toggle('open')">
+                    <div class="faq-q">How many AI jobs are available in San Francisco?<span class="faq-toggle">+</span></div>
+                    <div class="faq-a">There are currently 2,500+ open positions across 40+ AI and tech companies with offices in San Francisco. This includes roles in engineering, research, product, design, and operations.</div>
+                </div>
+                <div class="faq-item" onclick="this.classList.toggle('open')">
+                    <div class="faq-q">Is San Francisco still the best city for AI jobs?<span class="faq-toggle">+</span></div>
+                    <div class="faq-a">Yes, San Francisco maintains the highest concentration of AI jobs globally, with the most companies, highest compensation, and deepest talent pool. However, London and Paris are growing fast as AI hubs, especially with companies like DeepMind and Mistral.</div>
+                </div>
+            </div>
+        </div>
+
 
         <!-- CTA Box -->
         <div class="cta-box">

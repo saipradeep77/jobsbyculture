@@ -49,6 +49,18 @@
         "image": "https://jobsbyculture.com/og-image.png"
     }
     </script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {"@type": "Question", "name": "Is Supabase remote?", "acceptedAnswer": {"@type": "Answer", "text": "Yes, Supabase is fully remote with same pay worldwide regardless of location. The company has no offices and employees work from countries across the globe."}},
+            {"@type": "Question", "name": "What is Supabase's Glassdoor rating?", "acceptedAnswer": {"@type": "Answer", "text": "Supabase has a 4.8 out of 5.0 Glassdoor rating — the highest among AI and tech companies we track — but a work-life balance score of just 3.0/5. 100% of employees recommend working there despite the intensity."}},
+            {"@type": "Question", "name": "Is Supabase open source?", "acceptedAnswer": {"@type": "Answer", "text": "Yes, Supabase is an open-source Firebase alternative. The core platform, client libraries, and most tooling are all open source, with the company building a sustainable business on top of the open-source foundation."}},
+            {"@type": "Question", "name": "Is Supabase a good place to work?", "acceptedAnswer": {"@type": "Answer", "text": "Supabase has a 100% recommend rate on Glassdoor and a 4.8 overall rating. However, the 3.0 WLB score means it's a relentless pace. It's ideal for builders who thrive on intensity and care about open source, but not for those prioritizing work-life balance."}}
+        ]
+    }
+    </script>
 
     <!-- Plausible Analytics -->
     <script async src="https://plausible.io/js/pa-qa3pjs5eZbsfBQJMk4hVW.js"></script>
@@ -693,6 +705,20 @@
             .verdict-box { padding: 24px 20px; }
         }
 
+        /* ══ FAQ Section ══ */
+        .faq-section { margin: 48px 0; }
+        .faq-section h2 { margin-bottom: 24px; }
+        .faq-list { display: flex; flex-direction: column; gap: 0; }
+        .faq-item { border: 1px solid var(--border); border-bottom: none; padding: 20px 24px; background: var(--bg-card); }
+        .faq-item:first-child { border-radius: var(--radius) var(--radius) 0 0; }
+        .faq-item:last-child { border-bottom: 1px solid var(--border); border-radius: 0 0 var(--radius) var(--radius); }
+        .faq-q { font-size: 16px; font-weight: 600; color: var(--text); cursor: pointer; display: flex; justify-content: space-between; align-items: center; gap: 16px; }
+        .faq-q:hover { color: var(--accent); }
+        .faq-q .faq-toggle { font-size: 20px; color: var(--text-3); transition: transform 0.2s; flex-shrink: 0; }
+        .faq-item.open .faq-toggle { transform: rotate(45deg); }
+        .faq-a { display: none; margin-top: 12px; font-size: 15px; color: var(--text-2); line-height: 1.8; }
+        .faq-item.open .faq-a { display: block; }
+
         /* ══ Footer ══ */
         footer {
             padding: 56px 0 36px;
@@ -1150,6 +1176,29 @@
         </div>
 
         <p>The Supabase paradox &mdash; highest rated, lowest WLB &mdash; isn't a contradiction. It's a signal. The company has found people who don't just tolerate intensity but actively seek it. If that's you, the 4.8 Glassdoor rating is real and the 100% recommend rate means something. If it's not you, the 3.0 WLB score is equally real and worth respecting.</p>
+
+        <!-- FAQ Section -->
+        <div class="faq-section">
+            <h2>Frequently Asked Questions About Working at Supabase</h2>
+            <div class="faq-list">
+                <div class="faq-item" onclick="this.classList.toggle('open')">
+                    <div class="faq-q">Is Supabase remote?<span class="faq-toggle">+</span></div>
+                    <div class="faq-a">Yes, Supabase is fully remote with same pay worldwide regardless of location. The company has no offices and employees work from countries across the globe. See our <a href="/blog/remote-friendly-ai-companies-hiring-2026">remote-friendly AI companies guide</a> for more options.</div>
+                </div>
+                <div class="faq-item" onclick="this.classList.toggle('open')">
+                    <div class="faq-q">What is Supabase's Glassdoor rating?<span class="faq-toggle">+</span></div>
+                    <div class="faq-a">Supabase has a 4.8 out of 5.0 Glassdoor rating &mdash; the highest among AI and tech companies we track &mdash; but a work-life balance score of just 3.0/5. 100% of employees recommend working there despite the intensity. See our full <a href="/companies/supabase">Supabase culture profile</a>.</div>
+                </div>
+                <div class="faq-item" onclick="this.classList.toggle('open')">
+                    <div class="faq-q">Is Supabase open source?<span class="faq-toggle">+</span></div>
+                    <div class="faq-a">Yes, Supabase is an open-source Firebase alternative. The core platform, client libraries, and most tooling are all open source. See our <a href="/blog/open-source-ai-companies-hiring-2026">open-source AI companies guide</a> for more companies building in the open.</div>
+                </div>
+                <div class="faq-item" onclick="this.classList.toggle('open')">
+                    <div class="faq-q">Is Supabase a good place to work?<span class="faq-toggle">+</span></div>
+                    <div class="faq-a">Supabase has a 100% recommend rate on Glassdoor and a 4.8 overall rating. However, the 3.0 WLB score means it's a relentless pace. It's ideal for builders who thrive on intensity and care about open source, but not for those prioritizing work-life balance. See our <a href="/blog/best-ai-companies-work-life-balance-2026">WLB rankings</a> if balance matters most.</div>
+                </div>
+            </div>
+        </div>
 
         <!-- CTA Box -->
         <div class="cta-box">

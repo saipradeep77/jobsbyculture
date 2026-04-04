@@ -49,6 +49,46 @@
         "image": "https://jobsbyculture.com/og-image.png"
     }
     </script>
+    <script type="application/ld+json">
+    {
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [
+                    {
+                            "@type": "Question",
+                            "name": "What is the best AI company for engineers in 2026?",
+                            "acceptedAnswer": {
+                                    "@type": "Answer",
+                                    "text": "Based on our analysis, Linear (4.6 Glassdoor, 4.4 WLB) and Anthropic (4.4 Glassdoor, top compensation) lead for engineering culture. Linear offers exceptional autonomy for a small team, while Anthropic combines frontier AI work with strong technical leadership."
+                            }
+                    },
+                    {
+                            "@type": "Question",
+                            "name": "Which AI companies value engineering culture the most?",
+                            "acceptedAnswer": {
+                                    "@type": "Answer",
+                                    "text": "Companies tagged as engineering-driven (eng-driven) in our database include Anthropic, OpenAI, Stripe, Linear, PostHog, Supabase, Vercel, and others. These companies give engineers significant influence over product decisions and technical direction."
+                            }
+                    },
+                    {
+                            "@type": "Question",
+                            "name": "How many engineering jobs are open at AI companies right now?",
+                            "acceptedAnswer": {
+                                    "@type": "Answer",
+                                    "text": "There are currently 1,600+ open engineering roles across the 57 AI and tech companies we track. These span software engineering, machine learning, infrastructure, and platform roles at all seniority levels."
+                            }
+                    },
+                    {
+                            "@type": "Question",
+                            "name": "Do I need a PhD to work at an AI company?",
+                            "acceptedAnswer": {
+                                    "@type": "Answer",
+                                    "text": "Not for most roles. Software engineering, infrastructure, and product roles rarely require a PhD. However, research scientist positions — especially at Anthropic, OpenAI, and DeepMind — often prefer or require doctoral-level research experience."
+                            }
+                    }
+            ]
+    }
+    </script>
 
     <style>
         *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
@@ -704,6 +744,18 @@
         .fade-up-d2 { animation-delay: 0.1s; }
         .fade-up-d3 { animation-delay: 0.15s; }
         .fade-up-d4 { animation-delay: 0.2s; }
+    
+        /* FAQ Accordion */
+        .faq-section { margin: 48px 0 32px; }
+        .faq-section h2 { font-family: var(--font-display); font-size: 1.75rem; margin-bottom: 20px; color: var(--text); }
+        .faq-list { display: flex; flex-direction: column; gap: 12px; }
+        .faq-item { background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius); overflow: hidden; cursor: pointer; transition: border-color 0.2s; }
+        .faq-item:hover { border-color: var(--border-2); }
+        .faq-q { padding: 18px 20px; font-weight: 600; font-size: 1rem; color: var(--text); display: flex; justify-content: space-between; align-items: center; gap: 12px; }
+        .faq-toggle { font-size: 1.25rem; color: var(--text-3); transition: transform 0.2s; flex-shrink: 0; }
+        .faq-item.open .faq-toggle { transform: rotate(45deg); }
+        .faq-a { padding: 0 20px 0; max-height: 0; overflow: hidden; transition: max-height 0.3s ease, padding 0.3s ease; color: var(--text-2); line-height: 1.7; font-size: 0.95rem; }
+        .faq-item.open .faq-a { max-height: 300px; padding: 0 20px 18px; }
     </style>
 </head>
 <body>
@@ -1292,6 +1344,29 @@
         <p>Ultimately, the best engineering company for you depends on what you optimize for. If it's raw technical challenge and historical impact, OpenAI and Anthropic are hard to beat. If it's open-source impact with good WLB, LangChain and Vercel stand out. If it's sustainable engineering at scale, Notion and Airbnb set the bar. And if you want maximum velocity at a company that feels like a rocketship, Cursor and CoreWeave are the ones to watch.</p>
 
         <p>Use our <a href="/compare">comparison tool</a> to see how any two companies stack up on engineering culture, and explore the full <a href="/directory">Culture Directory</a> for detailed profiles of all 29 profiled companies.</p>
+        <!-- FAQ Section -->
+        <div class="faq-section">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-list">
+                <div class="faq-item" onclick="this.classList.toggle('open')">
+                    <div class="faq-q">What is the best AI company for engineers in 2026?<span class="faq-toggle">+</span></div>
+                    <div class="faq-a">Based on our analysis, Linear (4.6 Glassdoor, 4.4 WLB) and Anthropic (4.4 Glassdoor, top compensation) lead for engineering culture. Linear offers exceptional autonomy for a small team, while Anthropic combines frontier AI work with strong technical leadership.</div>
+                </div>
+                <div class="faq-item" onclick="this.classList.toggle('open')">
+                    <div class="faq-q">Which AI companies value engineering culture the most?<span class="faq-toggle">+</span></div>
+                    <div class="faq-a">Companies tagged as engineering-driven (eng-driven) in our database include Anthropic, OpenAI, Stripe, Linear, PostHog, Supabase, Vercel, and others. These companies give engineers significant influence over product decisions and technical direction.</div>
+                </div>
+                <div class="faq-item" onclick="this.classList.toggle('open')">
+                    <div class="faq-q">How many engineering jobs are open at AI companies right now?<span class="faq-toggle">+</span></div>
+                    <div class="faq-a">There are currently 1,600+ open engineering roles across the 57 AI and tech companies we track. These span software engineering, machine learning, infrastructure, and platform roles at all seniority levels.</div>
+                </div>
+                <div class="faq-item" onclick="this.classList.toggle('open')">
+                    <div class="faq-q">Do I need a PhD to work at an AI company?<span class="faq-toggle">+</span></div>
+                    <div class="faq-a">Not for most roles. Software engineering, infrastructure, and product roles rarely require a PhD. However, research scientist positions — especially at Anthropic, OpenAI, and DeepMind — often prefer or require doctoral-level research experience.</div>
+                </div>
+            </div>
+        </div>
+
 
         <!-- CTA Box -->
         <div class="cta-box">

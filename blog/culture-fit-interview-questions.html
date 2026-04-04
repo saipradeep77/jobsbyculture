@@ -49,6 +49,46 @@
         "image": "https://jobsbyculture.com/og-image.png"
     }
     </script>
+    <script type="application/ld+json">
+    {
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [
+                    {
+                            "@type": "Question",
+                            "name": "What are good culture fit interview questions to ask?",
+                            "acceptedAnswer": {
+                                    "@type": "Answer",
+                                    "text": "The best culture fit questions are specific to the values you care about. Instead of generic questions, ask targeted ones like \"How do remote employees stay connected to the team?\" or \"What happens when safety concerns delay a product launch?\" These reveal whether a company actually lives its stated values."
+                            }
+                    },
+                    {
+                            "@type": "Question",
+                            "name": "How do I evaluate company culture before joining?",
+                            "acceptedAnswer": {
+                                    "@type": "Answer",
+                                    "text": "Start by checking Glassdoor reviews for patterns in employee feedback. Use tools like JobsByCulture to filter companies by specific culture values. Then ask targeted questions during interviews about the values that matter most to you, and look for consistency between what the company says and what employees report."
+                            }
+                    },
+                    {
+                            "@type": "Question",
+                            "name": "Are culture fit interviews important?",
+                            "acceptedAnswer": {
+                                    "@type": "Answer",
+                                    "text": "Yes, culture mismatch is the number one reason people quit within 18 months of joining a company. Evaluating culture fit during the interview process helps both candidates and employers ensure alignment on values like work-life balance, autonomy, and communication style."
+                            }
+                    },
+                    {
+                            "@type": "Question",
+                            "name": "How many questions should I ask about culture in an interview?",
+                            "acceptedAnswer": {
+                                    "@type": "Answer",
+                                    "text": "Aim for 3–4 culture-focused questions per interview round, targeting your top priorities. This is enough to get meaningful signal without dominating the conversation. Focus on your non-negotiable values first, then use remaining questions to explore secondary preferences."
+                            }
+                    }
+            ]
+    }
+    </script>
 
     <style>
         *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
@@ -700,6 +740,18 @@
         .fade-up-d2 { animation-delay: 0.1s; }
         .fade-up-d3 { animation-delay: 0.15s; }
         .fade-up-d4 { animation-delay: 0.2s; }
+    
+        /* FAQ Accordion */
+        .faq-section { margin: 48px 0 32px; }
+        .faq-section h2 { font-family: var(--font-display); font-size: 1.75rem; margin-bottom: 20px; color: var(--text); }
+        .faq-list { display: flex; flex-direction: column; gap: 12px; }
+        .faq-item { background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius); overflow: hidden; cursor: pointer; transition: border-color 0.2s; }
+        .faq-item:hover { border-color: var(--border-2); }
+        .faq-q { padding: 18px 20px; font-weight: 600; font-size: 1rem; color: var(--text); display: flex; justify-content: space-between; align-items: center; gap: 12px; }
+        .faq-toggle { font-size: 1.25rem; color: var(--text-3); transition: transform 0.2s; flex-shrink: 0; }
+        .faq-item.open .faq-toggle { transform: rotate(45deg); }
+        .faq-a { padding: 0 20px 0; max-height: 0; overflow: hidden; transition: max-height 0.3s ease, padding 0.3s ease; color: var(--text-2); line-height: 1.7; font-size: 0.95rem; }
+        .faq-item.open .faq-a { max-height: 300px; padding: 0 20px 18px; }
     </style>
 </head>
 <body>
@@ -1569,6 +1621,29 @@
             <li><a href="/values/remote"><strong>Value Pages</strong></a> &mdash; Deep dives into individual culture values with lists of companies that embody each one. Start with <a href="/values/remote">Remote</a>, <a href="/values/wlb">Work-Life Balance</a>, or <a href="/values/eng-driven">Engineering-Driven</a>.</li>
             <li><a href="https://www.techinterviewhandbook.org/?ref=jobsbyculture.com" target="_blank" rel="noopener"><strong>Tech Interview Handbook</strong></a> &mdash; The best free resource for coding interview preparation. Covers algorithms, system design, behavioral interviews, and company-specific interview formats. Pair it with our culture data to get the full picture before your interview.</li>
         </ul>
+        <!-- FAQ Section -->
+        <div class="faq-section">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-list">
+                <div class="faq-item" onclick="this.classList.toggle('open')">
+                    <div class="faq-q">What are good culture fit interview questions to ask?<span class="faq-toggle">+</span></div>
+                    <div class="faq-a">The best culture fit questions are specific to the values you care about. Instead of generic questions, ask targeted ones like "How do remote employees stay connected to the team?" or "What happens when safety concerns delay a product launch?" These reveal whether a company actually lives its stated values.</div>
+                </div>
+                <div class="faq-item" onclick="this.classList.toggle('open')">
+                    <div class="faq-q">How do I evaluate company culture before joining?<span class="faq-toggle">+</span></div>
+                    <div class="faq-a">Start by checking Glassdoor reviews for patterns in employee feedback. Use tools like JobsByCulture to filter companies by specific culture values. Then ask targeted questions during interviews about the values that matter most to you, and look for consistency between what the company says and what employees report.</div>
+                </div>
+                <div class="faq-item" onclick="this.classList.toggle('open')">
+                    <div class="faq-q">Are culture fit interviews important?<span class="faq-toggle">+</span></div>
+                    <div class="faq-a">Yes, culture mismatch is the number one reason people quit within 18 months of joining a company. Evaluating culture fit during the interview process helps both candidates and employers ensure alignment on values like work-life balance, autonomy, and communication style.</div>
+                </div>
+                <div class="faq-item" onclick="this.classList.toggle('open')">
+                    <div class="faq-q">How many questions should I ask about culture in an interview?<span class="faq-toggle">+</span></div>
+                    <div class="faq-a">Aim for 3–4 culture-focused questions per interview round, targeting your top priorities. This is enough to get meaningful signal without dominating the conversation. Focus on your non-negotiable values first, then use remaining questions to explore secondary preferences.</div>
+                </div>
+            </div>
+        </div>
+
 
         <!-- CTA Box -->
         <div class="cta-box">

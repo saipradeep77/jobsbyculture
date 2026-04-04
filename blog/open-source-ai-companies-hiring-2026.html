@@ -49,6 +49,46 @@
         "image": "https://jobsbyculture.com/og-image.png"
     }
     </script>
+    <script type="application/ld+json">
+    {
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [
+                    {
+                            "@type": "Question",
+                            "name": "Which AI companies are open source?",
+                            "acceptedAnswer": {
+                                    "@type": "Answer",
+                                    "text": "Hugging Face, PostHog, Supabase, Grafana Labs, LangChain, and n8n are among the most prominent open source AI and developer tools companies. These companies build their core products in the open and actively encourage community contributions."
+                            }
+                    },
+                    {
+                            "@type": "Question",
+                            "name": "How many open source AI jobs are available?",
+                            "acceptedAnswer": {
+                                    "@type": "Answer",
+                                    "text": "There are currently 700+ open positions across companies tagged with open-source culture on JobsByCulture. These roles span engineering, developer relations, community management, and more."
+                            }
+                    },
+                    {
+                            "@type": "Question",
+                            "name": "Do open source companies pay well?",
+                            "acceptedAnswer": {
+                                    "@type": "Answer",
+                                    "text": "Yes, open source companies offer compensation that is competitive with proprietary software companies. Companies like Grafana Labs and Supabase offer strong total packages including equity, and the open source ecosystem attracts top talent willing to work transparently."
+                            }
+                    },
+                    {
+                            "@type": "Question",
+                            "name": "Is open source a good career path for engineers?",
+                            "acceptedAnswer": {
+                                    "@type": "Answer",
+                                    "text": "Open source work is excellent for career growth. It builds public visibility through contributions, develops strong collaboration skills, and creates high job mobility since your work is publicly verifiable. Many senior engineers cite open source experience as a career accelerator."
+                            }
+                    }
+            ]
+    }
+    </script>
 
     <style>
         *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
@@ -653,6 +693,18 @@
         .fade-up-d2 { animation-delay: 0.1s; }
         .fade-up-d3 { animation-delay: 0.15s; }
         .fade-up-d4 { animation-delay: 0.2s; }
+    
+        /* FAQ Accordion */
+        .faq-section { margin: 48px 0 32px; }
+        .faq-section h2 { font-family: var(--font-display); font-size: 1.75rem; margin-bottom: 20px; color: var(--text); }
+        .faq-list { display: flex; flex-direction: column; gap: 12px; }
+        .faq-item { background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius); overflow: hidden; cursor: pointer; transition: border-color 0.2s; }
+        .faq-item:hover { border-color: var(--border-2); }
+        .faq-q { padding: 18px 20px; font-weight: 600; font-size: 1rem; color: var(--text); display: flex; justify-content: space-between; align-items: center; gap: 12px; }
+        .faq-toggle { font-size: 1.25rem; color: var(--text-3); transition: transform 0.2s; flex-shrink: 0; }
+        .faq-item.open .faq-toggle { transform: rotate(45deg); }
+        .faq-a { padding: 0 20px 0; max-height: 0; overflow: hidden; transition: max-height 0.3s ease, padding 0.3s ease; color: var(--text-2); line-height: 1.7; font-size: 0.95rem; }
+        .faq-item.open .faq-a { max-height: 300px; padding: 0 20px 18px; }
     </style>
 </head>
 <body>
@@ -999,6 +1051,29 @@
         </ul>
 
         <p>The 9 companies on this list all score well on these criteria, though the degree varies. <a href="/companies/weaviate">Weaviate</a> and <a href="/companies/huggingface">Hugging Face</a> are probably the most "open source to the core" in terms of both product and culture. <a href="/companies/vercel">Vercel</a> and <a href="/companies/airbnb">Airbnb</a> are companies with massive open source contributions but commercial products that go well beyond the OSS layer. All of them offer engineers the chance to work on code that reaches far beyond a single company's walls.</p>
+        <!-- FAQ Section -->
+        <div class="faq-section">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-list">
+                <div class="faq-item" onclick="this.classList.toggle('open')">
+                    <div class="faq-q">Which AI companies are open source?<span class="faq-toggle">+</span></div>
+                    <div class="faq-a">Hugging Face, PostHog, Supabase, Grafana Labs, LangChain, and n8n are among the most prominent open source AI and developer tools companies. These companies build their core products in the open and actively encourage community contributions.</div>
+                </div>
+                <div class="faq-item" onclick="this.classList.toggle('open')">
+                    <div class="faq-q">How many open source AI jobs are available?<span class="faq-toggle">+</span></div>
+                    <div class="faq-a">There are currently 700+ open positions across companies tagged with open-source culture on JobsByCulture. These roles span engineering, developer relations, community management, and more.</div>
+                </div>
+                <div class="faq-item" onclick="this.classList.toggle('open')">
+                    <div class="faq-q">Do open source companies pay well?<span class="faq-toggle">+</span></div>
+                    <div class="faq-a">Yes, open source companies offer compensation that is competitive with proprietary software companies. Companies like Grafana Labs and Supabase offer strong total packages including equity, and the open source ecosystem attracts top talent willing to work transparently.</div>
+                </div>
+                <div class="faq-item" onclick="this.classList.toggle('open')">
+                    <div class="faq-q">Is open source a good career path for engineers?<span class="faq-toggle">+</span></div>
+                    <div class="faq-a">Open source work is excellent for career growth. It builds public visibility through contributions, develops strong collaboration skills, and creates high job mobility since your work is publicly verifiable. Many senior engineers cite open source experience as a career accelerator.</div>
+                </div>
+            </div>
+        </div>
+
 
         <!-- CTA Box -->
         <div class="cta-box">

@@ -49,6 +49,18 @@
         "image": "https://jobsbyculture.com/og-image.png"
     }
     </script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {"@type": "Question", "name": "Which AI company has the best work-life balance?", "acceptedAnswer": {"@type": "Answer", "text": "PostHog (4.5/5), Tailscale (4.5/5), and Linear (4.4/5) have the highest work-life balance scores on Glassdoor among AI and tech companies. These are all smaller, remote-first companies with strong async cultures."}},
+            {"@type": "Question", "name": "What is the average work-life balance at AI companies?", "acceptedAnswer": {"@type": "Answer", "text": "The average work-life balance score across 57 AI and tech companies is approximately 3.7 out of 5.0 on Glassdoor. This is slightly below the overall Glassdoor average, reflecting the intensity of the AI industry."}},
+            {"@type": "Question", "name": "Which AI company has the worst work-life balance?", "acceptedAnswer": {"@type": "Answer", "text": "Scale AI (2.7/5) and Cohere (2.5/5) have the lowest work-life balance scores among AI companies we track. These scores reflect very high-intensity work environments with long hours."}},
+            {"@type": "Question", "name": "Does higher pay mean worse work-life balance?", "acceptedAnswer": {"@type": "Answer", "text": "Generally yes for frontier AI labs — the highest-paying companies like OpenAI and Anthropic tend to have lower WLB scores. But it's not a universal rule. Companies like Grafana Labs offer strong compensation with excellent WLB (4.3/5)."}}
+        ]
+    }
+    </script>
 
     <style>
         *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
@@ -608,6 +620,20 @@
             .cta-box .btn-primary { margin-right: 0; margin-bottom: 12px; display: flex; justify-content: center; }
         }
 
+        /* ══ FAQ Section ══ */
+        .faq-section { margin: 48px 0; }
+        .faq-section h2 { margin-bottom: 24px; }
+        .faq-list { display: flex; flex-direction: column; gap: 0; }
+        .faq-item { border: 1px solid var(--border); border-bottom: none; padding: 20px 24px; background: var(--bg-card); }
+        .faq-item:first-child { border-radius: var(--radius) var(--radius) 0 0; }
+        .faq-item:last-child { border-bottom: 1px solid var(--border); border-radius: 0 0 var(--radius) var(--radius); }
+        .faq-q { font-size: 16px; font-weight: 600; color: var(--text); cursor: pointer; display: flex; justify-content: space-between; align-items: center; gap: 16px; }
+        .faq-q:hover { color: var(--accent); }
+        .faq-q .faq-toggle { font-size: 20px; color: var(--text-3); transition: transform 0.2s; flex-shrink: 0; }
+        .faq-item.open .faq-toggle { transform: rotate(45deg); }
+        .faq-a { display: none; margin-top: 12px; font-size: 15px; color: var(--text-2); line-height: 1.8; }
+        .faq-item.open .faq-a { display: block; }
+
         /* ══ Footer ══ */
         footer {
             padding: 56px 0 36px;
@@ -1133,6 +1159,29 @@
         </ul>
 
         <p>If work-life balance is a priority in your job search, we've built a dedicated filter for it. <a href="/values/wlb">Browse all jobs from companies with high WLB scores</a>, or use our <a href="/compare">comparison tool</a> to see how any two companies stack up side-by-side. You can also explore our city-specific WLB guides for <a href="/blog/best-ai-companies-work-life-balance-san-francisco-2026">San Francisco</a> and <a href="/blog/best-ai-companies-work-life-balance-new-york-2026">New York</a>.</p>
+
+        <!-- FAQ Section -->
+        <div class="faq-section">
+            <h2>Frequently Asked Questions About Work-Life Balance at AI Companies</h2>
+            <div class="faq-list">
+                <div class="faq-item" onclick="this.classList.toggle('open')">
+                    <div class="faq-q">Which AI company has the best work-life balance?<span class="faq-toggle">+</span></div>
+                    <div class="faq-a">PostHog (4.5/5), Tailscale (4.5/5), and Linear (4.4/5) have the highest work-life balance scores on Glassdoor among AI and tech companies. These are all smaller, remote-first companies with strong async cultures. See our <a href="/companies/posthog">PostHog</a>, <a href="/companies/tailscale">Tailscale</a>, and <a href="/companies/linear">Linear</a> culture profiles for details.</div>
+                </div>
+                <div class="faq-item" onclick="this.classList.toggle('open')">
+                    <div class="faq-q">What is the average work-life balance at AI companies?<span class="faq-toggle">+</span></div>
+                    <div class="faq-a">The average work-life balance score across 57 AI and tech companies is approximately 3.7 out of 5.0 on Glassdoor. This is slightly below the overall Glassdoor average, reflecting the intensity of the AI industry. Use our <a href="/compare">comparison tool</a> to see how specific companies stack up.</div>
+                </div>
+                <div class="faq-item" onclick="this.classList.toggle('open')">
+                    <div class="faq-q">Which AI company has the worst work-life balance?<span class="faq-toggle">+</span></div>
+                    <div class="faq-a">Scale AI (2.7/5) and Cohere (2.5/5) have the lowest work-life balance scores among AI companies we track. These scores reflect very high-intensity work environments with long hours and significant demands on employees.</div>
+                </div>
+                <div class="faq-item" onclick="this.classList.toggle('open')">
+                    <div class="faq-q">Does higher pay mean worse work-life balance?<span class="faq-toggle">+</span></div>
+                    <div class="faq-a">Generally yes for frontier AI labs &mdash; the highest-paying companies like OpenAI and Anthropic tend to have lower WLB scores. But it's not a universal rule. Companies like <a href="/companies/grafanalabs">Grafana Labs</a> offer strong compensation with excellent WLB (4.3/5). See our <a href="/blog/highest-paying-ai-companies-2026">highest-paying AI companies</a> for the full picture.</div>
+                </div>
+            </div>
+        </div>
 
         <!-- CTA Box -->
         <div class="cta-box">

@@ -49,6 +49,46 @@
         "image": "https://jobsbyculture.com/og-image.png"
     }
     </script>
+    <script type="application/ld+json">
+    {
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [
+                    {
+                            "@type": "Question",
+                            "name": "What are the best AI startups to join in 2026?",
+                            "acceptedAnswer": {
+                                    "@type": "Answer",
+                                    "text": "By Glassdoor rating, Vast AI leads at 5.0, followed by Supabase at 4.8 and LangChain at 4.6. These startups offer small-team impact, strong equity upside, and cultures built around engineering ownership and fast iteration."
+                            }
+                    },
+                    {
+                            "@type": "Question",
+                            "name": "Is it better to join an AI startup or big tech?",
+                            "acceptedAnswer": {
+                                    "@type": "Answer",
+                                    "text": "Startups offer more ownership, broader responsibilities, and equity upside if the company succeeds. Big tech provides stability, higher base compensation certainty, and established infrastructure. The best choice depends on your risk tolerance and career goals."
+                            }
+                    },
+                    {
+                            "@type": "Question",
+                            "name": "Which AI startups are hiring the most in 2026?",
+                            "acceptedAnswer": {
+                                    "@type": "Answer",
+                                    "text": "Mistral, LangChain, Suno, and Modal are among the most active hirers in 2026. These companies are scaling rapidly and have dozens of open roles across engineering, research, and go-to-market functions."
+                            }
+                    },
+                    {
+                            "@type": "Question",
+                            "name": "What is the average Glassdoor rating for AI startups?",
+                            "acceptedAnswer": {
+                                    "@type": "Answer",
+                                    "text": "AI startups under 500 employees average approximately 4.2 on Glassdoor, which is notably higher than the tech industry average. Smaller teams tend to score well on culture and autonomy, though they may score lower on work-life balance during growth phases."
+                            }
+                    }
+            ]
+    }
+    </script>
 
     <style>
         *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
@@ -651,6 +691,18 @@
         .fade-up-d2 { animation-delay: 0.1s; }
         .fade-up-d3 { animation-delay: 0.15s; }
         .fade-up-d4 { animation-delay: 0.2s; }
+    
+        /* FAQ Accordion */
+        .faq-section { margin: 48px 0 32px; }
+        .faq-section h2 { font-family: var(--font-display); font-size: 1.75rem; margin-bottom: 20px; color: var(--text); }
+        .faq-list { display: flex; flex-direction: column; gap: 12px; }
+        .faq-item { background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius); overflow: hidden; cursor: pointer; transition: border-color 0.2s; }
+        .faq-item:hover { border-color: var(--border-2); }
+        .faq-q { padding: 18px 20px; font-weight: 600; font-size: 1rem; color: var(--text); display: flex; justify-content: space-between; align-items: center; gap: 12px; }
+        .faq-toggle { font-size: 1.25rem; color: var(--text-3); transition: transform 0.2s; flex-shrink: 0; }
+        .faq-item.open .faq-toggle { transform: rotate(45deg); }
+        .faq-a { padding: 0 20px 0; max-height: 0; overflow: hidden; transition: max-height 0.3s ease, padding 0.3s ease; color: var(--text-2); line-height: 1.7; font-size: 0.95rem; }
+        .faq-item.open .faq-a { max-height: 300px; padding: 0 20px 18px; }
     </style>
 </head>
 <body>
@@ -953,6 +1005,29 @@
         <p>The Glassdoor reviews tell a consistent story: rapid leadership changes, shifting strategic priorities, and a gap between the company's public narrative about AI safety and enterprise adoption and the day-to-day experience of employees navigating organizational turbulence. Multiple reviewers cite a lack of clear direction and frequent restructuring as primary frustrations.</p>
 
         <p>Yet Cohere still has 123 open jobs &mdash; the fourth-most on this list. The technology is strong. The enterprise AI market is enormous. And the company has raised significant funding to execute on its vision. For candidates who are comfortable with organizational uncertainty and want exposure to enterprise AI at scale, there may be genuine opportunity here. But go in with eyes open: the reviews suggest the employee experience needs work, and the 2.9 rating is the kind of score that should prompt pointed questions during your interview process.</p>
+        <!-- FAQ Section -->
+        <div class="faq-section">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-list">
+                <div class="faq-item" onclick="this.classList.toggle('open')">
+                    <div class="faq-q">What are the best AI startups to join in 2026?<span class="faq-toggle">+</span></div>
+                    <div class="faq-a">By Glassdoor rating, Vast AI leads at 5.0, followed by Supabase at 4.8 and LangChain at 4.6. These startups offer small-team impact, strong equity upside, and cultures built around engineering ownership and fast iteration.</div>
+                </div>
+                <div class="faq-item" onclick="this.classList.toggle('open')">
+                    <div class="faq-q">Is it better to join an AI startup or big tech?<span class="faq-toggle">+</span></div>
+                    <div class="faq-a">Startups offer more ownership, broader responsibilities, and equity upside if the company succeeds. Big tech provides stability, higher base compensation certainty, and established infrastructure. The best choice depends on your risk tolerance and career goals.</div>
+                </div>
+                <div class="faq-item" onclick="this.classList.toggle('open')">
+                    <div class="faq-q">Which AI startups are hiring the most in 2026?<span class="faq-toggle">+</span></div>
+                    <div class="faq-a">Mistral, LangChain, Suno, and Modal are among the most active hirers in 2026. These companies are scaling rapidly and have dozens of open roles across engineering, research, and go-to-market functions.</div>
+                </div>
+                <div class="faq-item" onclick="this.classList.toggle('open')">
+                    <div class="faq-q">What is the average Glassdoor rating for AI startups?<span class="faq-toggle">+</span></div>
+                    <div class="faq-a">AI startups under 500 employees average approximately 4.2 on Glassdoor, which is notably higher than the tech industry average. Smaller teams tend to score well on culture and autonomy, though they may score lower on work-life balance during growth phases.</div>
+                </div>
+            </div>
+        </div>
+
 
         <!-- CTA Box -->
         <div class="cta-box">

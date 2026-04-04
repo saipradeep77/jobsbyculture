@@ -46,6 +46,47 @@
     }
     </script>
 
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "Which AI companies are fully remote?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Grafana Labs, PostHog, Supabase, Weaviate, and Linear are among the AI and tech companies that operate as fully remote or remote-first organizations. These aren't just \"remote-OK\" — remote work is central to how they operate."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "How many remote AI jobs are available in 2026?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "There are currently 1,300+ remote-friendly positions across 35+ companies we track. These span engineering, product, design, and operations roles at companies with genuine remote cultures."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Is remote work declining in the tech industry?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "At large companies like Amazon and Meta, yes — return-to-office mandates are increasing. But many smaller and mid-size AI companies are doubling down on remote work as a competitive advantage for hiring top talent globally."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Which remote AI company has the best culture?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "PostHog stands out with a 4.3 Glassdoor rating, 4.5 work-life balance score, and a fully async work culture. They're transparent about compensation, open source their product, and have built a strong remote-first team across 30+ countries."
+                }
+            }
+        ]
+    }
+    </script>
+
     <style>
         *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 
@@ -540,6 +581,18 @@
                 grid-template-columns: 1fr;
             }
         }
+
+        /* FAQ Accordion */
+        .faq-section { margin: 48px 0 32px; }
+        .faq-section h2 { font-family: var(--font-display); font-size: 1.75rem; margin-bottom: 20px; color: var(--text); }
+        .faq-list { display: flex; flex-direction: column; gap: 12px; }
+        .faq-item { background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius); overflow: hidden; cursor: pointer; transition: border-color 0.2s; }
+        .faq-item:hover { border-color: var(--border-2); }
+        .faq-q { padding: 18px 20px; font-weight: 600; font-size: 1rem; color: var(--text); display: flex; justify-content: space-between; align-items: center; gap: 12px; }
+        .faq-toggle { font-size: 1.25rem; color: var(--text-3); transition: transform 0.2s; flex-shrink: 0; }
+        .faq-item.open .faq-toggle { transform: rotate(45deg); }
+        .faq-a { padding: 0 20px 0; max-height: 0; overflow: hidden; transition: max-height 0.3s ease, padding 0.3s ease; color: var(--text-2); line-height: 1.7; font-size: 0.95rem; }
+        .faq-item.open .faq-a { max-height: 300px; padding: 0 20px 18px; }
 
         /* ── CTA Box ── */
         .cta-box {
@@ -1038,6 +1091,30 @@
 
         <p>Want to run your own comparisons? Use the <a href="/compare">culture comparison tool</a> to stack any two companies side by side. Or browse all <a href="/jobs">open jobs</a> and filter by culture value.</p>
 
+        <!-- FAQ Section -->
+        <div class="faq-section">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-list">
+                <div class="faq-item" onclick="this.classList.toggle('open')">
+                    <div class="faq-q">Which AI companies are fully remote?<span class="faq-toggle">+</span></div>
+                    <div class="faq-a">Grafana Labs, PostHog, Supabase, Weaviate, and Linear are among the AI and tech companies that operate as fully remote or remote-first organizations. These aren't just "remote-OK" — remote work is central to how they operate.</div>
+                </div>
+                <div class="faq-item" onclick="this.classList.toggle('open')">
+                    <div class="faq-q">How many remote AI jobs are available in 2026?<span class="faq-toggle">+</span></div>
+                    <div class="faq-a">There are currently 1,300+ remote-friendly positions across 35+ companies we track. These span engineering, product, design, and operations roles at companies with genuine remote cultures.</div>
+                </div>
+                <div class="faq-item" onclick="this.classList.toggle('open')">
+                    <div class="faq-q">Is remote work declining in the tech industry?<span class="faq-toggle">+</span></div>
+                    <div class="faq-a">At large companies like Amazon and Meta, yes — return-to-office mandates are increasing. But many smaller and mid-size AI companies are doubling down on remote work as a competitive advantage for hiring top talent globally.</div>
+                </div>
+                <div class="faq-item" onclick="this.classList.toggle('open')">
+                    <div class="faq-q">Which remote AI company has the best culture?<span class="faq-toggle">+</span></div>
+                    <div class="faq-a">PostHog stands out with a 4.3 Glassdoor rating, 4.5 work-life balance score, and a fully async work culture. They're transparent about compensation, open source their product, and have built a strong remote-first team across 30+ countries.</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- CTA Box -->
         <div class="cta-box">
             <div class="cta-title">Ready to go remote?</div>
             <p class="cta-subtitle">Browse open roles at companies where remote is a real part of the culture.</p>

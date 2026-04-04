@@ -47,6 +47,46 @@
         "image": "https://jobsbyculture.com/og-image.png"
     }
     </script>
+    <script type="application/ld+json">
+    {
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [
+                    {
+                            "@type": "Question",
+                            "name": "Is Anthropic or OpenAI better to work at?",
+                            "acceptedAnswer": {
+                                    "@type": "Answer",
+                                    "text": "Different, not better. Anthropic emphasizes safety-first research and high autonomy, while OpenAI prioritizes speed and scale. The best fit depends on whether you value methodical AI safety work or fast-paced product shipping."
+                            }
+                    },
+                    {
+                            "@type": "Question",
+                            "name": "Which pays more, Anthropic or OpenAI?",
+                            "acceptedAnswer": {
+                                    "@type": "Answer",
+                                    "text": "OpenAI edges slightly higher with total compensation packages ranging from $350K–$550K for senior engineers, compared to Anthropic's $300K–$490K. Both offer competitive equity, but OpenAI's recent valuation gives its stock a higher paper value."
+                            }
+                    },
+                    {
+                            "@type": "Question",
+                            "name": "Which has better work-life balance, Anthropic or OpenAI?",
+                            "acceptedAnswer": {
+                                    "@type": "Answer",
+                                    "text": "They're nearly identical. Anthropic scores 3.7 on Glassdoor's work-life balance rating, while OpenAI comes in at 3.6. Both companies demand a lot from employees, but Anthropic's culture leans slightly more toward sustainable pace."
+                            }
+                    },
+                    {
+                            "@type": "Question",
+                            "name": "Are both Anthropic and OpenAI going public?",
+                            "acceptedAnswer": {
+                                    "@type": "Answer",
+                                    "text": "Both companies are reportedly preparing for IPO in the 2026–2027 timeframe. OpenAI has announced plans to restructure as a public benefit corporation, while Anthropic has been in discussions about a public offering following its rapid revenue growth."
+                            }
+                    }
+            ]
+    }
+    </script>
 
     <style>
         *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
@@ -763,6 +803,18 @@
         .fade-up-d2 { animation-delay: 0.1s; }
         .fade-up-d3 { animation-delay: 0.15s; }
         .fade-up-d4 { animation-delay: 0.2s; }
+    
+        /* FAQ Accordion */
+        .faq-section { margin: 48px 0 32px; }
+        .faq-section h2 { font-family: var(--font-display); font-size: 1.75rem; margin-bottom: 20px; color: var(--text); }
+        .faq-list { display: flex; flex-direction: column; gap: 12px; }
+        .faq-item { background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius); overflow: hidden; cursor: pointer; transition: border-color 0.2s; }
+        .faq-item:hover { border-color: var(--border-2); }
+        .faq-q { padding: 18px 20px; font-weight: 600; font-size: 1rem; color: var(--text); display: flex; justify-content: space-between; align-items: center; gap: 12px; }
+        .faq-toggle { font-size: 1.25rem; color: var(--text-3); transition: transform 0.2s; flex-shrink: 0; }
+        .faq-item.open .faq-toggle { transform: rotate(45deg); }
+        .faq-a { padding: 0 20px 0; max-height: 0; overflow: hidden; transition: max-height 0.3s ease, padding 0.3s ease; color: var(--text-2); line-height: 1.7; font-size: 0.95rem; }
+        .faq-item.open .faq-a { max-height: 300px; padding: 0 20px 18px; }
     </style>
 </head>
 <body>
@@ -1023,6 +1075,29 @@
         <p>Both companies will stretch you. Both will surround you with brilliant people. And both will put you at the very center of the AI revolution. The question isn't which is "better" &mdash; it's which version of intensity, mission, and culture fits who you are.</p>
 
         <p>For a side-by-side interactive comparison with live job counts and detailed breakdowns, visit the full <a href="/compare/anthropic-vs-openai">Anthropic vs OpenAI comparison page</a>. If you're interviewing at DeepMind instead, our <a href="/blog/questions-to-ask-deepmind-interview">questions to ask in a DeepMind interview</a> can help you assess their culture. Or browse all companies in the <a href="/directory">Culture Directory</a> to find the right fit across the full landscape of AI employers.</p>
+        <!-- FAQ Section -->
+        <div class="faq-section">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-list">
+                <div class="faq-item" onclick="this.classList.toggle('open')">
+                    <div class="faq-q">Is Anthropic or OpenAI better to work at?<span class="faq-toggle">+</span></div>
+                    <div class="faq-a">Different, not better. Anthropic emphasizes safety-first research and high autonomy, while OpenAI prioritizes speed and scale. The best fit depends on whether you value methodical AI safety work or fast-paced product shipping.</div>
+                </div>
+                <div class="faq-item" onclick="this.classList.toggle('open')">
+                    <div class="faq-q">Which pays more, Anthropic or OpenAI?<span class="faq-toggle">+</span></div>
+                    <div class="faq-a">OpenAI edges slightly higher with total compensation packages ranging from $350K–$550K for senior engineers, compared to Anthropic's $300K–$490K. Both offer competitive equity, but OpenAI's recent valuation gives its stock a higher paper value.</div>
+                </div>
+                <div class="faq-item" onclick="this.classList.toggle('open')">
+                    <div class="faq-q">Which has better work-life balance, Anthropic or OpenAI?<span class="faq-toggle">+</span></div>
+                    <div class="faq-a">They're nearly identical. Anthropic scores 3.7 on Glassdoor's work-life balance rating, while OpenAI comes in at 3.6. Both companies demand a lot from employees, but Anthropic's culture leans slightly more toward sustainable pace.</div>
+                </div>
+                <div class="faq-item" onclick="this.classList.toggle('open')">
+                    <div class="faq-q">Are both Anthropic and OpenAI going public?<span class="faq-toggle">+</span></div>
+                    <div class="faq-a">Both companies are reportedly preparing for IPO in the 2026–2027 timeframe. OpenAI has announced plans to restructure as a public benefit corporation, while Anthropic has been in discussions about a public offering following its rapid revenue growth.</div>
+                </div>
+            </div>
+        </div>
+
 
         <!-- CTA Box -->
         <div class="cta-box">

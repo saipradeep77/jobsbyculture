@@ -49,6 +49,18 @@
         "image": "https://jobsbyculture.com/og-image.png"
     }
     </script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {"@type": "Question", "name": "What is Mistral AI's Glassdoor rating?", "acceptedAnswer": {"@type": "Answer", "text": "Mistral AI has a 4.0 out of 5.0 Glassdoor rating with a work-life balance score of 3.6/5. The WLB score reflects the high intensity of competing at the frontier of AI research as a European startup."}},
+            {"@type": "Question", "name": "Where is Mistral AI based?", "acceptedAnswer": {"@type": "Answer", "text": "Mistral AI is based in Paris, France. It is Europe's leading AI startup and the only European company genuinely competing at the frontier of large language models, with over $3 billion in funding."}},
+            {"@type": "Question", "name": "How many employees does Mistral have?", "acceptedAnswer": {"@type": "Answer", "text": "Mistral AI has approximately 100 employees as of 2026 and is rapidly growing. Despite its small size, the company has achieved remarkable technical output with models like Mixtral and Mistral Large."}},
+            {"@type": "Question", "name": "Is Mistral AI open source?", "acceptedAnswer": {"@type": "Answer", "text": "Yes, Mistral AI is known for its open-weight models. The company has released several models under permissive licenses, making them available for the broader AI community to use and build upon."}}
+        ]
+    }
+    </script>
 
     <!-- Plausible Analytics -->
     <script async src="https://plausible.io/js/pa-qa3pjs5eZbsfBQJMk4hVW.js"></script>
@@ -654,6 +666,20 @@
             .verdict-box { padding: 24px 20px; }
         }
 
+        /* ══ FAQ Section ══ */
+        .faq-section { margin: 48px 0; }
+        .faq-section h2 { margin-bottom: 24px; }
+        .faq-list { display: flex; flex-direction: column; gap: 0; }
+        .faq-item { border: 1px solid var(--border); border-bottom: none; padding: 20px 24px; background: var(--bg-card); }
+        .faq-item:first-child { border-radius: var(--radius) var(--radius) 0 0; }
+        .faq-item:last-child { border-bottom: 1px solid var(--border); border-radius: 0 0 var(--radius) var(--radius); }
+        .faq-q { font-size: 16px; font-weight: 600; color: var(--text); cursor: pointer; display: flex; justify-content: space-between; align-items: center; gap: 16px; }
+        .faq-q:hover { color: var(--accent); }
+        .faq-q .faq-toggle { font-size: 20px; color: var(--text-3); transition: transform 0.2s; flex-shrink: 0; }
+        .faq-item.open .faq-toggle { transform: rotate(45deg); }
+        .faq-a { display: none; margin-top: 12px; font-size: 15px; color: var(--text-2); line-height: 1.8; }
+        .faq-item.open .faq-a { display: block; }
+
         /* ══ Footer ══ */
         footer {
             padding: 56px 0 36px;
@@ -1105,6 +1131,29 @@
         <p>The trade-offs are equally real. The 3.6 WLB score reflects genuine intensity. The Paris-centric office requirement limits flexibility. The company is less than three years old, which means processes, career ladders, and organizational maturity are works in progress. And the competitive pressure of being outfunded 5-to-1 by American rivals creates a pace that's thrilling for some and exhausting for others.</p>
 
         <p>If you're a researcher or engineer who wants to work at the cutting edge of AI, who's excited about the European mission, and who thrives in high-intensity environments with brilliant colleagues &mdash; Mistral is one of the most compelling opportunities in the world right now. The 145 open roles suggest the window is wide open.</p>
+
+        <!-- FAQ Section -->
+        <div class="faq-section">
+            <h2>Frequently Asked Questions About Working at Mistral AI</h2>
+            <div class="faq-list">
+                <div class="faq-item" onclick="this.classList.toggle('open')">
+                    <div class="faq-q">What is Mistral AI's Glassdoor rating?<span class="faq-toggle">+</span></div>
+                    <div class="faq-a">Mistral AI has a 4.0 out of 5.0 Glassdoor rating with a work-life balance score of 3.6/5. The WLB score reflects the high intensity of competing at the frontier of AI research as a European startup. See our full <a href="/companies/mistral">Mistral AI culture profile</a> for the breakdown.</div>
+                </div>
+                <div class="faq-item" onclick="this.classList.toggle('open')">
+                    <div class="faq-q">Where is Mistral AI based?<span class="faq-toggle">+</span></div>
+                    <div class="faq-a">Mistral AI is based in Paris, France. It is Europe's leading AI startup and the only European company genuinely competing at the frontier of large language models, with over $3 billion in funding. For more on AI jobs in Paris, see our <a href="/blog/ai-jobs-paris-2026">AI jobs in Paris guide</a>.</div>
+                </div>
+                <div class="faq-item" onclick="this.classList.toggle('open')">
+                    <div class="faq-q">How many employees does Mistral have?<span class="faq-toggle">+</span></div>
+                    <div class="faq-a">Mistral AI has approximately 100 employees as of 2026 and is rapidly growing. Despite its small size, the company has achieved remarkable technical output with models like Mixtral and Mistral Large. See our <a href="/blog/ai-company-employee-count-2026">AI company employee count rankings</a>.</div>
+                </div>
+                <div class="faq-item" onclick="this.classList.toggle('open')">
+                    <div class="faq-q">Is Mistral AI open source?<span class="faq-toggle">+</span></div>
+                    <div class="faq-a">Yes, Mistral AI is known for its open-weight models. The company has released several models under permissive licenses, making them available for the broader AI community to use and build upon. See our <a href="/blog/open-source-ai-companies-hiring-2026">open-source AI companies guide</a> for more.</div>
+                </div>
+            </div>
+        </div>
 
         <!-- CTA Box -->
         <div class="cta-box">
