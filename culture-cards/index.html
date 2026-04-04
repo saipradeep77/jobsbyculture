@@ -382,8 +382,12 @@
         .preview-card::after {
             content: '';
             position: absolute; top: 0; left: 0; right: 0; bottom: 0;
-            background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23e8590c' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
-            pointer-events: none; z-index: 0; opacity: 0.6;
+            background:
+                radial-gradient(circle at 15% 20%, rgba(232,89,12,0.06) 0%, transparent 40%),
+                radial-gradient(circle at 85% 75%, rgba(13,148,136,0.06) 0%, transparent 40%),
+                radial-gradient(circle at 50% 50%, rgba(124,58,237,0.03) 0%, transparent 50%),
+                url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M20 20.5V18H0v-2h20v-2l2 3.25L20 20.5zM0 20h2v20H0V20zm4 0h2v20H4V20zm18-4V0h2v16h-2zM4 0h2v16H4V0z' fill='%23e8590c' fill-opacity='0.015'/%3E%3C/svg%3E");
+            pointer-events: none; z-index: 0;
         }
         .preview-card-header {
             padding: 36px 36px 24px;
@@ -693,7 +697,7 @@
                 </div>
                 <div class="preview-messages">
                     <div class="preview-msg">
-                        <img class="msg-gif" src="https://media.giphy.com/media/l4FGni1RBAR2OWsGk/giphy.gif" alt="We'll miss you GIF" loading="lazy">
+                        <img class="msg-gif" src="https://media.giphy.com/media/csIYp1khlYpwo4DJhq/giphy.gif" alt="Bye bye farewell" loading="lazy">
                         <p>"Sarah, your energy and kindness made every standup better. The team won't be the same. Wishing you all the best!"</p>
                         <span class="author">— Marcus T.</span>
                     </div>
@@ -706,7 +710,7 @@
                         <span class="author">— Elena R.</span>
                     </div>
                     <div class="preview-msg">
-                        <img class="msg-gif" src="https://media.giphy.com/media/xUPGGDNsLvqsBOhuU0/giphy.gif" alt="You got this" loading="lazy">
+                        <img class="msg-gif" src="https://media.giphy.com/media/zbSBx9HCdWolg2K7Vq/giphy.gif" alt="Goodbye my friend" loading="lazy">
                         <p>"From day one you made me feel welcome. I'll miss our coffee runs. Go crush it!"</p>
                         <span class="author">— James K.</span>
                     </div>
@@ -720,7 +724,7 @@
                         <span class="author">— Priya M.</span>
                     </div>
                     <div class="preview-msg">
-                        <img class="msg-gif" src="https://media.giphy.com/media/3o7abB06u9bNzA8lu8/giphy.gif" alt="Confetti" loading="lazy">
+                        <img class="msg-gif" src="https://media.giphy.com/media/vzTVFTWOuxrCH1ewh6/giphy.gif" alt="Happy bye bye" loading="lazy">
                         <p>"You taught me that code reviews are love letters to your future self. I'll carry that forever."</p>
                         <span class="author">— Aisha N.</span>
                     </div>
@@ -734,7 +738,7 @@
                         <span class="author">— The Design Team</span>
                     </div>
                     <div class="preview-msg">
-                        <img class="msg-gif" src="https://media.giphy.com/media/l0MYt5jPR6QX5pnqM/giphy.gif" alt="Goodbye" loading="lazy">
+                        <img class="msg-gif" src="https://media.giphy.com/media/OcZp0maz6ALok/giphy.gif" alt="We'll miss you" loading="lazy">
                         <p>"Thank you for everything, Sarah. You made this team what it is."</p>
                         <span class="author">— David L. (Engineering Lead)</span>
                     </div>
