@@ -6,7 +6,7 @@
     "positive": 0,
     "negative": 0,
     "mixed": 5,
-    "lastUpdated": "2026-04-03",
+    "lastUpdated": "2026-04-04",
     "hackernews": [
       {
         "source": "hackernews",
@@ -58,7 +58,7 @@
     "positive": 1,
     "negative": 0,
     "mixed": 4,
-    "lastUpdated": "2026-04-03",
+    "lastUpdated": "2026-04-04",
     "hackernews": [
       {
         "source": "hackernews",
@@ -110,7 +110,7 @@
     "positive": 1,
     "negative": 1,
     "mixed": 0,
-    "lastUpdated": "2026-04-03",
+    "lastUpdated": "2026-04-04",
     "hackernews": [
       {
         "source": "hackernews",
@@ -138,7 +138,7 @@
     "positive": 2,
     "negative": 0,
     "mixed": 2,
-    "lastUpdated": "2026-04-03",
+    "lastUpdated": "2026-04-04",
     "hackernews": [
       {
         "source": "hackernews",
@@ -182,7 +182,7 @@
     "positive": 4,
     "negative": 0,
     "mixed": 1,
-    "lastUpdated": "2026-04-03",
+    "lastUpdated": "2026-04-04",
     "hackernews": [
       {
         "source": "hackernews",
@@ -234,7 +234,7 @@
     "positive": 3,
     "negative": 0,
     "mixed": 2,
-    "lastUpdated": "2026-04-03",
+    "lastUpdated": "2026-04-04",
     "hackernews": [
       {
         "source": "hackernews",
@@ -262,18 +262,18 @@
       },
       {
         "source": "hackernews",
-        "quote": "Built this Chrome extension that generates professional emails using AI while keeping all data processing local to your browser. Unlike other AI email tools, EffiMail integrates directly with existing workflows (Salesforce, HubSpot, Gmail, Outlook) without sending sensitive data...",
-        "author": "popwatch",
-        "date": "2025-07-07",
-        "url": "https://news.ycombinator.com/item?id=44487905",
+        "quote": "GTM Engineer | TestGorillaTYPE: Full-timeLOCATION: Remote - Spain, UK via EOR, the rest between UTC +2 to UTC +5:30 in our hiring countries via contract (https:&#x2F;&#x2F;testgorilla-1680540968.teamtailor.com&#x2F;pages&#x2F;hiring-a...",
+        "author": "testgorillatg",
+        "date": "2026-04-03",
+        "url": "https://news.ycombinator.com/item?id=47625506",
         "sentiment": "neutral"
       },
       {
         "source": "hackernews",
-        "quote": "I didn’t say they were running it locally. A single tab of ChatGPT eventually eats a few gb of ram if you leave it open and are using it constantly, which is how I see most “casual” people using it in my vicinity. I’ve seen it push 2-3 gigs regularly.",
-        "author": "Forgeties79",
-        "date": "2026-03-08",
-        "url": "https://news.ycombinator.com/item?id=47299114",
+        "quote": "Built this Chrome extension that generates professional emails using AI while keeping all data processing local to your browser. Unlike other AI email tools, EffiMail integrates directly with existing workflows (Salesforce, HubSpot, Gmail, Outlook) without sending sensitive data...",
+        "author": "popwatch",
+        "date": "2025-07-07",
+        "url": "https://news.ycombinator.com/item?id=44487905",
         "sentiment": "neutral"
       }
     ],
@@ -286,7 +286,7 @@
     "positive": 4,
     "negative": 0,
     "mixed": 1,
-    "lastUpdated": "2026-04-03",
+    "lastUpdated": "2026-04-04",
     "hackernews": [
       {
         "source": "hackernews",
@@ -338,7 +338,7 @@
     "positive": 0,
     "negative": 0,
     "mixed": 5,
-    "lastUpdated": "2026-04-03",
+    "lastUpdated": "2026-04-04",
     "hackernews": [
       {
         "source": "hackernews",
@@ -390,7 +390,7 @@
     "positive": 1,
     "negative": 0,
     "mixed": 0,
-    "lastUpdated": "2026-04-03",
+    "lastUpdated": "2026-04-04",
     "hackernews": [
       {
         "source": "hackernews",
@@ -410,7 +410,7 @@
     "positive": 0,
     "negative": 0,
     "mixed": 1,
-    "lastUpdated": "2026-04-03",
+    "lastUpdated": "2026-04-04",
     "hackernews": [
       {
         "source": "hackernews",
@@ -430,7 +430,7 @@
     "positive": 2,
     "negative": 0,
     "mixed": 3,
-    "lastUpdated": "2026-04-03",
+    "lastUpdated": "2026-04-04",
     "hackernews": [
       {
         "source": "hackernews",
@@ -482,7 +482,7 @@
     "positive": 0,
     "negative": 0,
     "mixed": 0,
-    "lastUpdated": "2026-04-03",
+    "lastUpdated": "2026-04-04",
     "hackernews": [],
     "reddit": []
   },
@@ -493,7 +493,7 @@
     "positive": 2,
     "negative": 1,
     "mixed": 2,
-    "lastUpdated": "2026-04-03",
+    "lastUpdated": "2026-04-04",
     "hackernews": [
       {
         "source": "hackernews",
@@ -545,7 +545,7 @@
     "positive": 1,
     "negative": 0,
     "mixed": 4,
-    "lastUpdated": "2026-04-03",
+    "lastUpdated": "2026-04-04",
     "hackernews": [
       {
         "source": "hackernews",
@@ -597,7 +597,7 @@
     "positive": 1,
     "negative": 2,
     "mixed": 2,
-    "lastUpdated": "2026-04-03",
+    "lastUpdated": "2026-04-04",
     "hackernews": [
       {
         "source": "hackernews",
@@ -649,7 +649,7 @@
     "positive": 4,
     "negative": 0,
     "mixed": 1,
-    "lastUpdated": "2026-04-03",
+    "lastUpdated": "2026-04-04",
     "hackernews": [
       {
         "source": "hackernews",
@@ -701,7 +701,7 @@
     "positive": 2,
     "negative": 0,
     "mixed": 3,
-    "lastUpdated": "2026-04-03",
+    "lastUpdated": "2026-04-04",
     "hackernews": [
       {
         "source": "hackernews",
@@ -753,7 +753,7 @@
     "positive": 1,
     "negative": 1,
     "mixed": 3,
-    "lastUpdated": "2026-04-03",
+    "lastUpdated": "2026-04-04",
     "hackernews": [
       {
         "source": "hackernews",
@@ -805,7 +805,7 @@
     "positive": 0,
     "negative": 1,
     "mixed": 4,
-    "lastUpdated": "2026-04-03",
+    "lastUpdated": "2026-04-04",
     "hackernews": [
       {
         "source": "hackernews",
@@ -857,7 +857,7 @@
     "positive": 3,
     "negative": 0,
     "mixed": 2,
-    "lastUpdated": "2026-04-03",
+    "lastUpdated": "2026-04-04",
     "hackernews": [
       {
         "source": "hackernews",
@@ -909,7 +909,7 @@
     "positive": 0,
     "negative": 1,
     "mixed": 4,
-    "lastUpdated": "2026-04-03",
+    "lastUpdated": "2026-04-04",
     "hackernews": [
       {
         "source": "hackernews",
@@ -961,7 +961,7 @@
     "positive": 3,
     "negative": 0,
     "mixed": 2,
-    "lastUpdated": "2026-04-03",
+    "lastUpdated": "2026-04-04",
     "hackernews": [
       {
         "source": "hackernews",
@@ -1013,7 +1013,7 @@
     "positive": 3,
     "negative": 0,
     "mixed": 2,
-    "lastUpdated": "2026-04-03",
+    "lastUpdated": "2026-04-04",
     "hackernews": [
       {
         "source": "hackernews",
@@ -1065,7 +1065,7 @@
     "positive": 3,
     "negative": 1,
     "mixed": 1,
-    "lastUpdated": "2026-04-03",
+    "lastUpdated": "2026-04-04",
     "hackernews": [
       {
         "source": "hackernews",
@@ -1117,7 +1117,7 @@
     "positive": 3,
     "negative": 1,
     "mixed": 1,
-    "lastUpdated": "2026-04-03",
+    "lastUpdated": "2026-04-04",
     "hackernews": [
       {
         "source": "hackernews",
@@ -1169,7 +1169,7 @@
     "positive": 2,
     "negative": 0,
     "mixed": 3,
-    "lastUpdated": "2026-04-03",
+    "lastUpdated": "2026-04-04",
     "hackernews": [
       {
         "source": "hackernews",
@@ -1221,7 +1221,7 @@
     "positive": 1,
     "negative": 2,
     "mixed": 2,
-    "lastUpdated": "2026-04-03",
+    "lastUpdated": "2026-04-04",
     "hackernews": [
       {
         "source": "hackernews",
@@ -1273,7 +1273,7 @@
     "positive": 2,
     "negative": 1,
     "mixed": 2,
-    "lastUpdated": "2026-04-03",
+    "lastUpdated": "2026-04-04",
     "hackernews": [
       {
         "source": "hackernews",
@@ -1325,7 +1325,7 @@
     "positive": 3,
     "negative": 0,
     "mixed": 2,
-    "lastUpdated": "2026-04-03",
+    "lastUpdated": "2026-04-04",
     "hackernews": [
       {
         "source": "hackernews",
@@ -1377,7 +1377,7 @@
     "positive": 2,
     "negative": 0,
     "mixed": 3,
-    "lastUpdated": "2026-04-03",
+    "lastUpdated": "2026-04-04",
     "hackernews": [
       {
         "source": "hackernews",
@@ -1429,7 +1429,7 @@
     "positive": 4,
     "negative": 0,
     "mixed": 1,
-    "lastUpdated": "2026-04-03",
+    "lastUpdated": "2026-04-04",
     "hackernews": [
       {
         "source": "hackernews",
@@ -1481,7 +1481,7 @@
     "positive": 3,
     "negative": 0,
     "mixed": 2,
-    "lastUpdated": "2026-04-03",
+    "lastUpdated": "2026-04-04",
     "hackernews": [
       {
         "source": "hackernews",
@@ -1533,7 +1533,7 @@
     "positive": 2,
     "negative": 0,
     "mixed": 3,
-    "lastUpdated": "2026-04-03",
+    "lastUpdated": "2026-04-04",
     "hackernews": [
       {
         "source": "hackernews",
@@ -1553,14 +1553,6 @@
       },
       {
         "source": "hackernews",
-        "quote": "&gt; I would prefer we have cheaper pianos, samples and microphones instead of worthless music-copying models.There are lots of ML models that produce instrumentals and vocals that are incredibly useful for practicing musicians.",
-        "author": "echelon",
-        "date": "2025-04-04",
-        "url": "https://news.ycombinator.com/item?id=43577508",
-        "sentiment": "neutral"
-      },
-      {
-        "source": "hackernews",
         "quote": "&gt; Big IP is strong arming OpenAI, Suno, and all the rest.&gt; It&#x27;ll be interesting to see whether creators at the bottom of the pyramid can effectively create new brandsThe problem is, to create a brand, you need to be able to protect it against rivals either ripping you...",
         "author": "KaiserPro",
         "date": "2026-03-25",
@@ -1574,6 +1566,14 @@
         "date": "2026-03-24",
         "url": "https://news.ycombinator.com/item?id=47510632",
         "sentiment": "positive"
+      },
+      {
+        "source": "hackernews",
+        "quote": "That is the decision of artists to sign with a mega corp. Any tom dick or harry can create a Spotify account, load their warbling autotuned ditty written by themselves ( or AI ) on any theme, in any genre and wait for fame or fortune to appear or not.",
+        "author": "injidup",
+        "date": "2025-12-21",
+        "url": "https://news.ycombinator.com/item?id=46342730",
+        "sentiment": "mixed"
       }
     ],
     "reddit": []
@@ -1585,7 +1585,7 @@
     "positive": 0,
     "negative": 0,
     "mixed": 2,
-    "lastUpdated": "2026-04-03",
+    "lastUpdated": "2026-04-04",
     "hackernews": [
       {
         "source": "hackernews",
@@ -1613,7 +1613,7 @@
     "positive": 1,
     "negative": 1,
     "mixed": 3,
-    "lastUpdated": "2026-04-03",
+    "lastUpdated": "2026-04-04",
     "hackernews": [
       {
         "source": "hackernews",
@@ -1665,7 +1665,7 @@
     "positive": 2,
     "negative": 0,
     "mixed": 3,
-    "lastUpdated": "2026-04-03",
+    "lastUpdated": "2026-04-04",
     "hackernews": [
       {
         "source": "hackernews",
@@ -1717,7 +1717,7 @@
     "positive": 2,
     "negative": 0,
     "mixed": 3,
-    "lastUpdated": "2026-04-03",
+    "lastUpdated": "2026-04-04",
     "hackernews": [
       {
         "source": "hackernews",
@@ -1769,7 +1769,7 @@
     "positive": 0,
     "negative": 1,
     "mixed": 4,
-    "lastUpdated": "2026-04-03",
+    "lastUpdated": "2026-04-04",
     "hackernews": [
       {
         "source": "hackernews",
@@ -1821,7 +1821,7 @@
     "positive": 2,
     "negative": 0,
     "mixed": 3,
-    "lastUpdated": "2026-04-03",
+    "lastUpdated": "2026-04-04",
     "hackernews": [
       {
         "source": "hackernews",
@@ -1873,7 +1873,7 @@
     "positive": 2,
     "negative": 0,
     "mixed": 3,
-    "lastUpdated": "2026-04-03",
+    "lastUpdated": "2026-04-04",
     "hackernews": [
       {
         "source": "hackernews",
@@ -1925,7 +1925,7 @@
     "positive": 4,
     "negative": 0,
     "mixed": 1,
-    "lastUpdated": "2026-04-03",
+    "lastUpdated": "2026-04-04",
     "hackernews": [
       {
         "source": "hackernews",
@@ -1977,7 +1977,7 @@
     "positive": 1,
     "negative": 3,
     "mixed": 1,
-    "lastUpdated": "2026-04-03",
+    "lastUpdated": "2026-04-04",
     "hackernews": [
       {
         "source": "hackernews",
@@ -2029,7 +2029,7 @@
     "positive": 2,
     "negative": 0,
     "mixed": 3,
-    "lastUpdated": "2026-04-03",
+    "lastUpdated": "2026-04-04",
     "hackernews": [
       {
         "source": "hackernews",
@@ -2081,7 +2081,7 @@
     "positive": 2,
     "negative": 0,
     "mixed": 1,
-    "lastUpdated": "2026-04-03",
+    "lastUpdated": "2026-04-04",
     "hackernews": [
       {
         "source": "hackernews",
@@ -2117,7 +2117,7 @@
     "positive": 1,
     "negative": 0,
     "mixed": 0,
-    "lastUpdated": "2026-04-03",
+    "lastUpdated": "2026-04-04",
     "hackernews": [
       {
         "source": "hackernews",
@@ -2137,7 +2137,7 @@
     "positive": 3,
     "negative": 0,
     "mixed": 0,
-    "lastUpdated": "2026-04-03",
+    "lastUpdated": "2026-04-04",
     "hackernews": [
       {
         "source": "hackernews",
@@ -2173,7 +2173,7 @@
     "positive": 1,
     "negative": 1,
     "mixed": 0,
-    "lastUpdated": "2026-04-03",
+    "lastUpdated": "2026-04-04",
     "hackernews": [
       {
         "source": "hackernews",
@@ -2201,7 +2201,7 @@
     "positive": 2,
     "negative": 0,
     "mixed": 3,
-    "lastUpdated": "2026-04-03",
+    "lastUpdated": "2026-04-04",
     "hackernews": [
       {
         "source": "hackernews",
@@ -2253,7 +2253,7 @@
     "positive": 0,
     "negative": 4,
     "mixed": 1,
-    "lastUpdated": "2026-04-03",
+    "lastUpdated": "2026-04-04",
     "hackernews": [
       {
         "source": "hackernews",
@@ -2305,7 +2305,7 @@
     "positive": 0,
     "negative": 1,
     "mixed": 4,
-    "lastUpdated": "2026-04-03",
+    "lastUpdated": "2026-04-04",
     "hackernews": [
       {
         "source": "hackernews",
@@ -2357,7 +2357,7 @@
     "positive": 0,
     "negative": 0,
     "mixed": 2,
-    "lastUpdated": "2026-04-03",
+    "lastUpdated": "2026-04-04",
     "hackernews": [
       {
         "source": "hackernews",
@@ -2385,7 +2385,7 @@
     "positive": 2,
     "negative": 0,
     "mixed": 3,
-    "lastUpdated": "2026-04-03",
+    "lastUpdated": "2026-04-04",
     "hackernews": [
       {
         "source": "hackernews",
@@ -2437,7 +2437,7 @@
     "positive": 0,
     "negative": 0,
     "mixed": 0,
-    "lastUpdated": "2026-04-03",
+    "lastUpdated": "2026-04-04",
     "hackernews": [],
     "reddit": []
   },
@@ -2448,7 +2448,7 @@
     "positive": 3,
     "negative": 0,
     "mixed": 1,
-    "lastUpdated": "2026-04-03",
+    "lastUpdated": "2026-04-04",
     "hackernews": [
       {
         "source": "hackernews",
@@ -2492,7 +2492,7 @@
     "positive": 3,
     "negative": 0,
     "mixed": 1,
-    "lastUpdated": "2026-04-03",
+    "lastUpdated": "2026-04-04",
     "hackernews": [
       {
         "source": "hackernews",
@@ -2536,7 +2536,7 @@
     "positive": 0,
     "negative": 0,
     "mixed": 0,
-    "lastUpdated": "2026-04-03",
+    "lastUpdated": "2026-04-04",
     "hackernews": [],
     "reddit": []
   },
@@ -2547,7 +2547,7 @@
     "positive": 4,
     "negative": 0,
     "mixed": 1,
-    "lastUpdated": "2026-04-03",
+    "lastUpdated": "2026-04-04",
     "hackernews": [
       {
         "source": "hackernews",
