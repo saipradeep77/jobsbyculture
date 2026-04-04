@@ -522,12 +522,19 @@ document.getElementById('recipientName').addEventListener('input', function() {
     updateTitle();
 });
 
-// Generate slug
+// Generate slug — 16 chars for security (2.8 trillion combinations)
 function genSlug() {
     var chars = 'abcdefghijklmnopqrstuvwxyz0123456789';
     var slug = '';
-    for (var i = 0; i < 8; i++) slug += chars[Math.floor(Math.random() * chars.length)];
+    for (var i = 0; i < 16; i++) slug += chars[Math.floor(Math.random() * chars.length)];
     return slug;
+}
+
+// Generate a secret creator token — used to verify card ownership
+function genToken() {
+    var arr = new Uint8Array(32);
+    crypto.getRandomValues(arr);
+    return Array.from(arr, function(b) { return b.toString(16).padStart(2, '0'); }).join('');
 }
 
 // Submit
@@ -537,11 +544,13 @@ document.getElementById('createForm').addEventListener('submit', async function(
     btn.disabled = true;
     btn.textContent = 'Creating...';
 
+    var creatorEmail = document.getElementById('yourEmail').value.trim();
     var slug = genSlug();
+
     var payload = {
         slug: slug,
         creator_name: document.getElementById('yourName').value.trim(),
-        creator_email: document.getElementById('yourEmail').value.trim(),
+        creator_email: creatorEmail,
         recipient_name: document.getElementById('recipientName').value.trim(),
         title: document.getElementById('cardTitle').value.trim(),
         team_name: document.getElementById('teamName').value.trim() || null,
@@ -558,6 +567,13 @@ document.getElementById('createForm').addEventListener('submit', async function(
         console.error(result.error);
         return;
     }
+
+    // Save creator identity in localStorage so we can show creator controls on the card view
+    localStorage.setItem('cc_creator_email', creatorEmail);
+    // Save this slug as a card they created
+    var myCards = JSON.parse(localStorage.getItem('cc_my_cards') || '[]');
+    myCards.push(slug);
+    localStorage.setItem('cc_my_cards', JSON.stringify(myCards));
 
     window.location.href = '/culture-cards/c/' + slug;
 });

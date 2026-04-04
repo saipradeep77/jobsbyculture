@@ -1512,8 +1512,11 @@ function renderCardHeader(card) {
         document.getElementById('charCount').textContent = this.value.length + ' / 500';
     });
 
-    // Check if creator
-    isCreator = creatorEmail && card.creator_email && (creatorEmail === card.creator_email);
+    // Check if creator — email match OR slug in their created cards list
+    var emailMatch = creatorEmail && card.creator_email && (creatorEmail === card.creator_email);
+    var myCards = JSON.parse(localStorage.getItem('cc_my_cards') || '[]');
+    var slugMatch = myCards.indexOf(slug) !== -1;
+    isCreator = emailMatch || slugMatch;
 
     // Check paid status
     isPaid = !!card.is_paid;
