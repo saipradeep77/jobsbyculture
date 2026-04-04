@@ -133,10 +133,7 @@
 
         /* CARD CONTAINER */
         .card-container { min-height: 100vh; padding: 100px 0 0; transition: background 0.3s, color 0.3s; }
-        .card-container.theme-default { background: var(--bg); }
-        .card-container.theme-warm { background: #fef3c7; }
-        .card-container.theme-teal { background: #f0fdfa; }
-        .card-container.theme-midnight { background: #1e1e2e; color: #e4e4e7; }
+        .card-container.theme-default { background: #fffbf0; }
 
         /* CARD HEADER */
         .card-header {
@@ -346,6 +343,292 @@
         .ft-bar { border-top: 1px solid var(--border); padding-top: 20px; display: flex; justify-content: space-between; align-items: center; }
         .ft-bar p { font-size: 12px; color: var(--text-3); }
 
+        /* THEME VARIANTS */
+        .card-container.theme-warm { background: linear-gradient(135deg, #fef3c7, #fde68a); }
+        .card-container.theme-teal { background: linear-gradient(135deg, #f0fdfa, #ccfbf1); }
+        .card-container.theme-midnight { background: #1e1e2e; color: #e4e4e7; }
+        /* Premium themes */
+        .card-container.theme-sunset { background: linear-gradient(135deg, #fecaca, #fde68a, #fed7aa); }
+        .card-container.theme-ocean { background: linear-gradient(135deg, #dbeafe, #e0e7ff, #f0f9ff); }
+        .card-container.theme-forest { background: linear-gradient(135deg, #dcfce7, #d1fae5, #ecfdf5); }
+        .card-container.theme-lavender { background: linear-gradient(135deg, #f3e8ff, #ede9fe, #faf5ff); }
+
+        /* THEME SWITCHER */
+        .theme-switcher {
+            max-width: 600px; margin: 0 auto 24px; padding: 0 24px;
+            animation: fadeUp 0.5s ease 0.15s both;
+        }
+        .theme-switcher-inner {
+            background: var(--bg-raised); border: 1px solid var(--border);
+            border-radius: var(--radius); padding: 20px 24px;
+            box-shadow: var(--shadow);
+        }
+        .theme-midnight .theme-switcher-inner {
+            background: #2a2a3a; border-color: rgba(255,255,255,0.08);
+        }
+        .theme-switcher-label {
+            font-size: 13px; font-weight: 600; color: var(--text-2);
+            text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 12px;
+        }
+        .theme-midnight .theme-switcher-label { color: #a1a1aa; }
+        .theme-swatches { display: flex; gap: 10px; flex-wrap: wrap; }
+        .theme-swatch {
+            width: 36px; height: 36px; border-radius: 50%; border: 2px solid var(--border-2);
+            cursor: pointer; position: relative; transition: all 0.2s;
+            display: flex; align-items: center; justify-content: center;
+        }
+        .theme-swatch:hover { transform: scale(1.1); }
+        .theme-swatch.active { border-color: var(--accent); box-shadow: 0 0 0 3px rgba(232,89,12,0.15); }
+        .theme-swatch .swatch-check {
+            display: none; font-size: 14px; color: var(--text);
+        }
+        .theme-swatch.active .swatch-check { display: block; }
+        .theme-swatch.locked { opacity: 0.5; cursor: not-allowed; }
+        .theme-swatch.locked::after {
+            content: '\1F512'; font-size: 10px; position: absolute;
+            bottom: -2px; right: -2px;
+        }
+        .swatch-default { background: #fffbf0; }
+        .swatch-warm { background: linear-gradient(135deg, #fef3c7, #fde68a); }
+        .swatch-teal { background: linear-gradient(135deg, #f0fdfa, #ccfbf1); }
+        .swatch-midnight { background: #1e1e2e; }
+        .swatch-sunset { background: linear-gradient(135deg, #fecaca, #fde68a, #fed7aa); }
+        .swatch-ocean { background: linear-gradient(135deg, #dbeafe, #e0e7ff, #f0f9ff); }
+        .swatch-forest { background: linear-gradient(135deg, #dcfce7, #d1fae5, #ecfdf5); }
+        .swatch-lavender { background: linear-gradient(135deg, #f3e8ff, #ede9fe, #faf5ff); }
+
+        /* IMAGE UPLOAD */
+        .media-upload-area {
+            margin-bottom: 14px;
+        }
+        .upload-zone {
+            border: 2px dashed var(--border-2); border-radius: var(--radius-sm);
+            padding: 20px; text-align: center; cursor: pointer;
+            transition: all 0.2s; background: var(--bg);
+        }
+        .upload-zone:hover, .upload-zone.dragover {
+            border-color: var(--accent); background: var(--accent-bg);
+        }
+        .theme-midnight .upload-zone {
+            background: #1e1e2e; border-color: rgba(255,255,255,0.12);
+        }
+        .theme-midnight .upload-zone:hover, .theme-midnight .upload-zone.dragover {
+            border-color: var(--accent); background: rgba(232,89,12,0.1);
+        }
+        .upload-zone-icon { font-size: 28px; margin-bottom: 4px; }
+        .upload-zone-text { font-size: 13px; color: var(--text-3); }
+        .upload-zone-text strong { color: var(--accent); }
+        .upload-file-input { display: none; }
+        .upload-preview {
+            display: none; position: relative; margin-bottom: 14px;
+        }
+        .upload-preview img {
+            max-width: 100%; max-height: 200px; border-radius: var(--radius-sm);
+            object-fit: cover;
+        }
+        .upload-preview .remove-upload {
+            position: absolute; top: 6px; right: 6px;
+            width: 24px; height: 24px; background: rgba(0,0,0,0.6);
+            color: #fff; border: none; border-radius: 50%; cursor: pointer;
+            font-size: 14px; display: flex; align-items: center; justify-content: center;
+        }
+        .gif-input-row {
+            display: flex; gap: 8px; margin-top: 8px;
+        }
+        .gif-input {
+            flex: 1; padding: 8px 12px; border: 1.5px solid var(--border-2);
+            border-radius: var(--radius-sm); font-family: var(--font-body);
+            font-size: 13px; background: var(--bg); color: var(--text);
+            outline: none;
+        }
+        .theme-midnight .gif-input {
+            background: #1e1e2e; color: #e4e4e7; border-color: rgba(255,255,255,0.12);
+        }
+        .gif-input:focus { border-color: var(--accent); }
+        .media-toggle-row {
+            display: flex; gap: 8px; margin-bottom: 8px;
+        }
+        .media-toggle-btn {
+            padding: 6px 14px; border: 1.5px solid var(--border-2);
+            border-radius: var(--radius-full); background: none;
+            font-family: var(--font-body); font-size: 13px; font-weight: 500;
+            color: var(--text-2); cursor: pointer; transition: all 0.2s;
+        }
+        .media-toggle-btn:hover { border-color: var(--accent); color: var(--accent); }
+        .media-toggle-btn.active {
+            border-color: var(--accent); background: var(--accent-bg); color: var(--accent);
+        }
+        .media-upload-locked {
+            padding: 16px; text-align: center; border: 2px dashed var(--border-2);
+            border-radius: var(--radius-sm); color: var(--text-3); font-size: 13px;
+        }
+        .media-upload-locked span { display: block; margin-top: 4px; font-size: 12px; }
+
+        /* MESSAGE MEDIA */
+        .message-media {
+            margin-bottom: 10px; border-radius: 8px; overflow: hidden;
+        }
+        .message-media img {
+            width: 100%; display: block; border-radius: 8px;
+        }
+
+        /* MESSAGE DELETE */
+        .message-card { position: relative; }
+        .message-delete {
+            position: absolute; top: 8px; right: 8px;
+            width: 22px; height: 22px; border-radius: 50%;
+            background: rgba(0,0,0,0.06); border: none; cursor: pointer;
+            font-size: 13px; color: var(--text-3); display: none;
+            align-items: center; justify-content: center; transition: all 0.15s;
+        }
+        .message-card:hover .message-delete.visible { display: flex; }
+        .message-delete:hover { background: var(--rose-bg); color: var(--rose); }
+
+        /* PREMIUM UPSELL */
+        .premium-section {
+            max-width: 600px; margin: 0 auto; padding: 0 24px 32px;
+            animation: fadeUp 0.5s ease 0.25s both;
+        }
+        .premium-card {
+            background: linear-gradient(135deg, var(--teal-bg), rgba(13,148,136,0.02));
+            border: 1.5px solid var(--teal-border); border-radius: var(--radius);
+            padding: 28px 32px; text-align: center;
+        }
+        .theme-midnight .premium-card {
+            background: linear-gradient(135deg, rgba(13,148,136,0.12), rgba(13,148,136,0.04));
+            border-color: rgba(13,148,136,0.3);
+        }
+        .premium-icon { font-size: 32px; margin-bottom: 8px; }
+        .premium-title {
+            font-family: var(--font-display); font-size: 22px; margin-bottom: 6px;
+        }
+        .premium-subtitle {
+            font-size: 14px; color: var(--text-2); margin-bottom: 20px;
+        }
+        .theme-midnight .premium-subtitle { color: #a1a1aa; }
+        .premium-benefits {
+            list-style: none; text-align: left; max-width: 320px;
+            margin: 0 auto 24px; font-size: 14px;
+        }
+        .premium-benefits li {
+            padding: 5px 0; color: var(--text-2);
+        }
+        .theme-midnight .premium-benefits li { color: #a1a1aa; }
+        .premium-benefits li::before {
+            content: '\2713'; color: var(--teal); font-weight: 700;
+            margin-right: 10px;
+        }
+        .premium-btn {
+            display: inline-block; padding: 14px 32px;
+            background: var(--teal); color: #fff; border: none;
+            border-radius: var(--radius-sm); font-family: var(--font-body);
+            font-size: 16px; font-weight: 600; cursor: pointer;
+            transition: all 0.2s; text-decoration: none;
+        }
+        .premium-btn:hover { background: #0f766e; transform: translateY(-1px); }
+        .premium-price {
+            display: block; font-family: var(--font-mono); font-size: 12px;
+            color: var(--text-3); margin-top: 8px;
+        }
+
+        /* SEND CARD */
+        .send-section {
+            max-width: 600px; margin: 0 auto; padding: 0 24px 32px;
+            animation: fadeUp 0.5s ease 0.3s both;
+        }
+        .send-card {
+            background: var(--bg-raised); border: 1px solid var(--border);
+            border-radius: var(--radius); padding: 24px 28px;
+            box-shadow: var(--shadow);
+        }
+        .theme-midnight .send-card {
+            background: #2a2a3a; border-color: rgba(255,255,255,0.08);
+        }
+        .send-title {
+            font-family: var(--font-display); font-size: 20px; margin-bottom: 16px;
+        }
+        .send-row { display: flex; gap: 8px; margin-bottom: 12px; }
+        .send-input {
+            flex: 1; padding: 10px 14px;
+            border: 1.5px solid var(--border-2); border-radius: var(--radius-sm);
+            font-family: var(--font-body); font-size: 14px;
+            background: var(--bg); color: var(--text); outline: none;
+        }
+        .theme-midnight .send-input {
+            background: #1e1e2e; color: #e4e4e7; border-color: rgba(255,255,255,0.12);
+        }
+        .send-input:focus { border-color: var(--accent); }
+        .send-btn {
+            padding: 10px 20px; background: var(--accent); color: #fff;
+            border: none; border-radius: var(--radius-sm); font-family: var(--font-body);
+            font-size: 14px; font-weight: 600; cursor: pointer; transition: all 0.2s;
+            white-space: nowrap;
+        }
+        .send-btn:hover { background: var(--accent-hover); }
+        .send-btn:disabled { opacity: 0.6; cursor: not-allowed; }
+        .schedule-row {
+            display: flex; gap: 8px; align-items: center; margin-top: 8px;
+        }
+        .schedule-input {
+            padding: 8px 12px; border: 1.5px solid var(--border-2);
+            border-radius: var(--radius-sm); font-family: var(--font-body);
+            font-size: 13px; background: var(--bg); color: var(--text); outline: none;
+        }
+        .theme-midnight .schedule-input {
+            background: #1e1e2e; color: #e4e4e7; border-color: rgba(255,255,255,0.12);
+        }
+        .schedule-toggle {
+            font-size: 13px; color: var(--teal); cursor: pointer;
+            background: none; border: none; font-family: var(--font-body);
+            font-weight: 500; padding: 0;
+        }
+        .schedule-toggle:hover { text-decoration: underline; }
+
+        /* DOWNLOAD BUTTON */
+        .download-section {
+            max-width: 600px; margin: 0 auto; padding: 0 24px 24px;
+            text-align: center;
+        }
+        .download-btn {
+            display: inline-flex; align-items: center; gap: 8px;
+            padding: 12px 24px; background: var(--bg-raised);
+            border: 1.5px solid var(--border-2); border-radius: var(--radius-sm);
+            font-family: var(--font-body); font-size: 14px; font-weight: 600;
+            color: var(--text); cursor: pointer; transition: all 0.2s;
+        }
+        .download-btn:hover { border-color: var(--accent); color: var(--accent); transform: translateY(-1px); }
+        .theme-midnight .download-btn {
+            background: #2a2a3a; border-color: rgba(255,255,255,0.12); color: #e4e4e7;
+        }
+
+        /* SOCIAL SHARE BUTTONS */
+        .social-share {
+            display: flex; gap: 8px; justify-content: center;
+            margin-top: 16px;
+        }
+        .social-btn {
+            display: inline-flex; align-items: center; gap: 6px;
+            padding: 8px 16px; border-radius: var(--radius-full);
+            font-family: var(--font-body); font-size: 13px; font-weight: 500;
+            border: 1.5px solid var(--border-2); background: var(--bg-raised);
+            color: var(--text-2); cursor: pointer; text-decoration: none;
+            transition: all 0.2s;
+        }
+        .social-btn:hover { border-color: var(--accent); color: var(--accent); }
+        .theme-midnight .social-btn {
+            background: #2a2a3a; border-color: rgba(255,255,255,0.12); color: #a1a1aa;
+        }
+
+        /* BRANDING FOOTER */
+        .card-branding {
+            text-align: center; padding: 24px 0 40px;
+            font-size: 13px; color: var(--text-3);
+        }
+        .card-branding a {
+            color: var(--accent); text-decoration: none; font-weight: 500;
+        }
+        .card-branding a:hover { text-decoration: underline; }
+
         /* RESPONSIVE */
         @media (max-width: 768px) {
             .hamburger { display: flex; }
@@ -367,6 +650,9 @@
             .share-row { flex-direction: column; }
             .share-url { width: 100%; text-align: center; }
             .copy-btn { width: 100%; }
+            .send-row { flex-direction: column; }
+            .send-btn { width: 100%; }
+            .social-share { flex-wrap: wrap; justify-content: center; }
         }
     </style>
     <script async src="https://plausible.io/js/pa-qa3pjs5eZbsfBQJMk4hVW.js"></script>
@@ -423,17 +709,109 @@
             <div class="messages-grid" id="messagesGrid"></div>
         </div>
 
+        <!-- Theme Switcher (creator only) -->
+        <div class="theme-switcher" id="themeSwitcher" style="display:none">
+            <div class="theme-switcher-inner">
+                <div class="theme-switcher-label">Card Theme</div>
+                <div class="theme-swatches" id="themeSwatches">
+                    <div class="theme-swatch swatch-default active" data-theme="default" title="Default"><span class="swatch-check">&#10003;</span></div>
+                    <div class="theme-swatch swatch-warm" data-theme="warm" title="Warm"><span class="swatch-check">&#10003;</span></div>
+                    <div class="theme-swatch swatch-teal" data-theme="teal" title="Teal"><span class="swatch-check">&#10003;</span></div>
+                    <div class="theme-swatch swatch-midnight" data-theme="midnight" title="Midnight"><span class="swatch-check">&#10003;</span></div>
+                    <div class="theme-swatch swatch-sunset" data-theme="sunset" title="Sunset" data-premium="true"><span class="swatch-check">&#10003;</span></div>
+                    <div class="theme-swatch swatch-ocean" data-theme="ocean" title="Ocean" data-premium="true"><span class="swatch-check">&#10003;</span></div>
+                    <div class="theme-swatch swatch-forest" data-theme="forest" title="Forest" data-premium="true"><span class="swatch-check">&#10003;</span></div>
+                    <div class="theme-swatch swatch-lavender" data-theme="lavender" title="Lavender" data-premium="true"><span class="swatch-check">&#10003;</span></div>
+                </div>
+            </div>
+        </div>
+
         <!-- Sign form -->
         <div class="sign-section">
             <div class="sign-card">
                 <h2 class="sign-title">Sign This Card</h2>
                 <form id="signForm" autocomplete="off">
                     <input type="text" id="signerName" class="sign-input" placeholder="Your name" required>
+                    <input type="email" id="signerEmail" class="sign-input" placeholder="Your email (optional, for editing)" style="margin-bottom:14px">
                     <textarea id="signerMessage" class="sign-textarea" placeholder="Write your message..." maxlength="500" required></textarea>
                     <div class="char-count" id="charCount">0 / 500</div>
+
+                    <!-- Media upload area -->
+                    <div class="media-upload-area" id="mediaUploadArea">
+                        <div class="media-toggle-row">
+                            <button type="button" class="media-toggle-btn" id="toggleUpload" onclick="toggleMediaTab('upload')">&#128247; Photo</button>
+                            <button type="button" class="media-toggle-btn" id="toggleGif" onclick="toggleMediaTab('gif')">GIF</button>
+                        </div>
+                        <div id="uploadTab" style="display:none">
+                            <div class="upload-zone" id="uploadZone">
+                                <div class="upload-zone-icon">&#128247;</div>
+                                <div class="upload-zone-text">Drag &amp; drop or <strong>browse</strong><br>JPG, PNG, GIF, WEBP &middot; Max 5MB</div>
+                                <input type="file" class="upload-file-input" id="fileInput" accept="image/jpeg,image/png,image/gif,image/webp">
+                            </div>
+                            <div class="upload-preview" id="uploadPreview">
+                                <img id="previewImg" src="" alt="Preview">
+                                <button type="button" class="remove-upload" onclick="removeUpload()">&times;</button>
+                            </div>
+                        </div>
+                        <div id="gifTab" style="display:none">
+                            <div class="gif-input-row">
+                                <input type="url" class="gif-input" id="gifUrlInput" placeholder="Paste a GIF URL (e.g., from Giphy)">
+                            </div>
+                            <div class="upload-preview" id="gifPreview" style="margin-top:8px">
+                                <img id="gifPreviewImg" src="" alt="GIF Preview">
+                                <button type="button" class="remove-upload" onclick="removeGif()">&times;</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Locked media upload for non-premium -->
+                    <div class="media-upload-locked" id="mediaLockedMsg" style="display:none">
+                        &#128274; Image &amp; GIF uploads require Premium
+                        <span>Unlock for $5.99 to add media to your messages</span>
+                    </div>
+
                     <button type="submit" class="sign-btn">Add Your Message &rarr;</button>
                 </form>
             </div>
+        </div>
+
+        <!-- Premium Upsell (shown if not paid) -->
+        <div class="premium-section" id="premiumSection" style="display:none">
+            <div class="premium-card">
+                <div class="premium-icon">&#10024;</div>
+                <div class="premium-title">Unlock Premium</div>
+                <div class="premium-subtitle">Make your card extra special</div>
+                <ul class="premium-benefits">
+                    <li>Upload images &amp; GIFs on messages</li>
+                    <li>Premium card themes</li>
+                    <li>Download card as image</li>
+                    <li>Email delivery to recipient</li>
+                    <li>Schedule delivery for later</li>
+                    <li>Remove branding watermark</li>
+                </ul>
+                <button class="premium-btn" id="premiumBtn" onclick="unlockPremium()">Unlock for $5.99 &rarr;</button>
+                <span class="premium-price">One-time payment &middot; No subscription</span>
+            </div>
+        </div>
+
+        <!-- Send Card (paid only) -->
+        <div class="send-section" id="sendSection" style="display:none">
+            <div class="send-card">
+                <h3 class="send-title">&#9993; Send This Card</h3>
+                <div class="send-row">
+                    <input type="email" class="send-input" id="recipientEmail" placeholder="Recipient's email address">
+                    <button class="send-btn" id="sendNowBtn" onclick="sendCard()">Send Now</button>
+                </div>
+                <button type="button" class="schedule-toggle" id="scheduleToggle" onclick="toggleSchedule()">&#128197; Schedule for later</button>
+                <div class="schedule-row" id="scheduleRow" style="display:none">
+                    <input type="datetime-local" class="schedule-input" id="scheduleDate">
+                    <button class="send-btn" onclick="sendCard(true)" style="padding:8px 16px;font-size:13px">Schedule</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Download (paid only) -->
+        <div class="download-section" id="downloadSection" style="display:none">
+            <button class="download-btn" onclick="downloadCard()">&#11015; Download as Image</button>
         </div>
 
         <!-- Share -->
@@ -443,6 +821,16 @@
                 <div class="share-url" id="shareUrl"></div>
                 <button class="copy-btn" id="copyBtn" onclick="copyLink()">Copy Link</button>
             </div>
+            <div class="social-share">
+                <a class="social-btn" id="shareTwitter" href="#" target="_blank" rel="noopener">&#120143; Twitter</a>
+                <a class="social-btn" id="shareLinkedin" href="#" target="_blank" rel="noopener">in LinkedIn</a>
+                <button class="social-btn" id="shareNative" onclick="nativeShare()" style="display:none">&#128279; Share</button>
+            </div>
+        </div>
+
+        <!-- Branding (hidden for paid) -->
+        <div class="card-branding" id="cardBranding">
+            Made with <a href="/culture-cards/create">Culture Cards</a> by <a href="/">JobsByCulture</a>
         </div>
     </div>
 </template>
@@ -523,6 +911,7 @@
 </footer>
 
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="https://cdn.jsdelivr.net/npm/html-to-image@1.11.11/dist/html-to-image.js"></script>
 <script>
 const SUPABASE_URL = 'https://quyxzwouqlrfvpsexwbh.supabase.co';
 const SUPABASE_KEY = 'sb_publishable_7g5dGcIUkN4OxJJ2gnlYEA_XkyDtN8p';
@@ -530,6 +919,12 @@ const sb = window.supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
 
 var slug = window.location.pathname.split('/').pop();
 var currentCard = null;
+var isPaid = false;
+var isCreator = false;
+var creatorEmail = localStorage.getItem('cc_creator_email') || '';
+var pendingMediaUrl = null;
+var pendingMediaType = null;
+var pendingFile = null;
 
 var occasionEmojis = {
     farewell: '\uD83C\uDFAD', birthday: '\uD83C\uDF82', promotion: '\uD83C\uDFC6',
@@ -559,6 +954,337 @@ function showNotFound() {
     area.appendChild(tpl.content.cloneNode(true));
 }
 
+/* ---- Image resize using Canvas API ---- */
+function resizeImage(file, maxWidth) {
+    return new Promise(function(resolve) {
+        var reader = new FileReader();
+        reader.onload = function(e) {
+            var img = new Image();
+            img.onload = function() {
+                var w = img.width, h = img.height;
+                if (w > maxWidth) {
+                    h = Math.round(h * maxWidth / w);
+                    w = maxWidth;
+                }
+                var canvas = document.createElement('canvas');
+                canvas.width = w; canvas.height = h;
+                canvas.getContext('2d').drawImage(img, 0, 0, w, h);
+                canvas.toBlob(function(blob) {
+                    resolve(new File([blob], file.name, { type: file.type }));
+                }, file.type, 0.85);
+            };
+            img.src = e.target.result;
+        };
+        reader.readAsDataURL(file);
+    });
+}
+
+/* ---- Upload to Supabase Storage ---- */
+async function uploadImage(file) {
+    var fileName = Date.now() + '-' + file.name.replace(/[^a-zA-Z0-9._-]/g, '_');
+    var { data, error } = await sb.storage
+        .from('card-media')
+        .upload(fileName, file, { contentType: file.type });
+    if (error) throw error;
+    var { data: urlData } = sb.storage.from('card-media').getPublicUrl(fileName);
+    return urlData.publicUrl;
+}
+
+/* ---- Media UI toggles ---- */
+function toggleMediaTab(tab) {
+    var uploadTab = document.getElementById('uploadTab');
+    var gifTab = document.getElementById('gifTab');
+    var btnUpload = document.getElementById('toggleUpload');
+    var btnGif = document.getElementById('toggleGif');
+
+    if (tab === 'upload') {
+        var isActive = btnUpload.classList.contains('active');
+        uploadTab.style.display = isActive ? 'none' : 'block';
+        gifTab.style.display = 'none';
+        btnUpload.classList.toggle('active');
+        btnGif.classList.remove('active');
+    } else {
+        var isActive = btnGif.classList.contains('active');
+        gifTab.style.display = isActive ? 'none' : 'block';
+        uploadTab.style.display = 'none';
+        btnGif.classList.toggle('active');
+        btnUpload.classList.remove('active');
+    }
+}
+
+function setupMediaUpload() {
+    var zone = document.getElementById('uploadZone');
+    var fileInput = document.getElementById('fileInput');
+    if (!zone || !fileInput) return;
+
+    zone.addEventListener('click', function() { fileInput.click(); });
+
+    zone.addEventListener('dragover', function(e) {
+        e.preventDefault(); zone.classList.add('dragover');
+    });
+    zone.addEventListener('dragleave', function() {
+        zone.classList.remove('dragover');
+    });
+    zone.addEventListener('drop', function(e) {
+        e.preventDefault(); zone.classList.remove('dragover');
+        if (e.dataTransfer.files.length) handleFileSelect(e.dataTransfer.files[0]);
+    });
+
+    fileInput.addEventListener('change', function() {
+        if (this.files.length) handleFileSelect(this.files[0]);
+    });
+
+    // GIF URL preview
+    var gifInput = document.getElementById('gifUrlInput');
+    if (gifInput) {
+        gifInput.addEventListener('input', function() {
+            var url = this.value.trim();
+            var preview = document.getElementById('gifPreview');
+            var img = document.getElementById('gifPreviewImg');
+            if (url && (url.match(/\.(gif|jpg|jpeg|png|webp)$/i) || url.includes('giphy.com') || url.includes('tenor.com') || url.includes('media'))) {
+                img.src = url;
+                preview.style.display = 'block';
+                pendingMediaUrl = url;
+                pendingMediaType = 'gif';
+                pendingFile = null;
+            } else {
+                preview.style.display = 'none';
+                if (pendingMediaType === 'gif') { pendingMediaUrl = null; pendingMediaType = null; }
+            }
+        });
+    }
+}
+
+async function handleFileSelect(file) {
+    var validTypes = ['image/jpeg', 'image/png', 'image/gif', 'image/webp'];
+    if (validTypes.indexOf(file.type) === -1) {
+        showToast('Please upload a JPG, PNG, GIF, or WEBP file');
+        return;
+    }
+    if (file.size > 5 * 1024 * 1024) {
+        showToast('File too large. Max 5MB allowed');
+        return;
+    }
+
+    // Resize if needed
+    var resized = await resizeImage(file, 800);
+    pendingFile = resized;
+    pendingMediaType = 'image';
+    pendingMediaUrl = null;
+
+    // Show preview
+    var reader = new FileReader();
+    reader.onload = function(e) {
+        var preview = document.getElementById('uploadPreview');
+        document.getElementById('previewImg').src = e.target.result;
+        preview.style.display = 'block';
+        document.getElementById('uploadZone').style.display = 'none';
+    };
+    reader.readAsDataURL(resized);
+}
+
+function removeUpload() {
+    pendingFile = null;
+    if (pendingMediaType === 'image') { pendingMediaType = null; pendingMediaUrl = null; }
+    document.getElementById('uploadPreview').style.display = 'none';
+    document.getElementById('uploadZone').style.display = '';
+    document.getElementById('fileInput').value = '';
+}
+
+function removeGif() {
+    if (pendingMediaType === 'gif') { pendingMediaUrl = null; pendingMediaType = null; }
+    document.getElementById('gifPreview').style.display = 'none';
+    document.getElementById('gifUrlInput').value = '';
+}
+
+/* ---- Theme Switcher ---- */
+function setupThemeSwitcher() {
+    var switcher = document.getElementById('themeSwitcher');
+    if (!switcher) return;
+
+    var swatches = switcher.querySelectorAll('.theme-swatch');
+    swatches.forEach(function(swatch) {
+        // Lock premium themes if not paid
+        if (swatch.dataset.premium === 'true' && !isPaid) {
+            swatch.classList.add('locked');
+        }
+
+        // Mark active
+        var currentTheme = currentCard.theme || 'default';
+        if (swatch.dataset.theme === currentTheme) {
+            swatch.classList.add('active');
+        } else {
+            swatch.classList.remove('active');
+        }
+
+        swatch.addEventListener('click', async function() {
+            if (this.classList.contains('locked')) {
+                showToast('Unlock Premium to use this theme');
+                return;
+            }
+            var theme = this.dataset.theme;
+
+            // Update UI
+            swatches.forEach(function(s) { s.classList.remove('active'); });
+            this.classList.add('active');
+
+            var container = document.getElementById('cardContainer');
+            container.className = 'card-container theme-' + theme;
+
+            // Save to Supabase
+            await sb.from('cards').update({ theme: theme }).eq('id', currentCard.id);
+            currentCard.theme = theme;
+        });
+    });
+}
+
+/* ---- Premium / Stripe ---- */
+async function unlockPremium() {
+    var btn = document.getElementById('premiumBtn');
+    btn.disabled = true;
+    btn.textContent = 'Redirecting...';
+
+    try {
+        var resp = await fetch('/api/cards/checkout', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ card_id: currentCard.id, slug: slug })
+        });
+        var data = await resp.json();
+        if (data.url) {
+            window.location.href = data.url;
+        } else {
+            throw new Error(data.error || 'Checkout failed');
+        }
+    } catch (err) {
+        btn.disabled = false;
+        btn.textContent = 'Unlock for $5.99 \u2192';
+        showToast('Something went wrong. Please try again.');
+        console.error(err);
+    }
+}
+
+/* ---- Send Card ---- */
+function toggleSchedule() {
+    var row = document.getElementById('scheduleRow');
+    row.style.display = row.style.display === 'none' ? 'flex' : 'none';
+}
+
+async function sendCard(scheduled) {
+    var emailInput = document.getElementById('recipientEmail');
+    var email = emailInput.value.trim();
+    if (!email) { showToast('Please enter an email address'); return; }
+
+    var body = { card_id: currentCard.id, recipient_email: email };
+    if (scheduled) {
+        var dt = document.getElementById('scheduleDate').value;
+        if (!dt) { showToast('Please pick a date and time'); return; }
+        body.scheduled_at = new Date(dt).toISOString();
+    }
+
+    var btn = scheduled ? event.target : document.getElementById('sendNowBtn');
+    btn.disabled = true;
+    btn.textContent = 'Sending...';
+
+    try {
+        var resp = await fetch('/api/cards/send', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(body)
+        });
+        var data = await resp.json();
+        if (data.success) {
+            showToast(scheduled ? 'Card scheduled!' : 'Card sent!');
+            emailInput.value = '';
+        } else {
+            throw new Error(data.error || 'Send failed');
+        }
+    } catch (err) {
+        showToast('Failed to send. Please try again.');
+        console.error(err);
+    }
+    btn.disabled = false;
+    btn.textContent = scheduled ? 'Schedule' : 'Send Now';
+}
+
+/* ---- Download as Image ---- */
+async function downloadCard() {
+    var container = document.getElementById('cardContainer');
+    if (!container || !window.htmlToImage) {
+        showToast('Download not available');
+        return;
+    }
+
+    showToast('Generating image...');
+    try {
+        var dataUrl = await htmlToImage.toPng(container, {
+            backgroundColor: '#ffffff',
+            pixelRatio: 2,
+            filter: function(node) {
+                // Exclude interactive elements from the capture
+                if (node.classList && (node.classList.contains('sign-section') ||
+                    node.classList.contains('premium-section') ||
+                    node.classList.contains('send-section') ||
+                    node.classList.contains('download-section') ||
+                    node.classList.contains('share-section') ||
+                    node.classList.contains('theme-switcher'))) {
+                    return false;
+                }
+                return true;
+            }
+        });
+        var link = document.createElement('a');
+        link.download = (currentCard.title || 'culture-card') + '.png';
+        link.href = dataUrl;
+        link.click();
+    } catch (err) {
+        showToast('Failed to generate image');
+        console.error(err);
+    }
+}
+
+/* ---- Social Sharing ---- */
+function setupSocialShare() {
+    var url = encodeURIComponent(window.location.href);
+    var text = encodeURIComponent(currentCard.title + ' - sign this culture card!');
+
+    var twitterBtn = document.getElementById('shareTwitter');
+    if (twitterBtn) twitterBtn.href = 'https://twitter.com/intent/tweet?url=' + url + '&text=' + text;
+
+    var linkedinBtn = document.getElementById('shareLinkedin');
+    if (linkedinBtn) linkedinBtn.href = 'https://www.linkedin.com/sharing/share-offsite/?url=' + url;
+
+    // Show native share on mobile
+    if (navigator.share) {
+        var nativeBtn = document.getElementById('shareNative');
+        if (nativeBtn) nativeBtn.style.display = 'inline-flex';
+    }
+}
+
+function nativeShare() {
+    if (navigator.share) {
+        navigator.share({
+            title: currentCard.title,
+            text: 'Sign this culture card!',
+            url: window.location.href
+        }).catch(function() {});
+    }
+}
+
+/* ---- Delete own message ---- */
+async function deleteMessage(msgId) {
+    if (!confirm('Delete this message?')) return;
+    var result = await sb.from('messages').delete().eq('id', msgId);
+    if (result.error) {
+        showToast('Failed to delete');
+        console.error(result.error);
+        return;
+    }
+    showToast('Message deleted');
+    loadMessages(currentCard.id);
+}
+
+/* ---- Render Functions ---- */
 function renderCardHeader(card) {
     var tpl = document.getElementById('cardTemplate');
     var area = document.getElementById('cardArea');
@@ -595,6 +1321,70 @@ function renderCardHeader(card) {
     document.getElementById('signerMessage').addEventListener('input', function() {
         document.getElementById('charCount').textContent = this.value.length + ' / 500';
     });
+
+    // Check if creator
+    isCreator = creatorEmail && card.creator_email && (creatorEmail === card.creator_email);
+
+    // Check paid status
+    isPaid = !!card.is_paid;
+
+    // Handle ?paid=true success redirect
+    var params = new URLSearchParams(window.location.search);
+    if (params.get('paid') === 'true' && !isPaid) {
+        // Mark as paid in local state (server webhook handles DB update)
+        isPaid = true;
+        showToast('Premium unlocked! \uD83C\uDF89');
+        // Clean URL
+        window.history.replaceState({}, '', window.location.pathname);
+    } else if (params.get('paid') === 'true' && isPaid) {
+        showToast('Premium unlocked! \uD83C\uDF89');
+        window.history.replaceState({}, '', window.location.pathname);
+    }
+
+    // Show/hide premium features
+    setupPremiumUI();
+
+    // Theme switcher (creator only)
+    if (isCreator) {
+        var switcher = document.getElementById('themeSwitcher');
+        if (switcher) { switcher.style.display = ''; setupThemeSwitcher(); }
+    }
+
+    // Media upload setup
+    if (isPaid) {
+        var uploadArea = document.getElementById('mediaUploadArea');
+        var lockedMsg = document.getElementById('mediaLockedMsg');
+        if (uploadArea) uploadArea.style.display = '';
+        if (lockedMsg) lockedMsg.style.display = 'none';
+        setupMediaUpload();
+    } else {
+        var uploadArea = document.getElementById('mediaUploadArea');
+        var lockedMsg = document.getElementById('mediaLockedMsg');
+        if (uploadArea) uploadArea.style.display = 'none';
+        if (lockedMsg) lockedMsg.style.display = '';
+    }
+
+    // Social share
+    setupSocialShare();
+}
+
+function setupPremiumUI() {
+    var premiumSection = document.getElementById('premiumSection');
+    var sendSection = document.getElementById('sendSection');
+    var downloadSection = document.getElementById('downloadSection');
+    var branding = document.getElementById('cardBranding');
+
+    if (isPaid) {
+        if (premiumSection) premiumSection.style.display = 'none';
+        if (sendSection) sendSection.style.display = '';
+        if (downloadSection) downloadSection.style.display = '';
+        if (branding) branding.style.display = 'none';
+    } else {
+        if (premiumSection) premiumSection.style.display = '';
+        if (sendSection) sendSection.style.display = 'none';
+        if (downloadSection) downloadSection.style.display = 'none';
+        if (branding) branding.style.display = '';
+    }
 }
 
 function renderMessages(messages) {
@@ -616,7 +1406,17 @@ function renderMessages(messages) {
     if (countEl) countEl.innerHTML = '&#9993; ' + messages.length + ' message' + (messages.length === 1 ? '' : 's');
 
     grid.innerHTML = messages.map(function(m, i) {
+        var mediaHtml = '';
+        if (m.media_url) {
+            mediaHtml = '<div class="message-media"><img src="' + escHtml(m.media_url) + '" alt="Attached image" loading="lazy"></div>';
+        }
+        var canDelete = creatorEmail && m.author_email && (m.author_email === creatorEmail);
+        var deleteBtn = canDelete
+            ? '<button class="message-delete visible" onclick="deleteMessage(\'' + m.id + '\')" title="Delete">&times;</button>'
+            : '';
         return '<div class="message-card" style="animation-delay:' + (i * 0.06) + 's">' +
+            deleteBtn +
+            mediaHtml +
             '<div class="message-text">' + escHtml(m.content) + '</div>' +
             '<div class="message-author">&mdash; ' + escHtml(m.author_name) + '</div>' +
         '</div>';
@@ -635,6 +1435,7 @@ async function addMessage(e) {
     e.preventDefault();
     var btn = e.target.querySelector('button[type="submit"]');
     var nameInput = document.getElementById('signerName');
+    var emailInput = document.getElementById('signerEmail');
     var msgInput = document.getElementById('signerMessage');
 
     if (!nameInput.value.trim() || !msgInput.value.trim()) return;
@@ -642,11 +1443,41 @@ async function addMessage(e) {
     btn.disabled = true;
     btn.textContent = 'Adding...';
 
-    var result = await sb.from('messages').insert({
+    // Handle media upload if present
+    var mediaUrl = null;
+    var mediaType = null;
+
+    try {
+        if (pendingFile && pendingMediaType === 'image') {
+            mediaUrl = await uploadImage(pendingFile);
+            mediaType = 'image';
+        } else if (pendingMediaUrl && pendingMediaType === 'gif') {
+            mediaUrl = pendingMediaUrl;
+            mediaType = 'gif';
+        }
+    } catch (err) {
+        console.error('Media upload failed:', err);
+        showToast('Image upload failed, posting without image');
+    }
+
+    var insertData = {
         card_id: currentCard.id,
         author_name: nameInput.value.trim(),
         content: msgInput.value.trim()
-    });
+    };
+
+    // Add optional fields
+    var email = emailInput.value.trim();
+    if (email) {
+        insertData.author_email = email;
+        // Save creator email in localStorage for edit/delete
+        localStorage.setItem('cc_creator_email', email);
+        creatorEmail = email;
+    }
+    if (mediaUrl) insertData.media_url = mediaUrl;
+    if (mediaType) insertData.media_type = mediaType;
+
+    var result = await sb.from('messages').insert(insertData);
 
     btn.disabled = false;
     btn.textContent = 'Add Your Message \u2192';
@@ -659,7 +1490,21 @@ async function addMessage(e) {
 
     nameInput.value = '';
     msgInput.value = '';
+    emailInput.value = '';
     document.getElementById('charCount').textContent = '0 / 500';
+
+    // Clear media state
+    pendingFile = null; pendingMediaUrl = null; pendingMediaType = null;
+    removeUpload(); removeGif();
+    var uploadTab = document.getElementById('uploadTab');
+    var gifTab = document.getElementById('gifTab');
+    if (uploadTab) uploadTab.style.display = 'none';
+    if (gifTab) gifTab.style.display = 'none';
+    var btnU = document.getElementById('toggleUpload');
+    var btnG = document.getElementById('toggleGif');
+    if (btnU) btnU.classList.remove('active');
+    if (btnG) btnG.classList.remove('active');
+
     showToast('Your message was added! \uD83C\uDF89');
     loadMessages(currentCard.id);
 }
