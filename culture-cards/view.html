@@ -815,9 +815,8 @@
         <div class="creator-controls" id="creatorControls" style="display:none">
             <button class="ctrl-btn" id="themeToggleBtn" onclick="toggleThemePanel()">&#127912; Theme</button>
             <button class="ctrl-btn" onclick="copyLink()">&#128279; Copy Link</button>
-            <button class="ctrl-btn" onclick="scrollToSection('sendSection')">&#9993; Send / Deliver</button>
+            <button class="ctrl-btn" onclick="scrollToSection('actionsArea')">&#9993; Send / Deliver</button>
             <button class="ctrl-btn" onclick="nativeShare()" id="creatorShareBtn" style="display:none">&#128228; Share</button>
-            <button class="ctrl-btn ctrl-danger" id="deleteCardBtn" onclick="deleteCard()">&#128465; Delete Card</button>
         </div>
 
         <!-- Theme switcher (dropdown, creator only) -->
@@ -898,7 +897,7 @@
     </section>
 
     <!-- Premium / Send / Download section (below sign form) -->
-    <div class="actions-section">
+    <div class="actions-section" id="actionsArea">
         <div class="actions-inner">
 
             <!-- Share -->
@@ -958,6 +957,14 @@
             <!-- Branding (hidden for paid) -->
             <div class="card-branding" id="cardBranding">
                 Made with <a href="/culture-cards/create">Culture Cards</a> by <a href="/">JobsByCulture</a>
+            </div>
+
+            <!-- Danger zone — Delete Card (creator only, separate from other actions) -->
+            <div class="danger-zone" id="dangerZone" style="display:none">
+                <div style="border-top:1px solid rgba(220,38,38,0.15);margin-top:32px;padding-top:24px;text-align:center">
+                    <button onclick="deleteCard()" style="background:none;border:1px solid rgba(220,38,38,0.3);color:#dc2626;padding:8px 20px;border-radius:8px;font-size:13px;cursor:pointer;font-family:var(--font-body);transition:all 0.2s" onmouseover="this.style.background='rgba(220,38,38,0.06)'" onmouseout="this.style.background='none'">&#128465; Delete This Card</button>
+                    <p style="font-size:12px;color:var(--text-3);margin-top:8px">This action cannot be undone.</p>
+                </div>
             </div>
         </div>
     </div>
@@ -1563,6 +1570,10 @@ function renderCardHeader(card) {
             var editBtn = document.getElementById('editCardBtn');
             if (editBtn) editBtn.style.display = 'inline-block';
         }
+
+        // Show danger zone (delete) at bottom
+        var dangerZone = document.getElementById('dangerZone');
+        if (dangerZone) dangerZone.style.display = 'block';
     }
 
     // Media upload setup
@@ -1633,10 +1644,31 @@ function setupPremiumUI() {
         if (downloadSection) downloadSection.style.display = '';
         if (branding) branding.style.display = 'none';
     } else {
+        // Show premium upsell
         if (premiumSection) premiumSection.style.display = '';
-        if (sendSection) sendSection.style.display = 'none';
-        if (downloadSection) downloadSection.style.display = 'none';
         if (branding) branding.style.display = '';
+        // Show send section for creator but with upgrade prompt
+        if (isCreator) {
+            if (sendSection) {
+                sendSection.style.display = '';
+                var sendBtn = document.getElementById('sendNowBtn');
+                if (sendBtn) {
+                    sendBtn.textContent = 'Unlock to Send ($5.99)';
+                    sendBtn.onclick = function() { unlockPremium(); };
+                }
+            }
+            if (downloadSection) {
+                downloadSection.style.display = '';
+                var dlBtn = downloadSection.querySelector('button');
+                if (dlBtn) {
+                    dlBtn.textContent = '\u2B07 Unlock to Download ($5.99)';
+                    dlBtn.onclick = function() { unlockPremium(); };
+                }
+            }
+        } else {
+            if (sendSection) sendSection.style.display = 'none';
+            if (downloadSection) downloadSection.style.display = 'none';
+        }
     }
 }
 
