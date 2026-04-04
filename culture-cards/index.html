@@ -366,16 +366,30 @@
             pointer-events: none;
         }
         .preview-card {
-            background: #fff; border-radius: var(--radius-lg);
+            background: linear-gradient(135deg, #fef9ef 0%, #fdf2e9 30%, #fce7d6 60%, #fef5ee 100%);
+            border-radius: var(--radius-lg);
             box-shadow: 0 20px 60px rgba(0,0,0,0.08), 0 4px 16px rgba(0,0,0,0.04);
             max-width: 780px; margin: 0 auto;
             position: relative; z-index: 1;
             overflow: hidden;
         }
+        .preview-card::before {
+            content: '';
+            position: absolute; top: 0; left: 0; right: 0; height: 6px;
+            background: linear-gradient(90deg, #e8590c, #f59e0b, #0d9488, #7c3aed, #ec4899);
+            z-index: 2;
+        }
+        .preview-card::after {
+            content: '';
+            position: absolute; top: 0; left: 0; right: 0; bottom: 0;
+            background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23e8590c' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+            pointer-events: none; z-index: 0; opacity: 0.6;
+        }
         .preview-card-header {
-            padding: 32px 36px 24px;
-            border-bottom: 1px solid var(--border);
+            padding: 36px 36px 24px;
+            border-bottom: 1px solid rgba(0,0,0,0.06);
             display: flex; align-items: flex-start; justify-content: space-between;
+            position: relative; z-index: 1;
         }
         .preview-card-header h3 {
             font-family: var(--font-display); font-weight: 400;
@@ -392,13 +406,21 @@
         }
         .preview-messages {
             padding: 28px 36px 36px;
-            column-count: 2; column-gap: 20px;
+            column-count: 2; column-gap: 16px;
+            position: relative; z-index: 1;
         }
         .preview-msg {
             break-inside: avoid; margin-bottom: 16px;
-            background: var(--bg); border: 1px solid var(--border);
+            background: rgba(255,255,255,0.85); backdrop-filter: blur(8px);
+            border: 1px solid rgba(255,255,255,0.6);
             border-radius: var(--radius); padding: 20px;
             display: inline-block; width: 100%;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .preview-msg:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.08);
         }
         .preview-msg p {
             font-size: 14px; line-height: 1.65; color: var(--text);
