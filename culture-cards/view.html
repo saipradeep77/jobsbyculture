@@ -74,7 +74,6 @@
             -webkit-font-smoothing: antialiased;
             overflow-x: hidden;
         }
-        .container { max-width: 1140px; margin: 0 auto; padding: 0 24px; }
 
         /* NAV */
         nav {
@@ -120,7 +119,8 @@
 
         /* LOADING */
         .loading-state {
-            padding: 180px 0 120px; text-align: center;
+            min-height: 100vh; display: flex; flex-direction: column;
+            align-items: center; justify-content: center; padding: 120px 24px;
         }
         .loading-spinner {
             width: 36px; height: 36px; border: 3px solid var(--border-2);
@@ -131,57 +131,200 @@
         @keyframes spin { to { transform: rotate(360deg); } }
         .loading-state p { color: var(--text-3); font-size: 15px; }
 
-        /* CARD CONTAINER */
-        .card-container { min-height: 100vh; padding: 100px 0 0; transition: background 0.3s, color 0.3s; }
-        .card-container.theme-default { background: #fffbf0; }
+        /* =============================================
+           CARD CONTAINER — full-width themed immersive area
+           ============================================= */
+        .card-container {
+            min-height: 100vh; padding: 80px 0 0;
+            transition: background 0.4s ease, color 0.3s ease;
+            position: relative;
+        }
 
-        /* CARD HEADER */
+        /* THEME VARIANTS */
+        .card-container.theme-default { background: #fffbf0; }
+        .card-container.theme-warm { background: linear-gradient(135deg, #fef3c7, #fde68a); }
+        .card-container.theme-teal { background: linear-gradient(135deg, #f0fdfa, #ccfbf1); }
+        .card-container.theme-midnight { background: #1e1e2e; color: #e4e4e7; }
+        .card-container.theme-sunset { background: linear-gradient(135deg, #fecaca, #fde68a, #fed7aa); }
+        .card-container.theme-ocean { background: linear-gradient(135deg, #dbeafe, #e0e7ff, #f0f9ff); }
+        .card-container.theme-forest { background: linear-gradient(135deg, #dcfce7, #d1fae5, #ecfdf5); }
+        .card-container.theme-lavender { background: linear-gradient(135deg, #f3e8ff, #ede9fe, #faf5ff); }
+
+        /* CARD HEADER — centered, prominent */
         .card-header {
-            text-align: center; padding: 48px 24px 32px;
+            text-align: center; padding: 56px 24px 20px;
             max-width: 700px; margin: 0 auto;
             animation: fadeUp 0.5s ease both;
         }
-        .card-emoji { font-size: 56px; margin-bottom: 16px; line-height: 1; }
+        .card-emoji {
+            font-size: 64px; margin-bottom: 20px; line-height: 1;
+            filter: drop-shadow(0 4px 12px rgba(0,0,0,0.08));
+        }
         .card-title {
             font-family: var(--font-display); font-weight: 400;
-            font-size: clamp(28px, 4.5vw, 40px);
-            line-height: 1.15; letter-spacing: -0.02em;
-            margin-bottom: 16px;
+            font-size: clamp(32px, 5vw, 48px);
+            line-height: 1.1; letter-spacing: -0.02em;
+            margin-bottom: 12px;
         }
         .card-team {
-            font-size: 16px; color: var(--text-2); margin-bottom: 8px;
+            font-size: 17px; color: var(--text-2); margin-bottom: 6px; font-weight: 500;
         }
         .theme-midnight .card-team { color: #a1a1aa; }
         .card-recipient {
-            display: inline-block; padding: 6px 16px;
-            background: var(--accent-bg); border: 1px solid var(--accent-border);
+            display: inline-block; padding: 6px 18px;
+            background: rgba(255,255,255,0.5); border: 1px solid rgba(0,0,0,0.08);
             border-radius: var(--radius-full); font-size: 14px; font-weight: 500;
-            color: var(--accent); margin-bottom: 12px;
+            color: var(--text-2); margin-bottom: 12px;
+            backdrop-filter: blur(8px);
         }
         .theme-midnight .card-recipient {
-            background: rgba(232,89,12,0.15); border-color: rgba(232,89,12,0.3);
+            background: rgba(255,255,255,0.08); border-color: rgba(255,255,255,0.1);
+            color: #a1a1aa;
         }
         .card-count {
             font-family: var(--font-mono); font-size: 14px;
-            color: var(--text-3);
+            color: var(--text-3); margin-top: 4px;
         }
         .theme-midnight .card-count { color: #71717a; }
 
-        /* MESSAGES GRID */
+        /* CREATOR CONTROLS — inside the card, below header */
+        .creator-controls {
+            display: flex; align-items: center; justify-content: center;
+            gap: 12px; padding: 8px 24px 16px; flex-wrap: wrap;
+            max-width: 700px; margin: 0 auto;
+            animation: fadeUp 0.5s ease 0.1s both;
+        }
+        .creator-controls .ctrl-btn {
+            display: inline-flex; align-items: center; gap: 6px;
+            padding: 8px 18px; border-radius: var(--radius-full);
+            font-family: var(--font-body); font-size: 13px; font-weight: 600;
+            cursor: pointer; transition: all 0.2s; border: 1.5px solid rgba(0,0,0,0.1);
+            background: rgba(255,255,255,0.7); color: var(--text-2);
+            backdrop-filter: blur(8px);
+        }
+        .creator-controls .ctrl-btn:hover {
+            border-color: var(--accent); color: var(--accent); transform: translateY(-1px);
+        }
+        .theme-midnight .creator-controls .ctrl-btn {
+            background: rgba(255,255,255,0.08); border-color: rgba(255,255,255,0.12); color: #a1a1aa;
+        }
+        .theme-midnight .creator-controls .ctrl-btn:hover {
+            border-color: var(--accent); color: var(--accent);
+        }
+
+        /* THEME SWITCHER — dropdown from creator controls */
+        .theme-switcher {
+            max-width: 700px; margin: 0 auto; padding: 0 24px 16px;
+            animation: fadeUp 0.3s ease both;
+        }
+        .theme-switcher-inner {
+            background: rgba(255,255,255,0.8); border: 1px solid rgba(0,0,0,0.08);
+            border-radius: var(--radius); padding: 16px 20px;
+            backdrop-filter: blur(16px);
+        }
+        .theme-midnight .theme-switcher-inner {
+            background: rgba(42,42,58,0.9); border-color: rgba(255,255,255,0.08);
+        }
+        .theme-switcher-label {
+            font-size: 12px; font-weight: 600; color: var(--text-2);
+            text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 10px;
+        }
+        .theme-midnight .theme-switcher-label { color: #a1a1aa; }
+        .theme-swatches { display: flex; gap: 10px; flex-wrap: wrap; }
+        .theme-swatch {
+            width: 36px; height: 36px; border-radius: 50%; border: 2.5px solid rgba(0,0,0,0.1);
+            cursor: pointer; position: relative; transition: all 0.2s;
+            display: flex; align-items: center; justify-content: center;
+        }
+        .theme-swatch:hover { transform: scale(1.15); }
+        .theme-swatch.active { border-color: var(--accent); box-shadow: 0 0 0 3px rgba(232,89,12,0.2); }
+        .theme-swatch .swatch-check { display: none; font-size: 14px; color: var(--text); }
+        .theme-swatch.active .swatch-check { display: block; }
+        .theme-swatch.locked { opacity: 0.45; cursor: not-allowed; }
+        .theme-swatch.locked::after {
+            content: '\1F512'; font-size: 10px; position: absolute;
+            bottom: -2px; right: -2px;
+        }
+        .swatch-default { background: #fffbf0; }
+        .swatch-warm { background: linear-gradient(135deg, #fef3c7, #fde68a); }
+        .swatch-teal { background: linear-gradient(135deg, #f0fdfa, #ccfbf1); }
+        .swatch-midnight { background: #1e1e2e; }
+        .swatch-sunset { background: linear-gradient(135deg, #fecaca, #fde68a, #fed7aa); }
+        .swatch-ocean { background: linear-gradient(135deg, #dbeafe, #e0e7ff, #f0f9ff); }
+        .swatch-forest { background: linear-gradient(135deg, #dcfce7, #d1fae5, #ecfdf5); }
+        .swatch-lavender { background: linear-gradient(135deg, #f3e8ff, #ede9fe, #faf5ff); }
+
+        /* =============================================
+           MASONRY MESSAGES GRID — inside the card
+           ============================================= */
         .messages-section {
-            max-width: 960px; margin: 0 auto; padding: 0 24px;
+            max-width: 960px; margin: 0 auto; padding: 8px 24px 48px;
         }
         .messages-grid {
-            column-count: 3; column-gap: 16px; padding: 24px 0;
+            column-count: 3; column-gap: 16px; padding: 0;
         }
-        .message-card {
-            break-inside: avoid; background: #fff; border-radius: 12px;
-            padding: 20px; margin-bottom: 16px;
-            box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+
+        /* "Sign this card" tile — first item in grid */
+        .add-message-card {
+            break-inside: avoid; margin-bottom: 16px;
+            border: 2.5px dashed var(--accent-border);
+            border-radius: 14px; padding: 32px 20px;
+            text-align: center; cursor: pointer;
+            background: rgba(255,255,255,0.4);
+            backdrop-filter: blur(8px);
+            transition: all 0.25s ease;
             animation: fadeIn 0.4s ease;
         }
+        .add-message-card:hover {
+            border-color: var(--accent); background: rgba(255,255,255,0.65);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 32px rgba(232,89,12,0.1);
+        }
+        .theme-midnight .add-message-card {
+            background: rgba(255,255,255,0.04);
+            border-color: rgba(232,89,12,0.3);
+        }
+        .theme-midnight .add-message-card:hover {
+            background: rgba(255,255,255,0.08);
+            border-color: var(--accent);
+        }
+        .add-icon {
+            display: flex; align-items: center; justify-content: center;
+            width: 48px; height: 48px; margin: 0 auto 10px;
+            border-radius: 50%; background: var(--accent);
+            color: #fff; font-size: 28px; font-weight: 300; line-height: 1;
+        }
+        .add-message-card .add-label {
+            font-size: 15px; font-weight: 600; color: var(--accent);
+            letter-spacing: -0.01em;
+        }
+        .theme-midnight .add-message-card .add-label { color: var(--accent); }
+
+        /* Message tiles — frosted glass */
+        .message-card {
+            break-inside: avoid; margin-bottom: 16px; position: relative;
+            background: rgba(255,255,255,0.85);
+            backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
+            border-radius: 14px; padding: 20px;
+            border: 1px solid rgba(255,255,255,0.6);
+            box-shadow: 0 2px 16px rgba(0,0,0,0.04), 0 1px 4px rgba(0,0,0,0.03);
+            animation: fadeIn 0.4s ease both;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .message-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 32px rgba(0,0,0,0.07);
+        }
         .theme-midnight .message-card {
-            background: #2a2a3a; color: #e4e4e7;
+            background: rgba(42,42,58,0.85);
+            border-color: rgba(255,255,255,0.06);
+            color: #e4e4e7;
+        }
+        .message-media {
+            margin: -20px -20px 14px -20px; border-radius: 14px 14px 0 0; overflow: hidden;
+        }
+        .message-media img {
+            width: 100%; display: block;
         }
         .message-text {
             font-size: 15px; line-height: 1.7; color: var(--text);
@@ -189,19 +332,26 @@
         }
         .theme-midnight .message-text { color: #e4e4e7; }
         .message-author {
-            font-family: var(--font-mono); font-size: 13px; color: var(--text-3);
+            font-family: var(--font-mono); font-size: 12px; color: var(--text-3);
+            text-align: right;
         }
         .theme-midnight .message-author { color: #71717a; }
 
-        @media (max-width: 900px) { .messages-grid { column-count: 2; } }
-        @media (max-width: 600px) { .messages-grid { column-count: 1; } }
+        /* Message delete button */
+        .message-delete {
+            position: absolute; top: 10px; right: 10px;
+            width: 24px; height: 24px; border-radius: 50%;
+            background: rgba(0,0,0,0.06); border: none; cursor: pointer;
+            font-size: 14px; color: var(--text-3); display: none;
+            align-items: center; justify-content: center; transition: all 0.15s;
+        }
+        .message-card:hover .message-delete.visible { display: flex; }
+        .message-delete:hover { background: var(--rose-bg); color: var(--rose); }
 
-        @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
-        @keyframes fadeUp { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }
-
-        /* EMPTY STATE */
+        /* Empty state */
         .empty-state {
             text-align: center; padding: 48px 24px;
+            break-inside: avoid;
         }
         .empty-emoji { font-size: 56px; margin-bottom: 16px; line-height: 1; }
         .empty-text {
@@ -211,48 +361,56 @@
         .theme-midnight .empty-text { color: #a1a1aa; }
         .empty-sub { font-size: 15px; color: var(--text-3); }
 
-        /* SIGN FORM */
+        /* Grid responsive */
+        @media (max-width: 900px) { .messages-grid { column-count: 2; } }
+        @media (max-width: 600px) { .messages-grid { column-count: 1; } }
+
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+        @keyframes fadeUp { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }
+
+        /* =============================================
+           SIGN FORM — below the card, clean section
+           ============================================= */
         .sign-section {
-            max-width: 600px; margin: 40px auto 0; padding: 0 24px 60px;
+            background: var(--bg); padding: 56px 24px 48px;
+            border-top: 1px solid var(--border);
+        }
+        .sign-section-inner {
+            max-width: 560px; margin: 0 auto;
             animation: fadeUp 0.5s ease 0.2s both;
+        }
+        .sign-title {
+            font-family: var(--font-display); font-size: 28px;
+            text-align: center; margin-bottom: 24px; color: var(--text);
         }
         .sign-card {
             background: var(--bg-raised); border: 1px solid var(--border);
-            border-radius: var(--radius); padding: 32px;
-            box-shadow: var(--shadow);
+            border-radius: var(--radius-lg); padding: 32px;
+            box-shadow: var(--shadow-lg);
         }
-        .theme-midnight .sign-card {
-            background: #2a2a3a; border-color: rgba(255,255,255,0.08);
-        }
-        .sign-title {
-            font-family: var(--font-display); font-size: 24px;
-            margin-bottom: 20px;
+        .sign-row {
+            display: grid; grid-template-columns: 1fr 1fr; gap: 12px;
+            margin-bottom: 12px;
         }
         .sign-input {
-            width: 100%; padding: 12px 16px;
+            width: 100%; padding: 13px 16px;
             border: 1.5px solid var(--border-2); border-radius: var(--radius-sm);
             font-family: var(--font-body); font-size: 15px;
             background: var(--bg); color: var(--text);
             transition: border-color 0.2s, box-shadow 0.2s;
-            outline: none; margin-bottom: 14px;
-        }
-        .theme-midnight .sign-input {
-            background: #1e1e2e; color: #e4e4e7; border-color: rgba(255,255,255,0.12);
+            outline: none;
         }
         .sign-input:focus {
             border-color: var(--accent); box-shadow: 0 0 0 3px rgba(232,89,12,0.1);
         }
         .sign-input::placeholder { color: var(--text-3); }
         .sign-textarea {
-            width: 100%; padding: 12px 16px; min-height: 120px; resize: vertical;
+            width: 100%; padding: 13px 16px; min-height: 120px; resize: vertical;
             border: 1.5px solid var(--border-2); border-radius: var(--radius-sm);
             font-family: var(--font-body); font-size: 15px;
             background: var(--bg); color: var(--text);
             transition: border-color 0.2s, box-shadow 0.2s;
             outline: none; margin-bottom: 4px;
-        }
-        .theme-midnight .sign-textarea {
-            background: #1e1e2e; color: #e4e4e7; border-color: rgba(255,255,255,0.12);
         }
         .sign-textarea:focus {
             border-color: var(--accent); box-shadow: 0 0 0 3px rgba(232,89,12,0.1);
@@ -263,56 +421,227 @@
             text-align: right; margin-bottom: 16px;
         }
         .sign-btn {
-            width: 100%; padding: 14px 24px;
+            width: 100%; padding: 15px 24px;
             background: var(--accent); color: #fff;
             border: none; border-radius: var(--radius-sm);
             font-family: var(--font-body); font-size: 16px; font-weight: 600;
             cursor: pointer; transition: all 0.2s;
         }
-        .sign-btn:hover { background: var(--accent-hover); transform: translateY(-1px); }
-        .sign-btn:disabled { opacity: 0.6; cursor: not-allowed; transform: none; }
+        .sign-btn:hover { background: var(--accent-hover); transform: translateY(-1px); box-shadow: 0 4px 16px rgba(232,89,12,0.2); }
+        .sign-btn:disabled { opacity: 0.6; cursor: not-allowed; transform: none; box-shadow: none; }
+
+        /* IMAGE UPLOAD */
+        .media-upload-area { margin-bottom: 16px; }
+        .upload-zone {
+            border: 2px dashed var(--border-2); border-radius: var(--radius-sm);
+            padding: 20px; text-align: center; cursor: pointer;
+            transition: all 0.2s; background: var(--bg);
+        }
+        .upload-zone:hover, .upload-zone.dragover {
+            border-color: var(--accent); background: var(--accent-bg);
+        }
+        .upload-zone-icon { font-size: 28px; margin-bottom: 4px; }
+        .upload-zone-text { font-size: 13px; color: var(--text-3); }
+        .upload-zone-text strong { color: var(--accent); }
+        .upload-file-input { display: none; }
+        .upload-preview {
+            display: none; position: relative; margin-bottom: 14px;
+        }
+        .upload-preview img {
+            max-width: 100%; max-height: 200px; border-radius: var(--radius-sm);
+            object-fit: cover;
+        }
+        .upload-preview .remove-upload {
+            position: absolute; top: 6px; right: 6px;
+            width: 28px; height: 28px; background: rgba(0,0,0,0.6);
+            color: #fff; border: none; border-radius: 50%; cursor: pointer;
+            font-size: 16px; display: flex; align-items: center; justify-content: center;
+        }
+        .gif-input-row { display: flex; gap: 8px; margin-top: 8px; }
+        .gif-input {
+            flex: 1; padding: 8px 12px; border: 1.5px solid var(--border-2);
+            border-radius: var(--radius-sm); font-family: var(--font-body);
+            font-size: 13px; background: var(--bg); color: var(--text); outline: none;
+        }
+        .gif-input:focus { border-color: var(--accent); }
+        .media-toggle-row { display: flex; gap: 8px; margin-bottom: 10px; }
+        .media-toggle-btn {
+            padding: 7px 16px; border: 1.5px solid var(--border-2);
+            border-radius: var(--radius-full); background: none;
+            font-family: var(--font-body); font-size: 13px; font-weight: 500;
+            color: var(--text-2); cursor: pointer; transition: all 0.2s;
+        }
+        .media-toggle-btn:hover { border-color: var(--accent); color: var(--accent); }
+        .media-toggle-btn.active {
+            border-color: var(--accent); background: var(--accent-bg); color: var(--accent);
+        }
+        .media-upload-locked {
+            padding: 18px; text-align: center; border: 2px dashed var(--border-2);
+            border-radius: var(--radius-sm); color: var(--text-3); font-size: 13px;
+            margin-bottom: 16px;
+        }
+        .media-upload-locked span { display: block; margin-top: 4px; font-size: 12px; }
+
+        /* =============================================
+           PREMIUM / SEND / DOWNLOAD — below sign form
+           ============================================= */
+        .actions-section {
+            background: var(--bg); padding: 0 24px 48px;
+        }
+        .actions-inner {
+            max-width: 560px; margin: 0 auto;
+        }
 
         /* SHARE SECTION */
         .share-section {
-            max-width: 600px; margin: 0 auto; padding: 0 24px 60px;
-            text-align: center;
+            padding: 32px 0; text-align: center;
+            animation: fadeUp 0.5s ease 0.15s both;
         }
         .share-label {
-            font-size: 14px; font-weight: 600; color: var(--text-2);
-            margin-bottom: 12px;
+            font-size: 13px; font-weight: 600; color: var(--text-2);
+            text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 12px;
         }
-        .theme-midnight .share-label { color: #a1a1aa; }
         .share-row {
-            display: flex; gap: 8px; align-items: center;
-            max-width: 460px; margin: 0 auto;
+            display: flex; gap: 8px; align-items: center; margin: 0 auto;
         }
         .share-url {
-            flex: 1; padding: 10px 14px;
+            flex: 1; padding: 11px 14px;
             background: var(--bg-raised); border: 1px solid var(--border-2);
             border-radius: var(--radius-sm); font-family: var(--font-mono);
             font-size: 13px; color: var(--text-2);
             overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
         }
-        .theme-midnight .share-url {
-            background: #2a2a3a; border-color: rgba(255,255,255,0.1); color: #a1a1aa;
-        }
         .copy-btn {
-            padding: 10px 18px; background: var(--accent); color: #fff;
+            padding: 11px 20px; background: var(--accent); color: #fff;
             border: none; border-radius: var(--radius-sm);
             font-family: var(--font-body); font-size: 13px; font-weight: 600;
             cursor: pointer; transition: all 0.2s; white-space: nowrap;
         }
         .copy-btn:hover { background: var(--accent-hover); }
+        .social-share {
+            display: flex; gap: 8px; justify-content: center; margin-top: 14px;
+        }
+        .social-btn {
+            display: inline-flex; align-items: center; gap: 6px;
+            padding: 8px 16px; border-radius: var(--radius-full);
+            font-family: var(--font-body); font-size: 13px; font-weight: 500;
+            border: 1.5px solid var(--border-2); background: var(--bg-raised);
+            color: var(--text-2); cursor: pointer; text-decoration: none;
+            transition: all 0.2s;
+        }
+        .social-btn:hover { border-color: var(--accent); color: var(--accent); }
+
+        /* PREMIUM UPSELL */
+        .premium-section {
+            padding: 0 0 32px;
+            animation: fadeUp 0.5s ease 0.25s both;
+        }
+        .premium-card {
+            background: linear-gradient(135deg, var(--teal-bg), rgba(13,148,136,0.02));
+            border: 1.5px solid var(--teal-border); border-radius: var(--radius-lg);
+            padding: 32px; text-align: center;
+        }
+        .premium-icon { font-size: 32px; margin-bottom: 8px; }
+        .premium-title {
+            font-family: var(--font-display); font-size: 24px; margin-bottom: 6px;
+        }
+        .premium-subtitle {
+            font-size: 14px; color: var(--text-2); margin-bottom: 20px;
+        }
+        .premium-benefits {
+            list-style: none; text-align: left; max-width: 320px;
+            margin: 0 auto 24px; font-size: 14px;
+        }
+        .premium-benefits li { padding: 5px 0; color: var(--text-2); }
+        .premium-benefits li::before {
+            content: '\2713'; color: var(--teal); font-weight: 700; margin-right: 10px;
+        }
+        .premium-btn {
+            display: inline-block; padding: 14px 32px;
+            background: var(--teal); color: #fff; border: none;
+            border-radius: var(--radius-sm); font-family: var(--font-body);
+            font-size: 16px; font-weight: 600; cursor: pointer;
+            transition: all 0.2s; text-decoration: none;
+        }
+        .premium-btn:hover { background: #0f766e; transform: translateY(-1px); }
+        .premium-price {
+            display: block; font-family: var(--font-mono); font-size: 12px;
+            color: var(--text-3); margin-top: 8px;
+        }
+
+        /* SEND CARD */
+        .send-section { padding: 0 0 24px; animation: fadeUp 0.5s ease 0.3s both; }
+        .send-card {
+            background: var(--bg-raised); border: 1px solid var(--border);
+            border-radius: var(--radius); padding: 24px 28px;
+            box-shadow: var(--shadow);
+        }
+        .send-title {
+            font-family: var(--font-display); font-size: 20px; margin-bottom: 16px;
+        }
+        .send-row { display: flex; gap: 8px; margin-bottom: 12px; }
+        .send-input {
+            flex: 1; padding: 10px 14px;
+            border: 1.5px solid var(--border-2); border-radius: var(--radius-sm);
+            font-family: var(--font-body); font-size: 14px;
+            background: var(--bg); color: var(--text); outline: none;
+        }
+        .send-input:focus { border-color: var(--accent); }
+        .send-btn {
+            padding: 10px 20px; background: var(--accent); color: #fff;
+            border: none; border-radius: var(--radius-sm); font-family: var(--font-body);
+            font-size: 14px; font-weight: 600; cursor: pointer; transition: all 0.2s;
+            white-space: nowrap;
+        }
+        .send-btn:hover { background: var(--accent-hover); }
+        .send-btn:disabled { opacity: 0.6; cursor: not-allowed; }
+        .schedule-row { display: flex; gap: 8px; align-items: center; margin-top: 8px; }
+        .schedule-input {
+            padding: 8px 12px; border: 1.5px solid var(--border-2);
+            border-radius: var(--radius-sm); font-family: var(--font-body);
+            font-size: 13px; background: var(--bg); color: var(--text); outline: none;
+        }
+        .schedule-toggle {
+            font-size: 13px; color: var(--teal); cursor: pointer;
+            background: none; border: none; font-family: var(--font-body);
+            font-weight: 500; padding: 0;
+        }
+        .schedule-toggle:hover { text-decoration: underline; }
+
+        /* DOWNLOAD */
+        .download-section {
+            padding: 0 0 24px; text-align: center;
+        }
+        .download-btn {
+            display: inline-flex; align-items: center; gap: 8px;
+            padding: 12px 24px; background: var(--bg-raised);
+            border: 1.5px solid var(--border-2); border-radius: var(--radius-sm);
+            font-family: var(--font-body); font-size: 14px; font-weight: 600;
+            color: var(--text); cursor: pointer; transition: all 0.2s;
+        }
+        .download-btn:hover { border-color: var(--accent); color: var(--accent); transform: translateY(-1px); }
+
+        /* BRANDING FOOTER */
+        .card-branding {
+            text-align: center; padding: 24px 0 8px;
+            font-size: 13px; color: var(--text-3);
+        }
+        .card-branding a {
+            color: var(--accent); text-decoration: none; font-weight: 500;
+        }
+        .card-branding a:hover { text-decoration: underline; }
 
         /* 404 STATE */
         .not-found {
-            padding: 180px 0 120px; text-align: center;
+            min-height: 100vh; display: flex; flex-direction: column;
+            align-items: center; justify-content: center; padding: 120px 24px;
         }
         .not-found h2 {
             font-family: var(--font-display); font-size: 32px; margin-bottom: 12px;
         }
         .not-found p {
-            font-size: 16px; color: var(--text-2); margin-bottom: 24px; max-width: 400px; margin-left: auto; margin-right: auto;
+            font-size: 16px; color: var(--text-2); margin-bottom: 24px;
+            max-width: 400px; text-align: center;
         }
         .not-found a {
             display: inline-block; padding: 12px 24px;
@@ -334,7 +663,8 @@
         .toast.show { top: 24px; }
 
         /* FOOTER */
-        footer { padding: 56px 0 36px; border-top: 1px solid var(--border); }
+        footer { padding: 56px 0 36px; border-top: 1px solid var(--border); background: var(--bg); }
+        .container { max-width: 1140px; margin: 0 auto; padding: 0 24px; }
         .ft-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 40px; margin-bottom: 40px; }
         .ft-about p { font-size: 13px; color: var(--text-3); margin-top: 10px; line-height: 1.7; max-width: 260px; }
         .ft-col h4 { font-size: 12px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em; color: var(--text-2); margin-bottom: 14px; }
@@ -342,292 +672,6 @@
         .ft-col a:hover { color: var(--text); }
         .ft-bar { border-top: 1px solid var(--border); padding-top: 20px; display: flex; justify-content: space-between; align-items: center; }
         .ft-bar p { font-size: 12px; color: var(--text-3); }
-
-        /* THEME VARIANTS */
-        .card-container.theme-warm { background: linear-gradient(135deg, #fef3c7, #fde68a); }
-        .card-container.theme-teal { background: linear-gradient(135deg, #f0fdfa, #ccfbf1); }
-        .card-container.theme-midnight { background: #1e1e2e; color: #e4e4e7; }
-        /* Premium themes */
-        .card-container.theme-sunset { background: linear-gradient(135deg, #fecaca, #fde68a, #fed7aa); }
-        .card-container.theme-ocean { background: linear-gradient(135deg, #dbeafe, #e0e7ff, #f0f9ff); }
-        .card-container.theme-forest { background: linear-gradient(135deg, #dcfce7, #d1fae5, #ecfdf5); }
-        .card-container.theme-lavender { background: linear-gradient(135deg, #f3e8ff, #ede9fe, #faf5ff); }
-
-        /* THEME SWITCHER */
-        .theme-switcher {
-            max-width: 600px; margin: 0 auto 24px; padding: 0 24px;
-            animation: fadeUp 0.5s ease 0.15s both;
-        }
-        .theme-switcher-inner {
-            background: var(--bg-raised); border: 1px solid var(--border);
-            border-radius: var(--radius); padding: 20px 24px;
-            box-shadow: var(--shadow);
-        }
-        .theme-midnight .theme-switcher-inner {
-            background: #2a2a3a; border-color: rgba(255,255,255,0.08);
-        }
-        .theme-switcher-label {
-            font-size: 13px; font-weight: 600; color: var(--text-2);
-            text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 12px;
-        }
-        .theme-midnight .theme-switcher-label { color: #a1a1aa; }
-        .theme-swatches { display: flex; gap: 10px; flex-wrap: wrap; }
-        .theme-swatch {
-            width: 36px; height: 36px; border-radius: 50%; border: 2px solid var(--border-2);
-            cursor: pointer; position: relative; transition: all 0.2s;
-            display: flex; align-items: center; justify-content: center;
-        }
-        .theme-swatch:hover { transform: scale(1.1); }
-        .theme-swatch.active { border-color: var(--accent); box-shadow: 0 0 0 3px rgba(232,89,12,0.15); }
-        .theme-swatch .swatch-check {
-            display: none; font-size: 14px; color: var(--text);
-        }
-        .theme-swatch.active .swatch-check { display: block; }
-        .theme-swatch.locked { opacity: 0.5; cursor: not-allowed; }
-        .theme-swatch.locked::after {
-            content: '\1F512'; font-size: 10px; position: absolute;
-            bottom: -2px; right: -2px;
-        }
-        .swatch-default { background: #fffbf0; }
-        .swatch-warm { background: linear-gradient(135deg, #fef3c7, #fde68a); }
-        .swatch-teal { background: linear-gradient(135deg, #f0fdfa, #ccfbf1); }
-        .swatch-midnight { background: #1e1e2e; }
-        .swatch-sunset { background: linear-gradient(135deg, #fecaca, #fde68a, #fed7aa); }
-        .swatch-ocean { background: linear-gradient(135deg, #dbeafe, #e0e7ff, #f0f9ff); }
-        .swatch-forest { background: linear-gradient(135deg, #dcfce7, #d1fae5, #ecfdf5); }
-        .swatch-lavender { background: linear-gradient(135deg, #f3e8ff, #ede9fe, #faf5ff); }
-
-        /* IMAGE UPLOAD */
-        .media-upload-area {
-            margin-bottom: 14px;
-        }
-        .upload-zone {
-            border: 2px dashed var(--border-2); border-radius: var(--radius-sm);
-            padding: 20px; text-align: center; cursor: pointer;
-            transition: all 0.2s; background: var(--bg);
-        }
-        .upload-zone:hover, .upload-zone.dragover {
-            border-color: var(--accent); background: var(--accent-bg);
-        }
-        .theme-midnight .upload-zone {
-            background: #1e1e2e; border-color: rgba(255,255,255,0.12);
-        }
-        .theme-midnight .upload-zone:hover, .theme-midnight .upload-zone.dragover {
-            border-color: var(--accent); background: rgba(232,89,12,0.1);
-        }
-        .upload-zone-icon { font-size: 28px; margin-bottom: 4px; }
-        .upload-zone-text { font-size: 13px; color: var(--text-3); }
-        .upload-zone-text strong { color: var(--accent); }
-        .upload-file-input { display: none; }
-        .upload-preview {
-            display: none; position: relative; margin-bottom: 14px;
-        }
-        .upload-preview img {
-            max-width: 100%; max-height: 200px; border-radius: var(--radius-sm);
-            object-fit: cover;
-        }
-        .upload-preview .remove-upload {
-            position: absolute; top: 6px; right: 6px;
-            width: 24px; height: 24px; background: rgba(0,0,0,0.6);
-            color: #fff; border: none; border-radius: 50%; cursor: pointer;
-            font-size: 14px; display: flex; align-items: center; justify-content: center;
-        }
-        .gif-input-row {
-            display: flex; gap: 8px; margin-top: 8px;
-        }
-        .gif-input {
-            flex: 1; padding: 8px 12px; border: 1.5px solid var(--border-2);
-            border-radius: var(--radius-sm); font-family: var(--font-body);
-            font-size: 13px; background: var(--bg); color: var(--text);
-            outline: none;
-        }
-        .theme-midnight .gif-input {
-            background: #1e1e2e; color: #e4e4e7; border-color: rgba(255,255,255,0.12);
-        }
-        .gif-input:focus { border-color: var(--accent); }
-        .media-toggle-row {
-            display: flex; gap: 8px; margin-bottom: 8px;
-        }
-        .media-toggle-btn {
-            padding: 6px 14px; border: 1.5px solid var(--border-2);
-            border-radius: var(--radius-full); background: none;
-            font-family: var(--font-body); font-size: 13px; font-weight: 500;
-            color: var(--text-2); cursor: pointer; transition: all 0.2s;
-        }
-        .media-toggle-btn:hover { border-color: var(--accent); color: var(--accent); }
-        .media-toggle-btn.active {
-            border-color: var(--accent); background: var(--accent-bg); color: var(--accent);
-        }
-        .media-upload-locked {
-            padding: 16px; text-align: center; border: 2px dashed var(--border-2);
-            border-radius: var(--radius-sm); color: var(--text-3); font-size: 13px;
-        }
-        .media-upload-locked span { display: block; margin-top: 4px; font-size: 12px; }
-
-        /* MESSAGE MEDIA */
-        .message-media {
-            margin-bottom: 10px; border-radius: 8px; overflow: hidden;
-        }
-        .message-media img {
-            width: 100%; display: block; border-radius: 8px;
-        }
-
-        /* MESSAGE DELETE */
-        .message-card { position: relative; }
-        .message-delete {
-            position: absolute; top: 8px; right: 8px;
-            width: 22px; height: 22px; border-radius: 50%;
-            background: rgba(0,0,0,0.06); border: none; cursor: pointer;
-            font-size: 13px; color: var(--text-3); display: none;
-            align-items: center; justify-content: center; transition: all 0.15s;
-        }
-        .message-card:hover .message-delete.visible { display: flex; }
-        .message-delete:hover { background: var(--rose-bg); color: var(--rose); }
-
-        /* PREMIUM UPSELL */
-        .premium-section {
-            max-width: 600px; margin: 0 auto; padding: 0 24px 32px;
-            animation: fadeUp 0.5s ease 0.25s both;
-        }
-        .premium-card {
-            background: linear-gradient(135deg, var(--teal-bg), rgba(13,148,136,0.02));
-            border: 1.5px solid var(--teal-border); border-radius: var(--radius);
-            padding: 28px 32px; text-align: center;
-        }
-        .theme-midnight .premium-card {
-            background: linear-gradient(135deg, rgba(13,148,136,0.12), rgba(13,148,136,0.04));
-            border-color: rgba(13,148,136,0.3);
-        }
-        .premium-icon { font-size: 32px; margin-bottom: 8px; }
-        .premium-title {
-            font-family: var(--font-display); font-size: 22px; margin-bottom: 6px;
-        }
-        .premium-subtitle {
-            font-size: 14px; color: var(--text-2); margin-bottom: 20px;
-        }
-        .theme-midnight .premium-subtitle { color: #a1a1aa; }
-        .premium-benefits {
-            list-style: none; text-align: left; max-width: 320px;
-            margin: 0 auto 24px; font-size: 14px;
-        }
-        .premium-benefits li {
-            padding: 5px 0; color: var(--text-2);
-        }
-        .theme-midnight .premium-benefits li { color: #a1a1aa; }
-        .premium-benefits li::before {
-            content: '\2713'; color: var(--teal); font-weight: 700;
-            margin-right: 10px;
-        }
-        .premium-btn {
-            display: inline-block; padding: 14px 32px;
-            background: var(--teal); color: #fff; border: none;
-            border-radius: var(--radius-sm); font-family: var(--font-body);
-            font-size: 16px; font-weight: 600; cursor: pointer;
-            transition: all 0.2s; text-decoration: none;
-        }
-        .premium-btn:hover { background: #0f766e; transform: translateY(-1px); }
-        .premium-price {
-            display: block; font-family: var(--font-mono); font-size: 12px;
-            color: var(--text-3); margin-top: 8px;
-        }
-
-        /* SEND CARD */
-        .send-section {
-            max-width: 600px; margin: 0 auto; padding: 0 24px 32px;
-            animation: fadeUp 0.5s ease 0.3s both;
-        }
-        .send-card {
-            background: var(--bg-raised); border: 1px solid var(--border);
-            border-radius: var(--radius); padding: 24px 28px;
-            box-shadow: var(--shadow);
-        }
-        .theme-midnight .send-card {
-            background: #2a2a3a; border-color: rgba(255,255,255,0.08);
-        }
-        .send-title {
-            font-family: var(--font-display); font-size: 20px; margin-bottom: 16px;
-        }
-        .send-row { display: flex; gap: 8px; margin-bottom: 12px; }
-        .send-input {
-            flex: 1; padding: 10px 14px;
-            border: 1.5px solid var(--border-2); border-radius: var(--radius-sm);
-            font-family: var(--font-body); font-size: 14px;
-            background: var(--bg); color: var(--text); outline: none;
-        }
-        .theme-midnight .send-input {
-            background: #1e1e2e; color: #e4e4e7; border-color: rgba(255,255,255,0.12);
-        }
-        .send-input:focus { border-color: var(--accent); }
-        .send-btn {
-            padding: 10px 20px; background: var(--accent); color: #fff;
-            border: none; border-radius: var(--radius-sm); font-family: var(--font-body);
-            font-size: 14px; font-weight: 600; cursor: pointer; transition: all 0.2s;
-            white-space: nowrap;
-        }
-        .send-btn:hover { background: var(--accent-hover); }
-        .send-btn:disabled { opacity: 0.6; cursor: not-allowed; }
-        .schedule-row {
-            display: flex; gap: 8px; align-items: center; margin-top: 8px;
-        }
-        .schedule-input {
-            padding: 8px 12px; border: 1.5px solid var(--border-2);
-            border-radius: var(--radius-sm); font-family: var(--font-body);
-            font-size: 13px; background: var(--bg); color: var(--text); outline: none;
-        }
-        .theme-midnight .schedule-input {
-            background: #1e1e2e; color: #e4e4e7; border-color: rgba(255,255,255,0.12);
-        }
-        .schedule-toggle {
-            font-size: 13px; color: var(--teal); cursor: pointer;
-            background: none; border: none; font-family: var(--font-body);
-            font-weight: 500; padding: 0;
-        }
-        .schedule-toggle:hover { text-decoration: underline; }
-
-        /* DOWNLOAD BUTTON */
-        .download-section {
-            max-width: 600px; margin: 0 auto; padding: 0 24px 24px;
-            text-align: center;
-        }
-        .download-btn {
-            display: inline-flex; align-items: center; gap: 8px;
-            padding: 12px 24px; background: var(--bg-raised);
-            border: 1.5px solid var(--border-2); border-radius: var(--radius-sm);
-            font-family: var(--font-body); font-size: 14px; font-weight: 600;
-            color: var(--text); cursor: pointer; transition: all 0.2s;
-        }
-        .download-btn:hover { border-color: var(--accent); color: var(--accent); transform: translateY(-1px); }
-        .theme-midnight .download-btn {
-            background: #2a2a3a; border-color: rgba(255,255,255,0.12); color: #e4e4e7;
-        }
-
-        /* SOCIAL SHARE BUTTONS */
-        .social-share {
-            display: flex; gap: 8px; justify-content: center;
-            margin-top: 16px;
-        }
-        .social-btn {
-            display: inline-flex; align-items: center; gap: 6px;
-            padding: 8px 16px; border-radius: var(--radius-full);
-            font-family: var(--font-body); font-size: 13px; font-weight: 500;
-            border: 1.5px solid var(--border-2); background: var(--bg-raised);
-            color: var(--text-2); cursor: pointer; text-decoration: none;
-            transition: all 0.2s;
-        }
-        .social-btn:hover { border-color: var(--accent); color: var(--accent); }
-        .theme-midnight .social-btn {
-            background: #2a2a3a; border-color: rgba(255,255,255,0.12); color: #a1a1aa;
-        }
-
-        /* BRANDING FOOTER */
-        .card-branding {
-            text-align: center; padding: 24px 0 40px;
-            font-size: 13px; color: var(--text-3);
-        }
-        .card-branding a {
-            color: var(--accent); text-decoration: none; font-weight: 500;
-        }
-        .card-branding a:hover { text-decoration: underline; }
 
         /* RESPONSIVE */
         @media (max-width: 768px) {
@@ -640,9 +684,11 @@
                 box-shadow: 0 8px 24px rgba(0,0,0,0.06);
             }
             .nav-links.open { display: flex; }
-            .card-header { padding: 32px 16px 24px; }
+            .card-header { padding: 40px 16px 16px; }
+            .card-emoji { font-size: 52px; }
             .card-title { font-size: 28px; }
             .sign-card { padding: 24px 20px; }
+            .sign-row { grid-template-columns: 1fr; }
             .ft-grid { grid-template-columns: 1fr 1fr; gap: 28px; }
         }
         @media (max-width: 480px) {
@@ -653,6 +699,7 @@
             .send-row { flex-direction: column; }
             .send-btn { width: 100%; }
             .social-share { flex-wrap: wrap; justify-content: center; }
+            .creator-controls { gap: 8px; }
         }
     </style>
     <script async src="https://plausible.io/js/pa-qa3pjs5eZbsfBQJMk4hVW.js"></script>
@@ -694,8 +741,10 @@
 
 <!-- Card template (hidden, populated by JS) -->
 <template id="cardTemplate">
+    <!-- The ENTIRE card is one themed container -->
     <div class="card-container" id="cardContainer">
-        <!-- Header -->
+
+        <!-- Card header (centered, prominent) -->
         <div class="card-header">
             <div class="card-emoji" id="cardEmoji"></div>
             <h1 class="card-title" id="cardTitle"></h1>
@@ -704,12 +753,14 @@
             <div class="card-count" id="cardCount"></div>
         </div>
 
-        <!-- Messages -->
-        <div class="messages-section">
-            <div class="messages-grid" id="messagesGrid"></div>
+        <!-- Creator controls (only if creator) -->
+        <div class="creator-controls" id="creatorControls" style="display:none">
+            <button class="ctrl-btn" id="themeToggleBtn" onclick="toggleThemePanel()">&#127912; Theme</button>
+            <button class="ctrl-btn" onclick="copyLink()">&#128279; Copy Link</button>
+            <button class="ctrl-btn" onclick="nativeShare()" id="creatorShareBtn" style="display:none">&#128228; Share</button>
         </div>
 
-        <!-- Theme Switcher (creator only) -->
+        <!-- Theme switcher (dropdown, creator only) -->
         <div class="theme-switcher" id="themeSwitcher" style="display:none">
             <div class="theme-switcher-inner">
                 <div class="theme-switcher-label">Card Theme</div>
@@ -726,13 +777,22 @@
             </div>
         </div>
 
-        <!-- Sign form -->
-        <div class="sign-section">
+        <!-- Masonry grid of messages (INSIDE the card) -->
+        <div class="messages-section">
+            <div class="messages-grid" id="messagesGrid"></div>
+        </div>
+    </div>
+
+    <!-- Sign form (BELOW the card, clean separate section) -->
+    <section class="sign-section" id="signSection">
+        <div class="sign-section-inner">
+            <h2 class="sign-title">Sign This Card</h2>
             <div class="sign-card">
-                <h2 class="sign-title">Sign This Card</h2>
                 <form id="signForm" autocomplete="off">
-                    <input type="text" id="signerName" class="sign-input" placeholder="Your name" required>
-                    <input type="email" id="signerEmail" class="sign-input" placeholder="Your email (optional, for editing)" style="margin-bottom:14px">
+                    <div class="sign-row">
+                        <input type="text" id="signerName" class="sign-input" placeholder="Your name" required>
+                        <input type="email" id="signerEmail" class="sign-input" placeholder="Email (optional)">
+                    </div>
                     <textarea id="signerMessage" class="sign-textarea" placeholder="Write your message..." maxlength="500" required></textarea>
                     <div class="char-count" id="charCount">0 / 500</div>
 
@@ -775,64 +835,70 @@
                 </form>
             </div>
         </div>
+    </section>
 
-        <!-- Premium Upsell (shown if not paid) -->
-        <div class="premium-section" id="premiumSection" style="display:none">
-            <div class="premium-card">
-                <div class="premium-icon">&#10024;</div>
-                <div class="premium-title">Unlock Premium</div>
-                <div class="premium-subtitle">Make your card extra special</div>
-                <ul class="premium-benefits">
-                    <li>Upload images &amp; GIFs on messages</li>
-                    <li>Premium card themes</li>
-                    <li>Download card as image</li>
-                    <li>Email delivery to recipient</li>
-                    <li>Schedule delivery for later</li>
-                    <li>Remove branding watermark</li>
-                </ul>
-                <button class="premium-btn" id="premiumBtn" onclick="unlockPremium()">Unlock for $5.99 &rarr;</button>
-                <span class="premium-price">One-time payment &middot; No subscription</span>
-            </div>
-        </div>
+    <!-- Premium / Send / Download section (below sign form) -->
+    <div class="actions-section">
+        <div class="actions-inner">
 
-        <!-- Send Card (paid only) -->
-        <div class="send-section" id="sendSection" style="display:none">
-            <div class="send-card">
-                <h3 class="send-title">&#9993; Send This Card</h3>
-                <div class="send-row">
-                    <input type="email" class="send-input" id="recipientEmail" placeholder="Recipient's email address">
-                    <button class="send-btn" id="sendNowBtn" onclick="sendCard()">Send Now</button>
+            <!-- Share -->
+            <div class="share-section">
+                <div class="share-label">Share this card</div>
+                <div class="share-row">
+                    <div class="share-url" id="shareUrl"></div>
+                    <button class="copy-btn" id="copyBtn" onclick="copyLink()">Copy Link</button>
                 </div>
-                <button type="button" class="schedule-toggle" id="scheduleToggle" onclick="toggleSchedule()">&#128197; Schedule for later</button>
-                <div class="schedule-row" id="scheduleRow" style="display:none">
-                    <input type="datetime-local" class="schedule-input" id="scheduleDate">
-                    <button class="send-btn" onclick="sendCard(true)" style="padding:8px 16px;font-size:13px">Schedule</button>
+                <div class="social-share">
+                    <a class="social-btn" id="shareTwitter" href="#" target="_blank" rel="noopener">&#120143; Twitter</a>
+                    <a class="social-btn" id="shareLinkedin" href="#" target="_blank" rel="noopener">in LinkedIn</a>
+                    <button class="social-btn" id="shareNative" onclick="nativeShare()" style="display:none">&#128279; Share</button>
                 </div>
             </div>
-        </div>
 
-        <!-- Download (paid only) -->
-        <div class="download-section" id="downloadSection" style="display:none">
-            <button class="download-btn" onclick="downloadCard()">&#11015; Download as Image</button>
-        </div>
-
-        <!-- Share -->
-        <div class="share-section">
-            <div class="share-label">Share this card</div>
-            <div class="share-row">
-                <div class="share-url" id="shareUrl"></div>
-                <button class="copy-btn" id="copyBtn" onclick="copyLink()">Copy Link</button>
+            <!-- Premium Upsell (shown if not paid) -->
+            <div class="premium-section" id="premiumSection" style="display:none">
+                <div class="premium-card">
+                    <div class="premium-icon">&#10024;</div>
+                    <div class="premium-title">Unlock Premium</div>
+                    <div class="premium-subtitle">Make your card extra special</div>
+                    <ul class="premium-benefits">
+                        <li>Upload images &amp; GIFs on messages</li>
+                        <li>Premium card themes</li>
+                        <li>Download card as image</li>
+                        <li>Email delivery to recipient</li>
+                        <li>Schedule delivery for later</li>
+                        <li>Remove branding watermark</li>
+                    </ul>
+                    <button class="premium-btn" id="premiumBtn" onclick="unlockPremium()">Unlock for $5.99 &rarr;</button>
+                    <span class="premium-price">One-time payment &middot; No subscription</span>
+                </div>
             </div>
-            <div class="social-share">
-                <a class="social-btn" id="shareTwitter" href="#" target="_blank" rel="noopener">&#120143; Twitter</a>
-                <a class="social-btn" id="shareLinkedin" href="#" target="_blank" rel="noopener">in LinkedIn</a>
-                <button class="social-btn" id="shareNative" onclick="nativeShare()" style="display:none">&#128279; Share</button>
-            </div>
-        </div>
 
-        <!-- Branding (hidden for paid) -->
-        <div class="card-branding" id="cardBranding">
-            Made with <a href="/culture-cards/create">Culture Cards</a> by <a href="/">JobsByCulture</a>
+            <!-- Send Card (paid only) -->
+            <div class="send-section" id="sendSection" style="display:none">
+                <div class="send-card">
+                    <h3 class="send-title">&#9993; Send This Card</h3>
+                    <div class="send-row">
+                        <input type="email" class="send-input" id="recipientEmail" placeholder="Recipient's email address">
+                        <button class="send-btn" id="sendNowBtn" onclick="sendCard()">Send Now</button>
+                    </div>
+                    <button type="button" class="schedule-toggle" id="scheduleToggle" onclick="toggleSchedule()">&#128197; Schedule for later</button>
+                    <div class="schedule-row" id="scheduleRow" style="display:none">
+                        <input type="datetime-local" class="schedule-input" id="scheduleDate">
+                        <button class="send-btn" onclick="sendCard(true)" style="padding:8px 16px;font-size:13px">Schedule</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Download (paid only) -->
+            <div class="download-section" id="downloadSection" style="display:none">
+                <button class="download-btn" onclick="downloadCard()">&#11015; Download as Image</button>
+            </div>
+
+            <!-- Branding (hidden for paid) -->
+            <div class="card-branding" id="cardBranding">
+                Made with <a href="/culture-cards/create">Culture Cards</a> by <a href="/">JobsByCulture</a>
+            </div>
         </div>
     </div>
 </template>
@@ -954,6 +1020,17 @@ function showNotFound() {
     var area = document.getElementById('cardArea');
     area.innerHTML = '';
     area.appendChild(tpl.content.cloneNode(true));
+}
+
+function scrollToSignForm() {
+    var el = document.getElementById('signSection');
+    if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
+
+function toggleThemePanel() {
+    var switcher = document.getElementById('themeSwitcher');
+    if (!switcher) return;
+    switcher.style.display = switcher.style.display === 'none' ? '' : 'none';
 }
 
 /* ---- Image resize using Canvas API ---- */
@@ -1266,11 +1343,7 @@ async function downloadCard() {
             pixelRatio: 2,
             filter: function(node) {
                 // Exclude interactive elements from the capture
-                if (node.classList && (node.classList.contains('sign-section') ||
-                    node.classList.contains('premium-section') ||
-                    node.classList.contains('send-section') ||
-                    node.classList.contains('download-section') ||
-                    node.classList.contains('share-section') ||
+                if (node.classList && (node.classList.contains('creator-controls') ||
                     node.classList.contains('theme-switcher'))) {
                     return false;
                 }
@@ -1302,6 +1375,8 @@ function setupSocialShare() {
     if (navigator.share) {
         var nativeBtn = document.getElementById('shareNative');
         if (nativeBtn) nativeBtn.style.display = 'inline-flex';
+        var creatorShareBtn = document.getElementById('creatorShareBtn');
+        if (creatorShareBtn) creatorShareBtn.style.display = '';
     }
 }
 
@@ -1375,10 +1450,8 @@ function renderCardHeader(card) {
     // Handle ?paid=true success redirect
     var params = new URLSearchParams(window.location.search);
     if (params.get('paid') === 'true' && !isPaid) {
-        // Mark as paid in local state (server webhook handles DB update)
         isPaid = true;
         showToast('Premium unlocked! \uD83C\uDF89');
-        // Clean URL
         window.history.replaceState({}, '', window.location.pathname);
     } else if (params.get('paid') === 'true' && isPaid) {
         showToast('Premium unlocked! \uD83C\uDF89');
@@ -1388,10 +1461,11 @@ function renderCardHeader(card) {
     // Show/hide premium features
     setupPremiumUI();
 
-    // Theme switcher (creator only)
+    // Creator controls
     if (isCreator) {
-        var switcher = document.getElementById('themeSwitcher');
-        if (switcher) { switcher.style.display = ''; setupThemeSwitcher(); }
+        var controls = document.getElementById('creatorControls');
+        if (controls) controls.style.display = '';
+        setupThemeSwitcher();
     }
 
     // Media upload setup
@@ -1435,21 +1509,26 @@ function renderMessages(messages) {
     var grid = document.getElementById('messagesGrid');
     var countEl = document.getElementById('cardCount');
 
+    // Always start with the "Add Message" tile
+    var addTileHtml =
+        '<div class="add-message-card" onclick="scrollToSignForm()">' +
+            '<span class="add-icon">+</span>' +
+            '<span class="add-label">Sign this card</span>' +
+        '</div>';
+
     if (!messages || messages.length === 0) {
-        var emoji = currentCard ? (occasionEmojis[currentCard.occasion] || '\uD83C\uDF89') : '\uD83C\uDF89';
-        grid.innerHTML =
-            '<div class="empty-state">' +
-                '<div class="empty-emoji">' + emoji + '</div>' +
-                '<div class="empty-text">Be the first to sign this card!</div>' +
-                '<div class="empty-sub">Add a message below to get things started.</div>' +
-            '</div>';
         if (countEl) countEl.innerHTML = '&#9993; 0 messages';
+        grid.innerHTML = addTileHtml +
+            '<div class="empty-state">' +
+                '<div class="empty-text">Be the first to sign!</div>' +
+                '<div class="empty-sub">Click above or scroll down to add your message.</div>' +
+            '</div>';
         return;
     }
 
     if (countEl) countEl.innerHTML = '&#9993; ' + messages.length + ' message' + (messages.length === 1 ? '' : 's');
 
-    grid.innerHTML = messages.map(function(m, i) {
+    var messagesHtml = messages.map(function(m, i) {
         var mediaHtml = '';
         if (m.media_url) {
             mediaHtml = '<div class="message-media"><img src="' + escHtml(m.media_url) + '" alt="Attached image" loading="lazy"></div>';
@@ -1465,6 +1544,8 @@ function renderMessages(messages) {
             '<div class="message-author">&mdash; ' + escHtml(m.author_name) + '</div>' +
         '</div>';
     }).join('');
+
+    grid.innerHTML = addTileHtml + messagesHtml;
 }
 
 async function loadMessages(cardId) {
@@ -1514,7 +1595,6 @@ async function addMessage(e) {
     var email = emailInput.value.trim();
     if (email) {
         insertData.author_email = email;
-        // Save creator email in localStorage for edit/delete
         localStorage.setItem('cc_creator_email', email);
         creatorEmail = email;
     }
@@ -1551,13 +1631,20 @@ async function addMessage(e) {
 
     showToast('Your message was added! \uD83C\uDF89');
     loadMessages(currentCard.id);
+
+    // Scroll back up to see the new message in the card
+    var container = document.getElementById('cardContainer');
+    if (container) container.scrollIntoView({ behavior: 'smooth', block: 'start' });
 }
 
 function copyLink() {
     navigator.clipboard.writeText(window.location.href);
     var btn = document.getElementById('copyBtn');
-    btn.textContent = 'Copied!';
-    setTimeout(function() { btn.textContent = 'Copy Link'; }, 2000);
+    if (btn) {
+        btn.textContent = 'Copied!';
+        setTimeout(function() { btn.textContent = 'Copy Link'; }, 2000);
+    }
+    showToast('Link copied!');
 }
 
 async function loadCard() {
