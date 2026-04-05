@@ -1363,7 +1363,7 @@ async function sendCard(scheduled) {
     var email = emailInput.value.trim();
     if (!email) { showToast('Please enter an email address'); return; }
 
-    var body = { card_id: currentCard.id, recipient_email: email };
+    var body = { cardId: currentCard.id, cardSlug: slug, recipientEmail: email };
     if (scheduled) {
         var dt = document.getElementById('scheduleDate').value;
         if (!dt) { showToast('Please pick a date and time'); return; }
@@ -1381,9 +1381,11 @@ async function sendCard(scheduled) {
             body: JSON.stringify(body)
         });
         var data = await resp.json();
-        if (data.success) {
-            showToast(scheduled ? 'Card scheduled!' : 'Card sent!');
+        if (data.success || data.scheduled) {
+            showToast(data.scheduled ? 'Card scheduled! \uD83D\uDCC5' : 'Card sent! \uD83C\uDF89');
             emailInput.value = '';
+            // Reload to show updated state
+            setTimeout(function() { location.reload(); }, 1500);
         } else {
             throw new Error(data.error || 'Send failed');
         }

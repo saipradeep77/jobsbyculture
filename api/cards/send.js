@@ -77,11 +77,32 @@ export default async function handler(request) {
   }
 
   try {
-    const { cardId, cardSlug, recipientEmail, recipientName } = await request.json();
+    const body = await request.json();
+    const { cardId, cardSlug, recipientEmail, recipientName, scheduled_at } = body;
 
     if (!cardId || !cardSlug || !recipientEmail) {
       return new Response(JSON.stringify({ error: 'Missing required fields' }), {
         status: 400, headers: { 'Content-Type': 'application/json' },
+      });
+    }
+
+    // If scheduling, save the schedule time and recipient email to the card
+    if (scheduled_at) {
+      await fetch(
+        `${SUPABASE_URL}/rest/v1/cards?id=eq.${cardId}`,
+        {
+          method: 'PATCH',
+          headers: {
+            'Content-Type': 'application/json',
+            'apikey': SUPABASE_KEY,
+            'Authorization': `Bearer ${SUPABASE_KEY}`,
+            'Prefer': 'return=minimal',
+          },
+          body: JSON.stringify({ scheduled_at: scheduled_at, recipient_email: recipientEmail }),
+        }
+      );
+      return new Response(JSON.stringify({ scheduled: true, scheduled_at: scheduled_at }), {
+        status: 200, headers: { 'Content-Type': 'application/json' },
       });
     }
 
