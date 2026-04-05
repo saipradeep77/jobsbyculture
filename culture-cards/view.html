@@ -1336,7 +1336,7 @@ async function unlockPremium() {
         var resp = await fetch('/api/cards/checkout', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ card_id: currentCard.id, slug: slug })
+            body: JSON.stringify({ cardId: currentCard.id, cardSlug: slug })
         });
         var data = await resp.json();
         if (data.url) {
