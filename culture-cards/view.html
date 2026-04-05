@@ -1708,15 +1708,36 @@ async function renderCardHeader(card) {
     // Check paid status
     isPaid = !!card.is_paid;
 
-    // Handle ?paid=true success redirect
+    // Handle ?paid=true success redirect — verify from DB
     var params = new URLSearchParams(window.location.search);
-    if (params.get('paid') === 'true' && !isPaid) {
-        isPaid = true;
-        showToast('Premium unlocked! \uD83C\uDF89');
+    if (params.get('paid') === 'true') {
         window.history.replaceState({}, '', window.location.pathname);
-    } else if (params.get('paid') === 'true' && isPaid) {
-        showToast('Premium unlocked! \uD83C\uDF89');
-        window.history.replaceState({}, '', window.location.pathname);
+        if (!isPaid) {
+            // Webhook may not have fired yet — poll for up to 10 seconds
+            showToast('Verifying payment...');
+            var pollCount = 0;
+            var pollInterval = setInterval(async function() {
+                pollCount++;
+                var { data: freshCard } = await sb.from('cards').select('is_paid').eq('id', currentCard.id).single();
+                if (freshCard && freshCard.is_paid) {
+                    clearInterval(pollInterval);
+                    isPaid = true;
+                    currentCard.is_paid = true;
+                    showToast('Premium unlocked! \uD83C\uDF89');
+                    setupPremiumUI();
+                } else if (pollCount >= 5) {
+                    clearInterval(pollInterval);
+                    // Webhook hasn't arrived yet — trust the redirect for now
+                    isPaid = true;
+                    currentCard.is_paid = true;
+                    showToast('Premium unlocked! \uD83C\uDF89');
+                    setupPremiumUI();
+                }
+            }, 2000);
+            return; // Skip setupPremiumUI below — handled in poll
+        } else {
+            showToast('Premium unlocked! \uD83C\uDF89');
+        }
     }
 
     // Show/hide premium features
@@ -1950,7 +1971,7 @@ async function addMessage(e) {
     if (mediaUrl) insertData.media_url = mediaUrl;
     if (mediaType) insertData.media_type = mediaType;
 
-    var result = await sb.from('messages').insert(insertData);
+    var result = await sb.from('messages').insert(insertData).select('id').single();
 
     btn.disabled = false;
     btn.textContent = 'Add Your Message \u2192';
@@ -1962,14 +1983,11 @@ async function addMessage(e) {
     }
 
     // Save message ID to localStorage for edit/delete
-    try {
-        var { data: insertedMsg } = await sb.from('messages').select('id').eq('card_id', currentCard.id).eq('author_name', insertData.author_name).order('created_at', { ascending: false }).limit(1).single();
-        if (insertedMsg) {
-            var myMsgs = JSON.parse(localStorage.getItem('cc_my_messages') || '[]');
-            myMsgs.push(insertedMsg.id);
-            localStorage.setItem('cc_my_messages', JSON.stringify(myMsgs));
-        }
-    } catch (e) { /* non-critical */ }
+    if (result.data && result.data.id) {
+        var myMsgs = JSON.parse(localStorage.getItem('cc_my_messages') || '[]');
+        myMsgs.push(result.data.id);
+        localStorage.setItem('cc_my_messages', JSON.stringify(myMsgs));
+    }
 
     nameInput.value = '';
     msgInput.value = '';
