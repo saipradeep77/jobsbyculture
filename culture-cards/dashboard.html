@@ -516,7 +516,7 @@
         var color = themeColors[theme] || '#e8590c';
         var isSent = card.is_sent;
         var isScheduled = card.scheduled_at && !card.is_sent;
-        var viewUrl = '/culture-cards/view?id=' + card.id;
+        var viewUrl = '/culture-cards/c/' + card.slug;
 
         var badgeHtml = '';
         if (isSent) {
