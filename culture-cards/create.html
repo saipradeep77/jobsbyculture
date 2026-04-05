@@ -652,27 +652,23 @@ document.getElementById('createForm').addEventListener('submit', async function(
         });
 
         if (signUpError) {
-            if (signUpError.message && signUpError.message.includes('already registered')) {
-                // Existing user — try to get current session
-                var { data: { session } } = await sb.auth.getSession();
-                if (session && session.user) {
-                    currentUser = session.user;
-                } else {
-                    // Not logged in and account exists — create card anyway, send manage email
-                    // We'll proceed without auth and send them a manage link
-                    currentUser = null;
-                }
-            } else {
-                btn.disabled = false;
-                btn.textContent = 'Create Card \u2192';
-                showToast('Failed to create account: ' + signUpError.message);
-                return;
-            }
-        } else {
-            // signUp succeeded — Supabase auto-signs in the user
+            // Any sign-up error — proceed anyway, card creation doesn't require auth
+            // The manage email will let them access the card later
+            console.log('SignUp error (proceeding anyway):', signUpError.message);
+            currentUser = null;
+        } else if (signUpData && signUpData.session) {
+            // signUp succeeded AND we have a session — user is logged in
             currentUser = signUpData.user;
+        } else {
+            // signUp returned user but no session (email confirmation required or duplicate)
+            // Proceed without auth — manage email will handle access
+            currentUser = signUpData ? signUpData.user : null;
         }
     }
+
+    // ALWAYS save creator email to localStorage (even if not authenticated)
+    // This ensures the card view page can identify the creator via fallback
+    localStorage.setItem('cc_creator_email', email);
 
     // Create the card
     var creatorEmail = email;
