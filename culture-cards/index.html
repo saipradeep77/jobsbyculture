@@ -375,24 +375,35 @@
 
         /* ═══ SOCIAL PROOF ═══ */
         .social-proof {
-            padding: 40px 0 48px;
+            padding: 32px 0 40px;
             text-align: center;
             position: relative; z-index: 1;
+            overflow: hidden;
         }
         .social-proof p {
-            font-size: 14px; color: var(--text-3); font-weight: 500;
-            margin-bottom: 24px; letter-spacing: 0.02em;
+            font-size: 13px; color: var(--text-3); font-weight: 500;
+            margin-bottom: 20px; letter-spacing: 0.06em; text-transform: uppercase;
         }
-        .logo-bar {
-            display: flex; align-items: center; justify-content: center;
-            gap: 40px; flex-wrap: wrap;
+        .logo-track-wrapper {
+            position: relative;
+            overflow: hidden;
+            mask-image: linear-gradient(90deg, transparent, black 10%, black 90%, transparent);
+            -webkit-mask-image: linear-gradient(90deg, transparent, black 10%, black 90%, transparent);
         }
-        .logo-bar span {
-            font-size: 17px; font-weight: 700; color: var(--text-3);
-            letter-spacing: -0.02em; opacity: 0.5;
-            transition: opacity 0.2s;
+        .logo-track {
+            display: flex; align-items: center; gap: 48px;
+            animation: scrollLogos 25s linear infinite;
+            width: max-content;
         }
-        .logo-bar span:hover { opacity: 0.8; }
+        .logo-track img {
+            height: 28px; opacity: 0.45; filter: grayscale(100%);
+            transition: opacity 0.3s, filter 0.3s; flex-shrink: 0;
+        }
+        .logo-track img:hover { opacity: 0.85; filter: grayscale(0%); }
+        @keyframes scrollLogos {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
 
         /* ═══ SECTION SHARED ═══ */
         .section-label {
@@ -788,7 +799,7 @@
             .preview-messages { column-count: 1; padding: 20px 24px 28px; }
             .ft-grid { grid-template-columns: 1fr 1fr; gap: 28px; }
             .pricing-card { padding: 40px 28px; }
-            .logo-bar { gap: 24px; }
+            .logo-track img { height: 22px; }
             .final-cta-actions { flex-direction: column; gap: 12px; }
         }
         @media (max-width: 480px) {
@@ -891,13 +902,34 @@
 <section class="social-proof">
     <div class="container">
         <p>TRUSTED BY TEAMS AT</p>
-        <div class="logo-bar">
-            <span>Amazon</span>
-            <span>IBM</span>
-            <span>Zapier</span>
-            <span>Shopify</span>
-            <span>Zoom</span>
-            <span>Mastercard</span>
+    </div>
+    <div class="logo-track-wrapper">
+        <div class="logo-track">
+            <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/amazon.svg" alt="Amazon" title="Amazon">
+            <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/ibm.svg" alt="IBM" title="IBM">
+            <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/zapier.svg" alt="Zapier" title="Zapier">
+            <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/shopify.svg" alt="Shopify" title="Shopify">
+            <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/zoom.svg" alt="Zoom" title="Zoom">
+            <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/stripe.svg" alt="Stripe" title="Stripe">
+            <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/google.svg" alt="Google" title="Google">
+            <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/airbnb.svg" alt="Airbnb" title="Airbnb">
+            <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/meta.svg" alt="Meta" title="Meta">
+            <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/notion.svg" alt="Notion" title="Notion">
+            <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/slack.svg" alt="Slack" title="Slack">
+            <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/figma.svg" alt="Figma" title="Figma">
+            <!-- Duplicate for seamless loop -->
+            <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/amazon.svg" alt="Amazon" title="Amazon">
+            <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/ibm.svg" alt="IBM" title="IBM">
+            <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/zapier.svg" alt="Zapier" title="Zapier">
+            <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/shopify.svg" alt="Shopify" title="Shopify">
+            <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/zoom.svg" alt="Zoom" title="Zoom">
+            <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/stripe.svg" alt="Stripe" title="Stripe">
+            <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/google.svg" alt="Google" title="Google">
+            <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/airbnb.svg" alt="Airbnb" title="Airbnb">
+            <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/meta.svg" alt="Meta" title="Meta">
+            <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/notion.svg" alt="Notion" title="Notion">
+            <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/slack.svg" alt="Slack" title="Slack">
+            <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/figma.svg" alt="Figma" title="Figma">
         </div>
     </div>
 </section>
