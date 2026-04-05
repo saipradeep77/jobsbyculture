@@ -423,18 +423,19 @@
             -webkit-mask-image: linear-gradient(90deg, transparent, black 10%, black 90%, transparent);
         }
         .logo-track {
-            display: flex; align-items: center; gap: 48px;
-            animation: scrollLogos 25s linear infinite;
+            display: flex; align-items: center; gap: 56px;
+            animation: scrollLogos 40s linear infinite;
             width: max-content;
+            will-change: transform;
         }
         .logo-track img {
-            height: 28px; opacity: 0.45; filter: grayscale(100%);
+            height: 26px; opacity: 0.4; filter: grayscale(100%);
             transition: opacity 0.3s, filter 0.3s; flex-shrink: 0;
         }
         .logo-track img:hover { opacity: 0.85; filter: grayscale(0%); }
         @keyframes scrollLogos {
             0% { transform: translateX(0); }
-            100% { transform: translateX(-50%); }
+            100% { transform: translateX(calc(-50% - 28px)); }
         }
 
         /* ═══ SECTION SHARED ═══ */
@@ -952,30 +953,42 @@
     <div class="logo-track-wrapper">
         <div class="logo-track">
             <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/amazon.svg" alt="Amazon" title="Amazon">
+            <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/google.svg" alt="Google" title="Google">
             <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/ibm.svg" alt="IBM" title="IBM">
             <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/zapier.svg" alt="Zapier" title="Zapier">
             <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/shopify.svg" alt="Shopify" title="Shopify">
+            <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/microsoft.svg" alt="Microsoft" title="Microsoft">
             <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/zoom.svg" alt="Zoom" title="Zoom">
             <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/stripe.svg" alt="Stripe" title="Stripe">
-            <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/google.svg" alt="Google" title="Google">
+            <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/netflix.svg" alt="Netflix" title="Netflix">
             <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/airbnb.svg" alt="Airbnb" title="Airbnb">
+            <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/spotify.svg" alt="Spotify" title="Spotify">
             <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/meta.svg" alt="Meta" title="Meta">
+            <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/uber.svg" alt="Uber" title="Uber">
             <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/notion.svg" alt="Notion" title="Notion">
             <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/slack.svg" alt="Slack" title="Slack">
             <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/figma.svg" alt="Figma" title="Figma">
-            <!-- Duplicate for seamless loop -->
-            <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/amazon.svg" alt="Amazon" title="Amazon">
-            <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/ibm.svg" alt="IBM" title="IBM">
-            <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/zapier.svg" alt="Zapier" title="Zapier">
-            <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/shopify.svg" alt="Shopify" title="Shopify">
-            <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/zoom.svg" alt="Zoom" title="Zoom">
-            <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/stripe.svg" alt="Stripe" title="Stripe">
-            <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/google.svg" alt="Google" title="Google">
-            <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/airbnb.svg" alt="Airbnb" title="Airbnb">
-            <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/meta.svg" alt="Meta" title="Meta">
-            <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/notion.svg" alt="Notion" title="Notion">
-            <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/slack.svg" alt="Slack" title="Slack">
-            <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/figma.svg" alt="Figma" title="Figma">
+            <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/adobe.svg" alt="Adobe" title="Adobe">
+            <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/salesforce.svg" alt="Salesforce" title="Salesforce">
+            <!-- Duplicate set for seamless loop -->
+            <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/amazon.svg" alt="Amazon">
+            <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/google.svg" alt="Google">
+            <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/ibm.svg" alt="IBM">
+            <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/zapier.svg" alt="Zapier">
+            <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/shopify.svg" alt="Shopify">
+            <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/microsoft.svg" alt="Microsoft">
+            <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/zoom.svg" alt="Zoom">
+            <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/stripe.svg" alt="Stripe">
+            <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/netflix.svg" alt="Netflix">
+            <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/airbnb.svg" alt="Airbnb">
+            <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/spotify.svg" alt="Spotify">
+            <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/meta.svg" alt="Meta">
+            <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/uber.svg" alt="Uber">
+            <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/notion.svg" alt="Notion">
+            <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/slack.svg" alt="Slack">
+            <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/figma.svg" alt="Figma">
+            <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/adobe.svg" alt="Adobe">
+            <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/salesforce.svg" alt="Salesforce">
         </div>
     </div>
 </section>
