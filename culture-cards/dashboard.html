@@ -140,7 +140,8 @@
             outline: none; transition: border-color 0.2s;
             margin-bottom: 16px;
         }
-        .login-card input[type="email"]:focus {
+        .login-card input[type="email"]:focus,
+        .login-card input[type="password"]:focus {
             border-color: var(--accent); box-shadow: 0 0 0 3px var(--accent-bg);
         }
         .login-card button {
@@ -345,12 +346,16 @@
     <div class="login-wrapper">
         <div class="login-card">
             <h1>Log in to Culture Cards</h1>
-            <p>Enter your email to manage your cards</p>
+            <p>Enter your email and password to manage your cards</p>
             <form id="loginForm" onsubmit="return false">
                 <input type="email" id="loginEmail" placeholder="you@company.com" required>
-                <button type="submit" id="loginBtn">Send Magic Link &rarr;</button>
+                <input type="password" id="loginPassword" placeholder="Password" required style="width:100%;padding:14px 16px;font-size:15px;border:1px solid var(--border-2);border-radius:var(--radius);background:var(--bg);font-family:var(--font-body);outline:none;transition:border-color 0.2s;margin-bottom:16px;">
+                <button type="submit" id="loginBtn">Sign In &rarr;</button>
             </form>
-            <div class="login-success" id="loginSuccess">Check your email &#9993; We sent you a magic link to log in.</div>
+            <div style="margin-top:16px;text-align:center">
+                <a href="#" id="forgotPasswordLink" style="color:var(--accent);font-size:14px;text-decoration:none;font-weight:500;">Forgot Password?</a>
+            </div>
+            <div class="login-success" id="loginSuccess"></div>
         </div>
     </div>
 </div>
@@ -586,43 +591,76 @@
         renderDashboard(openCards, sentCards, email);
     }
 
-    // Login form handler
+    var loginPassword = document.getElementById('loginPassword');
+    var forgotPasswordLink = document.getElementById('forgotPasswordLink');
+
+    // Login form handler — email + password
     loginForm.addEventListener('submit', async function(e) {
         e.preventDefault();
         var email = loginEmail.value.trim();
-        if (!email) return;
+        var password = loginPassword.value;
+        if (!email || !password) return;
 
         loginBtn.disabled = true;
-        loginBtn.textContent = 'Sending...';
+        loginBtn.textContent = 'Signing in...';
 
-        var result = await sb.auth.signInWithOtp({
+        var result = await sb.auth.signInWithPassword({
             email: email,
-            options: { emailRedirectTo: window.location.href }
+            password: password
         });
 
         if (result.error) {
             loginBtn.disabled = false;
-            loginBtn.textContent = 'Send Magic Link \u2192';
-            alert('Error: ' + result.error.message);
+            loginBtn.textContent = 'Sign In \u2192';
+            loginSuccess.textContent = 'Error: ' + result.error.message;
+            loginSuccess.style.display = 'block';
+            loginSuccess.style.background = 'rgba(225,29,72,0.08)';
+            loginSuccess.style.borderColor = 'rgba(225,29,72,0.2)';
+            loginSuccess.style.color = '#e11d48';
             return;
         }
 
-        loginBtn.textContent = 'Sent!';
+        loginBtn.textContent = 'Success!';
+        loadDashboard();
+    });
+
+    // Forgot password handler
+    forgotPasswordLink.addEventListener('click', async function(e) {
+        e.preventDefault();
+        var email = loginEmail.value.trim();
+        if (!email) {
+            loginSuccess.textContent = 'Please enter your email address first.';
+            loginSuccess.style.display = 'block';
+            loginSuccess.style.background = 'rgba(232,89,12,0.08)';
+            loginSuccess.style.borderColor = 'rgba(232,89,12,0.2)';
+            loginSuccess.style.color = '#e8590c';
+            return;
+        }
+
+        var result = await sb.auth.resetPasswordForEmail(email, {
+            redirectTo: window.location.origin + '/culture-cards/dashboard'
+        });
+
+        if (result.error) {
+            loginSuccess.textContent = 'Error: ' + result.error.message;
+            loginSuccess.style.display = 'block';
+            loginSuccess.style.background = 'rgba(225,29,72,0.08)';
+            loginSuccess.style.borderColor = 'rgba(225,29,72,0.2)';
+            loginSuccess.style.color = '#e11d48';
+            return;
+        }
+
+        loginSuccess.textContent = 'Password reset email sent! Check your inbox.';
         loginSuccess.style.display = 'block';
+        loginSuccess.style.background = 'var(--teal-bg)';
+        loginSuccess.style.borderColor = 'var(--teal-border)';
+        loginSuccess.style.color = 'var(--teal)';
     });
 
     // Logout handler
     logoutBtn.addEventListener('click', async function() {
         await sb.auth.signOut();
         window.location.href = '/culture-cards';
-    });
-
-    // Listen for auth state changes (magic link callback)
-    sb.auth.onAuthStateChange(function(event, session) {
-        if (event === 'SIGNED_IN') {
-            window.history.replaceState({}, '', window.location.pathname);
-            loadDashboard();
-        }
     });
 
     // Initial load

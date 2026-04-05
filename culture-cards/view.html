@@ -1008,7 +1008,7 @@
 
     <!-- Login prompt for unauthenticated card creators -->
     <div class="login-prompt" id="loginPrompt" style="display:none;text-align:center;padding:16px 20px;margin:0 auto 24px;max-width:480px;background:rgba(13,148,136,0.06);border:1px solid rgba(13,148,136,0.15);border-radius:12px;">
-        <p style="font-size:14px;color:var(--text-2);margin:0">Card creator? <a href="#" onclick="creatorLogin(event)" style="color:var(--teal);font-weight:600;text-decoration:none">Log in to manage your card &rarr;</a></p>
+        <p style="font-size:14px;color:var(--text-2);margin:0">Card creator? <a href="#" onclick="creatorLogin(event)" style="color:var(--teal);font-weight:600;text-decoration:none">Log in with your password &rarr;</a></p>
     </div>
 
     <!-- Premium / Send / Download section (below sign form) -->
@@ -1672,11 +1672,26 @@ async function renderCardHeader(card) {
         isCreator = true;
         creatorEmail = session.user.email;
     } else {
+        // Check for signed manage key in URL
+        var urlParams = new URLSearchParams(window.location.search);
+        var manageKey = urlParams.get('key');
+        if (manageKey && card.creator_email) {
+            var keyValid = await verifyManageKey(slug, card.creator_email, manageKey);
+            if (keyValid) {
+                isCreator = true;
+                creatorEmail = card.creator_email;
+                // Clean the key from URL but keep creator status
+                window.history.replaceState({}, '', window.location.pathname);
+            }
+        }
+
         // Fallback to localStorage for backward compatibility
-        var emailMatch = creatorEmail && card.creator_email && (creatorEmail === card.creator_email);
-        var myCards = JSON.parse(localStorage.getItem('cc_my_cards') || '[]');
-        var slugMatch = myCards.indexOf(slug) !== -1;
-        isCreator = emailMatch || slugMatch;
+        if (!isCreator) {
+            var emailMatch = creatorEmail && card.creator_email && (creatorEmail === card.creator_email);
+            var myCards = JSON.parse(localStorage.getItem('cc_my_cards') || '[]');
+            var slugMatch = myCards.indexOf(slug) !== -1;
+            isCreator = emailMatch || slugMatch;
+        }
     }
 
     // Check paid status
@@ -2092,26 +2107,27 @@ function closePreview() {
     document.body.style.overflow = '';
 }
 
-// Handle auth callback (magic link redirect)
-sb.auth.onAuthStateChange(function(event, session) {
-    // Only reload on FRESH magic link sign-in (URL has access_token hash)
-    // Do NOT reload on session restore (which happens every page load)
-    if (event === 'SIGNED_IN' && session && window.location.hash && window.location.hash.includes('access_token')) {
-        window.history.replaceState({}, '', window.location.pathname);
-        window.location.reload();
-    }
-});
+// Verify signed manage key from URL
+async function verifyManageKey(slug, creatorEmail, key) {
+    var data = new TextEncoder().encode(slug + creatorEmail + 'culture-cards-secret');
+    var hash = await crypto.subtle.digest('SHA-256', data);
+    var hex = Array.from(new Uint8Array(hash)).map(function(b) { return b.toString(16).padStart(2, '0'); }).join('');
+    return hex.substring(0, 16) === key;
+}
 
 async function creatorLogin(e) {
     e.preventDefault();
     var email = prompt('Enter the email you used to create this card:');
     if (!email) return;
-    var { error } = await sb.auth.signInWithOtp({
-        email: email,
-        options: { emailRedirectTo: window.location.href }
-    });
-    if (error) { showToast('Failed to send login link'); return; }
-    showToast('Magic link sent! Check your email.');
+    var password = prompt('Enter your password:');
+    if (!password) return;
+    var { data, error } = await sb.auth.signInWithPassword({ email: email, password: password });
+    if (error) {
+        showToast('Login failed: ' + error.message);
+        return;
+    }
+    showToast('Logged in!');
+    setTimeout(function() { window.location.reload(); }, 500);
 }
 
 async function loadCard() {
