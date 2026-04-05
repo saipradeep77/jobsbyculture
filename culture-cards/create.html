@@ -461,81 +461,57 @@ const SUPABASE_KEY = 'sb_publishable_7g5dGcIUkN4OxJJ2gnlYEA_XkyDtN8p';
 const sb = window.supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
 
 var currentUser = null;
+var authHandled = false;
 
-async function checkAuth() {
-    var { data: { session } } = await sb.auth.getSession();
+// Listen for auth state changes (handles magic link token exchange automatically)
+sb.auth.onAuthStateChange(function(event, session) {
+    if (authHandled) return;
+
     if (session && session.user) {
         currentUser = session.user;
         document.getElementById('yourEmail').value = session.user.email;
         document.getElementById('yourEmail').disabled = true;
         document.getElementById('authStatus').textContent = 'Logged in as ' + session.user.email;
         document.getElementById('authStatus').style.display = 'block';
+
+        // If this is a magic link callback, clean URL and resume form
+        var params = new URLSearchParams(window.location.search);
+        if (params.get('resume') === 'true' && event === 'SIGNED_IN') {
+            authHandled = true;
+            // Clean URL immediately
+            window.history.replaceState({}, '', window.location.origin + window.location.pathname);
+
+            // Restore form data
+            if (params.get('recipient')) document.getElementById('recipientName').value = decodeURIComponent(params.get('recipient'));
+            if (params.get('title')) document.getElementById('cardTitle').value = decodeURIComponent(params.get('title'));
+            if (params.get('team')) document.getElementById('teamName').value = decodeURIComponent(params.get('team'));
+            if (params.get('name')) document.getElementById('yourName').value = decodeURIComponent(params.get('name'));
+
+            var occ = params.get('occasion');
+            if (occ) {
+                document.querySelectorAll('.occasion-pill').forEach(function(p) {
+                    p.classList.remove('selected');
+                    if (p.dataset.occasion === occ) { p.classList.add('selected'); selectedOccasion = occ; }
+                });
+            }
+            var th = params.get('theme');
+            if (th && th !== 'midnight') {
+                document.querySelectorAll('.theme-swatch').forEach(function(s) {
+                    s.classList.remove('selected');
+                    if (s.dataset.theme === th) { s.classList.add('selected'); selectedTheme = th; }
+                });
+            }
+
+            showToast('Logged in! Creating your card...');
+            setTimeout(function() {
+                document.getElementById('createForm').dispatchEvent(new Event('submit'));
+            }, 1500);
+        }
     }
-}
-checkAuth();
+});
 
 // Handle magic link auth callback
-async function handleAuthCallback() {
-    var hash = window.location.hash;
-    var params = new URLSearchParams(window.location.search);
-
-    // Check if this is a magic link callback
-    if (!hash || !hash.includes('access_token')) return;
-
-    // IMMEDIATELY clean the URL to prevent loops
-    var cleanUrl = window.location.origin + window.location.pathname;
-    var resumeData = null;
-    if (params.get('resume') === 'true') {
-        resumeData = {
-            recipient: params.get('recipient') || '',
-            title: params.get('title') || '',
-            team: params.get('team') || '',
-            name: params.get('name') || '',
-            occasion: params.get('occasion') || 'farewell',
-            theme: params.get('theme') || 'default'
-        };
-    }
-    window.history.replaceState({}, '', cleanUrl);
-
-    // Get session
-    var { data: { session } } = await sb.auth.getSession();
-    if (!session) return;
-
-    currentUser = session.user;
-    document.getElementById('yourEmail').value = session.user.email;
-    document.getElementById('yourEmail').disabled = true;
-    document.getElementById('authStatus').textContent = 'Logged in as ' + session.user.email;
-    document.getElementById('authStatus').style.display = 'block';
-
-    if (!resumeData) return;
-
-    // Re-fill form from saved data
-    if (resumeData.recipient) document.getElementById('recipientName').value = decodeURIComponent(resumeData.recipient);
-    if (resumeData.title) document.getElementById('cardTitle').value = decodeURIComponent(resumeData.title);
-    if (resumeData.team) document.getElementById('teamName').value = decodeURIComponent(resumeData.team);
-    if (resumeData.name) document.getElementById('yourName').value = decodeURIComponent(resumeData.name);
-
-    // Select occasion
-    var occ = resumeData.occasion;
-    document.querySelectorAll('.occasion-pill').forEach(function(p) {
-        p.classList.remove('selected');
-        if (p.dataset.occasion === occ) { p.classList.add('selected'); selectedOccasion = occ; }
-    });
-
-    // Select theme
-    var th = resumeData.theme;
-    if (th !== 'midnight') {
-        document.querySelectorAll('.theme-swatch').forEach(function(s) {
-            s.classList.remove('selected');
-            if (s.dataset.theme === th) { s.classList.add('selected'); selectedTheme = th; }
-        });
-    }
-
-    showToast('Logged in! Creating your card...');
-    setTimeout(function() {
-        document.getElementById('createForm').dispatchEvent(new Event('submit'));
-    }, 1500);
-}
+// Old handleAuthCallback removed — replaced by onAuthStateChange listener above
 
 function showToast(msg) {
     var t = document.createElement('div');
@@ -703,7 +679,7 @@ document.getElementById('createForm').addEventListener('submit', async function(
 
 initOccasions();
 initThemes();
-handleAuthCallback();
+// Auth is handled by onAuthStateChange listener above
 </script>
 
 </body>
