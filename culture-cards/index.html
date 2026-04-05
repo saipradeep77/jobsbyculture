@@ -325,52 +325,84 @@
         }
         .hero-trust-points .check { color: var(--teal); font-weight: 700; }
 
-        /* Hero mini card preview */
-        .hero-card-mock {
-            background: #fffbf0;
-            border-radius: var(--radius-lg);
-            box-shadow: 0 24px 64px rgba(0,0,0,0.12), 0 4px 16px rgba(0,0,0,0.06);
-            padding: 0; overflow: hidden;
-            transform: rotate(1.5deg);
-            animation: floatCard 4s ease-in-out infinite, fadeUp 0.6s ease 0.3s both;
+        /* Hero card showcase */
+        .hero-card-showcase {
             position: relative;
+            animation: fadeUp 0.6s ease 0.3s both;
+        }
+        .hero-card-mock {
+            background: linear-gradient(135deg, #fffbf0 0%, #fef3c7 100%);
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80' viewBox='0 0 80 80'%3E%3Cg fill-rule='evenodd'%3E%3Cg fill='%23e8590c' fill-opacity='0.03'%3E%3Cpath d='M50 50c0-5.523 4.477-10 10-10s10 4.477 10 10-4.477 10-10 10c0 5.523-4.477 10-10 10s-10-4.477-10-10 4.477-10 10-10zM10 10c0-5.523 4.477-10 10-10s10 4.477 10 10-4.477 10-10 10c0 5.523-4.477 10-10 10S0 25.523 0 20s4.477-10 10-10zm10 8c4.418 0 8-3.582 8-8s-3.582-8-8-8-8 3.582-8 8 3.582 8 8 8zm40 40c4.418 0 8-3.582 8-8s-3.582-8-8-8-8 3.582-8 8 3.582 8 8 8z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E"), linear-gradient(135deg, #fffbf0 0%, #fef3c7 100%);
+            border-radius: 20px;
+            box-shadow: 0 32px 80px rgba(0,0,0,0.14), 0 8px 24px rgba(0,0,0,0.08);
+            overflow: hidden; position: relative;
+            border: 2px solid rgba(0,0,0,0.06);
+            animation: floatCard 5s ease-in-out infinite;
         }
         .hero-card-mock::before {
             content: '';
-            position: absolute; top: 0; left: 0; right: 0; height: 4px;
+            position: absolute; top: 0; left: 0; right: 0; height: 5px;
             background: linear-gradient(90deg, #e8590c, #f59e0b, #0d9488, #7c3aed, #ec4899, #e8590c);
             background-size: 200% 100%;
             animation: shimmer 4s linear infinite;
+            z-index: 2;
         }
         @keyframes floatCard {
-            0%, 100% { transform: rotate(1.5deg) translateY(0); }
-            50% { transform: rotate(1.5deg) translateY(-8px); }
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
         }
         .mock-header {
-            padding: 24px 24px 16px;
+            padding: 28px 28px 20px;
             border-bottom: 1px solid rgba(0,0,0,0.06);
-            display: flex; align-items: center; gap: 10px;
+            display: flex; align-items: center; gap: 14px;
+            position: relative; z-index: 1;
         }
-        .mock-header img { width: 32px; height: 32px; }
+        .mock-header img { width: 44px; height: 44px; filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1)); }
         .mock-header-text h4 {
-            font-family: var(--font-display); font-weight: 400; font-size: 18px;
+            font-family: var(--font-display); font-weight: 400; font-size: 22px;
         }
-        .mock-header-text p { font-size: 12px; color: var(--text-3); }
-        .mock-messages { padding: 16px 24px 24px; }
+        .mock-header-text p { font-size: 13px; color: var(--text-3); }
+        .mock-header-meta {
+            margin-left: auto;
+            font-family: var(--font-mono); font-size: 12px; color: var(--teal);
+            background: var(--teal-bg); border: 1px solid var(--teal-border);
+            padding: 4px 12px; border-radius: var(--radius-full); white-space: nowrap;
+        }
+        .mock-grid {
+            padding: 20px 28px 28px;
+            display: grid; grid-template-columns: 1fr 1fr; gap: 12px;
+            position: relative; z-index: 1;
+        }
         .mock-msg {
-            background: rgba(255,255,255,0.8); border: 1px solid rgba(0,0,0,0.04);
-            border-radius: var(--radius-sm); padding: 14px; margin-bottom: 10px;
+            background: rgba(255,255,255,0.85); backdrop-filter: blur(8px);
+            border: 1px solid rgba(255,255,255,0.6);
+            border-radius: var(--radius); padding: 16px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+            transition: transform 0.2s;
         }
-        .mock-msg:last-child { margin-bottom: 0; }
-        .mock-msg p { font-size: 13px; line-height: 1.5; color: var(--text-2); font-style: italic; }
-        .mock-msg .mock-author { font-size: 12px; font-weight: 600; color: var(--text-3); font-style: normal; margin-top: 6px; }
-        .mock-msg-emoji { display: flex; gap: 4px; margin-top: 6px; }
-        .mock-msg-emoji img { width: 22px; height: 22px; }
-        .mock-badge {
-            position: absolute; bottom: -12px; right: 20px;
-            background: var(--teal); color: #fff;
-            font-family: var(--font-mono); font-size: 11px; font-weight: 500;
-            padding: 4px 12px; border-radius: var(--radius-full);
+        .mock-msg:hover { transform: translateY(-2px); }
+        .mock-msg.has-gif { grid-column: span 1; }
+        .mock-msg-gif {
+            width: 100%; border-radius: 8px; margin-bottom: 10px; display: block;
+            max-height: 100px; object-fit: cover;
+        }
+        .mock-msg p { font-size: 12px; line-height: 1.55; color: var(--text-2); font-style: italic; margin-bottom: 6px; }
+        .mock-msg .mock-author { font-size: 11px; font-weight: 600; color: var(--text-3); font-style: normal; display: block; }
+        .mock-msg-emoji { display: flex; gap: 3px; margin: 6px 0 2px; }
+        .mock-msg-emoji img { width: 18px; height: 18px; }
+        /* Floating 3D emoji decorations around the card */
+        .hero-deco {
+            position: absolute; pointer-events: none; z-index: 3;
+            animation: floatDeco 3s ease-in-out infinite;
+            filter: drop-shadow(0 4px 8px rgba(0,0,0,0.15));
+        }
+        .hero-deco-1 { top: -20px; right: -20px; animation-delay: 0s; }
+        .hero-deco-2 { bottom: -16px; left: -16px; animation-delay: 1s; }
+        .hero-deco-3 { top: 40%; right: -28px; animation-delay: 0.5s; }
+        .hero-deco-4 { bottom: 30%; left: -24px; animation-delay: 1.5s; }
+        @keyframes floatDeco {
+            0%, 100% { transform: translateY(0) rotate(0deg); }
+            50% { transform: translateY(-6px) rotate(5deg); }
         }
 
         /* ═══ SOCIAL PROOF ═══ */
@@ -861,37 +893,51 @@
                 </div>
             </div>
             <div class="hero-visual">
-                <div class="hero-card-mock">
-                    <div class="mock-header">
-                        <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Hand%20gestures/Waving%20Hand.png" alt="" width="32" height="32">
-                        <div class="mock-header-text">
-                            <h4>Farewell, Sarah!</h4>
-                            <p>From The Product Team</p>
+                <div class="hero-card-showcase">
+                    <!-- Floating 3D emoji decorations -->
+                    <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Activities/Party%20Popper.png" alt="" width="48" height="48" class="hero-deco hero-deco-1">
+                    <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Activities/Sparkles.png" alt="" width="40" height="40" class="hero-deco hero-deco-2">
+                    <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Smilies/Smiling%20Face%20with%20Hearts.png" alt="" width="36" height="36" class="hero-deco hero-deco-3">
+                    <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Hand%20gestures/Clapping%20Hands.png" alt="" width="32" height="32" class="hero-deco hero-deco-4">
+
+                    <div class="hero-card-mock">
+                        <div class="mock-header">
+                            <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Hand%20gestures/Waving%20Hand.png" alt="" width="44" height="44">
+                            <div class="mock-header-text">
+                                <h4>Farewell, Sarah!</h4>
+                                <p>From The Product Team</p>
+                            </div>
+                            <span class="mock-header-meta">&#10024; 7 messages</span>
+                        </div>
+                        <div class="mock-grid">
+                            <div class="mock-msg has-gif">
+                                <img class="mock-msg-gif" src="https://media.giphy.com/media/csIYp1khlYpwo4DJhq/giphy.gif" alt="Bye bye" loading="lazy">
+                                <p>"The team won't be the same without you!"</p>
+                                <span class="mock-author">&mdash; Marcus T.</span>
+                            </div>
+                            <div class="mock-msg">
+                                <p>"Thanks for pushing us to ship better code. You raised the bar for all of us."</p>
+                                <div class="mock-msg-emoji">
+                                    <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Hand%20gestures/Clapping%20Hands.png" alt="" loading="lazy">
+                                    <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Smilies/Star-Struck.png" alt="" loading="lazy">
+                                </div>
+                                <span class="mock-author">&mdash; Elena R.</span>
+                            </div>
+                            <div class="mock-msg">
+                                <p>"Wherever you land, they're getting a star."</p>
+                                <div class="mock-msg-emoji">
+                                    <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Travel%20and%20places/Glowing%20Star.png" alt="" loading="lazy">
+                                    <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Travel%20and%20places/Fire.png" alt="" loading="lazy">
+                                </div>
+                                <span class="mock-author">&mdash; Priya M.</span>
+                            </div>
+                            <div class="mock-msg has-gif">
+                                <img class="mock-msg-gif" src="https://media.giphy.com/media/kaBU6pgv0OsPHz2yxy/giphy.gif" alt="We'll miss you" loading="lazy">
+                                <p>"Don't be a stranger!"</p>
+                                <span class="mock-author">&mdash; The Design Team</span>
+                            </div>
                         </div>
                     </div>
-                    <div class="mock-messages">
-                        <div class="mock-msg">
-                            <p>"Your energy made every standup better. Wishing you all the best!"</p>
-                            <span class="mock-author">&mdash; Marcus T.</span>
-                        </div>
-                        <div class="mock-msg">
-                            <p>"Thanks for pushing us to ship better code. You raised the bar."</p>
-                            <div class="mock-msg-emoji">
-                                <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Hand%20gestures/Clapping%20Hands.png" alt="" loading="lazy">
-                                <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Smilies/Star-Struck.png" alt="" loading="lazy">
-                            </div>
-                            <span class="mock-author">&mdash; Elena R.</span>
-                        </div>
-                        <div class="mock-msg">
-                            <p>"Wherever you land, they're getting a star."</p>
-                            <div class="mock-msg-emoji">
-                                <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Travel%20and%20places/Glowing%20Star.png" alt="" loading="lazy">
-                                <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Travel%20and%20places/Fire.png" alt="" loading="lazy">
-                            </div>
-                            <span class="mock-author">&mdash; Priya M.</span>
-                        </div>
-                    </div>
-                    <span class="mock-badge">7 messages</span>
                 </div>
             </div>
         </div>
