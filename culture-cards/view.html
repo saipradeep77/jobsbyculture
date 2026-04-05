@@ -138,17 +138,59 @@
             min-height: 100vh; padding: 80px 0 0;
             transition: background 0.4s ease, color 0.3s ease;
             position: relative;
+            border: 2px solid rgba(0,0,0,0.06);
+            box-shadow: 0 8px 40px rgba(0,0,0,0.08), 0 2px 8px rgba(0,0,0,0.04);
+            margin: 0 auto;
+            max-width: 1000px;
+            border-radius: 20px;
+            overflow: hidden;
         }
 
-        /* THEME VARIANTS */
-        .card-container.theme-default { background: #fffbf0; }
-        .card-container.theme-warm { background: linear-gradient(135deg, #fef3c7, #fde68a); }
-        .card-container.theme-teal { background: linear-gradient(135deg, #f0fdfa, #ccfbf1); }
-        .card-container.theme-midnight { background: #1e1e2e; color: #e4e4e7; }
-        .card-container.theme-sunset { background: linear-gradient(135deg, #fecaca, #fde68a, #fed7aa); }
-        .card-container.theme-ocean { background: linear-gradient(135deg, #dbeafe, #e0e7ff, #f0f9ff); }
-        .card-container.theme-forest { background: linear-gradient(135deg, #dcfce7, #d1fae5, #ecfdf5); }
-        .card-container.theme-lavender { background: linear-gradient(135deg, #f3e8ff, #ede9fe, #faf5ff); }
+        /* Top decorative bar */
+        .card-container::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, var(--accent), #f59e0b, var(--teal), #7c3aed, #ec4899);
+            z-index: 10;
+        }
+
+        /* THEME VARIANTS — gradient + SVG pattern overlays */
+        .card-container.theme-default {
+            background: #fffbf0;
+            background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23e8590c' fill-opacity='0.03'%3E%3Ccircle cx='3' cy='3' r='3'/%3E%3Ccircle cx='13' cy='13' r='3'/%3E%3C/g%3E%3C/svg%3E");
+        }
+        .card-container.theme-warm {
+            background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='36' height='72' viewBox='0 0 36 72'%3E%3Cg fill-rule='evenodd'%3E%3Cg fill='%23d97706' fill-opacity='0.06'%3E%3Cpath d='M2 6h12L8 18 2 6zm18 36h12l-6 12-6-12z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E"), linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
+        }
+        .card-container.theme-teal {
+            background: linear-gradient(135deg, #f0fdfa 0%, #ccfbf1 100%);
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='52' height='26' viewBox='0 0 52 26'%3E%3Cg fill-rule='evenodd'%3E%3Cg fill='%230d9488' fill-opacity='0.05'%3E%3Cpath d='M10 10c0-2.21-1.79-4-4-4-3.314 0-6-2.686-6-6h2c0 2.21 1.79 4 4 4 3.314 0 6 2.686 6 6 0 2.21 1.79 4 4 4 3.314 0 6 2.686 6 6 0 2.21 1.79 4 4 4v2c-3.314 0-6-2.686-6-6 0-2.21-1.79-4-4-4-3.314 0-6-2.686-6-6zm25.464-1.95l8.486 8.486-1.414 1.414-8.486-8.486 1.414-1.414z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E"), linear-gradient(135deg, #f0fdfa 0%, #ccfbf1 100%);
+        }
+        .card-container.theme-midnight {
+            background: #1e1e2e;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='60' viewBox='0 0 60 60'%3E%3Cg fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.04'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+            color: #e4e4e7;
+            border-color: rgba(255,255,255,0.08);
+        }
+        .card-container.theme-sunset {
+            background: linear-gradient(135deg, #fecaca 0%, #fde68a 50%, #fed7aa 100%);
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80' viewBox='0 0 80 80'%3E%3Cg fill-rule='evenodd'%3E%3Cg fill='%23dc2626' fill-opacity='0.04'%3E%3Cpath d='M50 50c0-5.523 4.477-10 10-10s10 4.477 10 10-4.477 10-10 10c0 5.523-4.477 10-10 10s-10-4.477-10-10 4.477-10 10-10zM10 10c0-5.523 4.477-10 10-10s10 4.477 10 10-4.477 10-10 10c0 5.523-4.477 10-10 10S0 25.523 0 20s4.477-10 10-10zm10 8c4.418 0 8-3.582 8-8s-3.582-8-8-8-8 3.582-8 8 3.582 8 8 8zm40 40c4.418 0 8-3.582 8-8s-3.582-8-8-8-8 3.582-8 8 3.582 8 8 8z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E"), linear-gradient(135deg, #fecaca 0%, #fde68a 50%, #fed7aa 100%);
+        }
+        .card-container.theme-ocean {
+            background: linear-gradient(135deg, #dbeafe 0%, #e0e7ff 50%, #f0f9ff 100%);
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='18' viewBox='0 0 100 18'%3E%3Cpath fill='%233b82f6' fill-opacity='0.05' d='M61.82 18c3.47-1.45 6.86-3.78 11.3-7.34C78 6.76 80.34 5.1 83.87 3.42 88.56 1.16 93.75 0 100 0v6.16C98.76 6.05 97.43 6 96 6c-9.59 0-14.23 2.23-23.13 9.34-1.28 1.03-2.39 1.9-3.4 2.66h-7.65zm-23.64 0H22.52c-1-.76-2.1-1.63-3.4-2.66C11.57 9.36 7.14 6.9 0 6.04V0c6.25 0 11.44 1.16 16.14 3.42 3.53 1.7 5.87 3.35 10.73 7.24 4.45 3.56 7.84 5.9 11.31 7.34zM61.82 18h7.66c-1.01-.76-2.12-1.63-3.4-2.66C57.42 9.36 52.58 6.9 45.7 6.04V0c6.26 0 11.45 1.16 16.14 3.42 3.53 1.7 5.87 3.35 10.73 7.24 4.45 3.56 7.84 5.9 11.31 7.34h-22.06z'/%3E%3C/svg%3E"), linear-gradient(135deg, #dbeafe 0%, #e0e7ff 50%, #f0f9ff 100%);
+        }
+        .card-container.theme-forest {
+            background: linear-gradient(135deg, #dcfce7 0%, #d1fae5 50%, #ecfdf5 100%);
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Cg fill-rule='evenodd'%3E%3Cg fill='%2316a34a' fill-opacity='0.05'%3E%3Cpath d='M0 38.59l2.83-2.83 1.41 1.41L1.41 40H0v-1.41zM0 1.4l2.83 2.83 1.41-1.41L1.41 0H0v1.41zM38.59 40l-2.83-2.83 1.41-1.41L40 38.59V40h-1.41zM40 1.41l-2.83 2.83-1.41-1.41L38.59 0H40v1.41zM20 18.6l2.83-2.83 1.41 1.41L21.41 20l2.83 2.83-1.41 1.41L20 21.41l-2.83 2.83-1.41-1.41L18.59 20l-2.83-2.83 1.41-1.41L20 18.59z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E"), linear-gradient(135deg, #dcfce7 0%, #d1fae5 50%, #ecfdf5 100%);
+        }
+        .card-container.theme-lavender {
+            background: linear-gradient(135deg, #f3e8ff 0%, #ede9fe 50%, #faf5ff 100%);
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cg fill='%237c3aed' fill-opacity='0.05'%3E%3Cpolygon fill-rule='evenodd' points='8 4 12 6 8 8 6 12 4 8 0 6 4 4 6 0 8 4'/%3E%3C/g%3E%3C/svg%3E"), linear-gradient(135deg, #f3e8ff 0%, #ede9fe 50%, #faf5ff 100%);
+        }
 
         /* CARD HEADER — centered, prominent */
         .card-header {
@@ -330,7 +372,8 @@
             box-shadow: 0 8px 32px rgba(0,0,0,0.07);
         }
         .theme-midnight .message-card {
-            background: rgba(42,42,58,0.85);
+            background: rgba(255,255,255,0.08);
+            backdrop-filter: blur(12px);
             border-color: rgba(255,255,255,0.06);
             color: #e4e4e7;
         }
@@ -361,6 +404,52 @@
         }
         .message-card:hover .message-delete.visible { display: flex; }
         .message-delete:hover { background: var(--rose-bg); color: var(--rose); }
+
+        /* Message edit button */
+        .message-edit {
+            position: absolute; top: 8px; right: 28px;
+            background: rgba(255,255,255,0.9); border: none; border-radius: 50%;
+            width: 24px; height: 24px; cursor: pointer; font-size: 12px;
+            display: flex; align-items: center; justify-content: center;
+            opacity: 0; transition: opacity 0.2s;
+        }
+        .message-card:hover .message-edit { opacity: 0.7; }
+        .message-edit:hover { opacity: 1 !important; }
+
+        /* Inline edit form */
+        .edit-textarea {
+            width: 100%; min-height: 80px; padding: 10px;
+            border: 1px solid var(--accent-border); border-radius: 8px;
+            font-family: var(--font-body); font-size: 14px; resize: vertical;
+        }
+        .edit-btns { display: flex; gap: 8px; margin-top: 8px; }
+        .edit-save {
+            padding: 6px 16px; background: var(--accent); color: #fff;
+            border: none; border-radius: 6px; font-size: 13px; cursor: pointer;
+        }
+        .edit-cancel {
+            padding: 6px 16px; background: none; border: 1px solid var(--border);
+            border-radius: 6px; font-size: 13px; cursor: pointer;
+        }
+
+        /* Preview overlay */
+        .preview-overlay {
+            position: fixed; top: 0; left: 0; right: 0; bottom: 0;
+            background: rgba(0,0,0,0.85); z-index: 9999;
+            display: flex; align-items: center; justify-content: center;
+            padding: 20px; overflow-y: auto;
+        }
+        .preview-close {
+            position: fixed; top: 20px; right: 20px; color: #fff;
+            font-size: 32px; cursor: pointer; z-index: 10000;
+            width: 48px; height: 48px; display: flex; align-items: center;
+            justify-content: center; border-radius: 50%;
+            background: rgba(255,255,255,0.1);
+        }
+        .preview-close:hover { background: rgba(255,255,255,0.2); }
+        .preview-content {
+            max-width: 800px; width: 100%; border-radius: 16px; overflow: hidden;
+        }
 
         /* Empty state */
         .empty-state {
@@ -816,6 +905,7 @@
             <button class="ctrl-btn" id="themeToggleBtn" onclick="toggleThemePanel()">&#127912; Theme</button>
             <button class="ctrl-btn" onclick="copyLink()">&#128279; Copy Link</button>
             <button class="ctrl-btn" onclick="scrollToSection('actionsArea')">&#9993; Send / Deliver</button>
+            <button class="ctrl-btn" onclick="previewCard()">&#128065; Preview</button>
             <button class="ctrl-btn" onclick="nativeShare()" id="creatorShareBtn" style="display:none">&#128228; Share</button>
         </div>
 
@@ -969,6 +1059,12 @@
         </div>
     </div>
 </template>
+
+<!-- Preview overlay -->
+<div class="preview-overlay" id="previewOverlay" style="display:none" onclick="if(event.target===this)closePreview()">
+    <div class="preview-close" onclick="closePreview()">&times;</div>
+    <div class="preview-content" id="previewContent"></div>
+</div>
 
 <!-- 404 template -->
 <template id="notFoundTemplate">
@@ -1685,16 +1781,23 @@ function renderMessages(messages) {
 
     if (countEl) countEl.innerHTML = '&#9993; ' + messages.length + ' message' + (messages.length === 1 ? '' : 's');
 
+    var myMsgs = JSON.parse(localStorage.getItem('cc_my_messages') || '[]');
+
     var messagesHtml = messages.map(function(m, i) {
         var mediaHtml = '';
         if (m.media_url) {
             mediaHtml = '<div class="message-media"><img src="' + escHtml(m.media_url) + '" alt="Attached image" loading="lazy"></div>';
         }
-        var canDelete = creatorEmail && m.author_email && (m.author_email === creatorEmail);
+        var canEditMsg = myMsgs.indexOf(m.id) !== -1;
+        var canDelete = canEditMsg || (creatorEmail && m.author_email && (m.author_email === creatorEmail));
+        var editBtn = canEditMsg
+            ? '<button class="message-edit" onclick="editMessage(\'' + m.id + '\')" title="Edit">&#9998;</button>'
+            : '';
         var deleteBtn = canDelete
             ? '<button class="message-delete visible" onclick="deleteMessage(\'' + m.id + '\')" title="Delete">&times;</button>'
             : '';
-        return '<div class="message-card" style="animation-delay:' + (i * 0.06) + 's">' +
+        return '<div class="message-card" data-message-id="' + m.id + '" style="animation-delay:' + (i * 0.06) + 's">' +
+            editBtn +
             deleteBtn +
             mediaHtml +
             '<div class="message-text">' + escHtml(m.content) + '</div>' +
@@ -1769,6 +1872,16 @@ async function addMessage(e) {
         return;
     }
 
+    // Save message ID to localStorage for edit/delete
+    try {
+        var { data: insertedMsg } = await sb.from('messages').select('id').eq('card_id', currentCard.id).eq('author_name', insertData.author_name).order('created_at', { ascending: false }).limit(1).single();
+        if (insertedMsg) {
+            var myMsgs = JSON.parse(localStorage.getItem('cc_my_messages') || '[]');
+            myMsgs.push(insertedMsg.id);
+            localStorage.setItem('cc_my_messages', JSON.stringify(myMsgs));
+        }
+    } catch (e) { /* non-critical */ }
+
     nameInput.value = '';
     msgInput.value = '';
     emailInput.value = '';
@@ -1788,6 +1901,18 @@ async function addMessage(e) {
 
     showToast('Your message was added! \uD83C\uDF89');
     loadMessages(currentCard.id);
+
+    // Notify card creator and message author
+    fetch('/api/cards/notify', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+            cardSlug: slug,
+            authorName: insertData.author_name,
+            authorEmail: email || null,
+            messageContent: insertData.content
+        })
+    }).catch(function() {}); // Fire and forget, don't block the UI
 
     // Scroll back up to see the new message in the card
     var container = document.getElementById('cardContainer');
@@ -1822,6 +1947,74 @@ function copyLink() {
         setTimeout(function() { btn.textContent = 'Copy Link'; }, 2000);
     }
     showToast('Link copied!');
+}
+
+/* ---- Edit Message (inline) ---- */
+function editMessage(messageId) {
+    var card = document.querySelector('[data-message-id="' + messageId + '"]');
+    if (!card) return;
+    var textEl = card.querySelector('.message-text');
+    var currentText = textEl.textContent;
+    textEl.innerHTML = '<textarea class="edit-textarea" id="editArea-' + messageId + '">' + escHtml(currentText) + '</textarea>' +
+        '<div class="edit-btns">' +
+        '<button class="edit-save" onclick="saveMessageEdit(\'' + messageId + '\')">Save</button>' +
+        '<button class="edit-cancel" onclick="loadMessages(currentCard.id)">Cancel</button>' +
+        '</div>';
+    document.getElementById('editArea-' + messageId).focus();
+}
+
+async function saveMessageEdit(messageId) {
+    var textarea = document.getElementById('editArea-' + messageId);
+    if (!textarea) return;
+    var newText = textarea.value.trim();
+    if (!newText) return;
+    var { error } = await sb.from('messages').update({ content: newText }).eq('id', messageId);
+    if (error) { showToast('Failed to save'); return; }
+    showToast('Message updated!');
+    loadMessages(currentCard.id);
+}
+
+/* ---- Preview Card ---- */
+function previewCard() {
+    var overlay = document.getElementById('previewOverlay');
+    var content = document.getElementById('previewContent');
+    var container = document.getElementById('cardContainer');
+    if (!overlay || !content || !container) return;
+
+    var clone = container.cloneNode(true);
+    // Remove creator-only elements from preview
+    var controls = clone.querySelector('.creator-controls');
+    if (controls) controls.remove();
+    var switcher = clone.querySelector('.theme-switcher');
+    if (switcher) switcher.remove();
+    var editForm = clone.querySelector('.edit-card-form');
+    if (editForm) editForm.remove();
+    var addTile = clone.querySelector('.add-message-card');
+    if (addTile) addTile.remove();
+    // Remove edit/delete buttons from messages
+    clone.querySelectorAll('.message-edit, .message-delete').forEach(function(el) { el.remove(); });
+
+    content.innerHTML = '';
+    content.appendChild(clone);
+    overlay.style.display = 'flex';
+    document.body.style.overflow = 'hidden';
+
+    // Fire confetti in preview
+    if (typeof confetti === 'function') {
+        var duration = 4000;
+        var end = Date.now() + duration;
+        (function frame() {
+            confetti({ particleCount: 3, angle: 60, spread: 55, origin: { x: 0 } });
+            confetti({ particleCount: 3, angle: 120, spread: 55, origin: { x: 1 } });
+            if (Date.now() < end) requestAnimationFrame(frame);
+        })();
+    }
+}
+
+function closePreview() {
+    var overlay = document.getElementById('previewOverlay');
+    if (overlay) overlay.style.display = 'none';
+    document.body.style.overflow = '';
 }
 
 async function loadCard() {
