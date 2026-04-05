@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Cards | Culture Cards</title>
+    <meta name="robots" content="noindex, nofollow">
+    <link rel="canonical" href="https://jobsbyculture.com/culture-cards/dashboard">
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <link rel="icon" type="image/png" sizes="512x512" href="/logo.png">
+    <link rel="apple-touch-icon" href="/logo.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Satoshi:wght@400;500;600;700;900&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #fafaf8;
+            --bg-raised: #ffffff;
+            --bg-card: #ffffff;
+            --bg-hover: #f4f3ef;
+            --text: #1a1a1f;
+            --text-2: #52525b;
+            --text-3: #9ca3af;
+            --accent: #e8590c;
+            --accent-hover: #c2410c;
+            --accent-bg: rgba(232,89,12,0.06);
+            --accent-border: rgba(232,89,12,0.2);
+            --teal: #0d9488;
+            --teal-bg: rgba(13,148,136,0.06);
+            --teal-border: rgba(13,148,136,0.2);
+            --violet: #7c3aed;
+            --violet-bg: rgba(124,58,237,0.06);
+            --violet-border: rgba(124,58,237,0.2);
+            --rose: #e11d48;
+            --rose-bg: rgba(225,29,72,0.06);
+            --rose-border: rgba(225,29,72,0.2);
+            --sky: #0284c7;
+            --sky-bg: rgba(2,132,199,0.06);
+            --sky-border: rgba(2,132,199,0.2);
+            --lime: #4d7c0f;
+            --lime-bg: rgba(77,124,15,0.06);
+            --lime-border: rgba(77,124,15,0.2);
+            --border: rgba(0,0,0,0.07);
+            --border-2: rgba(0,0,0,0.12);
+            --border-3: rgba(0,0,0,0.18);
+            --radius: 12px;
+            --radius-sm: 8px;
+            --radius-lg: 20px;
+            --radius-full: 100px;
+            --font-display: 'Instrument Serif', Georgia, serif;
+            --font-body: 'Satoshi', -apple-system, sans-serif;
+            --font-mono: 'IBM Plex Mono', monospace;
+            --shadow: 0 4px 24px rgba(0,0,0,0.06), 0 1px 3px rgba(0,0,0,0.04);
+            --shadow-lg: 0 12px 48px rgba(0,0,0,0.08);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body {
+            font-family: var(--font-body);
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+            overflow-x: hidden;
+        }
+        .container { max-width: 1140px; margin: 0 auto; padding: 0 24px; }
+
+        /* ═══ NAV ═══ */
+        nav {
+            position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+            background: rgba(250,250,248,0.85);
+            backdrop-filter: blur(24px) saturate(1.4);
+            border-bottom: 1px solid var(--border);
+        }
+        .nav-inner {
+            max-width: 1140px; margin: 0 auto; padding: 14px 24px;
+            display: flex; align-items: center; justify-content: space-between;
+        }
+        .nav-logo { display: flex; align-items: center; gap: 10px; text-decoration: none; color: var(--text); }
+        .nav-mark {
+            width: 30px; height: 30px; position: relative;
+            display: flex; align-items: center; justify-content: center;
+        }
+        .nav-mark .ring {
+            position: absolute; border: 1.5px solid var(--accent); border-radius: 50%;
+            animation: logoPing 2.5s ease-out infinite;
+        }
+        .nav-mark .ring-1 { width: 100%; height: 100%; opacity: 0.2; }
+        .nav-mark .ring-2 { width: 65%; height: 65%; opacity: 0.4; animation-delay: 0.3s; }
+        .nav-mark .nav-dot { width: 7px; height: 7px; background: var(--accent); border-radius: 50%; position: relative; z-index: 1; }
+        @keyframes logoPing { 0% { transform: scale(1); opacity: 0.4; } 100% { transform: scale(1.5); opacity: 0; } }
+        .nav-wordmark { font-weight: 700; font-size: 16px; letter-spacing: -0.03em; }
+        .nav-wordmark span { color: var(--accent); }
+        .nav-links { display: flex; align-items: center; gap: 28px; }
+        .nav-links a { color: var(--text-2); text-decoration: none; font-size: 14px; font-weight: 500; transition: color 0.15s; }
+        .nav-links a:hover { color: var(--text); }
+        .nav-links a.active { color: var(--accent); }
+        .nav-links .nav-cta {
+            background: var(--accent); color: #fff !important; padding: 7px 16px;
+            border-radius: var(--radius-sm); font-size: 13px; font-weight: 600;
+            transition: all 0.2s;
+        }
+        .nav-links .nav-cta:hover { background: var(--accent-hover); transform: translateY(-1px); }
+        .nav-user {
+            font-size: 13px; color: var(--text-2); font-weight: 500;
+            background: var(--bg-hover); padding: 7px 16px;
+            border-radius: var(--radius-sm); border: 1px solid var(--border);
+        }
+        .hamburger { display: none; background: none; border: none; cursor: pointer; padding: 4px; flex-direction: column; gap: 5px; }
+        .hamburger span { display: block; width: 22px; height: 2px; background: var(--text); border-radius: 1px; transition: all 0.3s; }
+        .hamburger.active span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
+        .hamburger.active span:nth-child(2) { opacity: 0; }
+        .hamburger.active span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
+
+        /* ═══ LOGIN ═══ */
+        .login-wrapper {
+            padding: 160px 0 100px;
+            display: flex; justify-content: center; align-items: center;
+            min-height: 70vh;
+        }
+        .login-card {
+            background: var(--bg-card); border: 1px solid var(--border);
+            border-radius: var(--radius-lg); padding: 48px 40px;
+            max-width: 420px; width: 100%; text-align: center;
+            box-shadow: var(--shadow);
+        }
+        .login-card h1 {
+            font-family: var(--font-display); font-weight: 400;
+            font-size: 32px; line-height: 1.15; letter-spacing: -0.02em;
+            margin-bottom: 8px;
+        }
+        .login-card p {
+            color: var(--text-2); font-size: 15px; margin-bottom: 28px;
+        }
+        .login-card input[type="email"] {
+            width: 100%; padding: 14px 16px; font-size: 15px;
+            border: 1px solid var(--border-2); border-radius: var(--radius);
+            background: var(--bg); font-family: var(--font-body);
+            outline: none; transition: border-color 0.2s;
+            margin-bottom: 16px;
+        }
+        .login-card input[type="email"]:focus {
+            border-color: var(--accent); box-shadow: 0 0 0 3px var(--accent-bg);
+        }
+        .login-card button {
+            width: 100%; padding: 14px 24px; font-size: 15px; font-weight: 600;
+            background: var(--accent); color: #fff; border: none;
+            border-radius: var(--radius); cursor: pointer;
+            font-family: var(--font-body); transition: all 0.2s;
+        }
+        .login-card button:hover {
+            background: var(--accent-hover); transform: translateY(-1px);
+            box-shadow: 0 4px 16px rgba(232,89,12,0.25);
+        }
+        .login-card button:disabled {
+            opacity: 0.6; cursor: not-allowed; transform: none; box-shadow: none;
+        }
+        .login-success {
+            display: none; margin-top: 20px; padding: 16px;
+            background: var(--teal-bg); border: 1px solid var(--teal-border);
+            border-radius: var(--radius); color: var(--teal);
+            font-size: 14px; font-weight: 500;
+        }
+
+        /* ═══ DASHBOARD ═══ */
+        .dashboard { display: none; }
+        .dash-hero {
+            padding: 120px 0 40px;
+            display: flex; align-items: center; justify-content: space-between;
+        }
+        .dash-hero h1 {
+            font-family: var(--font-display); font-weight: 400;
+            font-size: clamp(32px, 4vw, 44px); letter-spacing: -0.02em;
+        }
+        .btn-primary {
+            display: inline-flex; align-items: center; gap: 8px;
+            background: var(--accent); color: #fff; padding: 14px 28px;
+            border-radius: var(--radius); font-size: 15px; font-weight: 600;
+            text-decoration: none; transition: all 0.25s; border: none; cursor: pointer;
+            font-family: var(--font-body);
+            box-shadow: 0 4px 16px rgba(232,89,12,0.25), 0 1px 3px rgba(232,89,12,0.15);
+        }
+        .btn-primary:hover {
+            background: var(--accent-hover); transform: translateY(-2px);
+            box-shadow: 0 8px 28px rgba(232,89,12,0.3), 0 2px 6px rgba(232,89,12,0.2);
+        }
+
+        .dash-section {
+            margin-bottom: 48px;
+        }
+        .dash-section-title {
+            font-family: var(--font-mono); font-size: 12px; font-weight: 500;
+            text-transform: uppercase; letter-spacing: 0.12em; color: var(--text-3);
+            margin-bottom: 16px;
+        }
+        .dash-empty {
+            color: var(--text-3); font-size: 15px; padding: 32px;
+            background: var(--bg-card); border: 1px dashed var(--border-2);
+            border-radius: var(--radius); text-align: center;
+        }
+
+        /* ═══ CARD LIST ITEM ═══ */
+        .card-item {
+            display: flex; align-items: center; gap: 16px;
+            background: var(--bg-card); border: 1px solid var(--border);
+            border-radius: var(--radius); padding: 20px 24px;
+            margin-bottom: 12px; transition: all 0.2s; cursor: default;
+        }
+        .card-item:hover {
+            border-color: var(--border-2);
+            box-shadow: var(--shadow);
+            transform: translateY(-1px);
+        }
+        .card-emoji {
+            font-size: 28px; flex-shrink: 0; width: 44px; height: 44px;
+            display: flex; align-items: center; justify-content: center;
+            background: var(--bg); border-radius: var(--radius-sm);
+        }
+        .card-info { flex: 1; min-width: 0; }
+        .card-title {
+            font-weight: 600; font-size: 15px; color: var(--text);
+            white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+        }
+        .card-meta {
+            font-size: 13px; color: var(--text-3); margin-top: 2px;
+            display: flex; align-items: center; gap: 12px; flex-wrap: wrap;
+        }
+        .card-meta .msg-count {
+            font-family: var(--font-mono); font-size: 12px;
+            background: var(--bg); padding: 2px 8px; border-radius: 4px;
+        }
+        .card-badge {
+            font-size: 11px; font-weight: 600; text-transform: uppercase;
+            letter-spacing: 0.06em; padding: 3px 10px; border-radius: var(--radius-full);
+        }
+        .badge-sent {
+            background: var(--teal-bg); color: var(--teal); border: 1px solid var(--teal-border);
+        }
+        .badge-scheduled {
+            background: var(--rose-bg); color: var(--rose); border: 1px solid var(--rose-border);
+        }
+        .card-action {
+            flex-shrink: 0;
+        }
+        .card-action a {
+            color: var(--accent); text-decoration: none; font-size: 14px;
+            font-weight: 600; transition: color 0.15s;
+        }
+        .card-action a:hover { color: var(--accent-hover); }
+        .theme-dot {
+            width: 10px; height: 10px; border-radius: 50%; display: inline-block;
+            flex-shrink: 0; border: 1px solid rgba(0,0,0,0.08);
+        }
+
+        /* ═══ ACCOUNT SECTION ═══ */
+        .account-section {
+            background: var(--bg-card); border: 1px solid var(--border);
+            border-radius: var(--radius); padding: 28px 32px;
+            display: flex; align-items: center; justify-content: space-between;
+            margin-bottom: 48px;
+        }
+        .account-email {
+            font-size: 14px; color: var(--text-2);
+        }
+        .account-email strong {
+            color: var(--text); font-weight: 600;
+        }
+        .btn-logout {
+            background: none; border: 1px solid var(--border-2); color: var(--text-2);
+            padding: 8px 20px; border-radius: var(--radius-sm); font-size: 13px;
+            font-weight: 500; cursor: pointer; font-family: var(--font-body);
+            transition: all 0.15s;
+        }
+        .btn-logout:hover {
+            border-color: var(--rose); color: var(--rose); background: var(--rose-bg);
+        }
+
+        /* ═══ FOOTER ═══ */
+        footer { padding: 56px 0 36px; border-top: 1px solid var(--border); }
+        .ft-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 40px; margin-bottom: 40px; }
+        .ft-col h4 { font-size: 12px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em; color: var(--text-2); margin-bottom: 14px; }
+        .ft-col a { display: block; font-size: 13px; color: var(--text-3); text-decoration: none; padding: 3px 0; transition: color 0.15s; }
+        .ft-col a:hover { color: var(--text); }
+        .ft-bar { border-top: 1px solid var(--border); padding-top: 20px; display: flex; justify-content: space-between; align-items: center; }
+        .ft-bar p { font-size: 12px; color: var(--text-3); }
+
+        /* ═══ ANIMATIONS ═══ */
+        @keyframes fadeUp { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }
+        @keyframes blink { 0%,100% { opacity: 1; } 50% { opacity: 0.3; } }
+
+        /* ═══ RESPONSIVE ═══ */
+        @media (max-width: 768px) {
+            .hamburger { display: flex; }
+            .nav-links {
+                display: none; position: absolute; top: 100%; left: 0; right: 0;
+                background: rgba(250,250,248,0.98); backdrop-filter: blur(20px);
+                border-bottom: 1px solid var(--border); padding: 20px 24px;
+                flex-direction: column; gap: 16px; box-shadow: 0 8px 24px rgba(0,0,0,0.06);
+            }
+            .nav-links.open { display: flex; }
+            .dash-hero { padding: 110px 0 32px; flex-direction: column; align-items: flex-start; gap: 16px; }
+            .login-wrapper { padding: 120px 16px 60px; }
+            .login-card { padding: 36px 28px; }
+            .card-item { padding: 16px 18px; gap: 12px; }
+            .card-emoji { width: 38px; height: 38px; font-size: 22px; }
+            .account-section { flex-direction: column; gap: 16px; align-items: flex-start; }
+            .ft-grid { grid-template-columns: 1fr 1fr; gap: 28px; }
+        }
+        @media (max-width: 480px) {
+            .ft-grid { grid-template-columns: 1fr; }
+            .card-meta { flex-direction: column; gap: 4px; align-items: flex-start; }
+        }
+    </style>
+    <script async src="https://plausible.io/js/pa-qa3pjs5eZbsfBQJMk4hVW.js"></script>
+    <script>
+      window.plausible=window.plausible||function(){(plausible.q=plausible.q||[]).push(arguments)},plausible.init=plausible.init||function(i){plausible.o=i||{}};
+      plausible.init()
+    </script>
+</head>
+<body>
+
+<!-- ═══ NAV ═══ -->
+<nav>
+    <div class="nav-inner">
+        <a href="/" class="nav-logo">
+            <div class="nav-mark"><div class="ring ring-1"></div><div class="ring ring-2"></div><div class="nav-dot"></div></div>
+            <div class="nav-wordmark">Jobs<span>By</span>Culture</div>
+        </a>
+        <div class="nav-links" id="navLinks">
+            <a href="/jobs">Jobs</a>
+            <a href="/directory">Companies</a>
+            <a href="/blog">Blog</a>
+            <a href="/culture-cards" class="active">Culture Cards</a>
+            <a href="/for-employers" class="nav-cta" id="navCta">For Employers</a>
+        </div>
+        <button class="hamburger" onclick="this.classList.toggle('active');this.closest('.nav-inner').querySelector('.nav-links').classList.toggle('open')" aria-label="Menu">
+            <span></span><span></span><span></span>
+        </button>
+    </div>
+</nav>
+
+<!-- ═══ LOGIN VIEW ═══ -->
+<div id="loginView">
+    <div class="login-wrapper">
+        <div class="login-card">
+            <h1>Log in to Culture Cards</h1>
+            <p>Enter your email to manage your cards</p>
+            <form id="loginForm" onsubmit="return false">
+                <input type="email" id="loginEmail" placeholder="you@company.com" required>
+                <button type="submit" id="loginBtn">Send Magic Link &rarr;</button>
+            </form>
+            <div class="login-success" id="loginSuccess">Check your email &#9993; We sent you a magic link to log in.</div>
+        </div>
+    </div>
+</div>
+
+<!-- ═══ DASHBOARD VIEW ═══ -->
+<div id="dashboardView" class="dashboard">
+    <div class="container">
+        <div class="dash-hero">
+            <h1>Your Cards</h1>
+            <a href="/culture-cards/create" class="btn-primary">Create a New Card &rarr;</a>
+        </div>
+
+        <div class="dash-section">
+            <div class="dash-section-title">Open Cards</div>
+            <div id="openCards"></div>
+        </div>
+
+        <div class="dash-section">
+            <div class="dash-section-title">Sent Cards</div>
+            <div id="sentCards"></div>
+        </div>
+
+        <div class="dash-section-title">Account</div>
+        <div class="account-section">
+            <div class="account-email">Signed in as <strong id="accountEmail"></strong></div>
+            <button class="btn-logout" id="logoutBtn">Log out</button>
+        </div>
+    </div>
+</div>
+
+<!-- ═══ FOOTER ═══ -->
+<footer>
+    <div class="container">
+        <div class="ft-grid">
+            <div class="ft-col">
+                <h4>By Culture</h4>
+                <a href="/values/remote">Remote-Friendly</a>
+                <a href="/values/async">Async-First</a>
+                <a href="/values/deep-work">Deep Work</a>
+                <a href="/values/wlb">Work-Life Balance</a>
+                <a href="/values/ethical-ai">Ethical AI</a>
+                <a href="/values/equity">Strong Comp</a>
+            </div>
+            <div class="ft-col">
+                <h4>By Role</h4>
+                <a href="/roles/engineering">Engineering</a>
+                <a href="/roles/ml-ai">ML / AI</a>
+                <a href="/roles/design">Design</a>
+                <a href="/roles/product">Product</a>
+                <a href="/roles/data">Data</a>
+                <a href="/roles/marketing">Marketing</a>
+            </div>
+            <div class="ft-col">
+                <h4>By Seniority</h4>
+                <a href="/seniority/entry">Entry / Junior</a>
+                <a href="/seniority/mid">Mid-Level</a>
+                <a href="/seniority/senior">Senior</a>
+                <a href="/seniority/staff">Staff / Principal</a>
+                <a href="/seniority/lead">Lead / Manager</a>
+                <a href="/seniority/director">Director+</a>
+            </div>
+            <div class="ft-col">
+                <h4>By Location</h4>
+                <a href="/locations/san-francisco">San Francisco</a>
+                <a href="/locations/new-york">New York</a>
+                <a href="/locations/london">London</a>
+                <a href="/locations/remote">Remote</a>
+                <a href="/locations/seattle">Seattle</a>
+                <a href="/locations/paris">Paris</a>
+            </div>
+            <div class="ft-col">
+                <h4>Explore</h4>
+                <a href="/directory">Culture Directory</a>
+                <a href="/compare">Compare Cultures</a>
+                <a href="/culture-map">Culture Map</a>
+                <a href="/quiz">Culture Quiz</a>
+                <a href="/blog">Blog</a>
+                <a href="/for-employers">For Employers</a>
+                <a href="https://meetingtax.com/?ref=jobsbyculture.com" target="_blank">Meeting Tax</a>
+                <a href="https://paytaxfa.st/?ref=jobsbyculture.com" target="_blank">PayTaxFast</a>
+            </div>
+        </div>
+        <div class="ft-about" style="display:flex;align-items:center;gap:10px;margin-bottom:32px">
+            <a href="/" class="nav-logo" style="margin-bottom:0">
+                <div class="nav-mark"><div class="ring ring-1"></div><div class="ring ring-2"></div><div class="nav-dot"></div></div>
+                <div class="nav-wordmark">Jobs<span>By</span>Culture</div>
+            </a>
+            <span style="color:var(--text-3);font-size:14px;margin-left:8px">The culture-first job board. Built for the AI era.</span>
+        </div>
+        <div class="ft-bar">
+            <p>&copy; 2026 JobsByCulture. Built with &#10084;&#65039; for the indie hacker community.</p>
+            <p>Made by <a href="https://x.com/itspradz?ref=jobsbyculture.com" target="_blank" style="color:var(--accent);text-decoration:none">@itspradz</a></p>
+        </div>
+        <div style="margin-top:16px;text-align:center">
+            <a href="https://startupfa.me/s/jobsbyculture?utm_source=jobsbyculture.com&amp;ref=jobsbyculture.com" target="_blank"><img src="https://startupfa.me/badges/featured-badge.webp" alt="JobsByCulture - Featured on Startup Fame" width="171" height="54" /></a>
+        </div>
+    </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script>
+(function() {
+    var SUPABASE_URL = 'https://quyxzwouqlrfvpsexwbh.supabase.co';
+    var SUPABASE_KEY = 'sb_publishable_7g5dGcIUkN4OxJJ2gnlYEA_XkyDtN8p';
+    var sb = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
+
+    var occasionEmojis = {
+        farewell: '\uD83C\uDFAD', birthday: '\uD83C\uDF82', promotion: '\uD83C\uDFC6',
+        anniversary: '\uD83C\uDF89', welcome: '\uD83D\uDC4B', appreciation: '\u2764\uFE0F'
+    };
+
+    var themeColors = {
+        sunset: '#e8590c', ocean: '#0284c7', forest: '#4d7c0f',
+        lavender: '#7c3aed', rose: '#e11d48', midnight: '#1e293b'
+    };
+
+    var loginView = document.getElementById('loginView');
+    var dashboardView = document.getElementById('dashboardView');
+    var loginForm = document.getElementById('loginForm');
+    var loginEmail = document.getElementById('loginEmail');
+    var loginBtn = document.getElementById('loginBtn');
+    var loginSuccess = document.getElementById('loginSuccess');
+    var openCardsEl = document.getElementById('openCards');
+    var sentCardsEl = document.getElementById('sentCards');
+    var accountEmailEl = document.getElementById('accountEmail');
+    var logoutBtn = document.getElementById('logoutBtn');
+    var navCta = document.getElementById('navCta');
+
+    function showLoginForm() {
+        loginView.style.display = 'block';
+        dashboardView.style.display = 'none';
+        if (navCta) {
+            navCta.href = '/for-employers';
+            navCta.textContent = 'For Employers';
+            navCta.className = 'nav-cta';
+        }
+    }
+
+    function showDashboard() {
+        loginView.style.display = 'none';
+        dashboardView.style.display = 'block';
+    }
+
+    function setNavUser(email) {
+        if (navCta) {
+            navCta.href = '/culture-cards/dashboard';
+            navCta.textContent = email;
+            navCta.className = 'nav-user';
+        }
+    }
+
+    function renderCardItem(card) {
+        var emoji = occasionEmojis[card.occasion] || '\uD83C\uDF89';
+        var title = card.title || 'Untitled Card';
+        var recipient = card.recipient_name || 'Someone';
+        var msgCount = card.message_count || 0;
+        var theme = card.theme || 'sunset';
+        var color = themeColors[theme] || '#e8590c';
+        var isSent = card.is_sent;
+        var isScheduled = card.scheduled_at && !card.is_sent;
+        var viewUrl = '/culture-cards/view?id=' + card.id;
+
+        var badgeHtml = '';
+        if (isSent) {
+            badgeHtml = '<span class="card-badge badge-sent">Sent &#10003;</span>';
+        } else if (isScheduled) {
+            badgeHtml = '<span class="card-badge badge-scheduled">Scheduled</span>';
+        }
+
+        var div = document.createElement('div');
+        div.className = 'card-item';
+        div.innerHTML =
+            '<div class="card-emoji">' + emoji + '</div>' +
+            '<div class="card-info">' +
+                '<div class="card-title">' + escapeHtml(title) + '</div>' +
+                '<div class="card-meta">' +
+                    '<span>For ' + escapeHtml(recipient) + '</span>' +
+                    '<span class="msg-count">' + msgCount + ' message' + (msgCount !== 1 ? 's' : '') + '</span>' +
+                    '<span class="theme-dot" style="background:' + color + '"></span>' +
+                    badgeHtml +
+                '</div>' +
+            '</div>' +
+            '<div class="card-action"><a href="' + viewUrl + '">View &rarr;</a></div>';
+        return div;
+    }
+
+    function escapeHtml(str) {
+        var d = document.createElement('div');
+        d.textContent = str;
+        return d.innerHTML;
+    }
+
+    function renderDashboard(openCards, sentCards, email) {
+        showDashboard();
+        setNavUser(email);
+        accountEmailEl.textContent = email;
+
+        openCardsEl.innerHTML = '';
+        if (openCards.length === 0) {
+            openCardsEl.innerHTML = '<div class="dash-empty">No open cards yet. <a href="/culture-cards/create" style="color:var(--accent);text-decoration:none;font-weight:600">Create one!</a></div>';
+        } else {
+            for (var i = 0; i < openCards.length; i++) {
+                openCardsEl.appendChild(renderCardItem(openCards[i]));
+            }
+        }
+
+        sentCardsEl.innerHTML = '';
+        if (sentCards.length === 0) {
+            sentCardsEl.innerHTML = '<div class="dash-empty">No sent cards yet.</div>';
+        } else {
+            for (var j = 0; j < sentCards.length; j++) {
+                sentCardsEl.appendChild(renderCardItem(sentCards[j]));
+            }
+        }
+    }
+
+    async function loadDashboard() {
+        var result = await sb.auth.getSession();
+        var session = result.data.session;
+        if (!session) { showLoginForm(); return; }
+
+        var email = session.user.email;
+
+        var resp = await sb.from('cards')
+            .select('*')
+            .eq('creator_email', email)
+            .order('created_at', { ascending: false });
+
+        var cards = resp.data || [];
+        var openCards = cards.filter(function(c) { return !c.is_sent; });
+        var sentCards = cards.filter(function(c) { return c.is_sent; });
+
+        renderDashboard(openCards, sentCards, email);
+    }
+
+    // Login form handler
+    loginForm.addEventListener('submit', async function(e) {
+        e.preventDefault();
+        var email = loginEmail.value.trim();
+        if (!email) return;
+
+        loginBtn.disabled = true;
+        loginBtn.textContent = 'Sending...';
+
+        var result = await sb.auth.signInWithOtp({
+            email: email,
+            options: { emailRedirectTo: window.location.href }
+        });
+
+        if (result.error) {
+            loginBtn.disabled = false;
+            loginBtn.textContent = 'Send Magic Link \u2192';
+            alert('Error: ' + result.error.message);
+            return;
+        }
+
+        loginBtn.textContent = 'Sent!';
+        loginSuccess.style.display = 'block';
+    });
+
+    // Logout handler
+    logoutBtn.addEventListener('click', async function() {
+        await sb.auth.signOut();
+        window.location.href = '/culture-cards';
+    });
+
+    // Listen for auth state changes (magic link callback)
+    sb.auth.onAuthStateChange(function(event, session) {
+        if (event === 'SIGNED_IN') {
+            window.history.replaceState({}, '', window.location.pathname);
+            loadDashboard();
+        }
+    });
+
+    // Initial load
+    loadDashboard();
+})();
+</script>
+
+</body>
+</html>
