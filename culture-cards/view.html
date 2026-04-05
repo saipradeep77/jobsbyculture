@@ -2040,8 +2040,14 @@ function closePreview() {
 }
 
 // Handle auth callback (magic link redirect)
+var hasReloaded = false;
 sb.auth.onAuthStateChange(function(event, session) {
-    if (event === 'SIGNED_IN' && session) {
+    if (event === 'SIGNED_IN' && session && !hasReloaded) {
+        hasReloaded = true;
+        // Clean URL hash to prevent loops
+        if (window.location.hash && window.location.hash.includes('access_token')) {
+            window.history.replaceState({}, '', window.location.pathname);
+        }
         window.location.reload();
     }
 });
