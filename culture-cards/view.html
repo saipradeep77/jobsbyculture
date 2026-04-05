@@ -986,6 +986,11 @@
         </div>
     </section>
 
+    <!-- Login prompt for unauthenticated card creators -->
+    <div class="login-prompt" id="loginPrompt" style="display:none;text-align:center;padding:16px 20px;margin:0 auto 24px;max-width:480px;background:rgba(13,148,136,0.06);border:1px solid rgba(13,148,136,0.15);border-radius:12px;">
+        <p style="font-size:14px;color:var(--text-2);margin:0">Card creator? <a href="#" onclick="creatorLogin(event)" style="color:var(--teal);font-weight:600;text-decoration:none">Log in to manage your card &rarr;</a></p>
+    </div>
+
     <!-- Premium / Send / Download section (below sign form) -->
     <div class="actions-section" id="actionsArea">
         <div class="actions-inner">
@@ -1569,7 +1574,7 @@ async function deleteMessage(msgId) {
 }
 
 /* ---- Render Functions ---- */
-function renderCardHeader(card) {
+async function renderCardHeader(card) {
     var tpl = document.getElementById('cardTemplate');
     var area = document.getElementById('cardArea');
     area.innerHTML = '';
@@ -1617,11 +1622,18 @@ function renderCardHeader(card) {
         document.getElementById('charCount').textContent = this.value.length + ' / 500';
     });
 
-    // Check if creator — email match OR slug in their created cards list
-    var emailMatch = creatorEmail && card.creator_email && (creatorEmail === card.creator_email);
-    var myCards = JSON.parse(localStorage.getItem('cc_my_cards') || '[]');
-    var slugMatch = myCards.indexOf(slug) !== -1;
-    isCreator = emailMatch || slugMatch;
+    // Check Supabase auth session for creator identity
+    var { data: { session } } = await sb.auth.getSession();
+    if (session && session.user && session.user.email === card.creator_email) {
+        isCreator = true;
+        creatorEmail = session.user.email;
+    } else {
+        // Fallback to localStorage for backward compatibility
+        var emailMatch = creatorEmail && card.creator_email && (creatorEmail === card.creator_email);
+        var myCards = JSON.parse(localStorage.getItem('cc_my_cards') || '[]');
+        var slugMatch = myCards.indexOf(slug) !== -1;
+        isCreator = emailMatch || slugMatch;
+    }
 
     // Check paid status
     isPaid = !!card.is_paid;
@@ -2027,6 +2039,25 @@ function closePreview() {
     document.body.style.overflow = '';
 }
 
+// Handle auth callback (magic link redirect)
+sb.auth.onAuthStateChange(function(event, session) {
+    if (event === 'SIGNED_IN' && session) {
+        window.location.reload();
+    }
+});
+
+async function creatorLogin(e) {
+    e.preventDefault();
+    var email = prompt('Enter the email you used to create this card:');
+    if (!email) return;
+    var { error } = await sb.auth.signInWithOtp({
+        email: email,
+        options: { emailRedirectTo: window.location.href }
+    });
+    if (error) { showToast('Failed to send login link'); return; }
+    showToast('Magic link sent! Check your email.');
+}
+
 async function loadCard() {
     if (!slug) { showNotFound(); return; }
 
@@ -2045,8 +2076,14 @@ async function loadCard() {
     var ogTitle = document.querySelector('meta[property="og:title"]');
     if (ogTitle) ogTitle.setAttribute('content', currentCard.title + ' | Culture Cards');
 
-    renderCardHeader(currentCard);
+    await renderCardHeader(currentCard);
     loadMessages(currentCard.id);
+
+    // Show login prompt for non-creators
+    if (!isCreator) {
+        var loginPrompt = document.getElementById('loginPrompt');
+        if (loginPrompt) loginPrompt.style.display = 'block';
+    }
 }
 
 loadCard();

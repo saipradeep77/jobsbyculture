@@ -309,6 +309,7 @@
 
 <!-- FORM -->
 <div class="container">
+    <div id="authStatus" style="display:none;text-align:center;font-size:13px;color:var(--teal);margin-bottom:12px;font-family:var(--font-mono)"></div>
     <div class="form-card">
         <form id="createForm" autocomplete="off">
 
@@ -459,6 +460,87 @@ const SUPABASE_URL = 'https://quyxzwouqlrfvpsexwbh.supabase.co';
 const SUPABASE_KEY = 'sb_publishable_7g5dGcIUkN4OxJJ2gnlYEA_XkyDtN8p';
 const sb = window.supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
 
+var currentUser = null;
+
+async function checkAuth() {
+    var { data: { session } } = await sb.auth.getSession();
+    if (session && session.user) {
+        currentUser = session.user;
+        document.getElementById('yourEmail').value = session.user.email;
+        document.getElementById('yourEmail').disabled = true;
+        document.getElementById('authStatus').textContent = 'Logged in as ' + session.user.email;
+        document.getElementById('authStatus').style.display = 'block';
+    }
+}
+checkAuth();
+
+// Handle magic link auth callback
+async function handleAuthCallback() {
+    var hash = window.location.hash;
+    if (hash && hash.includes('access_token')) {
+        var { data: { session }, error } = await sb.auth.getSession();
+        if (session) {
+            currentUser = session.user;
+            var params = new URLSearchParams(window.location.search);
+            if (params.get('resume') === 'true') {
+                // Re-fill form from URL params
+                if (params.get('recipient')) document.getElementById('recipientName').value = decodeURIComponent(params.get('recipient'));
+                if (params.get('title')) document.getElementById('cardTitle').value = decodeURIComponent(params.get('title'));
+                if (params.get('team')) document.getElementById('teamName').value = decodeURIComponent(params.get('team'));
+                if (params.get('name')) document.getElementById('yourName').value = decodeURIComponent(params.get('name'));
+                document.getElementById('yourEmail').value = session.user.email;
+                document.getElementById('yourEmail').disabled = true;
+                document.getElementById('authStatus').textContent = 'Logged in as ' + session.user.email;
+                document.getElementById('authStatus').style.display = 'block';
+
+                // Select occasion pill if provided
+                if (params.get('occasion')) {
+                    var occ = params.get('occasion');
+                    var pills = document.querySelectorAll('.occasion-pill');
+                    pills.forEach(function(p) {
+                        p.classList.remove('selected');
+                        if (p.dataset.occasion === occ) {
+                            p.classList.add('selected');
+                            selectedOccasion = occ;
+                        }
+                    });
+                }
+                // Select theme if provided
+                if (params.get('theme')) {
+                    var th = params.get('theme');
+                    if (th !== 'midnight') {
+                        var swatches = document.querySelectorAll('.theme-swatch');
+                        swatches.forEach(function(s) {
+                            s.classList.remove('selected');
+                            if (s.dataset.theme === th) {
+                                s.classList.add('selected');
+                                selectedTheme = th;
+                            }
+                        });
+                    }
+                }
+
+                showToast('Logged in! Creating your card...');
+                setTimeout(function() {
+                    document.getElementById('createForm').dispatchEvent(new Event('submit'));
+                }, 1000);
+            }
+        }
+    }
+}
+
+function showToast(msg) {
+    var t = document.createElement('div');
+    t.style.cssText = 'position:fixed;bottom:24px;left:50%;transform:translateX(-50%) translateY(20px);background:#1a1a1f;color:#fff;padding:12px 24px;border-radius:12px;font-size:14px;font-weight:500;z-index:9999;opacity:0;transition:all 0.3s ease;';
+    t.textContent = msg;
+    document.body.appendChild(t);
+    setTimeout(function() { t.style.opacity = '1'; t.style.transform = 'translateX(-50%) translateY(0)'; }, 10);
+    setTimeout(function() {
+        t.style.opacity = '0'; t.style.transform = 'translateX(-50%) translateY(20px)';
+        setTimeout(function() { t.remove(); }, 300);
+    }, 3000);
+}
+
 let selectedOccasion = new URLSearchParams(window.location.search).get('occasion') || 'farewell';
 let selectedTheme = 'default';
 
@@ -541,10 +623,43 @@ function genToken() {
 document.getElementById('createForm').addEventListener('submit', async function(e) {
     e.preventDefault();
     var btn = this.querySelector('button[type="submit"]');
+    var email = document.getElementById('yourEmail').value.trim();
+
+    if (!currentUser) {
+        // Not logged in — send magic link first
+        btn.disabled = true;
+        btn.textContent = 'Sending login link...';
+
+        var { error } = await sb.auth.signInWithOtp({
+            email: email,
+            options: {
+                emailRedirectTo: window.location.origin + window.location.pathname + '?resume=true&occasion=' + selectedOccasion + '&theme=' + selectedTheme + '&recipient=' + encodeURIComponent(document.getElementById('recipientName').value) + '&title=' + encodeURIComponent(document.getElementById('cardTitle').value) + '&team=' + encodeURIComponent(document.getElementById('teamName').value || '') + '&name=' + encodeURIComponent(document.getElementById('yourName').value)
+            }
+        });
+
+        if (error) {
+            btn.disabled = false;
+            btn.textContent = 'Create Card \u2192';
+            showToast('Failed to send login link. Please try again.');
+            return;
+        }
+
+        btn.textContent = 'Check your email';
+        showToast('Magic link sent! Check your email to continue.');
+
+        var formCard = document.querySelector('.form-card');
+        var notice = document.createElement('div');
+        notice.style.cssText = 'background:rgba(13,148,136,0.08);border:1px solid rgba(13,148,136,0.2);border-radius:12px;padding:20px;margin-top:16px;text-align:center;';
+        notice.innerHTML = '<p style="font-size:15px;color:#0d9488;font-weight:600;margin-bottom:4px">Check your email</p><p style="font-size:14px;color:#52525b">We sent a magic link to <strong>' + email + '</strong>. Click the link to verify and create your card.</p>';
+        formCard.appendChild(notice);
+        return;
+    }
+
+    // User IS logged in — create the card
     btn.disabled = true;
     btn.textContent = 'Creating...';
 
-    var creatorEmail = document.getElementById('yourEmail').value.trim();
+    var creatorEmail = email;
     var slug = genSlug();
 
     var payload = {
@@ -580,6 +695,7 @@ document.getElementById('createForm').addEventListener('submit', async function(
 
 initOccasions();
 initThemes();
+handleAuthCallback();
 </script>
 
 </body>
