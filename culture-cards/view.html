@@ -2093,14 +2093,11 @@ function closePreview() {
 }
 
 // Handle auth callback (magic link redirect)
-var hasReloaded = false;
 sb.auth.onAuthStateChange(function(event, session) {
-    if (event === 'SIGNED_IN' && session && !hasReloaded) {
-        hasReloaded = true;
-        // Clean URL hash to prevent loops
-        if (window.location.hash && window.location.hash.includes('access_token')) {
-            window.history.replaceState({}, '', window.location.pathname);
-        }
+    // Only reload on FRESH magic link sign-in (URL has access_token hash)
+    // Do NOT reload on session restore (which happens every page load)
+    if (event === 'SIGNED_IN' && session && window.location.hash && window.location.hash.includes('access_token')) {
+        window.history.replaceState({}, '', window.location.pathname);
         window.location.reload();
     }
 });
