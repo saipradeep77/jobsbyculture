@@ -895,7 +895,6 @@
         <button class="edit-btn" id="editCardBtn" onclick="toggleEditCard()" style="display:none">&#9998;</button>
         <span class="delete-link" id="deleteCardLink" style="display:none" onclick="deleteCard()">&#128465; Delete Card</span>
         <span class="team-name" id="cardTeam"></span>
-        <span class="recipient-badge" id="cardRecipient"></span>
         <span class="msg-count" id="cardCount"></span>
         <!-- Scheduled badge -->
         <div style="display:block;margin-top:12px">
@@ -1853,11 +1852,7 @@ function renderMessages(messages) {
 
     if (!messages || messages.length === 0) {
         if (countEl) countEl.innerHTML = '&#9993; 0 messages';
-        grid.innerHTML = addTileHtml +
-            '<div class="empty-state">' +
-                '<div class="empty-text">Be the first to sign!</div>' +
-                '<div class="empty-sub">Click above or scroll down to add your message.</div>' +
-            '</div>';
+        grid.innerHTML = addTileHtml;
         return;
     }
 
