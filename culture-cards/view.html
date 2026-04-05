@@ -1630,14 +1630,9 @@ async function deleteMessage(msgId) {
 
 /* ---- Render Functions ---- */
 async function renderCardHeader(card) {
-    var tpl = document.getElementById('cardTemplate');
-    var area = document.getElementById('cardArea');
-    area.innerHTML = '';
-    area.appendChild(tpl.content.cloneNode(true));
-
-    // Set theme on card container
+    // Template already cloned by loadCard() — just update elements
     var container = document.getElementById('cardContainer');
-    container.className = 'card-container theme-' + (card.theme || 'default');
+    if (!container) return; // Safety check
 
     // Confetti animation for sent cards (recipient view)
     if (card.is_sent && typeof confetti === 'function') {
@@ -2173,8 +2168,31 @@ async function loadCard() {
     var ogTitle = document.querySelector('meta[property="og:title"]');
     if (ogTitle) ogTitle.setAttribute('content', currentCard.title + ' | Culture Cards');
 
-    await renderCardHeader(currentCard);
+    // Clone the template immediately so the card is visible right away
+    var tpl = document.getElementById('cardTemplate');
+    var area = document.getElementById('cardArea');
+    area.innerHTML = '';
+    area.appendChild(tpl.content.cloneNode(true));
+
+    // Set basic card info immediately (before async auth checks)
+    var container = document.getElementById('cardContainer');
+    if (container) container.className = 'card-container theme-' + (currentCard.theme || 'default');
+    var emojiEl = document.getElementById('cardEmoji');
+    if (emojiEl) emojiEl.textContent = occasionEmojis[currentCard.occasion] || '\uD83C\uDF89';
+    var titleEl = document.getElementById('cardTitle');
+    if (titleEl) titleEl.textContent = currentCard.title;
+    var teamEl = document.getElementById('cardTeam');
+    if (teamEl) { teamEl.textContent = currentCard.team_name ? 'From ' + currentCard.team_name : ''; teamEl.style.display = currentCard.team_name ? '' : 'none'; }
+
+    // Load messages immediately (don't wait for auth)
     loadMessages(currentCard.id);
+
+    // Then do async auth checks + creator controls
+    try {
+        await renderCardHeader(currentCard);
+    } catch (e) {
+        console.error('renderCardHeader error:', e);
+    }
 
     // Show login prompt for non-creators
     if (!isCreator) {
